@@ -1,37 +1,235 @@
 @import "tailwindcss";
 
+/* ─── Design System Variables ─── */
 :root {
-  --background: #f6f8f8;
-  --foreground: #0f172a;
+  /* Page */
+  --bg-page: #f7f6f2;
+  --bg-card: #ffffff;
+  --bg-subtle: #f2f1ed;
+  --bg-inset: #eceae4;
+
+  /* Borders */
+  --border: #e4e1d8;
+  --border-strong: #cbc7bc;
+
+  /* Text */
+  --text-primary: #1a1916;
+  --text-secondary: #5a5751;
+  --text-muted: #9b9690;
+
+  /* Navy (primary accent) */
+  --navy: #0d1b2a;
+  --navy-mid: #1e3a5f;
+  --navy-light: #eef1f7;
+  --navy-border: #c5d0df;
+
+  /* Academic gold */
+  --gold: #92400e;
+  --gold-light: #fef7e7;
+  --gold-border: #f6d17a;
+
+  /* Green (success/mastered) */
+  --green: #166534;
+  --green-light: #f0fdf4;
+  --green-border: #bbf7d0;
+
+  /* Amber (review/warning) */
+  --amber: #b45309;
+  --amber-light: #fffbeb;
+  --amber-border: #fcd34d;
+
+  /* Red (critical/urgent) */
+  --red: #991b1b;
+  --red-light: #fef2f2;
+  --red-border: #fecaca;
+
+  /* Purple (proof patterns) */
+  --purple: #6d28d9;
+  --purple-light: #f5f3ff;
+  --purple-border: #ddd6fe;
+
+  /* Cyan (formulas) */
+  --cyan: #0e7490;
+  --cyan-light: #ecfeff;
+  --cyan-border: #a5f3fc;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: "Geist", "Geist Fallback", Arial, Helvetica, sans-serif;
+  --color-background: var(--bg-page);
+  --color-foreground: var(--text-primary);
+  --font-sans: "Geist", "Geist Fallback", "Helvetica Neue", Arial, sans-serif;
   --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
-* {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
 html {
   min-height: 100%;
-  background: var(--background);
+  background: var(--bg-page);
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   min-height: 100%;
   margin: 0;
-  background:
-    radial-gradient(circle at top right, rgba(8, 145, 178, 0.12), transparent 30rem),
-    linear-gradient(180deg, #f8fbfb 0%, #f6f8f8 48%, #eef3f2 100%);
-  color: var(--foreground);
+  background: var(--bg-page);
+  color: var(--text-primary);
   font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* ─── KaTeX RTL handling ─── */
 .katex {
   direction: ltr;
   unicode-bidi: isolate;
+  font-size: 1.05em;
+}
+
+.katex-display {
+  direction: ltr;
+  unicode-bidi: isolate;
+  margin: 1rem 0;
+  text-align: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 3px;
+}
+
+/* ─── Typography base ─── */
+h1, h2, h3, h4 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+/* ─── Study document components ─── */
+.study-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.06), 0 1px 2px -1px rgba(0,0,0,0.04);
+}
+
+.study-callout-blue {
+  background: var(--navy-light);
+  border: 1px solid var(--navy-border);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.study-callout-green {
+  background: var(--green-light);
+  border: 1px solid var(--green-border);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.study-callout-amber {
+  background: var(--amber-light);
+  border: 1px solid var(--amber-border);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.study-callout-red {
+  background: var(--red-light);
+  border: 1px solid var(--red-border);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.study-callout-purple {
+  background: var(--purple-light);
+  border: 1px solid var(--purple-border);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+/* ─── Math content block ─── */
+.math-content {
+  direction: rtl;
+  line-height: 2;
+}
+
+.math-content p {
+  margin: 0.25rem 0;
+}
+
+.math-ltr {
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-block;
+}
+
+.math-display {
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: block;
+  text-align: center;
+  margin: 1rem auto;
+  overflow-x: auto;
+}
+
+/* ─── Source snippet block ─── */
+.source-snippet {
+  background: var(--bg-subtle);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ─── Badge styles ─── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.15rem 0.65rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.badge-navy { background: var(--navy); color: #ffffff; }
+.badge-navy-light { background: var(--navy-light); color: var(--navy-mid); border: 1px solid var(--navy-border); }
+.badge-green { background: var(--green-light); color: var(--green); border: 1px solid var(--green-border); }
+.badge-amber { background: var(--amber-light); color: var(--amber); border: 1px solid var(--amber-border); }
+.badge-red { background: var(--red-light); color: var(--red); border: 1px solid var(--red-border); }
+.badge-purple { background: var(--purple-light); color: var(--purple); border: 1px solid var(--purple-border); }
+.badge-cyan { background: var(--cyan-light); color: var(--cyan); border: 1px solid var(--cyan-border); }
+.badge-gold { background: var(--gold-light); color: var(--gold); border: 1px solid var(--gold-border); }
+.badge-muted { background: var(--bg-inset); color: var(--text-secondary); }
+
+/* ─── Countdown number ─── */
+.countdown-digit {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
 }

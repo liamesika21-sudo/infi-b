@@ -1,43 +1,191 @@
-import Link from "next/link";
-import { BookOpen, Brain, ClipboardList, FileQuestion, Gauge, Home, Layers3, ListChecks, Sigma, Sparkles, Target } from "lucide-react";
-import { calculus2Course, moduleRoutes } from "@/lib/calculus2/config";
+"use client";
 
-const icons = [Home, Layers3, BookOpen, Sigma, ListChecks, Target, ClipboardList, FileQuestion, ClipboardList, Sparkles, Gauge, Brain];
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import {
+  BookOpen,
+  Brain,
+  Calendar,
+  ClipboardList,
+  FileQuestion,
+  FlaskConical,
+  Gauge,
+  LayoutDashboard,
+  Layers3,
+  ListChecks,
+  ScrollText,
+  Sigma,
+  Sparkles,
+  Target,
+  Zap,
+} from "lucide-react";
+
+const EXAM_DATE = new Date("2026-07-01T09:00:00");
+
+function getDaysUntilExam(): number {
+  const now = new Date();
+  const diff = EXAM_DATE.getTime() - now.getTime();
+  return Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
+}
+
+const navGroups = [
+  {
+    label: "ראשי",
+    items: [
+      { href: "/dashboard", label: "דשבורד", icon: LayoutDashboard },
+      { href: "/weeks", label: "שבועות", icon: Calendar },
+      { href: "/topics", label: "נושאים", icon: Layers3 },
+    ],
+  },
+  {
+    label: "חומר לימוד",
+    items: [
+      { href: "/formulas", label: "נוסחאות", icon: Sigma },
+      { href: "/theorems", label: "משפטים", icon: ScrollText },
+      { href: "/proof-patterns", label: "הוכחות", icon: BookOpen },
+    ],
+  },
+  {
+    label: "תרגול",
+    items: [
+      { href: "/practice", label: "תרגול", icon: Target },
+      { href: "/simulations", label: "סימולציות", icon: FlaskConical },
+      { href: "/past-exams", label: "מבחני עבר", icon: FileQuestion },
+    ],
+  },
+  {
+    label: "חזרה",
+    items: [
+      { href: "/homework-review", label: "מטלות", icon: ClipboardList },
+      { href: "/quick-review", label: "חזרה מהירה", icon: Zap },
+      { href: "/progress", label: "מעקב", icon: Gauge },
+    ],
+  },
+  {
+    label: "כלים",
+    items: [
+      { href: "/mentor", label: "מנטור", icon: Brain },
+    ],
+  },
+];
+
+const topNavItems = [
+  { href: "/dashboard", label: "דשבורד", icon: LayoutDashboard },
+  { href: "/weeks", label: "שבועות", icon: Calendar },
+  { href: "/formulas", label: "נוסחאות", icon: Sigma },
+  { href: "/theorems", label: "משפטים", icon: ScrollText },
+  { href: "/practice", label: "תרגול", icon: Target },
+  { href: "/simulations", label: "סימולציות", icon: FlaskConical },
+  { href: "/homework-review", label: "מטלות", icon: ClipboardList },
+  { href: "/quick-review", label: "חזרה מהירה", icon: Zap },
+  { href: "/past-exams", label: "מבחני עבר", icon: FileQuestion },
+  { href: "/mentor", label: "מנטור", icon: Brain },
+  { href: "/instructor-notes", label: "הערות מקס", icon: Sparkles },
+];
 
 export function AppShell({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
+  const daysLeft = getDaysUntilExam();
+
+  const urgencyColor =
+    daysLeft <= 7
+      ? "bg-red-600 text-white"
+      : daysLeft <= 21
+        ? "bg-amber-500 text-white"
+        : "bg-[var(--navy)] text-white";
+
   return (
-    <div dir="rtl" className="min-h-screen bg-[#f6f8f8] text-slate-950">
-      <header className="border-b border-slate-200 bg-white/85 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-4 lg:flex-row lg:items-center lg:justify-between">
-          <Link href="/dashboard" className="flex items-center gap-3">
-            <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-slate-950 text-lg font-semibold text-white">
+    <div dir="rtl" className="min-h-screen" style={{ background: "var(--bg-page)", color: "var(--text-primary)" }}>
+      {/* Header */}
+      <header
+        className="sticky top-0 z-40 border-b"
+        style={{
+          borderColor: "var(--border)",
+          background: "rgba(255,255,255,0.92)",
+          backdropFilter: "blur(12px)",
+        }}
+      >
+        <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-3 lg:px-6">
+          {/* Logo */}
+          <Link href="/dashboard" className="flex shrink-0 items-center gap-2.5">
+            <span
+              className="flex h-9 w-9 items-center justify-center rounded-xl text-base font-bold text-white"
+              style={{ background: "var(--navy)" }}
+            >
               ∑
             </span>
-            <span>
-              <span className="block text-lg font-semibold">{calculus2Course.nameHe}</span>
-              <span className="block text-xs font-medium uppercase tracking-[0.18em] text-slate-500">
-                {calculus2Course.nameEn} · Moed A · {calculus2Course.targetScoreLabel}
+            <span className="hidden sm:block">
+              <span className="block text-sm font-bold" style={{ color: "var(--text-primary)" }}>
+                אינפי ב׳
+              </span>
+              <span className="block text-xs font-medium" style={{ color: "var(--text-muted)" }}>
+                מועד א׳ · 90+
               </span>
             </span>
           </Link>
-          <nav className="flex gap-2 overflow-x-auto pb-1">
-            {moduleRoutes.slice(0, 8).map((route, index) => {
-              const Icon = icons[index] ?? BookOpen;
+
+          {/* Top Nav (desktop) */}
+          <nav className="hidden min-w-0 flex-1 items-center gap-0.5 overflow-x-auto xl:flex">
+            {topNavItems.map(({ href, label, icon: Icon }) => {
+              const active = pathname === href || pathname.startsWith(href + "/");
               return (
                 <Link
-                  key={route.href}
-                  href={route.href}
-                  className="inline-flex shrink-0 items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:text-slate-950"
+                  key={href}
+                  href={href}
+                  className="flex shrink-0 items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-sm font-medium transition-colors"
+                  style={{
+                    color: active ? "var(--navy-mid)" : "var(--text-secondary)",
+                    background: active ? "var(--navy-light)" : "transparent",
+                  }}
                 >
-                  <Icon className="h-4 w-4" />
-                  {route.label}
+                  <Icon className="h-3.5 w-3.5 shrink-0" />
+                  <span>{label}</span>
                 </Link>
               );
             })}
           </nav>
+
+          {/* Mobile Nav scroll */}
+          <nav className="flex min-w-0 flex-1 items-center gap-1 overflow-x-auto xl:hidden">
+            {topNavItems.slice(0, 7).map(({ href, label, icon: Icon }) => {
+              const active = pathname === href || pathname.startsWith(href + "/");
+              return (
+                <Link
+                  key={href}
+                  href={href}
+                  className="flex shrink-0 items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-sm font-medium transition-colors"
+                  style={{
+                    color: active ? "var(--navy-mid)" : "var(--text-secondary)",
+                    background: active ? "var(--navy-light)" : "transparent",
+                  }}
+                >
+                  <Icon className="h-3.5 w-3.5 shrink-0" />
+                  <span className="hidden sm:block">{label}</span>
+                </Link>
+              );
+            })}
+          </nav>
+
+          {/* Exam countdown chip */}
+          <div
+            className={`flex shrink-0 items-center gap-2 rounded-lg px-3 py-1.5 text-sm font-semibold ${urgencyColor}`}
+          >
+            <Calendar className="h-3.5 w-3.5" />
+            <span dir="ltr" className="font-mono font-bold">
+              {daysLeft}
+            </span>
+            <span className="hidden sm:block">ימים</span>
+          </div>
         </div>
       </header>
-      <main className="mx-auto w-full max-w-7xl px-4 py-6 lg:px-8">{children}</main>
+
+      {/* Main */}
+      <main className="mx-auto w-full max-w-7xl px-4 py-6 lg:px-6 lg:py-8">{children}</main>
+
+      {/* Footer */}
+      <footer className="mx-auto max-w-7xl border-t px-4 py-4 text-center text-xs lg:px-6" style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>
+        מועד א׳ · 01.07.2026 · יעד 90+ · Calculus 2 Exam Prep
+      </footer>
     </div>
   );
 }

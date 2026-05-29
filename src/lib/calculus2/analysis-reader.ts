@@ -6,13 +6,18 @@ import type {
   ExamPriorityMap,
   FormulaItem,
   HomeworkAnalysis,
+  HomeworkPriorityEntry,
   LectureAnalysis,
+  LectureSummary,
+  MaxInsightsData,
   MentorKnowledgeBase,
   PastExamAggregate,
   PastExamAnalysis,
   ProofPatternItem,
   QuestionItem,
   RecitationAnalysis,
+  RecitationSummary,
+  SimulationExamData,
   SummaryAnalysis,
   TheoremItem,
 } from "./analysis-types";
@@ -40,6 +45,11 @@ export async function readAnalysisData() {
     examPriorityMap,
     examPlan,
     mentorKnowledgeBase,
+    recitationSummaries,
+    lectureSummaries,
+    homeworkPriorityMap,
+    simulationExams,
+    maxInsights,
   ] = await Promise.all([
     readJson<LectureAnalysis[]>("lecture-analysis.json", []),
     readJson<RecitationAnalysis[]>("recitation-analysis.json", []),
@@ -54,6 +64,11 @@ export async function readAnalysisData() {
     readJson<ExamPriorityMap | null>("exam-priority-map.json", null),
     readJson<ExamPlanV1 | null>("exam-plan.json", null),
     readJson<MentorKnowledgeBase | null>("mentor-knowledge-base.json", null),
+    readJson<RecitationSummary[]>("recitation-summaries.json", []),
+    readJson<LectureSummary[]>("lecture-summaries.json", []),
+    readJson<HomeworkPriorityEntry[]>("homework-priority-map.json", []),
+    readJson<SimulationExamData[]>("simulation-exams.json", []),
+    readJson<MaxInsightsData | null>("max-insights.json", null),
   ]);
 
   return {
@@ -76,6 +91,11 @@ export async function readAnalysisData() {
     examPriorityMap,
     examPlan,
     mentorKnowledgeBase,
+    recitationSummaries,
+    lectureSummaries,
+    homeworkPriorityMap,
+    simulationExams,
+    maxInsights,
   };
 }
 

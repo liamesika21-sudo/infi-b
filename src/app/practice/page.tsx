@@ -1,48 +1,96 @@
-import { EmptyState } from "@/components/Cards";
-import { PageHeader, QuestionCard } from "@/components/AnalysisCards";
 import { readAnalysisData } from "@/lib/calculus2/analysis-reader";
+import { PageHeader } from "@/components/study/StudyCard";
+import { QuestionBlock } from "@/components/study/QuestionBlock";
 
 export default async function PracticePage() {
   const analysis = await readAnalysisData();
   const questions = analysis.questionBank;
-  const sourceCounts = {
-    lecture: questions.filter((item) => item.sourceType === "lecture_example").length,
-    recitation: questions.filter((item) => item.sourceType === "recitation").length,
-    homework: questions.filter((item) => item.sourceType === "homework").length,
-    pastExam: questions.filter((item) => item.sourceType === "past_exam").length,
-  };
+
+  const recitation = questions.filter((q) => q.sourceType === "recitation");
+  const homework = questions.filter((q) => q.sourceType === "homework");
+  const pastExam = questions.filter((q) => q.sourceType === "past_exam");
+  const lecture = questions.filter((q) => q.sourceType === "lecture_example");
 
   return (
     <div className="space-y-6">
       <PageHeader
         eyebrow="Practice Center"
         title="מרכז תרגול"
-        description="שאלות שחולצו מתרגולים, מטלות, דוגמאות הרצאה ומבחני עבר. הסיווג כרגע מבוסס טקסט ומקור, ללא המצאת פתרונות."
+        description="שאלות מתרגולים, מטלות ומבחני עבר. מסווגות לפי מקור, קושי וחשיבות למבחן."
       />
-      <section className="grid gap-4 md:grid-cols-4">
-        <PracticeStat label="דוגמאות הרצאה" value={sourceCounts.lecture} />
-        <PracticeStat label="תרגולים" value={sourceCounts.recitation} />
-        <PracticeStat label="מטלות" value={sourceCounts.homework} />
-        <PracticeStat label="מבחני עבר" value={sourceCounts.pastExam} />
-      </section>
+
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+        {[
+          { label: "תרגולים", value: recitation.length, color: "cyan" },
+          { label: "מטלות", value: homework.length, color: "gold" },
+          { label: "מבחני עבר", value: pastExam.length, color: "purple" },
+          { label: "דוגמאות הרצאה", value: lecture.length, color: "navy" },
+        ].map(({ label, value, color }) => (
+          <Chip key={label} label={label} value={value} color={color} />
+        ))}
+      </div>
+
       {questions.length === 0 ? (
-        <EmptyState title="אין עדיין שאלות שחולצו" body="הריצי npm run analyze:calculus2 אחרי עיבוד החומרים." />
+        <div className="rounded-xl border-2 border-dashed p-10 text-center" style={{ borderColor: "var(--border)" }}>
+          <p className="text-sm" style={{ color: "var(--text-muted)" }}>
+            אין עדיין שאלות. הריצי npm run analyze:calculus2.
+          </p>
+        </div>
       ) : (
-        <section className="grid gap-4 lg:grid-cols-2">
-          {questions.slice(0, 80).map((item) => (
-            <QuestionCard key={item.id} item={item} />
-          ))}
-        </section>
+        <>
+          {recitation.length > 0 && (
+            <Section title="שאלות תרגול" count={recitation.length}>
+              <div className="grid gap-4 lg:grid-cols-2">
+                {recitation.slice(0, 20).map((q) => <QuestionBlock key={q.id} item={q} />)}
+              </div>
+            </Section>
+          )}
+          {homework.length > 0 && (
+            <Section title="שאלות מטלה" count={homework.length}>
+              <div className="grid gap-4 lg:grid-cols-2">
+                {homework.slice(0, 20).map((q) => <QuestionBlock key={q.id} item={q} />)}
+              </div>
+            </Section>
+          )}
+          {pastExam.length > 0 && (
+            <Section title="שאלות מבחן עבר" count={pastExam.length}>
+              <div className="grid gap-4 lg:grid-cols-2">
+                {pastExam.slice(0, 20).map((q) => <QuestionBlock key={q.id} item={q} />)}
+              </div>
+            </Section>
+          )}
+        </>
       )}
     </div>
   );
 }
 
-function PracticeStat({ label, value }: { label: string; value: number }) {
+function Chip({ label, value, color }: { label: string; value: number; color: string }) {
+  const c: Record<string, { bg: string; text: string; border: string }> = {
+    cyan: { bg: "var(--cyan-light)", text: "var(--cyan)", border: "var(--cyan-border)" },
+    gold: { bg: "var(--gold-light)", text: "var(--gold)", border: "var(--gold-border)" },
+    purple: { bg: "var(--purple-light)", text: "var(--purple)", border: "var(--purple-border)" },
+    navy: { bg: "var(--navy-light)", text: "var(--navy-mid)", border: "var(--navy-border)" },
+  };
+  const s = c[color] ?? c.navy;
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-      <p className="text-sm font-medium text-slate-500">{label}</p>
-      <p className="mt-2 font-mono text-3xl font-semibold text-slate-950">{value}</p>
+    <div className="rounded-xl border p-4 text-center" style={{ background: s.bg, borderColor: s.border }}>
+      <p className="text-2xl font-bold" style={{ color: s.text }}>{value}</p>
+      <p className="mt-0.5 text-xs font-medium" style={{ color: s.text, opacity: 0.8 }}>{label}</p>
     </div>
   );
 }
+
+function Section({ title, count, children }: { title: string; count: number; children: React.ReactNode }) {
+  return (
+    <section>
+      <div className="mb-3 flex items-center gap-2">
+        <h2 className="text-lg font-bold" style={{ color: "var(--text-primary)" }}>{title}</h2>
+        <span className="badge badge-muted">{count}</span>
+      </div>
+      {children}
+    </section>
+  );
+}
+
+import type React from "react";

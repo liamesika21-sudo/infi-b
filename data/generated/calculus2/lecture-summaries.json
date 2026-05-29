@@ -1,0 +1,321 @@
+[
+  {
+    "lectureNumber": 1,
+    "weekNumber": 1,
+    "sourceFileId": "lecture-lecture-1-group-1-calculus-2-2026",
+    "filename": "Lecture 1 group 1 calculus 2 2026.pdf",
+    "title": "גבולות — כלל לופיטל ומשפט דרבו",
+    "mainTopics": [
+      "כלל לופיטל",
+      "משפט דרבו",
+      "גבולות חד-צדדיים"
+    ],
+    "keyDefinitions": [
+      "גבול חד-צדדי",
+      "גזירות בנקודה"
+    ],
+    "keyTheorems": [
+      "כלל לופיטל",
+      "משפט דרבו",
+      "משפט דרבו המורחב"
+    ],
+    "keyFormulas": [
+      "lim f/g = lim f'/g' (בתנאים)"
+    ],
+    "examNotes": [
+      "לופיטל מופיע בכמעט כל בחינה — שנני תנאים",
+      "דרבו — שאלת הוכחה קלאסית"
+    ],
+    "dataQuality": "partial",
+    "summarySourceFile": "הרצאות 1+2.pdf",
+    "extractedTheorems": 0,
+    "extractedFormulas": 19,
+    "confidence": 0.8999999999999999
+  },
+  {
+    "lectureNumber": 2,
+    "weekNumber": 2,
+    "sourceFileId": "lecture-lecture-2-group-1-calculus-2-2026",
+    "filename": "Lecture 2 group 1 calculus 2 2026.pdf",
+    "title": "סדרות — הגדרה, גבולות, מונוטוניות",
+    "mainTopics": [
+      "סדרות",
+      "גבול סדרה",
+      "סדרות מונוטוניות",
+      "סדרה חסומה"
+    ],
+    "keyDefinitions": [
+      "גבול סדרה (ε-N)",
+      "סדרה מונוטונית",
+      "סדרה חסומה",
+      "סדרת קושי"
+    ],
+    "keyTheorems": [
+      "כל סדרה מונוטונית וחסומה מתכנסת",
+      "משפט ה-Squeeze"
+    ],
+    "keyFormulas": [
+      "lim (1+1/n)^n = e",
+      "lim n^(1/n) = 1"
+    ],
+    "examNotes": [
+      "שאלות על סדרות רקורסיביות — מונוטוניות + גבול",
+      "Squeeze theorem שכיח בסדרות"
+    ],
+    "dataQuality": "good",
+    "summarySourceFile": "שבוע 2 | אינפי 2.pdf",
+    "extractedTheorems": 0,
+    "extractedFormulas": 0,
+    "confidence": 0.8999999999999999
+  },
+  {
+    "lectureNumber": 3,
+    "weekNumber": 3,
+    "sourceFileId": "lecture-lecture-3-group-2-calculus-2-2026",
+    "filename": "Lecture 3 group 2 calculus 2 2026 .pdf",
+    "title": "נגזרות — מסדר גבוה, MVT, ופיתוח טיילור",
+    "mainTopics": [
+      "נגזרת מסדר n",
+      "משפט הערך הממוצע",
+      "משפט רול",
+      "פיתוח טיילור"
+    ],
+    "keyDefinitions": [
+      "נגזרת מסדר n",
+      "פולינום טיילור",
+      "שארית לגרנז'"
+    ],
+    "keyTheorems": [
+      "MVT",
+      "רול",
+      "פיתוח טיילור עם שארית"
+    ],
+    "keyFormulas": [
+      "Pₙ(x) = Σ f^(k)(x₀)/k! · (x-x₀)^k",
+      "Rₙ(x) = f^(n+1)(ξ)/(n+1)! · (x-x₀)^(n+1)"
+    ],
+    "examNotes": [
+      "MVT — כלי הוכחה עיקרי",
+      "טיילור — חישוב גבולות ואינטגרלים"
+    ],
+    "dataQuality": "partial",
+    "summarySourceFile": "שבוע 3.pdf",
+    "extractedTheorems": 0,
+    "extractedFormulas": 0,
+    "confidence": 0.8999999999999999
+  },
+  {
+    "lectureNumber": 4,
+    "weekNumber": 4,
+    "sourceFileId": "lecture-lecture-4-group-1-calculus-2-2026",
+    "filename": "Lecture 4 group 1 calculus 2 2026.pdf",
+    "title": "אינטגרל מסוים — הגדרה, תכונות, ומשפט היסודי",
+    "mainTopics": [
+      "אינטגרל רימן",
+      "משפט היסודי של החשבון",
+      "אינטגרציה בחלקים",
+      "החלפת משתנה"
+    ],
+    "keyDefinitions": [
+      "אינטגרל רימן",
+      "פונקציה אינטגרבילית",
+      "אנטי-נגזרת"
+    ],
+    "keyTheorems": [
+      "משפט היסודי של החשבון (FTC)",
+      "FTC2 — גזירת אינטגרל",
+      "IBP"
+    ],
+    "keyFormulas": [
+      "∫ₐᵇ f(x)dx = F(b)-F(a)",
+      "∫u dv = uv - ∫v du"
+    ],
+    "examNotes": [
+      "אינטגרל — נושא מרכזי, מופיע בכל מבחן",
+      "IBP — שיטה שחוזרת הרבה"
+    ],
+    "dataQuality": "good",
+    "summarySourceFile": "שבוע 4 | אינפי 2.pdf",
+    "extractedTheorems": 0,
+    "extractedFormulas": 11,
+    "confidence": 0.8999999999999999
+  },
+  {
+    "lectureNumber": 5,
+    "weekNumber": 5,
+    "sourceFileId": "lecture-lecture-5-group-2-calculus-2-2026",
+    "filename": "Lecture 5 group 2 calculus 2 2026.pdf",
+    "title": "אינטגרלים לא מסוימים — שיטות חישוב",
+    "mainTopics": [
+      "פירוק לשברים חלקיים",
+      "אינטגרלים טריגונומטריים",
+      "שיטת ε²"
+    ],
+    "keyDefinitions": [
+      "שבר חלקי",
+      "אינטגרל לא מסוים"
+    ],
+    "keyTheorems": [
+      "FTC",
+      "משפט פיתוח לשברים חלקיים"
+    ],
+    "keyFormulas": [
+      "∫sin²x dx = x/2 - sin(2x)/4",
+      "∫cos²x dx = x/2 + sin(2x)/4"
+    ],
+    "examNotes": [
+      "פירוק לשברים חלקיים — שיטה לבחינה",
+      "אינטגרלים טריגונומטריים — קצת פחות שכיח"
+    ],
+    "dataQuality": "partial",
+    "summarySourceFile": "סיכום מאגד — הרצאות 4–5 חדו״א 2.pdf",
+    "extractedTheorems": 0,
+    "extractedFormulas": 21,
+    "confidence": 0.8999999999999999
+  },
+  {
+    "lectureNumber": 6,
+    "weekNumber": 6,
+    "sourceFileId": "lecture-lecture-6-group-2-calculus-2-2026",
+    "filename": "Lecture 6 group 2 calculus 2 2026.pdf",
+    "title": "טורים — הגדרה ומבחני התכנסות בסיסיים",
+    "mainTopics": [
+      "טורים אינסופיים",
+      "טור גיאומטרי",
+      "p-series",
+      "מבחן השוואה"
+    ],
+    "keyDefinitions": [
+      "טור מתכנס",
+      "טור מתבדר",
+      "p-series"
+    ],
+    "keyTheorems": [
+      "תנאי הכרחי — lim aₙ = 0",
+      "מבחן השוואה",
+      "LCT",
+      "מבחן האינטגרל"
+    ],
+    "keyFormulas": [
+      "Σ 1/nᵖ מתכנס ↔ p > 1",
+      "Σ qⁿ = 1/(1-q) ל|q|<1"
+    ],
+    "examNotes": [
+      "מבחני התכנסות — נושא מרכזי בכל בחינה",
+      "LCT — שיטה עיקרית"
+    ],
+    "dataQuality": "ocr_only",
+    "summarySourceFile": null,
+    "extractedTheorems": 0,
+    "extractedFormulas": 25,
+    "confidence": 0.8999999999999999
+  },
+  {
+    "lectureNumber": 7,
+    "weekNumber": 7,
+    "sourceFileId": "lecture-lecture-7-group-2-calculus-2-2026",
+    "filename": "Lecture 7 group 2 calculus 2 2026.pdf",
+    "title": "טורים — מבחן מנה, שורש, ולייבניץ",
+    "mainTopics": [
+      "מבחן מנה",
+      "מבחן שורש",
+      "טור חלופי",
+      "מבחן לייבניץ"
+    ],
+    "keyDefinitions": [
+      "טור חלופי",
+      "התכנסות מוחלטת",
+      "התכנסות בתנאי"
+    ],
+    "keyTheorems": [
+      "מבחן דלאמבר",
+      "מבחן קושי",
+      "מבחן לייבניץ"
+    ],
+    "keyFormulas": [
+      "R = lim |aₙ₊₁/aₙ|⁻¹",
+      "R = lim |aₙ|^(-1/n)"
+    ],
+    "examNotes": [
+      "מבחן מנה — שכיח ביותר",
+      "לייבניץ — זכרי תנאים"
+    ],
+    "dataQuality": "good",
+    "summarySourceFile": "שבוע 7 סיכום.pdf",
+    "extractedTheorems": 0,
+    "extractedFormulas": 8,
+    "confidence": 0.8999999999999999
+  },
+  {
+    "lectureNumber": 8,
+    "weekNumber": 8,
+    "sourceFileId": "lecture-lecture-8-group-1-calculus-2-2026",
+    "filename": "Lecture 8 group  1 calculus 2 2026.pdf",
+    "title": "טורי חזקות — הגדרה, רדיוס, תחום התכנסות",
+    "mainTopics": [
+      "טור חזקות",
+      "רדיוס התכנסות",
+      "תחום התכנסות",
+      "גזירת טורי חזקות"
+    ],
+    "keyDefinitions": [
+      "טור חזקות סביב x₀",
+      "רדיוס התכנסות R"
+    ],
+    "keyTheorems": [
+      "משפט הרדיוס",
+      "גזירת טור חזקות שומרת על R",
+      "אינטגרציה של טור חזקות"
+    ],
+    "keyFormulas": [
+      "R = 1/limsup|aₙ|^(1/n)",
+      "Σaₙxⁿ גזיר ← Σnaₙxⁿ⁻¹ עם אותו R"
+    ],
+    "examNotes": [
+      "רדיוס התכנסות — שאלה שכיחה",
+      "גזירה/אינטגרציה טור — כלי לחישוב סכומים"
+    ],
+    "dataQuality": "good",
+    "summarySourceFile": "calculus2_week9_RTL_polished.pdf",
+    "extractedTheorems": 0,
+    "extractedFormulas": 27,
+    "confidence": 0.8999999999999999
+  },
+  {
+    "lectureNumber": 9,
+    "weekNumber": 9,
+    "sourceFileId": "lecture-lecture-9-group-2-calculus-2-2026",
+    "filename": "Lecture 9 group 2 calculus 2 2026.pdf",
+    "title": "טורי טיילור ומקלורן",
+    "mainTopics": [
+      "טור טיילור",
+      "טור מקלורן",
+      "שאריות",
+      "פיתוח פונקציות בסיסיות"
+    ],
+    "keyDefinitions": [
+      "טור טיילור של f סביב x₀",
+      "שארית לגרנז'",
+      "שארית קושי"
+    ],
+    "keyTheorems": [
+      "כל פונקציה C^∞ שווה לטור טיילור שלה בתחום R"
+    ],
+    "keyFormulas": [
+      "eˣ = Σ xⁿ/n! (כל x)",
+      "sin x = Σ (-1)ⁿx^(2n+1)/(2n+1)!",
+      "cos x = Σ (-1)ⁿx^(2n)/(2n)!",
+      "ln(1+x) = Σ (-1)ⁿ⁺¹xⁿ/n (|x|≤1, x≠-1)",
+      "1/(1-x) = Σ xⁿ (|x|<1)"
+    ],
+    "examNotes": [
+      "טורי מקלורן עיקריים — חובה לשנן",
+      "שאלת חישוב סכום עם טיילור — שכיח"
+    ],
+    "dataQuality": "good",
+    "summarySourceFile": "calculus2_week9_RTL_polished.pdf",
+    "extractedTheorems": 0,
+    "extractedFormulas": 4,
+    "confidence": 0.8999999999999999
+  }
+]

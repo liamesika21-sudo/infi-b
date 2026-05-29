@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "process:calculus2": "tsx scripts/process-calculus2.ts",
-    "analyze:calculus2": "tsx scripts/analyze-calculus2.ts"
+    "analyze:calculus2": "tsx scripts/analyze-calculus2.ts && tsx scripts/generate-extended-data.ts",
+    "generate:simulations": "tsx scripts/generate-extended-data.ts"
   },
   "dependencies": {
     "clsx": "^2.1.1",

@@ -214,6 +214,169 @@ export interface ExamPlanV1 {
   sourceBasis: string[];
 }
 
+export interface RecitationSummary {
+  recitationNumber: number;
+  weekNumber: number;
+  sourceFileId: string;
+  filename: string;
+  practicesLecture: number | null;
+  mainThemes: string[];
+  whatWasPracticed: string;
+  keyTechniques: string[];
+  examRelevance: "low" | "medium" | "high" | "critical";
+  questionCount: number;
+  questionIds: string[];
+  solutionPatternCount: number;
+  mustPractice: string[];
+  commonMistakes: string[];
+  conclusions: string[];
+  topicCoverage: string[];
+  confidence: number;
+  dataNote?: string;
+}
+
+export interface LectureSummary {
+  lectureNumber: number;
+  weekNumber: number;
+  sourceFileId: string | null;
+  filename: string | null;
+  title: string;
+  mainTopics: string[];
+  keyDefinitions: string[];
+  keyTheorems: string[];
+  keyFormulas: string[];
+  examNotes: string[];
+  dataQuality: "good" | "partial" | "ocr_only";
+  summarySourceFile: string | null;
+  extractedTheorems: number;
+  extractedFormulas: number;
+  confidence: number;
+  ocrWarning?: string;
+}
+
+export interface HomeworkQuestionPriority {
+  questionId: string;
+  questionNumber: number;
+  homeworkNumber: number;
+  weekNumber: number;
+  topicIds: string[];
+  difficulty: string;
+  examSimilarity: "low" | "medium" | "high" | "critical";
+  importanceLevel: "low" | "medium" | "high" | "critical";
+  whyItMatters: string;
+  requiredKnowledge: string[];
+  recommendedAction: string;
+  contentPreview: string;
+  confidence: number;
+}
+
+export interface HomeworkPriorityEntry {
+  homeworkNumber: number;
+  weekNumber: number;
+  sourceFileId: string;
+  filename: string;
+  mustReviewBeforeExam: boolean;
+  overallPriority: "low" | "medium" | "high" | "critical";
+  criticalQuestions: number;
+  highPriorityQuestions: number;
+  questions: HomeworkQuestionPriority[];
+}
+
+export interface MaxInsight {
+  id: string;
+  recitation?: number;
+  week?: number;
+  topic?: string;
+  title?: string;
+  text: string;
+  maxQuote?: string;
+  priority?: string;
+  examImplication?: string;
+  formalStatement?: string;
+  technique?: string;
+  classicExamQuestion?: string;
+  redFlag?: string;
+  orderOfGrowth?: string;
+  mustMemorize?: string[];
+  key?: string;
+  rule?: string;
+}
+
+export interface MaxCounterExample {
+  id: string;
+  recitation: number;
+  week: number;
+  topic: string;
+  title: string;
+  claim: string;
+  verdict: string;
+  maxQuote?: string;
+  counterexampleConstruction?: string;
+  formalCounterexample?: string;
+  whyItWorks?: string;
+  counterexample?: string;
+  explanation?: string;
+  proof?: string;
+  technique?: string;
+  example?: Record<string, string>;
+  badWriting?: string;
+  correctApproach?: string;
+  classicExample?: string;
+  correctCalculation?: string;
+  rule?: string;
+  key?: string;
+}
+
+export interface MaxInsightsData {
+  generatedAt: string;
+  source: string;
+  instructor: string;
+  examCriticalNotes: MaxInsight[];
+  intuitions: MaxInsight[];
+  counterExamples: MaxCounterExample[];
+  weeklyInsights: Array<{
+    week: number;
+    recitation: number;
+    topic: string;
+    keyInsights: string[];
+    examTip?: string;
+    classicExamQuestion?: string;
+    dangerZone?: string;
+    examCritical?: string;
+    orderOfGrowth?: string;
+    mustMemorize?: string[];
+  }>;
+  commonMistakesFromMax: Array<{
+    id: string;
+    week: number;
+    mistake: string;
+    maxSays: string;
+  }>;
+}
+
+export interface SimulationQuestion {
+  id: string;
+  sourceBasis: "homework" | "recitation" | "past_exam" | "mixed";
+  basedOnSourceIds: string[];
+  topicIds: string[];
+  content: string;
+  requiredKnowledge: string[];
+  difficulty: "easy" | "medium" | "hard";
+  examRelevance: "medium" | "high" | "critical";
+  hint?: string;
+  solutionOutline?: string;
+}
+
+export interface SimulationExamData {
+  id: string;
+  title: string;
+  estimatedDurationMinutes: number;
+  difficulty: "easy" | "medium" | "hard" | "mixed";
+  targetTopics: string[];
+  needsReview?: boolean;
+  questions: SimulationQuestion[];
+}
+
 export interface MentorKnowledgeBase {
   generatedAt: string;
   courseIdentity: {

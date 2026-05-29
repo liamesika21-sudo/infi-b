@@ -1,0 +1,534 @@
+[
+  {
+    "recitationNumber": 1,
+    "weekNumber": 1,
+    "sourceFileId": "recitation-recitation-1-hebrew-1",
+    "filename": "Recitation 1-Hebrew (1).pdf",
+    "practicesLecture": null,
+    "mainThemes": [
+      "כלל לופיטל",
+      "משפט דרבו",
+      "גבולות חד-צדדיים"
+    ],
+    "whatWasPracticed": "חישוב גבולות בצורות 0/0 ו-∞/∞ עם כלל לופיטל, וגבולות מהסוג 0·∞. יישום משפט דרבו להוכחות על פונקציות גזורות.",
+    "keyTechniques": [
+      "כלל לופיטל",
+      "פירוק לגבולות חד-צדדיים",
+      "משפט דרבו",
+      "משפט דרבו המורחב"
+    ],
+    "examRelevance": "high",
+    "questionCount": 6,
+    "questionIds": [
+      "recitation-recitation-1-hebrew-1-question-1",
+      "recitation-recitation-1-hebrew-1-question-2",
+      "recitation-recitation-1-hebrew-1-question-3",
+      "recitation-recitation-1-hebrew-1-question-4",
+      "recitation-recitation-1-hebrew-1-question-5",
+      "recitation-recitation-1-hebrew-1-question-6"
+    ],
+    "solutionPatternCount": 2,
+    "mustPractice": [
+      "חשב גבולות בצורת 0/0 ו-∞/∞ עם לופיטל",
+      "הוכחת קיום נקודה עם ערך נגזרת נתון (דרבו)",
+      "הוכיחו או הפריכו — גבולות ונגזרות"
+    ],
+    "commonMistakes": [
+      "שימוש בלופיטל כשהגבול לא בצורה 0/0 או ∞/∞",
+      "שכחה לבדוק תנאי לופיטל לפני הפעלה",
+      "חוסר בדיקת גבולות חד-צדדיים כשהפונקציה לא מוגדרת מכל צד"
+    ],
+    "conclusions": [
+      "לופיטל תקף רק ב-0/0 ו-∞/∞ — תמיד בדקי תנאים קודם",
+      "דרבו מאפשר למצוא נקודה עם נגזרת כלשהי בין שתי נקודות גזירות",
+      "משפט דרבו המורחב הוא כלי הוכחה חזק לשאלות 'הוכיחו/הפריכו'"
+    ],
+    "topicCoverage": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
+    "recitationNumber": 2,
+    "weekNumber": 2,
+    "sourceFileId": "recitation-recitation-2-hebrew",
+    "filename": "Recitation 2-Hebrew.pdf",
+    "practicesLecture": 1,
+    "mainThemes": [
+      "סדרות רקורסיביות",
+      "גבולות סדרות",
+      "כלל לופיטל לסדרות"
+    ],
+    "whatWasPracticed": "ניתוח סדרות המוגדרות רקורסיבית: מציאת גבול, הוכחת מונוטוניות וחסינות, ושימוש בלופיטל לחישוב גבולות.",
+    "keyTechniques": [
+      "ניתוח סדרה רקורסיבית",
+      "הוכחת מונוטוניות (אינדוקציה)",
+      "הוכחת חסימות",
+      "שאלות הוכיחו/הפריכו"
+    ],
+    "examRelevance": "high",
+    "questionCount": 7,
+    "questionIds": [
+      "recitation-recitation-2-hebrew-question-1",
+      "recitation-recitation-2-hebrew-question-2",
+      "recitation-recitation-2-hebrew-question-3",
+      "recitation-recitation-2-hebrew-question-4",
+      "recitation-recitation-2-hebrew-question-5",
+      "recitation-recitation-2-hebrew-question-6",
+      "recitation-recitation-2-hebrew-question-7"
+    ],
+    "solutionPatternCount": 4,
+    "mustPractice": [
+      "ניתוח סדרה רקורסיבית — מציאת גבול וקיומו",
+      "הוכחת מונוטוניות עם אינדוקציה",
+      "שאלות הוכיחו/הפריכו על סדרות"
+    ],
+    "commonMistakes": [
+      "הנחה שגבול קיים לפני שמוכיחים את קיומו",
+      "חישוב גבול כאשר הסדרה לא חסומה",
+      "שכחה לבדוק מונוטוניות"
+    ],
+    "conclusions": [
+      "לסדרה רקורסיבית: קודם מוכיחים מונוטוניות וחסימות, אחר כך מחשבים גבול",
+      "אם ידוע ש-lim aₙ = L, אז גם lim aₙ₊₁ = L — כלי מרכזי"
+    ],
+    "topicCoverage": [
+      "גבולות",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
+    "recitationNumber": 3,
+    "weekNumber": 3,
+    "sourceFileId": "recitation-recitation-3-hebrew",
+    "filename": "Recitation 3-Hebrew.pdf",
+    "practicesLecture": 2,
+    "mainThemes": [
+      "נגזרות מסדר גבוה",
+      "משפט הערך הממוצע",
+      "פיתוח טיילור"
+    ],
+    "whatWasPracticed": "חישוב נגזרות מסדר n, יישום MVT ומשפטי רול ולגרנז', ופיתוח טיילור של מחלקה ראשונה.",
+    "keyTechniques": [
+      "נגזרת מסדר n",
+      "MVT",
+      "רול",
+      "פיתוח טיילור עם שארית"
+    ],
+    "examRelevance": "high",
+    "questionCount": 10,
+    "questionIds": [
+      "recitation-recitation-3-hebrew-question-1",
+      "recitation-recitation-3-hebrew-question-2",
+      "recitation-recitation-3-hebrew-question-3",
+      "recitation-recitation-3-hebrew-question-4",
+      "recitation-recitation-3-hebrew-question-5",
+      "recitation-recitation-3-hebrew-question-6",
+      "recitation-recitation-3-hebrew-question-7",
+      "recitation-recitation-3-hebrew-question-8",
+      "recitation-recitation-3-hebrew-question-9",
+      "recitation-recitation-3-hebrew-question-10"
+    ],
+    "solutionPatternCount": 0,
+    "mustPractice": [
+      "חישוב נגזרת מסדר n של פונקציות בסיסיות",
+      "יישום MVT להוכחת אי-שוויונות",
+      "הוכחות ב-ε-δ על גבולות"
+    ],
+    "commonMistakes": [
+      "שגיאה בפיתוח נגזרת סינוס/קוסינוס מסדר n",
+      "שכחת תנאי המשפט (רציפות, גזירות בקטע)",
+      "בלבול בין MVT של קושי לרגיל"
+    ],
+    "conclusions": [
+      "MVT: פונקציה גזירה בקטע סגור — קיים נקודה פנימית שבה הנגזרת שווה לשיפוע הממוצע",
+      "פיתוח טיילור = כלי מרכזי לחישוב גבולות ואינטגרלים"
+    ],
+    "topicCoverage": [
+      "נגזרות",
+      "סדרות"
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
+    "recitationNumber": 4,
+    "weekNumber": 4,
+    "sourceFileId": "recitation-recitation-4-hebrew",
+    "filename": "Recitation 4-Hebrew.pdf",
+    "practicesLecture": 3,
+    "mainThemes": [
+      "אינטגרל מסוים",
+      "אינטגרל לא מסוים",
+      "אינטגרציה בחלקים"
+    ],
+    "whatWasPracticed": "חישוב אינטגרלים מסוימים ולא מסוימים, שיטות: החלפת משתנה, אינטגרציה בחלקים, פירוק לשברים חלקיים.",
+    "keyTechniques": [
+      "החלפת משתנה",
+      "אינטגרציה בחלקים",
+      "פירוק לשברים חלקיים",
+      "אינטגרלים בסיסיים"
+    ],
+    "examRelevance": "critical",
+    "questionCount": 9,
+    "questionIds": [
+      "recitation-recitation-4-hebrew-question-1",
+      "recitation-recitation-4-hebrew-question-2",
+      "recitation-recitation-4-hebrew-question-3",
+      "recitation-recitation-4-hebrew-question-4",
+      "recitation-recitation-4-hebrew-question-5",
+      "recitation-recitation-4-hebrew-question-6",
+      "recitation-recitation-4-hebrew-question-7",
+      "recitation-recitation-4-hebrew-question-8",
+      "recitation-recitation-4-hebrew-question-9"
+    ],
+    "solutionPatternCount": 2,
+    "mustPractice": [
+      "אינטגרציה בחלקים: ∫u dv",
+      "החלפת משתנה (sin, cos, exp)",
+      "פירוק לשברים חלקיים",
+      "אינטגרלים לא מסוימים של פונקציות רציונליות"
+    ],
+    "commonMistakes": [
+      "בחירה לא טובה של u ב-IBP",
+      "שכחת קבוע האינטגרציה +C",
+      "טעויות בגבולות בהחלפת משתנה"
+    ],
+    "conclusions": [
+      "IBP: בחרי u = הפונקציה שנגזרתה פשוטה יותר, dv = מה שנוח לאינטגרציה",
+      "פירוק לשברים חלקיים: שם ά/מכנה — פירוק המכנה לגורמים ראשוניים"
+    ],
+    "topicCoverage": [
+      "גבולות",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
+    "recitationNumber": 6,
+    "weekNumber": 6,
+    "sourceFileId": "recitation-recitation-6-hebrew",
+    "filename": "Recitation 6-Hebrew.pdf",
+    "practicesLecture": 5,
+    "mainThemes": [
+      "מבחן השוואה לטורים",
+      "מבחן האינטגרל",
+      "טורים מוחלטים"
+    ],
+    "whatWasPracticed": "בדיקת התכנסות טורים עם מבחן השוואה, מבחן הגבול (LCT), מבחן האינטגרל, ומבחן סדרות חלופיות (Leibniz).",
+    "keyTechniques": [
+      "מבחן השוואה (CT)",
+      "מבחן גבול ההשוואה (LCT)",
+      "מבחן האינטגרל",
+      "מבחן לייבניץ"
+    ],
+    "examRelevance": "critical",
+    "questionCount": 6,
+    "questionIds": [
+      "recitation-recitation-6-hebrew-question-1",
+      "recitation-recitation-6-hebrew-question-2",
+      "recitation-recitation-6-hebrew-question-3",
+      "recitation-recitation-6-hebrew-question-4",
+      "recitation-recitation-6-hebrew-question-5",
+      "recitation-recitation-6-hebrew-question-6"
+    ],
+    "solutionPatternCount": 0,
+    "mustPractice": [
+      "מבחן השוואה: LCT וCT",
+      "מבחן האינטגרל לטורים עם פונקציה יורדת",
+      "מבחן לייבניץ לטורים חלופיים",
+      "זיהוי טורים מהסוג p-series"
+    ],
+    "commonMistakes": [
+      "שכחת לבדוק שהפונקציה חיובית ויורדת לפני מבחן האינטגרל",
+      "שימוש ב-LCT כשהגבול הוא 0 או ∞ (לא מסקנה)",
+      "בלבול בין התכנסות מוחלטת לבין התכנסות בתנאי",
+      "תרגול 6 היום: טור טלסקופי. • תנאי הכרחי. • משפט הזנבות. • מבחן ההשוואה. • מבחן ההשוואה הגבולי. • תזכורת: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי . lim N →∞ N ∑ n=k an מתכנס אם קיים הגבול ∞ ∑ n=k an נאמר שהטור במקרה זה נגדיר ∞ ∑ n=k an = lim N →∞ N ∑ n=k an תנאי הכרחי: . lim n→∞an = 0 טור מתכנס, אזי ∞ ∑ n=k an יהי , כלומר אם התנאי לא מתקיים הטורתנאי הכרחי ולא תנאי מספיק שימו לב שמדובר על מתבדר ואם התנאי מתקיים לא ניתן לדעת )על סמך הבדיקה של הגבול( אם הטור מתכנס או מתבדר. דוגמאות: קבעו האם הטורים הבאים מתכנסים, אם כן מצאו את ערכם: ∞ ∑ n=1 arctan n .1 פתרון: lim n→∞ arctan n = Heine lim x→∞ arctan x = π 2 6 = 0 מתנאי הכרחי. הטור מתבדר הגבול שונה מאפס ולכן 1"
+    ],
+    "conclusions": [
+      "LCT: אם lim aₙ/bₙ = L > 0, שני הטורים מתכנסים או מתבדרים יחד",
+      "מבחן האינטגרל: השתמשי כשrandom קשה לחשב ישירות",
+      "טור חלופי מתכנס אם |aₙ| יורד למאפס"
+    ],
+    "topicCoverage": [
+      "גבולות",
+      "טורים",
+      "מבחן ההשוואה",
+      "סדרות"
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
+    "recitationNumber": 7,
+    "weekNumber": 7,
+    "sourceFileId": "recitation-recitation-7-hebrew",
+    "filename": "Recitation 7-Hebrew.pdf",
+    "practicesLecture": 6,
+    "mainThemes": [
+      "מבחן המנה",
+      "מבחן השורש",
+      "טורי חזקות — מבוא"
+    ],
+    "whatWasPracticed": "יישום מבחן קושי (שורש) ומבחן דלאמבר (מנה) לטורים, זיהוי גיאומטריה, ותחילת טורי חזקות.",
+    "keyTechniques": [
+      "מבחן המנה (D'Alembert)",
+      "מבחן השורש (Cauchy)",
+      "גיאומטרי-סכום",
+      "רדיוס התכנסות"
+    ],
+    "examRelevance": "critical",
+    "questionCount": 8,
+    "questionIds": [
+      "recitation-recitation-7-hebrew-question-1",
+      "recitation-recitation-7-hebrew-question-2",
+      "recitation-recitation-7-hebrew-question-3",
+      "recitation-recitation-7-hebrew-question-4",
+      "recitation-recitation-7-hebrew-question-5",
+      "recitation-recitation-7-hebrew-question-6",
+      "recitation-recitation-7-hebrew-question-7",
+      "recitation-recitation-7-hebrew-question-8"
+    ],
+    "solutionPatternCount": 0,
+    "mustPractice": [
+      "מבחן מנה לטורים עם n!",
+      "מבחן שורש לטורים עם (...)^n",
+      "חישוב רדיוס התכנסות R עם נוסחת המנה/שורש",
+      "טור גיאומטרי — סכום וקריטריון"
+    ],
+    "commonMistakes": [
+      "שימוש במבחן מנה כשהמנה → 1 (מבחן לא קובע)",
+      "שכחה לבדוק את נקודות הקצה בתחום ההתכנסות",
+      "בלבול בין R לבין (-R+x₀, R+x₀)"
+    ],
+    "conclusions": [
+      "מבחן מנה קובע: L < 1 → מתכנס, L > 1 → מתבדר, L = 1 → לא קובע",
+      "רדיוס התכנסות R = 1/limsup|aₙ|^(1/n) — תמיד בדקי קצוות בנפרד"
+    ],
+    "topicCoverage": [
+      "גבולות",
+      "טורים",
+      "מבחן ההשוואה",
+      "מבחן המנה",
+      "מבחן השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
+    "recitationNumber": 8,
+    "weekNumber": 8,
+    "sourceFileId": "recitation-recitation-8-hebrew",
+    "filename": "Recitation 8 Hebrew.pdf",
+    "practicesLecture": 7,
+    "mainThemes": [
+      "התכנסות בהחלט",
+      "התכנסות בתנאי",
+      "מבחן לייבניץ"
+    ],
+    "whatWasPracticed": "הבחנה בין התכנסות מוחלטת לבין התכנסות בתנאי, הוכחות Leibniz, וטורים חלופיים.",
+    "keyTechniques": [
+      "הוכחת התכנסות בתנאי (Leibniz)",
+      "הוכחת אי-התכנסות מוחלטת",
+      "השוואת כוחות"
+    ],
+    "examRelevance": "high",
+    "questionCount": 5,
+    "questionIds": [
+      "recitation-recitation-8-hebrew-question-1",
+      "recitation-recitation-8-hebrew-question-2",
+      "recitation-recitation-8-hebrew-question-3",
+      "recitation-recitation-8-hebrew-question-4",
+      "recitation-recitation-8-hebrew-question-5"
+    ],
+    "solutionPatternCount": 2,
+    "mustPractice": [
+      "מציאת כל x שבהם טור מתכנס (בהחלט/בתנאי/מתבדר)",
+      "שאלות על תחום התכנסות מלא עם בדיקת קצוות",
+      "הוכחת התכנסות בתנאי vs מוחלטת"
+    ],
+    "commonMistakes": [
+      "שכחת בדיקת קצוות תחום ההתכנסות",
+      "הנחה שהתכנסות בתנאי → מתכנס מוחלט (שגוי)"
+    ],
+    "conclusions": [
+      "בתוך רדיוס ההתכנסות — מוחלט תמיד",
+      "בקצוות — יש לבדוק ידנית, ייתכן כל מצב",
+      "הסדר גורם: aₙ≥0 חיוני ל-Leibniz"
+    ],
+    "topicCoverage": [
+      "גבולות",
+      "התכנסות בהחלט",
+      "התכנסות בתנאי",
+      "טורים",
+      "מבחן ההשוואה",
+      "מבחן השורש",
+      "סדרות"
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
+    "recitationNumber": 8,
+    "weekNumber": 8,
+    "sourceFileId": "recitation-recitation-8-hebrew-2",
+    "filename": "Recitation 8-Hebrew-2.pdf",
+    "practicesLecture": 7,
+    "mainThemes": [
+      "התכנסות בהחלט",
+      "התכנסות בתנאי",
+      "מבחן לייבניץ"
+    ],
+    "whatWasPracticed": "הבחנה בין התכנסות מוחלטת לבין התכנסות בתנאי, הוכחות Leibniz, וטורים חלופיים.",
+    "keyTechniques": [
+      "הוכחת התכנסות בתנאי (Leibniz)",
+      "הוכחת אי-התכנסות מוחלטת",
+      "השוואת כוחות"
+    ],
+    "examRelevance": "high",
+    "questionCount": 5,
+    "questionIds": [
+      "recitation-recitation-8-hebrew-2-question-1",
+      "recitation-recitation-8-hebrew-2-question-2",
+      "recitation-recitation-8-hebrew-2-question-3",
+      "recitation-recitation-8-hebrew-2-question-4",
+      "recitation-recitation-8-hebrew-2-question-5"
+    ],
+    "solutionPatternCount": 2,
+    "mustPractice": [
+      "מציאת כל x שבהם טור מתכנס (בהחלט/בתנאי/מתבדר)",
+      "שאלות על תחום התכנסות מלא עם בדיקת קצוות",
+      "הוכחת התכנסות בתנאי vs מוחלטת"
+    ],
+    "commonMistakes": [
+      "שכחת בדיקת קצוות תחום ההתכנסות",
+      "הנחה שהתכנסות בתנאי → מתכנס מוחלט (שגוי)"
+    ],
+    "conclusions": [
+      "בתוך רדיוס ההתכנסות — מוחלט תמיד",
+      "בקצוות — יש לבדוק ידנית, ייתכן כל מצב",
+      "הסדר גורם: aₙ≥0 חיוני ל-Leibniz"
+    ],
+    "topicCoverage": [
+      "גבולות",
+      "התכנסות בהחלט",
+      "התכנסות בתנאי",
+      "טורים",
+      "מבחן ההשוואה",
+      "מבחן השורש",
+      "סדרות"
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
+    "recitationNumber": 8,
+    "weekNumber": 8,
+    "sourceFileId": "recitation-recitation-8-hebrew",
+    "filename": "Recitation 8-Hebrew.pdf",
+    "practicesLecture": 7,
+    "mainThemes": [
+      "התכנסות בהחלט",
+      "התכנסות בתנאי",
+      "מבחן לייבניץ"
+    ],
+    "whatWasPracticed": "הבחנה בין התכנסות מוחלטת לבין התכנסות בתנאי, הוכחות Leibniz, וטורים חלופיים.",
+    "keyTechniques": [
+      "הוכחת התכנסות בתנאי (Leibniz)",
+      "הוכחת אי-התכנסות מוחלטת",
+      "השוואת כוחות"
+    ],
+    "examRelevance": "high",
+    "questionCount": 5,
+    "questionIds": [
+      "recitation-recitation-8-hebrew-question-1",
+      "recitation-recitation-8-hebrew-question-2",
+      "recitation-recitation-8-hebrew-question-3",
+      "recitation-recitation-8-hebrew-question-4",
+      "recitation-recitation-8-hebrew-question-5"
+    ],
+    "solutionPatternCount": 2,
+    "mustPractice": [
+      "מציאת כל x שבהם טור מתכנס (בהחלט/בתנאי/מתבדר)",
+      "שאלות על תחום התכנסות מלא עם בדיקת קצוות",
+      "הוכחת התכנסות בתנאי vs מוחלטת"
+    ],
+    "commonMistakes": [
+      "שכחת בדיקת קצוות תחום ההתכנסות",
+      "הנחה שהתכנסות בתנאי → מתכנס מוחלט (שגוי)"
+    ],
+    "conclusions": [
+      "בתוך רדיוס ההתכנסות — מוחלט תמיד",
+      "בקצוות — יש לבדוק ידנית, ייתכן כל מצב",
+      "הסדר גורם: aₙ≥0 חיוני ל-Leibniz"
+    ],
+    "topicCoverage": [
+      "גבולות",
+      "התכנסות בהחלט",
+      "התכנסות בתנאי",
+      "טורים",
+      "מבחן ההשוואה",
+      "מבחן השורש",
+      "סדרות"
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
+    "recitationNumber": 9,
+    "weekNumber": 9,
+    "sourceFileId": "recitation-recitation-9-hebrew",
+    "filename": "Recitation_9-Hebrew.pdf",
+    "practicesLecture": 8,
+    "mainThemes": [
+      "טורי חזקות",
+      "רדיוס התכנסות",
+      "טורי טיילור ומקלורן"
+    ],
+    "whatWasPracticed": "עבודה עם טורי חזקות: חישוב רדיוס התכנסות, גזירה ואינטגרציה של טורי חזקות, ופיתוח טורי טיילור של פונקציות בסיסיות.",
+    "keyTechniques": [
+      "רדיוס התכנסות — נוסחת המנה/שורש",
+      "גזירת טור חזקות",
+      "אינטגרציה של טור חזקות",
+      "טיילור/מקלורן"
+    ],
+    "examRelevance": "critical",
+    "questionCount": 5,
+    "questionIds": [
+      "recitation-recitation-9-hebrew-question-1",
+      "recitation-recitation-9-hebrew-question-2",
+      "recitation-recitation-9-hebrew-question-3",
+      "recitation-recitation-9-hebrew-question-4",
+      "recitation-recitation-9-hebrew-question-5"
+    ],
+    "solutionPatternCount": 0,
+    "mustPractice": [
+      "חישוב R של ∑aₙxⁿ",
+      "גזירה ואינטגרציה של ∑aₙxⁿ",
+      "פיתוח eˣ, sin x, cos x, 1/(1-x) לטורי מקלורן",
+      "חישוב סכום טור חזקות"
+    ],
+    "commonMistakes": [
+      "גזירה/אינטגרציה שינוי R אך לא בדיקת קצוות מחדש",
+      "שכחה ש-R לא משתנה בגזירה/אינטגרציה, אבל הקצוות כן",
+      "טעויות בנוסחת המקדמים aₙ = f^(n)(0)/n!"
+    ],
+    "conclusions": [
+      "גזירה/אינטגרציה של טור חזקות: R לא משתנה, הקצוות — בדקי מחדש",
+      "טורי מקלורן עיקריים: עליך לשנן eˣ, sin x, cos x, ln(1+x), 1/(1-x)"
+    ],
+    "topicCoverage": [
+      "גבולות",
+      "טורי חזקות",
+      "טורים",
+      "מבחן ההשוואה",
+      "סדרות",
+      "רדיוס התכנסות"
+    ],
+    "confidence": 0.8999999999999999
+  }
+]
