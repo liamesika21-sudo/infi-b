@@ -38,7 +38,7 @@ export default async function SimulationsPage() {
       ) : (
         <div className="grid gap-5 md:grid-cols-2">
           {simulations.map((sim) => (
-            <SimulationCard key={sim.id} sim={sim as any} />
+            <SimulationCard key={sim.id} sim={sim} />
           ))}
         </div>
       )}
@@ -46,7 +46,7 @@ export default async function SimulationsPage() {
       {/* OCR warning */}
       {pendingCount > 0 && (
         <StudyCallout variant="warning">
-          {pendingCount} סימולציה/ות מסומנות כ"ממתינות לבדיקה" — כלומר לא הצלחנו לחלץ מספיק שאלות מהמקורות.
+          {pendingCount} סימולציה/ות מסומנות כ&quot;ממתינות לבדיקה&quot; — כלומר לא הצלחנו לחלץ מספיק שאלות מהמקורות.
           הריצי <code dir="ltr" className="rounded bg-white/60 px-1.5 py-0.5 text-xs font-mono">npm run generate:simulations</code> אחרי הוספת חומרים נוספים.
         </StudyCallout>
       )}

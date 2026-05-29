@@ -3,22 +3,19 @@ import { PageHeader } from "@/components/study/StudyCard";
 import { StudyCallout } from "@/components/study/StudyCallout";
 import { ExamRelevanceBadge, PriorityBadge } from "@/components/study/Badges";
 
-const EXAM_DATE = new Date("2026-07-01T09:00:00");
-
 export default async function QuickReviewPage() {
   const analysis = await readAnalysisData();
   const plan = analysis.examPlan;
   const criticalTopics = analysis.examPriorityMap?.topics.filter((t) => t.priorityLevel === "critical") ?? [];
   const highTopics = analysis.examPriorityMap?.topics.filter((t) => t.priorityLevel === "high") ?? [];
   const recSummaries = analysis.recitationSummaries;
-  const daysLeft = Math.max(0, Math.ceil((EXAM_DATE.getTime() - Date.now()) / (1000 * 60 * 60 * 24)));
 
   return (
     <div className="space-y-6">
       <PageHeader
         eyebrow="Quick Review"
         title="חזרה מהירה"
-        description={`${daysLeft} ימים למבחן · 01.07.2026 · נוסחאות, משפטים ורשימות חזרה.`}
+        description="מועד א׳ · 01.07.2026 · נוסחאות, משפטים ורשימות חזרה."
       />
 
       {/* Critical checklist */}

@@ -1,6 +1,23 @@
 import Link from "next/link";
-import { BookOpen, Brain, Calendar, ClipboardList, FileQuestion, FlaskConical, Gauge, Layers3, ScrollText, Sigma, Target, Zap } from "lucide-react";
-import { calculus2Course, moduleRoutes } from "@/lib/calculus2/config";
+import type React from "react";
+import {
+  AlertTriangle,
+  BookOpen,
+  Brain,
+  Calendar,
+  CheckCircle2,
+  ClipboardList,
+  FileQuestion,
+  FlaskConical,
+  Gauge,
+  Layers3,
+  ScrollText,
+  Sigma,
+  Target,
+  TrendingUp,
+  Zap,
+} from "lucide-react";
+import { calculus2Course } from "@/lib/calculus2/config";
 import type { GeneratedDataSnapshot, MaterialInventory } from "@/lib/calculus2";
 import type { readAnalysisData } from "@/lib/calculus2/analysis-reader";
 import { StudyCallout } from "@/components/study/StudyCallout";
@@ -44,6 +61,22 @@ export function Dashboard({
   const criticalHw = analysisData.homeworkPriorityMap.flatMap((hw) =>
     hw.questions.filter((q) => q.importanceLevel === "critical")
   ).slice(0, 3);
+  const fullMaterialWeeks = generatedData.weekMap.filter(
+    (week) =>
+      week.materialStatus.lecture === "available" &&
+      week.materialStatus.recitation !== "missing" &&
+      week.materialStatus.homework === "available",
+  ).length;
+  const analyzedWeeks = generatedData.weekMap.filter((week) => week.topicCoverage.length > 0).length;
+  const analyzedPercent = percentage(analyzedWeeks, calculus2Course.totalWeeks);
+  const completeMaterialPercent = percentage(fullMaterialWeeks, calculus2Course.totalWeeks);
+  const extractionSuccessPercent = percentage(
+    generatedData.extractedTextIndex.filter((record) => record.status === "success").length,
+    generatedData.extractedTextIndex.length,
+  );
+  const topicProgress = buildTopicProgress(analysisData);
+  const strongTopics = topicProgress.filter((topic) => topic.status === "strong").slice(0, 4);
+  const weakerTopics = topicProgress.filter((topic) => topic.status === "needs_work").slice(0, 4);
 
   const urgency = daysLeft <= 7 ? "red" : daysLeft <= 21 ? "amber" : "navy";
 
@@ -117,6 +150,17 @@ export function Dashboard({
           {" "}כדי להתחיל.
         </StudyCallout>
       )}
+
+      <LearningProgressPanel
+        analyzedPercent={analyzedPercent}
+        completeMaterialPercent={completeMaterialPercent}
+        extractionSuccessPercent={extractionSuccessPercent}
+        analyzedWeeks={analyzedWeeks}
+        fullMaterialWeeks={fullMaterialWeeks}
+        strongTopics={strongTopics}
+        weakerTopics={weakerTopics}
+        hasAnalysis={analysisData.hasAnalysis}
+      />
 
       {/* What to do NOW */}
       {analysisData.hasAnalysis && (
@@ -270,6 +314,264 @@ function ActionItem({
   );
 }
 
+type TopicProgress = {
+  topicId: string;
+  title: string;
+  score: number;
+  priorityLevel: "low" | "medium" | "high" | "critical";
+  status: "strong" | "needs_work" | "developing";
+  reason: string;
+};
+
+function LearningProgressPanel({
+  analyzedPercent,
+  completeMaterialPercent,
+  extractionSuccessPercent,
+  analyzedWeeks,
+  fullMaterialWeeks,
+  strongTopics,
+  weakerTopics,
+  hasAnalysis,
+}: {
+  analyzedPercent: number;
+  completeMaterialPercent: number;
+  extractionSuccessPercent: number;
+  analyzedWeeks: number;
+  fullMaterialWeeks: number;
+  strongTopics: TopicProgress[];
+  weakerTopics: TopicProgress[];
+  hasAnalysis: boolean;
+}) {
+  const bars = [
+    analyzedPercent,
+    completeMaterialPercent,
+    extractionSuccessPercent,
+    Math.max(12, Math.min(100, strongTopics.length * 22)),
+    Math.max(12, Math.min(100, weakerTopics.length * 18)),
+    Math.max(18, Math.round((analyzedPercent + completeMaterialPercent) / 2)),
+    Math.max(18, Math.round((extractionSuccessPercent + analyzedPercent) / 2)),
+  ];
+
+  return (
+    <section className="grid gap-4 xl:grid-cols-[0.9fr_1.1fr]">
+      <div className="group relative overflow-hidden rounded-xl bg-slate-950 p-4 shadow-2xl transition-all duration-300 hover:scale-[1.01] hover:shadow-cyan-500/20">
+        <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-500 via-indigo-500 to-amber-400 opacity-20 blur-sm transition-opacity duration-300 group-hover:opacity-30" />
+        <div className="absolute inset-px rounded-[11px] bg-slate-950" />
+        <div className="relative">
+          <div className="mb-4 flex items-center justify-between gap-3">
+            <div className="flex items-center gap-2">
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-500 to-indigo-500">
+                <TrendingUp className="h-4 w-4 text-white" />
+              </div>
+              <div>
+                <h2 className="text-sm font-semibold text-white">מעקב התקדמות בחומר</h2>
+                <p className="text-xs text-slate-400">מבוסס על חומרים שנותחו, לא על סימון אישי ידני</p>
+              </div>
+            </div>
+            <span className="flex items-center gap-1 rounded-full bg-emerald-500/10 px-2 py-1 text-xs font-medium text-emerald-400">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+              {hasAnalysis ? "פעיל" : "ממתין לניתוח"}
+            </span>
+          </div>
+
+          <div className="mb-4 grid grid-cols-2 gap-3">
+            <DarkMetric label="שבועות שנותחו" value={`${analyzedWeeks}/13`} trend={`${analyzedPercent}%`} />
+            <DarkMetric label="חומר מלא לשבוע" value={`${fullMaterialWeeks}/13`} trend={`${completeMaterialPercent}%`} />
+            <DarkMetric label="חילוץ תקין" value={`${extractionSuccessPercent}%`} trend="PDF" />
+            <DarkMetric label="נושאים חזקים" value={strongTopics.length} trend="כיסוי גבוה" />
+          </div>
+
+          <div
+            className="learning-progress-container mb-4"
+            style={{ "--progress-value": `${analyzedPercent}%` } as React.CSSProperties}
+          >
+            <div className="learning-progress-particles" aria-hidden="true">
+              <span />
+              <span />
+              <span />
+              <span />
+              <span />
+            </div>
+            <div className="learning-progress-bar" />
+            <span className="learning-progress-text">{analyzedPercent}% נותח</span>
+          </div>
+
+          <div className="mb-4 h-20 w-full overflow-hidden rounded-lg bg-slate-900/60 p-3">
+            <div className="flex h-full w-full items-end justify-between gap-1">
+              {bars.map((bar, index) => (
+                <div key={`${bar}-${index}`} className="flex h-full w-3 items-end rounded-sm bg-cyan-500/20">
+                  <div
+                    className="w-full rounded-sm bg-gradient-to-t from-cyan-500 to-emerald-300 transition-all duration-300"
+                    style={{ height: `${bar}%` }}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="flex items-center justify-between gap-3">
+            <span className="text-xs font-medium text-slate-400">עדכון אחרון מתוך JSON מקומי</span>
+            <Link
+              href="/progress"
+              className="flex items-center gap-1 rounded-lg bg-gradient-to-r from-cyan-500 to-indigo-500 px-3 py-1.5 text-xs font-medium text-white transition hover:from-cyan-600 hover:to-indigo-600"
+            >
+              פירוט שליטה
+              <Gauge className="h-3.5 w-3.5" />
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      <div className="grid gap-4 md:grid-cols-2">
+        <TopicListCard
+          title="נושאים חזקים כרגע"
+          icon={<CheckCircle2 className="h-4 w-4" />}
+          tone="green"
+          items={strongTopics}
+          empty="עדיין אין מספיק כיסוי כדי לסמן נושא כחזק."
+        />
+        <TopicListCard
+          title="נושאים שדורשים חיזוק"
+          icon={<AlertTriangle className="h-4 w-4" />}
+          tone="amber"
+          items={weakerTopics}
+          empty="לא זוהו פערים משמעותיים לפי החומרים המעובדים."
+        />
+      </div>
+    </section>
+  );
+}
+
+function DarkMetric({ label, value, trend }: { label: string; value: string | number; trend: string }) {
+  return (
+    <div className="rounded-lg bg-slate-900/60 p-3">
+      <p className="text-xs font-medium text-slate-400">{label}</p>
+      <p className="mt-1 text-lg font-semibold text-white">{value}</p>
+      <span className="text-xs font-medium text-emerald-400">{trend}</span>
+    </div>
+  );
+}
+
+function TopicListCard({
+  title,
+  icon,
+  tone,
+  items,
+  empty,
+}: {
+  title: string;
+  icon: React.ReactNode;
+  tone: "green" | "amber";
+  items: TopicProgress[];
+  empty: string;
+}) {
+  const toneClass =
+    tone === "green"
+      ? "bg-emerald-50 text-emerald-700 border-emerald-100"
+      : "bg-amber-50 text-amber-800 border-amber-100";
+
+  return (
+    <article className="rounded-xl border bg-white p-5 shadow-sm" style={{ borderColor: "var(--border)" }}>
+      <div className="flex items-center gap-2">
+        <span className={`flex h-8 w-8 items-center justify-center rounded-lg border ${toneClass}`}>{icon}</span>
+        <h2 className="text-lg font-bold" style={{ color: "var(--text-primary)" }}>
+          {title}
+        </h2>
+      </div>
+      {items.length > 0 ? (
+        <div className="mt-4 space-y-3">
+          {items.map((topic) => (
+            <div key={topic.topicId} className="rounded-lg p-3" style={{ background: "var(--bg-subtle)" }}>
+              <div className="flex items-center justify-between gap-3">
+                <span className="text-sm font-semibold" style={{ color: "var(--text-primary)" }}>
+                  {topic.title}
+                </span>
+                <span className="font-mono text-xs font-bold" style={{ color: "var(--text-secondary)" }}>
+                  {topic.score}%
+                </span>
+              </div>
+              <div className="mt-2 h-2 overflow-hidden rounded-full bg-white">
+                <div
+                  className={tone === "green" ? "h-full rounded-full bg-emerald-500" : "h-full rounded-full bg-amber-500"}
+                  style={{ width: `${topic.score}%` }}
+                />
+              </div>
+              <p className="mt-2 text-xs leading-5" style={{ color: "var(--text-secondary)" }}>
+                {topic.reason}
+              </p>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <p className="mt-4 text-sm leading-7" style={{ color: "var(--text-muted)" }}>
+          {empty}
+        </p>
+      )}
+    </article>
+  );
+}
+
+function buildTopicProgress(analysisData: Awaited<ReturnType<typeof readAnalysisData>>): TopicProgress[] {
+  const topics = analysisData.examPriorityMap?.topics ?? [];
+  const questionCountByTopic = new Map<string, number>();
+  const formulaCountByTopic = new Map<string, number>();
+  const theoremCountByTopic = new Map<string, number>();
+
+  for (const question of analysisData.questionBank) {
+    for (const topicId of question.topicIds) {
+      questionCountByTopic.set(topicId, (questionCountByTopic.get(topicId) ?? 0) + 1);
+    }
+  }
+  for (const formula of analysisData.formulaBank) {
+    for (const topicId of formula.topicIds) {
+      formulaCountByTopic.set(topicId, (formulaCountByTopic.get(topicId) ?? 0) + 1);
+    }
+  }
+  for (const theorem of analysisData.theoremBank) {
+    for (const topicId of theorem.topicIds) {
+      theoremCountByTopic.set(topicId, (theoremCountByTopic.get(topicId) ?? 0) + 1);
+    }
+  }
+
+  return topics
+    .map((topic) => {
+      const sourceCoverage =
+        topic.appearedInLectures * 12 +
+        topic.appearedInRecitations * 10 +
+        topic.appearedInHomework * 10 +
+        topic.appearedInPastExams * 16;
+      const extractedCoverage =
+        (questionCountByTopic.get(topic.topicId) ?? 0) * 3 +
+        (formulaCountByTopic.get(topic.topicId) ?? 0) +
+        (theoremCountByTopic.get(topic.topicId) ?? 0) * 4;
+      const score = Math.min(100, Math.round(sourceCoverage + extractedCoverage));
+      const isExamImportant = topic.priorityLevel === "critical" || topic.priorityLevel === "high";
+      const status: TopicProgress["status"] =
+        score >= 70 ? "strong" : isExamImportant && score < 55 ? "needs_work" : "developing";
+      const reason =
+        status === "strong"
+          ? "יש כיסוי טוב בהרצאות/תרגולים/מטלות או הרבה פריטים שחולצו."
+          : status === "needs_work"
+            ? "הנושא חשוב למבחן, אבל הכיסוי המעובד או כמות התרגול נמוכים יחסית."
+            : "נושא בתהליך בנייה; צריך עוד תרגול או אימות מול המקורות.";
+
+      return {
+        topicId: topic.topicId,
+        title: topic.title,
+        score,
+        priorityLevel: topic.priorityLevel,
+        status,
+        reason,
+      };
+    })
+    .sort((a, b) => b.score - a.score);
+}
+
+function percentage(value: number, total: number): number {
+  if (total <= 0) return 0;
+  return Math.max(0, Math.min(100, Math.round((value / total) * 100)));
+}
+
 function ModuleLink({
   href,
   label,
@@ -319,6 +621,3 @@ function ModuleLink({
     </Link>
   );
 }
-
-// Fix React import for Icon type
-import type React from "react";

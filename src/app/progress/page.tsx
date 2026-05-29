@@ -22,7 +22,7 @@ export default async function ProgressPage() {
       </div>
 
       <StudyCallout variant="info">
-        מעקב אישי — "שלטתי", "צריך עוד עבודה", "שליטה טובה" — יתווסף בשלב הבא.
+        מעקב אישי — &quot;שלטתי&quot;, &quot;צריך עוד עבודה&quot;, &quot;שליטה טובה&quot; — יתווסף בשלב הבא.
         כרגע המסך מציג עדיפות נושאים על בסיס ניתוח החומרים.
       </StudyCallout>
 

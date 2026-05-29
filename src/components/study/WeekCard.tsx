@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BookOpen, Calendar, CheckCircle, ChevronLeft, FileText, XCircle } from "lucide-react";
+import { BookOpen, CheckCircle, ChevronLeft, FileText, XCircle } from "lucide-react";
 import type { CourseWeek } from "@/lib/calculus2/types";
 
 export function WeekCard({ week }: { week: CourseWeek }) {

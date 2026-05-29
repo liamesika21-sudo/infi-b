@@ -1,23 +1,54 @@
 import katex from "katex";
 import "katex/dist/katex.min.css";
+import { preprocessMath } from "@/lib/math-text";
 
-const mathPattern = /(\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)|\$\$[\s\S]*?\$\$|\$[^$\n]+?\$)/g;
+// Matches any LaTeX-delimited span
+const SPLIT_RE = /(\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)|\$\$[\s\S]*?\$\$|\$[^$\n]+?\$)/g;
+const TEST_RE  = /^(\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)|\$\$[\s\S]*?\$\$|\$[^$\n]+?\$)$/;
 
-function renderMath(raw: string): { html: string; displayMode: boolean } {
+function renderKatexSafely(latex: string, displayMode: boolean): string | null {
+  try {
+    return katex.renderToString(latex.trim(), { displayMode, throwOnError: false });
+  } catch {
+    return null;
+  }
+}
+
+function parseMathDelim(raw: string): { html: string; displayMode: boolean } | null {
   const displayMode = raw.startsWith("\\[") || raw.startsWith("$$");
-  const inner = displayMode
-    ? raw.slice(2, -2)
-    : raw.startsWith("\\(")
-      ? raw.slice(2, -2)
-      : raw.slice(1, -1);
-  return {
-    displayMode,
-    html: katex.renderToString(inner.trim(), {
-      displayMode,
-      throwOnError: false,
-      output: "html",
-    }),
-  };
+  let inner: string;
+  if (raw.startsWith("\\[") || raw.startsWith("\\(")) inner = raw.slice(2, -2);
+  else if (raw.startsWith("$$")) inner = raw.slice(2, -2);
+  else inner = raw.slice(1, -1);
+  const html = renderKatexSafely(inner, displayMode);
+  return html ? { html, displayMode } : null;
+}
+
+function renderLine(rawLine: string) {
+  // Run auto-detection first, then split on LaTeX delimiters
+  const processed = preprocessMath(rawLine);
+  const parts = processed.split(SPLIT_RE).filter(Boolean);
+
+  return parts.map((part, i) => {
+    if (TEST_RE.test(part)) {
+      const result = parseMathDelim(part);
+      if (result) {
+        return (
+          <span
+            key={i}
+            dir="ltr"
+            className={result.displayMode ? "math-display" : "math-ltr"}
+            dangerouslySetInnerHTML={{ __html: result.html }}
+          />
+        );
+      }
+    }
+    return (
+      <span key={i} dir="auto" style={{ unicodeBidi: "plaintext" }}>
+        {part}
+      </span>
+    );
+  });
 }
 
 export function MathContent({ text, className = "" }: { text: string; className?: string }) {
@@ -25,29 +56,10 @@ export function MathContent({ text, className = "" }: { text: string; className?
   return (
     <div className={`math-content ${className}`} dir="rtl">
       {lines.map((line, li) => {
-        if (!line.trim()) return <div key={li} className="h-2" />;
-        const parts = line.split(mathPattern).filter(Boolean);
+        if (!line.trim()) return <div key={li} className="h-1.5" />;
         return (
-          <p key={li} className="my-1 leading-8">
-            {parts.map((part, pi) => {
-              const testPattern = /(\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)|\$\$[\s\S]*?\$\$|\$[^$\n]+?\$)/;
-              if (testPattern.test(part)) {
-                const rendered = renderMath(part);
-                return (
-                  <span
-                    key={pi}
-                    dir="ltr"
-                    className={rendered.displayMode ? "math-display" : "math-ltr"}
-                    dangerouslySetInnerHTML={{ __html: rendered.html }}
-                  />
-                );
-              }
-              return (
-                <span key={pi} dir="auto" style={{ unicodeBidi: "plaintext" }}>
-                  {part}
-                </span>
-              );
-            })}
+          <p key={li} className="my-0.5 leading-9">
+            {renderLine(line)}
           </p>
         );
       })}
@@ -56,23 +68,13 @@ export function MathContent({ text, className = "" }: { text: string; className?
 }
 
 export function InlineMath({ latex }: { latex: string }) {
-  try {
-    const html = katex.renderToString(latex, { displayMode: false, throwOnError: false });
-    return (
-      <span dir="ltr" className="math-ltr" dangerouslySetInnerHTML={{ __html: html }} />
-    );
-  } catch {
-    return <code dir="ltr" className="text-sm font-mono">{latex}</code>;
-  }
+  const html = renderKatexSafely(latex, false);
+  if (!html) return <code dir="ltr" className="font-mono text-sm">{latex}</code>;
+  return <span dir="ltr" className="math-ltr" dangerouslySetInnerHTML={{ __html: html }} />;
 }
 
 export function DisplayMath({ latex }: { latex: string }) {
-  try {
-    const html = katex.renderToString(latex, { displayMode: true, throwOnError: false });
-    return (
-      <div dir="ltr" className="math-display" dangerouslySetInnerHTML={{ __html: html }} />
-    );
-  } catch {
-    return <pre dir="ltr" className="overflow-x-auto text-sm font-mono">{latex}</pre>;
-  }
+  const html = renderKatexSafely(latex, true);
+  if (!html) return <pre dir="ltr" className="overflow-x-auto font-mono text-sm">{latex}</pre>;
+  return <div dir="ltr" className="math-display" dangerouslySetInnerHTML={{ __html: html }} />;
 }

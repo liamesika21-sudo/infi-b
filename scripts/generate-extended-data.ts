@@ -406,8 +406,6 @@ async function main() {
   await writeJson("lecture-summaries.json", lectureSummaries);
 
   // ── 3. Homework priority map ──
-  const EXAM_DATE = new Date("2026-07-01");
-
   const homeworkPriorityMap = homeworkAnalysis.map((hw) => {
     const questions = hw.questions.map((q, index) => {
       const content = q.content;

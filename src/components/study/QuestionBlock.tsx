@@ -1,4 +1,3 @@
-import type { ReactNode } from "react";
 import type { QuestionItem } from "@/lib/calculus2/analysis-types";
 import { DifficultyBadge, ExamRelevanceBadge, SourceBadge } from "./Badges";
 import { MathContent } from "./MathContent";

@@ -24,4 +24,5 @@ export const moduleRoutes = [
   { href: "/quick-review", label: "חזרה מהירה", description: "רגע לפני מבחן: נוסחאות ומשפטים" },
   { href: "/progress", label: "מעקב שליטה", description: "סטטוסים וחזרה מרווחת" },
   { href: "/mentor", label: "מנטור", description: "תשתית מנטור קורס-מודע" },
+  { href: "/instructor-notes", label: "הערות מקס", description: "תובנות מהתמלולים, דוגמאות נגדיות, קריטי למבחן" },
 ] as const;

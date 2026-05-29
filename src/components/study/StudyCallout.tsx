@@ -3,43 +3,58 @@ import { AlertCircle, BookOpen, CheckCircle, Info, Lightbulb, Star, XCircle, Zap
 
 type CalloutVariant = "info" | "success" | "warning" | "error" | "theorem" | "definition" | "tip" | "exam";
 
-const variantConfig: Record<CalloutVariant, { cls: string; icon: ReactNode; label?: string }> = {
+interface VariantConfig {
+  cls: string;
+  iconColor: string;
+  icon: ReactNode;
+  label?: string;
+}
+
+const CONFIGS: Record<CalloutVariant, VariantConfig> = {
   info: {
-    cls: "study-callout-blue",
-    icon: <Info className="h-4 w-4 shrink-0" style={{ color: "var(--navy-mid)" }} />,
+    cls: "study-callout-base study-callout-blue",
+    iconColor: "var(--navy-mid)",
+    icon: <Info className="h-4 w-4 shrink-0" />,
   },
   success: {
-    cls: "study-callout-green",
-    icon: <CheckCircle className="h-4 w-4 shrink-0" style={{ color: "var(--green)" }} />,
+    cls: "study-callout-base study-callout-green",
+    iconColor: "var(--green-mid)",
+    icon: <CheckCircle className="h-4 w-4 shrink-0" />,
   },
   warning: {
-    cls: "study-callout-amber",
-    icon: <AlertCircle className="h-4 w-4 shrink-0" style={{ color: "var(--amber)" }} />,
+    cls: "study-callout-base study-callout-amber",
+    iconColor: "var(--amber-mid)",
+    icon: <AlertCircle className="h-4 w-4 shrink-0" />,
     label: "שימי לב",
   },
   error: {
-    cls: "study-callout-red",
-    icon: <XCircle className="h-4 w-4 shrink-0" style={{ color: "var(--red)" }} />,
+    cls: "study-callout-base study-callout-red",
+    iconColor: "var(--red-mid)",
+    icon: <XCircle className="h-4 w-4 shrink-0" />,
     label: "טעות נפוצה",
   },
   theorem: {
-    cls: "study-callout-blue",
-    icon: <BookOpen className="h-4 w-4 shrink-0" style={{ color: "var(--navy-mid)" }} />,
+    cls: "study-callout-base study-callout-blue",
+    iconColor: "var(--navy-mid)",
+    icon: <BookOpen className="h-4 w-4 shrink-0" />,
     label: "משפט",
   },
   definition: {
-    cls: "study-callout-green",
-    icon: <Lightbulb className="h-4 w-4 shrink-0" style={{ color: "var(--green)" }} />,
+    cls: "study-callout-base study-callout-green",
+    iconColor: "var(--green-mid)",
+    icon: <Lightbulb className="h-4 w-4 shrink-0" />,
     label: "הגדרה",
   },
   tip: {
-    cls: "study-callout-amber",
-    icon: <Star className="h-4 w-4 shrink-0" style={{ color: "var(--amber)" }} />,
+    cls: "study-callout-base study-callout-amber",
+    iconColor: "var(--amber-mid)",
+    icon: <Star className="h-4 w-4 shrink-0" />,
     label: "טיפ",
   },
   exam: {
-    cls: "study-callout-red",
-    icon: <Zap className="h-4 w-4 shrink-0" style={{ color: "var(--red)" }} />,
+    cls: "study-callout-base study-callout-red",
+    iconColor: "var(--red-mid)",
+    icon: <Zap className="h-4 w-4 shrink-0" />,
     label: "חשוב למבחן",
   },
 };
@@ -55,16 +70,21 @@ export function StudyCallout({
   children: ReactNode;
   className?: string;
 }) {
-  const config = variantConfig[variant];
-  const displayTitle = title ?? config.label;
+  const cfg = CONFIGS[variant];
+  const displayTitle = title ?? cfg.label;
 
   return (
-    <div className={`${config.cls} ${className}`}>
+    <div className={`${cfg.cls} ${className}`}>
       <div className="flex items-start gap-2.5">
-        <span className="mt-0.5">{config.icon}</span>
+        <span className="mt-0.5 shrink-0" style={{ color: cfg.iconColor }}>
+          {cfg.icon}
+        </span>
         <div className="min-w-0 flex-1">
           {displayTitle && (
-            <p className="mb-1 text-xs font-bold uppercase tracking-wider opacity-70">
+            <p
+              className="mb-1 text-xs font-bold uppercase tracking-widest"
+              style={{ color: cfg.iconColor, opacity: 0.85 }}
+            >
               {displayTitle}
             </p>
           )}
@@ -81,7 +101,7 @@ export function SectionDivider({ label }: { label?: string }) {
       <div className="flex-1 border-t" style={{ borderColor: "var(--border)" }} />
       {label && (
         <span
-          className="text-xs font-semibold uppercase tracking-widest"
+          className="text-xs font-bold uppercase tracking-widest"
           style={{ color: "var(--text-muted)" }}
         >
           {label}

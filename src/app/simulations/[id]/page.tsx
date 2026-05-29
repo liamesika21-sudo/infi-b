@@ -68,7 +68,7 @@ export default async function SimulationDetailPage({ params }: Props) {
 
           <div className="space-y-5">
             {sim.questions.map((q, i) => (
-              <SimulationQuestionBlock key={q.id} question={q as any} index={i} />
+              <SimulationQuestionBlock key={q.id} question={q} index={i} />
             ))}
           </div>
         </>

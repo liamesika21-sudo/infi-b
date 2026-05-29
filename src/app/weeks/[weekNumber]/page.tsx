@@ -8,7 +8,6 @@ import { MathContent } from "@/components/study/MathContent";
 import {
   ExamRelevanceBadge,
   DifficultyBadge,
-  StatusBadge,
   ConfidenceBadge,
 } from "@/components/study/Badges";
 import { ArrowRight, BookOpen, CheckCircle, ClipboardList, FileText } from "lucide-react";
@@ -37,7 +36,6 @@ export default async function WeekDetailPage({ params }: Props) {
     return rec?.weekNumber === weekNum || hw?.weekNumber === weekNum;
   });
   const recitationQuestions = weekQuestions.filter((q) => q.sourceType === "recitation").slice(0, 6);
-  const homeworkQuestions = weekQuestions.filter((q) => q.sourceType === "homework").slice(0, 4);
 
   return (
     <div className="space-y-6">

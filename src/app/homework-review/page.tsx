@@ -2,7 +2,6 @@ import { readAnalysisData } from "@/lib/calculus2/analysis-reader";
 import { PageHeader } from "@/components/study/StudyCard";
 import { StudyCallout } from "@/components/study/StudyCallout";
 import { DifficultyBadge, ExamRelevanceBadge, PriorityBadge } from "@/components/study/Badges";
-import { MathContent } from "@/components/study/MathContent";
 
 export default async function HomeworkReviewPage() {
   const analysis = await readAnalysisData();
