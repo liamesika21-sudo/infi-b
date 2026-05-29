@@ -1,0 +1,297 @@
+[
+  {
+    "id": "recitation-recitation-1-hebrew-1-proof-pattern-1",
+    "title": "תזכורת: משפט דרבו:",
+    "patternType": "proof-from-markers",
+    "steps": [
+      "Identify the relevant assumptions from the source statement.",
+      "Construct or justify the required existence statement.",
+      "Close the argument using the cited theorem or criterion."
+    ],
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "recitation-recitation-1-hebrew-1"
+    ],
+    "relatedQuestionIds": [],
+    "commonMistakes": [],
+    "examImportance": "medium",
+    "confidence": 0.52
+  },
+  {
+    "id": "recitation-recitation-1-hebrew-1-proof-pattern-2",
+    "title": "הוכיחו או הפריכו: הוכיחו או הפריכו כל אחת מהטענות הבאות: , lim x→∞f ′ (x) = L פונקציה ג...",
+    "patternType": "limit",
+    "steps": [
+      "Identify the relevant assumptions from the source statement.",
+      "Reduce the claim to a limit statement.",
+      "Construct or justify the required existence statement.",
+      "Close the argument using the cited theorem or criterion."
+    ],
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "recitation-recitation-1-hebrew-1"
+    ],
+    "relatedQuestionIds": [],
+    "commonMistakes": [],
+    "examImportance": "medium",
+    "confidence": 0.52
+  },
+  {
+    "id": "recitation-recitation-2-hebrew-proof-pattern-1",
+    "title": "תרגול 2 היום: סדרות",
+    "patternType": "limit",
+    "steps": [
+      "Identify the relevant assumptions from the source statement.",
+      "Reduce the claim to a limit statement.",
+      "Construct or justify the required existence statement.",
+      "Close the argument using the cited theorem or criterion."
+    ],
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "recitation-recitation-2-hebrew"
+    ],
+    "relatedQuestionIds": [],
+    "commonMistakes": [],
+    "examImportance": "medium",
+    "confidence": 0.52
+  },
+  {
+    "id": "recitation-recitation-2-hebrew-proof-pattern-2",
+    "title": "3",
+    "patternType": "limit",
+    "steps": [
+      "Identify the relevant assumptions from the source statement.",
+      "Reduce the claim to a limit statement.",
+      "Construct or justify the required existence statement.",
+      "Close the argument using the cited theorem or criterion."
+    ],
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "recitation-recitation-2-hebrew"
+    ],
+    "relatedQuestionIds": [],
+    "commonMistakes": [],
+    "examImportance": "medium",
+    "confidence": 0.52
+  },
+  {
+    "id": "recitation-recitation-2-hebrew-proof-pattern-3",
+    "title": "תרגיל: המוגדרת באופן רקורסיבי על ידי (an)∞ n=1 נביט בסדרה { a1 = 1 4 an+1 = a2 n + 1 4 ...",
+    "patternType": "induction",
+    "steps": [
+      "Identify the relevant assumptions from the source statement.",
+      "Reduce the claim to a limit statement.",
+      "Construct or justify the required existence statement.",
+      "Close the argument using the cited theorem or criterion."
+    ],
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "recitation-recitation-2-hebrew"
+    ],
+    "relatedQuestionIds": [],
+    "commonMistakes": [],
+    "examImportance": "medium",
+    "confidence": 0.52
+  },
+  {
+    "id": "recitation-recitation-2-hebrew-proof-pattern-4",
+    "title": "תרגיל: המוגדרת באופן רקורסיבי על ידי (an)∞ n=1 נביט בסדרה c > 0 יהי { a1 = c an+1 = arc...",
+    "patternType": "induction",
+    "steps": [
+      "Identify the relevant assumptions from the source statement.",
+      "Reduce the claim to a limit statement.",
+      "Construct or justify the required existence statement.",
+      "Close the argument using the cited theorem or criterion."
+    ],
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "recitation-recitation-2-hebrew"
+    ],
+    "relatedQuestionIds": [],
+    "commonMistakes": [],
+    "examImportance": "medium",
+    "confidence": 0.52
+  },
+  {
+    "id": "recitation-recitation-4-hebrew-proof-pattern-1",
+    "title": "תזכורת: פונקציה",
+    "patternType": "limit",
+    "steps": [
+      "Identify the relevant assumptions from the source statement.",
+      "Reduce the claim to a limit statement.",
+      "Close the argument using the cited theorem or criterion."
+    ],
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "recitation-recitation-4-hebrew"
+    ],
+    "relatedQuestionIds": [],
+    "commonMistakes": [],
+    "examImportance": "medium",
+    "confidence": 0.52
+  },
+  {
+    "id": "recitation-recitation-4-hebrew-proof-pattern-2",
+    "title": "משפט )לא נוכיח בתרגול(: , אזי[−a, a] פונקציה אינטגרבילית וזוגית בקטע f ותהי 0 < a ∈ R י...",
+    "patternType": "limit",
+    "steps": [
+      "Identify the relevant assumptions from the source statement.",
+      "Reduce the claim to a limit statement.",
+      "Close the argument using the cited theorem or criterion."
+    ],
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "recitation-recitation-4-hebrew"
+    ],
+    "relatedQuestionIds": [],
+    "commonMistakes": [],
+    "examImportance": "medium",
+    "confidence": 0.52
+  },
+  {
+    "id": "recitation-recitation-8-hebrew-proof-pattern-1",
+    "title": "∞ ∑ n=1 [ (−1)n+1 n · (1 + 1 n )n]",
+    "patternType": "comparison",
+    "steps": [
+      "Identify the relevant assumptions from the source statement.",
+      "Compare to a known convergent/divergent object.",
+      "Reduce the claim to a limit statement.",
+      "Construct or justify the required existence statement.",
+      "Close the argument using the cited theorem or criterion."
+    ],
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-השורש",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "recitation-recitation-8-hebrew"
+    ],
+    "relatedQuestionIds": [],
+    "commonMistakes": [],
+    "examImportance": "medium",
+    "confidence": 0.52
+  },
+  {
+    "id": "recitation-recitation-8-hebrew-proof-pattern-2",
+    "title": "∞ ∑ n=1 (−1) n+1an , אזי הטור lim n→∞an = 0 סדרה אי שלילית כך ש (an)∞ n=1 3",
+    "patternType": "limit",
+    "steps": [
+      "Identify the relevant assumptions from the source statement.",
+      "Reduce the claim to a limit statement.",
+      "Close the argument using the cited theorem or criterion."
+    ],
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-השורש",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "recitation-recitation-8-hebrew"
+    ],
+    "relatedQuestionIds": [],
+    "commonMistakes": [],
+    "examImportance": "medium",
+    "confidence": 0.52
+  },
+  {
+    "id": "recitation-recitation-8-hebrew-2-proof-pattern-1",
+    "title": "∞ ∑ n=1 [ (−1)n+1 n · (1 + 1 n )n]",
+    "patternType": "comparison",
+    "steps": [
+      "Identify the relevant assumptions from the source statement.",
+      "Compare to a known convergent/divergent object.",
+      "Reduce the claim to a limit statement.",
+      "Construct or justify the required existence statement.",
+      "Close the argument using the cited theorem or criterion."
+    ],
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-השורש",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "recitation-recitation-8-hebrew-2"
+    ],
+    "relatedQuestionIds": [],
+    "commonMistakes": [],
+    "examImportance": "medium",
+    "confidence": 0.52
+  },
+  {
+    "id": "recitation-recitation-8-hebrew-2-proof-pattern-2",
+    "title": "∞ ∑ n=1 (−1) n+1an , אזי הטור lim n→∞an = 0 סדרה אי שלילית כך ש (an)∞ n=1 3",
+    "patternType": "limit",
+    "steps": [
+      "Identify the relevant assumptions from the source statement.",
+      "Reduce the claim to a limit statement.",
+      "Close the argument using the cited theorem or criterion."
+    ],
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-השורש",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "recitation-recitation-8-hebrew-2"
+    ],
+    "relatedQuestionIds": [],
+    "commonMistakes": [],
+    "examImportance": "medium",
+    "confidence": 0.52
+  }
+]

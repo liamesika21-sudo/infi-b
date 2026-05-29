@@ -1,0 +1,2354 @@
+[
+  {
+    "recitationNumber": 1,
+    "weekNumber": 1,
+    "practicedLectureNumber": null,
+    "sourceFileId": "recitation-recitation-1-hebrew-1",
+    "filename": "Recitation 1-Hebrew (1).pdf",
+    "practicedTopics": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "questions": [
+      {
+        "id": "recitation-recitation-1-hebrew-1-question-1",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-1-hebrew-1",
+        "questionNumber": "1",
+        "content": "תרגול 1 היום: משפט לופיטל. • משפט דרבו. • תזכורת: משפט לופיטל: .(x0, b) פונקציות המוגדרות ב f, g ותהיינה x0 < b כך ש x0, b ∈ R תהיינה נניח כי . lim x→x+ 0 g (x) = ∞ או lim x→x+ 0 f (x) = lim x→x+ 0 g (x) = 0 .1 .(x0, b) גזירות ב f, g .2 .x ∈ (x0, b) לכל g′ (x) 6 = 0 .3 קיים במובן הרחב. lim x→x+ 0 f ′(x) g′(x) 4. הגבול קיים במובן הרחב, ובנוסף, lim x→x+ 0 f (x) g(x) אזי גם הגבול lim x→x+ 0 f (x) g (x) = lim x→x+ 0 f ′ (x) g′ (x) הערה: . ? ∞ , 0 0 כלל לופיטל תקף רק במקרים: 1",
+        "topicIds": [
+          "גבולות",
+          "סדרות",
+          "פונקציות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-1-hebrew-1",
+          "filename": "Recitation 1-Hebrew (1).pdf",
+          "text": "תרגול 1 היום: משפט לופיטל. • משפט דרבו. • תזכורת: משפט לופיטל: .(x0, b) פונקציות המוגדרות ב f, g ותהיינה x0 < b כך ש x0, b ∈ R תהיינה נניח כי . lim x→x+ 0 g (x) = ∞ או lim x→x+ 0 f (x) = lim x→x+ 0 g (x) = 0 .1 .(x0, b) גזירות ב f, g .2 .x ∈ (x0, b) לכל g′ (x) 6 = 0 .3 קיים במובן הרחב. lim x→x+ 0 f ′(x) g′(x) 4. הגבול קיים במובן הרחב, ובנוסף, lim x→x+ 0 f (x) g(x) אזי גם הגבול lim x→x+ 0 f (x) g (x) = lim x→x+ 0 f ′ (x) g′ (x) הערה: . ? ∞ , 0 0 כלל לופיטל תקף רק במקרים: 1"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-1-hebrew-1-question-2",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-1-hebrew-1",
+        "questionNumber": "0",
+        "content": "דוגמאות: חשבו כל אחד מהגבולות הבאים או הוכיחו שאינו קיים במובן הרחב: lim x→0 [ x · e 1 x ] .1 פתרון: נפריד לגבולות חד צדדיים. גבול מימין: lim x→0+ [ x · e 1 x ] = lim x→0+ e 1 x 1 x ? ∞ = L lim x→0+ e 1 x · (ZZ Z − 1 x2 ) ZZ Z − 1 x2 = ∞ כאשר lim x→0+ e 1 x = t= 1 x lim t→∞ et = ∞ גבול משמאל: lim x→0− x · e 1 x = AOL 0 · 0 = 0 כאשר lim x→0− e 1 x = t= 1 x lim t→−∞ et = 0 קיבלנו שהגבולות החד צדדיים שונים, לכן הגבול לא קיים במובן הרחב. 2",
+        "topicIds": [
+          "גבולות",
+          "סדרות",
+          "פונקציות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-1-hebrew-1",
+          "filename": "Recitation 1-Hebrew (1).pdf",
+          "text": "דוגמאות: חשבו כל אחד מהגבולות הבאים או הוכיחו שאינו קיים במובן הרחב: lim x→0 [ x · e 1 x ] .1 פתרון: נפריד לגבולות חד צדדיים. גבול מימין: lim x→0+ [ x · e 1 x ] = lim x→0+ e 1 x 1 x ? ∞ = L lim x→0+ e 1 x · (ZZ Z − 1 x2 ) ZZ Z − 1 x2 = ∞ כאשר lim x→0+ e 1 x = t= 1 x lim t→∞ et = ∞ גבול משמאל: lim x→0− x · e 1 x = AOL 0 · 0 = 0 כאשר lim x→0− e 1 x = t= 1 x lim t→−∞ et = 0 קיבלנו שהגבולות החד צדדיים שונים, לכן הגבול לא קיים במובן הרחב. 2"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-1-hebrew-1-question-3",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-1-hebrew-1",
+        "questionNumber": "(a)",
+        "content": "תזכורת: משפט דרבו: .[a, b] פונקציה המוגדרת ב f ותהי a < b כך ש a, b ∈ R תהיינה .f ′ (a) · f ′ (b) < 0 . נניח בנוסף כי[a, b] גזירה ב f נניח כי .f ′ (c) = 0 שעבורה a < c < b אזי קיימת משפט דרבו המורחב: .[a, b] פונקציה המוגדרת ב f ותהי a < b כך ש a, b ∈ R תהיינה .f ′ (b) ≤ r ≤ f ′ (a) או f ′ (a) ≤ r ≤ f ′ (b) וכי [a, b] גזירה ב f . נניח כיr ∈ R יהי .f ′ (c) = r שעבורה a ≤ c ≤ b אזי קיימת הוכחה: .(c = a) , אזי סיימנוf ′ (a) = r אם .(c = b) , אזי סיימנוf ′ (b) = r אם .f ′ (b) < r < f ′ (a) או f ′ (a) < r < f ′ (b) אחרת, .x ∈ [a, b] לכל g (x) = f (x) − rx נגדיר מתקיים x ∈ [a, b] מאשג\"ז וכי לכל [a, b] גזירה ב g נשים לב כי g′ (x) = f ′ (x) − r , אזיf ′ (a) < r < f ′ (b) אם g′ (a) = f ′ (a) − r < 0 g′ (b) = f ′ (b) − r > 0 ,g′ (c) = 0 שעבורה a < c < b ולכן ממשפט דרבו קיימת g′ (a) · g′ (b) < 0 לכן כלומר g′ (c) = 0 ⇒ f ′ (c) − r = 0 ⇒ f ′ (c) = r , אזיf ′ (b) < r < f ′ (a) אם g′ (a) = f ′ (a) − r > 0 g′ (b) = f ′ (b) − r < 0 ,g′ (c) = 0 שעבורה a < c < b ולכן ממשפט דרבו קיימת g′ (a) · g′ (b) < 0 לכן כלומר f ′ (c) − r = 0 ⇒ f ′ (c) = r 4",
+        "topicIds": [
+          "גבולות",
+          "סדרות",
+          "פונקציות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-1-hebrew-1",
+          "filename": "Recitation 1-Hebrew (1).pdf",
+          "text": "תזכורת: משפט דרבו: .[a, b] פונקציה המוגדרת ב f ותהי a < b כך ש a, b ∈ R תהיינה .f ′ (a) · f ′ (b) < 0 . נניח בנוסף כי[a, b] גזירה ב f נניח כי .f ′ (c) = 0 שעבורה a < c < b אזי קיימת משפט דרבו המורחב: .[a, b] פונקציה המוגדרת ב f ותהי a < b כך ש a, b ∈ R תהיינה .f ′ (b) ≤ r ≤ f ′ (a) או f ′ (a) ≤ r ≤ f ′ (b) וכי [a, b] גזירה ב f . נניח כיr ∈ R יהי .f ′ (c) = r שעבורה a ≤ c ≤ b אזי קיימת הוכחה: .(c = a) , אזי סיימנוf ′ (a) = r אם .(c = b) , אזי סיימנוf ′ (b) = r אם .f ′ (b) < r < f ′ (a) או f ′ (a) < r < f ′ (b) אחרת, .x ∈ [a, b] לכל g (x) = f (x) − rx נגדיר מתקיים x ∈ [a, b] מאשג\"ז וכי לכל [a, b] גזירה ב g נשים לב כי g′ (x) = f ′ (x) − r , אזיf ′ (a) < r < f ′ (b) אם g′ (a) = f ′ (a) − r < 0 g′ (b) = f ′ (b) − r > 0 ,g′ (c) = 0 שעבורה a < c < b ולכן ממשפט דרבו קיימת g′ (a) · g′ (b) < 0 לכן כלומר g′ (c) = 0 ⇒ f ′ (c) − r = 0 ⇒ f ′ (c) = r , אזיf ′ (b) < r < f ′ (a) אם g′ (a) = f ′ (a) − r >"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-1-hebrew-1-question-4",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-1-hebrew-1",
+        "questionNumber": "(x)",
+        "content": "תרגיל: .{f ′ (x) : x ∈ R} ⊆ Q פונקציה גזירה. נניח כי f : R → R תהי .x ∈ R לכל f ′ (x) = q0 כך ש q0 ∈ Q היא קבועה, כלומר שקיים f ′ 1. הוכיחו כי פתרון: וכך ש x1 6 = x2 כך ש x1, x2 ∈ R לא קבועה, לכן קיימים f ′ נניח בשלילה ש .f ′ (x1) < f ′ (x2) כך ש r ∈ R \\ Q קיים R \\ Q מצפיפות f ′ (x1) < r < f ′ (x2) בסתירה f ′ (c) = r כך ש x2 ל x1 בין c לכן ממשפט דרבו המורחב קיימת נקודה .{f ′ (x) : x ∈ R} ⊆ Q לכך ש .x ∈ R לכל f ′ (x) = q0 כך ש q0 ∈ Q היא קבועה ולכן קיים f ′ לכן .x ∈ R לכל f (x) = q0 · x + r0 כך ש r0 ∈ R 2. הוכיחו כי קיים פתרון: .x ∈ R לכל g (x) = f (x) − q0x נגדיר את מתקיים x ∈ R גזירה מאשג\"ז וכי לכל g נשים לב כי g′ (x) = f ′ (x) − q0 = q0 − q0 = 0 מתקיים x ∈ R כך שלכל r0 ∈ R , כלומר קייםR קבועה ב g ולכן g (x) = r0 מתקיים x ∈ R לכן לכל f (x) − q0x = r0 ⇒ f (x) = q0 · x + r0 5",
+        "topicIds": [
+          "גבולות",
+          "סדרות",
+          "פונקציות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-1-hebrew-1",
+          "filename": "Recitation 1-Hebrew (1).pdf",
+          "text": "תרגיל: .{f ′ (x) : x ∈ R} ⊆ Q פונקציה גזירה. נניח כי f : R → R תהי .x ∈ R לכל f ′ (x) = q0 כך ש q0 ∈ Q היא קבועה, כלומר שקיים f ′ 1. הוכיחו כי פתרון: וכך ש x1 6 = x2 כך ש x1, x2 ∈ R לא קבועה, לכן קיימים f ′ נניח בשלילה ש .f ′ (x1) < f ′ (x2) כך ש r ∈ R \\ Q קיים R \\ Q מצפיפות f ′ (x1) < r < f ′ (x2) בסתירה f ′ (c) = r כך ש x2 ל x1 בין c לכן ממשפט דרבו המורחב קיימת נקודה .{f ′ (x) : x ∈ R} ⊆ Q לכך ש .x ∈ R לכל f ′ (x) = q0 כך ש q0 ∈ Q היא קבועה ולכן קיים f ′ לכן .x ∈ R לכל f (x) = q0 · x + r0 כך ש r0 ∈ R 2. הוכיחו כי קיים פתרון: .x ∈ R לכל g (x) = f (x) − q0x נגדיר את מתקיים x ∈ R גזירה מאשג\"ז וכי לכל g נשים לב כי g′ (x) = f ′ (x) − q0 = q0 − q0 = 0 מתקיים x ∈ R כך שלכל r0 ∈ R , כלומר קייםR קבועה ב g ולכן g (x) = r0 מתקיים x ∈ R לכן לכל f (x) − q0x = r0 ⇒ f (x) = q0 · x + r0 5"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-1-hebrew-1-question-5",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-1-hebrew-1",
+        "questionNumber": "(x)",
+        "content": "הוכיחו או הפריכו: הוכיחו או הפריכו כל אחת מהטענות הבאות: , lim x→∞f ′ (x) = L פונקציה גזירה המקיימת f : R → R ותהי L > 0 1. יהי . lim x→∞f (x) = ∞ אזי פתרון: הטענה נכונה. נוכיח בעזרת לופיטל lim x→∞f (x) = lim x→∞x · f (x) x נחשב בנפרד את הגבול lim x→∞ f (x) x ? ∞ = L lim x→∞ f ′ (x) 1 = L נחזור לתרגיל ומאש\"ג נקבל lim x→∞f (x) = lim x→∞x · f (x) x = AOL ∞ · L = ∞ קיים במובן הרחב. lim x→∞ f (x) x פונקציה גזירה. נניח כי f : R → R 2. תהי . lim x→∞ f (x) x = lim x→∞f ′ (x) קיים במובן הרחב ומתקיים lim x→∞f ′ (x) אזי פתרון: הטענה לא נכונה. .x ∈ R לכל f (x) = sin x דוגמא נגדית: נבחר נשים לב כי lim x→∞ f (x) x = lim x→∞ sin x x = lim x→∞ sin x · 1 x = B×V 0 ולכן x ∈ R לכל f ′ (x) = cos x אבל lim x→∞f ′ (x) = lim x→∞ cos x לא קיים במובן הרחב. 6",
+        "topicIds": [
+          "גבולות",
+          "סדרות",
+          "פונקציות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-1-hebrew-1",
+          "filename": "Recitation 1-Hebrew (1).pdf",
+          "text": "הוכיחו או הפריכו: הוכיחו או הפריכו כל אחת מהטענות הבאות: , lim x→∞f ′ (x) = L פונקציה גזירה המקיימת f : R → R ותהי L > 0 1. יהי . lim x→∞f (x) = ∞ אזי פתרון: הטענה נכונה. נוכיח בעזרת לופיטל lim x→∞f (x) = lim x→∞x · f (x) x נחשב בנפרד את הגבול lim x→∞ f (x) x ? ∞ = L lim x→∞ f ′ (x) 1 = L נחזור לתרגיל ומאש\"ג נקבל lim x→∞f (x) = lim x→∞x · f (x) x = AOL ∞ · L = ∞ קיים במובן הרחב. lim x→∞ f (x) x פונקציה גזירה. נניח כי f : R → R 2. תהי . lim x→∞ f (x) x = lim x→∞f ′ (x) קיים במובן הרחב ומתקיים lim x→∞f ′ (x) אזי פתרון: הטענה לא נכונה. .x ∈ R לכל f (x) = sin x דוגמא נגדית: נבחר נשים לב כי lim x→∞ f (x) x = lim x→∞ sin x x = lim x→∞ sin x · 1 x = B×V 0 ולכן x ∈ R לכל f ′ (x) = cos x אבל lim x→∞f ′ (x) = lim x→∞ cos x לא קיים במובן הרחב. 6"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-1-hebrew-1-question-6",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-1-hebrew-1",
+        "questionNumber": "3",
+        "content": "x ∈ R 3. הפונקציה המוגדרת לכל f (x) = { sin x x x 6 = 0 1 x = 0 גזירה. פתרון: הטענה נכונה. .x0 ∈ R יהי מאשג\"ז. x0 6 = 0 גזירה לכל f נקבל x0 = 0 עבור f ′ (0) = lim x→0 f (x) − f (0) x − 0 = lim x→0 sin x x − 1 x = lim x→0 sin x − x x2 0 0 = L lim x→0 cos x − 1 2x 0 0 = L lim x→0 − sin x 2 = AOL 0 f ′ (x) = 0 כך ש [−1, 1] גזירה ולא קבועה בקטע f : [−1, 1] → R 4. קיימת פונקציה .x ∈ [−1, 0) ∪ (0, 1] לכל פתרון: הטענה לא נכונה. נניח בשלילה שקיימת פונקציה כזאת. ואז היא קבועה בקטע. x ∈ [−1, 1] לכל f ′ (x) = 0 , אחרתf ′ (0) 6 = 0 לכן , אזיf ′ (0) 6 = 0 ו f ′ (1) = 0 היות ש 0 = f ′ (1) < f ′ (0) 2 < f ′ (0) or f ′ (0) < f ′ (0) 2 < f ′ (1) = 0 כך ש 0 < c < 1 ולכן ממשפט דרבו המורחב קיימת נקודה f ′ (c) = f ′ (0) 2 6 = 0 סתירה. 7",
+        "topicIds": [
+          "גבולות",
+          "סדרות",
+          "פונקציות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-1-hebrew-1",
+          "filename": "Recitation 1-Hebrew (1).pdf",
+          "text": "x ∈ R 3. הפונקציה המוגדרת לכל f (x) = { sin x x x 6 = 0 1 x = 0 גזירה. פתרון: הטענה נכונה. .x0 ∈ R יהי מאשג\"ז. x0 6 = 0 גזירה לכל f נקבל x0 = 0 עבור f ′ (0) = lim x→0 f (x) − f (0) x − 0 = lim x→0 sin x x − 1 x = lim x→0 sin x − x x2 0 0 = L lim x→0 cos x − 1 2x 0 0 = L lim x→0 − sin x 2 = AOL 0 f ′ (x) = 0 כך ש [−1, 1] גזירה ולא קבועה בקטע f : [−1, 1] → R 4. קיימת פונקציה .x ∈ [−1, 0) ∪ (0, 1] לכל פתרון: הטענה לא נכונה. נניח בשלילה שקיימת פונקציה כזאת. ואז היא קבועה בקטע. x ∈ [−1, 1] לכל f ′ (x) = 0 , אחרתf ′ (0) 6 = 0 לכן , אזיf ′ (0) 6 = 0 ו f ′ (1) = 0 היות ש 0 = f ′ (1) < f ′ (0) 2 < f ′ (0) or f ′ (0) < f ′ (0) 2 < f ′ (1) = 0 כך ש 0 < c < 1 ולכן ממשפט דרבו המורחב קיימת נקודה f ′ (c) = f ′ (0) 2 6 = 0 סתירה. 7"
+        },
+        "confidence": 0.56
+      }
+    ],
+    "solutionPatterns": [
+      {
+        "id": "recitation-recitation-1-hebrew-1-proof-pattern-1",
+        "title": "תזכורת: משפט דרבו:",
+        "patternType": "proof-from-markers",
+        "steps": [
+          "Identify the relevant assumptions from the source statement.",
+          "Construct or justify the required existence statement.",
+          "Close the argument using the cited theorem or criterion."
+        ],
+        "topicIds": [
+          "גבולות",
+          "סדרות",
+          "פונקציות"
+        ],
+        "sourceFileIds": [
+          "recitation-recitation-1-hebrew-1"
+        ],
+        "relatedQuestionIds": [],
+        "commonMistakes": [],
+        "examImportance": "medium",
+        "confidence": 0.52
+      },
+      {
+        "id": "recitation-recitation-1-hebrew-1-proof-pattern-2",
+        "title": "הוכיחו או הפריכו: הוכיחו או הפריכו כל אחת מהטענות הבאות: , lim x→∞f ′ (x) = L פונקציה ג...",
+        "patternType": "limit",
+        "steps": [
+          "Identify the relevant assumptions from the source statement.",
+          "Reduce the claim to a limit statement.",
+          "Construct or justify the required existence statement.",
+          "Close the argument using the cited theorem or criterion."
+        ],
+        "topicIds": [
+          "גבולות",
+          "סדרות",
+          "פונקציות"
+        ],
+        "sourceFileIds": [
+          "recitation-recitation-1-hebrew-1"
+        ],
+        "relatedQuestionIds": [],
+        "commonMistakes": [],
+        "examImportance": "medium",
+        "confidence": 0.52
+      }
+    ],
+    "techniques": [
+      "גבול"
+    ],
+    "commonMistakes": [],
+    "linkedLectureNumber": null,
+    "topicOverlapWithLinkedLecture": [],
+    "mappingNeedsReview": false,
+    "examRelevanceNotes": [],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "recitation-recitation-1-hebrew-1",
+        "filename": "Recitation 1-Hebrew (1).pdf",
+        "text": "תרגול 1 היום: משפט לופיטל. • משפט דרבו. • תזכורת: משפט לופיטל: .(x0, b) פונקציות המוגדרות ב f, g ותהיינה x0 < b כך ש x0, b ∈ R תהיינה נניח כי . lim x→x+ 0 g (x) = ∞ או lim x→x+ 0 f (x) = lim x→x+ 0 g (x) = 0 .1 .(x0, b) גזירות ב f, g .2 .x ∈ (x0, b) לכל g′ (x) 6 = 0 .3 קיים במובן הרחב. lim x→x+ 0 f ′(x) g′(x) 4. הגבול קיים במובן הרחב, ובנוסף, lim x→x+ 0 f (x) g(x) אזי גם הגבול lim x→x+ 0 f (x) g (x) = lim x→x+ 0 f ′ (x) g′ (x) הערה: . ? ∞ , 0 0 כלל לופיטל תקף רק במקרים: 1"
+      },
+      {
+        "sourceFileId": "recitation-recitation-1-hebrew-1",
+        "filename": "Recitation 1-Hebrew (1).pdf",
+        "text": "דוגמאות: חשבו כל אחד מהגבולות הבאים או הוכיחו שאינו קיים במובן הרחב: lim x→0 [ x · e 1 x ] .1 פתרון: נפריד לגבולות חד צדדיים. גבול מימין: lim x→0+ [ x · e 1 x ] = lim x→0+ e 1 x 1 x ? ∞ = L lim x→0+ e 1 x · (ZZ Z − 1 x2 ) ZZ Z − 1 x2 = ∞ כאשר lim x→0+ e 1 x = t= 1 x lim t→∞ et = ∞ גבול משמאל: lim x→0− x · e 1 x = AOL 0 · 0 = 0 כאשר lim x→0− e 1 x = t= 1 x lim t→−∞ et = 0 קיבלנו שהגבולות החד צדדיים שונים, לכן הגבול לא קיים במובן הרחב. 2"
+      },
+      {
+        "sourceFileId": "recitation-recitation-1-hebrew-1",
+        "filename": "Recitation 1-Hebrew (1).pdf",
+        "text": ". lim x→0+ (arctan x) 1−cos x x .2 פתרון: lim x→0+ (arctan x) 1−cos x x = lim x→0+ eln ( (arctan x) 1−cos x x ) = lim x→0+ e 1−cos x x ·ln(arctan x) = lim x→0+e 1−cos x x2 · ln(arctan x) 1 x (∗) כעת נחשב את כל אחד מהגבולות בנפרד lim x→0+ 1 − cos x x2 = 1 2 lim x→0+ ln (arctan x) 1 x ? ∞ = L lim x→0+ 1 arctan x · 1 1+x2 − 1 x2 = lim x→0+ − x2 arctan x · (1 + x2) = lim x→0+ [ − 1 1 + x2 · x2 arctan x ] (∗∗) שוב נחשב את הגבולות בנפרד lim x→0+ 1 1 + x2 = AOL 1 lim x→0+ x2 arctan x 0 0 = L lim x→0+ 2x 1 1+x2 = lim x→0+ [2x (1 + x2)] = AOL 0 ונקבל (∗∗) נחזור ל lim x→0+ [ − 1 1 + x2 · x2 arctan x ] = AOL 0 ונקבל (∗) כעת נחזור ל lim x→0+e 1−cos x x2 · ln(arctan x) 1 x = e0 = 1 3"
+      },
+      {
+        "sourceFileId": "recitation-recitation-1-hebrew-1",
+        "filename": "Recitation 1-Hebrew (1).pdf",
+        "text": "תזכורת: משפט דרבו: .[a, b] פונקציה המוגדרת ב f ותהי a < b כך ש a, b ∈ R תהיינה .f ′ (a) · f ′ (b) < 0 . נניח בנוסף כי[a, b] גזירה ב f נניח כי .f ′ (c) = 0 שעבורה a < c < b אזי קיימת משפט דרבו המורחב: .[a, b] פונקציה המוגדרת ב f ותהי a < b כך ש a, b ∈ R תהיינה .f ′ (b) ≤ r ≤ f ′ (a) או f ′ (a) ≤ r ≤ f ′ (b) וכי [a, b] גזירה ב f . נניח כיr ∈ R יהי .f ′ (c) = r שעבורה a ≤ c ≤ b אזי קיימת הוכחה: .(c = a) , אזי סיימנוf ′ (a) = r אם .(c = b) , אזי סיימנוf ′ (b) = r אם .f ′ (b) < r < f ′ (a) או f ′ (a) < r < f ′ (b) אחרת, .x ∈ [a, b] לכל g (x) = f (x) − rx נגדיר מתקיים x ∈ [a, b] מאשג\"ז וכי לכל [a, b] גזירה ב g נשים לב כי g′ (x) = f ′ (x) − r , אזיf ′ (a) < r < f ′ (b) אם g′ (a) = f ′ (a) − r < 0 g′ (b) = f ′ (b) − r > 0 ,g′ (c) = 0 שעבורה a < c < b ולכן ממשפט דרבו קיימת g′ (a) · g′ (b) < 0 לכן כלומר g′ (c) = 0 ⇒ f ′ (c) − r = 0 ⇒ f ′ (c) = r , אזיf ′ (b) < r < f ′ (a) אם g′ (a) = f ′ (a) − r >"
+      }
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
+    "recitationNumber": 2,
+    "weekNumber": 2,
+    "practicedLectureNumber": 1,
+    "sourceFileId": "recitation-recitation-2-hebrew",
+    "filename": "Recitation 2-Hebrew.pdf",
+    "practicedTopics": [
+      "גבולות",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "questions": [
+      {
+        "id": "recitation-recitation-2-hebrew-question-1",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-2-hebrew",
+        "questionNumber": "2",
+        "content": "תרגול 2 היום: סדרות. • תזכורת: .L ∈ R סדרה של מספרים ממשיים. יהי (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי n ≥ N כך שלכל N ∈ N קיים   > 0 אם לכל (an)∞ n=k הוא גבול של L נאמר כי מתקיים | an − L |<   ונאמר שהסדרה מתכנסת. lim n→∞an = L במקרה זה נסמן משפט )הלמה של היינה(: .x0 פונקציה המוגדרת בסביבה מנוקבת של f . תהיL ∈ R ויהי x0 ∈ R תהי של מספרים ממשיים הנמצאת (xn)∞ n=1 , אזי לכל סדרה lim x→x0 f (x) = L אם . lim n→∞f (xn) = L מתקיים lim n→∞xn = x0 בסביבה המנוקבת, ושעבורה הערה: , אולם יש לעדכן את ההוכחהL = ±∞ ו x0 = ±∞ הלמה של היינה נכונה גם כאשר בהתאם. 1",
+        "topicIds": [
+          "גבולות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-2-hebrew",
+          "filename": "Recitation 2-Hebrew.pdf",
+          "text": "תרגול 2 היום: סדרות. • תזכורת: .L ∈ R סדרה של מספרים ממשיים. יהי (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי n ≥ N כך שלכל N ∈ N קיים   > 0 אם לכל (an)∞ n=k הוא גבול של L נאמר כי מתקיים | an − L |<   ונאמר שהסדרה מתכנסת. lim n→∞an = L במקרה זה נסמן משפט )הלמה של היינה(: .x0 פונקציה המוגדרת בסביבה מנוקבת של f . תהיL ∈ R ויהי x0 ∈ R תהי של מספרים ממשיים הנמצאת (xn)∞ n=1 , אזי לכל סדרה lim x→x0 f (x) = L אם . lim n→∞f (xn) = L מתקיים lim n→∞xn = x0 בסביבה המנוקבת, ושעבורה הערה: , אולם יש לעדכן את ההוכחהL = ±∞ ו x0 = ±∞ הלמה של היינה נכונה גם כאשר בהתאם. 1"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-2-hebrew-question-2",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-2-hebrew",
+        "questionNumber": "0",
+        "content": "דוגמאות: . חשבו את הגבול הבא, או הוכיחו שאינו קיים במובן הרחב0 < a ∈ R 1. יהי lim n→∞ n √a :פתרון .0 בסביבה המנוקבת של x לכל f (x) = ax נגדיר טבעי. n ≥ 1 לכל xn = 1 n נגדיר נשים לב ש lim n→∞xn = lim n→∞ 1 n = 0 ראינו באינפי 1 כי lim x→0f (x) = lim x→0ax = 1 ולכן מהלמה של היינה מתקיים 1 = lim n→∞f (xn) = lim n→∞f ( 1 n ) = lim n→∞a 1 n = lim n→∞ n √a 2",
+        "topicIds": [
+          "גבולות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-2-hebrew",
+          "filename": "Recitation 2-Hebrew.pdf",
+          "text": "דוגמאות: . חשבו את הגבול הבא, או הוכיחו שאינו קיים במובן הרחב0 < a ∈ R 1. יהי lim n→∞ n √a :פתרון .0 בסביבה המנוקבת של x לכל f (x) = ax נגדיר טבעי. n ≥ 1 לכל xn = 1 n נגדיר נשים לב ש lim n→∞xn = lim n→∞ 1 n = 0 ראינו באינפי 1 כי lim x→0f (x) = lim x→0ax = 1 ולכן מהלמה של היינה מתקיים 1 = lim n→∞f (xn) = lim n→∞f ( 1 n ) = lim n→∞a 1 n = lim n→∞ n √a 2"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-2-hebrew-question-3",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-2-hebrew",
+        "questionNumber": "2",
+        "content": "2. חשבו את הגבול הבא, או הוכיחו שאינו קיים במובן הרחב lim n→∞ n √n :פתרון .x ≥ 1 לכל f (x) = x 1 x נגדיר טבעי. n ≥ 1 לכל xn = n נגדיר נשים לב ש lim n→∞xn = lim n→∞n = ∞ נחשב את הגבול lim x→∞x 1 x = lim x→∞eln ( x 1 x ) = lim x→∞e ln x x = (∗) e0 = 1 נחשב את הגבול במעריך (∗) lim x→∞ ln x x ? ∞ = L lim x→∞ 1 x 1 = lim x→∞ 1 x = 0 ולכן מהלמה של היינה מתקיים 1 = lim n→∞f (xn) = lim n→∞f (n) = lim n→∞n 1 n 3",
+        "topicIds": [
+          "גבולות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-2-hebrew",
+          "filename": "Recitation 2-Hebrew.pdf",
+          "text": "2. חשבו את הגבול הבא, או הוכיחו שאינו קיים במובן הרחב lim n→∞ n √n :פתרון .x ≥ 1 לכל f (x) = x 1 x נגדיר טבעי. n ≥ 1 לכל xn = n נגדיר נשים לב ש lim n→∞xn = lim n→∞n = ∞ נחשב את הגבול lim x→∞x 1 x = lim x→∞eln ( x 1 x ) = lim x→∞e ln x x = (∗) e0 = 1 נחשב את הגבול במעריך (∗) lim x→∞ ln x x ? ∞ = L lim x→∞ 1 x 1 = lim x→∞ 1 x = 0 ולכן מהלמה של היינה מתקיים 1 = lim n→∞f (xn) = lim n→∞f (n) = lim n→∞n 1 n 3",
+          "startOffset": 928,
+          "endOffset": 1334
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-2-hebrew-question-4",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-2-hebrew",
+        "questionNumber": "3",
+        "content": "3. חשבו את הגבול הבא, או הוכיחו שאינו קיים במובן הרחב lim n→∞ [ n0.6 (n2 + 1)0.7 − n2] .x > 0 לכל f (x) = x0.7 רמז: היעזרו בפונקציה :פתרון .x > 0 לכל f (x) = x0.7 נגדיר .x > 0 לכל f ′ (x) = 0.7x−0.3 גזירה מאשג\"ז ומתקיים f נשים לב ש כעת נחשב את הגבול lim n→∞ [ n0.6 (n2 + 1)0.7 − n2] = lim n→∞ n2 [ (n2 + 1)0.7 n1.4 − 1 ] = lim n→∞ n2 [( n2 + 1 n2 )0.7 − 1 ] = lim n→∞ n2 [( 1 + 1 n2 )0.7 − 1 ] = lim n→∞ (1 + 1 n2 )0.7 − 1 1 n2 = Heine xn= 1 n2 lim h→0 (1 + h)0.7 − 1 h = f ′ (1) = 0.7 הוכחה ללמה של היינה: סדרה של מספרים ממשיים הנמצאת בסביבה המנוקבת כך ש (xn)∞ n=1 תהי .  > 0 ויהי lim n→∞xn = x0 0 <| x − x0 |< δ1 כך שלכל δ1 > 0 , קיים lim x→x0 f (x) = L מהיות הגבול מתקיים |f (x) − L| <   (∗) מתקיים n ≥ N1 כך שלכל N1 ∈ N , קיים lim n→∞xn = x0 מהיות 0 < |xn − x0| < δ1 (∗∗) ,xn מתקיים עבור (∗) ולכן n מתקיים עבור (∗∗) . אזיn ≥ N . יהי N = N1 נבחר ולכן |f (xn) − L| <   4",
+        "topicIds": [
+          "גבולות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-2-hebrew",
+          "filename": "Recitation 2-Hebrew.pdf",
+          "text": "3. חשבו את הגבול הבא, או הוכיחו שאינו קיים במובן הרחב lim n→∞ [ n0.6 (n2 + 1)0.7 − n2] .x > 0 לכל f (x) = x0.7 רמז: היעזרו בפונקציה :פתרון .x > 0 לכל f (x) = x0.7 נגדיר .x > 0 לכל f ′ (x) = 0.7x−0.3 גזירה מאשג\"ז ומתקיים f נשים לב ש כעת נחשב את הגבול lim n→∞ [ n0.6 (n2 + 1)0.7 − n2] = lim n→∞ n2 [ (n2 + 1)0.7 n1.4 − 1 ] = lim n→∞ n2 [( n2 + 1 n2 )0.7 − 1 ] = lim n→∞ n2 [( 1 + 1 n2 )0.7 − 1 ] = lim n→∞ (1 + 1 n2 )0.7 − 1 1 n2 = Heine xn= 1 n2 lim h→0 (1 + h)0.7 − 1 h = f ′ (1) = 0.7 הוכחה ללמה של היינה: סדרה של מספרים ממשיים הנמצאת בסביבה המנוקבת כך ש (xn)∞ n=1 תהי .  > 0 ויהי lim n→∞xn = x0 0 <| x − x0 |< δ1 כך שלכל δ1 > 0 , קיים lim x→x0 f (x) = L מהיות הגבול מתקיים |f (x) − L| <   (∗) מתקיים n ≥ N1 כך שלכל N1 ∈ N , קיים lim n→∞xn = x0 מהיות 0 < |xn − x0| < δ1 (∗∗) ,xn מתקיים עבור (∗) ולכן n מתקיים עבור (∗∗) . אזיn ≥ N . יהי N = N1 נבחר ולכן |f (xn) − L| <   4",
+          "startOffset": 1350,
+          "endOffset": 2222
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-2-hebrew-question-5",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-2-hebrew",
+        "questionNumber": "1",
+        "content": "תרגיל: המוגדרת באופן רקורסיבי על ידי (an)∞ n=1 נביט בסדרה { a1 = 1 4 an+1 = a2 n + 1 4 ∀n ∈ N ומצאו את ערכו. lim n→∞an הוכיחו כי קיים הגבול פתרון: .n ∈ N לכל 0 ≤ an < 1 2 ראשית נוכיח באינדוקציה ש .0 ≤ a1 = 1 4 < 1 2 בסיס האינדוקציה: .(0 ≤ an < 1 2 )כלומר n ונניח שהטענה מתקיימת עבור n ∈ N צעד האינדוקציה: יהי לכן an+1 = a2 n + 1 4 < 1 4 + 1 4 = 1 2 . 1 2 חסומה מלעיל על ידי (an)∞ n=1 ולכן הסדרה עולה. (an)∞ n=1 שנית נוכיח באינדוקציה ש .a2 = ( 1 4 )2 + 1 4 = 5 16 > 1 4 = a1 בסיס האינדוקציה: .(an+1 ≥ an )כלומר n ונניח שהטענה מתקיימת עבור n ∈ N צעד האינדוקציה: יהי ולכן n ∈ N לכל an ≥ 0 הוכחנו כי an+2 = a2 n+1 + 1 4 ≥ a2 n + 1 4 = an+1 עולה. (an)∞ n=1 הוכחנו כי הסדרה כך ש L ∈ R לכן ממשפט 1 מהרצאה 1 קיים L = lim n→∞an = sup {an : n ∈ N} . lim n→∞an+1 = L ולכן ממשפט 3 מהרצאה 1 מתקיים 5",
+        "topicIds": [
+          "גבולות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-2-hebrew",
+          "filename": "Recitation 2-Hebrew.pdf",
+          "text": "תרגיל: המוגדרת באופן רקורסיבי על ידי (an)∞ n=1 נביט בסדרה { a1 = 1 4 an+1 = a2 n + 1 4 ∀n ∈ N ומצאו את ערכו. lim n→∞an הוכיחו כי קיים הגבול פתרון: .n ∈ N לכל 0 ≤ an < 1 2 ראשית נוכיח באינדוקציה ש .0 ≤ a1 = 1 4 < 1 2 בסיס האינדוקציה: .(0 ≤ an < 1 2 )כלומר n ונניח שהטענה מתקיימת עבור n ∈ N צעד האינדוקציה: יהי לכן an+1 = a2 n + 1 4 < 1 4 + 1 4 = 1 2 . 1 2 חסומה מלעיל על ידי (an)∞ n=1 ולכן הסדרה עולה. (an)∞ n=1 שנית נוכיח באינדוקציה ש .a2 = ( 1 4 )2 + 1 4 = 5 16 > 1 4 = a1 בסיס האינדוקציה: .(an+1 ≥ an )כלומר n ונניח שהטענה מתקיימת עבור n ∈ N צעד האינדוקציה: יהי ולכן n ∈ N לכל an ≥ 0 הוכחנו כי an+2 = a2 n+1 + 1 4 ≥ a2 n + 1 4 = an+1 עולה. (an)∞ n=1 הוכחנו כי הסדרה כך ש L ∈ R לכן ממשפט 1 מהרצאה 1 קיים L = lim n→∞an = sup {an : n ∈ N} . lim n→∞an+1 = L ולכן ממשפט 3 מהרצאה 1 מתקיים 5"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-2-hebrew-question-6",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-2-hebrew",
+        "questionNumber": "1",
+        "content": "תרגיל: המוגדרת באופן רקורסיבי על ידי (an)∞ n=1 נביט בסדרה c > 0 יהי { a1 = c an+1 = arctan (an) ∀n ∈ N ומצאו את ערכו. lim n→∞an הוכיחו כי קיים הגבול .x > 0 לכל arctan x < x רמז: פתרון: .n ∈ N לכל an > 0 ראשית נוכיח באינדוקציה ש .a1 = c > 0 בסיס האינדוקציה: .(an > 0 )כלומר n ונניח שהטענה מתקיימת עבור n ∈ N צעד האינדוקציה: יהי לכן an+1 = arctan (an) > 0 .(x > 0 לכל arctan x > 0 )נזכור ש .0 הוכחנו כי הסדרה חסומה מלרע על ידי .an+1 ≤ an מתקיים n ∈ N יורדת. נראה כי לכל (an)∞ n=1 שנית נוכיח ש .n ∈ N יהי an+1 = arctan (an) < an ולכן ניתן להשתמש ברמז. n ∈ N לכל an > 0 הוכחנו ש הוכחנו כי הסדרה יורדת. כך ש L ∈ R לכן ממשפט 2 מהרצאה 1 קיים L = lim n→∞an = inf {an : n ∈ N} . lim n→∞an+1 = L ולכן ממשפט 3 מהרצאה 1 מתקיים נשים לב כי lim n→∞an+1 = lim n→∞ arctan (an) כעת בעזרת הלמה של היינה ורציפות נקבל כי lim n→∞ arctan (an) = Heine xn=an lim x→L arctan (x) = arctan L 7",
+        "topicIds": [
+          "גבולות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-2-hebrew",
+          "filename": "Recitation 2-Hebrew.pdf",
+          "text": "תרגיל: המוגדרת באופן רקורסיבי על ידי (an)∞ n=1 נביט בסדרה c > 0 יהי { a1 = c an+1 = arctan (an) ∀n ∈ N ומצאו את ערכו. lim n→∞an הוכיחו כי קיים הגבול .x > 0 לכל arctan x < x רמז: פתרון: .n ∈ N לכל an > 0 ראשית נוכיח באינדוקציה ש .a1 = c > 0 בסיס האינדוקציה: .(an > 0 )כלומר n ונניח שהטענה מתקיימת עבור n ∈ N צעד האינדוקציה: יהי לכן an+1 = arctan (an) > 0 .(x > 0 לכל arctan x > 0 )נזכור ש .0 הוכחנו כי הסדרה חסומה מלרע על ידי .an+1 ≤ an מתקיים n ∈ N יורדת. נראה כי לכל (an)∞ n=1 שנית נוכיח ש .n ∈ N יהי an+1 = arctan (an) < an ולכן ניתן להשתמש ברמז. n ∈ N לכל an > 0 הוכחנו ש הוכחנו כי הסדרה יורדת. כך ש L ∈ R לכן ממשפט 2 מהרצאה 1 קיים L = lim n→∞an = inf {an : n ∈ N} . lim n→∞an+1 = L ולכן ממשפט 3 מהרצאה 1 מתקיים נשים לב כי lim n→∞an+1 = lim n→∞ arctan (an) כעת בעזרת הלמה של היינה ורציפות נקבל כי lim n→∞ arctan (an) = Heine xn=an lim x→L arctan (x) = arctan L 7"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-2-hebrew-question-7",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-2-hebrew",
+        "questionNumber": "(L)",
+        "content": "ולכן נקבל כי L = arctan (L) .L = inf {an : n ∈ N} ≥ 0 , אזי0 היות שהסדרה חסומה מלרע על ידי שעבורו יש שוויון, L > 0 הוא פתרון של המשוואה ומהרמז לא יכול להיות L = 0 .L = 0 ולכן בהכרח L > arctan (L) כי בהכרח מתקיים . lim n→∞an = 0 כלומר קיבלנו כי 8",
+        "topicIds": [
+          "גבולות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-2-hebrew",
+          "filename": "Recitation 2-Hebrew.pdf",
+          "text": "ולכן נקבל כי L = arctan (L) .L = inf {an : n ∈ N} ≥ 0 , אזי0 היות שהסדרה חסומה מלרע על ידי שעבורו יש שוויון, L > 0 הוא פתרון של המשוואה ומהרמז לא יכול להיות L = 0 .L = 0 ולכן בהכרח L > arctan (L) כי בהכרח מתקיים . lim n→∞an = 0 כלומר קיבלנו כי 8"
+        },
+        "confidence": 0.56
+      }
+    ],
+    "solutionPatterns": [
+      {
+        "id": "recitation-recitation-2-hebrew-proof-pattern-1",
+        "title": "תרגול 2 היום: סדרות",
+        "patternType": "limit",
+        "steps": [
+          "Identify the relevant assumptions from the source statement.",
+          "Reduce the claim to a limit statement.",
+          "Construct or justify the required existence statement.",
+          "Close the argument using the cited theorem or criterion."
+        ],
+        "topicIds": [
+          "גבולות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "sourceFileIds": [
+          "recitation-recitation-2-hebrew"
+        ],
+        "relatedQuestionIds": [],
+        "commonMistakes": [],
+        "examImportance": "medium",
+        "confidence": 0.52
+      },
+      {
+        "id": "recitation-recitation-2-hebrew-proof-pattern-2",
+        "title": "3",
+        "patternType": "limit",
+        "steps": [
+          "Identify the relevant assumptions from the source statement.",
+          "Reduce the claim to a limit statement.",
+          "Construct or justify the required existence statement.",
+          "Close the argument using the cited theorem or criterion."
+        ],
+        "topicIds": [
+          "גבולות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "sourceFileIds": [
+          "recitation-recitation-2-hebrew"
+        ],
+        "relatedQuestionIds": [],
+        "commonMistakes": [],
+        "examImportance": "medium",
+        "confidence": 0.52
+      },
+      {
+        "id": "recitation-recitation-2-hebrew-proof-pattern-3",
+        "title": "תרגיל: המוגדרת באופן רקורסיבי על ידי (an)∞ n=1 נביט בסדרה { a1 = 1 4 an+1 = a2 n + 1 4 ...",
+        "patternType": "induction",
+        "steps": [
+          "Identify the relevant assumptions from the source statement.",
+          "Reduce the claim to a limit statement.",
+          "Construct or justify the required existence statement.",
+          "Close the argument using the cited theorem or criterion."
+        ],
+        "topicIds": [
+          "גבולות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "sourceFileIds": [
+          "recitation-recitation-2-hebrew"
+        ],
+        "relatedQuestionIds": [],
+        "commonMistakes": [],
+        "examImportance": "medium",
+        "confidence": 0.52
+      },
+      {
+        "id": "recitation-recitation-2-hebrew-proof-pattern-4",
+        "title": "תרגיל: המוגדרת באופן רקורסיבי על ידי (an)∞ n=1 נביט בסדרה c > 0 יהי { a1 = c an+1 = arc...",
+        "patternType": "induction",
+        "steps": [
+          "Identify the relevant assumptions from the source statement.",
+          "Reduce the claim to a limit statement.",
+          "Construct or justify the required existence statement.",
+          "Close the argument using the cited theorem or criterion."
+        ],
+        "topicIds": [
+          "גבולות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "sourceFileIds": [
+          "recitation-recitation-2-hebrew"
+        ],
+        "relatedQuestionIds": [],
+        "commonMistakes": [],
+        "examImportance": "medium",
+        "confidence": 0.52
+      }
+    ],
+    "techniques": [
+      "גבול"
+    ],
+    "commonMistakes": [],
+    "linkedLectureNumber": 1,
+    "topicOverlapWithLinkedLecture": [
+      "גבולות",
+      "סדרות"
+    ],
+    "mappingNeedsReview": false,
+    "examRelevanceNotes": [],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "recitation-recitation-2-hebrew",
+        "filename": "Recitation 2-Hebrew.pdf",
+        "text": "תרגול 2 היום: סדרות. • תזכורת: .L ∈ R סדרה של מספרים ממשיים. יהי (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי n ≥ N כך שלכל N ∈ N קיים   > 0 אם לכל (an)∞ n=k הוא גבול של L נאמר כי מתקיים | an − L |<   ונאמר שהסדרה מתכנסת. lim n→∞an = L במקרה זה נסמן משפט )הלמה של היינה(: .x0 פונקציה המוגדרת בסביבה מנוקבת של f . תהיL ∈ R ויהי x0 ∈ R תהי של מספרים ממשיים הנמצאת (xn)∞ n=1 , אזי לכל סדרה lim x→x0 f (x) = L אם . lim n→∞f (xn) = L מתקיים lim n→∞xn = x0 בסביבה המנוקבת, ושעבורה הערה: , אולם יש לעדכן את ההוכחהL = ±∞ ו x0 = ±∞ הלמה של היינה נכונה גם כאשר בהתאם. 1"
+      },
+      {
+        "sourceFileId": "recitation-recitation-2-hebrew",
+        "filename": "Recitation 2-Hebrew.pdf",
+        "text": "דוגמאות: . חשבו את הגבול הבא, או הוכיחו שאינו קיים במובן הרחב0 < a ∈ R 1. יהי lim n→∞ n √a :פתרון .0 בסביבה המנוקבת של x לכל f (x) = ax נגדיר טבעי. n ≥ 1 לכל xn = 1 n נגדיר נשים לב ש lim n→∞xn = lim n→∞ 1 n = 0 ראינו באינפי 1 כי lim x→0f (x) = lim x→0ax = 1 ולכן מהלמה של היינה מתקיים 1 = lim n→∞f (xn) = lim n→∞f ( 1 n ) = lim n→∞a 1 n = lim n→∞ n √a 2"
+      },
+      {
+        "sourceFileId": "recitation-recitation-2-hebrew",
+        "filename": "Recitation 2-Hebrew.pdf",
+        "text": "2. חשבו את הגבול הבא, או הוכיחו שאינו קיים במובן הרחב lim n→∞ n √n :פתרון .x ≥ 1 לכל f (x) = x 1 x נגדיר טבעי. n ≥ 1 לכל xn = n נגדיר נשים לב ש lim n→∞xn = lim n→∞n = ∞ נחשב את הגבול lim x→∞x 1 x = lim x→∞eln ( x 1 x ) = lim x→∞e ln x x = (∗) e0 = 1 נחשב את הגבול במעריך (∗) lim x→∞ ln x x ? ∞ = L lim x→∞ 1 x 1 = lim x→∞ 1 x = 0 ולכן מהלמה של היינה מתקיים 1 = lim n→∞f (xn) = lim n→∞f (n) = lim n→∞n 1 n 3",
+        "startOffset": 928,
+        "endOffset": 1334
+      },
+      {
+        "sourceFileId": "recitation-recitation-2-hebrew",
+        "filename": "Recitation 2-Hebrew.pdf",
+        "text": "3. חשבו את הגבול הבא, או הוכיחו שאינו קיים במובן הרחב lim n→∞ [ n0.6 (n2 + 1)0.7 − n2] .x > 0 לכל f (x) = x0.7 רמז: היעזרו בפונקציה :פתרון .x > 0 לכל f (x) = x0.7 נגדיר .x > 0 לכל f ′ (x) = 0.7x−0.3 גזירה מאשג\"ז ומתקיים f נשים לב ש כעת נחשב את הגבול lim n→∞ [ n0.6 (n2 + 1)0.7 − n2] = lim n→∞ n2 [ (n2 + 1)0.7 n1.4 − 1 ] = lim n→∞ n2 [( n2 + 1 n2 )0.7 − 1 ] = lim n→∞ n2 [( 1 + 1 n2 )0.7 − 1 ] = lim n→∞ (1 + 1 n2 )0.7 − 1 1 n2 = Heine xn= 1 n2 lim h→0 (1 + h)0.7 − 1 h = f ′ (1) = 0.7 הוכחה ללמה של היינה: סדרה של מספרים ממשיים הנמצאת בסביבה המנוקבת כך ש (xn)∞ n=1 תהי .  > 0 ויהי lim n→∞xn = x0 0 <| x − x0 |< δ1 כך שלכל δ1 > 0 , קיים lim x→x0 f (x) = L מהיות הגבול מתקיים |f (x) − L| <   (∗) מתקיים n ≥ N1 כך שלכל N1 ∈ N , קיים lim n→∞xn = x0 מהיות 0 < |xn − x0| < δ1 (∗∗) ,xn מתקיים עבור (∗) ולכן n מתקיים עבור (∗∗) . אזיn ≥ N . יהי N = N1 נבחר ולכן |f (xn) − L| <   4",
+        "startOffset": 1350,
+        "endOffset": 2222
+      }
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
+    "recitationNumber": 3,
+    "weekNumber": 3,
+    "practicedLectureNumber": 2,
+    "sourceFileId": "recitation-recitation-3-hebrew",
+    "filename": "Recitation 3-Hebrew.pdf",
+    "practicedTopics": [
+      "נגזרות",
+      "סדרות"
+    ],
+    "questions": [
+      {
+        "id": "recitation-recitation-3-hebrew-question-1",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-3-hebrew",
+        "questionNumber": "3",
+        "content": "תרגול 3 היום: האינטגרל הלא מסוים. • תזכורת: f (x) ∫ f (x) dx xa,a 6 = −1 xa+1 a+1 + C 1 x ln | x | +C sin x − cos x + C cos x sin x + C ex ex + C ax, 1 6 = a > 0 ax ln a + C 1 cos2 x tan x + C 1 sin2 x − cot x + C 1 1+x2 arctan x + C 1 √1−x2 arcsin x + C − 1 √1−x2 arccos x + C לינאריות האינטגרל הלא מסוים: ∫ (af (x) + bg (x)) dx = ∫ af (x) dx + ∫ bg (x) dx = aF (x) + bG (x) + C 1",
+        "topicIds": [
+          "נגזרות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-3-hebrew",
+          "filename": "Recitation 3-Hebrew.pdf",
+          "text": "תרגול 3 היום: האינטגרל הלא מסוים. • תזכורת: f (x) ∫ f (x) dx xa,a 6 = −1 xa+1 a+1 + C 1 x ln | x | +C sin x − cos x + C cos x sin x + C ex ex + C ax, 1 6 = a > 0 ax ln a + C 1 cos2 x tan x + C 1 sin2 x − cot x + C 1 1+x2 arctan x + C 1 √1−x2 arcsin x + C − 1 √1−x2 arccos x + C לינאריות האינטגרל הלא מסוים: ∫ (af (x) + bg (x)) dx = ∫ af (x) dx + ∫ bg (x) dx = aF (x) + bG (x) + C 1"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-3-hebrew-question-2",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-3-hebrew",
+        "questionNumber": "1",
+        "content": "דוגמאות: .1 ∫ 1 x3 dx = ∫ x−3dx = x−2 −2 + C = − 1 2x2 + C .2 ∫ ( 2 x + ex ) dx = 2 ln | x | +ex + C תזכורת: הצבה:/החלפת משתנה ∫ g (F (x)) · f (x) dx = ∫ g (t) dt .dt = f (x) dx ו t = F (x) כאשר .3 ∫ 5 √x − 1dx = ∫ (x − 1)1 5 dx = t=x−1,dt=dx ∫ t1 5 dt = t6 5 6 5 + C = 5 6 (x − 1)6 5 + C הערה: בהצבה לינארית תמיד נקבל t = ax + b dt = adx dx = dt a 2",
+        "topicIds": [
+          "נגזרות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-3-hebrew",
+          "filename": "Recitation 3-Hebrew.pdf",
+          "text": "דוגמאות: .1 ∫ 1 x3 dx = ∫ x−3dx = x−2 −2 + C = − 1 2x2 + C .2 ∫ ( 2 x + ex ) dx = 2 ln | x | +ex + C תזכורת: הצבה:/החלפת משתנה ∫ g (F (x)) · f (x) dx = ∫ g (t) dt .dt = f (x) dx ו t = F (x) כאשר .3 ∫ 5 √x − 1dx = ∫ (x − 1)1 5 dx = t=x−1,dt=dx ∫ t1 5 dt = t6 5 6 5 + C = 5 6 (x − 1)6 5 + C הערה: בהצבה לינארית תמיד נקבל t = ax + b dt = adx dx = dt a 2"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-3-hebrew-question-3",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-3-hebrew",
+        "questionNumber": "4",
+        "content": ".4 ∫ ( 1 (1 + x)2 + 5 1 + x2 − 1 2x + 1 ) dx נפתור כל אינטגרל בנפרד ונשתמש בלינאריות האינטגרל ∫ 1 (1 + x)2 dx = t=1+x,dt=dx ∫ 1 t2 dt = ∫ t−2dt = t−1 −1 +C = −1 t +C = − 1 1 + x+C ∫ 5 1 + x2 dx = 5 arctan (x) + C ∫ 1 2x + 1dx = t=1+2x, dt 2 =dx ∫ 1 2tdt = 1 2 ln | t | +C = 1 2 ln | 2x + 1 | +C לכן סה\"כ נקבל ∫ ( 1 (1 + x)2 + 5 1 + x2 − 1 2x + 1 ) dx = − 1 1 + x + 5 arctan(x) − 1 2 ln | 2x + 1 | +C .5 a, b > 0, ∫ 1 b + ax2 dx = 1 b ∫ 1 1 + a b x2 dx = 1 b ∫ 1 1 + (√a b x)2 dx = t=√a b x,dt=√a b dx 1 b ∫ 1 1 + t2 √ b adt = 1 b · √ b a·arctan (t)+C = 1 √ab · arctan (√a b x ) + C 3",
+        "topicIds": [
+          "נגזרות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-3-hebrew",
+          "filename": "Recitation 3-Hebrew.pdf",
+          "text": ".4 ∫ ( 1 (1 + x)2 + 5 1 + x2 − 1 2x + 1 ) dx נפתור כל אינטגרל בנפרד ונשתמש בלינאריות האינטגרל ∫ 1 (1 + x)2 dx = t=1+x,dt=dx ∫ 1 t2 dt = ∫ t−2dt = t−1 −1 +C = −1 t +C = − 1 1 + x+C ∫ 5 1 + x2 dx = 5 arctan (x) + C ∫ 1 2x + 1dx = t=1+2x, dt 2 =dx ∫ 1 2tdt = 1 2 ln | t | +C = 1 2 ln | 2x + 1 | +C לכן סה\"כ נקבל ∫ ( 1 (1 + x)2 + 5 1 + x2 − 1 2x + 1 ) dx = − 1 1 + x + 5 arctan(x) − 1 2 ln | 2x + 1 | +C .5 a, b > 0, ∫ 1 b + ax2 dx = 1 b ∫ 1 1 + a b x2 dx = 1 b ∫ 1 1 + (√a b x)2 dx = t=√a b x,dt=√a b dx 1 b ∫ 1 1 + t2 √ b adt = 1 b · √ b a·arctan (t)+C = 1 √ab · arctan (√a b x ) + C 3"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-3-hebrew-question-4",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-3-hebrew",
+        "questionNumber": "(x)",
+        "content": "הערה: ∫ f ′ (x) f (x) dx = ln | f (x) | +C ∫ f (x) f ′ (x) dx = f 2 (x) 2 + C .7 ∫ ( ex 1 + ex − sin x 3 + cos x ) dx נפתור כל אינטגרל בנפרד ונשתמש בלינאריות האינטגרל. נשים לב שהנגזרת של המכנה שווה למונה בשני המקרים. ∫ ex 1 + ex dx = ln | 1 + ex | +C ∫ − sin x 3 + cos xdx = ∫ − sin x 3 + cos xdx = ln | 3 + cos(x) | +C לכן סה\"כ נקבל ∫ ( ex 1 + ex − sin x 3 + cos x ) dx = ln | 1 + ex | + ln | 3 + cos(x) | +C הערה: בשני האינטגרלים אפשר לוותר על הערך המוחלט, מכיוון שהביטויים בתוכם בהכרח חיוביים. .8 ∫ ex 1 + e2x dx = t=ex,dt=exdx ∫ 1 1 + t2 dt = arctan (t)+C = arctan (ex) + C 5",
+        "topicIds": [
+          "נגזרות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-3-hebrew",
+          "filename": "Recitation 3-Hebrew.pdf",
+          "text": "הערה: ∫ f ′ (x) f (x) dx = ln | f (x) | +C ∫ f (x) f ′ (x) dx = f 2 (x) 2 + C .7 ∫ ( ex 1 + ex − sin x 3 + cos x ) dx נפתור כל אינטגרל בנפרד ונשתמש בלינאריות האינטגרל. נשים לב שהנגזרת של המכנה שווה למונה בשני המקרים. ∫ ex 1 + ex dx = ln | 1 + ex | +C ∫ − sin x 3 + cos xdx = ∫ − sin x 3 + cos xdx = ln | 3 + cos(x) | +C לכן סה\"כ נקבל ∫ ( ex 1 + ex − sin x 3 + cos x ) dx = ln | 1 + ex | + ln | 3 + cos(x) | +C הערה: בשני האינטגרלים אפשר לוותר על הערך המוחלט, מכיוון שהביטויים בתוכם בהכרח חיוביים. .8 ∫ ex 1 + e2x dx = t=ex,dt=exdx ∫ 1 1 + t2 dt = arctan (t)+C = arctan (ex) + C 5"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-3-hebrew-question-5",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-3-hebrew",
+        "questionNumber": "(x)",
+        "content": "תזכורת: אינטגרציה בחלקים: ∫ u′ (x) v (x) dx = u (x) v (x) − ∫ u (x) v′ (x) dx .9 ∫ arcsin (x) dx נסמן u′ = 1, u = x, v = arcsin(x), v′ = 1 √1 − x2 נשתמש באינטגרציה בחלקים ונקבל ∫ arcsin (x) dx = x arcsin (x) − ∫ x √1 − x2 dx נפתור \"בצד\" את האינטגרל שקיבלנו ∫ x √1 − x2 dx = t=1−x2,dt=−2xdx ∫ 1 −2√tdt = ∫ t− 1 2 −2 dt = t1 2 1 2 · (−2) + C = − (1 − x2)1 2 + C לכן סה\"כ נקבל ∫ arcsin(x)dx = x arcsin(x)− ( − (1 − x2)1 2 ) +C = x arcsin(x) + √1 − x2 + C 6",
+        "topicIds": [
+          "נגזרות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-3-hebrew",
+          "filename": "Recitation 3-Hebrew.pdf",
+          "text": "תזכורת: אינטגרציה בחלקים: ∫ u′ (x) v (x) dx = u (x) v (x) − ∫ u (x) v′ (x) dx .9 ∫ arcsin (x) dx נסמן u′ = 1, u = x, v = arcsin(x), v′ = 1 √1 − x2 נשתמש באינטגרציה בחלקים ונקבל ∫ arcsin (x) dx = x arcsin (x) − ∫ x √1 − x2 dx נפתור \"בצד\" את האינטגרל שקיבלנו ∫ x √1 − x2 dx = t=1−x2,dt=−2xdx ∫ 1 −2√tdt = ∫ t− 1 2 −2 dt = t1 2 1 2 · (−2) + C = − (1 − x2)1 2 + C לכן סה\"כ נקבל ∫ arcsin(x)dx = x arcsin(x)− ( − (1 − x2)1 2 ) +C = x arcsin(x) + √1 − x2 + C 6"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-3-hebrew-question-6",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-3-hebrew",
+        "questionNumber": "10",
+        "content": ".10 ∫ ex cos (x) dx נסמן u′ = ex, u = ex, v = cos (x) , v′ = − sin (x) נשתמש באינטגרציה בחלקים ונקבל ∫ ex cos (x) dx = ex cos (x)− ∫ −ex sin (x) dx = ex cos (x)+ ∫ ex sin (x) dx נפתור \"בצד\" את האינטגרל שקיבלנו, שוב נסמן u′ = ex, u = ex, v = sin (x) , v′ = cos (x) ∫ ex sin (x) dx = ex sin (x) − ∫ ex cos (x) dx נשים לב שקיבלנו ∫ ex cos (x) dx = ex cos (x) + ex sin (x) − ∫ ex cos (x) dx נבודד את האינטגרל המבוקש ונקבל ∫ ex cos (x) dx = ex cos (x) + ex sin (x) 2 +C = ex(cos (x) + sin (x)) 2 + C 7",
+        "topicIds": [
+          "נגזרות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-3-hebrew",
+          "filename": "Recitation 3-Hebrew.pdf",
+          "text": ".10 ∫ ex cos (x) dx נסמן u′ = ex, u = ex, v = cos (x) , v′ = − sin (x) נשתמש באינטגרציה בחלקים ונקבל ∫ ex cos (x) dx = ex cos (x)− ∫ −ex sin (x) dx = ex cos (x)+ ∫ ex sin (x) dx נפתור \"בצד\" את האינטגרל שקיבלנו, שוב נסמן u′ = ex, u = ex, v = sin (x) , v′ = cos (x) ∫ ex sin (x) dx = ex sin (x) − ∫ ex cos (x) dx נשים לב שקיבלנו ∫ ex cos (x) dx = ex cos (x) + ex sin (x) − ∫ ex cos (x) dx נבודד את האינטגרל המבוקש ונקבל ∫ ex cos (x) dx = ex cos (x) + ex sin (x) 2 +C = ex(cos (x) + sin (x)) 2 + C 7"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-3-hebrew-question-7",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-3-hebrew",
+        "questionNumber": "11",
+        "content": "עוד דוגמאות: .11 ∫ sin3(x)dx = ∫ sin (x) · sin2(x)dx = ∫ sin (x) · (1 − cos 2 (x)) dx = ∫ sin (x) dx − ∫ sin (x) · cos2 (x) dx = נפתור כל אינטגרל בנפרד ונשתמש בלינאריות האינטגרל ∫ sin (x) dx = − cos (x) + C ∫ sin (x) · cos2(x)dx נשים לב שהנגזרת של הביטוי בחזקה שווה לביטוי השמאלי כפול מספר קבוע, נשתמש בהצבה t = cos (x) , dt = − sin (x) dx ⇒ sin (x) dx = −dt נציב לאינטגרל ונקבל ∫ −t2dt = −t3 3 + C = −cos 3 (x) 3 + C לכן סה\"כ נקבל ∫ sin3 (x) dx = − cos (x)− ( −cos 3 (x) 3 ) +C = − cos (x) + cos 3 (x) 3 + C 8",
+        "topicIds": [
+          "נגזרות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-3-hebrew",
+          "filename": "Recitation 3-Hebrew.pdf",
+          "text": "עוד דוגמאות: .11 ∫ sin3(x)dx = ∫ sin (x) · sin2(x)dx = ∫ sin (x) · (1 − cos 2 (x)) dx = ∫ sin (x) dx − ∫ sin (x) · cos2 (x) dx = נפתור כל אינטגרל בנפרד ונשתמש בלינאריות האינטגרל ∫ sin (x) dx = − cos (x) + C ∫ sin (x) · cos2(x)dx נשים לב שהנגזרת של הביטוי בחזקה שווה לביטוי השמאלי כפול מספר קבוע, נשתמש בהצבה t = cos (x) , dt = − sin (x) dx ⇒ sin (x) dx = −dt נציב לאינטגרל ונקבל ∫ −t2dt = −t3 3 + C = −cos 3 (x) 3 + C לכן סה\"כ נקבל ∫ sin3 (x) dx = − cos (x)− ( −cos 3 (x) 3 ) +C = − cos (x) + cos 3 (x) 3 + C 8"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-3-hebrew-question-8",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-3-hebrew",
+        "questionNumber": "3",
+        "content": ".3 ∫ ( sin (4x) + 2 cos (x 2 )) dx נפתור כל אינטגרל בנפרד ונשתמש בלינאריות האינטגרל ∫ sin (4x) dx = t=4x, dt 4 =dx ∫ sin (t) 4 dt = − cos(t) 4 + C = − cos (4x) 4 + C ∫ 2 cos (x 2 ) dx = t= x 2 ,2dt=dx ∫ 2 cos (t)·2dt = 4 sin(t)+C = 4 sin (x 2 ) +C לכן סה\"כ נקבל ∫ ( sin (4x) + 2 cos (x 2 ) dx ) = − cos(4x) 4 + 4 sin (x 2 ) + C .4 ∫ (4x2 + 3x)2 x3 dx = ∫ 16x4 + 24x3 + 9x2 x3 dx = ∫ ( 16x + 24 + 9 x ) dx = 16x2 2 + 24x + 9 ln | x | +C = 8x2 + 24x + 9 ln | x | +C .5 ∫ 2x3 − 1 √6x4 − 12xdx = נשים לב שהנגזרת של המכנה שווה למונה כפול מספר קבוע, נשתמש בהצבה t = 6x4−12x, dt = (24x3 − 12) dx = 12 (2x3 − 1) dx ⇒ (2x3 − 1) dx = dt 12 12",
+        "topicIds": [
+          "נגזרות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-3-hebrew",
+          "filename": "Recitation 3-Hebrew.pdf",
+          "text": ".3 ∫ ( sin (4x) + 2 cos (x 2 )) dx נפתור כל אינטגרל בנפרד ונשתמש בלינאריות האינטגרל ∫ sin (4x) dx = t=4x, dt 4 =dx ∫ sin (t) 4 dt = − cos(t) 4 + C = − cos (4x) 4 + C ∫ 2 cos (x 2 ) dx = t= x 2 ,2dt=dx ∫ 2 cos (t)·2dt = 4 sin(t)+C = 4 sin (x 2 ) +C לכן סה\"כ נקבל ∫ ( sin (4x) + 2 cos (x 2 ) dx ) = − cos(4x) 4 + 4 sin (x 2 ) + C .4 ∫ (4x2 + 3x)2 x3 dx = ∫ 16x4 + 24x3 + 9x2 x3 dx = ∫ ( 16x + 24 + 9 x ) dx = 16x2 2 + 24x + 9 ln | x | +C = 8x2 + 24x + 9 ln | x | +C .5 ∫ 2x3 − 1 √6x4 − 12xdx = נשים לב שהנגזרת של המכנה שווה למונה כפול מספר קבוע, נשתמש בהצבה t = 6x4−12x, dt = (24x3 − 12) dx = 12 (2x3 − 1) dx ⇒ (2x3 − 1) dx = dt 12 12"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-3-hebrew-question-9",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-3-hebrew",
+        "questionNumber": "8",
+        "content": ".8 ∫ x2 ln (x) dx נסמן u′ = x2, u = x3 3 , v = ln (x) , v′ = 1 x נשתמש באינטגרציה בחלקים ונקבל ∫ x2 ln (x) dx = x3 3 ln (x) − ∫ x2 3 dx = x3 3 ln (x) − x3 9 + C .9 ∫ x3·sin 2 (x2) dx = ∫ x2·sin2 (x2)·x·dx = t=x2,dt=2xdx 1 2 · ∫ t·sin 2 (t) dt = ניעזר בכך ש־ cos (2t) = 1 − 2 sin2(t) ⇒ sin2(t) = 1 − cos (2t) 2 נציב לאינטגרל 1 2 ∫ t · 1 − cos (2t) 2 dt = 1 4 ∫ tdt − 1 4 ∫ t · cos (2t) dt נחשב בנפרד את האינטגרל השני, נסמן u′ = cos (2t) , u = sin (2t) 2 , v = t, v′ = 1 14",
+        "topicIds": [
+          "נגזרות",
+          "סדרות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-3-hebrew",
+          "filename": "Recitation 3-Hebrew.pdf",
+          "text": ".8 ∫ x2 ln (x) dx נסמן u′ = x2, u = x3 3 , v = ln (x) , v′ = 1 x נשתמש באינטגרציה בחלקים ונקבל ∫ x2 ln (x) dx = x3 3 ln (x) − ∫ x2 3 dx = x3 3 ln (x) − x3 9 + C .9 ∫ x3·sin 2 (x2) dx = ∫ x2·sin2 (x2)·x·dx = t=x2,dt=2xdx 1 2 · ∫ t·sin 2 (t) dt = ניעזר בכך ש־ cos (2t) = 1 − 2 sin2(t) ⇒ sin2(t) = 1 − cos (2t) 2 נציב לאינטגרל 1 2 ∫ t · 1 − cos (2t) 2 dt = 1 4 ∫ tdt − 1 4 ∫ t · cos (2t) dt נחשב בנפרד את האינטגרל השני, נסמן u′ = cos (2t) , u = sin (2t) 2 , v = t, v′ = 1 14"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-3-hebrew-question-10",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-3-hebrew",
+        "questionNumber": "2",
+        "content": "נשתמש באינטגרציה בחלקים ונקבל ∫ t · cos (2t) dt = t · sin (2t) 2 − ∫ sin (2t) 2 dt = t · sin (2t) 2 − ( −cos (2t) 4 ) = t · sin (2t) 2 + cos (2t) 4 נציב חזרה לאינטגרל המקורי ונקבל 1 2 · ∫ t · sin2 (t) dt = t2 8 − t · sin(2t) 8 − cos(2t) 16 + C ונקבל x לסיכום נציב חזרה את ∫ x3 · sin2 (x2) dx = x4 8 − x2 · sin(2x2) 8 − cos(2x2) 16 + C 15",
+        "topicIds": [
+          "נגזרות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-3-hebrew",
+          "filename": "Recitation 3-Hebrew.pdf",
+          "text": "נשתמש באינטגרציה בחלקים ונקבל ∫ t · cos (2t) dt = t · sin (2t) 2 − ∫ sin (2t) 2 dt = t · sin (2t) 2 − ( −cos (2t) 4 ) = t · sin (2t) 2 + cos (2t) 4 נציב חזרה לאינטגרל המקורי ונקבל 1 2 · ∫ t · sin2 (t) dt = t2 8 − t · sin(2t) 8 − cos(2t) 16 + C ונקבל x לסיכום נציב חזרה את ∫ x3 · sin2 (x2) dx = x4 8 − x2 · sin(2x2) 8 − cos(2x2) 16 + C 15"
+        },
+        "confidence": 0.56
+      }
+    ],
+    "solutionPatterns": [],
+    "techniques": [],
+    "commonMistakes": [],
+    "linkedLectureNumber": 2,
+    "topicOverlapWithLinkedLecture": [
+      "סדרות"
+    ],
+    "mappingNeedsReview": false,
+    "examRelevanceNotes": [],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "recitation-recitation-3-hebrew",
+        "filename": "Recitation 3-Hebrew.pdf",
+        "text": "תרגול 3 היום: האינטגרל הלא מסוים. • תזכורת: f (x) ∫ f (x) dx xa,a 6 = −1 xa+1 a+1 + C 1 x ln | x | +C sin x − cos x + C cos x sin x + C ex ex + C ax, 1 6 = a > 0 ax ln a + C 1 cos2 x tan x + C 1 sin2 x − cot x + C 1 1+x2 arctan x + C 1 √1−x2 arcsin x + C − 1 √1−x2 arccos x + C לינאריות האינטגרל הלא מסוים: ∫ (af (x) + bg (x)) dx = ∫ af (x) dx + ∫ bg (x) dx = aF (x) + bG (x) + C 1"
+      },
+      {
+        "sourceFileId": "recitation-recitation-3-hebrew",
+        "filename": "Recitation 3-Hebrew.pdf",
+        "text": "דוגמאות: .1 ∫ 1 x3 dx = ∫ x−3dx = x−2 −2 + C = − 1 2x2 + C .2 ∫ ( 2 x + ex ) dx = 2 ln | x | +ex + C תזכורת: הצבה:/החלפת משתנה ∫ g (F (x)) · f (x) dx = ∫ g (t) dt .dt = f (x) dx ו t = F (x) כאשר .3 ∫ 5 √x − 1dx = ∫ (x − 1)1 5 dx = t=x−1,dt=dx ∫ t1 5 dt = t6 5 6 5 + C = 5 6 (x − 1)6 5 + C הערה: בהצבה לינארית תמיד נקבל t = ax + b dt = adx dx = dt a 2"
+      },
+      {
+        "sourceFileId": "recitation-recitation-3-hebrew",
+        "filename": "Recitation 3-Hebrew.pdf",
+        "text": ".4 ∫ ( 1 (1 + x)2 + 5 1 + x2 − 1 2x + 1 ) dx נפתור כל אינטגרל בנפרד ונשתמש בלינאריות האינטגרל ∫ 1 (1 + x)2 dx = t=1+x,dt=dx ∫ 1 t2 dt = ∫ t−2dt = t−1 −1 +C = −1 t +C = − 1 1 + x+C ∫ 5 1 + x2 dx = 5 arctan (x) + C ∫ 1 2x + 1dx = t=1+2x, dt 2 =dx ∫ 1 2tdt = 1 2 ln | t | +C = 1 2 ln | 2x + 1 | +C לכן סה\"כ נקבל ∫ ( 1 (1 + x)2 + 5 1 + x2 − 1 2x + 1 ) dx = − 1 1 + x + 5 arctan(x) − 1 2 ln | 2x + 1 | +C .5 a, b > 0, ∫ 1 b + ax2 dx = 1 b ∫ 1 1 + a b x2 dx = 1 b ∫ 1 1 + (√a b x)2 dx = t=√a b x,dt=√a b dx 1 b ∫ 1 1 + t2 √ b adt = 1 b · √ b a·arctan (t)+C = 1 √ab · arctan (√a b x ) + C 3"
+      },
+      {
+        "sourceFileId": "recitation-recitation-3-hebrew",
+        "filename": "Recitation 3-Hebrew.pdf",
+        "text": ".6 ∫ 1 1 + √xdx נשתמש בהצבה, נשים לב שהפעם ההצבה אינה לינארית t = √x, dt = 1 2√xdx ⇒ dt = 1 2tdx ⇒ dx = 2tdt נחזור לאינטגרל ∫ 1 1 + √xdx = ∫ 1 1 + t · 2tdt = 2 ∫ t 1 + tdt = 2 ∫ t + 1 − 1 1 + t · dt = 2 ∫ t + 1 1 + tdt−2 ∫ 1 1 + t·dt = 2 ∫ 1dt−2 ∫ 1 1 + t·dt = 2t−2 ln | 1+t | +C = 2√x − 2 ln | 1 + √x | +C 4"
+      }
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
+    "recitationNumber": 4,
+    "weekNumber": 4,
+    "practicedLectureNumber": 3,
+    "sourceFileId": "recitation-recitation-4-hebrew",
+    "filename": "Recitation 4-Hebrew.pdf",
+    "practicedTopics": [
+      "גבולות",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "questions": [
+      {
+        "id": "recitation-recitation-4-hebrew-question-1",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-4-hebrew",
+        "questionNumber": "4",
+        "content": "'תרגול 4 היום: האינטגרל המסוים. • תזכורת: .[a, b] פונקציה המוגדרת ב f ותהי a < b כך ש a, b ∈ R 1. תהיינה . נסמן[a, b] אינטגרבילית ב f נניח כי ∫ a a f (x) dx = 0 )א( ∫ a b f (x) dx = − ∫ b a f (x) dx )ב( ∫ b a f (x) dx = ∫ c a f (x) dx + ∫ b c f (x) dx מתקיים a, b, c ∈ R 2. למת ההדבקה: לכל 3. )המשפט היסודי של החדוו\"א( .[a, b] פונקציה המוגדרת ב f ותהי a < b כך ש a, b ∈ R תהיינה .[a, b] אינטגרבילית ב f נניח כי נביט בפונקציה המוגדרת על ידי F (x) = ∫ x a f (t) dt .a ≤ x ≤ b לכל .x0 רציפה ב f . נניח כיx0 ∈ [a, b] תהי .F ′ (x0) = f (x0) ובנוסף x0 גזירה ב F אזי 4. )נוסחת ניוטון לייבניץ( .[a, b] פונקציה המוגדרת ב f ותהי a < b כך ש a, b ∈ R תהיינה .[a, b] ב f פונקציה קדומה של G . תהי[a, b] פונקציה רציפה ב f נניח כי אזי ∫ b a f (x) dx = [G (x)]b a = G (b) − G (a) 1",
+        "topicIds": [
+          "גבולות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-4-hebrew",
+          "filename": "Recitation 4-Hebrew.pdf",
+          "text": "'תרגול 4 היום: האינטגרל המסוים. • תזכורת: .[a, b] פונקציה המוגדרת ב f ותהי a < b כך ש a, b ∈ R 1. תהיינה . נסמן[a, b] אינטגרבילית ב f נניח כי ∫ a a f (x) dx = 0 )א( ∫ a b f (x) dx = − ∫ b a f (x) dx )ב( ∫ b a f (x) dx = ∫ c a f (x) dx + ∫ b c f (x) dx מתקיים a, b, c ∈ R 2. למת ההדבקה: לכל 3. )המשפט היסודי של החדוו\"א( .[a, b] פונקציה המוגדרת ב f ותהי a < b כך ש a, b ∈ R תהיינה .[a, b] אינטגרבילית ב f נניח כי נביט בפונקציה המוגדרת על ידי F (x) = ∫ x a f (t) dt .a ≤ x ≤ b לכל .x0 רציפה ב f . נניח כיx0 ∈ [a, b] תהי .F ′ (x0) = f (x0) ובנוסף x0 גזירה ב F אזי 4. )נוסחת ניוטון לייבניץ( .[a, b] פונקציה המוגדרת ב f ותהי a < b כך ש a, b ∈ R תהיינה .[a, b] ב f פונקציה קדומה של G . תהי[a, b] פונקציה רציפה ב f נניח כי אזי ∫ b a f (x) dx = [G (x)]b a = G (b) − G (a) 1"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-4-hebrew-question-2",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-4-hebrew",
+        "questionNumber": "1",
+        "content": "שאלות: .1 )א( חשבו את האינטגרל המסוים ∫ 1 0 1 2x + 1 dx פתרון: ∫ 1 0 1 2x + 1 dx = [ ln | 2x + 1 | 2 ]1 0 = ln | 2 · 1 + 1 | 2 − ln | 2 · 0 + 1 | 2 = ln 3 2 − ln 1 2 = 1 2 ln 3 = ln (√3 ) דרך נוספת: נפתור בעזרת הצבה, נשים לב שנצטרך לשנות גם את \"גבולות האינטגרל\" t = 2x + 1, dt = 2dx, x = 1 ⇒ t = 3, x = 0 ⇒ t = 1 לכן נקבל ∫ 1 0 1 2x + 1 dx = ∫ 3 1 1 2t dt = [ ln | t | 2 ]3 1 = ln 3 2 − ln 1 2 = 1 2 ln 3 = ln (√3 ) 2",
+        "topicIds": [
+          "גבולות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-4-hebrew",
+          "filename": "Recitation 4-Hebrew.pdf",
+          "text": "שאלות: .1 )א( חשבו את האינטגרל המסוים ∫ 1 0 1 2x + 1 dx פתרון: ∫ 1 0 1 2x + 1 dx = [ ln | 2x + 1 | 2 ]1 0 = ln | 2 · 1 + 1 | 2 − ln | 2 · 0 + 1 | 2 = ln 3 2 − ln 1 2 = 1 2 ln 3 = ln (√3 ) דרך נוספת: נפתור בעזרת הצבה, נשים לב שנצטרך לשנות גם את \"גבולות האינטגרל\" t = 2x + 1, dt = 2dx, x = 1 ⇒ t = 3, x = 0 ⇒ t = 1 לכן נקבל ∫ 1 0 1 2x + 1 dx = ∫ 3 1 1 2t dt = [ ln | t | 2 ]3 1 = ln 3 2 − ln 1 2 = 1 2 ln 3 = ln (√3 ) 2"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-4-hebrew-question-3",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-4-hebrew",
+        "questionNumber": "1",
+        "content": ")ב( חשבו את האינטגרל המסוים ∫ 1 −1 arctan(x)dx פתרון: נסמן u′ = 1, u = x, v = arctan (x) , v′ = 1 1 + x2 נקבל ∫ 1 −1 arctan(x)dx = [x · arctan (x)]1 −1 − ∫ 1 −1 x 1 + x2 dx = 1 · arctan (1) − (−1) · arctan (−1) − [ ln | 1 + x2 | 2 ]1 −1 = 0 − ( ln | 2 | 2 − ln | 2 | 2 ) = 0 )ג( חשבו את האינטגרל המסוים ∫ 2 0 f (x) dx .x ∈ [0, 2] לכל f (x) = max {x, x2} כאשר פתרון: מתקיים x ∈ [1, 2] ולכל x2 ≤ x מתקיים x ∈ [0, 1] ראשית נשים לב שלכל . לכןx2 ≥ x f (x) = { x 0 ≤ x ≤ 1 x2 1 < x ≤ 2 ניעזר בלמת ההדבקה ונקבל ∫ 2 0 f (x) dx = ∫ 1 0 xdx + ∫ 2 1 x2dx = [ x2 2 ]1 0 + [ x3 3 ]2 1 = 12 2 − 02 2 + 23 3 − 13 3 = 1 2 + 8 3 − 1 3 = 17 6 3",
+        "topicIds": [
+          "גבולות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-4-hebrew",
+          "filename": "Recitation 4-Hebrew.pdf",
+          "text": ")ב( חשבו את האינטגרל המסוים ∫ 1 −1 arctan(x)dx פתרון: נסמן u′ = 1, u = x, v = arctan (x) , v′ = 1 1 + x2 נקבל ∫ 1 −1 arctan(x)dx = [x · arctan (x)]1 −1 − ∫ 1 −1 x 1 + x2 dx = 1 · arctan (1) − (−1) · arctan (−1) − [ ln | 1 + x2 | 2 ]1 −1 = 0 − ( ln | 2 | 2 − ln | 2 | 2 ) = 0 )ג( חשבו את האינטגרל המסוים ∫ 2 0 f (x) dx .x ∈ [0, 2] לכל f (x) = max {x, x2} כאשר פתרון: מתקיים x ∈ [1, 2] ולכל x2 ≤ x מתקיים x ∈ [0, 1] ראשית נשים לב שלכל . לכןx2 ≥ x f (x) = { x 0 ≤ x ≤ 1 x2 1 < x ≤ 2 ניעזר בלמת ההדבקה ונקבל ∫ 2 0 f (x) dx = ∫ 1 0 xdx + ∫ 2 1 x2dx = [ x2 2 ]1 0 + [ x3 3 ]2 1 = 12 2 − 02 2 + 23 3 − 13 3 = 1 2 + 8 3 − 1 3 = 17 6 3"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-4-hebrew-question-4",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-4-hebrew",
+        "questionNumber": "15",
+        "content": ". lim n→∞ 15+25+...+n5 n6 2. חשבו את הגבול פתרון: lim n→∞ 15 + 25 + ... + n5 n6 = lim n→∞ 1 n · 15 + 25 + ... + n5 n5 = lim n→∞ 1 n · n ∑ k=1 ( k n )5 .x ∈ [0, 1] לכל f (x) = x5 נגדיר את הפונקציה המוגדרת על ידי [0, 1] של n , נביט בסדרת חלוקות אחידות בגודלn ∈ N לכל Pn = (x0, ..., xn) and xk = 0 + k · 1 n = k n , ∀0 ≤ k ≤ n נשים לב כי 4 (Pn) = max {xk − xk−1 : 1 ≤ k ≤ n} = max { 1 n } = 1 n ולכן lim n→∞4 (Pn) = lim n→∞ 1 n = 0 .x, y ∈ [0, 1] ויהיו M = 5 נבחר .| x5 − y5 |= 0 ≤ 5 | x − y |= 0 , אז מתקייםx = y אם כך ש y ל x בין c גזירה, ממשפט לגרנז' קיימת נקודה f , אזי מהיותx 6 = y אם | x5 − y5 | | x − y | = 5c4 ≤ 5 ⇒| x5 − y5 |≤ 5 | x − y | מתקיים 1 ≤ k ≤ n עולה, לכן לכל f בנוסף, Mk = sup {f (x) : xk−1 ≤ x ≤ xk} = (xk)5 = ( k n )5 S (f, Pn) = n ∑ k=1 Mk (xk − xk−1) = n ∑ k=1 1 n · ( k n )5 ולכן בעזרת שיעור בית 3 שאלה 6 נסיק כי lim n→∞ 15 + 25 + ... + n5 n6 = lim n→∞ 1 n · n ∑ k=1 ( k n )5 = lim n→∞S (f, Pn) = ∫ 1 0 x5dx = [ x6 6 ]1 0 = 16 6 − 06 6 = 1 6 4",
+        "topicIds": [
+          "גבולות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-4-hebrew",
+          "filename": "Recitation 4-Hebrew.pdf",
+          "text": ". lim n→∞ 15+25+...+n5 n6 2. חשבו את הגבול פתרון: lim n→∞ 15 + 25 + ... + n5 n6 = lim n→∞ 1 n · 15 + 25 + ... + n5 n5 = lim n→∞ 1 n · n ∑ k=1 ( k n )5 .x ∈ [0, 1] לכל f (x) = x5 נגדיר את הפונקציה המוגדרת על ידי [0, 1] של n , נביט בסדרת חלוקות אחידות בגודלn ∈ N לכל Pn = (x0, ..., xn) and xk = 0 + k · 1 n = k n , ∀0 ≤ k ≤ n נשים לב כי 4 (Pn) = max {xk − xk−1 : 1 ≤ k ≤ n} = max { 1 n } = 1 n ולכן lim n→∞4 (Pn) = lim n→∞ 1 n = 0 .x, y ∈ [0, 1] ויהיו M = 5 נבחר .| x5 − y5 |= 0 ≤ 5 | x − y |= 0 , אז מתקייםx = y אם כך ש y ל x בין c גזירה, ממשפט לגרנז' קיימת נקודה f , אזי מהיותx 6 = y אם | x5 − y5 | | x − y | = 5c4 ≤ 5 ⇒| x5 − y5 |≤ 5 | x − y | מתקיים 1 ≤ k ≤ n עולה, לכן לכל f בנוסף, Mk = sup {f (x) : xk−1 ≤ x ≤ xk} = (xk)5 = ( k n )5 S (f, Pn) = n ∑ k=1 Mk (xk − xk−1) = n ∑ k=1 1 n · ( k n )5 ולכן בעזרת שיעור בית 3 שאלה 6 נסיק כי lim n→∞ 15 + 25 + ... + n5 n6 = lim n→∞ 1 n · n ∑ k=1 ( k n )5 = "
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-4-hebrew-question-5",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-4-hebrew",
+        "questionNumber": "3",
+        "content": "3. הוכיחו או הפריכו את הטענות הבאות: לכל | x |= ∫ x −1 f (t) dt אינטגרבילית כך ש f : R → R )א( קיימת פונקציה .x ≥ −1 פתרון: הטענה לא נכונה. x = −1 נניח בשלילה שקיימת פונקציה כזו, לכן המשוואה נכונה גם עבור 1 =| −1 |= ∫ −1 −1 f (t) dt = 0 קיבלנו סתירה! לכן לא קיימת פונקציה כזאת. | x |= ∫ x −1 f (t) dt + C רציפה, כך ש f : R → R ופונקציה C ∈ R )ב( קיימים .x ≥ −1 לכל פתרון: הטענה לא נכונה. כך ש f : R → R ופונקציה רציפה C ∈ R נניח בשלילה שקיימים x = −1 , לכן המשוואה נכונה עבורx ≥ −1 לכל | x |= ∫ x −1 f (t) dt + C 1 =| −1 |= ∫ 1 −1 f (t) dt + C ⇒ C = 1 .C = 1 אם קיימת פונקציה כזו, אז רציפה, אז לפי המשפט היסודי f , מכיוון ש[−1, 2] נסתכל למשל על הקטע . סתירה!x = 0 גזירה בנקודה | x | גזירה בקטע ובפרט | x | −1 אינטגרבילית כך ש f : R → R ופונקציה C ∈ R )ג( קיימים .x ≥ −1 לכל | x |= ∫ x −1 f (t) dt + C פתרון: הטענה נכונה. x ≥ −1 ונבחר את פונקציית הסימן לכל C = 1 נבחר f (x) = sign(x) =      1 x > 0 0 x = 0 −1 x < 0 מונוטונית ולכן אינטגרבילית. f .x ≥ −1 יהי מתקיים −1 ≤ x ≤ 0 אם ∫ x −1 f (t) dt + 1 = ∫ x −1 (−1) dt + 1 = −t |x −1 +1 = 5",
+        "topicIds": [
+          "גבולות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-4-hebrew",
+          "filename": "Recitation 4-Hebrew.pdf",
+          "text": "3. הוכיחו או הפריכו את הטענות הבאות: לכל | x |= ∫ x −1 f (t) dt אינטגרבילית כך ש f : R → R )א( קיימת פונקציה .x ≥ −1 פתרון: הטענה לא נכונה. x = −1 נניח בשלילה שקיימת פונקציה כזו, לכן המשוואה נכונה גם עבור 1 =| −1 |= ∫ −1 −1 f (t) dt = 0 קיבלנו סתירה! לכן לא קיימת פונקציה כזאת. | x |= ∫ x −1 f (t) dt + C רציפה, כך ש f : R → R ופונקציה C ∈ R )ב( קיימים .x ≥ −1 לכל פתרון: הטענה לא נכונה. כך ש f : R → R ופונקציה רציפה C ∈ R נניח בשלילה שקיימים x = −1 , לכן המשוואה נכונה עבורx ≥ −1 לכל | x |= ∫ x −1 f (t) dt + C 1 =| −1 |= ∫ 1 −1 f (t) dt + C ⇒ C = 1 .C = 1 אם קיימת פונקציה כזו, אז רציפה, אז לפי המשפט היסודי f , מכיוון ש[−1, 2] נסתכל למשל על הקטע . סתירה!x = 0 גזירה בנקודה | x | גזירה בקטע ובפרט | x | −1 אינטגרבילית כך ש f : R → R ופונקציה C ∈ R )ג( קיימים .x ≥ −1 לכל | x |= ∫ x −1 f (t) dt + C פתרון: הטענה נכונה. x ≥ −1 ונבחר את פונקציית הסימן לכל C = 1 נבחר f (x) = sign(x) =      1 x >",
+          "startOffset": 2836,
+          "endOffset": 3877
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-4-hebrew-question-6",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-4-hebrew",
+        "questionNumber": "1",
+        "content": "−x − (− (−1)) + 1 = −x מתקיים −1 ≤ x ≤ 0 , אז לכל| x |= −x מתקיים −1 ≤ x ≤ 0 היות שלכל | x |= ∫ x −1 f (t) dt + 1 מתקיים x > 0 אם ∫ x −1 f (t) dt + 1 = ∫ 0 −1 (−1) · dt + ∫ x 0 1 · dt + 1 = [−t]0 −1 + [t]x 0 + 1 = −0 − (− (−1)) + x − 0 + 1 = x מתקיים x > 0 , אז לכלx =| x | מתקיים x > 0 היות שלכל | x |= ∫ x −1 f (t) dt + 1 .∫ b a et2 dt > 1 . נתון שa < b כך ש a, b ∈ R 4. יהיו .∫ c a et2 dt = 1 כך ש a < c < b הוכיחו שקיימת נקודה פתרון: t ∈ [a, b] פונקציה רציפה לכל et2 . היות שx ∈ [a, b] לכל F (x) = ∫ x a et2 dt נגדיר .[a, b] ובפרט רציפה ב [a, b] גזירה ב F מאש\"ר, אז לפי המשפט היסודי נשים לב ש F (a) = ∫ a a et2 dt = 0 F (b) = ∫ b a et2 dt > 1 ,F (c) = 1 שעבורה a < c < b ולכן לפי משפט ערך הביניים המורחב קיימת נקודה כלומר F (c) = 1 ⇒ ∫ c a et2 dt = 1 6",
+        "topicIds": [
+          "גבולות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-4-hebrew",
+          "filename": "Recitation 4-Hebrew.pdf",
+          "text": "−x − (− (−1)) + 1 = −x מתקיים −1 ≤ x ≤ 0 , אז לכל| x |= −x מתקיים −1 ≤ x ≤ 0 היות שלכל | x |= ∫ x −1 f (t) dt + 1 מתקיים x > 0 אם ∫ x −1 f (t) dt + 1 = ∫ 0 −1 (−1) · dt + ∫ x 0 1 · dt + 1 = [−t]0 −1 + [t]x 0 + 1 = −0 − (− (−1)) + x − 0 + 1 = x מתקיים x > 0 , אז לכלx =| x | מתקיים x > 0 היות שלכל | x |= ∫ x −1 f (t) dt + 1 .∫ b a et2 dt > 1 . נתון שa < b כך ש a, b ∈ R 4. יהיו .∫ c a et2 dt = 1 כך ש a < c < b הוכיחו שקיימת נקודה פתרון: t ∈ [a, b] פונקציה רציפה לכל et2 . היות שx ∈ [a, b] לכל F (x) = ∫ x a et2 dt נגדיר .[a, b] ובפרט רציפה ב [a, b] גזירה ב F מאש\"ר, אז לפי המשפט היסודי נשים לב ש F (a) = ∫ a a et2 dt = 0 F (b) = ∫ b a et2 dt > 1 ,F (c) = 1 שעבורה a < c < b ולכן לפי משפט ערך הביניים המורחב קיימת נקודה כלומר F (c) = 1 ⇒ ∫ c a et2 dt = 1 6"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-4-hebrew-question-7",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-4-hebrew",
+        "questionNumber": "0",
+        "content": "תזכורת: פונקציה. f : [−a, a] → R ותהי 0 < a ∈ R יהי .x ∈ [−a, a] לכל f (−x) = f (x) היא פונקציה זוגית אם f נאמר כי .x ∈ [−a, a] לכל f (−x) = −f (x) היא פונקציה אי זוגית אם f נאמר כי משפט: , אזי[−a, a] פונקציה אינטגרבילית ואי זוגית בקטע f ותהי 0 < a ∈ R יהי ∫ a −a f (x) dx = 0 הוכחה: ניעזר בלמת ההדבקה ונקבל ∫ a −a f (x) dx = ∫ 0 −a f (x) dx + ∫ a 0 f (x) dx נחשב את האינטגרל ∫ 0 −a f (x) dx נשתמש בהצבה, נזכור שכעת נצטרך לשנות גם את \"גבולות האינטגרל\" t = −x, dt = −dx, x = −a ⇒ t = a, x = 0 ⇒ t = 0 נקבל ∫ 0 −a f (x) dx = ∫ 0 a f (−t) · (−1) dt = odd function ∫ 0 a f (t) dt = − ∫ a 0 f (t) dt (∗) = − ∫ a 0 f (x) dx הערה:(∗) בדומה לסכומים n ∑ k=1 k = n ∑ i=1 i = n ∑ j=1 j 7",
+        "topicIds": [
+          "גבולות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-4-hebrew",
+          "filename": "Recitation 4-Hebrew.pdf",
+          "text": "תזכורת: פונקציה. f : [−a, a] → R ותהי 0 < a ∈ R יהי .x ∈ [−a, a] לכל f (−x) = f (x) היא פונקציה זוגית אם f נאמר כי .x ∈ [−a, a] לכל f (−x) = −f (x) היא פונקציה אי זוגית אם f נאמר כי משפט: , אזי[−a, a] פונקציה אינטגרבילית ואי זוגית בקטע f ותהי 0 < a ∈ R יהי ∫ a −a f (x) dx = 0 הוכחה: ניעזר בלמת ההדבקה ונקבל ∫ a −a f (x) dx = ∫ 0 −a f (x) dx + ∫ a 0 f (x) dx נחשב את האינטגרל ∫ 0 −a f (x) dx נשתמש בהצבה, נזכור שכעת נצטרך לשנות גם את \"גבולות האינטגרל\" t = −x, dt = −dx, x = −a ⇒ t = a, x = 0 ⇒ t = 0 נקבל ∫ 0 −a f (x) dx = ∫ 0 a f (−t) · (−1) dt = odd function ∫ 0 a f (t) dt = − ∫ a 0 f (t) dt (∗) = − ∫ a 0 f (x) dx הערה:(∗) בדומה לסכומים n ∑ k=1 k = n ∑ i=1 i = n ∑ j=1 j 7"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-4-hebrew-question-8",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-4-hebrew",
+        "questionNumber": "(x)",
+        "content": "ניתן לשנות את השם של משתנה האינטגרציה כרצוננו, מדובר במשתנה שאנו \"רצים\" עליו. למשל: ∫ b a f (x) dx = ∫ b a f (t) dt = ∫ b a f (y) dy = ... כעת נחזור לתרגיל ונקבל ∫ 0 −a f (x) dx + ∫ a 0 f (x) dx = − ∫ a 0 f (x) dx + ∫ a 0 f (x) dx = 0 דוגמא: ∫ 3 −3 sin101 x dx = 0 מתקיים x ∈ R מכיוון שלכל (sin (−x))101 = (− sin x)101 = − (sin x)101 8",
+        "topicIds": [
+          "גבולות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-4-hebrew",
+          "filename": "Recitation 4-Hebrew.pdf",
+          "text": "ניתן לשנות את השם של משתנה האינטגרציה כרצוננו, מדובר במשתנה שאנו \"רצים\" עליו. למשל: ∫ b a f (x) dx = ∫ b a f (t) dt = ∫ b a f (y) dy = ... כעת נחזור לתרגיל ונקבל ∫ 0 −a f (x) dx + ∫ a 0 f (x) dx = − ∫ a 0 f (x) dx + ∫ a 0 f (x) dx = 0 דוגמא: ∫ 3 −3 sin101 x dx = 0 מתקיים x ∈ R מכיוון שלכל (sin (−x))101 = (− sin x)101 = − (sin x)101 8",
+          "startOffset": 5357,
+          "endOffset": 5692
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-4-hebrew-question-9",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-4-hebrew",
+        "questionNumber": "0",
+        "content": "משפט )לא נוכיח בתרגול(: , אזי[−a, a] פונקציה אינטגרבילית וזוגית בקטע f ותהי 0 < a ∈ R יהי ∫ a −a f (x) dx = 2 ∫ a 0 f (x) dx הוכחה: ניעזר בלמת ההדבקה ונקבל ∫ a −a f (x) dx = ∫ 0 −a f (x) dx + ∫ a 0 f (x) dx \"חישוב בצד\": נחשב את האינטגרל ∫ 0 −a f (x) dx נשתמש בהצבה, נזכור שכעת נצטרך לשנות גם את \"גבולות האינטגרל\" t = −x, dt = −dx, x = −a ⇒ t = a, x = 0 ⇒ t = 0 נקבל ∫ 0 −a f (x) dx = ∫ 0 a f (−t) · (−1) dt = even function − ∫ 0 a f (t) dt = ∫ a 0 f (t) dt = ∫ a 0 f (x) dx כעת נחזור לתרגיל ונקבל ∫ 0 −a f (x) dx + ∫ a 0 f (x) dx = ∫ a 0 f (x) dx + ∫ a 0 f (x) dx = 2 ∫ a 0 f (x) dx 9",
+        "topicIds": [
+          "גבולות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-4-hebrew",
+          "filename": "Recitation 4-Hebrew.pdf",
+          "text": "משפט )לא נוכיח בתרגול(: , אזי[−a, a] פונקציה אינטגרבילית וזוגית בקטע f ותהי 0 < a ∈ R יהי ∫ a −a f (x) dx = 2 ∫ a 0 f (x) dx הוכחה: ניעזר בלמת ההדבקה ונקבל ∫ a −a f (x) dx = ∫ 0 −a f (x) dx + ∫ a 0 f (x) dx \"חישוב בצד\": נחשב את האינטגרל ∫ 0 −a f (x) dx נשתמש בהצבה, נזכור שכעת נצטרך לשנות גם את \"גבולות האינטגרל\" t = −x, dt = −dx, x = −a ⇒ t = a, x = 0 ⇒ t = 0 נקבל ∫ 0 −a f (x) dx = ∫ 0 a f (−t) · (−1) dt = even function − ∫ 0 a f (t) dt = ∫ a 0 f (t) dt = ∫ a 0 f (x) dx כעת נחזור לתרגיל ונקבל ∫ 0 −a f (x) dx + ∫ a 0 f (x) dx = ∫ a 0 f (x) dx + ∫ a 0 f (x) dx = 2 ∫ a 0 f (x) dx 9"
+        },
+        "confidence": 0.56
+      }
+    ],
+    "solutionPatterns": [
+      {
+        "id": "recitation-recitation-4-hebrew-proof-pattern-1",
+        "title": "תזכורת: פונקציה",
+        "patternType": "limit",
+        "steps": [
+          "Identify the relevant assumptions from the source statement.",
+          "Reduce the claim to a limit statement.",
+          "Close the argument using the cited theorem or criterion."
+        ],
+        "topicIds": [
+          "גבולות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "sourceFileIds": [
+          "recitation-recitation-4-hebrew"
+        ],
+        "relatedQuestionIds": [],
+        "commonMistakes": [],
+        "examImportance": "medium",
+        "confidence": 0.52
+      },
+      {
+        "id": "recitation-recitation-4-hebrew-proof-pattern-2",
+        "title": "משפט )לא נוכיח בתרגול(: , אזי[−a, a] פונקציה אינטגרבילית וזוגית בקטע f ותהי 0 < a ∈ R י...",
+        "patternType": "limit",
+        "steps": [
+          "Identify the relevant assumptions from the source statement.",
+          "Reduce the claim to a limit statement.",
+          "Close the argument using the cited theorem or criterion."
+        ],
+        "topicIds": [
+          "גבולות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "sourceFileIds": [
+          "recitation-recitation-4-hebrew"
+        ],
+        "relatedQuestionIds": [],
+        "commonMistakes": [],
+        "examImportance": "medium",
+        "confidence": 0.52
+      }
+    ],
+    "techniques": [
+      "גבול"
+    ],
+    "commonMistakes": [],
+    "linkedLectureNumber": 3,
+    "topicOverlapWithLinkedLecture": [
+      "סדרות"
+    ],
+    "mappingNeedsReview": false,
+    "examRelevanceNotes": [],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "recitation-recitation-4-hebrew",
+        "filename": "Recitation 4-Hebrew.pdf",
+        "text": "'תרגול 4 היום: האינטגרל המסוים. • תזכורת: .[a, b] פונקציה המוגדרת ב f ותהי a < b כך ש a, b ∈ R 1. תהיינה . נסמן[a, b] אינטגרבילית ב f נניח כי ∫ a a f (x) dx = 0 )א( ∫ a b f (x) dx = − ∫ b a f (x) dx )ב( ∫ b a f (x) dx = ∫ c a f (x) dx + ∫ b c f (x) dx מתקיים a, b, c ∈ R 2. למת ההדבקה: לכל 3. )המשפט היסודי של החדוו\"א( .[a, b] פונקציה המוגדרת ב f ותהי a < b כך ש a, b ∈ R תהיינה .[a, b] אינטגרבילית ב f נניח כי נביט בפונקציה המוגדרת על ידי F (x) = ∫ x a f (t) dt .a ≤ x ≤ b לכל .x0 רציפה ב f . נניח כיx0 ∈ [a, b] תהי .F ′ (x0) = f (x0) ובנוסף x0 גזירה ב F אזי 4. )נוסחת ניוטון לייבניץ( .[a, b] פונקציה המוגדרת ב f ותהי a < b כך ש a, b ∈ R תהיינה .[a, b] ב f פונקציה קדומה של G . תהי[a, b] פונקציה רציפה ב f נניח כי אזי ∫ b a f (x) dx = [G (x)]b a = G (b) − G (a) 1"
+      },
+      {
+        "sourceFileId": "recitation-recitation-4-hebrew",
+        "filename": "Recitation 4-Hebrew.pdf",
+        "text": "שאלות: .1 )א( חשבו את האינטגרל המסוים ∫ 1 0 1 2x + 1 dx פתרון: ∫ 1 0 1 2x + 1 dx = [ ln | 2x + 1 | 2 ]1 0 = ln | 2 · 1 + 1 | 2 − ln | 2 · 0 + 1 | 2 = ln 3 2 − ln 1 2 = 1 2 ln 3 = ln (√3 ) דרך נוספת: נפתור בעזרת הצבה, נשים לב שנצטרך לשנות גם את \"גבולות האינטגרל\" t = 2x + 1, dt = 2dx, x = 1 ⇒ t = 3, x = 0 ⇒ t = 1 לכן נקבל ∫ 1 0 1 2x + 1 dx = ∫ 3 1 1 2t dt = [ ln | t | 2 ]3 1 = ln 3 2 − ln 1 2 = 1 2 ln 3 = ln (√3 ) 2"
+      },
+      {
+        "sourceFileId": "recitation-recitation-4-hebrew",
+        "filename": "Recitation 4-Hebrew.pdf",
+        "text": ")ב( חשבו את האינטגרל המסוים ∫ 1 −1 arctan(x)dx פתרון: נסמן u′ = 1, u = x, v = arctan (x) , v′ = 1 1 + x2 נקבל ∫ 1 −1 arctan(x)dx = [x · arctan (x)]1 −1 − ∫ 1 −1 x 1 + x2 dx = 1 · arctan (1) − (−1) · arctan (−1) − [ ln | 1 + x2 | 2 ]1 −1 = 0 − ( ln | 2 | 2 − ln | 2 | 2 ) = 0 )ג( חשבו את האינטגרל המסוים ∫ 2 0 f (x) dx .x ∈ [0, 2] לכל f (x) = max {x, x2} כאשר פתרון: מתקיים x ∈ [1, 2] ולכל x2 ≤ x מתקיים x ∈ [0, 1] ראשית נשים לב שלכל . לכןx2 ≥ x f (x) = { x 0 ≤ x ≤ 1 x2 1 < x ≤ 2 ניעזר בלמת ההדבקה ונקבל ∫ 2 0 f (x) dx = ∫ 1 0 xdx + ∫ 2 1 x2dx = [ x2 2 ]1 0 + [ x3 3 ]2 1 = 12 2 − 02 2 + 23 3 − 13 3 = 1 2 + 8 3 − 1 3 = 17 6 3"
+      },
+      {
+        "sourceFileId": "recitation-recitation-4-hebrew",
+        "filename": "Recitation 4-Hebrew.pdf",
+        "text": ". lim n→∞ 15+25+...+n5 n6 2. חשבו את הגבול פתרון: lim n→∞ 15 + 25 + ... + n5 n6 = lim n→∞ 1 n · 15 + 25 + ... + n5 n5 = lim n→∞ 1 n · n ∑ k=1 ( k n )5 .x ∈ [0, 1] לכל f (x) = x5 נגדיר את הפונקציה המוגדרת על ידי [0, 1] של n , נביט בסדרת חלוקות אחידות בגודלn ∈ N לכל Pn = (x0, ..., xn) and xk = 0 + k · 1 n = k n , ∀0 ≤ k ≤ n נשים לב כי 4 (Pn) = max {xk − xk−1 : 1 ≤ k ≤ n} = max { 1 n } = 1 n ולכן lim n→∞4 (Pn) = lim n→∞ 1 n = 0 .x, y ∈ [0, 1] ויהיו M = 5 נבחר .| x5 − y5 |= 0 ≤ 5 | x − y |= 0 , אז מתקייםx = y אם כך ש y ל x בין c גזירה, ממשפט לגרנז' קיימת נקודה f , אזי מהיותx 6 = y אם | x5 − y5 | | x − y | = 5c4 ≤ 5 ⇒| x5 − y5 |≤ 5 | x − y | מתקיים 1 ≤ k ≤ n עולה, לכן לכל f בנוסף, Mk = sup {f (x) : xk−1 ≤ x ≤ xk} = (xk)5 = ( k n )5 S (f, Pn) = n ∑ k=1 Mk (xk − xk−1) = n ∑ k=1 1 n · ( k n )5 ולכן בעזרת שיעור בית 3 שאלה 6 נסיק כי lim n→∞ 15 + 25 + ... + n5 n6 = lim n→∞ 1 n · n ∑ k=1 ( k n )5 = "
+      }
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
+    "recitationNumber": 6,
+    "weekNumber": 6,
+    "practicedLectureNumber": 5,
+    "sourceFileId": "recitation-recitation-6-hebrew",
+    "filename": "Recitation 6-Hebrew.pdf",
+    "practicedTopics": [
+      "גבולות",
+      "טורים",
+      "מבחן ההשוואה",
+      "סדרות"
+    ],
+    "questions": [
+      {
+        "id": "recitation-recitation-6-hebrew-question-1",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-6-hebrew",
+        "questionNumber": "6",
+        "content": "תרגול 6 היום: טור טלסקופי. • תנאי הכרחי. • משפט הזנבות. • מבחן ההשוואה. • מבחן ההשוואה הגבולי. • תזכורת: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי . lim N →∞ N ∑ n=k an מתכנס אם קיים הגבול ∞ ∑ n=k an נאמר שהטור במקרה זה נגדיר ∞ ∑ n=k an = lim N →∞ N ∑ n=k an תנאי הכרחי: . lim n→∞an = 0 טור מתכנס, אזי ∞ ∑ n=k an יהי , כלומר אם התנאי לא מתקיים הטורתנאי הכרחי ולא תנאי מספיק שימו לב שמדובר על מתבדר ואם התנאי מתקיים לא ניתן לדעת )על סמך הבדיקה של הגבול( אם הטור מתכנס או מתבדר. דוגמאות: קבעו האם הטורים הבאים מתכנסים, אם כן מצאו את ערכם: ∞ ∑ n=1 arctan n .1 פתרון: lim n→∞ arctan n = Heine lim x→∞ arctan x = π 2 6 = 0 מתנאי הכרחי. הטור מתבדר הגבול שונה מאפס ולכן 1",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "סדרות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-6-hebrew",
+          "filename": "Recitation 6-Hebrew.pdf",
+          "text": "תרגול 6 היום: טור טלסקופי. • תנאי הכרחי. • משפט הזנבות. • מבחן ההשוואה. • מבחן ההשוואה הגבולי. • תזכורת: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי . lim N →∞ N ∑ n=k an מתכנס אם קיים הגבול ∞ ∑ n=k an נאמר שהטור במקרה זה נגדיר ∞ ∑ n=k an = lim N →∞ N ∑ n=k an תנאי הכרחי: . lim n→∞an = 0 טור מתכנס, אזי ∞ ∑ n=k an יהי , כלומר אם התנאי לא מתקיים הטורתנאי הכרחי ולא תנאי מספיק שימו לב שמדובר על מתבדר ואם התנאי מתקיים לא ניתן לדעת )על סמך הבדיקה של הגבול( אם הטור מתכנס או מתבדר. דוגמאות: קבעו האם הטורים הבאים מתכנסים, אם כן מצאו את ערכם: ∞ ∑ n=1 arctan n .1 פתרון: lim n→∞ arctan n = Heine lim x→∞ arctan x = π 2 6 = 0 מתנאי הכרחי. הטור מתבדר הגבול שונה מאפס ולכן 1"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-6-hebrew-question-2",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-6-hebrew",
+        "questionNumber": "(n)",
+        "content": ".n ∈ N לכל α (n) = ⌊ 23+n 2n ⌋ כאשר ∞ ∑ n=1 1 nα(n) .3 פתרון: n ≥ 24 , לכן לכלα (n) = ⌊ 23+n 2n ⌋ = ⌊ 23 2n + 1 2 ⌋ מתקיים n ∈ N נשים לב שלכל .α (n) = 0 נקבל ש נסתכל על הזנב של הטור ∞ ∑ n=24 1 nα(n) = ∞ ∑ n=24 1 n0 = ∞ ∑ n=24 1 = ∞ .הטור מתבדר קיבלנו שהזנב של הטור מתבדר, לכן תזכורת: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי .n ≥ k לכל an ≥ 0 הוא טור אי שלילי אם ∞ ∑ n=k an נאמר שהטור משפט )מבחן ההשוואה לטורים אי שליליים(: שתי סדרות של מספרים ממשיים. (bn)∞ n=k ו (an)∞ n=k ותהיינה 0 ≤ k ∈ Z יהי נניח כי .n ≥ k לכל 0 ≤ an ≤ bn .1 . ∞ ∑ n=k bn < ∞ .2 . ∞ ∑ n=k an ≤ ∞ ∑ n=k bn ובנוסף, ∞ ∑ n=k an < ∞ אזי משפט )מבחן ההשוואה הגבולי לטורים אי שליליים(: שתי סדרות של מספרים ממשיים. (bn)∞ n=k ו (an)∞ n=k ותהיינה 0 ≤ k ∈ Z יהי נניח כי .bn > 0 ו an ≥ 0 1. לכל , .L = lim n→∞ an bn וכך ש L > 0 כך ש L ∈ R 2. קיים . ∞ ∑ n=k bn < ∞ אם\"ם ∞ ∑ n=k an < ∞ אזי הרמוני: p הטור ה , אזיp ∈ R יהי ∞ ∑ n=1 1 np = { ∞ p ≤ 1 < ∞ p > 1 3",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-6-hebrew",
+          "filename": "Recitation 6-Hebrew.pdf",
+          "text": ".n ∈ N לכל α (n) = ⌊ 23+n 2n ⌋ כאשר ∞ ∑ n=1 1 nα(n) .3 פתרון: n ≥ 24 , לכן לכלα (n) = ⌊ 23+n 2n ⌋ = ⌊ 23 2n + 1 2 ⌋ מתקיים n ∈ N נשים לב שלכל .α (n) = 0 נקבל ש נסתכל על הזנב של הטור ∞ ∑ n=24 1 nα(n) = ∞ ∑ n=24 1 n0 = ∞ ∑ n=24 1 = ∞ .הטור מתבדר קיבלנו שהזנב של הטור מתבדר, לכן תזכורת: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי .n ≥ k לכל an ≥ 0 הוא טור אי שלילי אם ∞ ∑ n=k an נאמר שהטור משפט )מבחן ההשוואה לטורים אי שליליים(: שתי סדרות של מספרים ממשיים. (bn)∞ n=k ו (an)∞ n=k ותהיינה 0 ≤ k ∈ Z יהי נניח כי .n ≥ k לכל 0 ≤ an ≤ bn .1 . ∞ ∑ n=k bn < ∞ .2 . ∞ ∑ n=k an ≤ ∞ ∑ n=k bn ובנוסף, ∞ ∑ n=k an < ∞ אזי משפט )מבחן ההשוואה הגבולי לטורים אי שליליים(: שתי סדרות של מספרים ממשיים. (bn)∞ n=k ו (an)∞ n=k ותהיינה 0 ≤ k ∈ Z יהי נניח כי .bn > 0 ו an ≥ 0 1. לכל , .L = lim n→∞ an bn וכך ש L > 0 כך ש L ∈ R 2. קיים . ∞ ∑ n=k bn < ∞ אם\"ם ∞ ∑ n=k an < ∞ אזי הרמוני: p הטור ה , אזיp ∈ R יהי ∞ ∑ n=1 1 n"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-6-hebrew-question-3",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-6-hebrew",
+        "questionNumber": "1",
+        "content": "דוגמאות: קבעו האם הטורים הבאים מתכנסים או מתבדרים )אין צורך לחשב את ערכם(: ∞ ∑ n=1 √2n2+4n+1 n3+9 .1 פתרון: , אזיn ∈ N לכל bn = 1 n2 ו an = √2n2+4n+1 n3+9 נבחר lim n→∞ an bn = lim n→∞ ( √2n2+4n+1 n3+9 ) ( 1 n2 ) = lim n→∞ n2 √ n2 (2 + 4 n + 1 n2 ) n3 (1 + 9 n3 ) = lim n→∞ Z Z n3 · √ 2 + 4 n + 1 n2 Z Z n3 · (1 + 9 n3 ) = AOL √2 > 0 הרמוני. 2 מתכנס ביחד עם הטור ה ∞ ∑ n=1 √2n2+4n+1 n3+9 לכן הטור ∞ ∑ n=1 ln(n) n .2 פתרון: .n ≥ 3 לכל ln (n) > 1 נשים לב ש לכן ∞ ∑ n=3 ln (n) n ≥ ∞ ∑ n=3 1 n = ∞ מתבדר, כי ∞ ∑ n=1 ln(n) n מתבדר ולכן גם הטור ∞ ∑ n=3 ln(n) n ולכן ממבחן ההשוואה הטור הזנב שלו מתבדר. 4",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "סדרות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-6-hebrew",
+          "filename": "Recitation 6-Hebrew.pdf",
+          "text": "דוגמאות: קבעו האם הטורים הבאים מתכנסים או מתבדרים )אין צורך לחשב את ערכם(: ∞ ∑ n=1 √2n2+4n+1 n3+9 .1 פתרון: , אזיn ∈ N לכל bn = 1 n2 ו an = √2n2+4n+1 n3+9 נבחר lim n→∞ an bn = lim n→∞ ( √2n2+4n+1 n3+9 ) ( 1 n2 ) = lim n→∞ n2 √ n2 (2 + 4 n + 1 n2 ) n3 (1 + 9 n3 ) = lim n→∞ Z Z n3 · √ 2 + 4 n + 1 n2 Z Z n3 · (1 + 9 n3 ) = AOL √2 > 0 הרמוני. 2 מתכנס ביחד עם הטור ה ∞ ∑ n=1 √2n2+4n+1 n3+9 לכן הטור ∞ ∑ n=1 ln(n) n .2 פתרון: .n ≥ 3 לכל ln (n) > 1 נשים לב ש לכן ∞ ∑ n=3 ln (n) n ≥ ∞ ∑ n=3 1 n = ∞ מתבדר, כי ∞ ∑ n=1 ln(n) n מתבדר ולכן גם הטור ∞ ∑ n=3 ln(n) n ולכן ממבחן ההשוואה הטור הזנב שלו מתבדר. 4"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-6-hebrew-question-4",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-6-hebrew",
+        "questionNumber": "1",
+        "content": "∞ ∑ n=1 n √n3−4n2+5n .3 פתרון: מתקיים n ∈ N ראשית נשים לב שלכל n3 − 4n2 + 5n = n (n2 − 4n + 5) > 0 , אזיn ∈ N לכל bn = 1 n0.5 ו an = n √n3−4n2+5n נבחר lim n→∞ an bn = lim n→∞ ( n √n3−4n2+5n ) ( 1 n0.5 ) = lim n→∞ n1.5 √ n3 (1 − 4 n + 5 n2 ) = lim n→∞ HH n1.5 HH n1.5 √ 1 − 4 n + 5 n2 = AOL 1 > 0 הרמוני. 1 2 מתבדר ביחד עם הטור ה ∞ ∑ n=1 n √n3−4n2+5n לכן הטור ∞ ∑ n=1 n+100 sin(n) √n3−4n2+5n .4 פתרון: מתקיים n ≥ 200 מדובר בטור אי שלילי ולכל n ≥ 100 נשים לב שלכל n + 100 sin (n) √n3 − 4n2 + 5n ≥ n − n 2 √n3 − 4n2 + 5n = 1 2 · n √n3 − 4n2 + 5n מתבדר )הוכחנו בסעיף הקודם( ולכן גם הטור ∞ ∑ n=1 n √n3−4n2+5n הטור מתבדר, כי הוא זנב של טור מתבדר. ∞ ∑ n=200 n √n3−4n2+5n מתבדר ולכן הטור ∞ ∑ n=200 n+100 sin(n) √n3−4n2+5n ולכן ממבחן ההשוואה גם הטור מתבדר, כי הזנב שלו מתבדר. ∞ ∑ n=1 n+100 sin(n) √n3−4n2+5n 5",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "סדרות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-6-hebrew",
+          "filename": "Recitation 6-Hebrew.pdf",
+          "text": "∞ ∑ n=1 n √n3−4n2+5n .3 פתרון: מתקיים n ∈ N ראשית נשים לב שלכל n3 − 4n2 + 5n = n (n2 − 4n + 5) > 0 , אזיn ∈ N לכל bn = 1 n0.5 ו an = n √n3−4n2+5n נבחר lim n→∞ an bn = lim n→∞ ( n √n3−4n2+5n ) ( 1 n0.5 ) = lim n→∞ n1.5 √ n3 (1 − 4 n + 5 n2 ) = lim n→∞ HH n1.5 HH n1.5 √ 1 − 4 n + 5 n2 = AOL 1 > 0 הרמוני. 1 2 מתבדר ביחד עם הטור ה ∞ ∑ n=1 n √n3−4n2+5n לכן הטור ∞ ∑ n=1 n+100 sin(n) √n3−4n2+5n .4 פתרון: מתקיים n ≥ 200 מדובר בטור אי שלילי ולכל n ≥ 100 נשים לב שלכל n + 100 sin (n) √n3 − 4n2 + 5n ≥ n − n 2 √n3 − 4n2 + 5n = 1 2 · n √n3 − 4n2 + 5n מתבדר )הוכחנו בסעיף הקודם( ולכן גם הטור ∞ ∑ n=1 n √n3−4n2+5n הטור מתבדר, כי הוא זנב של טור מתבדר. ∞ ∑ n=200 n √n3−4n2+5n מתבדר ולכן הטור ∞ ∑ n=200 n+100 sin(n) √n3−4n2+5n ולכן ממבחן ההשוואה גם הטור מתבדר, כי הזנב שלו מתבדר. ∞ ∑ n=1 n+100 sin(n) √n3−4n2+5n 5"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-6-hebrew-question-5",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-6-hebrew",
+        "questionNumber": "1",
+        "content": "תרגיל: סדרה של מספרים ממשיים. (an)∞ n=1 תהי הוא טור אי שלילי. ∞ ∑ n=1 an נניח שהטור הוכיחו או הפריכו כל אחת מהטענות הבאות: מתכנס. ∞ ∑ n=1 an מתכנס, אז ∞ ∑ n=1 a2 n 1. אם פתרון: הטענה לא נכונה. .n ≥ 1 לכל an = 1 n נבחר הטור ∞ ∑ n=1 a2 n = ∞ ∑ n=1 ( 1 n )2 = ∞ ∑ n=1 1 n2 < ∞ אבל ∞ ∑ n=1 an = ∞ ∑ n=1 1 n = ∞ מתכנס. ∞ ∑ n=1 a2 n מתכנס, אז ∞ ∑ n=1 an 2. אם פתרון: הטענה נכונה. , לכן קיים lim n→∞an = 0 מתכנס, התנאי ההכרחי מתקיים, כלומר ∞ ∑ n=1 an היות ש מתקיים n ≥ k כך שלכל k ∈ N | an − 0 |< 1 ⇒ an < 1 מתקיים n ≥ k טור אי שלילי, לכן לכל ∞ ∑ n=1 an 0 ≤ an < 1 לכן ∞ ∑ n=k a2 n ≤ ∞ ∑ n=k an < ∞ מתכנס, כי הזנב שלו מתכנס. ∞ ∑ n=1 a2 n ולכן ∞ ∑ n=k a2 n < ∞ ולכן ממבחן ההשוואה 7",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "סדרות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-6-hebrew",
+          "filename": "Recitation 6-Hebrew.pdf",
+          "text": "תרגיל: סדרה של מספרים ממשיים. (an)∞ n=1 תהי הוא טור אי שלילי. ∞ ∑ n=1 an נניח שהטור הוכיחו או הפריכו כל אחת מהטענות הבאות: מתכנס. ∞ ∑ n=1 an מתכנס, אז ∞ ∑ n=1 a2 n 1. אם פתרון: הטענה לא נכונה. .n ≥ 1 לכל an = 1 n נבחר הטור ∞ ∑ n=1 a2 n = ∞ ∑ n=1 ( 1 n )2 = ∞ ∑ n=1 1 n2 < ∞ אבל ∞ ∑ n=1 an = ∞ ∑ n=1 1 n = ∞ מתכנס. ∞ ∑ n=1 a2 n מתכנס, אז ∞ ∑ n=1 an 2. אם פתרון: הטענה נכונה. , לכן קיים lim n→∞an = 0 מתכנס, התנאי ההכרחי מתקיים, כלומר ∞ ∑ n=1 an היות ש מתקיים n ≥ k כך שלכל k ∈ N | an − 0 |< 1 ⇒ an < 1 מתקיים n ≥ k טור אי שלילי, לכן לכל ∞ ∑ n=1 an 0 ≤ an < 1 לכן ∞ ∑ n=k a2 n ≤ ∞ ∑ n=k an < ∞ מתכנס, כי הזנב שלו מתכנס. ∞ ∑ n=1 a2 n ולכן ∞ ∑ n=k a2 n < ∞ ולכן ממבחן ההשוואה 7"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-6-hebrew-question-6",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-6-hebrew",
+        "questionNumber": "2",
+        "content": ". ∞ ∑ n=2 (−1)n b n 2 c = 0 3. מתקיים פתרון: הטענה נכונה. .2 ≤ N ∈ N לכל SN = N ∑ n=2 (−1)n b n 2 c ו 2 ≤ n ∈ N לכל an = (−1)n b n 2 c נגדיר מתקיים 2 ≤ N ∈ N נשים לב שלכל S2N −1 = (a2 − a3) + (a4 − a5) + ... + (a2N −2 − a2N −1) = ( 1 [ 2 2 ] − 1 ⌊ 3 2 ⌋ ) + ( 1 [ 4 2 ] − 1 ⌊ 5 2 ⌋ ) + ... + ( 1 [ 2N −2 2 ] − 1 ⌊ 2N −1 2 ⌋ ) = ( 1 1 − 1 1 ) + ( 1 2 − 1 2 ) + ... + ( 1 N − 1 − 1 N − 1 ) = 0 + 0 + ... + 0 = 0 ולכן lim N →∞ S2N −1 = lim N →∞ 0 = 0 מתקיים 2 ≤ N ∈ N בנוסף נשים לב שלכל S2N = S2N −1 + a2N = 0 + (−1)2N ⌊ 2N 2 ⌋ = ( (−1)2)N bN c = 1 N ולכן lim N →∞ S2N = lim N →∞ 1 N = 0 ולכן lim N →∞SN = 0 , אזי lim N →∞S2N −1 = lim N →∞S2N = 0 היות ש 0 = lim N →∞ SN = lim N →∞ N ∑ n=2 (−1)n ⌊ n 2 ⌋ = ∞ ∑ n=2 (−1)n ⌊ n 2 ⌋ 8",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-6-hebrew",
+          "filename": "Recitation 6-Hebrew.pdf",
+          "text": ". ∞ ∑ n=2 (−1)n b n 2 c = 0 3. מתקיים פתרון: הטענה נכונה. .2 ≤ N ∈ N לכל SN = N ∑ n=2 (−1)n b n 2 c ו 2 ≤ n ∈ N לכל an = (−1)n b n 2 c נגדיר מתקיים 2 ≤ N ∈ N נשים לב שלכל S2N −1 = (a2 − a3) + (a4 − a5) + ... + (a2N −2 − a2N −1) = ( 1 [ 2 2 ] − 1 ⌊ 3 2 ⌋ ) + ( 1 [ 4 2 ] − 1 ⌊ 5 2 ⌋ ) + ... + ( 1 [ 2N −2 2 ] − 1 ⌊ 2N −1 2 ⌋ ) = ( 1 1 − 1 1 ) + ( 1 2 − 1 2 ) + ... + ( 1 N − 1 − 1 N − 1 ) = 0 + 0 + ... + 0 = 0 ולכן lim N →∞ S2N −1 = lim N →∞ 0 = 0 מתקיים 2 ≤ N ∈ N בנוסף נשים לב שלכל S2N = S2N −1 + a2N = 0 + (−1)2N ⌊ 2N 2 ⌋ = ( (−1)2)N bN c = 1 N ולכן lim N →∞ S2N = lim N →∞ 1 N = 0 ולכן lim N →∞SN = 0 , אזי lim N →∞S2N −1 = lim N →∞S2N = 0 היות ש 0 = lim N →∞ SN = lim N →∞ N ∑ n=2 (−1)n ⌊ n 2 ⌋ = ∞ ∑ n=2 (−1)n ⌊ n 2 ⌋ 8"
+        },
+        "confidence": 0.56
+      }
+    ],
+    "solutionPatterns": [],
+    "techniques": [
+      "מבחן ההשוואה",
+      "גבול"
+    ],
+    "commonMistakes": [
+      "תרגול 6 היום: טור טלסקופי. • תנאי הכרחי. • משפט הזנבות. • מבחן ההשוואה. • מבחן ההשוואה הגבולי. • תזכורת: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי . lim N →∞ N ∑ n=k an מתכנס אם קיים הגבול ∞ ∑ n=k an נאמר שהטור במקרה זה נגדיר ∞ ∑ n=k an = lim N →∞ N ∑ n=k an תנאי הכרחי: . lim n→∞an = 0 טור מתכנס, אזי ∞ ∑ n=k an יהי , כלומר אם התנאי לא מתקיים הטורתנאי הכרחי ולא תנאי מספיק שימו לב שמדובר על מתבדר ואם התנאי מתקיים לא ניתן לדעת )על סמך הבדיקה של הגבול( אם הטור מתכנס או מתבדר. דוגמאות: קבעו האם הטורים הבאים מתכנסים, אם כן מצאו את ערכם: ∞ ∑ n=1 arctan n .1 פתרון: lim n→∞ arctan n = Heine lim x→∞ arctan x = π 2 6 = 0 מתנאי הכרחי. הטור מתבדר הגבול שונה מאפס ולכן 1"
+    ],
+    "linkedLectureNumber": 5,
+    "topicOverlapWithLinkedLecture": [
+      "גבולות",
+      "טורים",
+      "סדרות"
+    ],
+    "mappingNeedsReview": false,
+    "examRelevanceNotes": [],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "recitation-recitation-6-hebrew",
+        "filename": "Recitation 6-Hebrew.pdf",
+        "text": "תרגול 6 היום: טור טלסקופי. • תנאי הכרחי. • משפט הזנבות. • מבחן ההשוואה. • מבחן ההשוואה הגבולי. • תזכורת: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי . lim N →∞ N ∑ n=k an מתכנס אם קיים הגבול ∞ ∑ n=k an נאמר שהטור במקרה זה נגדיר ∞ ∑ n=k an = lim N →∞ N ∑ n=k an תנאי הכרחי: . lim n→∞an = 0 טור מתכנס, אזי ∞ ∑ n=k an יהי , כלומר אם התנאי לא מתקיים הטורתנאי הכרחי ולא תנאי מספיק שימו לב שמדובר על מתבדר ואם התנאי מתקיים לא ניתן לדעת )על סמך הבדיקה של הגבול( אם הטור מתכנס או מתבדר. דוגמאות: קבעו האם הטורים הבאים מתכנסים, אם כן מצאו את ערכם: ∞ ∑ n=1 arctan n .1 פתרון: lim n→∞ arctan n = Heine lim x→∞ arctan x = π 2 6 = 0 מתנאי הכרחי. הטור מתבדר הגבול שונה מאפס ולכן 1"
+      },
+      {
+        "sourceFileId": "recitation-recitation-6-hebrew",
+        "filename": "Recitation 6-Hebrew.pdf",
+        "text": "∞ ∑ n=1 (√n + 2 − 2√n + 1 + √n) .2 פתרון: מתקיים N ∈ N נשים לב שלכל N ∑ n=1 (√n + 2 − 2√n + 1 + √n) = N ∑ n=1 (√n + 2 − √n + 1 − (√n + 1 − √n)) = N ∑ n=1 (√n + 2 − √n + 1) − N ∑ n=1 (√n + 1 − √n) נחשב את כל אחד מהסכומים בנפרד ולאחר מכן נחסיר ביניהם )מותר לעשות זאת, נחשב תחילה את הסכום הראשון N ∈ N (. לכלסופי כי מדובר בסכום N ∑ n=1 (√n + 2 − √n + 1) = (ZZ √3 − √2 ) + (√4 − ZZ √3 ) +...+ (        √N − 1 + 2 − √N − 1 + 1 ) + (√N + 2 −      √N + 1 ) = √N + 2−√2 כעת נחשב את הסכום השני N ∑ n=1 (√n + 1 − √n) = (ZZ √2 − √1 ) + (√3 − ZZ √2 ) +...+ (        √N − 1 + 1 − √N − 1 ) + (√N + 1 −    √N ) = √N + 1−√1 N ∈ N נציב חזרה ונקבל לכל N ∑ n=1 (√n + 2 − 2√n + 1 + √n) = √N + 2−√2− (√N + 1 − √1 ) = −√2+1+√N + 2−√N + 1 כעת נחשב את הגבול lim N →∞ [ −√2 + 1 + √N + 2 − √N + 1 ] = lim N →∞ ( −√2 + 1 + (√N + 2 − √N + 1 ) · (√N + 2 + √N + 1) (√N + 2 + √N + 1) ) = lim N →∞ ( −√2 + 1 + N + 2 − N − 1 √N + 2 +"
+      },
+      {
+        "sourceFileId": "recitation-recitation-6-hebrew",
+        "filename": "Recitation 6-Hebrew.pdf",
+        "text": ".n ∈ N לכל α (n) = ⌊ 23+n 2n ⌋ כאשר ∞ ∑ n=1 1 nα(n) .3 פתרון: n ≥ 24 , לכן לכלα (n) = ⌊ 23+n 2n ⌋ = ⌊ 23 2n + 1 2 ⌋ מתקיים n ∈ N נשים לב שלכל .α (n) = 0 נקבל ש נסתכל על הזנב של הטור ∞ ∑ n=24 1 nα(n) = ∞ ∑ n=24 1 n0 = ∞ ∑ n=24 1 = ∞ .הטור מתבדר קיבלנו שהזנב של הטור מתבדר, לכן תזכורת: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי .n ≥ k לכל an ≥ 0 הוא טור אי שלילי אם ∞ ∑ n=k an נאמר שהטור משפט )מבחן ההשוואה לטורים אי שליליים(: שתי סדרות של מספרים ממשיים. (bn)∞ n=k ו (an)∞ n=k ותהיינה 0 ≤ k ∈ Z יהי נניח כי .n ≥ k לכל 0 ≤ an ≤ bn .1 . ∞ ∑ n=k bn < ∞ .2 . ∞ ∑ n=k an ≤ ∞ ∑ n=k bn ובנוסף, ∞ ∑ n=k an < ∞ אזי משפט )מבחן ההשוואה הגבולי לטורים אי שליליים(: שתי סדרות של מספרים ממשיים. (bn)∞ n=k ו (an)∞ n=k ותהיינה 0 ≤ k ∈ Z יהי נניח כי .bn > 0 ו an ≥ 0 1. לכל , .L = lim n→∞ an bn וכך ש L > 0 כך ש L ∈ R 2. קיים . ∞ ∑ n=k bn < ∞ אם\"ם ∞ ∑ n=k an < ∞ אזי הרמוני: p הטור ה , אזיp ∈ R יהי ∞ ∑ n=1 1 n"
+      },
+      {
+        "sourceFileId": "recitation-recitation-6-hebrew",
+        "filename": "Recitation 6-Hebrew.pdf",
+        "text": "דוגמאות: קבעו האם הטורים הבאים מתכנסים או מתבדרים )אין צורך לחשב את ערכם(: ∞ ∑ n=1 √2n2+4n+1 n3+9 .1 פתרון: , אזיn ∈ N לכל bn = 1 n2 ו an = √2n2+4n+1 n3+9 נבחר lim n→∞ an bn = lim n→∞ ( √2n2+4n+1 n3+9 ) ( 1 n2 ) = lim n→∞ n2 √ n2 (2 + 4 n + 1 n2 ) n3 (1 + 9 n3 ) = lim n→∞ Z Z n3 · √ 2 + 4 n + 1 n2 Z Z n3 · (1 + 9 n3 ) = AOL √2 > 0 הרמוני. 2 מתכנס ביחד עם הטור ה ∞ ∑ n=1 √2n2+4n+1 n3+9 לכן הטור ∞ ∑ n=1 ln(n) n .2 פתרון: .n ≥ 3 לכל ln (n) > 1 נשים לב ש לכן ∞ ∑ n=3 ln (n) n ≥ ∞ ∑ n=3 1 n = ∞ מתבדר, כי ∞ ∑ n=1 ln(n) n מתבדר ולכן גם הטור ∞ ∑ n=3 ln(n) n ולכן ממבחן ההשוואה הטור הזנב שלו מתבדר. 4"
+      }
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
+    "recitationNumber": 7,
+    "weekNumber": 7,
+    "practicedLectureNumber": 6,
+    "sourceFileId": "recitation-recitation-7-hebrew",
+    "filename": "Recitation 7-Hebrew.pdf",
+    "practicedTopics": [
+      "גבולות",
+      "טורים",
+      "מבחן ההשוואה",
+      "מבחן המנה",
+      "מבחן השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "questions": [
+      {
+        "id": "recitation-recitation-7-hebrew-question-1",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-7-hebrew",
+        "questionNumber": "7",
+        "content": "תרגול 7 היום: מבחן ההשוואה. • מבחן ההשוואה הגבולי. • מבחן השורש. • מבחן המנה. • מבחן האינטגרל. • תזכורת: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי .n ≥ k לכל an ≥ 0 הוא טור אי שלילי אם ∞ ∑ n=k an נאמר שהטור משפט )מבחן ההשוואה לטורים אי שליליים(: שתי סדרות של מספרים ממשיים. (bn)∞ n=k ו (an)∞ n=k ותהיינה 0 ≤ k ∈ Z יהי נניח כי .n ≥ k לכל 0 ≤ an ≤ bn .1 . ∞ ∑ n=k bn < ∞ .2 . ∞ ∑ n=k an ≤ ∞ ∑ n=k bn ובנוסף, ∞ ∑ n=k an < ∞ אזי משפט )מבחן ההשוואה הגבולי לטורים אי שליליים(: שתי סדרות של מספרים ממשיים. (bn)∞ n=k ו (an)∞ n=k ותהיינה 0 ≤ k ∈ Z יהי נניח כי .n ≥ k לכל an ≥ 0 ו bn > 0 .1 .L = lim n→∞ an bn וכך ש L > 0 כך ש L ∈ R 2. קיים . ∞ ∑ n=k bn < ∞ אם\"ם ∞ ∑ n=k an < ∞ אזי בנוסף: . ∞ ∑ n=k an < ∞ ⇐ ∞ ∑ n=k bn < ∞ , אזיL = 0 אם . ∞ ∑ n=k bn < ∞ ⇐ ∞ ∑ n=k an < ∞ , אזיL = ∞ ו n ≥ k לכל an > 0 אם 1",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-7-hebrew",
+          "filename": "Recitation 7-Hebrew.pdf",
+          "text": "תרגול 7 היום: מבחן ההשוואה. • מבחן ההשוואה הגבולי. • מבחן השורש. • מבחן המנה. • מבחן האינטגרל. • תזכורת: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי .n ≥ k לכל an ≥ 0 הוא טור אי שלילי אם ∞ ∑ n=k an נאמר שהטור משפט )מבחן ההשוואה לטורים אי שליליים(: שתי סדרות של מספרים ממשיים. (bn)∞ n=k ו (an)∞ n=k ותהיינה 0 ≤ k ∈ Z יהי נניח כי .n ≥ k לכל 0 ≤ an ≤ bn .1 . ∞ ∑ n=k bn < ∞ .2 . ∞ ∑ n=k an ≤ ∞ ∑ n=k bn ובנוסף, ∞ ∑ n=k an < ∞ אזי משפט )מבחן ההשוואה הגבולי לטורים אי שליליים(: שתי סדרות של מספרים ממשיים. (bn)∞ n=k ו (an)∞ n=k ותהיינה 0 ≤ k ∈ Z יהי נניח כי .n ≥ k לכל an ≥ 0 ו bn > 0 .1 .L = lim n→∞ an bn וכך ש L > 0 כך ש L ∈ R 2. קיים . ∞ ∑ n=k bn < ∞ אם\"ם ∞ ∑ n=k an < ∞ אזי בנוסף: . ∞ ∑ n=k an < ∞ ⇐ ∞ ∑ n=k bn < ∞ , אזיL = 0 אם . ∞ ∑ n=k bn < ∞ ⇐ ∞ ∑ n=k an < ∞ , אזיL = ∞ ו n ≥ k לכל an > 0 אם 1"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-7-hebrew-question-2",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-7-hebrew",
+        "questionNumber": "0",
+        "content": "מבחן השורש: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי נניח כי .n ≥ k לכל an ≥ 0 .1 .L = lim n→∞ n √an שעבורו L ∈ R 2. קיים אזי מתכנס. ∞ ∑ n=k an , הטור0 ≤ L < 1 אם • מתבדר. ∞ ∑ n=k an ולכן הטור lim n→∞an 6 = 0 , אזL > 1 אם • מבחן המנה: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי נניח כי .n ≥ k לכל an > 0 .1 .L = lim n→∞ an+1 an שעבורו L ∈ R 2. קיים אזי מתכנס. ∞ ∑ n=k an , הטור0 ≤ L < 1 אם • מתבדר. ∞ ∑ n=k an ולכן הטור lim n→∞an 6 = 0 , אזL > 1 אם • מבחן האינטגרל: .f : [k, ∞) → R ותהי 0 ≤ k ∈ Z יהי נניח כי יורדת. f .1 . lim x→∞f (x) = 0 .2 ,∫ ∞ k f (x) dx < ∞ אם\"ם ∞ ∑ n=k f (n) < ∞ אזי ∫ ∞ k f (x) dx ≤ ∞ ∑ n=k f (n) ≤ f (k) + ∫ ∞ k f (x) dx ובנוסף הרמוני: p הטור ה , אזיp ∈ R יהי ∞ ∑ n=1 1 np = { ∞ p ≤ 1 < ∞ p > 1 2",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-7-hebrew",
+          "filename": "Recitation 7-Hebrew.pdf",
+          "text": "מבחן השורש: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי נניח כי .n ≥ k לכל an ≥ 0 .1 .L = lim n→∞ n √an שעבורו L ∈ R 2. קיים אזי מתכנס. ∞ ∑ n=k an , הטור0 ≤ L < 1 אם • מתבדר. ∞ ∑ n=k an ולכן הטור lim n→∞an 6 = 0 , אזL > 1 אם • מבחן המנה: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי נניח כי .n ≥ k לכל an > 0 .1 .L = lim n→∞ an+1 an שעבורו L ∈ R 2. קיים אזי מתכנס. ∞ ∑ n=k an , הטור0 ≤ L < 1 אם • מתבדר. ∞ ∑ n=k an ולכן הטור lim n→∞an 6 = 0 , אזL > 1 אם • מבחן האינטגרל: .f : [k, ∞) → R ותהי 0 ≤ k ∈ Z יהי נניח כי יורדת. f .1 . lim x→∞f (x) = 0 .2 ,∫ ∞ k f (x) dx < ∞ אם\"ם ∞ ∑ n=k f (n) < ∞ אזי ∫ ∞ k f (x) dx ≤ ∞ ∑ n=k f (n) ≤ f (k) + ∫ ∞ k f (x) dx ובנוסף הרמוני: p הטור ה , אזיp ∈ R יהי ∞ ∑ n=1 1 np = { ∞ p ≤ 1 < ∞ p > 1 2"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-7-hebrew-question-3",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-7-hebrew",
+        "questionNumber": "1",
+        "content": "דוגמאות: קבעו האם הטורים הבאים מתכנסים או מתבדרים )אין צורך לחשב את ערכם(: ∞ ∑ n=1 (n+1)n2 nn2−1·3n .1 פתרון: נשתמש במבחן השורש L = lim n→∞ n √ (n + 1)n2 nn2−1 · 3n = lim n→∞ (n + 1) n2 n n n2−1 n · 3 n n = lim n→∞ (n + 1)n nn · n− 1 n · 3 = lim n→∞ [( n + 1 n )n · n 1 n 3 ] = lim n→∞ [ 1 3 ( 1 + 1 n )n · n 1 n ] = AOL 1 3 · e · 1 = e 3 כאשר lim n→∞ ( 1 + 1 n )n = Heine lim x→∞ ( 1 + 1 x )x = e . lim n→∞n 1 n = 1 והוכחנו בתרגול 2 ש מתכנס. ∞ ∑ n=1 (n+1)n2 nn2−1·3n , אזי הטורL = e 3 < 2<e<3 1 היות ש ∞ ∑ n=1 n100 2n+ln n .2 פתרון: שואף לאינסוף \"הרבה יותר מהר\" 2n ניתן להבין באינטואיציה שהטור מתכנס כי .n100 מאשר .ln n תחילה \"ניפטר\" מ נשים לב כי ∞ ∑ n=1 n100 2n + ln n ≤ ∞ ∑ n=1 n100 2n , נחשב את הגבול ∞ ∑ n=1 n100 2n כעת נשתמש במבחן השורש עבור הטור L = lim n→∞ n √ n100 2n = lim n→∞ n 100 n 2 = lim n→∞ ( n 1 n )100 2 = AOL 1 2 מתכנס. ∞ ∑ n=1 n100 2n , אזי הטורL < 1 היות ש מתכנס. ∞ ∑ n=1 n100 2n+ln n לכן ממבחן ההשוואה גם הטור 3",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-7-hebrew",
+          "filename": "Recitation 7-Hebrew.pdf",
+          "text": "דוגמאות: קבעו האם הטורים הבאים מתכנסים או מתבדרים )אין צורך לחשב את ערכם(: ∞ ∑ n=1 (n+1)n2 nn2−1·3n .1 פתרון: נשתמש במבחן השורש L = lim n→∞ n √ (n + 1)n2 nn2−1 · 3n = lim n→∞ (n + 1) n2 n n n2−1 n · 3 n n = lim n→∞ (n + 1)n nn · n− 1 n · 3 = lim n→∞ [( n + 1 n )n · n 1 n 3 ] = lim n→∞ [ 1 3 ( 1 + 1 n )n · n 1 n ] = AOL 1 3 · e · 1 = e 3 כאשר lim n→∞ ( 1 + 1 n )n = Heine lim x→∞ ( 1 + 1 x )x = e . lim n→∞n 1 n = 1 והוכחנו בתרגול 2 ש מתכנס. ∞ ∑ n=1 (n+1)n2 nn2−1·3n , אזי הטורL = e 3 < 2<e<3 1 היות ש ∞ ∑ n=1 n100 2n+ln n .2 פתרון: שואף לאינסוף \"הרבה יותר מהר\" 2n ניתן להבין באינטואיציה שהטור מתכנס כי .n100 מאשר .ln n תחילה \"ניפטר\" מ נשים לב כי ∞ ∑ n=1 n100 2n + ln n ≤ ∞ ∑ n=1 n100 2n , נחשב את הגבול ∞ ∑ n=1 n100 2n כעת נשתמש במבחן השורש עבור הטור L = lim n→∞ n √ n100 2n = lim n→∞ n 100 n 2 = lim n→∞ ( n 1 n )100 2 = AOL 1 2 מתכנס. ∞ ∑ n=1 n100 2n , אזי הטורL < 1 היות ש מתכנס. ∞ ∑ n=1 n100 2n"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-7-hebrew-question-4",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-7-hebrew",
+        "questionNumber": "1",
+        "content": "∞ ∑ n=1 1·4·7..(3n−2) (n+2)(n+3)...(2n+1) .3 פתרון: מתקיים n ∈ N ראשית נשים לב כי לכל an+1 = 1 · 4 · 7..(3 (n + 1) − 2) (n + 1 + 2) (n + 1 + 3) ... (2 (n + 1) + 1) = 1 · 4 · 7..(3n − 2)(3n + 1) (n + 3) ... (2n + 1) (2n + 2)(2n + 3) נשתמש במבחן המנה L = lim n→∞ an+1 an = lim n→∞ [ 1·4·7..(3n−2)(3n+1) (n+3)...(2n+1)(2n+2)(2n+3) ] [ 1·4·7..(3n−2) (n+2)(n+3)...(2n+1) ] = lim n→∞ 1 · 4 · 7..(3n − 2)(3n + 1) (n + 3) ... (2n + 1) (2n + 2)(2n + 3) · (n + 2) (n + 3) ... (2n + 1) 1 · 4 · 7... (3n − 2) = lim n→∞ (n + 2) (3n + 1) (2n + 2) (2n + 3) = lim n→∞ n (1 + 2 n ) · n (3 + 1 n ) n (2 + 2 n ) · n (2 + 3 n ) = AOL 3 4 מתכנס. ∞ ∑ n=1 1·4·7..(3n−2) (n+2)(n+3)...(2n+1) , אזי הטורL < 1 היות ש 4",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-7-hebrew",
+          "filename": "Recitation 7-Hebrew.pdf",
+          "text": "∞ ∑ n=1 1·4·7..(3n−2) (n+2)(n+3)...(2n+1) .3 פתרון: מתקיים n ∈ N ראשית נשים לב כי לכל an+1 = 1 · 4 · 7..(3 (n + 1) − 2) (n + 1 + 2) (n + 1 + 3) ... (2 (n + 1) + 1) = 1 · 4 · 7..(3n − 2)(3n + 1) (n + 3) ... (2n + 1) (2n + 2)(2n + 3) נשתמש במבחן המנה L = lim n→∞ an+1 an = lim n→∞ [ 1·4·7..(3n−2)(3n+1) (n+3)...(2n+1)(2n+2)(2n+3) ] [ 1·4·7..(3n−2) (n+2)(n+3)...(2n+1) ] = lim n→∞ 1 · 4 · 7..(3n − 2)(3n + 1) (n + 3) ... (2n + 1) (2n + 2)(2n + 3) · (n + 2) (n + 3) ... (2n + 1) 1 · 4 · 7... (3n − 2) = lim n→∞ (n + 2) (3n + 1) (2n + 2) (2n + 3) = lim n→∞ n (1 + 2 n ) · n (3 + 1 n ) n (2 + 2 n ) · n (2 + 3 n ) = AOL 3 4 מתכנס. ∞ ∑ n=1 1·4·7..(3n−2) (n+2)(n+3)...(2n+1) , אזי הטורL < 1 היות ש 4"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-7-hebrew-question-5",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-7-hebrew",
+        "questionNumber": "1",
+        "content": ":α = 1 עבור נשתמש במבחן האינטגרל. xα, lnβ x , היות שx ≥ 2 יורדת לכל f .x ≥ 2 לכל f (x) = 1 xα·lnβ x נגדיר אחד חלקי פונקציה עולה כאשר הפונקציה חיובית, זאת פונקציה פונקציות עולות. יורדת )המכנה גדל ולכן השבר קטן(. ניתן גם להראות שהנגזרת שלילית בתחום )לא נעשה זאת(, כלומר ( 1 xα · lnβ x )′ < 0 . lim x→∞f (x) = 0 נשים לב ש נחשב את האינטגרל ∫ ∞ 2 1 x · lnβ x dx = = t=ln x ∫ ∞ ln 2 1 tβ dt האינטגרל 0 ≤ β ≤ 1 האינטגרל מתכנס ועבור β > 1 הוכחנו כי במקרה כזה עבור מתבדר. לסיכום: הטור מתכנס. α = 1 ,β > 1 הטור מתבדר. α = 1 ,0 ≤ β ≤ 1 הטור מתכנס. α > 1 ,β ≥ 0 הטור מתבדר. 0 ≤ α < 1 ,β ≥ 0 6",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-7-hebrew",
+          "filename": "Recitation 7-Hebrew.pdf",
+          "text": ":α = 1 עבור נשתמש במבחן האינטגרל. xα, lnβ x , היות שx ≥ 2 יורדת לכל f .x ≥ 2 לכל f (x) = 1 xα·lnβ x נגדיר אחד חלקי פונקציה עולה כאשר הפונקציה חיובית, זאת פונקציה פונקציות עולות. יורדת )המכנה גדל ולכן השבר קטן(. ניתן גם להראות שהנגזרת שלילית בתחום )לא נעשה זאת(, כלומר ( 1 xα · lnβ x )′ < 0 . lim x→∞f (x) = 0 נשים לב ש נחשב את האינטגרל ∫ ∞ 2 1 x · lnβ x dx = = t=ln x ∫ ∞ ln 2 1 tβ dt האינטגרל 0 ≤ β ≤ 1 האינטגרל מתכנס ועבור β > 1 הוכחנו כי במקרה כזה עבור מתבדר. לסיכום: הטור מתכנס. α = 1 ,β > 1 הטור מתבדר. α = 1 ,0 ≤ β ≤ 1 הטור מתכנס. α > 1 ,β ≥ 0 הטור מתבדר. 0 ≤ α < 1 ,β ≥ 0 6"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-7-hebrew-question-6",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-7-hebrew",
+        "questionNumber": "9",
+        "content": "תרגיל: הוכיחו כי 9 8 ≤ ∞ ∑ n=1 1 n3 ≤ 1.5 פתרון: .x ≥ 1 לכל f (x) = 1 x3 נגדיר . lim x→∞f (x) = lim x→∞ 1 x3 = 0 יורדת )1 חלקי פונקציה חיוביות ועולה( ו f נשים לב כי מתכנס. ∞ ∑ n=1 f (n) = ∞ ∑ n=1 1 n3 ראינו כבר שהטור נשים לב כי מתקיים ∫ ∞ 1 1 x3 dx = formula 1 3 − 1 = 1 2 לכן ממבחן האינטגרל מתקיים ∫ ∞ 1 1 x3 dx ≤ ∞ ∑ n=1 1 n3 ≤ 1 13 + ∫ ∞ 1 1 x3 dx ולכן 1 2 ≤ ∞ ∑ n=1 1 n3 ≤ 1 + 1 2 = 1.5 בנוסף נשים לב כי ∞ ∑ n=1 1 n3 = 1 13 + 1 23 + ∞ ∑ n=3 1 n3 = 1 + 1 8 + ∞ ∑ n=3 1 n3 ︸ ︷︷ ︸ + ≥ 9 8 ולכן סה\"כ קיבלנו כי 9 8 ≤ ∞ ∑ n=1 1 n3 ≤ 1.5 8",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-7-hebrew",
+          "filename": "Recitation 7-Hebrew.pdf",
+          "text": "תרגיל: הוכיחו כי 9 8 ≤ ∞ ∑ n=1 1 n3 ≤ 1.5 פתרון: .x ≥ 1 לכל f (x) = 1 x3 נגדיר . lim x→∞f (x) = lim x→∞ 1 x3 = 0 יורדת )1 חלקי פונקציה חיוביות ועולה( ו f נשים לב כי מתכנס. ∞ ∑ n=1 f (n) = ∞ ∑ n=1 1 n3 ראינו כבר שהטור נשים לב כי מתקיים ∫ ∞ 1 1 x3 dx = formula 1 3 − 1 = 1 2 לכן ממבחן האינטגרל מתקיים ∫ ∞ 1 1 x3 dx ≤ ∞ ∑ n=1 1 n3 ≤ 1 13 + ∫ ∞ 1 1 x3 dx ולכן 1 2 ≤ ∞ ∑ n=1 1 n3 ≤ 1 + 1 2 = 1.5 בנוסף נשים לב כי ∞ ∑ n=1 1 n3 = 1 13 + 1 23 + ∞ ∑ n=3 1 n3 = 1 + 1 8 + ∞ ∑ n=3 1 n3 ︸ ︷︷ ︸ + ≥ 9 8 ולכן סה\"כ קיבלנו כי 9 8 ≤ ∞ ∑ n=1 1 n3 ≤ 1.5 8"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-7-hebrew-question-7",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-7-hebrew",
+        "questionNumber": "1",
+        "content": "תרגיל: סדרה של מספרים ממשיים. (an)∞ n=1 תהי הוא טור אי שלילי. ∞ ∑ n=1 an נניח שהטור הוכיחו או הפריכו כל אחת מהטענות הבאות: . ∞ ∑ n=1 an = ∞ , אזי lim n→∞ (n · an) = ∞ 1. אם פתרון: הטענה נכונה. נשים לב ש lim n→∞ an ( 1 n ) = lim n→∞ (n · an) = ∞ . ∞ ∑ n=1 an = ∞ , אזי ממבחן ההשוואה הגבולי ∞ ∑ n=1 1 n = ∞ היות ש דרך נוספת: מתקיים n ≥ k כך שלכל k ∈ N , אזי קיים lim n→∞ (n · an) = ∞ מהיות n · an > 1 ⇒ an > 1 n ולכן ∞ ∑ n=k an ≥ ∞ ∑ n=k 1 n = ∞ , כי יש לו זנב מתבדר. ∞ ∑ n=1 an = ∞ ממבחן ההשוואה ולכן ∞ ∑ n=k an = ∞ ולכן 9",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-7-hebrew",
+          "filename": "Recitation 7-Hebrew.pdf",
+          "text": "תרגיל: סדרה של מספרים ממשיים. (an)∞ n=1 תהי הוא טור אי שלילי. ∞ ∑ n=1 an נניח שהטור הוכיחו או הפריכו כל אחת מהטענות הבאות: . ∞ ∑ n=1 an = ∞ , אזי lim n→∞ (n · an) = ∞ 1. אם פתרון: הטענה נכונה. נשים לב ש lim n→∞ an ( 1 n ) = lim n→∞ (n · an) = ∞ . ∞ ∑ n=1 an = ∞ , אזי ממבחן ההשוואה הגבולי ∞ ∑ n=1 1 n = ∞ היות ש דרך נוספת: מתקיים n ≥ k כך שלכל k ∈ N , אזי קיים lim n→∞ (n · an) = ∞ מהיות n · an > 1 ⇒ an > 1 n ולכן ∞ ∑ n=k an ≥ ∞ ∑ n=k 1 n = ∞ , כי יש לו זנב מתבדר. ∞ ∑ n=1 an = ∞ ממבחן ההשוואה ולכן ∞ ∑ n=k an = ∞ ולכן 9"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-7-hebrew-question-8",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-7-hebrew",
+        "questionNumber": "1",
+        "content": ".n ≥ 1 לכל an > 0 2. נניח ש מתבדר. ∞ ∑ n=1 an לא קיים, אזי הטור lim n→∞ n √an אם הגבול פתרון: הטענה לא נכונה. את n ≥ 1 נבחר לכל an = {( 1 2 )n n is odd ( 1 3 )n n is even הוא ( n √an )∞ n=1 נשים לב שהגבול של האיברים במקומות הזוגיים של הסדרה lim k→∞ 2k √a2k = lim k→∞ 2k √( 1 3 )2k = lim k→∞ 1 3 = 1 3 הוא ( n √an )∞ n=1 והגבול של האיברים במקומות האי זוגיים של הסדרה lim k→∞ 2k−1 √a2k−1 lim k→∞ 2k−1 √( 1 2 )2k−1 = lim k→∞ 1 2 = 1 2 לא קיים. lim n→∞ n √an לכן הגבול .n ∈ N לכל 0 ≤ an ≤ ( 1 2 )n נשים לב ש לכן ∞ ∑ n=1 an ≤ ∞ ∑ n=1 ( 1 2 )n < ∞ . ∞ ∑ n=1 an < ∞ ולכן ממבחן ההשוואה 10",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-7-hebrew",
+          "filename": "Recitation 7-Hebrew.pdf",
+          "text": ".n ≥ 1 לכל an > 0 2. נניח ש מתבדר. ∞ ∑ n=1 an לא קיים, אזי הטור lim n→∞ n √an אם הגבול פתרון: הטענה לא נכונה. את n ≥ 1 נבחר לכל an = {( 1 2 )n n is odd ( 1 3 )n n is even הוא ( n √an )∞ n=1 נשים לב שהגבול של האיברים במקומות הזוגיים של הסדרה lim k→∞ 2k √a2k = lim k→∞ 2k √( 1 3 )2k = lim k→∞ 1 3 = 1 3 הוא ( n √an )∞ n=1 והגבול של האיברים במקומות האי זוגיים של הסדרה lim k→∞ 2k−1 √a2k−1 lim k→∞ 2k−1 √( 1 2 )2k−1 = lim k→∞ 1 2 = 1 2 לא קיים. lim n→∞ n √an לכן הגבול .n ∈ N לכל 0 ≤ an ≤ ( 1 2 )n נשים לב ש לכן ∞ ∑ n=1 an ≤ ∞ ∑ n=1 ( 1 2 )n < ∞ . ∞ ∑ n=1 an < ∞ ולכן ממבחן ההשוואה 10"
+        },
+        "confidence": 0.56
+      }
+    ],
+    "solutionPatterns": [],
+    "techniques": [
+      "מבחן המנה",
+      "מבחן השורש",
+      "מבחן ההשוואה",
+      "גבול"
+    ],
+    "commonMistakes": [],
+    "linkedLectureNumber": 6,
+    "topicOverlapWithLinkedLecture": [
+      "גבולות",
+      "טורים",
+      "סדרות"
+    ],
+    "mappingNeedsReview": false,
+    "examRelevanceNotes": [],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "recitation-recitation-7-hebrew",
+        "filename": "Recitation 7-Hebrew.pdf",
+        "text": "תרגול 7 היום: מבחן ההשוואה. • מבחן ההשוואה הגבולי. • מבחן השורש. • מבחן המנה. • מבחן האינטגרל. • תזכורת: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי .n ≥ k לכל an ≥ 0 הוא טור אי שלילי אם ∞ ∑ n=k an נאמר שהטור משפט )מבחן ההשוואה לטורים אי שליליים(: שתי סדרות של מספרים ממשיים. (bn)∞ n=k ו (an)∞ n=k ותהיינה 0 ≤ k ∈ Z יהי נניח כי .n ≥ k לכל 0 ≤ an ≤ bn .1 . ∞ ∑ n=k bn < ∞ .2 . ∞ ∑ n=k an ≤ ∞ ∑ n=k bn ובנוסף, ∞ ∑ n=k an < ∞ אזי משפט )מבחן ההשוואה הגבולי לטורים אי שליליים(: שתי סדרות של מספרים ממשיים. (bn)∞ n=k ו (an)∞ n=k ותהיינה 0 ≤ k ∈ Z יהי נניח כי .n ≥ k לכל an ≥ 0 ו bn > 0 .1 .L = lim n→∞ an bn וכך ש L > 0 כך ש L ∈ R 2. קיים . ∞ ∑ n=k bn < ∞ אם\"ם ∞ ∑ n=k an < ∞ אזי בנוסף: . ∞ ∑ n=k an < ∞ ⇐ ∞ ∑ n=k bn < ∞ , אזיL = 0 אם . ∞ ∑ n=k bn < ∞ ⇐ ∞ ∑ n=k an < ∞ , אזיL = ∞ ו n ≥ k לכל an > 0 אם 1"
+      },
+      {
+        "sourceFileId": "recitation-recitation-7-hebrew",
+        "filename": "Recitation 7-Hebrew.pdf",
+        "text": "מבחן השורש: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי נניח כי .n ≥ k לכל an ≥ 0 .1 .L = lim n→∞ n √an שעבורו L ∈ R 2. קיים אזי מתכנס. ∞ ∑ n=k an , הטור0 ≤ L < 1 אם • מתבדר. ∞ ∑ n=k an ולכן הטור lim n→∞an 6 = 0 , אזL > 1 אם • מבחן המנה: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי נניח כי .n ≥ k לכל an > 0 .1 .L = lim n→∞ an+1 an שעבורו L ∈ R 2. קיים אזי מתכנס. ∞ ∑ n=k an , הטור0 ≤ L < 1 אם • מתבדר. ∞ ∑ n=k an ולכן הטור lim n→∞an 6 = 0 , אזL > 1 אם • מבחן האינטגרל: .f : [k, ∞) → R ותהי 0 ≤ k ∈ Z יהי נניח כי יורדת. f .1 . lim x→∞f (x) = 0 .2 ,∫ ∞ k f (x) dx < ∞ אם\"ם ∞ ∑ n=k f (n) < ∞ אזי ∫ ∞ k f (x) dx ≤ ∞ ∑ n=k f (n) ≤ f (k) + ∫ ∞ k f (x) dx ובנוסף הרמוני: p הטור ה , אזיp ∈ R יהי ∞ ∑ n=1 1 np = { ∞ p ≤ 1 < ∞ p > 1 2"
+      },
+      {
+        "sourceFileId": "recitation-recitation-7-hebrew",
+        "filename": "Recitation 7-Hebrew.pdf",
+        "text": "דוגמאות: קבעו האם הטורים הבאים מתכנסים או מתבדרים )אין צורך לחשב את ערכם(: ∞ ∑ n=1 (n+1)n2 nn2−1·3n .1 פתרון: נשתמש במבחן השורש L = lim n→∞ n √ (n + 1)n2 nn2−1 · 3n = lim n→∞ (n + 1) n2 n n n2−1 n · 3 n n = lim n→∞ (n + 1)n nn · n− 1 n · 3 = lim n→∞ [( n + 1 n )n · n 1 n 3 ] = lim n→∞ [ 1 3 ( 1 + 1 n )n · n 1 n ] = AOL 1 3 · e · 1 = e 3 כאשר lim n→∞ ( 1 + 1 n )n = Heine lim x→∞ ( 1 + 1 x )x = e . lim n→∞n 1 n = 1 והוכחנו בתרגול 2 ש מתכנס. ∞ ∑ n=1 (n+1)n2 nn2−1·3n , אזי הטורL = e 3 < 2<e<3 1 היות ש ∞ ∑ n=1 n100 2n+ln n .2 פתרון: שואף לאינסוף \"הרבה יותר מהר\" 2n ניתן להבין באינטואיציה שהטור מתכנס כי .n100 מאשר .ln n תחילה \"ניפטר\" מ נשים לב כי ∞ ∑ n=1 n100 2n + ln n ≤ ∞ ∑ n=1 n100 2n , נחשב את הגבול ∞ ∑ n=1 n100 2n כעת נשתמש במבחן השורש עבור הטור L = lim n→∞ n √ n100 2n = lim n→∞ n 100 n 2 = lim n→∞ ( n 1 n )100 2 = AOL 1 2 מתכנס. ∞ ∑ n=1 n100 2n , אזי הטורL < 1 היות ש מתכנס. ∞ ∑ n=1 n100 2n"
+      },
+      {
+        "sourceFileId": "recitation-recitation-7-hebrew",
+        "filename": "Recitation 7-Hebrew.pdf",
+        "text": "∞ ∑ n=1 1·4·7..(3n−2) (n+2)(n+3)...(2n+1) .3 פתרון: מתקיים n ∈ N ראשית נשים לב כי לכל an+1 = 1 · 4 · 7..(3 (n + 1) − 2) (n + 1 + 2) (n + 1 + 3) ... (2 (n + 1) + 1) = 1 · 4 · 7..(3n − 2)(3n + 1) (n + 3) ... (2n + 1) (2n + 2)(2n + 3) נשתמש במבחן המנה L = lim n→∞ an+1 an = lim n→∞ [ 1·4·7..(3n−2)(3n+1) (n+3)...(2n+1)(2n+2)(2n+3) ] [ 1·4·7..(3n−2) (n+2)(n+3)...(2n+1) ] = lim n→∞ 1 · 4 · 7..(3n − 2)(3n + 1) (n + 3) ... (2n + 1) (2n + 2)(2n + 3) · (n + 2) (n + 3) ... (2n + 1) 1 · 4 · 7... (3n − 2) = lim n→∞ (n + 2) (3n + 1) (2n + 2) (2n + 3) = lim n→∞ n (1 + 2 n ) · n (3 + 1 n ) n (2 + 2 n ) · n (2 + 3 n ) = AOL 3 4 מתכנס. ∞ ∑ n=1 1·4·7..(3n−2) (n+2)(n+3)...(2n+1) , אזי הטורL < 1 היות ש 4"
+      }
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
+    "recitationNumber": 8,
+    "weekNumber": 8,
+    "practicedLectureNumber": 7,
+    "sourceFileId": "recitation-recitation-8-hebrew",
+    "filename": "Recitation 8 Hebrew.pdf",
+    "practicedTopics": [
+      "גבולות",
+      "התכנסות בהחלט",
+      "התכנסות בתנאי",
+      "טורים",
+      "מבחן ההשוואה",
+      "מבחן השורש",
+      "סדרות"
+    ],
+    "questions": [
+      {
+        "id": "recitation-recitation-8-hebrew-question-1",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-8-hebrew",
+        "questionNumber": "1",
+        "content": "דוגמאות: קבעו האם הטורים הבאים מתכנסים בהחלט, מתכנסים בתנאי או מתבדרים. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] .1 פתרון: נבדוק תחילה התכנסות בהחלט ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ = ∞ ∑ n=1 [∣ ∣arctan (n) + sin n∣ ∣ · 1 1 + cos2 n · n 3n ] 4 ≤ ∞ ∑ n=1 [(∣ ∣arctan (n)∣ ∣ + ∣ ∣sin n∣ ∣) · 1 1 + cos2 n · n 3n ] ≤ ∞ ∑ n=1 [( π 2 + 1 ) · 1 1 + 0 · n 3n ] = ∞ ∑ n=1 [( π 2 + 1 ) · n 3n ] = ( π 2 + 1 ) ∞ ∑ n=1 n 3n מתכנס. נראה זאת על ידי מבחן השורש ∞ ∑ n=1 n 3n הטור lim n→∞ n √ n 3n = lim n→∞ n 1 n 3 = AOL 1 3 < 1 ולכן ממבחן ההשוואה הטור ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ מתכנס בהחלט. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] מתכנס ולכן הטור 3",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-8-hebrew",
+          "filename": "Recitation 8-Hebrew.pdf",
+          "text": "דוגמאות: קבעו האם הטורים הבאים מתכנסים בהחלט, מתכנסים בתנאי או מתבדרים. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] .1 פתרון: נבדוק תחילה התכנסות בהחלט ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ = ∞ ∑ n=1 [∣ ∣arctan (n) + sin n∣ ∣ · 1 1 + cos2 n · n 3n ] 4 ≤ ∞ ∑ n=1 [(∣ ∣arctan (n)∣ ∣ + ∣ ∣sin n∣ ∣) · 1 1 + cos2 n · n 3n ] ≤ ∞ ∑ n=1 [( π 2 + 1 ) · 1 1 + 0 · n 3n ] = ∞ ∑ n=1 [( π 2 + 1 ) · n 3n ] = ( π 2 + 1 ) ∞ ∑ n=1 n 3n מתכנס. נראה זאת על ידי מבחן השורש ∞ ∑ n=1 n 3n הטור lim n→∞ n √ n 3n = lim n→∞ n 1 n 3 = AOL 1 3 < 1 ולכן ממבחן ההשוואה הטור ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ מתכנס בהחלט. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] מתכנס ולכן הטור 3"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-8-hebrew-question-2",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-8-hebrew",
+        "questionNumber": "1",
+        "content": "תרגיל: קבעו האם הטור הבא מתכנס או מתבדר 1 − 1 4 + 1 2 − 1 42 + 1 3 − 1 43 + 1 4 − 1 44 + ... פתרון: נשים סוגריים באופן הבא: ( 1 − 1 4 ) + ( 1 2 − 1 42 ) + ( 1 3 − 1 43 ) + ( 1 4 − 1 44 ) + ... קיבלנו את הטור ∞ ∑ n=1 ( 1 n − 1 4n ) זהו טור מתבדר, מכיוון שהוא מורכב מטור מתבדר פחות טור מתכנס, ולכן ממשפט השמת הסוגריים, גם הטור המקורי מתבדר. תרגיל: . ∞ ∑ n=1 1 n2 = π2 6 נניח כי . ∞ ∑ n=1 1 n2 = ∞ ∑ n=1 [ 1 (2n−1)2 + 1 (2n)2 ] 1. הוכיחו כי פתרון: מתכנס, אז ממשפט השמת הסוגריים נקבל כי ∞ ∑ n=1 1 n2 היות שהטור ∞ ∑ n=1 1 n2 = ( 1 + 1 22 ) + ( 1 32 + 1 42 ) + ... = ∞ ∑ n=1 ( 1 (2n − 1)2 + 1 (2n)2 ) 6",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-8-hebrew",
+          "filename": "Recitation 8-Hebrew.pdf",
+          "text": "תרגיל: קבעו האם הטור הבא מתכנס או מתבדר 1 − 1 4 + 1 2 − 1 42 + 1 3 − 1 43 + 1 4 − 1 44 + ... פתרון: נשים סוגריים באופן הבא: ( 1 − 1 4 ) + ( 1 2 − 1 42 ) + ( 1 3 − 1 43 ) + ( 1 4 − 1 44 ) + ... קיבלנו את הטור ∞ ∑ n=1 ( 1 n − 1 4n ) זהו טור מתבדר, מכיוון שהוא מורכב מטור מתבדר פחות טור מתכנס, ולכן ממשפט השמת הסוגריים, גם הטור המקורי מתבדר. תרגיל: . ∞ ∑ n=1 1 n2 = π2 6 נניח כי . ∞ ∑ n=1 1 n2 = ∞ ∑ n=1 [ 1 (2n−1)2 + 1 (2n)2 ] 1. הוכיחו כי פתרון: מתכנס, אז ממשפט השמת הסוגריים נקבל כי ∞ ∑ n=1 1 n2 היות שהטור ∞ ∑ n=1 1 n2 = ( 1 + 1 22 ) + ( 1 32 + 1 42 ) + ... = ∞ ∑ n=1 ( 1 (2n − 1)2 + 1 (2n)2 ) 6"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-8-hebrew-question-3",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-8-hebrew",
+        "questionNumber": "1",
+        "content": ". ∞ ∑ n=1 1 (2n−1)2 = π2 8 2. הוכיחו כי פתרון: נשים לב כי מתקיים ∞ ∑ n=1 1 (2n)2 = 1 4 ∞ ∑ n=1 1 n2 = 1 4 · π2 6 מתכנס )ניתן להראות זאת ∞ ∑ n=1 1 (2n)2 מתכנס והטור ∞ ∑ n=1 1 (2n−1)2 היות שהטור (, אז ∞ ∑ n=1 1 n2 בקלות על ידי מבחן ההשוואה הגבולי עם הטור ∞ ∑ n=1 ( 1 (2n − 1)2 + 1 (2n)2 ) = AOS ∞ ∑ n=1 1 (2n − 1)2 + ∞ ∑ n=1 1 (2n)2 ולכן מהסעיף הראשון נקבל כי π2 6 = ∞ ∑ n=1 1 (2n − 1)2 + 1 4 · π2 6 ולכן ∞ ∑ n=1 1 (2n − 1)2 = 3 4 · π2 6 = π2 8 . ∞ ∑ n=1 (−1)n+1 1 n2 = π2 12 3. הוכיחו כי פתרון: מתכנס )טור לייבניץ(, אז ממשפט השמת הסוגריים ∞ ∑ n=1 (−1)n+1 1 n2 היות שהטור נקבל כי ∞ ∑ n=1 (−1)n+1 1 n2 = ( 1 − 1 22 ) + ( 1 32 − 1 42 ) +... = ∞ ∑ n=1 ( 1 (2n − 1)2 − 1 (2n)2 ) ולכן ∞ ∑ n=1 (−1)n+1 1 n2 = ∞ ∑ n=1 ( 1 (2n − 1)2 − 1 (2n)2 ) = AOS ∞ ∑ n=1 1 (2n − 1)2 − ∞ ∑ n=1 1 (2n)2 = π2 8 − 1 4 · π2 6 = π2 8 − π2 24 = 3π2 − π2 24 = 2π2 24 = π2 12 7",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-8-hebrew",
+          "filename": "Recitation 8-Hebrew.pdf",
+          "text": ". ∞ ∑ n=1 1 (2n−1)2 = π2 8 2. הוכיחו כי פתרון: נשים לב כי מתקיים ∞ ∑ n=1 1 (2n)2 = 1 4 ∞ ∑ n=1 1 n2 = 1 4 · π2 6 מתכנס )ניתן להראות זאת ∞ ∑ n=1 1 (2n)2 מתכנס והטור ∞ ∑ n=1 1 (2n−1)2 היות שהטור (, אז ∞ ∑ n=1 1 n2 בקלות על ידי מבחן ההשוואה הגבולי עם הטור ∞ ∑ n=1 ( 1 (2n − 1)2 + 1 (2n)2 ) = AOS ∞ ∑ n=1 1 (2n − 1)2 + ∞ ∑ n=1 1 (2n)2 ולכן מהסעיף הראשון נקבל כי π2 6 = ∞ ∑ n=1 1 (2n − 1)2 + 1 4 · π2 6 ולכן ∞ ∑ n=1 1 (2n − 1)2 = 3 4 · π2 6 = π2 8 . ∞ ∑ n=1 (−1)n+1 1 n2 = π2 12 3. הוכיחו כי פתרון: מתכנס )טור לייבניץ(, אז ממשפט השמת הסוגריים ∞ ∑ n=1 (−1)n+1 1 n2 היות שהטור נקבל כי ∞ ∑ n=1 (−1)n+1 1 n2 = ( 1 − 1 22 ) + ( 1 32 − 1 42 ) +... = ∞ ∑ n=1 ( 1 (2n − 1)2 − 1 (2n)2 ) ולכן ∞ ∑ n=1 (−1)n+1 1 n2 = ∞ ∑ n=1 ( 1 (2n − 1)2 − 1 (2n)2 ) = AOS ∞ ∑ n=1 1 (2n − 1)2 − ∞ ∑ n=1 1 (2n)2 = π2 8 − 1 4 · π2 6 = π2 8 − π2 24 = 3π2 − π2 24 = 2π2 24 = π2 12 7"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-8-hebrew-question-4",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-8-hebrew",
+        "questionNumber": "1",
+        "content": "הוכיחו או הפריכו כל אחת מהטענות הבאות: סדרה של מספרים ממשיים. (an)∞ n=1 תהי מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס, אזי ∞ ∑ n=1 an 1. אם פתרון: הטענה לא נכונה. נגדיר 2 ≤ n ∈ N ולכל a1 = 0 דוגמא נגדית: an = (−1)n+1 ln n נשים לב ש ∞ ∑ n=1 an = ∞ ∑ n=2 (−1)n+1 ln n מקיים את התנאים של המסקנה בתזכורת ולכן מתכנס, אבל ∞ ∑ n=1 ∣ ∣ ∣ an n ∣ ∣ ∣ = ∞ ∑ n=2 ∣ ∣ ∣ ∣ ∣ ∣ [ (−1)n ln n ] n ∣ ∣ ∣ ∣ ∣ ∣ = ∞ ∑ n=2 1 n ln n = ∞ לא מתכנס בהחלט. ∞ ∑ n=1 an n ולכן מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס, אזי ∞ ∑ n=1 a2 n 2. אם פתרון: הטענה נכונה. מתקיים n ∈ N נשים לב שלכל ( | an | − 1 n )2 ≥ 0 ⇒ a2 n − 2 | an | n + 1 n2 ≥ 0 ⇒ | an | n ≤ 1 2 · ( a2 n + 1 n2 ) נשים לב ששני הביטויים הם אי שליליים ולכן נוכל להשתמש במבחן ההשוואה, ∞ ∑ n=1 | an | n ≤ ∞ ∑ n=1 1 2 · ( a2 n + 1 n2 ) < ∞ מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס ולכן ∞ ∑ n=1 |an| n ולכן 8",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-8-hebrew",
+          "filename": "Recitation 8-Hebrew.pdf",
+          "text": "הוכיחו או הפריכו כל אחת מהטענות הבאות: סדרה של מספרים ממשיים. (an)∞ n=1 תהי מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס, אזי ∞ ∑ n=1 an 1. אם פתרון: הטענה לא נכונה. נגדיר 2 ≤ n ∈ N ולכל a1 = 0 דוגמא נגדית: an = (−1)n+1 ln n נשים לב ש ∞ ∑ n=1 an = ∞ ∑ n=2 (−1)n+1 ln n מקיים את התנאים של המסקנה בתזכורת ולכן מתכנס, אבל ∞ ∑ n=1 ∣ ∣ ∣ an n ∣ ∣ ∣ = ∞ ∑ n=2 ∣ ∣ ∣ ∣ ∣ ∣ [ (−1)n ln n ] n ∣ ∣ ∣ ∣ ∣ ∣ = ∞ ∑ n=2 1 n ln n = ∞ לא מתכנס בהחלט. ∞ ∑ n=1 an n ולכן מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס, אזי ∞ ∑ n=1 a2 n 2. אם פתרון: הטענה נכונה. מתקיים n ∈ N נשים לב שלכל ( | an | − 1 n )2 ≥ 0 ⇒ a2 n − 2 | an | n + 1 n2 ≥ 0 ⇒ | an | n ≤ 1 2 · ( a2 n + 1 n2 ) נשים לב ששני הביטויים הם אי שליליים ולכן נוכל להשתמש במבחן ההשוואה, ∞ ∑ n=1 | an | n ≤ ∞ ∑ n=1 1 2 · ( a2 n + 1 n2 ) < ∞ מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס ולכן ∞ ∑ n=1 |an| n ולכן 8",
+          "startOffset": 4906,
+          "endOffset": 5714
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-8-hebrew-question-5",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-8-hebrew",
+        "questionNumber": "1",
+        "content": "∞ ∑ n=1 (−1) n+1an , אזי הטור lim n→∞an = 0 סדרה אי שלילית כך ש (an)∞ n=1 3. נניח כי מתכנס. פתרון: הטענה לא נכונה )חלק מהתנאים של משפט לייבניץ לא רשומים(. .1, 0, 1 2 , 0, 1 3 , ... נבחר את הסדרה כלומר נבחר את הסדרה an = { 1 k n = 2k − 1 0 n = 2k = { 2 n+1 n is odd 0 n is even כי הגבול של האיברים במקומות הזוגיים שווה לגבול של lim n→∞an = 0 נשים לב כי האיברים במקומות האי זוגיים ושניהם שווים לאפס. נראה כי הטור מתבדר ∞ ∑ n=1 (−1) n+1an = 1 + 0 + 1 2 + 0 + 1 3 + 0 + ... נשים סוגריים באופן הבא: (1 + 0) + ( 1 2 + 0 ) + ( 1 3 + 0 ) .. קיבלנו את הטור ∞ ∑ n=1 ( 1 n + 0 ) = ∞ ∑ n=1 1 n זהו טור מתבדר, ולכן ממשפט השמת הסוגריים, גם הטור המקורי מתבדר. 9",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-8-hebrew",
+          "filename": "Recitation 8-Hebrew.pdf",
+          "text": "∞ ∑ n=1 (−1) n+1an , אזי הטור lim n→∞an = 0 סדרה אי שלילית כך ש (an)∞ n=1 3. נניח כי מתכנס. פתרון: הטענה לא נכונה )חלק מהתנאים של משפט לייבניץ לא רשומים(. .1, 0, 1 2 , 0, 1 3 , ... נבחר את הסדרה כלומר נבחר את הסדרה an = { 1 k n = 2k − 1 0 n = 2k = { 2 n+1 n is odd 0 n is even כי הגבול של האיברים במקומות הזוגיים שווה לגבול של lim n→∞an = 0 נשים לב כי האיברים במקומות האי זוגיים ושניהם שווים לאפס. נראה כי הטור מתבדר ∞ ∑ n=1 (−1) n+1an = 1 + 0 + 1 2 + 0 + 1 3 + 0 + ... נשים סוגריים באופן הבא: (1 + 0) + ( 1 2 + 0 ) + ( 1 3 + 0 ) .. קיבלנו את הטור ∞ ∑ n=1 ( 1 n + 0 ) = ∞ ∑ n=1 1 n זהו טור מתבדר, ולכן ממשפט השמת הסוגריים, גם הטור המקורי מתבדר. 9"
+        },
+        "confidence": 0.56
+      }
+    ],
+    "solutionPatterns": [
+      {
+        "id": "recitation-recitation-8-hebrew-proof-pattern-1",
+        "title": "∞ ∑ n=1 [ (−1)n+1 n · (1 + 1 n )n]",
+        "patternType": "comparison",
+        "steps": [
+          "Identify the relevant assumptions from the source statement.",
+          "Compare to a known convergent/divergent object.",
+          "Reduce the claim to a limit statement.",
+          "Construct or justify the required existence statement.",
+          "Close the argument using the cited theorem or criterion."
+        ],
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "recitation-recitation-8-hebrew"
+        ],
+        "relatedQuestionIds": [],
+        "commonMistakes": [],
+        "examImportance": "medium",
+        "confidence": 0.52
+      },
+      {
+        "id": "recitation-recitation-8-hebrew-proof-pattern-2",
+        "title": "∞ ∑ n=1 (−1) n+1an , אזי הטור lim n→∞an = 0 סדרה אי שלילית כך ש (an)∞ n=1 3",
+        "patternType": "limit",
+        "steps": [
+          "Identify the relevant assumptions from the source statement.",
+          "Reduce the claim to a limit statement.",
+          "Close the argument using the cited theorem or criterion."
+        ],
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "recitation-recitation-8-hebrew"
+        ],
+        "relatedQuestionIds": [],
+        "commonMistakes": [],
+        "examImportance": "medium",
+        "confidence": 0.52
+      }
+    ],
+    "techniques": [
+      "מבחן השורש",
+      "מבחן ההשוואה",
+      "גבול",
+      "התכנסות בהחלט"
+    ],
+    "commonMistakes": [],
+    "linkedLectureNumber": 7,
+    "topicOverlapWithLinkedLecture": [
+      "גבולות",
+      "טורים",
+      "סדרות"
+    ],
+    "mappingNeedsReview": false,
+    "examRelevanceNotes": [],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "recitation-recitation-8-hebrew",
+        "filename": "Recitation 8-Hebrew.pdf",
+        "text": "תרגול 8 היום: התכנסות בהחלט, התכנסות בתנאי. • טור לייבניץ. • השמת סוגריים. • תזכורת: התכנסות בהחלט: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי . ∞ ∑ n=k | an |< ∞ מתכנס בהחלט אם ∞ ∑ n=k an נאמר שהטור משפט )מבחן התכנסות בהחלט(: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי מתכנס. ∞ ∑ n=k an מתכנס בהחלט. אזי הטור ∞ ∑ n=k an נניח שהטור התכנסות בתנאי: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי מתכנס ∞ ∑ n=k an מתכנס בתנאי אם הטור ∞ ∑ n=k an נאמר שהטור )מתכנס, אבל לא בהחלט(. ∞ ∑ n=k | an |= ∞ אבל , הטור מתכנס )הוכחתם בשיעור( אבל הטור ∞ ∑ n=1 (−1)n+1 n :דוגמא לטור שמתכנס בתנאי מתבדר. ∞ ∑ n=1 ∣ ∣ ∣ (−1)n+1 n ∣ ∣ ∣ = ∞ ∑ n=1 1 n 1"
+      },
+      {
+        "sourceFileId": "recitation-recitation-8-hebrew",
+        "filename": "Recitation 8-Hebrew.pdf",
+        "text": "טור לייבניץ: סדרה של מספרים ממשיים. (an)∞ n=1 תהי הוא טור לייבניץ אם: ∞ ∑ n=1 (−1)n+1 · an נאמר שהטור יורדת. (an)∞ n=1 .1 . lim n→∞an = 0 .2 משפט )מבחן לייבניץ(: סדרה של מספרים ממשיים. (an)∞ n=1 תהי הוא טור לייבניץ, אזי הוא מתכנס ∞ ∑ n=1 (−1)n+1 · an נניח שהטור .a1 − a2 ≤ s ≤ a1 ובנוסף, s ∈ R לערך מסקנה: סדרה של מספרים ממשיים. (an)∞ n=k ותהי k ∈ N יהי נניח כי יורדת. (an)∞ n=k . lim n→∞an = 0 כך ש s ∈ R אזי קיים s = ∞ ∑ n=k (−1)n+1 · an .ak − ak+1 ≤| s |≤ ak ובנוסף משפט השמת הסוגריים: אם טור מתכנס אז גם אם נוסיף סוגריים )כאשר בכל סוגר יש מספר סופי של איברים וללא שינוי סדר סכימה( הטור יתכנס לאותו הסכום. 2"
+      },
+      {
+        "sourceFileId": "recitation-recitation-8-hebrew",
+        "filename": "Recitation 8-Hebrew.pdf",
+        "text": "דוגמאות: קבעו האם הטורים הבאים מתכנסים בהחלט, מתכנסים בתנאי או מתבדרים. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] .1 פתרון: נבדוק תחילה התכנסות בהחלט ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ = ∞ ∑ n=1 [∣ ∣arctan (n) + sin n∣ ∣ · 1 1 + cos2 n · n 3n ] 4 ≤ ∞ ∑ n=1 [(∣ ∣arctan (n)∣ ∣ + ∣ ∣sin n∣ ∣) · 1 1 + cos2 n · n 3n ] ≤ ∞ ∑ n=1 [( π 2 + 1 ) · 1 1 + 0 · n 3n ] = ∞ ∑ n=1 [( π 2 + 1 ) · n 3n ] = ( π 2 + 1 ) ∞ ∑ n=1 n 3n מתכנס. נראה זאת על ידי מבחן השורש ∞ ∑ n=1 n 3n הטור lim n→∞ n √ n 3n = lim n→∞ n 1 n 3 = AOL 1 3 < 1 ולכן ממבחן ההשוואה הטור ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ מתכנס בהחלט. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] מתכנס ולכן הטור 3"
+      },
+      {
+        "sourceFileId": "recitation-recitation-8-hebrew",
+        "filename": "Recitation 8-Hebrew.pdf",
+        "text": "∞ ∑ n=2 (−1)n+1 n·ln n .2 פתרון: נבדוק תחילה התכנסות בהחלט ∞ ∑ n=2 ∣ ∣ ∣ (−1)n+1 n·ln n ∣ ∣ ∣ = ∞ ∑ n=2 1 n · ln n ראינו כי הטור מתבדר, לכן הטור לא מתכנס בהחלט. כעת נבדוק התכנסות בתנאי, נעשה זאת בעזרת המסקנה בתזכורת. an = 1 n·ln n נבדוק אם התנאים של המסקנה בתזכורת מתקיימים, כאשר במקרה שלנו .n ≥ 2 לכל lim n→∞ an = lim n→∞ 1 n · ln n = 0 יורדת )1 חלקי סדרה עולה וחיובית(. ( 1 n ln n ) n=2 הסדרה אבל לא מתכנס התנאים מתקיימים ולכן הטור מתכנס בתנאי )כי הוא מתכנס, בהחלט(. 4"
+      }
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
+    "recitationNumber": 8,
+    "weekNumber": 8,
+    "practicedLectureNumber": 7,
+    "sourceFileId": "recitation-recitation-8-hebrew-2",
+    "filename": "Recitation 8-Hebrew-2.pdf",
+    "practicedTopics": [
+      "גבולות",
+      "התכנסות בהחלט",
+      "התכנסות בתנאי",
+      "טורים",
+      "מבחן ההשוואה",
+      "מבחן השורש",
+      "סדרות"
+    ],
+    "questions": [
+      {
+        "id": "recitation-recitation-8-hebrew-2-question-1",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-8-hebrew-2",
+        "questionNumber": "1",
+        "content": "דוגמאות: קבעו האם הטורים הבאים מתכנסים בהחלט, מתכנסים בתנאי או מתבדרים. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] .1 פתרון: נבדוק תחילה התכנסות בהחלט ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ = ∞ ∑ n=1 [∣ ∣arctan (n) + sin n∣ ∣ · 1 1 + cos2 n · n 3n ] 4 ≤ ∞ ∑ n=1 [(∣ ∣arctan (n)∣ ∣ + ∣ ∣sin n∣ ∣) · 1 1 + cos2 n · n 3n ] ≤ ∞ ∑ n=1 [( π 2 + 1 ) · 1 1 + 0 · n 3n ] = ∞ ∑ n=1 [( π 2 + 1 ) · n 3n ] = ( π 2 + 1 ) ∞ ∑ n=1 n 3n מתכנס. נראה זאת על ידי מבחן השורש ∞ ∑ n=1 n 3n הטור lim n→∞ n √ n 3n = lim n→∞ n 1 n 3 = AOL 1 3 < 1 ולכן ממבחן ההשוואה הטור ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ מתכנס בהחלט. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] מתכנס ולכן הטור 3",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-8-hebrew-2",
+          "filename": "Recitation 8-Hebrew-2.pdf",
+          "text": "דוגמאות: קבעו האם הטורים הבאים מתכנסים בהחלט, מתכנסים בתנאי או מתבדרים. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] .1 פתרון: נבדוק תחילה התכנסות בהחלט ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ = ∞ ∑ n=1 [∣ ∣arctan (n) + sin n∣ ∣ · 1 1 + cos2 n · n 3n ] 4 ≤ ∞ ∑ n=1 [(∣ ∣arctan (n)∣ ∣ + ∣ ∣sin n∣ ∣) · 1 1 + cos2 n · n 3n ] ≤ ∞ ∑ n=1 [( π 2 + 1 ) · 1 1 + 0 · n 3n ] = ∞ ∑ n=1 [( π 2 + 1 ) · n 3n ] = ( π 2 + 1 ) ∞ ∑ n=1 n 3n מתכנס. נראה זאת על ידי מבחן השורש ∞ ∑ n=1 n 3n הטור lim n→∞ n √ n 3n = lim n→∞ n 1 n 3 = AOL 1 3 < 1 ולכן ממבחן ההשוואה הטור ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ מתכנס בהחלט. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] מתכנס ולכן הטור 3"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-8-hebrew-2-question-2",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-8-hebrew-2",
+        "questionNumber": "1",
+        "content": "תרגיל: קבעו האם הטור הבא מתכנס או מתבדר 1 − 1 4 + 1 2 − 1 42 + 1 3 − 1 43 + 1 4 − 1 44 + ... פתרון: נשים סוגריים באופן הבא: ( 1 − 1 4 ) + ( 1 2 − 1 42 ) + ( 1 3 − 1 43 ) + ( 1 4 − 1 44 ) + ... קיבלנו את הטור ∞ ∑ n=1 ( 1 n − 1 4n ) זהו טור מתבדר, מכיוון שהוא מורכב מטור מתבדר פחות טור מתכנס, ולכן ממשפט השמת הסוגריים, גם הטור המקורי מתבדר. תרגיל: . ∞ ∑ n=1 1 n2 = π2 6 נניח כי . ∞ ∑ n=1 1 n2 = ∞ ∑ n=1 [ 1 (2n−1)2 + 1 (2n)2 ] 1. הוכיחו כי פתרון: מתכנס, אז ממשפט השמת הסוגריים נקבל כי ∞ ∑ n=1 1 n2 היות שהטור ∞ ∑ n=1 1 n2 = ( 1 + 1 22 ) + ( 1 32 + 1 42 ) + ... = ∞ ∑ n=1 ( 1 (2n − 1)2 + 1 (2n)2 ) 6",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-8-hebrew-2",
+          "filename": "Recitation 8-Hebrew-2.pdf",
+          "text": "תרגיל: קבעו האם הטור הבא מתכנס או מתבדר 1 − 1 4 + 1 2 − 1 42 + 1 3 − 1 43 + 1 4 − 1 44 + ... פתרון: נשים סוגריים באופן הבא: ( 1 − 1 4 ) + ( 1 2 − 1 42 ) + ( 1 3 − 1 43 ) + ( 1 4 − 1 44 ) + ... קיבלנו את הטור ∞ ∑ n=1 ( 1 n − 1 4n ) זהו טור מתבדר, מכיוון שהוא מורכב מטור מתבדר פחות טור מתכנס, ולכן ממשפט השמת הסוגריים, גם הטור המקורי מתבדר. תרגיל: . ∞ ∑ n=1 1 n2 = π2 6 נניח כי . ∞ ∑ n=1 1 n2 = ∞ ∑ n=1 [ 1 (2n−1)2 + 1 (2n)2 ] 1. הוכיחו כי פתרון: מתכנס, אז ממשפט השמת הסוגריים נקבל כי ∞ ∑ n=1 1 n2 היות שהטור ∞ ∑ n=1 1 n2 = ( 1 + 1 22 ) + ( 1 32 + 1 42 ) + ... = ∞ ∑ n=1 ( 1 (2n − 1)2 + 1 (2n)2 ) 6"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-8-hebrew-2-question-3",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-8-hebrew-2",
+        "questionNumber": "1",
+        "content": ". ∞ ∑ n=1 1 (2n−1)2 = π2 8 2. הוכיחו כי פתרון: נשים לב כי מתקיים ∞ ∑ n=1 1 (2n)2 = 1 4 ∞ ∑ n=1 1 n2 = 1 4 · π2 6 מתכנס )ניתן להראות זאת ∞ ∑ n=1 1 (2n)2 מתכנס והטור ∞ ∑ n=1 1 (2n−1)2 היות שהטור (, אז ∞ ∑ n=1 1 n2 בקלות על ידי מבחן ההשוואה הגבולי עם הטור ∞ ∑ n=1 ( 1 (2n − 1)2 + 1 (2n)2 ) = AOS ∞ ∑ n=1 1 (2n − 1)2 + ∞ ∑ n=1 1 (2n)2 ולכן מהסעיף הראשון נקבל כי π2 6 = ∞ ∑ n=1 1 (2n − 1)2 + 1 4 · π2 6 ולכן ∞ ∑ n=1 1 (2n − 1)2 = 3 4 · π2 6 = π2 8 . ∞ ∑ n=1 (−1)n+1 1 n2 = π2 12 3. הוכיחו כי פתרון: מתכנס )טור לייבניץ(, אז ממשפט השמת הסוגריים ∞ ∑ n=1 (−1)n+1 1 n2 היות שהטור נקבל כי ∞ ∑ n=1 (−1)n+1 1 n2 = ( 1 − 1 22 ) + ( 1 32 − 1 42 ) +... = ∞ ∑ n=1 ( 1 (2n − 1)2 − 1 (2n)2 ) ולכן ∞ ∑ n=1 (−1)n+1 1 n2 = ∞ ∑ n=1 ( 1 (2n − 1)2 − 1 (2n)2 ) = AOS ∞ ∑ n=1 1 (2n − 1)2 − ∞ ∑ n=1 1 (2n)2 = π2 8 − 1 4 · π2 6 = π2 8 − π2 24 = 3π2 − π2 24 = 2π2 24 = π2 12 7",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-8-hebrew-2",
+          "filename": "Recitation 8-Hebrew-2.pdf",
+          "text": ". ∞ ∑ n=1 1 (2n−1)2 = π2 8 2. הוכיחו כי פתרון: נשים לב כי מתקיים ∞ ∑ n=1 1 (2n)2 = 1 4 ∞ ∑ n=1 1 n2 = 1 4 · π2 6 מתכנס )ניתן להראות זאת ∞ ∑ n=1 1 (2n)2 מתכנס והטור ∞ ∑ n=1 1 (2n−1)2 היות שהטור (, אז ∞ ∑ n=1 1 n2 בקלות על ידי מבחן ההשוואה הגבולי עם הטור ∞ ∑ n=1 ( 1 (2n − 1)2 + 1 (2n)2 ) = AOS ∞ ∑ n=1 1 (2n − 1)2 + ∞ ∑ n=1 1 (2n)2 ולכן מהסעיף הראשון נקבל כי π2 6 = ∞ ∑ n=1 1 (2n − 1)2 + 1 4 · π2 6 ולכן ∞ ∑ n=1 1 (2n − 1)2 = 3 4 · π2 6 = π2 8 . ∞ ∑ n=1 (−1)n+1 1 n2 = π2 12 3. הוכיחו כי פתרון: מתכנס )טור לייבניץ(, אז ממשפט השמת הסוגריים ∞ ∑ n=1 (−1)n+1 1 n2 היות שהטור נקבל כי ∞ ∑ n=1 (−1)n+1 1 n2 = ( 1 − 1 22 ) + ( 1 32 − 1 42 ) +... = ∞ ∑ n=1 ( 1 (2n − 1)2 − 1 (2n)2 ) ולכן ∞ ∑ n=1 (−1)n+1 1 n2 = ∞ ∑ n=1 ( 1 (2n − 1)2 − 1 (2n)2 ) = AOS ∞ ∑ n=1 1 (2n − 1)2 − ∞ ∑ n=1 1 (2n)2 = π2 8 − 1 4 · π2 6 = π2 8 − π2 24 = 3π2 − π2 24 = 2π2 24 = π2 12 7"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-8-hebrew-2-question-4",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-8-hebrew-2",
+        "questionNumber": "1",
+        "content": "הוכיחו או הפריכו כל אחת מהטענות הבאות: סדרה של מספרים ממשיים. (an)∞ n=1 תהי מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס, אזי ∞ ∑ n=1 an 1. אם פתרון: הטענה לא נכונה. נגדיר 2 ≤ n ∈ N ולכל a1 = 0 דוגמא נגדית: an = (−1)n+1 ln n נשים לב ש ∞ ∑ n=1 an = ∞ ∑ n=2 (−1)n+1 ln n מקיים את התנאים של המסקנה בתזכורת ולכן מתכנס, אבל ∞ ∑ n=1 ∣ ∣ ∣ an n ∣ ∣ ∣ = ∞ ∑ n=2 ∣ ∣ ∣ ∣ ∣ ∣ [ (−1)n ln n ] n ∣ ∣ ∣ ∣ ∣ ∣ = ∞ ∑ n=2 1 n ln n = ∞ לא מתכנס בהחלט. ∞ ∑ n=1 an n ולכן מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס, אזי ∞ ∑ n=1 a2 n 2. אם פתרון: הטענה נכונה. מתקיים n ∈ N נשים לב שלכל ( | an | − 1 n )2 ≥ 0 ⇒ a2 n − 2 | an | n + 1 n2 ≥ 0 ⇒ | an | n ≤ 1 2 · ( a2 n + 1 n2 ) נשים לב ששני הביטויים הם אי שליליים ולכן נוכל להשתמש במבחן ההשוואה, ∞ ∑ n=1 | an | n ≤ ∞ ∑ n=1 1 2 · ( a2 n + 1 n2 ) < ∞ מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס ולכן ∞ ∑ n=1 |an| n ולכן 8",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-8-hebrew-2",
+          "filename": "Recitation 8-Hebrew-2.pdf",
+          "text": "הוכיחו או הפריכו כל אחת מהטענות הבאות: סדרה של מספרים ממשיים. (an)∞ n=1 תהי מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס, אזי ∞ ∑ n=1 an 1. אם פתרון: הטענה לא נכונה. נגדיר 2 ≤ n ∈ N ולכל a1 = 0 דוגמא נגדית: an = (−1)n+1 ln n נשים לב ש ∞ ∑ n=1 an = ∞ ∑ n=2 (−1)n+1 ln n מקיים את התנאים של המסקנה בתזכורת ולכן מתכנס, אבל ∞ ∑ n=1 ∣ ∣ ∣ an n ∣ ∣ ∣ = ∞ ∑ n=2 ∣ ∣ ∣ ∣ ∣ ∣ [ (−1)n ln n ] n ∣ ∣ ∣ ∣ ∣ ∣ = ∞ ∑ n=2 1 n ln n = ∞ לא מתכנס בהחלט. ∞ ∑ n=1 an n ולכן מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס, אזי ∞ ∑ n=1 a2 n 2. אם פתרון: הטענה נכונה. מתקיים n ∈ N נשים לב שלכל ( | an | − 1 n )2 ≥ 0 ⇒ a2 n − 2 | an | n + 1 n2 ≥ 0 ⇒ | an | n ≤ 1 2 · ( a2 n + 1 n2 ) נשים לב ששני הביטויים הם אי שליליים ולכן נוכל להשתמש במבחן ההשוואה, ∞ ∑ n=1 | an | n ≤ ∞ ∑ n=1 1 2 · ( a2 n + 1 n2 ) < ∞ מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס ולכן ∞ ∑ n=1 |an| n ולכן 8",
+          "startOffset": 4906,
+          "endOffset": 5714
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-8-hebrew-2-question-5",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-8-hebrew-2",
+        "questionNumber": "1",
+        "content": "∞ ∑ n=1 (−1) n+1an , אזי הטור lim n→∞an = 0 סדרה אי שלילית כך ש (an)∞ n=1 3. נניח כי מתכנס. פתרון: הטענה לא נכונה )חלק מהתנאים של משפט לייבניץ לא רשומים(. .1, 0, 1 2 , 0, 1 3 , ... נבחר את הסדרה כלומר נבחר את הסדרה an = { 1 k n = 2k − 1 0 n = 2k = { 2 n+1 n is odd 0 n is even כי הגבול של האיברים במקומות הזוגיים שווה לגבול של lim n→∞an = 0 נשים לב כי האיברים במקומות האי זוגיים ושניהם שווים לאפס. נראה כי הטור מתבדר ∞ ∑ n=1 (−1) n+1an = 1 + 0 + 1 2 + 0 + 1 3 + 0 + ... נשים סוגריים באופן הבא: (1 + 0) + ( 1 2 + 0 ) + ( 1 3 + 0 ) .. קיבלנו את הטור ∞ ∑ n=1 ( 1 n + 0 ) = ∞ ∑ n=1 1 n זהו טור מתבדר, ולכן ממשפט השמת הסוגריים, גם הטור המקורי מתבדר. 9",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-8-hebrew-2",
+          "filename": "Recitation 8-Hebrew-2.pdf",
+          "text": "∞ ∑ n=1 (−1) n+1an , אזי הטור lim n→∞an = 0 סדרה אי שלילית כך ש (an)∞ n=1 3. נניח כי מתכנס. פתרון: הטענה לא נכונה )חלק מהתנאים של משפט לייבניץ לא רשומים(. .1, 0, 1 2 , 0, 1 3 , ... נבחר את הסדרה כלומר נבחר את הסדרה an = { 1 k n = 2k − 1 0 n = 2k = { 2 n+1 n is odd 0 n is even כי הגבול של האיברים במקומות הזוגיים שווה לגבול של lim n→∞an = 0 נשים לב כי האיברים במקומות האי זוגיים ושניהם שווים לאפס. נראה כי הטור מתבדר ∞ ∑ n=1 (−1) n+1an = 1 + 0 + 1 2 + 0 + 1 3 + 0 + ... נשים סוגריים באופן הבא: (1 + 0) + ( 1 2 + 0 ) + ( 1 3 + 0 ) .. קיבלנו את הטור ∞ ∑ n=1 ( 1 n + 0 ) = ∞ ∑ n=1 1 n זהו טור מתבדר, ולכן ממשפט השמת הסוגריים, גם הטור המקורי מתבדר. 9"
+        },
+        "confidence": 0.56
+      }
+    ],
+    "solutionPatterns": [
+      {
+        "id": "recitation-recitation-8-hebrew-2-proof-pattern-1",
+        "title": "∞ ∑ n=1 [ (−1)n+1 n · (1 + 1 n )n]",
+        "patternType": "comparison",
+        "steps": [
+          "Identify the relevant assumptions from the source statement.",
+          "Compare to a known convergent/divergent object.",
+          "Reduce the claim to a limit statement.",
+          "Construct or justify the required existence statement.",
+          "Close the argument using the cited theorem or criterion."
+        ],
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "recitation-recitation-8-hebrew-2"
+        ],
+        "relatedQuestionIds": [],
+        "commonMistakes": [],
+        "examImportance": "medium",
+        "confidence": 0.52
+      },
+      {
+        "id": "recitation-recitation-8-hebrew-2-proof-pattern-2",
+        "title": "∞ ∑ n=1 (−1) n+1an , אזי הטור lim n→∞an = 0 סדרה אי שלילית כך ש (an)∞ n=1 3",
+        "patternType": "limit",
+        "steps": [
+          "Identify the relevant assumptions from the source statement.",
+          "Reduce the claim to a limit statement.",
+          "Close the argument using the cited theorem or criterion."
+        ],
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "recitation-recitation-8-hebrew-2"
+        ],
+        "relatedQuestionIds": [],
+        "commonMistakes": [],
+        "examImportance": "medium",
+        "confidence": 0.52
+      }
+    ],
+    "techniques": [
+      "מבחן השורש",
+      "מבחן ההשוואה",
+      "גבול",
+      "התכנסות בהחלט"
+    ],
+    "commonMistakes": [],
+    "linkedLectureNumber": 7,
+    "topicOverlapWithLinkedLecture": [
+      "גבולות",
+      "טורים",
+      "סדרות"
+    ],
+    "mappingNeedsReview": false,
+    "examRelevanceNotes": [],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "recitation-recitation-8-hebrew-2",
+        "filename": "Recitation 8-Hebrew-2.pdf",
+        "text": "תרגול 8 היום: התכנסות בהחלט, התכנסות בתנאי. • טור לייבניץ. • השמת סוגריים. • תזכורת: התכנסות בהחלט: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי . ∞ ∑ n=k | an |< ∞ מתכנס בהחלט אם ∞ ∑ n=k an נאמר שהטור משפט )מבחן התכנסות בהחלט(: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי מתכנס. ∞ ∑ n=k an מתכנס בהחלט. אזי הטור ∞ ∑ n=k an נניח שהטור התכנסות בתנאי: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי מתכנס ∞ ∑ n=k an מתכנס בתנאי אם הטור ∞ ∑ n=k an נאמר שהטור )מתכנס, אבל לא בהחלט(. ∞ ∑ n=k | an |= ∞ אבל , הטור מתכנס )הוכחתם בשיעור( אבל הטור ∞ ∑ n=1 (−1)n+1 n :דוגמא לטור שמתכנס בתנאי מתבדר. ∞ ∑ n=1 ∣ ∣ ∣ (−1)n+1 n ∣ ∣ ∣ = ∞ ∑ n=1 1 n 1"
+      },
+      {
+        "sourceFileId": "recitation-recitation-8-hebrew-2",
+        "filename": "Recitation 8-Hebrew-2.pdf",
+        "text": "טור לייבניץ: סדרה של מספרים ממשיים. (an)∞ n=1 תהי הוא טור לייבניץ אם: ∞ ∑ n=1 (−1)n+1 · an נאמר שהטור יורדת. (an)∞ n=1 .1 . lim n→∞an = 0 .2 משפט )מבחן לייבניץ(: סדרה של מספרים ממשיים. (an)∞ n=1 תהי הוא טור לייבניץ, אזי הוא מתכנס ∞ ∑ n=1 (−1)n+1 · an נניח שהטור .a1 − a2 ≤ s ≤ a1 ובנוסף, s ∈ R לערך מסקנה: סדרה של מספרים ממשיים. (an)∞ n=k ותהי k ∈ N יהי נניח כי יורדת. (an)∞ n=k . lim n→∞an = 0 כך ש s ∈ R אזי קיים s = ∞ ∑ n=k (−1)n+1 · an .ak − ak+1 ≤| s |≤ ak ובנוסף משפט השמת הסוגריים: אם טור מתכנס אז גם אם נוסיף סוגריים )כאשר בכל סוגר יש מספר סופי של איברים וללא שינוי סדר סכימה( הטור יתכנס לאותו הסכום. 2"
+      },
+      {
+        "sourceFileId": "recitation-recitation-8-hebrew-2",
+        "filename": "Recitation 8-Hebrew-2.pdf",
+        "text": "דוגמאות: קבעו האם הטורים הבאים מתכנסים בהחלט, מתכנסים בתנאי או מתבדרים. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] .1 פתרון: נבדוק תחילה התכנסות בהחלט ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ = ∞ ∑ n=1 [∣ ∣arctan (n) + sin n∣ ∣ · 1 1 + cos2 n · n 3n ] 4 ≤ ∞ ∑ n=1 [(∣ ∣arctan (n)∣ ∣ + ∣ ∣sin n∣ ∣) · 1 1 + cos2 n · n 3n ] ≤ ∞ ∑ n=1 [( π 2 + 1 ) · 1 1 + 0 · n 3n ] = ∞ ∑ n=1 [( π 2 + 1 ) · n 3n ] = ( π 2 + 1 ) ∞ ∑ n=1 n 3n מתכנס. נראה זאת על ידי מבחן השורש ∞ ∑ n=1 n 3n הטור lim n→∞ n √ n 3n = lim n→∞ n 1 n 3 = AOL 1 3 < 1 ולכן ממבחן ההשוואה הטור ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ מתכנס בהחלט. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] מתכנס ולכן הטור 3"
+      },
+      {
+        "sourceFileId": "recitation-recitation-8-hebrew-2",
+        "filename": "Recitation 8-Hebrew-2.pdf",
+        "text": "∞ ∑ n=2 (−1)n+1 n·ln n .2 פתרון: נבדוק תחילה התכנסות בהחלט ∞ ∑ n=2 ∣ ∣ ∣ (−1)n+1 n·ln n ∣ ∣ ∣ = ∞ ∑ n=2 1 n · ln n ראינו כי הטור מתבדר, לכן הטור לא מתכנס בהחלט. כעת נבדוק התכנסות בתנאי, נעשה זאת בעזרת המסקנה בתזכורת. an = 1 n·ln n נבדוק אם התנאים של המסקנה בתזכורת מתקיימים, כאשר במקרה שלנו .n ≥ 2 לכל lim n→∞ an = lim n→∞ 1 n · ln n = 0 יורדת )1 חלקי סדרה עולה וחיובית(. ( 1 n ln n ) n=2 הסדרה אבל לא מתכנס התנאים מתקיימים ולכן הטור מתכנס בתנאי )כי הוא מתכנס, בהחלט(. 4"
+      }
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
+    "recitationNumber": 8,
+    "weekNumber": 8,
+    "practicedLectureNumber": 7,
+    "sourceFileId": "recitation-recitation-8-hebrew",
+    "filename": "Recitation 8-Hebrew.pdf",
+    "practicedTopics": [
+      "גבולות",
+      "התכנסות בהחלט",
+      "התכנסות בתנאי",
+      "טורים",
+      "מבחן ההשוואה",
+      "מבחן השורש",
+      "סדרות"
+    ],
+    "questions": [
+      {
+        "id": "recitation-recitation-8-hebrew-question-1",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-8-hebrew",
+        "questionNumber": "1",
+        "content": "דוגמאות: קבעו האם הטורים הבאים מתכנסים בהחלט, מתכנסים בתנאי או מתבדרים. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] .1 פתרון: נבדוק תחילה התכנסות בהחלט ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ = ∞ ∑ n=1 [∣ ∣arctan (n) + sin n∣ ∣ · 1 1 + cos2 n · n 3n ] 4 ≤ ∞ ∑ n=1 [(∣ ∣arctan (n)∣ ∣ + ∣ ∣sin n∣ ∣) · 1 1 + cos2 n · n 3n ] ≤ ∞ ∑ n=1 [( π 2 + 1 ) · 1 1 + 0 · n 3n ] = ∞ ∑ n=1 [( π 2 + 1 ) · n 3n ] = ( π 2 + 1 ) ∞ ∑ n=1 n 3n מתכנס. נראה זאת על ידי מבחן השורש ∞ ∑ n=1 n 3n הטור lim n→∞ n √ n 3n = lim n→∞ n 1 n 3 = AOL 1 3 < 1 ולכן ממבחן ההשוואה הטור ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ מתכנס בהחלט. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] מתכנס ולכן הטור 3",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-8-hebrew",
+          "filename": "Recitation 8-Hebrew.pdf",
+          "text": "דוגמאות: קבעו האם הטורים הבאים מתכנסים בהחלט, מתכנסים בתנאי או מתבדרים. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] .1 פתרון: נבדוק תחילה התכנסות בהחלט ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ = ∞ ∑ n=1 [∣ ∣arctan (n) + sin n∣ ∣ · 1 1 + cos2 n · n 3n ] 4 ≤ ∞ ∑ n=1 [(∣ ∣arctan (n)∣ ∣ + ∣ ∣sin n∣ ∣) · 1 1 + cos2 n · n 3n ] ≤ ∞ ∑ n=1 [( π 2 + 1 ) · 1 1 + 0 · n 3n ] = ∞ ∑ n=1 [( π 2 + 1 ) · n 3n ] = ( π 2 + 1 ) ∞ ∑ n=1 n 3n מתכנס. נראה זאת על ידי מבחן השורש ∞ ∑ n=1 n 3n הטור lim n→∞ n √ n 3n = lim n→∞ n 1 n 3 = AOL 1 3 < 1 ולכן ממבחן ההשוואה הטור ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ מתכנס בהחלט. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] מתכנס ולכן הטור 3"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-8-hebrew-question-2",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-8-hebrew",
+        "questionNumber": "1",
+        "content": "תרגיל: קבעו האם הטור הבא מתכנס או מתבדר 1 − 1 4 + 1 2 − 1 42 + 1 3 − 1 43 + 1 4 − 1 44 + ... פתרון: נשים סוגריים באופן הבא: ( 1 − 1 4 ) + ( 1 2 − 1 42 ) + ( 1 3 − 1 43 ) + ( 1 4 − 1 44 ) + ... קיבלנו את הטור ∞ ∑ n=1 ( 1 n − 1 4n ) זהו טור מתבדר, מכיוון שהוא מורכב מטור מתבדר פחות טור מתכנס, ולכן ממשפט השמת הסוגריים, גם הטור המקורי מתבדר. תרגיל: . ∞ ∑ n=1 1 n2 = π2 6 נניח כי . ∞ ∑ n=1 1 n2 = ∞ ∑ n=1 [ 1 (2n−1)2 + 1 (2n)2 ] 1. הוכיחו כי פתרון: מתכנס, אז ממשפט השמת הסוגריים נקבל כי ∞ ∑ n=1 1 n2 היות שהטור ∞ ∑ n=1 1 n2 = ( 1 + 1 22 ) + ( 1 32 + 1 42 ) + ... = ∞ ∑ n=1 ( 1 (2n − 1)2 + 1 (2n)2 ) 6",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-8-hebrew",
+          "filename": "Recitation 8-Hebrew.pdf",
+          "text": "תרגיל: קבעו האם הטור הבא מתכנס או מתבדר 1 − 1 4 + 1 2 − 1 42 + 1 3 − 1 43 + 1 4 − 1 44 + ... פתרון: נשים סוגריים באופן הבא: ( 1 − 1 4 ) + ( 1 2 − 1 42 ) + ( 1 3 − 1 43 ) + ( 1 4 − 1 44 ) + ... קיבלנו את הטור ∞ ∑ n=1 ( 1 n − 1 4n ) זהו טור מתבדר, מכיוון שהוא מורכב מטור מתבדר פחות טור מתכנס, ולכן ממשפט השמת הסוגריים, גם הטור המקורי מתבדר. תרגיל: . ∞ ∑ n=1 1 n2 = π2 6 נניח כי . ∞ ∑ n=1 1 n2 = ∞ ∑ n=1 [ 1 (2n−1)2 + 1 (2n)2 ] 1. הוכיחו כי פתרון: מתכנס, אז ממשפט השמת הסוגריים נקבל כי ∞ ∑ n=1 1 n2 היות שהטור ∞ ∑ n=1 1 n2 = ( 1 + 1 22 ) + ( 1 32 + 1 42 ) + ... = ∞ ∑ n=1 ( 1 (2n − 1)2 + 1 (2n)2 ) 6"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-8-hebrew-question-3",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-8-hebrew",
+        "questionNumber": "1",
+        "content": ". ∞ ∑ n=1 1 (2n−1)2 = π2 8 2. הוכיחו כי פתרון: נשים לב כי מתקיים ∞ ∑ n=1 1 (2n)2 = 1 4 ∞ ∑ n=1 1 n2 = 1 4 · π2 6 מתכנס )ניתן להראות זאת ∞ ∑ n=1 1 (2n)2 מתכנס והטור ∞ ∑ n=1 1 (2n−1)2 היות שהטור (, אז ∞ ∑ n=1 1 n2 בקלות על ידי מבחן ההשוואה הגבולי עם הטור ∞ ∑ n=1 ( 1 (2n − 1)2 + 1 (2n)2 ) = AOS ∞ ∑ n=1 1 (2n − 1)2 + ∞ ∑ n=1 1 (2n)2 ולכן מהסעיף הראשון נקבל כי π2 6 = ∞ ∑ n=1 1 (2n − 1)2 + 1 4 · π2 6 ולכן ∞ ∑ n=1 1 (2n − 1)2 = 3 4 · π2 6 = π2 8 . ∞ ∑ n=1 (−1)n+1 1 n2 = π2 12 3. הוכיחו כי פתרון: מתכנס )טור לייבניץ(, אז ממשפט השמת הסוגריים ∞ ∑ n=1 (−1)n+1 1 n2 היות שהטור נקבל כי ∞ ∑ n=1 (−1)n+1 1 n2 = ( 1 − 1 22 ) + ( 1 32 − 1 42 ) +... = ∞ ∑ n=1 ( 1 (2n − 1)2 − 1 (2n)2 ) ולכן ∞ ∑ n=1 (−1)n+1 1 n2 = ∞ ∑ n=1 ( 1 (2n − 1)2 − 1 (2n)2 ) = AOS ∞ ∑ n=1 1 (2n − 1)2 − ∞ ∑ n=1 1 (2n)2 = π2 8 − 1 4 · π2 6 = π2 8 − π2 24 = 3π2 − π2 24 = 2π2 24 = π2 12 7",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-8-hebrew",
+          "filename": "Recitation 8-Hebrew.pdf",
+          "text": ". ∞ ∑ n=1 1 (2n−1)2 = π2 8 2. הוכיחו כי פתרון: נשים לב כי מתקיים ∞ ∑ n=1 1 (2n)2 = 1 4 ∞ ∑ n=1 1 n2 = 1 4 · π2 6 מתכנס )ניתן להראות זאת ∞ ∑ n=1 1 (2n)2 מתכנס והטור ∞ ∑ n=1 1 (2n−1)2 היות שהטור (, אז ∞ ∑ n=1 1 n2 בקלות על ידי מבחן ההשוואה הגבולי עם הטור ∞ ∑ n=1 ( 1 (2n − 1)2 + 1 (2n)2 ) = AOS ∞ ∑ n=1 1 (2n − 1)2 + ∞ ∑ n=1 1 (2n)2 ולכן מהסעיף הראשון נקבל כי π2 6 = ∞ ∑ n=1 1 (2n − 1)2 + 1 4 · π2 6 ולכן ∞ ∑ n=1 1 (2n − 1)2 = 3 4 · π2 6 = π2 8 . ∞ ∑ n=1 (−1)n+1 1 n2 = π2 12 3. הוכיחו כי פתרון: מתכנס )טור לייבניץ(, אז ממשפט השמת הסוגריים ∞ ∑ n=1 (−1)n+1 1 n2 היות שהטור נקבל כי ∞ ∑ n=1 (−1)n+1 1 n2 = ( 1 − 1 22 ) + ( 1 32 − 1 42 ) +... = ∞ ∑ n=1 ( 1 (2n − 1)2 − 1 (2n)2 ) ולכן ∞ ∑ n=1 (−1)n+1 1 n2 = ∞ ∑ n=1 ( 1 (2n − 1)2 − 1 (2n)2 ) = AOS ∞ ∑ n=1 1 (2n − 1)2 − ∞ ∑ n=1 1 (2n)2 = π2 8 − 1 4 · π2 6 = π2 8 − π2 24 = 3π2 − π2 24 = 2π2 24 = π2 12 7"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-8-hebrew-question-4",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-8-hebrew",
+        "questionNumber": "1",
+        "content": "הוכיחו או הפריכו כל אחת מהטענות הבאות: סדרה של מספרים ממשיים. (an)∞ n=1 תהי מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס, אזי ∞ ∑ n=1 an 1. אם פתרון: הטענה לא נכונה. נגדיר 2 ≤ n ∈ N ולכל a1 = 0 דוגמא נגדית: an = (−1)n+1 ln n נשים לב ש ∞ ∑ n=1 an = ∞ ∑ n=2 (−1)n+1 ln n מקיים את התנאים של המסקנה בתזכורת ולכן מתכנס, אבל ∞ ∑ n=1 ∣ ∣ ∣ an n ∣ ∣ ∣ = ∞ ∑ n=2 ∣ ∣ ∣ ∣ ∣ ∣ [ (−1)n ln n ] n ∣ ∣ ∣ ∣ ∣ ∣ = ∞ ∑ n=2 1 n ln n = ∞ לא מתכנס בהחלט. ∞ ∑ n=1 an n ולכן מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס, אזי ∞ ∑ n=1 a2 n 2. אם פתרון: הטענה נכונה. מתקיים n ∈ N נשים לב שלכל ( | an | − 1 n )2 ≥ 0 ⇒ a2 n − 2 | an | n + 1 n2 ≥ 0 ⇒ | an | n ≤ 1 2 · ( a2 n + 1 n2 ) נשים לב ששני הביטויים הם אי שליליים ולכן נוכל להשתמש במבחן ההשוואה, ∞ ∑ n=1 | an | n ≤ ∞ ∑ n=1 1 2 · ( a2 n + 1 n2 ) < ∞ מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס ולכן ∞ ∑ n=1 |an| n ולכן 8",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-8-hebrew",
+          "filename": "Recitation 8-Hebrew.pdf",
+          "text": "הוכיחו או הפריכו כל אחת מהטענות הבאות: סדרה של מספרים ממשיים. (an)∞ n=1 תהי מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס, אזי ∞ ∑ n=1 an 1. אם פתרון: הטענה לא נכונה. נגדיר 2 ≤ n ∈ N ולכל a1 = 0 דוגמא נגדית: an = (−1)n+1 ln n נשים לב ש ∞ ∑ n=1 an = ∞ ∑ n=2 (−1)n+1 ln n מקיים את התנאים של המסקנה בתזכורת ולכן מתכנס, אבל ∞ ∑ n=1 ∣ ∣ ∣ an n ∣ ∣ ∣ = ∞ ∑ n=2 ∣ ∣ ∣ ∣ ∣ ∣ [ (−1)n ln n ] n ∣ ∣ ∣ ∣ ∣ ∣ = ∞ ∑ n=2 1 n ln n = ∞ לא מתכנס בהחלט. ∞ ∑ n=1 an n ולכן מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס, אזי ∞ ∑ n=1 a2 n 2. אם פתרון: הטענה נכונה. מתקיים n ∈ N נשים לב שלכל ( | an | − 1 n )2 ≥ 0 ⇒ a2 n − 2 | an | n + 1 n2 ≥ 0 ⇒ | an | n ≤ 1 2 · ( a2 n + 1 n2 ) נשים לב ששני הביטויים הם אי שליליים ולכן נוכל להשתמש במבחן ההשוואה, ∞ ∑ n=1 | an | n ≤ ∞ ∑ n=1 1 2 · ( a2 n + 1 n2 ) < ∞ מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס ולכן ∞ ∑ n=1 |an| n ולכן 8",
+          "startOffset": 4906,
+          "endOffset": 5714
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-8-hebrew-question-5",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-8-hebrew",
+        "questionNumber": "1",
+        "content": "∞ ∑ n=1 (−1) n+1an , אזי הטור lim n→∞an = 0 סדרה אי שלילית כך ש (an)∞ n=1 3. נניח כי מתכנס. פתרון: הטענה לא נכונה )חלק מהתנאים של משפט לייבניץ לא רשומים(. .1, 0, 1 2 , 0, 1 3 , ... נבחר את הסדרה כלומר נבחר את הסדרה an = { 1 k n = 2k − 1 0 n = 2k = { 2 n+1 n is odd 0 n is even כי הגבול של האיברים במקומות הזוגיים שווה לגבול של lim n→∞an = 0 נשים לב כי האיברים במקומות האי זוגיים ושניהם שווים לאפס. נראה כי הטור מתבדר ∞ ∑ n=1 (−1) n+1an = 1 + 0 + 1 2 + 0 + 1 3 + 0 + ... נשים סוגריים באופן הבא: (1 + 0) + ( 1 2 + 0 ) + ( 1 3 + 0 ) .. קיבלנו את הטור ∞ ∑ n=1 ( 1 n + 0 ) = ∞ ∑ n=1 1 n זהו טור מתבדר, ולכן ממשפט השמת הסוגריים, גם הטור המקורי מתבדר. 9",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-8-hebrew",
+          "filename": "Recitation 8-Hebrew.pdf",
+          "text": "∞ ∑ n=1 (−1) n+1an , אזי הטור lim n→∞an = 0 סדרה אי שלילית כך ש (an)∞ n=1 3. נניח כי מתכנס. פתרון: הטענה לא נכונה )חלק מהתנאים של משפט לייבניץ לא רשומים(. .1, 0, 1 2 , 0, 1 3 , ... נבחר את הסדרה כלומר נבחר את הסדרה an = { 1 k n = 2k − 1 0 n = 2k = { 2 n+1 n is odd 0 n is even כי הגבול של האיברים במקומות הזוגיים שווה לגבול של lim n→∞an = 0 נשים לב כי האיברים במקומות האי זוגיים ושניהם שווים לאפס. נראה כי הטור מתבדר ∞ ∑ n=1 (−1) n+1an = 1 + 0 + 1 2 + 0 + 1 3 + 0 + ... נשים סוגריים באופן הבא: (1 + 0) + ( 1 2 + 0 ) + ( 1 3 + 0 ) .. קיבלנו את הטור ∞ ∑ n=1 ( 1 n + 0 ) = ∞ ∑ n=1 1 n זהו טור מתבדר, ולכן ממשפט השמת הסוגריים, גם הטור המקורי מתבדר. 9"
+        },
+        "confidence": 0.56
+      }
+    ],
+    "solutionPatterns": [
+      {
+        "id": "recitation-recitation-8-hebrew-proof-pattern-1",
+        "title": "∞ ∑ n=1 [ (−1)n+1 n · (1 + 1 n )n]",
+        "patternType": "comparison",
+        "steps": [
+          "Identify the relevant assumptions from the source statement.",
+          "Compare to a known convergent/divergent object.",
+          "Reduce the claim to a limit statement.",
+          "Construct or justify the required existence statement.",
+          "Close the argument using the cited theorem or criterion."
+        ],
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "recitation-recitation-8-hebrew"
+        ],
+        "relatedQuestionIds": [],
+        "commonMistakes": [],
+        "examImportance": "medium",
+        "confidence": 0.52
+      },
+      {
+        "id": "recitation-recitation-8-hebrew-proof-pattern-2",
+        "title": "∞ ∑ n=1 (−1) n+1an , אזי הטור lim n→∞an = 0 סדרה אי שלילית כך ש (an)∞ n=1 3",
+        "patternType": "limit",
+        "steps": [
+          "Identify the relevant assumptions from the source statement.",
+          "Reduce the claim to a limit statement.",
+          "Close the argument using the cited theorem or criterion."
+        ],
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "recitation-recitation-8-hebrew"
+        ],
+        "relatedQuestionIds": [],
+        "commonMistakes": [],
+        "examImportance": "medium",
+        "confidence": 0.52
+      }
+    ],
+    "techniques": [
+      "מבחן השורש",
+      "מבחן ההשוואה",
+      "גבול",
+      "התכנסות בהחלט"
+    ],
+    "commonMistakes": [],
+    "linkedLectureNumber": 7,
+    "topicOverlapWithLinkedLecture": [
+      "גבולות",
+      "טורים",
+      "סדרות"
+    ],
+    "mappingNeedsReview": false,
+    "examRelevanceNotes": [],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "recitation-recitation-8-hebrew",
+        "filename": "Recitation 8-Hebrew.pdf",
+        "text": "תרגול 8 היום: התכנסות בהחלט, התכנסות בתנאי. • טור לייבניץ. • השמת סוגריים. • תזכורת: התכנסות בהחלט: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי . ∞ ∑ n=k | an |< ∞ מתכנס בהחלט אם ∞ ∑ n=k an נאמר שהטור משפט )מבחן התכנסות בהחלט(: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי מתכנס. ∞ ∑ n=k an מתכנס בהחלט. אזי הטור ∞ ∑ n=k an נניח שהטור התכנסות בתנאי: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי מתכנס ∞ ∑ n=k an מתכנס בתנאי אם הטור ∞ ∑ n=k an נאמר שהטור )מתכנס, אבל לא בהחלט(. ∞ ∑ n=k | an |= ∞ אבל , הטור מתכנס )הוכחתם בשיעור( אבל הטור ∞ ∑ n=1 (−1)n+1 n :דוגמא לטור שמתכנס בתנאי מתבדר. ∞ ∑ n=1 ∣ ∣ ∣ (−1)n+1 n ∣ ∣ ∣ = ∞ ∑ n=1 1 n 1"
+      },
+      {
+        "sourceFileId": "recitation-recitation-8-hebrew",
+        "filename": "Recitation 8-Hebrew.pdf",
+        "text": "טור לייבניץ: סדרה של מספרים ממשיים. (an)∞ n=1 תהי הוא טור לייבניץ אם: ∞ ∑ n=1 (−1)n+1 · an נאמר שהטור יורדת. (an)∞ n=1 .1 . lim n→∞an = 0 .2 משפט )מבחן לייבניץ(: סדרה של מספרים ממשיים. (an)∞ n=1 תהי הוא טור לייבניץ, אזי הוא מתכנס ∞ ∑ n=1 (−1)n+1 · an נניח שהטור .a1 − a2 ≤ s ≤ a1 ובנוסף, s ∈ R לערך מסקנה: סדרה של מספרים ממשיים. (an)∞ n=k ותהי k ∈ N יהי נניח כי יורדת. (an)∞ n=k . lim n→∞an = 0 כך ש s ∈ R אזי קיים s = ∞ ∑ n=k (−1)n+1 · an .ak − ak+1 ≤| s |≤ ak ובנוסף משפט השמת הסוגריים: אם טור מתכנס אז גם אם נוסיף סוגריים )כאשר בכל סוגר יש מספר סופי של איברים וללא שינוי סדר סכימה( הטור יתכנס לאותו הסכום. 2"
+      },
+      {
+        "sourceFileId": "recitation-recitation-8-hebrew",
+        "filename": "Recitation 8-Hebrew.pdf",
+        "text": "דוגמאות: קבעו האם הטורים הבאים מתכנסים בהחלט, מתכנסים בתנאי או מתבדרים. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] .1 פתרון: נבדוק תחילה התכנסות בהחלט ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ = ∞ ∑ n=1 [∣ ∣arctan (n) + sin n∣ ∣ · 1 1 + cos2 n · n 3n ] 4 ≤ ∞ ∑ n=1 [(∣ ∣arctan (n)∣ ∣ + ∣ ∣sin n∣ ∣) · 1 1 + cos2 n · n 3n ] ≤ ∞ ∑ n=1 [( π 2 + 1 ) · 1 1 + 0 · n 3n ] = ∞ ∑ n=1 [( π 2 + 1 ) · n 3n ] = ( π 2 + 1 ) ∞ ∑ n=1 n 3n מתכנס. נראה זאת על ידי מבחן השורש ∞ ∑ n=1 n 3n הטור lim n→∞ n √ n 3n = lim n→∞ n 1 n 3 = AOL 1 3 < 1 ולכן ממבחן ההשוואה הטור ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ מתכנס בהחלט. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] מתכנס ולכן הטור 3"
+      },
+      {
+        "sourceFileId": "recitation-recitation-8-hebrew",
+        "filename": "Recitation 8-Hebrew.pdf",
+        "text": "∞ ∑ n=2 (−1)n+1 n·ln n .2 פתרון: נבדוק תחילה התכנסות בהחלט ∞ ∑ n=2 ∣ ∣ ∣ (−1)n+1 n·ln n ∣ ∣ ∣ = ∞ ∑ n=2 1 n · ln n ראינו כי הטור מתבדר, לכן הטור לא מתכנס בהחלט. כעת נבדוק התכנסות בתנאי, נעשה זאת בעזרת המסקנה בתזכורת. an = 1 n·ln n נבדוק אם התנאים של המסקנה בתזכורת מתקיימים, כאשר במקרה שלנו .n ≥ 2 לכל lim n→∞ an = lim n→∞ 1 n · ln n = 0 יורדת )1 חלקי סדרה עולה וחיובית(. ( 1 n ln n ) n=2 הסדרה אבל לא מתכנס התנאים מתקיימים ולכן הטור מתכנס בתנאי )כי הוא מתכנס, בהחלט(. 4"
+      }
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
+    "recitationNumber": 9,
+    "weekNumber": 9,
+    "practicedLectureNumber": 8,
+    "sourceFileId": "recitation-recitation-9-hebrew",
+    "filename": "Recitation_9-Hebrew.pdf",
+    "practicedTopics": [
+      "גבולות",
+      "טורי חזקות",
+      "טורים",
+      "מבחן ההשוואה",
+      "סדרות",
+      "רדיוס התכנסות"
+    ],
+    "questions": [
+      {
+        "id": "recitation-recitation-9-hebrew-question-1",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-9-hebrew",
+        "questionNumber": "0",
+        "content": "דוגמאות: , ומצאו את תחוםR עבור כל אחד מהטורים הבאים, חשבו את רדיוס ההתכנסות, ההתכנסות. בתחום ההתכנסות, מצאו ערך מפורש )ללא סימן הסיגמה(. . ∞ ∑ n=0 (−1)n x2n .1 פתרון: מדובר בטור גיאומטרי, נסדר את הטור ∞ ∑ n=0 (−1)n x2n = ∞ ∑ n=0 (−1)n (x2)n = ∞ ∑ n=0 (−x2)n = t=−x2 ∞ ∑ n=0 tn = |t|<1 1 1 − t = 1 1 − (−x2) = 1 1 + x2 , כלומר הטור מתכנס אם\"ם| t |< 1 הטור מתכנס אם\"ם | −x2 |< 1 ⇔| x2 |< 1 ⇔ x2 < 1 ⇔ −1 < x < 1 .R = 1 ולכן רדיוס ההתכנסות של הטור הוא x0 = 0 נשים לב ש . ∞ ∑ n=0 (2x+3)2n 42n .2 פתרון: מדובר בטור גיאומטרי, נסדר את הטור ∞ ∑ n=0 (2x + 3)2n 42n = ∞ ∑ n=0 ( 2x + 3 4 )2n = ∞ ∑ n=0 (( 2x + 3 4 )2)n = t=( 2x+3 4 )2 ∞ ∑ n=0 tn = |t|<1 1 1 − t = 1 1 − ( 2x+3 4 )2 , כלומר הטור מתכנס אם\"ם| t |< 1 הטור מתכנס אם\"ם | ( 2x + 3 4 )2 |< 1 ⇔ ( 2x + 3 4 )2 < 1 ⇔ −1 < 2x + 3 4 < 1 ⇔ −4 < 2x + 3 < 4 ⇔ −7 < 2x < 1 ⇔ −3.5 < x < 0.5 .R = 2 ולכן רדיוס ההתכנסות של הטור הוא x0 = −1.5 נשים לב ש 3",
+        "topicIds": [
+          "גבולות",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "סדרות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-9-hebrew",
+          "filename": "Recitation_9-Hebrew.pdf",
+          "text": "דוגמאות: , ומצאו את תחוםR עבור כל אחד מהטורים הבאים, חשבו את רדיוס ההתכנסות, ההתכנסות. בתחום ההתכנסות, מצאו ערך מפורש )ללא סימן הסיגמה(. . ∞ ∑ n=0 (−1)n x2n .1 פתרון: מדובר בטור גיאומטרי, נסדר את הטור ∞ ∑ n=0 (−1)n x2n = ∞ ∑ n=0 (−1)n (x2)n = ∞ ∑ n=0 (−x2)n = t=−x2 ∞ ∑ n=0 tn = |t|<1 1 1 − t = 1 1 − (−x2) = 1 1 + x2 , כלומר הטור מתכנס אם\"ם| t |< 1 הטור מתכנס אם\"ם | −x2 |< 1 ⇔| x2 |< 1 ⇔ x2 < 1 ⇔ −1 < x < 1 .R = 1 ולכן רדיוס ההתכנסות של הטור הוא x0 = 0 נשים לב ש . ∞ ∑ n=0 (2x+3)2n 42n .2 פתרון: מדובר בטור גיאומטרי, נסדר את הטור ∞ ∑ n=0 (2x + 3)2n 42n = ∞ ∑ n=0 ( 2x + 3 4 )2n = ∞ ∑ n=0 (( 2x + 3 4 )2)n = t=( 2x+3 4 )2 ∞ ∑ n=0 tn = |t|<1 1 1 − t = 1 1 − ( 2x+3 4 )2 , כלומר הטור מתכנס אם\"ם| t |< 1 הטור מתכנס אם\"ם | ( 2x + 3 4 )2 |< 1 ⇔ ( 2x + 3 4 )2 < 1 ⇔ −1 < 2x + 3 4 < 1 ⇔ −4 < 2x + 3 < 4 ⇔ −7 < 2x < 1 ⇔ −3.5 < x < 0.5 .R = 2 ולכן רדיוס ההתכנסות של הטור הוא x0 = −1.5 נשים לב ש 3"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-9-hebrew-question-2",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-9-hebrew",
+        "questionNumber": "0",
+        "content": "תרגיל: שתי סדרות של מספרים ממשיים. (bn)∞ n=0 ו (an)∞ n=0 יהיו בהתאמה R2 6 = R1 טורי חזקות עם רדיוסי התכנסות ∞ ∑ n=0 bn · xn , ∞ ∑ n=0 an · xn יהיו .R1, R2 6 = ∞ כך ש . ∞ ∑ n=0 (an ± bn) · xn מצאו את רדיוס ההתכנסות של טור החזקות פתרון: ראשית נשים לב שלא נוכל להשתמש בנוסחת המנה או השורש מכיוון שלא נתון שהגבולות קיימים. נחלק את הפתרון לשלושה חלקים )נראה שרטוט בכיתה(: .x ∈ R יהי , במקרה זה שני הטורים מתכנסים ולכן גם הסכום מתכנס| x |< min {R1, R2} 1. אם מאשט\"מ. , במקרה זה אנחנו יודעים שטור אחדmin {R1, R2} <| x |< max {R1, R2} 2. אם מתבדר שווה מתבדר(. ± מתכנס וטור אחד מתבדר ולכן הטור מתבדר )מתכנס , במקרה זה שני הטורים מתבדרים. נראה שגם הטור של| x |> max {R1, R2} 3. אם הסכום מתבדר. ולכן ממשפט | x |> max {R1, R2} מתכנס עבור ∞ ∑ n=0 (an ± bn)·xn נניח בשלילה ש , סתירה!2 \"אבל\" הטור מתכנס גם באיזור .R = min {R1, R2} לסיכום: מצאנו שרדיוס ההתכנסות של הטור של הסכום הוא .(| x |> min {R1, R2} ומתבדר לכל | x |< min {R1, R2} )הטור מתכנס לכל 4",
+        "topicIds": [
+          "גבולות",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "סדרות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-9-hebrew",
+          "filename": "Recitation_9-Hebrew.pdf",
+          "text": "תרגיל: שתי סדרות של מספרים ממשיים. (bn)∞ n=0 ו (an)∞ n=0 יהיו בהתאמה R2 6 = R1 טורי חזקות עם רדיוסי התכנסות ∞ ∑ n=0 bn · xn , ∞ ∑ n=0 an · xn יהיו .R1, R2 6 = ∞ כך ש . ∞ ∑ n=0 (an ± bn) · xn מצאו את רדיוס ההתכנסות של טור החזקות פתרון: ראשית נשים לב שלא נוכל להשתמש בנוסחת המנה או השורש מכיוון שלא נתון שהגבולות קיימים. נחלק את הפתרון לשלושה חלקים )נראה שרטוט בכיתה(: .x ∈ R יהי , במקרה זה שני הטורים מתכנסים ולכן גם הסכום מתכנס| x |< min {R1, R2} 1. אם מאשט\"מ. , במקרה זה אנחנו יודעים שטור אחדmin {R1, R2} <| x |< max {R1, R2} 2. אם מתבדר שווה מתבדר(. ± מתכנס וטור אחד מתבדר ולכן הטור מתבדר )מתכנס , במקרה זה שני הטורים מתבדרים. נראה שגם הטור של| x |> max {R1, R2} 3. אם הסכום מתבדר. ולכן ממשפט | x |> max {R1, R2} מתכנס עבור ∞ ∑ n=0 (an ± bn)·xn נניח בשלילה ש , סתירה!2 \"אבל\" הטור מתכנס גם באיזור .R = min {R1, R2} לסיכום: מצאנו שרדיוס ההתכנסות של הטור של הסכום הוא .(| x |> min {R1, R2} ומתבדר לכל "
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-9-hebrew-question-3",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-9-hebrew",
+        "questionNumber": "1",
+        "content": "דוגמא: . ∞ ∑ n=1 4n n · x2n+3 חשבו את תחום ההתכנסות של טור החזקות הבא: פתרון: נסדר את הטור ∞ ∑ n=1 4n n · x2n+3 = x3 ∞ ∑ n=1 4n n · x2n נסתכל על הטור ∞ ∑ n=1 4n n · x2n = t=x2 ∞ ∑ n=1 4n n · tn כעת נמצא את רדיוס ההתכנסות L = lim n→∞ n √ 4n n = lim n→∞ 4 n 1 n = AOL 4 הוא t ולכן רדיוס ההתכנסות של הטור עם R = 1 L = 1 4 ולכן הטור מתכנס לכל t0 = 0 נשים לב ש | t |< 1 4 ⇒| x2 |< 1 4 ⇒ x2 < 1 4 ⇒ − 1 2 < x < 1 2 .x < − 1 2 או x > 1 2 ומתבדר לכל כעת נבדוק את הקצוות בנפרד: , כי מכפלה של מספר קבוע לא תשנה אתx3 נשים לב שאין צורך להציב ב . ∞ ∑ n=1 4n n · x2n ההתכנסות או ההתבדרות של הטור ולכן נציב את הקצוות בביטוי :x = 1 2 עבור ∞ ∑ n=1 4n n · ( 1 2 )2n = ∞ ∑ n=1 1 n = ∞ :x = − 1 2 עבור ∞ ∑ n=1 4n n · ( − 1 2 )2n = ∞ ∑ n=1 1 n = ∞ ,− 1 2 < x < 1 2 לסיכום קיבלנו שתחום ההתכנסות של הטור הוא: .− 1 2 < x < 1 2 כלומר הטור מתכנס אם\"ם 5",
+        "topicIds": [
+          "גבולות",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "סדרות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-9-hebrew",
+          "filename": "Recitation_9-Hebrew.pdf",
+          "text": "דוגמא: . ∞ ∑ n=1 4n n · x2n+3 חשבו את תחום ההתכנסות של טור החזקות הבא: פתרון: נסדר את הטור ∞ ∑ n=1 4n n · x2n+3 = x3 ∞ ∑ n=1 4n n · x2n נסתכל על הטור ∞ ∑ n=1 4n n · x2n = t=x2 ∞ ∑ n=1 4n n · tn כעת נמצא את רדיוס ההתכנסות L = lim n→∞ n √ 4n n = lim n→∞ 4 n 1 n = AOL 4 הוא t ולכן רדיוס ההתכנסות של הטור עם R = 1 L = 1 4 ולכן הטור מתכנס לכל t0 = 0 נשים לב ש | t |< 1 4 ⇒| x2 |< 1 4 ⇒ x2 < 1 4 ⇒ − 1 2 < x < 1 2 .x < − 1 2 או x > 1 2 ומתבדר לכל כעת נבדוק את הקצוות בנפרד: , כי מכפלה של מספר קבוע לא תשנה אתx3 נשים לב שאין צורך להציב ב . ∞ ∑ n=1 4n n · x2n ההתכנסות או ההתבדרות של הטור ולכן נציב את הקצוות בביטוי :x = 1 2 עבור ∞ ∑ n=1 4n n · ( 1 2 )2n = ∞ ∑ n=1 1 n = ∞ :x = − 1 2 עבור ∞ ∑ n=1 4n n · ( − 1 2 )2n = ∞ ∑ n=1 1 n = ∞ ,− 1 2 < x < 1 2 לסיכום קיבלנו שתחום ההתכנסות של הטור הוא: .− 1 2 < x < 1 2 כלומר הטור מתכנס אם\"ם 5"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-9-hebrew-question-4",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-9-hebrew",
+        "questionNumber": "1",
+        "content": "דוגמא נוספת: . ∞ ∑ n=1 sin2 ( 1 n ) · (x − 3)n חשבו את תחום ההתכנסות של טור החזקות הבא: פתרון: נמצא תחילה את רדיוס ההתכנסות ∞ ∑ n=1 sin2 ( 1 n ) · (x − 3)n = ∞ ∑ n=1 sin2 ( 1 n ) · tn R = 1 L = lim n→∞ sin2 ( 1 n ) sin2 ( 1 n+1 ) = lim n→∞       [ sin2( 1 n ) [ 1 n2 ] ] [ sin2( 1 n+1 ) [ 1 (n+1)2 ] ] · (n + 1)2 n2       = 1 1 · 1 = 1 לכן הטור מתכנס לכל | t |< 1 ⇒| x − 3 |< 1 ⇒ 2 < x < 4 .x < 2 או x > 4 ומתבדר לכל נבדוק בנפרד את הקצוות: :x = 2 עבור ∞ ∑ n=1 sin2 ( 1 n ) (2 − 3)n = ∞ ∑ n=1 sin2 ( 1 n ) (−1)n הטור מתכנס בהחלט, כי ∞ ∑ n=1 | sin2 ( 1 n ) (−1)n |= ∞ ∑ n=1 sin2 ( 1 n ) ≤ ∞ ∑ n=1 1 n2 < ∞ :x = 4 עבור ∞ ∑ n=1 sin2 ( 1 n ) (4 − 3)n = ∞ ∑ n=1 sin2 ( 1 n ) ≤ ∞ ∑ n=1 1 n2 < ∞ ,2 ≤ x ≤ 4 לסיכום קיבלנו שתחום ההתכנסות של הטור הוא: .2 ≤ x ≤ 4 כלומר הטור מתכנס אם\"ם 6",
+        "topicIds": [
+          "גבולות",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "סדרות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-9-hebrew",
+          "filename": "Recitation_9-Hebrew.pdf",
+          "text": "דוגמא נוספת: . ∞ ∑ n=1 sin2 ( 1 n ) · (x − 3)n חשבו את תחום ההתכנסות של טור החזקות הבא: פתרון: נמצא תחילה את רדיוס ההתכנסות ∞ ∑ n=1 sin2 ( 1 n ) · (x − 3)n = ∞ ∑ n=1 sin2 ( 1 n ) · tn R = 1 L = lim n→∞ sin2 ( 1 n ) sin2 ( 1 n+1 ) = lim n→∞       [ sin2( 1 n ) [ 1 n2 ] ] [ sin2( 1 n+1 ) [ 1 (n+1)2 ] ] · (n + 1)2 n2       = 1 1 · 1 = 1 לכן הטור מתכנס לכל | t |< 1 ⇒| x − 3 |< 1 ⇒ 2 < x < 4 .x < 2 או x > 4 ומתבדר לכל נבדוק בנפרד את הקצוות: :x = 2 עבור ∞ ∑ n=1 sin2 ( 1 n ) (2 − 3)n = ∞ ∑ n=1 sin2 ( 1 n ) (−1)n הטור מתכנס בהחלט, כי ∞ ∑ n=1 | sin2 ( 1 n ) (−1)n |= ∞ ∑ n=1 sin2 ( 1 n ) ≤ ∞ ∑ n=1 1 n2 < ∞ :x = 4 עבור ∞ ∑ n=1 sin2 ( 1 n ) (4 − 3)n = ∞ ∑ n=1 sin2 ( 1 n ) ≤ ∞ ∑ n=1 1 n2 < ∞ ,2 ≤ x ≤ 4 לסיכום קיבלנו שתחום ההתכנסות של הטור הוא: .2 ≤ x ≤ 4 כלומר הטור מתכנס אם\"ם 6"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-9-hebrew-question-5",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-9-hebrew",
+        "questionNumber": "0",
+        "content": "הוכיחו או הפריכו כל אחת מהטענות הבאות: שתי סדרות של מספרים ממשיים. (bn)∞ n=0 ו (an)∞ n=0 יהיו .R טור חזקות עם רדיוס התכנסות ∞ ∑ n=0 an · xn 1. יהי מתכנס בהחלט. ∞ ∑ n=0 an , אזיR > 1 אם פתרון: הטענה נכונה. ולכן x = 1 , אזי בפרט הטור מתכנס בהחלט בR > 1 והיות ש x0 = 0 נשים לב ש ∞ ∑ n=0 an · 1n = ∞ ∑ n=0 an מתכנס בהחלט. טורי חזקות עם רדיוסי ∞ ∑ n=0 bn · (x − x0)n , ∞ ∑ n=0 an · (x − x0)n ויהיו x0 ∈ R 2. יהי בהתאמה. R2, R1 התכנסות .R1 ≥ R2 אזי 0 ≤ n ∈ Z לכל | an |≤| bn | אם פתרון: הטענה נכונה. .R1 ≥ 0 = R2 , אזR2 = 0 אם אחרת: מתכנס ∞ ∑ n=0 bn · (x − x0)n . אזי טור החזקות| x1 − x0 |< R2 כך ש x1 ∈ R יהי , כלומרx1 בהחלט ב ∞ ∑ n=0 | bn | · | x1 − x0 |n< ∞ , אזי0 ≤ n ∈ Z לכל | an |≤| bn | היות ש ∞ ∑ n=0 | an | · | x1 − x0 |n≤ ∞ ∑ n=0 | bn | · | x1 − x0 |n< ∞ .x1 מתכנס בהחלט ב ∞ ∑ n=0 an · (x − x0)n ולכן ממבחן ההשוואה טור החזקות | x−x0 |< R2 כך ש x ∈ R מתכנס בהחלט לכל ∞ ∑ n=0 an·(x − x0)n לכן טור החזקות .R1 ≥ R2 ולכן 7",
+        "topicIds": [
+          "גבולות",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "סדרות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-9-hebrew",
+          "filename": "Recitation_9-Hebrew.pdf",
+          "text": "הוכיחו או הפריכו כל אחת מהטענות הבאות: שתי סדרות של מספרים ממשיים. (bn)∞ n=0 ו (an)∞ n=0 יהיו .R טור חזקות עם רדיוס התכנסות ∞ ∑ n=0 an · xn 1. יהי מתכנס בהחלט. ∞ ∑ n=0 an , אזיR > 1 אם פתרון: הטענה נכונה. ולכן x = 1 , אזי בפרט הטור מתכנס בהחלט בR > 1 והיות ש x0 = 0 נשים לב ש ∞ ∑ n=0 an · 1n = ∞ ∑ n=0 an מתכנס בהחלט. טורי חזקות עם רדיוסי ∞ ∑ n=0 bn · (x − x0)n , ∞ ∑ n=0 an · (x − x0)n ויהיו x0 ∈ R 2. יהי בהתאמה. R2, R1 התכנסות .R1 ≥ R2 אזי 0 ≤ n ∈ Z לכל | an |≤| bn | אם פתרון: הטענה נכונה. .R1 ≥ 0 = R2 , אזR2 = 0 אם אחרת: מתכנס ∞ ∑ n=0 bn · (x − x0)n . אזי טור החזקות| x1 − x0 |< R2 כך ש x1 ∈ R יהי , כלומרx1 בהחלט ב ∞ ∑ n=0 | bn | · | x1 − x0 |n< ∞ , אזי0 ≤ n ∈ Z לכל | an |≤| bn | היות ש ∞ ∑ n=0 | an | · | x1 − x0 |n≤ ∞ ∑ n=0 | bn | · | x1 − x0 |n< ∞ .x1 מתכנס בהחלט ב ∞ ∑ n=0 an · (x − x0)n ולכן ממבחן ההשוואה טור החזקות | x−x0 |< R2 כך ש x ∈ R מתכנס בהחלט לכל ∞ ∑ n=0 an·(x − x0)n לכן טור ה",
+          "startOffset": 4770,
+          "endOffset": 5691
+        },
+        "confidence": 0.56
+      }
+    ],
+    "solutionPatterns": [],
+    "techniques": [
+      "מבחן ההשוואה",
+      "גבול",
+      "התכנסות בהחלט"
+    ],
+    "commonMistakes": [],
+    "linkedLectureNumber": 8,
+    "topicOverlapWithLinkedLecture": [
+      "גבולות",
+      "טורים",
+      "סדרות"
+    ],
+    "mappingNeedsReview": false,
+    "examRelevanceNotes": [
+      "תרגול 9 היום: טורי חזקות. • תזכורת: טורי חזקות: סדרה של מספרים ממשיים. (an)∞ n=0 ותהי x0 ∈ R תהי תחום ההתכנסות של טור החזקות ∞ ∑ n=0 an (x − x0)n = a0 + a1 (x − x0) + a2 (x − x0)2 + ... שעבורם הטור מתכנס. x מוגדר להיות קבוצת כל ערכי ה שתי דוגמאות שונות לטורי חזקות: . ∞ ∑ n=0 xn 3n .1 . ∞ ∑ n=0 (−1)n−1 (x+1)2n+1 5n−2 .2 .a0 לערך x = x0 הטור מתכנס תמיד בנקודה שעבורו: 0 ≤ R ≤ ∞ לכל טור חזקות יש רדיוס התכנסות ומתבדר מחוץ (x0 − R, x0 + R) הטור מתכנס בהחלט בקטע • .[x0 − R, x0 + R] לקטע הנקודות היחידות שבהן הטור עשוי להתכנס בתנאי הן בקצוות הקטע. • , נצטרך לבדוק בנפרד בכלx = x0 ± R הטור יכול להתכנס או להתבדר בנקודות • בדיקה זו איננה רלוונטית(. R = 0, ∞ תרגיל )במקרים שבהם , אם הטור מתכנס רקR = 0 ו x ∈ R , אם הטור מתכנס לכלR = ∞ מסמנים • .x = x0 ב 1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "recitation-recitation-9-hebrew",
+        "filename": "Recitation_9-Hebrew.pdf",
+        "text": "תרגול 9 היום: טורי חזקות. • תזכורת: טורי חזקות: סדרה של מספרים ממשיים. (an)∞ n=0 ותהי x0 ∈ R תהי תחום ההתכנסות של טור החזקות ∞ ∑ n=0 an (x − x0)n = a0 + a1 (x − x0) + a2 (x − x0)2 + ... שעבורם הטור מתכנס. x מוגדר להיות קבוצת כל ערכי ה שתי דוגמאות שונות לטורי חזקות: . ∞ ∑ n=0 xn 3n .1 . ∞ ∑ n=0 (−1)n−1 (x+1)2n+1 5n−2 .2 .a0 לערך x = x0 הטור מתכנס תמיד בנקודה שעבורו: 0 ≤ R ≤ ∞ לכל טור חזקות יש רדיוס התכנסות ומתבדר מחוץ (x0 − R, x0 + R) הטור מתכנס בהחלט בקטע • .[x0 − R, x0 + R] לקטע הנקודות היחידות שבהן הטור עשוי להתכנס בתנאי הן בקצוות הקטע. • , נצטרך לבדוק בנפרד בכלx = x0 ± R הטור יכול להתכנס או להתבדר בנקודות • בדיקה זו איננה רלוונטית(. R = 0, ∞ תרגיל )במקרים שבהם , אם הטור מתכנס רקR = 0 ו x ∈ R , אם הטור מתכנס לכלR = ∞ מסמנים • .x = x0 ב 1"
+      },
+      {
+        "sourceFileId": "recitation-recitation-9-hebrew",
+        "filename": "Recitation_9-Hebrew.pdf",
+        "text": "תזכורת: נוסחת השורש לרדיוס )קושי־הדמר( ונוסחת המנה לרדיוס: סדרה של מספרים ממשיים. (an)∞ n=0 ותהי x0 ∈ R תהי . ∞ ∑ n=0 an (x − x0)n רדיוס ההתכנסות של טור החזקות R יהי .L = lim n→∞ ∣ ∣ ∣ an+1 an ∣ ∣ ∣ או L = lim n→∞ n √|an| נניח שקיים הגבול במובן הרחב אזי .R = ∞ אז L = 0 אם • .R = 0 אז L = ∞ אם • .R = 1 L אז 0 < L < ∞ אם • הערה: לפי כל אחת מהנוסחאות )שורש או מנה( R ישנן דוגמאות שבהן מחשבים את בדרכים אחרות, למשל על ידי מציאת נקודה R וישנן דוגמאות שבהן מחשבים את שבה הטור מתכנס בתנאי. 2"
+      },
+      {
+        "sourceFileId": "recitation-recitation-9-hebrew",
+        "filename": "Recitation_9-Hebrew.pdf",
+        "text": "דוגמאות: , ומצאו את תחוםR עבור כל אחד מהטורים הבאים, חשבו את רדיוס ההתכנסות, ההתכנסות. בתחום ההתכנסות, מצאו ערך מפורש )ללא סימן הסיגמה(. . ∞ ∑ n=0 (−1)n x2n .1 פתרון: מדובר בטור גיאומטרי, נסדר את הטור ∞ ∑ n=0 (−1)n x2n = ∞ ∑ n=0 (−1)n (x2)n = ∞ ∑ n=0 (−x2)n = t=−x2 ∞ ∑ n=0 tn = |t|<1 1 1 − t = 1 1 − (−x2) = 1 1 + x2 , כלומר הטור מתכנס אם\"ם| t |< 1 הטור מתכנס אם\"ם | −x2 |< 1 ⇔| x2 |< 1 ⇔ x2 < 1 ⇔ −1 < x < 1 .R = 1 ולכן רדיוס ההתכנסות של הטור הוא x0 = 0 נשים לב ש . ∞ ∑ n=0 (2x+3)2n 42n .2 פתרון: מדובר בטור גיאומטרי, נסדר את הטור ∞ ∑ n=0 (2x + 3)2n 42n = ∞ ∑ n=0 ( 2x + 3 4 )2n = ∞ ∑ n=0 (( 2x + 3 4 )2)n = t=( 2x+3 4 )2 ∞ ∑ n=0 tn = |t|<1 1 1 − t = 1 1 − ( 2x+3 4 )2 , כלומר הטור מתכנס אם\"ם| t |< 1 הטור מתכנס אם\"ם | ( 2x + 3 4 )2 |< 1 ⇔ ( 2x + 3 4 )2 < 1 ⇔ −1 < 2x + 3 4 < 1 ⇔ −4 < 2x + 3 < 4 ⇔ −7 < 2x < 1 ⇔ −3.5 < x < 0.5 .R = 2 ולכן רדיוס ההתכנסות של הטור הוא x0 = −1.5 נשים לב ש 3"
+      },
+      {
+        "sourceFileId": "recitation-recitation-9-hebrew",
+        "filename": "Recitation_9-Hebrew.pdf",
+        "text": "תרגיל: שתי סדרות של מספרים ממשיים. (bn)∞ n=0 ו (an)∞ n=0 יהיו בהתאמה R2 6 = R1 טורי חזקות עם רדיוסי התכנסות ∞ ∑ n=0 bn · xn , ∞ ∑ n=0 an · xn יהיו .R1, R2 6 = ∞ כך ש . ∞ ∑ n=0 (an ± bn) · xn מצאו את רדיוס ההתכנסות של טור החזקות פתרון: ראשית נשים לב שלא נוכל להשתמש בנוסחת המנה או השורש מכיוון שלא נתון שהגבולות קיימים. נחלק את הפתרון לשלושה חלקים )נראה שרטוט בכיתה(: .x ∈ R יהי , במקרה זה שני הטורים מתכנסים ולכן גם הסכום מתכנס| x |< min {R1, R2} 1. אם מאשט\"מ. , במקרה זה אנחנו יודעים שטור אחדmin {R1, R2} <| x |< max {R1, R2} 2. אם מתבדר שווה מתבדר(. ± מתכנס וטור אחד מתבדר ולכן הטור מתבדר )מתכנס , במקרה זה שני הטורים מתבדרים. נראה שגם הטור של| x |> max {R1, R2} 3. אם הסכום מתבדר. ולכן ממשפט | x |> max {R1, R2} מתכנס עבור ∞ ∑ n=0 (an ± bn)·xn נניח בשלילה ש , סתירה!2 \"אבל\" הטור מתכנס גם באיזור .R = min {R1, R2} לסיכום: מצאנו שרדיוס ההתכנסות של הטור של הסכום הוא .(| x |> min {R1, R2} ומתבדר לכל "
+      }
+    ],
+    "confidence": 0.8999999999999999
+  }
+]

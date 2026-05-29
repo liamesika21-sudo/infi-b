@@ -1,0 +1,255 @@
+{
+  "generatedAt": "2026-05-29T19:10:45.087Z",
+  "topics": [
+    {
+      "topicId": "גבולות",
+      "title": "גבולות",
+      "priorityScore": 100,
+      "priorityLevel": "critical",
+      "reasons": [
+        "הופיע בקבצי מבחן 11 פעמים",
+        "מופיע במטלות 7 פעמים",
+        "מודגש בתרגולים 9 פעמים",
+        "נלמד בהרצאות 7 פעמים"
+      ],
+      "appearedInPastExams": 11,
+      "appearedInHomework": 7,
+      "appearedInRecitations": 9,
+      "appearedInLectures": 7,
+      "recommendedAction": "לפתור שאלות מבחן ומטלות בנושא לפני כל נושא אחר."
+    },
+    {
+      "topicId": "טורי-חזקות",
+      "title": "טורי חזקות",
+      "priorityScore": 100,
+      "priorityLevel": "critical",
+      "reasons": [
+        "הופיע בקבצי מבחן 9 פעמים",
+        "מודגש בתרגולים 1 פעמים"
+      ],
+      "appearedInPastExams": 9,
+      "appearedInHomework": 0,
+      "appearedInRecitations": 1,
+      "appearedInLectures": 0,
+      "recommendedAction": "לפתור שאלות מבחן ומטלות בנושא לפני כל נושא אחר."
+    },
+    {
+      "topicId": "טורים",
+      "title": "טורים",
+      "priorityScore": 100,
+      "priorityLevel": "critical",
+      "reasons": [
+        "הופיע בקבצי מבחן 10 פעמים",
+        "מופיע במטלות 7 פעמים",
+        "מודגש בתרגולים 6 פעמים",
+        "נלמד בהרצאות 5 פעמים"
+      ],
+      "appearedInPastExams": 10,
+      "appearedInHomework": 7,
+      "appearedInRecitations": 6,
+      "appearedInLectures": 5,
+      "recommendedAction": "לפתור שאלות מבחן ומטלות בנושא לפני כל נושא אחר."
+    },
+    {
+      "topicId": "מבחן-ההשוואה",
+      "title": "מבחן ההשוואה",
+      "priorityScore": 100,
+      "priorityLevel": "critical",
+      "reasons": [
+        "הופיע בקבצי מבחן 5 פעמים",
+        "מופיע במטלות 2 פעמים",
+        "מודגש בתרגולים 6 פעמים"
+      ],
+      "appearedInPastExams": 5,
+      "appearedInHomework": 2,
+      "appearedInRecitations": 6,
+      "appearedInLectures": 0,
+      "recommendedAction": "לפתור שאלות מבחן ומטלות בנושא לפני כל נושא אחר."
+    },
+    {
+      "topicId": "נגזרות",
+      "title": "נגזרות",
+      "priorityScore": 100,
+      "priorityLevel": "critical",
+      "reasons": [
+        "הופיע בקבצי מבחן 12 פעמים",
+        "מופיע במטלות 4 פעמים",
+        "מודגש בתרגולים 2 פעמים"
+      ],
+      "appearedInPastExams": 12,
+      "appearedInHomework": 4,
+      "appearedInRecitations": 2,
+      "appearedInLectures": 0,
+      "recommendedAction": "לפתור שאלות מבחן ומטלות בנושא לפני כל נושא אחר."
+    },
+    {
+      "topicId": "סדרות",
+      "title": "סדרות",
+      "priorityScore": 100,
+      "priorityLevel": "critical",
+      "reasons": [
+        "הופיע בקבצי מבחן 12 פעמים",
+        "מופיע במטלות 7 פעמים",
+        "מודגש בתרגולים 10 פעמים",
+        "נלמד בהרצאות 9 פעמים"
+      ],
+      "appearedInPastExams": 12,
+      "appearedInHomework": 7,
+      "appearedInRecitations": 10,
+      "appearedInLectures": 9,
+      "recommendedAction": "לפתור שאלות מבחן ומטלות בנושא לפני כל נושא אחר."
+    },
+    {
+      "topicId": "פונקציות",
+      "title": "פונקציות",
+      "priorityScore": 100,
+      "priorityLevel": "critical",
+      "reasons": [
+        "הופיע בקבצי מבחן 11 פעמים",
+        "מופיע במטלות 7 פעמים",
+        "מודגש בתרגולים 4 פעמים"
+      ],
+      "appearedInPastExams": 11,
+      "appearedInHomework": 7,
+      "appearedInRecitations": 4,
+      "appearedInLectures": 0,
+      "recommendedAction": "לפתור שאלות מבחן ומטלות בנושא לפני כל נושא אחר."
+    },
+    {
+      "topicId": "רציפות",
+      "title": "רציפות",
+      "priorityScore": 100,
+      "priorityLevel": "critical",
+      "reasons": [
+        "הופיע בקבצי מבחן 10 פעמים",
+        "מופיע במטלות 4 פעמים",
+        "מודגש בתרגולים 2 פעמים"
+      ],
+      "appearedInPastExams": 10,
+      "appearedInHomework": 4,
+      "appearedInRecitations": 2,
+      "appearedInLectures": 0,
+      "recommendedAction": "לפתור שאלות מבחן ומטלות בנושא לפני כל נושא אחר."
+    },
+    {
+      "topicId": "רדיוס-התכנסות",
+      "title": "רדיוס התכנסות",
+      "priorityScore": 79,
+      "priorityLevel": "critical",
+      "reasons": [
+        "הופיע בקבצי מבחן 5 פעמים",
+        "מודגש בתרגולים 1 פעמים"
+      ],
+      "appearedInPastExams": 5,
+      "appearedInHomework": 0,
+      "appearedInRecitations": 1,
+      "appearedInLectures": 0,
+      "recommendedAction": "לפתור שאלות מבחן ומטלות בנושא לפני כל נושא אחר."
+    },
+    {
+      "topicId": "אינטגרלים-לא-אמיתיים",
+      "title": "אינטגרלים לא אמיתיים",
+      "priorityScore": 76,
+      "priorityLevel": "critical",
+      "reasons": [
+        "הופיע בקבצי מבחן 4 פעמים",
+        "מופיע במטלות 2 פעמים"
+      ],
+      "appearedInPastExams": 4,
+      "appearedInHomework": 2,
+      "appearedInRecitations": 0,
+      "appearedInLectures": 0,
+      "recommendedAction": "לפתור שאלות מבחן ומטלות בנושא לפני כל נושא אחר."
+    },
+    {
+      "topicId": "טור-טיילור",
+      "title": "טור טיילור",
+      "priorityScore": 74,
+      "priorityLevel": "high",
+      "reasons": [
+        "הופיע בקבצי מבחן 5 פעמים"
+      ],
+      "appearedInPastExams": 5,
+      "appearedInHomework": 0,
+      "appearedInRecitations": 0,
+      "appearedInLectures": 0,
+      "recommendedAction": "לחזור על משפטים ונוסחאות ואז לתרגל."
+    },
+    {
+      "topicId": "מבחן-השורש",
+      "title": "מבחן השורש",
+      "priorityScore": 65,
+      "priorityLevel": "high",
+      "reasons": [
+        "הופיע בקבצי מבחן 2 פעמים",
+        "מופיע במטלות 1 פעמים",
+        "מודגש בתרגולים 4 פעמים"
+      ],
+      "appearedInPastExams": 2,
+      "appearedInHomework": 1,
+      "appearedInRecitations": 4,
+      "appearedInLectures": 0,
+      "recommendedAction": "לחזור על משפטים ונוסחאות ואז לתרגל."
+    },
+    {
+      "topicId": "מבחן-המנה",
+      "title": "מבחן המנה",
+      "priorityScore": 50,
+      "priorityLevel": "medium",
+      "reasons": [
+        "הופיע בקבצי מבחן 2 פעמים",
+        "מופיע במטלות 1 פעמים",
+        "מודגש בתרגולים 1 פעמים"
+      ],
+      "appearedInPastExams": 2,
+      "appearedInHomework": 1,
+      "appearedInRecitations": 1,
+      "appearedInLectures": 0,
+      "recommendedAction": "להשאיר לחזרה מסודרת אחרי הנושאים הקריטיים."
+    },
+    {
+      "topicId": "פולינום-טיילור",
+      "title": "פולינום טיילור",
+      "priorityScore": 46,
+      "priorityLevel": "medium",
+      "reasons": [
+        "הופיע בקבצי מבחן 3 פעמים"
+      ],
+      "appearedInPastExams": 3,
+      "appearedInHomework": 0,
+      "appearedInRecitations": 0,
+      "appearedInLectures": 0,
+      "recommendedAction": "להשאיר לחזרה מסודרת אחרי הנושאים הקריטיים."
+    },
+    {
+      "topicId": "התכנסות-בהחלט",
+      "title": "התכנסות בהחלט",
+      "priorityScore": 41,
+      "priorityLevel": "medium",
+      "reasons": [
+        "הופיע בקבצי מבחן 1 פעמים",
+        "מודגש בתרגולים 3 פעמים"
+      ],
+      "appearedInPastExams": 1,
+      "appearedInHomework": 0,
+      "appearedInRecitations": 3,
+      "appearedInLectures": 0,
+      "recommendedAction": "להשאיר לחזרה מסודרת אחרי הנושאים הקריטיים."
+    },
+    {
+      "topicId": "התכנסות-בתנאי",
+      "title": "התכנסות בתנאי",
+      "priorityScore": 41,
+      "priorityLevel": "medium",
+      "reasons": [
+        "הופיע בקבצי מבחן 1 פעמים",
+        "מודגש בתרגולים 3 פעמים"
+      ],
+      "appearedInPastExams": 1,
+      "appearedInHomework": 0,
+      "appearedInRecitations": 3,
+      "appearedInLectures": 0,
+      "recommendedAction": "להשאיר לחזרה מסודרת אחרי הנושאים הקריטיים."
+    }
+  ]
+}

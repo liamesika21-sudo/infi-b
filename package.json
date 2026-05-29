@@ -6,10 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "process:calculus2": "tsx scripts/process-calculus2.ts",
+    "analyze:calculus2": "tsx scripts/analyze-calculus2.ts"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
+    "katex": "^0.17.0",
+    "lucide-react": "^1.17.0",
     "next": "16.2.6",
+    "pdf-parse": "^2.4.5",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
@@ -21,6 +27,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.6",
     "tailwindcss": "^4",
+    "tsx": "^4.22.3",
     "typescript": "^5"
   }
 }

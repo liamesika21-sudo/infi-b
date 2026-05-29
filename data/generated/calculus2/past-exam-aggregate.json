@@ -1,0 +1,287 @@
+{
+  "topicFrequency": [
+    {
+      "topicId": "נגזרות",
+      "title": "נגזרות",
+      "count": 12,
+      "files": [
+        "past-exams-formula-sheets-2025",
+        "past-exams-list-of-theorems-quiz-2-2026",
+        "past-exams-list-of-theorems-quiz1",
+        "past-exams-moeda-2022-eng-solution",
+        "past-exams-moeda-2023-eng-sol",
+        "past-exams-moeda-calculus2-2024-solution",
+        "past-exams-moeda-calculus2-2025-solution",
+        "past-exams-moedb-2022-solutions",
+        "past-exams-moedb-2023-eng-sol",
+        "past-exams-moedb-calculus2-2024-solutions",
+        "past-exams-moedb-calculus2-2025-solutions",
+        "past-exams-simulation-calculus2-2025-solutions"
+      ]
+    },
+    {
+      "topicId": "סדרות",
+      "title": "סדרות",
+      "count": 12,
+      "files": [
+        "past-exams-formula-sheets-2025",
+        "past-exams-list-of-theorems-quiz-2-2026",
+        "past-exams-list-of-theorems-quiz1",
+        "past-exams-moeda-2022-eng-solution",
+        "past-exams-moeda-2023-eng-sol",
+        "past-exams-moeda-calculus2-2024-solution",
+        "past-exams-moeda-calculus2-2025-solution",
+        "past-exams-moedb-2022-solutions",
+        "past-exams-moedb-2023-eng-sol",
+        "past-exams-moedb-calculus2-2024-solutions",
+        "past-exams-moedb-calculus2-2025-solutions",
+        "past-exams-simulation-calculus2-2025-solutions"
+      ]
+    },
+    {
+      "topicId": "גבולות",
+      "title": "גבולות",
+      "count": 11,
+      "files": [
+        "past-exams-formula-sheets-2025",
+        "past-exams-list-of-theorems-quiz1",
+        "past-exams-moeda-2022-eng-solution",
+        "past-exams-moeda-2023-eng-sol",
+        "past-exams-moeda-calculus2-2024-solution",
+        "past-exams-moeda-calculus2-2025-solution",
+        "past-exams-moedb-2022-solutions",
+        "past-exams-moedb-2023-eng-sol",
+        "past-exams-moedb-calculus2-2024-solutions",
+        "past-exams-moedb-calculus2-2025-solutions",
+        "past-exams-simulation-calculus2-2025-solutions"
+      ]
+    },
+    {
+      "topicId": "פונקציות",
+      "title": "פונקציות",
+      "count": 11,
+      "files": [
+        "past-exams-list-of-theorems-quiz-2-2026",
+        "past-exams-list-of-theorems-quiz1",
+        "past-exams-moeda-2022-eng-solution",
+        "past-exams-moeda-2023-eng-sol",
+        "past-exams-moeda-calculus2-2024-solution",
+        "past-exams-moeda-calculus2-2025-solution",
+        "past-exams-moedb-2022-solutions",
+        "past-exams-moedb-2023-eng-sol",
+        "past-exams-moedb-calculus2-2024-solutions",
+        "past-exams-moedb-calculus2-2025-solutions",
+        "past-exams-simulation-calculus2-2025-solutions"
+      ]
+    },
+    {
+      "topicId": "טורים",
+      "title": "טורים",
+      "count": 10,
+      "files": [
+        "past-exams-formula-sheets-2025",
+        "past-exams-moeda-2022-eng-solution",
+        "past-exams-moeda-2023-eng-sol",
+        "past-exams-moeda-calculus2-2024-solution",
+        "past-exams-moeda-calculus2-2025-solution",
+        "past-exams-moedb-2022-solutions",
+        "past-exams-moedb-2023-eng-sol",
+        "past-exams-moedb-calculus2-2024-solutions",
+        "past-exams-moedb-calculus2-2025-solutions",
+        "past-exams-simulation-calculus2-2025-solutions"
+      ]
+    },
+    {
+      "topicId": "רציפות",
+      "title": "רציפות",
+      "count": 10,
+      "files": [
+        "past-exams-list-of-theorems-quiz-2-2026",
+        "past-exams-moeda-2022-eng-solution",
+        "past-exams-moeda-2023-eng-sol",
+        "past-exams-moeda-calculus2-2024-solution",
+        "past-exams-moeda-calculus2-2025-solution",
+        "past-exams-moedb-2022-solutions",
+        "past-exams-moedb-2023-eng-sol",
+        "past-exams-moedb-calculus2-2024-solutions",
+        "past-exams-moedb-calculus2-2025-solutions",
+        "past-exams-simulation-calculus2-2025-solutions"
+      ]
+    },
+    {
+      "topicId": "טורי-חזקות",
+      "title": "טורי חזקות",
+      "count": 9,
+      "files": [
+        "past-exams-formula-sheets-2025",
+        "past-exams-moeda-2022-eng-solution",
+        "past-exams-moeda-2023-eng-sol",
+        "past-exams-moeda-calculus2-2024-solution",
+        "past-exams-moeda-calculus2-2025-solution",
+        "past-exams-moedb-2022-solutions",
+        "past-exams-moedb-2023-eng-sol",
+        "past-exams-moedb-calculus2-2024-solutions",
+        "past-exams-moedb-calculus2-2025-solutions"
+      ]
+    },
+    {
+      "topicId": "טור-טיילור",
+      "title": "טור טיילור",
+      "count": 5,
+      "files": [
+        "past-exams-moeda-2022-eng-solution",
+        "past-exams-moeda-2023-eng-sol",
+        "past-exams-moeda-calculus2-2024-solution",
+        "past-exams-moeda-calculus2-2025-solution",
+        "past-exams-moedb-2023-eng-sol"
+      ]
+    },
+    {
+      "topicId": "רדיוס-התכנסות",
+      "title": "רדיוס התכנסות",
+      "count": 5,
+      "files": [
+        "past-exams-moeda-2022-eng-solution",
+        "past-exams-moeda-2023-eng-sol",
+        "past-exams-moeda-calculus2-2024-solution",
+        "past-exams-moeda-calculus2-2025-solution",
+        "past-exams-moedb-2022-solutions"
+      ]
+    },
+    {
+      "topicId": "מבחן-ההשוואה",
+      "title": "מבחן ההשוואה",
+      "count": 5,
+      "files": [
+        "past-exams-moeda-2023-eng-sol",
+        "past-exams-moeda-calculus2-2025-solution",
+        "past-exams-moedb-2022-solutions",
+        "past-exams-moedb-calculus2-2024-solutions",
+        "past-exams-moedb-calculus2-2025-solutions"
+      ]
+    },
+    {
+      "topicId": "אינטגרלים-לא-אמיתיים",
+      "title": "אינטגרלים לא אמיתיים",
+      "count": 4,
+      "files": [
+        "past-exams-list-of-theorems-quiz-2-2026",
+        "past-exams-moeda-2022-eng-solution",
+        "past-exams-moeda-calculus2-2025-solution",
+        "past-exams-moedb-2023-eng-sol"
+      ]
+    },
+    {
+      "topicId": "פולינום-טיילור",
+      "title": "פולינום טיילור",
+      "count": 3,
+      "files": [
+        "past-exams-moeda-2022-eng-solution",
+        "past-exams-moeda-2023-eng-sol",
+        "past-exams-moeda-calculus2-2024-solution"
+      ]
+    },
+    {
+      "topicId": "מבחן-השורש",
+      "title": "מבחן השורש",
+      "count": 2,
+      "files": [
+        "past-exams-moeda-calculus2-2024-solution",
+        "past-exams-moedb-calculus2-2025-solutions"
+      ]
+    },
+    {
+      "topicId": "מבחן-המנה",
+      "title": "מבחן המנה",
+      "count": 2,
+      "files": [
+        "past-exams-moeda-calculus2-2025-solution",
+        "past-exams-moedb-calculus2-2025-solutions"
+      ]
+    },
+    {
+      "topicId": "התכנסות-בתנאי",
+      "title": "התכנסות בתנאי",
+      "count": 1,
+      "files": [
+        "past-exams-moedb-calculus2-2024-solutions"
+      ]
+    },
+    {
+      "topicId": "התכנסות-בהחלט",
+      "title": "התכנסות בהחלט",
+      "count": 1,
+      "files": [
+        "past-exams-moedb-calculus2-2025-solutions"
+      ]
+    }
+  ],
+  "theoremFrequency": [],
+  "formulaFrequency": [],
+  "proofPatternFrequency": [],
+  "highPriorityTopics": [
+    "נגזרות",
+    "סדרות",
+    "גבולות",
+    "פונקציות",
+    "טורים",
+    "רציפות"
+  ],
+  "mustPracticeQuestions": [
+    "past-exams-exam-questions-that-are-not-in-the-marerial-for-our-exam-question-1",
+    "past-exams-formula-sheets-2025-question-1",
+    "past-exams-list-of-theorems-quiz-2-2026-question-1",
+    "past-exams-list-of-theorems-quiz1-question-1",
+    "past-exams-moeda-2022-eng-solution-question-1",
+    "past-exams-moeda-2022-eng-solution-question-2",
+    "past-exams-moeda-2022-eng-solution-question-3",
+    "past-exams-moeda-2023-eng-sol-question-1",
+    "past-exams-moeda-2023-eng-sol-question-2",
+    "past-exams-moeda-2023-eng-sol-question-3",
+    "past-exams-moeda-calculus2-2024-solution-question-1",
+    "past-exams-moeda-calculus2-2024-solution-question-2",
+    "past-exams-moeda-calculus2-2024-solution-question-3",
+    "past-exams-moeda-calculus2-2025-solution-question-1",
+    "past-exams-moeda-calculus2-2025-solution-question-2",
+    "past-exams-moeda-calculus2-2025-solution-question-3",
+    "past-exams-moedb-2022-solutions-question-1",
+    "past-exams-moedb-2022-solutions-question-2",
+    "past-exams-moedb-2022-solutions-question-3",
+    "past-exams-moedb-2023-eng-sol-question-1",
+    "past-exams-moedb-2023-eng-sol-question-2",
+    "past-exams-moedb-2023-eng-sol-question-3",
+    "past-exams-moedb-calculus2-2024-solutions-question-1",
+    "past-exams-moedb-calculus2-2024-solutions-question-2",
+    "past-exams-moedb-calculus2-2024-solutions-question-3",
+    "past-exams-moedb-calculus2-2025-solutions-question-1",
+    "past-exams-moedb-calculus2-2025-solutions-question-2",
+    "past-exams-moedb-calculus2-2025-solutions-question-3",
+    "past-exams-simulation-calculus2-2025-solutions-question-1",
+    "past-exams-simulation-calculus2-2025-solutions-question-2",
+    "past-exams-simulation-calculus2-2025-solutions-question-3"
+  ],
+  "likelyMoedATopics": [
+    "נגזרות",
+    "סדרות",
+    "גבולות",
+    "פונקציות",
+    "טורים",
+    "רציפות",
+    "טורי חזקות",
+    "טור טיילור"
+  ],
+  "dangerZones": [
+    "נגזרות",
+    "סדרות",
+    "גבולות",
+    "פונקציות",
+    "טורים",
+    "רציפות",
+    "טורי חזקות",
+    "טור טיילור",
+    "רדיוס התכנסות",
+    "מבחן ההשוואה",
+    "אינטגרלים לא אמיתיים",
+    "פולינום טיילור"
+  ]
+}

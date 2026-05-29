@@ -1,0 +1,664 @@
+[
+  {
+    "topicId": "אינטגרלים-לא-אמיתיים",
+    "title": "אינטגרלים לא אמיתיים",
+    "aliases": [
+      "אינטגרל לא אמיתי",
+      "אינטגרלים לא אמיתיים",
+      "improper integral",
+      "improper integrals"
+    ],
+    "detectedInFiles": [
+      "hw-exercise-5-solution",
+      "hw-exercise-7-solution",
+      "past-exams-list-of-theorems-quiz-2-2026",
+      "past-exams-moeda-2022-eng-solution",
+      "past-exams-moeda-calculus2-2025-solution",
+      "past-exams-moedb-2023-eng-sol",
+      "summerize-שבוע-4-אינפי-2"
+    ],
+    "detectedInWeeks": [
+      4,
+      5,
+      7
+    ],
+    "confidence": 0.95,
+    "sourceSnippets": [
+      "Calculus II – Spring 2025-26 Homework 5 Solution 1. Compute each of the following improper integrals or prove that it doesn’t converge (a) ∫ ∞ −∞ 𝑒− | 𝑥 | 𝑑𝑥. Solution: We have π ∞ −∞ 𝑒− | 𝑥 | 𝑑𝑥 = π 0 −∞ 𝑒− | 𝑥 | 𝑑𝑥 + π ∞ 0 𝑒− | 𝑥 | 𝑑𝑥 = π 0 −∞ 𝑒𝑥 𝑑𝑥 + π ∞ 0 𝑒−𝑥 𝑑𝑥 = [𝑒𝑥 ]0 −∞ + [−𝑒−𝑥 ]∞ 0",
+      "ecreasing (as the functions 𝑥 + 1, √𝑥 are increasing and positive for every 𝑥 ≥ 1) and that lim 𝑥→∞ 𝑓 (𝑥) AOL = 0. We now compute the improper integral ∫ ∞ 1 𝑑𝑥 (𝑥 + 1)√𝑥 𝑡=√𝑥 = ∫ ∞ 1 2𝑡 𝑑𝑡 (𝑡2 + 1)𝑡 = 2 ∫ ∞ 1 𝑑𝑡 1 + 𝑡2 = 2 [arctan(𝑡)]∞ 1 = 2 [ 𝜋 2 − 𝜋 4 ] = 𝜋 2 Thus, by the integral test, we have ∫ ∞ 1 𝑑𝑥 (𝑥 + 1)√𝑥 ≤ ∞ ∑ 𝑛=1 1 (𝑛 + 1)√𝑛 ≤ 𝑓 (",
+      "s defined on [𝑎, ∞). Suppose that (i) 0 ≤ 𝑓 (𝑥) ≤ 𝑔(𝑥), ∀𝑥 ≥ 𝑎. (ii) 𝑓 , 𝑔 are integrable on [𝑎, 𝑏] for every 𝑏 > 𝑎. (iii) The improper integral ∫ ∞ 𝑎 𝑔(𝑥) 𝑑𝑥 is convergent. Prove that the improper integral ∫ ∞ 𝑎 𝑓 (𝑥) 𝑑𝑥 is convergent and ∫ ∞ 𝑎 𝑓 (𝑥) 𝑑𝑥 ≤ ∫ ∞ 𝑎 𝑔(𝑥) 𝑑𝑥. 1 -- 1 of 1 --",
+      "t then ∑∞ n=1 |an| n2 is convergent, that is, the series ∑∞ n=1 an n2 converges absolutely. (b) (12 points) Determine whether the following improper integral is convergent or divergent: ∫ 1 0 ex +x √ex −1 dx. Solution: Note that limx→0 ex −1 x = 1, which implies that there exists a 0 < δ1 < 1 for which for every 0 < x < δ1 we have ex −1 x > 1 2 . Thus, ∫ 1 0 ex + x √ex − 1 d",
+      "25 points) 2.1. (15 points) Prove that the number e is irrational. Solution: See lectures. 2.2. (10 points) Determine whether the following improper integral converges or diverges: Z ∞ 1 e−x ln(x) dx Solution: First, we clearly have e−x ln(x) ≥ 0 for every x ≥ 1. Thus we can use the comparison test. Note that lim x→∞ xe−x = lim x→∞ x ex ? ∞ = lim x→∞ 1 ex = 0 (⋆) We know tha"
+    ]
+  },
+  {
+    "topicId": "גבולות",
+    "title": "גבולות",
+    "aliases": [
+      "גבול",
+      "גבולות",
+      "limit",
+      "limits",
+      "lim"
+    ],
+    "detectedInFiles": [
+      "hw-exercise-1-solution",
+      "hw-exercise-2-solution",
+      "hw-exercise-3-solution",
+      "hw-exercise-4-solution",
+      "hw-exercise-5-solution",
+      "hw-exercise-6-solution",
+      "hw-exercise-7-solution",
+      "lecture-lecture-1-group-1-calculus-2-2026",
+      "lecture-lecture-4-group-1-calculus-2-2026",
+      "lecture-lecture-5-group-2-calculus-2-2026",
+      "lecture-lecture-6-group-2-calculus-2-2026",
+      "lecture-lecture-7-group-2-calculus-2-2026",
+      "lecture-lecture-8-group-1-calculus-2-2026",
+      "lecture-lecture-9-group-2-calculus-2-2026",
+      "past-exams-formula-sheets-2025",
+      "past-exams-list-of-theorems-quiz1",
+      "past-exams-moeda-2022-eng-solution",
+      "past-exams-moeda-2023-eng-sol",
+      "past-exams-moeda-calculus2-2024-solution",
+      "past-exams-moeda-calculus2-2025-solution",
+      "past-exams-moedb-2022-solutions",
+      "past-exams-moedb-2023-eng-sol",
+      "past-exams-moedb-calculus2-2024-solutions",
+      "past-exams-moedb-calculus2-2025-solutions",
+      "past-exams-simulation-calculus2-2025-solutions",
+      "recitation-recitation-1-hebrew-1",
+      "recitation-recitation-2-hebrew",
+      "recitation-recitation-4-hebrew",
+      "recitation-recitation-6-hebrew",
+      "recitation-recitation-7-hebrew",
+      "recitation-recitation-8-hebrew",
+      "recitation-recitation-8-hebrew-2",
+      "recitation-recitation-9-hebrew",
+      "summerize-calculus2-week9-rtl-polished",
+      "summerize-recitation-8-hebrew",
+      "summerize-סיכום-מאגד-הרצאות-4-5-חדו״א-2",
+      "summerize-שבוע-2-אינפי-2",
+      "summerize-שבוע-4-אינפי-2",
+      "summerize-שבוע-7-סיכום"
+    ],
+    "detectedInWeeks": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence": 0.95,
+    "sourceSnippets": [
+      "Calculus II – Spring 2025-26 Homework 1 Solution 1. Compute each of the following limits or prove that it doesn’t exist in the extended sense (a) lim 𝑥→0 𝑥2 −𝑥 sin 𝑥 (𝑒𝑥 −1) ·ln(1+𝑥) . Solution: First note that lim 𝑥→0 𝑥 𝑒𝑥 − 1 0 0 = lim 𝑥→0 1 𝑒𝑥 AOL = 1 (★) and lim 𝑥→0 𝑥 − sin 𝑥 ln (1 + \ud835",
+      "lds for 𝑛 and therefore (★) holds for 𝑥𝑛. It follows that 𝑓 (𝑥𝑛) (★) > 𝐾 therefore lim 𝑛→∞ 𝑓 (𝑥𝑛) = ∞. (b) Compute the following limit: lim 𝑛→∞ \u0002𝑛 + 𝑛2 ln 𝑛 − 𝑛2 ln(𝑛 + 1)\u0003 Solution: We have lim 𝑛→∞ \u0002𝑛 + 𝑛2 ln 𝑛 − 𝑛2 ln(𝑛 + 1)\u0003 = lim 𝑛→∞ \u0014 𝑛 − 𝑛2 ln \u0012 𝑛 + 1 𝑛 \u0013\u0015 = lim 𝑛→∞ 𝑛2 \u0014 1 𝑛 − ln \u0012 𝑛 + 1 𝑛 \u0013\u0015 = lim 𝑛→∞ 1 𝑛 − ln 1 + 1 𝑛 \u0001",
+      "\udc58 − 𝑥𝑘−1) = 𝑛 ∑︁ 𝑘=1 (𝑀𝑘 − 𝑚𝑘 ) · (𝑥𝑘 − 𝑥𝑘−1) ≤ 𝑀 · Δ(𝑃𝑛) · 𝑛 ∑︁ 𝑘=1 (𝑥𝑘 − 𝑥𝑘−1) = 𝑀 · Δ(𝑃𝑛) · (𝑏 − 𝑎) Taking the limit as 𝑛 → ∞, we obtain that lim 𝑛→∞ h 𝑆 ( 𝑓 , 𝑃𝑛) − 𝑆 ( 𝑓 , 𝑃𝑛) i = 0. Thus, by item (i), it follows that 𝑓 is integrable and lim 𝑛→∞ 𝑆 ( 𝑓 , 𝑃𝑛) = lim 𝑛→∞ 𝑆 ( 𝑓 , 𝑃𝑛) = ∫ 𝑏 𝑎 𝑓 (𝑥) 𝑑𝑥 8 -- 8 of",
+      "\udc65 ∈ R. By the chain rule, 𝐺 is differentiable at 𝑥0 and 𝐺′ (𝑥0) = ℎ′ (𝜙 (𝑥0)) · 𝜙′ (𝑥0) = 𝑓 (𝜙 (𝑥0)) · 𝜙′ (𝑥0) (c) Compute the limit lim 𝑥→0+ ∫ 𝑥2 0 ln \u0010 1 + √𝑡 \u0011 𝑑𝑡 𝑥3 Solution: Consider the function defined by 𝐺 (𝑥) = ∫ 𝑥2 0 ln \u0010 1 + √𝑡 \u0011 𝑑𝑡 for every 𝑥 ≥ 0 .We define 𝑓 (𝑥) = ln 1 + √𝑥\u0001 for every 𝑥 ≥ 0. By AOC 𝑓 is continuous. Als",
+      "= 2 (b) ∫ ∞ −∞ 𝑥 𝜋 (1+𝑥2) 𝑑𝑥 (we will see this integral in the course Probability) Solution: We note that π ∞ 0 𝑥 𝜋 (1 + 𝑥2) 𝑑𝑥 = lim 𝑥→∞ π 𝑥 0 𝑡 𝜋 (1 + 𝑡2) 𝑑𝑡 = lim 𝑥→∞ [ 1 𝜋 ln 1 + 𝑡2 2 ] 𝑥 0 = lim 𝑥→∞ [ 1 𝜋 ( ln 1 + 𝑥2 2 − ln |1 + 0| 2 )] = ∞ Therefore the integral ∫ ∞ −∞ 𝑥 𝜋 (1+𝑥2) 𝑑𝑥 diverges. (c) ∫ ∞ 0 𝑥2 · 𝜆𝑒−𝜆𝑥 𝑑𝑥, wh"
+    ]
+  },
+  {
+    "topicId": "התכנסות-בהחלט",
+    "title": "התכנסות בהחלט",
+    "aliases": [
+      "התכנסות בהחלט",
+      "absolutely convergent",
+      "absolute convergence"
+    ],
+    "detectedInFiles": [
+      "past-exams-moedb-calculus2-2025-solutions",
+      "recitation-recitation-8-hebrew",
+      "recitation-recitation-8-hebrew-2",
+      "summerize-שבוע-7-סיכום"
+    ],
+    "detectedInWeeks": [
+      7,
+      8
+    ],
+    "confidence": 0.95,
+    "sourceSnippets": [
+      "etermine whether the following series converges or diverges: ∞ X n=2 \" sin(n) ln(n) · 1 · 4 · 7 · · · (3n − 2) 5n · n! # Solution: We check absolute convergence: ∞ X n=2 sin(n) ln(n) · 1 · 4 · 7 · · · (3n − 2) 5n · n! ≤ ∞ X n=1 1 · 4 · 7 · · · (3n − 2) ln(n) · 5n · n! We now use the ratio test: L = lim n→∞ an+1 an = lim n→∞ h 1·4·7···(3n−2)·(3n+1) 5n+1·(n+1)!·ln(n+1) i h 1·4·7·",
+      "תרגול 8 היום: התכנסות בהחלט, התכנסות בתנאי. • טור לייבניץ. • השמת סוגריים. • תזכורת: התכנסות בהחלט: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי . ∞ ∑ n=k | an |< ∞ מתכנס בהחלט אם ∞ ∑ n=k an נאמר שהטור משפט )מבחן התכנסות בהחלט(: סדרה של מספ",
+      "תרגול 8 היום: התכנסות בהחלט, התכנסות בתנאי. • טור לייבניץ. • השמת סוגריים. • תזכורת: התכנסות בהחלט: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי . ∞ ∑ n=k | an |< ∞ מתכנס בהחלט אם ∞ ∑ n=k an נאמר שהטור משפט )מבחן התכנסות בהחלט(: סדרה של מספ",
+      "ים ומבחני השוואה מבחן המנה ומבחן האינטגרל ,מבחן השורש הרמוני וטורים עם לוגים pהטור ה־ כללי בחירה מהירים למבחן מתאים התכנסות בתנאי ולייבניץ ,התכנסות בהחלט השמת סוגריים וטעויות נפוצות :מטרת הדף ותרגול 7 הרצאה ,6 הכללים וההערות החשובות מהרצאה ,סיכום קצר ומדויק של המשפטים .- ללא דוגמאות חישוביות 7 :העיקרון המוביל אלא להחליט אם הוא מתכנס או מתבדר בעזרת ,”לחשב את סכום הטור“ לא"
+    ]
+  },
+  {
+    "topicId": "התכנסות-בתנאי",
+    "title": "התכנסות בתנאי",
+    "aliases": [
+      "התכנסות בתנאי",
+      "conditional convergence",
+      "conditionally convergent"
+    ],
+    "detectedInFiles": [
+      "past-exams-moedb-calculus2-2024-solutions",
+      "recitation-recitation-8-hebrew",
+      "recitation-recitation-8-hebrew-2",
+      "summerize-calculus2-week9-rtl-polished",
+      "summerize-שבוע-7-סיכום"
+    ],
+    "detectedInWeeks": [
+      7,
+      8,
+      9
+    ],
+    "confidence": 0.95,
+    "sourceSnippets": [
+      "wer series ∑∞ n=0 xn n+1 . 5.1.1. (5 points) Find the domain of convergence of the power series. Solution: Note that for x = −1 we obtain a conditionally convergent series as ∞ ∑ n=0 (−1)n n + 1 = ∞ ∑ n=1 (−1)n−1 n = ∞ ∑ n=1 (−1)n+1 n = Leibniz and ∞ ∑ n=0 |(−1)n| n + 1 = ∞ ∑ n=0 1 n + 1 = ∞ ∑ n=1 1 n Harmonic = ∞ Thus, the point x = −1 is an endpoint of the domain of convergence,",
+      "תרגול 8 היום: התכנסות בהחלט, התכנסות בתנאי. • טור לייבניץ. • השמת סוגריים. • תזכורת: התכנסות בהחלט: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי . ∞ ∑ n=k | an |< ∞ מתכנס בהחלט אם ∞ ∑ n=k an נאמר שהטור משפט )מבחן התכנסות בהחלט(: סדרה של מספרים ממשיים. (an",
+      "תרגול 8 היום: התכנסות בהחלט, התכנסות בתנאי. • טור לייבניץ. • השמת סוגריים. • תזכורת: התכנסות בהחלט: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי . ∞ ∑ n=k | an |< ∞ מתכנס בהחלט אם ∞ ∑ n=k an נאמר שהטור משפט )מבחן התכנסות בהחלט(: סדרה של מספרים ממשיים. (an",
+      "נס בהחלט לכל x ∈ ℝ . x = x₀ ± R :קצוות .חייבים לבדוק כל קצה בנפרד כתרגיל טורים רגיל .אין כלל קבוע :חשוב .בתוך הרדיוס הטור מתכנס בהחלט תמיד .התכנסות בתנאי יכולה לקרות רק בקצוות נוסחאות לחישוב 3§ R קושי־הדמר — מבחן השורש L = lim(n→∞) ⁿ√|aₙ| L = 0 → R = ∞ | L = ∞ → R = 0 | 0 < L < ∞ → R = 1/L מבחן המנה L = lim(n→∞) |aₙ₊₁ / aₙ| :אותם חוקים בדיוק L=0→R=∞ , L=∞→R=0 , 0<L<∞→R=1",
+      "יס מהרצאה טורים אי־שליליים ומבחני השוואה מבחן המנה ומבחן האינטגרל ,מבחן השורש הרמוני וטורים עם לוגים pהטור ה־ כללי בחירה מהירים למבחן מתאים התכנסות בתנאי ולייבניץ ,התכנסות בהחלט השמת סוגריים וטעויות נפוצות :מטרת הדף ותרגול 7 הרצאה ,6 הכללים וההערות החשובות מהרצאה ,סיכום קצר ומדויק של המשפטים .- ללא דוגמאות חישוביות 7 :העיקרון המוביל אלא להחליט אם הוא מתכנס או מתבדר בעזרת"
+    ]
+  },
+  {
+    "topicId": "טור-טיילור",
+    "title": "טור טיילור",
+    "aliases": [
+      "טור טיילור",
+      "taylor series",
+      "Taylor"
+    ],
+    "detectedInFiles": [
+      "past-exams-moeda-2022-eng-solution",
+      "past-exams-moeda-2023-eng-sol",
+      "past-exams-moeda-calculus2-2024-solution",
+      "past-exams-moeda-calculus2-2025-solution",
+      "past-exams-moedb-2023-eng-sol"
+    ],
+    "detectedInWeeks": [],
+    "confidence": 0.95,
+    "sourceSnippets": [
+      "- 3 3. (25 points) (a) (19 points) i. (3 points) Let f : R → R be a function that is twice differentiable at x0 = 0. Define the terms: the Taylor polynomial and the Taylor remainder of order 2 of f about 0. Solution: The Taylor polynomial of order 2 of f about 0 is defined as T2(x) = f (0) + f ′(0)x + f ′′(0) 2 x2. The Taylor remainder of order 2 of f about 0 is",
+      "2. (25 points) (a) (17 points) i. (2 points) Let x0 ∈ R and let f be a function that is differentiable ∞ times at x0. Define the term: the Taylor series of f about x0. Solution: The Taylor series of f about x0 is defined as T f (x) = ∞ ∑ n=0 f (n)(x0) n! · (x − x0)n ii. (10 points) Find the Taylor series about x0 = 0 of the function f (x) =    arctan x x x",
+      "e have f (x) ≥ f (0) = 0 ⇒ ex ≥ 1 + x + x2 2 . An alternative solution: first, for x = 0 the inequality holds as an equality. Let x > 0. By Taylor’s remainder formula, there exists a point 0 < c < x such that R2(x) = f (3)(c) 3! x3 = ec 6 x3 > 0 Note that the Taylor polynomial centered at x0 = 0 of order 2 is T2(x) = 1 + x + x2 2 . Thus ex = T2(x) + R2(x) > T2(x)",
+      ". (13 points) Consider the function f : R → R defined by f (x) =    arctan x x x , 0 1 x = 0 ∀x ∈ R 3.1.1. (9 points) Find the Taylor series about x0 = 0 of f and find its domain of convergence. Solution: We know that arctan(x) = P∞ n=0 (−1)n x2n+1 2n+1 = x − x3 3 + x5 5 − . . . for every −1 ≤ x ≤ 1. Dividing both sides by x, then for every −1 ≤ x ≤ 1 such t",
+      "bsolutely for x = x2. Solution: See lectures. (b) (10 points) Let f : R → R be a function that is infinitely differentiable. Let T f be the Taylor series of f about x0 = 0. Suppose that there exists an M > 0 such that ∣∣∣ f (n)(x)∣∣∣ ≤ M for every n ∈ N and for every x ∈ R. Prove that f (x) = T f (x) for every x ∈ R. Solution: Let x ∈ R. If x = 0, then T f (x) = f (0) +"
+    ]
+  },
+  {
+    "topicId": "טורי-חזקות",
+    "title": "טורי חזקות",
+    "aliases": [
+      "טור חזקות",
+      "טורי חזקות",
+      "power series",
+      "power-series"
+    ],
+    "detectedInFiles": [
+      "past-exams-formula-sheets-2025",
+      "past-exams-moeda-2022-eng-solution",
+      "past-exams-moeda-2023-eng-sol",
+      "past-exams-moeda-calculus2-2024-solution",
+      "past-exams-moeda-calculus2-2025-solution",
+      "past-exams-moedb-2022-solutions",
+      "past-exams-moedb-2023-eng-sol",
+      "past-exams-moedb-calculus2-2024-solutions",
+      "past-exams-moedb-calculus2-2025-solutions",
+      "recitation-recitation-9-hebrew",
+      "summerize-calculus2-week9-rtl-polished"
+    ],
+    "detectedInWeeks": [
+      9
+    ],
+    "confidence": 0.95,
+    "sourceSnippets": [
+      "> 1 ∞ p ≤ 1 h f (x) g(x) i′ = f ′(x)g(x)−g′(x) f (x) g2(x) R 1 0 dx xp =    1 1−p p < 1 ∞ p ≥ 1 h f −1(y)i′ = 1 f ′( f −1(y)) Power series T f (x) = P∞ n=0 f (n)(x0) n! (x − x0)n RN (x) = f (x) − TN (x) = f (N+1)(c) (N+1)! (x − x0)N+1 R = 1 limn→∞ n√|an| = limn→∞ an an+1 R = 1 limn→∞ |an+1| |an| = limn→∞ |an| |an+1| 1 1−x = P∞ n=0 xn, |x| < 1 ln(1 + x) = P",
+      "et x0 ∈ R and let (an)∞ n=0 be a sequence of real numbers. (a) (15 points) Let x1, x2 ∈ R such that |x2 − x0| < |x1 − x0|. Suppose that the power series ∑∞ n=0 an(x − x0)n converges at x = x1. Prove that the power series ∑∞ n=0 an(x − x0)n converges absolutely at x = x2. (b) (3 points) Define the term: The convergence radius of the power series ∑∞ n=0 an(x − x0)n. Note:",
+      "x ≤ 1 such that x , 0. As f (0) = 1 we conclude that f (x) = 1 − x2 3 + x4 5 − . . . for every −1 ≤ x ≤ 1. By the theorem of uniqueness of power series, we conclude that the Taylor series of f is T f (x) = 1 − x2 3 + x4 5 − . . . and the range of convergence is [−1, 1]. iii. (5 points) Compute the value of f (10)(0). Solution: We have f (10)(0) 10! = − 1 11 (the coeffi",
+      ") dt = ∫ π 2 0 cos(t) dt = [sin(t)] π 2 0 = 1 2. (25 points) 2.1. (18 points) 2.1.1. (5 points) Prove that the domain of convergence of the power series ∑∞ n=1 (−1)n+1 xn n is the interval (−1, 1]. Solution: We compute the convergence radius using the root formula, R = lim n→∞ 1 n √|an| = lim n→∞ 1 n √ 1 n = lim n→∞ n √n = 1 Thus the series converges for every −1 < x <",
+      "1, it follows that for every −1 ≤ x ≤ 1 we have f (x) = 1 − x2 3 + x4 5 − · · · = ∞ X n=0 (−1)n x2n 2n + 1 By the theorem of uniqueness of power series, we conclude that the Taylor series of f is T f (x) = P∞ n=0 (−1)n x2n 2n+1 and that the range of convergence is [−1, 1]. 2 -- 2 of 7 -- 3.1.2. (4 points) Compute the value of f (10)(0). Solution: As f (x) = P∞ n=0 (−"
+    ]
+  },
+  {
+    "topicId": "טורים",
+    "title": "טורים",
+    "aliases": [
+      "טור",
+      "טורים",
+      "series",
+      "sum",
+      "סכום"
+    ],
+    "detectedInFiles": [
+      "hw-exercise-1-solution",
+      "hw-exercise-2-solution",
+      "hw-exercise-3-solution",
+      "hw-exercise-4-solution",
+      "hw-exercise-5-solution",
+      "hw-exercise-6-solution",
+      "hw-exercise-7-solution",
+      "lecture-lecture-5-group-2-calculus-2-2026",
+      "lecture-lecture-6-group-2-calculus-2-2026",
+      "lecture-lecture-7-group-2-calculus-2-2026",
+      "lecture-lecture-8-group-1-calculus-2-2026",
+      "lecture-lecture-9-group-2-calculus-2-2026",
+      "past-exams-formula-sheets-2025",
+      "past-exams-moeda-2022-eng-solution",
+      "past-exams-moeda-2023-eng-sol",
+      "past-exams-moeda-calculus2-2024-solution",
+      "past-exams-moeda-calculus2-2025-solution",
+      "past-exams-moedb-2022-solutions",
+      "past-exams-moedb-2023-eng-sol",
+      "past-exams-moedb-calculus2-2024-solutions",
+      "past-exams-moedb-calculus2-2025-solutions",
+      "past-exams-simulation-calculus2-2025-solutions",
+      "recitation-recitation-6-hebrew",
+      "recitation-recitation-7-hebrew",
+      "recitation-recitation-8-hebrew",
+      "recitation-recitation-8-hebrew-2",
+      "recitation-recitation-9-hebrew",
+      "summerize-calculus2-week9-rtl-polished",
+      "summerize-סיכום-מאגד-הרצאות-4-5-חדו״א-2",
+      "summerize-שבוע-2-אינפי-2",
+      "summerize-שבוע-4-אינפי-2",
+      "summerize-שבוע-7-סיכום"
+    ],
+    "detectedInWeeks": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence": 0.95,
+    "sourceSnippets": [
+      "\udc53 (𝑥) − 𝑓 (𝑥0) 𝑥 − 𝑥0 L’ˆopital 0 0 = lim 𝑥→𝑥0 𝑓 ′ (𝑥) 1 = lim 𝑥→𝑥0 𝑓 ′ (𝑥) Explain student A’s mistake. Solution: Student A assumed that lim 𝑥→𝑥0 𝑓 ′ (𝑥) exists in the extended sense, which is one of the assumptions of L’Hˆopital’s rule, but this assumption doesn’t always hold. Indeed, the function defined by 𝑓 (𝑥) =    𝑥2 sin 1 \ud835",
+      "(𝑎𝑛)∞ 𝑛=1 is increasing, then (𝑎𝑛)∞ 𝑛=1 converges in the extended sense and lim 𝑛→∞ 𝑎𝑛 = sup {𝑎𝑛 : 𝑛 ∈ N} Solution: First we assume that (𝑎𝑛)∞ 𝑛=1 is bounded from above. As (𝑎𝑛)∞ 𝑛=1 is bounded from above (and clearly not empty), then by the least upper bound theorem, there exists an ¯𝑠 ∈ R such that ¯𝑠 = sup {𝑎𝑛 | 𝑛 ∈ N}. Let 𝜖 > 0. By",
+      "𝑔(𝑥) = 𝑓 (𝑥) 𝑥 , ∀𝑥 ∈ (0, ∞) Note that 𝑔 is differentiable by AOD and 𝑔′ (𝑥) = 𝑥 𝑓 ′ (𝑥) − 𝑓 (𝑥) 𝑥2 , ∀𝑥 ∈ (0, ∞) By the assumption, the function (ln(𝑥) − 1) 𝑓 (𝑥) is an anti-derivative of the function ln(𝑥) 𝑓 ′ (𝑥) on the interval (0, ∞), namely [(ln(𝑥) − 1) 𝑓 (𝑥))]′ = ln(𝑥) 𝑓 ′ (𝑥), ∀𝑥 ∈ (0, ∞) On the other hand, by Leibniz rule",
+      "𝑑𝑡 𝑡 = − [ln |𝑡|] √2 2 1 = − ln √2 2 ! = 1 2 ln(2) (b) Conclude that ln(2) 2𝑒 ≤ ∫ 𝜋 4 0 𝑒−𝑥 tan(𝑥) 𝑑𝑥 ≤ ln(2) 2 Note: you may assume that 𝜋 < 4. Solution: Note that the function 𝑒−𝑥 tan(𝑥) is continuous on \u00020, 𝜋 4 \u0003 by AOC, and therefore the definite integral ∫ 𝜋 4 0 𝑒−𝑥 tan(𝑥) 𝑑𝑥 exists. Consider the function defined by 𝑓 (𝑥) = 𝑒−𝑥 f",
+      "e prove the claim by induction on 𝑛. Base case: (𝑛 = 1) We already know that 𝐼0 = 𝜋 2 and that 𝐼1 = 1. Induction step Let 𝑛 ∈ N and assume the proposition holds for 2𝑛 − 1 and for 2𝑛 − 2. We prove that the proposition holds for 2𝑛 and for 2𝑛 + 1: 𝐼2𝑛 = 2𝑛 − 1 2𝑛 · 𝐼2𝑛−2 induction hypothesis = 2𝑛 − 1 2𝑛 · 2𝑛 − 3 2𝑛 − 2 · · · 3 4 · 1 2 · 𝜋 2"
+    ]
+  },
+  {
+    "topicId": "מבחן-ההשוואה",
+    "title": "מבחן ההשוואה",
+    "aliases": [
+      "מבחן ההשוואה",
+      "comparison test",
+      "limit comparison",
+      "השוואה גבולית"
+    ],
+    "detectedInFiles": [
+      "hw-exercise-5-solution",
+      "hw-exercise-6-solution",
+      "past-exams-moeda-2023-eng-sol",
+      "past-exams-moeda-calculus2-2025-solution",
+      "past-exams-moedb-2022-solutions",
+      "past-exams-moedb-calculus2-2024-solutions",
+      "past-exams-moedb-calculus2-2025-solutions",
+      "recitation-recitation-6-hebrew",
+      "recitation-recitation-7-hebrew",
+      "recitation-recitation-8-hebrew",
+      "recitation-recitation-8-hebrew-2",
+      "recitation-recitation-9-hebrew",
+      "summerize-שבוע-4-אינפי-2",
+      "summerize-שבוע-7-סיכום"
+    ],
+    "detectedInWeeks": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence": 0.95,
+    "sourceSnippets": [
+      "converges or diverges (a) ∫ ∞ 1 𝑒−𝑥 ln(𝑥) 𝑑𝑥. Solution: First, we clearly have 𝑒−𝑥 ln(𝑥) ≥ 0 for every 𝑥 ≥ 1. Thus we can use the comparison test. Note that lim 𝑥→∞ 𝑥𝑒−𝑥 = lim 𝑥→∞ 𝑥 𝑒𝑥 ? ∞ = lim 𝑥→∞ 1 𝑒𝑥 = 0 (★) We know that ln(1 + 𝑥) ≤ 𝑥 for every 𝑥 > −1 .Thus, ln(𝑥) ≤ 𝑥 − 1 ≤ 𝑥 for every 𝑥 ≥ 1. We now compute π ∞ 1 𝑒−𝑥 ln(𝑥) 𝑑𝑥 ≤ π ∞ 1 𝑥",
+      "𝑛=1 𝑛 − 1 𝑛2 = ∞ ∑ 𝑛=0 𝑛 (𝑛 + 1)2 = ∞ ∑ 𝑛=1 𝑛 (𝑛 + 1)2 ≥ ∞ ∑ 𝑛=1 𝑛 (𝑛 + 𝑛)2 = ∞ ∑ 𝑛=1 𝑛 4𝑛2 = 1 4 ∞ ∑ 𝑛=1 1 𝑛 = ∞ By the comparison test, ∑∞ 𝑛=1 𝑛2 −1 𝑛3 = ∞. Alternative solution 2: We have ∞ ∑ 𝑛=1 𝑛2 − 1 𝑛3 = ∞ ∑ 𝑛=1 ( 1 𝑛 − 1 𝑛3 ) = divergent − convergent = divergent (d) ∞ ∑ 𝑛=1 ln ( 2𝑛 + 3 2𝑛 + 1 ) Solution: We have ∞ ∑ 𝑛=1 ln ( 2𝑛 + 3",
+      "p (1 + (−1)n np ) = lim n→∞ 1 1 + (−1)n np = 1 and as 2p > 1 then the series ∑∞ n=2 1 n2p converges (tail of 2p-harmonic), and by the limit comparison test, the series ∑∞ n=2 1 n2p+(−1)nnp converges, and as it is nonnegative, it converges absolutely. By item (a), it follows that the series ∑∞ n=2 (−1)n np+(−1)n converges conditionally. 4. (25 points) (a) (9 points) Let a,",
+      "oper integral converges or diverges: Z ∞ 1 e−x ln(x) dx Solution: First, we clearly have e−x ln(x) ≥ 0 for every x ≥ 1. Thus we can use the comparison test. Note that lim x→∞ xe−x = lim x→∞ x ex ? ∞ = lim x→∞ 1 ex = 0 (⋆) We know that ln(1 + x) ≤ x for every x > −1 .Thus, ln(x) ≤ x − 1 ≤ x for every x ≥ 1. We now compute Z ∞ 1 e−x ln(x) dx ≤ Z ∞ 1 xe−x dx IBP = \u0002−xe−x\u0003∞ 1",
+      "ne’s Lemma and L’hopital’s rule, we get lim n→∞ sin ( f (n)) e f (n) − 1 = lim t→0 sin(t) et − 1 = lim t→0 cos(t) et = 1 Thus, by the limit comparison test, the series ∑∞ n=0 (e f (n) − 1) is convergent. -- 2 of 5 -- 3 3. (25 points) (a) (13 points) Let (an)∞ n=1 be a sequence of positive real numbers. Prove that the series ∑∞ n=1 an is convergent if and only if the seri"
+    ]
+  },
+  {
+    "topicId": "מבחן-המנה",
+    "title": "מבחן המנה",
+    "aliases": [
+      "מבחן המנה",
+      "ratio test",
+      "d'alembert",
+      "d’alembert"
+    ],
+    "detectedInFiles": [
+      "hw-exercise-7-solution",
+      "past-exams-moeda-calculus2-2025-solution",
+      "past-exams-moedb-calculus2-2025-solutions",
+      "recitation-recitation-7-hebrew",
+      "summerize-calculus2-week9-rtl-polished",
+      "summerize-שבוע-7-סיכום"
+    ],
+    "detectedInWeeks": [
+      7,
+      9
+    ],
+    "confidence": 0.95,
+    "sourceSnippets": [
+      "olution 1. Determine whether each of the following series converges or diverges: (a) ∞ ∑ 𝑛=1 43𝑛 (𝑛!)2 (2𝑛 + 1)2𝑛 Solution: We use the ratio test 𝐿 = lim 𝑛→∞ 𝑎𝑛+1 𝑎𝑛 = lim 𝑛→∞ [ 43𝑛+3 ( (𝑛+1)!)2 (2𝑛+3)2𝑛+2 ] 43𝑛 [ (𝑛!)2 (2𝑛+1)2𝑛 ] = lim 𝑛→∞ 64 · (2𝑛 + 1)2𝑛 · ((𝑛 + 1)!)2 (2𝑛 + 3)2𝑛+2 · (𝑛!)2 = lim 𝑛→∞ [ 64 · (𝑛 + 1)2 (2𝑛 + 3)2 · ( 2𝑛 + 1",
+      "· 4 · 6 · · · · · (4n) Hint: Ensure that you understand the pattern of the series’ terms before writing your solution. Solution: We use the ratio test, L = lim n→∞ an+1 an = lim n→∞ [(n + 1)!]2 2 · 4 · 6 · · · · · (4n) 2 · 4 · 6 · · · · · (4n) · (4n + 2)(4n + 4) · (n!)2 = lim n→∞ (n + 1)2 (4n + 2)(4n + 4) = lim n→∞ \u00101 + 1 n \u00112 \u00104 + 2 n \u0011 \u00104 + 4 n \u0011 = 1 16 4 -- 4 of 7",
+      "lute convergence: ∞ X n=2 sin(n) ln(n) · 1 · 4 · 7 · · · (3n − 2) 5n · n! ≤ ∞ X n=1 1 · 4 · 7 · · · (3n − 2) ln(n) · 5n · n! We now use the ratio test: L = lim n→∞ an+1 an = lim n→∞ h 1·4·7···(3n−2)·(3n+1) 5n+1·(n+1)!·ln(n+1) i h 1·4·7···(3n−2) 5n·n!·ln(n) i = lim n→∞ 1 · 4 · 7 · · · (3n − 2) · (3n + 1) · 5n · n! · ln(n) 5n+1 · (n + 1)! · 1 · 4 · 7 · · · (3n − 2) · ln",
+      "תרגול 7 היום: מבחן ההשוואה. • מבחן ההשוואה הגבולי. • מבחן השורש. • מבחן המנה. • מבחן האינטגרל. • תזכורת: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי .n ≥ k לכל an ≥ 0 הוא טור אי שלילי אם ∞ ∑ n=k an נאמר שהטור משפט )מבחן ההשוואה לטורים אי שליליים(: שתי סדרות של מספרים ממשיים. (bn)∞ n=k ו",
+      "אי יכולה לקרות רק בקצוות נוסחאות לחישוב 3§ R קושי־הדמר — מבחן השורש L = lim(n→∞) ⁿ√|aₙ| L = 0 → R = ∞ | L = ∞ → R = 0 | 0 < L < ∞ → R = 1/L מבחן המנה L = lim(n→∞) |aₙ₊₁ / aₙ| :אותם חוקים בדיוק L=0→R=∞ , L=∞→R=0 , 0<L<∞→R=1/L . 1 -- 1 of 6 -- :אזהרה הנוסחאות דורשות קיום של הגבול L — אם הגבול לא קיים . לא ניתן להשתמש .בנוסחה בכל תרגיל — סדר עבודה 4§ לזהות את x₀ ואת a"
+    ]
+  },
+  {
+    "topicId": "מבחן-השורש",
+    "title": "מבחן השורש",
+    "aliases": [
+      "מבחן השורש",
+      "root test",
+      "cauchy root"
+    ],
+    "detectedInFiles": [
+      "hw-exercise-7-solution",
+      "past-exams-moeda-calculus2-2024-solution",
+      "past-exams-moedb-calculus2-2025-solutions",
+      "recitation-recitation-7-hebrew",
+      "recitation-recitation-8-hebrew",
+      "recitation-recitation-8-hebrew-2",
+      "summerize-calculus2-week9-rtl-polished",
+      "summerize-שבוע-7-סיכום"
+    ],
+    "detectedInWeeks": [
+      7,
+      8,
+      9
+    ],
+    "confidence": 0.95,
+    "sourceSnippets": [
+      "1 16 It follows that 𝐿 < 1 and consequently, the series is convergent. (d) ∞ ∑ 𝑛=1 [ 𝑛2𝑛 · ( 1 − cos ( 1 𝑛 ))𝑛 ] Solution: We use the root test 𝐿 = lim 𝑛→∞ 𝑛 √𝑎𝑛 = lim 𝑛→∞ [ 𝑛2 · ( 1 − cos ( 1 𝑛 ))] = lim 𝑛→∞ 1 − cos ( 1 𝑛 ) ( 1 𝑛2 ) Heine = lim 𝑥→0 1 − cos(𝑥) 𝑥2 = lim 𝑥→0 [ − cos(𝑥) − 1 𝑥2 ] − 1 2 famous = 1 2 < 1 Thus, the series is convergen",
+      "(c) c . 3.2. (8 points) Find all values of α ≥ 0 for which the following series is convergent: ∑∞ n=1 ( αn+1 n+1 )n . Solution: We use the root test, L = lim n→∞ n √( αn + 1 n + 1 )n = lim n→∞ αn + 1 n + 1 = lim n→∞ α + 1 n 1 + 1 n = α It follows that the series converges for 0 ≤ α < 1 and diverges from the necessary criterion for α > 1. If α = 1 then we obtain the",
+      "onally. 3.2. (12 points) Find all the values of a ≥ 0 for which the following series converges: ∞ X n=2 n√n2 · an n1.5 Solution: We use the root test, L = lim n→∞ n √an = lim n→∞ n s n√n2 · an n1.5 = lim n→∞ n2√n2 · a \u0010 n √n\u00111.5 = a It follows that the series converges for 0 ≤ a < 1 and diverges for a > 1. For a = 1 the series is P∞ n=2 n√n2 n1.5 , and it converges w",
+      "תרגול 7 היום: מבחן ההשוואה. • מבחן ההשוואה הגבולי. • מבחן השורש. • מבחן המנה. • מבחן האינטגרל. • תזכורת: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי .n ≥ k לכל an ≥ 0 הוא טור אי שלילי אם ∞ ∑ n=k an נאמר שהטור משפט )מבחן ההשוואה לטורים אי שליליים(: שתי סדרות של מספרים ממשיים.",
+      "cos2 n · n 3n ] ≤ ∞ ∑ n=1 [( π 2 + 1 ) · 1 1 + 0 · n 3n ] = ∞ ∑ n=1 [( π 2 + 1 ) · n 3n ] = ( π 2 + 1 ) ∞ ∑ n=1 n 3n מתכנס. נראה זאת על ידי מבחן השורש ∞ ∑ n=1 n 3n הטור lim n→∞ n √ n 3n = lim n→∞ n 1 n 3 = AOL 1 3 < 1 ולכן ממבחן ההשוואה הטור ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ מתכנס בהחלט. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] מתכנס ולכן ה"
+    ]
+  },
+  {
+    "topicId": "נגזרות",
+    "title": "נגזרות",
+    "aliases": [
+      "נגזרת",
+      "נגזרות",
+      "derivative",
+      "differentiable",
+      "differentiation"
+    ],
+    "detectedInFiles": [
+      "hw-exercise-1-solution",
+      "hw-exercise-3-solution",
+      "hw-exercise-4-solution",
+      "hw-exercise-5-solution",
+      "past-exams-formula-sheets-2025",
+      "past-exams-list-of-theorems-quiz-2-2026",
+      "past-exams-list-of-theorems-quiz1",
+      "past-exams-moeda-2022-eng-solution",
+      "past-exams-moeda-2023-eng-sol",
+      "past-exams-moeda-calculus2-2024-solution",
+      "past-exams-moeda-calculus2-2025-solution",
+      "past-exams-moedb-2022-solutions",
+      "past-exams-moedb-2023-eng-sol",
+      "past-exams-moedb-calculus2-2024-solutions",
+      "past-exams-moedb-calculus2-2025-solutions",
+      "past-exams-simulation-calculus2-2025-solutions",
+      "recitation-recitation-3-hebrew",
+      "recitation-recitation-7-hebrew",
+      "summerize-שבוע-2-אינפי-2",
+      "summerize-שבוע-4-אינפי-2"
+    ],
+    "detectedInWeeks": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      7
+    ],
+    "confidence": 0.95,
+    "sourceSnippets": [
+      "t (★) = lim 𝑥→∞𝑒 ln [(𝑒2𝑥 −𝑥+1)] 𝑥 AOL = 𝑒2 (e) lim 𝑥→0 ( 𝑥+𝑒) 𝑥 −𝑒𝑥 𝑥2 . Solution: By AOD for every 𝑥 > −𝑒, (𝑥 + 𝑒)𝑥 is differentiable and ((𝑥 + 𝑒)𝑥 )′ = \u0010 𝑒𝑥 ln( 𝑥+𝑒) \u0011′ = (𝑥 + 𝑒)𝑥 · \u0010 ln (𝑥 + 𝑒) + 𝑥 𝑥 + 𝑒 \u0011 Now lim 𝑥→0 (𝑥 + 𝑒)𝑥 − 𝑒𝑥 𝑥2 0 0 = lim 𝑥→0 (𝑥 + 𝑒)𝑥 · ln (𝑥 + 𝑒) + 𝑥 𝑥+𝑒 \u0001 − 𝑒𝑥 2𝑥 0 0 = lim 𝑥→0 (𝑥 + 𝑒)𝑥 ·",
+      "(c) Conclude that for every − 𝜋 2 < 𝑥 < 𝜋 2 we have 1 + sin(𝑥) 1 − sin(𝑥) = 1 + tan 𝑥 2 \u0001 1 − tan 𝑥 2 \u0001 !2 . Solution: As two anti-derivatives of the same function differ by a constant on an interval, there exists a 𝐶 ∈ R such that for every − 𝜋 2 < 𝑥 < 𝜋 2 we have 1 2 ln 1 + sin(𝑥) 1 − sin(𝑥) = ln 1 + tan 𝑥 2 \u0001 1 − tan 𝑥 2 \u0001 + 𝐶. Plugging 𝑥 = 0 w",
+      "able on [𝑎, 𝜙 (𝑥)] for every 𝑥 ∈ R and thus, 𝐺 is well defined in R. (b) Prove that if 𝑓 is continuous at 𝑦0 = 𝜙 (𝑥0) and if 𝜙 is differentiable at 𝑥0, then 𝐺 is differentiable at 𝑥0 and 𝐺′ (𝑥0) = 𝑓 (𝜙 (𝑥0)) · 𝜙′ (𝑥0). Solution: Consider the function that is defined by ℎ (𝑦) = ∫ 𝑦 𝑎 𝑓 (𝑠) 𝑑𝑠 for every 𝑦 ∈ [𝑎, 𝑏]. As 𝑓 is continuous at 𝜙 (𝑥",
+      "∈ [𝑥1, 𝑥2] ⊆ [0, 2] or 𝑐 ∈ [𝑥2, 𝑥1] ⊆ [0, 2]) such that 𝑓 (𝑐) = 𝑟 ⇒ ∫ 2 0 𝑥2 𝑓 (𝑥) = 8· 𝑓 (𝑐) 3 . 4. Let 𝑓 : [1, ∞) → R be a differentiable positive function. Suppose that the improper integral ∫ ∞ 1 𝑓 ′ ( 𝑥) 𝑓 ( 𝑥) 𝑑𝑥 is convergent. Prove that lim 𝑥→∞ 𝑓 (𝑥) exists. Solution: We note that π ∞ 1 𝑓 ′ (𝑥) 𝑓 (𝑥) 𝑑𝑥 = [ln ( 𝑓 (𝑥))]∞ 1 = lim 𝑥→∞",
+      "∞ + c = ∞ c · ∞ = ∞, c > 0 c · ∞ = −∞, c < 0 1 0+ = ∞ 1 0− = −∞ √∞ = ∞ ∞∞ = ∞ ∞c = ∞, c > 0 ∞c = 0, c < 0 -- 1 of 2 -- 2 Integration and differentiation R xα dx = xα+1 α+1 + C , (α , −1) (xα)′ = αxα−1 R 1 x dx = ln |x| + C (ln x)′ = 1 x R cos x dx = sin x + C (sin x)′ = cos x R sin x dx = − cos x + C (cos x)′ = − sin x R 1 cos2 x dx = tan x + C (tan x)′ = 1 cos2 x R ax"
+    ]
+  },
+  {
+    "topicId": "סדרות",
+    "title": "סדרות",
+    "aliases": [
+      "סדרה",
+      "סדרות",
+      "sequence",
+      "sequences",
+      "a_n",
+      "an"
+    ],
+    "detectedInFiles": [
+      "hw-exercise-1-solution",
+      "hw-exercise-2-solution",
+      "hw-exercise-3-solution",
+      "hw-exercise-4-solution",
+      "hw-exercise-5-solution",
+      "hw-exercise-6-solution",
+      "hw-exercise-7-solution",
+      "lecture-lecture-1-group-1-calculus-2-2026",
+      "lecture-lecture-2-group-1-calculus-2-2026",
+      "lecture-lecture-3-group-2-calculus-2-2026",
+      "lecture-lecture-4-group-1-calculus-2-2026",
+      "lecture-lecture-5-group-2-calculus-2-2026",
+      "lecture-lecture-6-group-2-calculus-2-2026",
+      "lecture-lecture-7-group-2-calculus-2-2026",
+      "lecture-lecture-8-group-1-calculus-2-2026",
+      "lecture-lecture-9-group-2-calculus-2-2026",
+      "past-exams-formula-sheets-2025",
+      "past-exams-list-of-theorems-quiz-2-2026",
+      "past-exams-list-of-theorems-quiz1",
+      "past-exams-moeda-2022-eng-solution",
+      "past-exams-moeda-2023-eng-sol",
+      "past-exams-moeda-calculus2-2024-solution",
+      "past-exams-moeda-calculus2-2025-solution",
+      "past-exams-moedb-2022-solutions",
+      "past-exams-moedb-2023-eng-sol",
+      "past-exams-moedb-calculus2-2024-solutions",
+      "past-exams-moedb-calculus2-2025-solutions",
+      "past-exams-simulation-calculus2-2025-solutions",
+      "recitation-recitation-1-hebrew-1",
+      "recitation-recitation-2-hebrew",
+      "recitation-recitation-3-hebrew",
+      "recitation-recitation-4-hebrew",
+      "recitation-recitation-6-hebrew",
+      "recitation-recitation-7-hebrew",
+      "recitation-recitation-8-hebrew",
+      "recitation-recitation-8-hebrew-2",
+      "recitation-recitation-9-hebrew",
+      "summerize-calculus2-week9-rtl-polished",
+      "summerize-note-27-may-2026-2",
+      "summerize-שבוע-2-אינפי-2",
+      "summerize-שבוע-4-אינפי-2",
+      "summerize-שבוע-7-סיכום"
+    ],
+    "detectedInWeeks": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      27
+    ],
+    "confidence": 0.95,
+    "sourceSnippets": [
+      "ed sense (a) lim 𝑥→0 𝑥2 −𝑥 sin 𝑥 (𝑒𝑥 −1) ·ln(1+𝑥) . Solution: First note that lim 𝑥→0 𝑥 𝑒𝑥 − 1 0 0 = lim 𝑥→0 1 𝑒𝑥 AOL = 1 (★) and lim 𝑥→0 𝑥 − sin 𝑥 ln (1 + 𝑥) 0 0 = lim 𝑥→0 1 − cos 𝑥 \u0002 1 1+𝑥 \u0003 AOL = 0 (★★) It follows that lim 𝑥→0 𝑥2 − 𝑥 sin 𝑥 (𝑒𝑥 − 1) · ln (1 + 𝑥) = lim 𝑥→0 𝑥 (𝑥 − sin 𝑥) (𝑒𝑥 − 1) · ln (1 + 𝑥) = lim 𝑥→0 \u0014 𝑥",
+      "that appears prior to the words ’define the term’. You are not required to re-define terms that were already defined. Let (𝑎𝑛)∞ 𝑛=1 be a sequence of real numbers. (a) Define the term: the sequence (𝑎𝑛)∞ 𝑛=1 is not bounded from below and not bounded from above, without using any negation word. Solution: We say that the sequence (𝑎𝑛)∞ 𝑛=1 is not bounded from",
+      "6 -- 6 of 8 -- 6. Let 𝑎, 𝑏 ∈ R such that 𝑎 < 𝑏 and let 𝑓 be a function that is bounded on [𝑎, 𝑏]. (a) Suppose that there exists a sequence of partitions (𝑃𝑛)∞ 𝑛=1 of [𝑎, 𝑏] for which lim 𝑛→∞ h 𝑆 ( 𝑓 , 𝑃𝑛) − 𝑆 ( 𝑓 , 𝑃𝑛) i = 0 Prove that 𝑓 is integrable on [𝑎, 𝑏] and that lim 𝑛→∞ 𝑆 ( 𝑓 , 𝑃𝑛) = lim 𝑛→∞ 𝑆 ( 𝑓 , 𝑃𝑛) = ∫ 𝑏 𝑎 𝑓 (𝑥)",
+      "\u0012 1 𝑒 − 1 \u0013 = 2 − 2 𝑒 Alternative solution: Note that the function defined by 𝑓 (𝑥) = min {𝑒𝑥 , 𝑒−𝑥 , |sign(𝑥)|} ∀𝑥 ∈ [−1, 1] is an even function, since 𝑓 (−𝑥) = min {𝑒−𝑥 , 𝑒𝑥 , | sign (−𝑥) |} = min {𝑒𝑥 , 𝑒−𝑥 , | sign (𝑥) |} = 𝑓 (𝑥) ∀𝑥 ∈ [−1, 1] Therefore ∫ 1 −1 min {𝑒𝑥 , 𝑒−𝑥 , | sign (𝑥) |} 𝑑𝑥 = 2 ∫ 1 0 min {𝑒𝑥 , 𝑒−𝑥 , | s",
+      "5 -- 5 of 8 -- 6. For every 0 ≤ 𝑛 ∈ Z, consider the definite integral 𝐼𝑛 defined by 𝐼𝑛 = π 𝜋 2 0 sin𝑛 (𝑥) 𝑑𝑥 (a) Prove that the sequence (𝐼𝑛)∞ 𝑛=0 is well-defined. Solution: For every 𝑛 ∈ N the function 𝑓 (𝑥) = sin𝑛 (𝑥) for every 𝑥 ∈ [0, 𝜋 2 ] is continuous by AOC, and therefore integrable on [0, 𝜋 2 ]. It follows that the integral 𝐼𝑛 = ∫ 𝜋"
+    ]
+  },
+  {
+    "topicId": "פונקציות",
+    "title": "פונקציות",
+    "aliases": [
+      "פונקציה",
+      "פונקציות",
+      "function",
+      "functions"
+    ],
+    "detectedInFiles": [
+      "hw-exercise-1-solution",
+      "hw-exercise-2-solution",
+      "hw-exercise-3-solution",
+      "hw-exercise-4-solution",
+      "hw-exercise-5-solution",
+      "hw-exercise-6-solution",
+      "hw-exercise-7-solution",
+      "past-exams-list-of-theorems-quiz-2-2026",
+      "past-exams-list-of-theorems-quiz1",
+      "past-exams-moeda-2022-eng-solution",
+      "past-exams-moeda-2023-eng-sol",
+      "past-exams-moeda-calculus2-2024-solution",
+      "past-exams-moeda-calculus2-2025-solution",
+      "past-exams-moedb-2022-solutions",
+      "past-exams-moedb-2023-eng-sol",
+      "past-exams-moedb-calculus2-2024-solutions",
+      "past-exams-moedb-calculus2-2025-solutions",
+      "past-exams-simulation-calculus2-2025-solutions",
+      "recitation-recitation-1-hebrew-1",
+      "recitation-recitation-2-hebrew",
+      "recitation-recitation-4-hebrew",
+      "recitation-recitation-7-hebrew",
+      "summerize-calculus2-week9-rtl-polished",
+      "summerize-סיכום-מאגד-הרצאות-4-5-חדו״א-2",
+      "summerize-שבוע-2-אינפי-2",
+      "summerize-שבוע-4-אינפי-2",
+      "summerize-שבוע-7-סיכום"
+    ],
+    "detectedInWeeks": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      9
+    ],
+    "confidence": 0.95,
+    "sourceSnippets": [
+      "+ 𝑒 ( 𝑥+𝑒)2 \u0011 − 𝑒𝑥 2 AOL = 1 · (1 + 0)2 + 1 · 1 𝑒 + 1 𝑒 \u0001 − 1 2 = 2 𝑒 \u0001 2 = 1 𝑒 2 -- 2 of 9 -- 2. Let 𝑥0 ∈ R and let 𝑓 be a function that is defined on a neighborhood of 𝑥0. Suppose that 𝑓 is differentiable at every 𝑥 in the neighborhood for which 𝑥 ≠ 𝑥0. Let 𝐿 ∈ R and suppose also that lim 𝑥→𝑥0 𝑓 ′ (𝑥) = 𝐿. (a) Give an example of a functi",
+      "equence (𝑏𝑘 )∞ 𝑘=1 is increasing and bounded from above, and therefore is convergent. 3 -- 3 of 9 -- 3. (a) Let 𝑎 ∈ R and let 𝑓 be a function that is defined on [𝑎, ∞). Assume that lim 𝑥→∞ 𝑓 (𝑥) = ∞. Prove that for every sequence (𝑥𝑛)∞ 𝑛=1 such that lim 𝑛→∞𝑥𝑛 = ∞, we have lim 𝑛→∞ 𝑓 (𝑥𝑛) = ∞. Solution: Let (𝑥𝑛)∞ 𝑛=1 be a sequence such that lim",
+      "ery − 𝜋 2 < 𝑥 < 𝜋 2 we have 1 + sin(𝑥) 1 − sin(𝑥) = 1 + tan 𝑥 2 \u0001 1 − tan 𝑥 2 \u0001 !2 . Solution: As two anti-derivatives of the same function differ by a constant on an interval, there exists a 𝐶 ∈ R such that for every − 𝜋 2 < 𝑥 < 𝜋 2 we have 1 2 ln 1 + sin(𝑥) 1 − sin(𝑥) = ln 1 + tan 𝑥 2 \u0001 1 − tan 𝑥 2 \u0001 + 𝐶. Plugging 𝑥 = 0 we obtain 𝐶 = 0 and th",
+      "= ∫ 0 −1 𝑒𝑥 𝑑𝑥 + ∫ 1 0 𝑒−𝑥 𝑑𝑥 = [𝑒𝑥 ]0 −1 − [𝑒−𝑥 ]1 0 = 1 − 1 𝑒 − \u0012 1 𝑒 − 1 \u0013 = 2 − 2 𝑒 Alternative solution: Note that the function defined by 𝑓 (𝑥) = min {𝑒𝑥 , 𝑒−𝑥 , |sign(𝑥)|} ∀𝑥 ∈ [−1, 1] is an even function, since 𝑓 (−𝑥) = min {𝑒−𝑥 , 𝑒𝑥 , | sign (−𝑥) |} = min {𝑒𝑥 , 𝑒−𝑥 , | sign (𝑥) |} = 𝑓 (𝑥) ∀𝑥 ∈ [−1, 1] Therefore ∫ 1 −1",
+      "\udc61=𝑥−1,𝑑𝑡=𝑑 𝑥 = π 2 0 𝑑𝑡 𝑡 ≥ π 1 0 𝑑𝑡 𝑡 = ∞ Thus by the comparison test π 3 1 𝑥 ln (𝑥) 𝑑𝑥 = ∞ 2 -- 2 of 8 -- 3. Let 𝑓 be a function that is continuous on [0, 2]. Prove there exists a point 𝑐 ∈ [0, 2] such that π 2 0 𝑥2 𝑓 (𝑥)𝑑𝑥 = 8 · 𝑓 (𝑐) 3 Solution: First, as 𝑓 is continuous on [0, 2], then 𝑓 is integrable on [0, 2] and therefore ∫ 2 0 𝑥"
+    ]
+  },
+  {
+    "topicId": "רדיוס-התכנסות",
+    "title": "רדיוס התכנסות",
+    "aliases": [
+      "רדיוס התכנסות",
+      "radius of convergence",
+      "convergence radius"
+    ],
+    "detectedInFiles": [
+      "past-exams-moeda-2022-eng-solution",
+      "past-exams-moeda-2023-eng-sol",
+      "past-exams-moeda-calculus2-2024-solution",
+      "past-exams-moeda-calculus2-2025-solution",
+      "past-exams-moedb-2022-solutions",
+      "recitation-recitation-9-hebrew"
+    ],
+    "detectedInWeeks": [
+      9
+    ],
+    "confidence": 0.95,
+    "sourceSnippets": [
+      "0)n converges at x = x1. Prove that the power series ∑∞ n=0 an(x − x0)n converges absolutely at x = x2. (b) (3 points) Define the term: The convergence radius of the power series ∑∞ n=0 an(x − x0)n. Note: you do not have to define the term: a convergent series. Solution: The convergence radius of the power series ∑∞ n=0 an(x − x0)n is defined as R = sup   r ≥ 0 : ∞ ∑ n",
+      "there exists a k ∈ N such that for every n ≥ k we have n! ≥ an. Solution: Let a > 0. We have seen that the power series ∑∞ n=0 xn n! has a convergence radius R = ∞. Thus, the series converges at the point x = a and by the necessary criterion, we obtain that limn→∞ an n! = 0. It follows that there exists a k ∈ N for which an n! ≤ 1 for every n ≥ k. Multiplying by n! both side",
+      ". (5 points) Prove that the domain of convergence of the power series ∑∞ n=1 (−1)n+1 xn n is the interval (−1, 1]. Solution: We compute the convergence radius using the root formula, R = lim n→∞ 1 n √|an| = lim n→∞ 1 n √ 1 n = lim n→∞ n √n = 1 Thus the series converges for every −1 < x < 1 and diverges for every x > 1 and x < −1. We now check the endpoints: the series is conv",
+      "the coefficient of xn. It follows that f (10)(0) = − 10! 11 3.2. (12 points) Let (an)∞ n=0 be a sequence of real numbers, and let R be the convergence radius of the power series P∞ n=0 an xn. Suppose that R < 1. Prove or disprove the following statement: It holds that limn→∞ an , 0. Solution: True. ATC that lim n→∞an = 0. Thus, there exists an N1 ∈ N such that for every n ≥",
+      "=0 |an(x1 − x0)n| − s ∣∣∣∣∣∣∣ < \u000f (b) (15 points) Suppose that there exists an 0 ≤ L ≤ ∞ such that L = limn→∞ n √|an|. Let 0 ≤ R ≤ ∞ be the convergence radius of the power series ∑∞ n=0 an(x − x0)n. Prove that if 0 < L < ∞ then R = 1 L . (c) (7 points) Compute the value of the following definite integral: ∫ 1 0 x ln (1 + x2) dx Solution: Substituting t = ln (1 + x2) then dt ="
+    ]
+  },
+  {
+    "topicId": "רציפות",
+    "title": "רציפות",
+    "aliases": [
+      "רציפות",
+      "רציפה",
+      "continuous",
+      "continuity"
+    ],
+    "detectedInFiles": [
+      "hw-exercise-1-solution",
+      "hw-exercise-4-solution",
+      "hw-exercise-5-solution",
+      "hw-exercise-6-solution",
+      "past-exams-list-of-theorems-quiz-2-2026",
+      "past-exams-moeda-2022-eng-solution",
+      "past-exams-moeda-2023-eng-sol",
+      "past-exams-moeda-calculus2-2024-solution",
+      "past-exams-moeda-calculus2-2025-solution",
+      "past-exams-moedb-2022-solutions",
+      "past-exams-moedb-2023-eng-sol",
+      "past-exams-moedb-calculus2-2024-solutions",
+      "past-exams-moedb-calculus2-2025-solutions",
+      "past-exams-simulation-calculus2-2025-solutions",
+      "recitation-recitation-2-hebrew",
+      "recitation-recitation-4-hebrew",
+      "summerize-סיכום-מאגד-הרצאות-4-5-חדו״א-2",
+      "summerize-שבוע-2-אינפי-2",
+      "summerize-שבוע-4-אינפי-2"
+    ],
+    "detectedInWeeks": [
+      1,
+      2,
+      4,
+      5,
+      6
+    ],
+    "confidence": 0.95,
+    "sourceSnippets": [
+      "follows that lim 𝑥→0 𝑓 ′ (𝑥) = lim 𝑥→0 0 = 0 Note also that lim 𝑥→0 𝑓 (𝑥) = lim 𝑥→00 = 0 ≠ 1 = 𝑓 (0), which implies that 𝑓 is not continuous at 𝑥0 = 0 and therefore 𝑓 is not differentiable at 𝑥0 = 0. (b) Suppose, in addition, that 𝑓 is continuous at 𝑥0. Prove that 𝑓 is continuously differentiable at 𝑥0. Solution: As 𝑓 is continuous at 𝑥0, then lim \ud835",
+      "that ln(2) 2𝑒 ≤ ∫ 𝜋 4 0 𝑒−𝑥 tan(𝑥) 𝑑𝑥 ≤ ln(2) 2 Note: you may assume that 𝜋 < 4. Solution: Note that the function 𝑒−𝑥 tan(𝑥) is continuous on \u00020, 𝜋 4 \u0003 by AOC, and therefore the definite integral ∫ 𝜋 4 0 𝑒−𝑥 tan(𝑥) 𝑑𝑥 exists. Consider the function defined by 𝑓 (𝑥) = 𝑒−𝑥 for every 𝑥 ∈ \u00020, 𝜋 4 \u0003. Note that 𝑓 is decreasing on \u00020, 𝜋 4 \u0003 and ther",
+      "= π 2 0 𝑑𝑡 𝑡 ≥ π 1 0 𝑑𝑡 𝑡 = ∞ Thus by the comparison test π 3 1 𝑥 ln (𝑥) 𝑑𝑥 = ∞ 2 -- 2 of 8 -- 3. Let 𝑓 be a function that is continuous on [0, 2]. Prove there exists a point 𝑐 ∈ [0, 2] such that π 2 0 𝑥2 𝑓 (𝑥)𝑑𝑥 = 8 · 𝑓 (𝑐) 3 Solution: First, as 𝑓 is continuous on [0, 2], then 𝑓 is integrable on [0, 2] and therefore ∫ 2 0 𝑥2 𝑓 (𝑥)𝑑𝑥 is we",
+      "(𝑡 ) 𝑡 0 0 = lim 𝑡→0 2 sin(𝑡 ) cos(𝑡 ) 1 = 0, then the function defined by 𝑓 (𝑡) = sin2 (𝑡 ) 𝑡 for every 𝑡 > 0 has a removable discontinuity at 𝑡 = 0. Thus, the integral ∫ 1 𝑛 0 sin2 (𝑡 ) 𝑡 𝑑𝑡 is well-defined for every 𝑛 ∈ N. As sin(𝑡) ≤ 𝑡 for every 𝑡 > 0, then sin2 (𝑡 ) 𝑡 ≤ 𝑡 for every 𝑡 > 0. By the monotonicity of the definite integral (the p",
+      "le on [𝑎, 𝑏] Prove ∫ 𝑏 𝑎 𝑓 (𝑥) 𝑑𝑥 Δ ≤ ∫ 𝑏 𝑎 | 𝑓 (𝑥)| 𝑑𝑥. 3. Let 𝑎, 𝑏 ∈ R such that 𝑎 < 𝑏 and let 𝑓 be a function that is continuous on [𝑎, 𝑏]. Prove ∃𝑐 ∈ [𝑎, 𝑏] such that 𝑓 (𝑐) = 1 𝑏 − 𝑎 ∫ 𝑏 𝑎 𝑓 (𝑥) 𝑑𝑥. 4. Let 𝑎, 𝑏 ∈ R such that 𝑎 < 𝑏 and let 𝑓 be a function that is bounded on [𝑎, 𝑏]. Suppose 𝑓 is integrable on [𝑎, 𝑏] and co"
+    ]
+  },
+  {
+    "topicId": "פולינום-טיילור",
+    "title": "פולינום טיילור",
+    "aliases": [
+      "פולינום טיילור",
+      "taylor polynomial",
+      "Taylor polynomial"
+    ],
+    "detectedInFiles": [
+      "past-exams-moeda-2022-eng-solution",
+      "past-exams-moeda-2023-eng-sol",
+      "past-exams-moeda-calculus2-2024-solution"
+    ],
+    "detectedInWeeks": [],
+    "confidence": 0.6649999999999999,
+    "sourceSnippets": [
+      "- 3 3. (25 points) (a) (19 points) i. (3 points) Let f : R → R be a function that is twice differentiable at x0 = 0. Define the terms: the Taylor polynomial and the Taylor remainder of order 2 of f about 0. Solution: The Taylor polynomial of order 2 of f about 0 is defined as T2(x) = f (0) + f ′(0)x + f ′′(0) 2 x2. The Taylor remainder of order 2 of f about 0 is defined as",
+      ", and suppose that RN (x) = 0. i. (8 points) Prove that there exists a point x0 < c < x such that R(N+1) N (c) = 0. Solution: Let TN be the Taylor polynomial of order N around x0. As RN (t) = f (t) − TN (t) for every x0 ≤ t ≤ x then RN is N times differentiable on [x0, x] and R(N) N is continuous on [x0, x] by AOC and differentiable on (x0, x) by AOD. Also, R(k) N (x0) = f (",
+      "lity. Let x > 0. By Taylor’s remainder formula, there exists a point 0 < c < x such that R2(x) = f (3)(c) 3! x3 = ec 6 x3 > 0 Note that the Taylor polynomial centered at x0 = 0 of order 2 is T2(x) = 1 + x + x2 2 . Thus ex = T2(x) + R2(x) > T2(x) = 1 + x + x2 2 An alternative alternative solution: Let x ≥ 0. Then ex − 1 − x − x2 2 = ∞ ∑ n=0 xn n! − 1 − x − x2 2 = ∞ ∑ n=3 xn n"
+    ]
+  }
+]
