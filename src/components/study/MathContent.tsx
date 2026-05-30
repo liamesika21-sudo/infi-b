@@ -2,9 +2,10 @@ import katex from "katex";
 import "katex/dist/katex.min.css";
 import { preprocessMath } from "@/lib/math-text";
 
-// Matches any LaTeX-delimited span
 const SPLIT_RE = /(\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)|\$\$[\s\S]*?\$\$|\$[^$\n]+?\$)/g;
 const TEST_RE  = /^(\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)|\$\$[\s\S]*?\$\$|\$[^$\n]+?\$)$/;
+// A line that is ONLY a display-math block (possibly with surrounding whitespace)
+const DISPLAY_ONLY_RE = /^\s*(\\\[[\s\S]*?\\\]|\$\$[\s\S]*?\$\$)\s*$/;
 
 function renderKatexSafely(latex: string, displayMode: boolean): string | null {
   try {
@@ -24,11 +25,10 @@ function parseMathDelim(raw: string): { html: string; displayMode: boolean } | n
   return html ? { html, displayMode } : null;
 }
 
-function renderLine(rawLine: string) {
-  // Run auto-detection first, then split on LaTeX delimiters
+/** Render a single line that may contain Hebrew + inline math. */
+function renderInlineLine(rawLine: string) {
   const processed = preprocessMath(rawLine);
   const parts = processed.split(SPLIT_RE).filter(Boolean);
-
   return parts.map((part, i) => {
     if (TEST_RE.test(part)) {
       const result = parseMathDelim(part);
@@ -51,15 +51,38 @@ function renderLine(rawLine: string) {
   });
 }
 
+/**
+ * Full block renderer. Lines that are ONLY $$...$$ are rendered as centred
+ * display equations (LTR, full width). All other lines are rendered RTL with
+ * inline math support.
+ */
 export function MathContent({ text, className = "" }: { text: string; className?: string }) {
   const lines = text.split("\n");
   return (
     <div className={`math-content ${className}`} dir="rtl">
       {lines.map((line, li) => {
         if (!line.trim()) return <div key={li} className="h-1.5" />;
+
+        // Full-line display math → centred block, outside RTL flow
+        const displayMatch = line.match(DISPLAY_ONLY_RE);
+        if (displayMatch) {
+          const result = parseMathDelim(displayMatch[1].trim());
+          if (result) {
+            return (
+              <div
+                key={li}
+                dir="ltr"
+                className="math-display my-3"
+                dangerouslySetInnerHTML={{ __html: result.html }}
+              />
+            );
+          }
+        }
+
+        // Mixed Hebrew + inline math
         return (
-          <p key={li} className="my-0.5 leading-9">
-            {renderLine(line)}
+          <p key={li} className="my-1 leading-9" dir="rtl">
+            {renderInlineLine(line)}
           </p>
         );
       })}

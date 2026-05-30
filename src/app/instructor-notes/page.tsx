@@ -182,14 +182,9 @@ function IntuitionCard({ item }: { item: MaxInsight }) {
           <MathBlock content={item.formalStatement} />
         )}
 
-        {/* Order of growth */}
+        {/* Order of growth — rendered as display math */}
         {item.orderOfGrowth && (
-          <div
-            className="rounded-xl px-4 py-3 text-sm font-mono"
-            style={{ background: "var(--bg-subtle)", color: "var(--text-secondary)", direction: "ltr" }}
-          >
-            {item.orderOfGrowth}
-          </div>
+          <MathBlock content={item.orderOfGrowth} />
         )}
 
         {/* Max quote */}
