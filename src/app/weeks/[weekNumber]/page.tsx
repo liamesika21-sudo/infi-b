@@ -1,9 +1,10 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import type React from "react";
 import { readAnalysisData } from "@/lib/calculus2/analysis-reader";
 import { readGeneratedData } from "@/lib/calculus2/generated-data";
 import { StudyCallout } from "@/components/study/StudyCallout";
-import { MathContent, InlineMath } from "@/components/study/MathContent";
+import { MathContent } from "@/components/study/MathContent";
 import { ExamRelevanceBadge } from "@/components/study/Badges";
 import { ArrowRight, ChevronRight } from "lucide-react";
 
@@ -24,6 +25,19 @@ export default async function WeekDetailPage({ params }: Props) {
   const lectureSummary = analysis.lectureSummaries.find((l) => l.lectureNumber === weekNum);
   const recitationSummary = analysis.recitationSummaries.find((r) => r.weekNumber === weekNum);
   const homeworkPriority = analysis.homeworkPriorityMap.find((h) => h.weekNumber === weekNum);
+  const expectedPracticedLecture = weekNum > 1 ? weekNum - 1 : null;
+  const lectureExtract = lectureSummary?.sourceFileId
+    ? generatedData.extractedTextIndex.find((record) => record.sourceFileId === lectureSummary.sourceFileId)
+    : undefined;
+  const summaryExtract = lectureSummary?.summarySourceFile
+    ? generatedData.extractedTextIndex.find((record) => record.filename === lectureSummary.summarySourceFile)
+    : undefined;
+  const lectureQuotes = buildLectureQuoteBlocks({
+    lectureText: lectureExtract?.extractedText,
+    lectureFilename: lectureSummary?.filename ?? null,
+    summaryText: summaryExtract?.extractedText,
+    summaryFilename: lectureSummary?.summarySourceFile ?? null,
+  });
   const recitationQuestions = analysis.questionBank
     .filter((q) => {
       const rec = analysis.recitationAnalysis.find((r) => r.sourceFileId === q.sourceFileId);
@@ -76,12 +90,20 @@ export default async function WeekDetailPage({ params }: Props) {
         )}
 
         {/* Recitation link label */}
-        {recitationSummary?.practicesLecture && (
-          <p className="mt-3 text-xs opacity-60">
-            תרגול {recitationSummary.recitationNumber} מתרגל הרצאה {recitationSummary.practicesLecture}
-          </p>
-        )}
+        <p className="mt-3 text-xs opacity-70">
+          הרצאה {weekNum}: חומר חדש ·{" "}
+          תרגול {weekNum}:{" "}
+          {expectedPracticedLecture ? `מתרגל הרצאה ${expectedPracticedLecture}` : "פתיחת קורס / יישור קו"} ·{" "}
+          מטלה {weekNum}: מיושרת לשבוע
+        </p>
       </div>
+
+      <WeekInferenceDiagram
+        weekNumber={weekNum}
+        lectureSummary={lectureSummary}
+        recitationSummary={recitationSummary}
+        homeworkPriority={homeworkPriority}
+      />
 
       {/* ── 3-column layout on desktop ── */}
       <div className="grid gap-5 lg:grid-cols-3 mb-6">
@@ -139,11 +161,21 @@ export default async function WeekDetailPage({ params }: Props) {
         {/* ─ Recitation ─ */}
         <Column
           title="✏️ תרגול"
-          subtitle={recitationSummary ? `תרגול ${recitationSummary.recitationNumber}` : ""}
+          subtitle={
+            recitationSummary
+              ? `תרגול ${recitationSummary.recitationNumber} · מתרגל הרצאה ${expectedPracticedLecture ?? "פתיחה"}`
+              : ""
+          }
           accentColor="var(--teal)"
         >
           {recitationSummary ? (
             <div className="space-y-5">
+              {expectedPracticedLecture !== recitationSummary.practicesLecture && expectedPracticedLecture !== null && (
+                <StudyCallout variant="info">
+                  לפי מבנה הקורס, תרגול {weekNum} אמור לתרגל את הרצאה {expectedPracticedLecture}. הניתוח הקיים סומן כהרצאה {recitationSummary.practicesLecture ?? "לא ידועה"}, ולכן מוצג כאן הכלל הפדגוגי המלא.
+                </StudyCallout>
+              )}
+
               {/* What was practiced */}
               <p className="text-sm leading-7" style={{ color: "var(--text-secondary)" }}>
                 {recitationSummary.whatWasPracticed}
@@ -200,6 +232,8 @@ export default async function WeekDetailPage({ params }: Props) {
           )}
         </Column>
       </div>
+
+      <LectureSourceQuotes quotes={lectureQuotes} />
 
       {/* ── Recitation questions ── */}
       {recitationQuestions.length > 0 && (
@@ -314,9 +348,12 @@ function Column({
 
 function SectionLabel({ label }: { label: string }) {
   return (
-    <p className="text-xs font-bold uppercase tracking-widest" style={{ color: "var(--text-muted)" }}>
-      {label}
-    </p>
+    <div className="mb-2 flex items-center gap-2">
+      <span className="h-2 w-2 rounded-full" style={{ background: "var(--teal)" }} />
+      <p className="text-[13px] font-black tracking-wide" style={{ color: "var(--text-primary)" }}>
+        {label}
+      </p>
+    </div>
   );
 }
 
@@ -446,4 +483,267 @@ function EmptyCol({ text }: { text: string }) {
   );
 }
 
-import type React from "react";
+type WeekInferenceProps = {
+  weekNumber: number;
+  lectureSummary:
+    | {
+        mainTopics: string[];
+        keyDefinitions: string[];
+        keyTheorems: string[];
+        keyFormulas: string[];
+        examNotes: string[];
+      }
+    | undefined;
+  recitationSummary:
+    | {
+        keyTechniques: string[];
+        conclusions: string[];
+        mustPractice: string[];
+      }
+    | undefined;
+  homeworkPriority:
+    | {
+        questions: Array<{
+          topicIds: string[];
+          whyItMatters: string;
+          importanceLevel: string;
+        }>;
+      }
+    | undefined;
+};
+
+function WeekInferenceDiagram({
+  weekNumber,
+  lectureSummary,
+  recitationSummary,
+  homeworkPriority,
+}: WeekInferenceProps) {
+  const nodes = buildInferenceNodes(lectureSummary, recitationSummary, homeworkPriority);
+
+  if (nodes.length === 0) return null;
+
+  return (
+    <section
+      className="mb-6 overflow-hidden rounded-2xl border bg-white shadow-sm"
+      style={{ borderColor: "var(--border)" }}
+    >
+      <div
+        className="border-b px-5 py-4"
+        style={{ borderColor: "var(--border)", background: "linear-gradient(90deg, var(--navy-light), #fff)" }}
+      >
+        <p className="text-xs font-bold uppercase tracking-[0.18em]" style={{ color: "var(--text-muted)" }}>
+          תרשים שבוע {weekNumber}
+        </p>
+        <h2 className="mt-1 text-lg font-black" style={{ color: "var(--text-primary)" }}>
+          מה ההגדרות והמשפטים מאפשרים להסיק
+        </h2>
+      </div>
+
+      <div className="p-5">
+        <div className="grid gap-3 md:grid-cols-4">
+          {nodes.map((node, index) => (
+            <div key={`${node.title}-${index}`} className="relative">
+              <InferenceNode node={node} />
+              {index < nodes.length - 1 && (
+                <div className="hidden md:block absolute left-[-18px] top-1/2 -translate-y-1/2 text-xl font-black" style={{ color: "var(--teal)" }}>
+                  ←
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+type InferenceNodeData = {
+  title: string;
+  label: string;
+  detail: string;
+  tone: "navy" | "green" | "teal" | "amber";
+};
+
+function InferenceNode({ node }: { node: InferenceNodeData }) {
+  const toneMap = {
+    navy: { bg: "var(--navy-light)", border: "var(--navy-border)", color: "var(--navy)" },
+    green: { bg: "var(--green-light)", border: "var(--green-border)", color: "var(--green)" },
+    teal: { bg: "rgba(11, 114, 133, 0.08)", border: "var(--teal-border)", color: "var(--teal)" },
+    amber: { bg: "var(--amber-light)", border: "var(--amber-border)", color: "var(--amber-mid)" },
+  }[node.tone];
+
+  return (
+    <article
+      className="h-full rounded-xl border p-4"
+      style={{ background: toneMap.bg, borderColor: toneMap.border }}
+    >
+      <p className="text-xs font-black uppercase tracking-widest" style={{ color: toneMap.color }}>
+        {node.title}
+      </p>
+      <div className="mt-2 min-h-12">
+        <MathContent text={node.label} className="text-sm font-bold" />
+      </div>
+      <p className="mt-3 text-xs leading-6" style={{ color: "var(--text-secondary)" }}>
+        {node.detail}
+      </p>
+    </article>
+  );
+}
+
+function buildInferenceNodes(
+  lectureSummary: WeekInferenceProps["lectureSummary"],
+  recitationSummary: WeekInferenceProps["recitationSummary"],
+  homeworkPriority: WeekInferenceProps["homeworkPriority"],
+): InferenceNodeData[] {
+  if (!lectureSummary && !recitationSummary && !homeworkPriority) return [];
+
+  const definition = firstMeaningful(lectureSummary?.keyDefinitions);
+  const theorem = firstMeaningful(lectureSummary?.keyTheorems);
+  const formula = firstMeaningful(lectureSummary?.keyFormulas);
+  const technique = firstMeaningful(recitationSummary?.keyTechniques);
+  const conclusion =
+    firstMeaningful(recitationSummary?.conclusions) ??
+    firstMeaningful(lectureSummary?.examNotes) ??
+    homeworkPriority?.questions.find((question) => question.importanceLevel !== "low")?.whyItMatters;
+
+  return [
+    definition && {
+      title: "הגדרה",
+      label: definition,
+      detail: "מגדירה את האובייקט שעליו מותר לעבוד בהמשך השבוע.",
+      tone: "green" as const,
+    },
+    theorem && {
+      title: "משפט",
+      label: theorem,
+      detail: "נותן תנאים שמאפשרים להסיק תוצאה בלי לפתור מאפס.",
+      tone: "navy" as const,
+    },
+    (formula ?? technique) && {
+      title: formula ? "נוסחה" : "טכניקה",
+      label: formula ?? technique ?? "",
+      detail: formula ? "הופכת את המשפט לכלי חישוב/זיהוי בתרגילים." : "זה הצעד הפרקטי שמתרגלים על בסיס הרצאה קודמת.",
+      tone: "teal" as const,
+    },
+    conclusion && {
+      title: "מה מסיקים",
+      label: conclusion,
+      detail: "זו המסקנה שצריך לקחת לתרגול, מטלות ומבחני עבר.",
+      tone: "amber" as const,
+    },
+  ].filter(Boolean) as InferenceNodeData[];
+}
+
+function firstMeaningful(items: string[] | undefined): string | undefined {
+  return items?.find((item) => item.trim().length > 0);
+}
+
+type QuoteBlock = {
+  kind: string;
+  source: string;
+  text: string;
+};
+
+function LectureSourceQuotes({ quotes }: { quotes: QuoteBlock[] }) {
+  return (
+    <section
+      className="mb-6 overflow-hidden rounded-2xl border bg-white shadow-sm"
+      style={{ borderColor: "var(--border)" }}
+    >
+      <div
+        className="border-b px-5 py-4"
+        style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}
+      >
+        <p className="text-xs font-bold uppercase tracking-[0.18em]" style={{ color: "var(--text-muted)" }}>
+          ציטוט מקור
+        </p>
+        <h2 className="mt-1 text-lg font-black" style={{ color: "var(--text-primary)" }}>
+          הגדרות ומשפטים לפי סדר הופעה בהרצאה
+        </h2>
+        <p className="mt-1 text-xs leading-6" style={{ color: "var(--text-muted)" }}>
+          מוצג רק טקסט שחולץ בפועל מהקבצים. אם OCR של ההרצאה לא קריא, המערכת מציגה מקור סיכום מקושר ולא ממציאה ניסוח.
+        </p>
+      </div>
+
+      {quotes.length === 0 ? (
+        <div className="p-5">
+          <StudyCallout variant="warning">
+            לא נמצאו ציטוטי הגדרה/משפט קריאים לשבוע זה מתוך הטקסט המחולץ. צריך OCR איכותי יותר או קובץ מקור טקסטואלי.
+          </StudyCallout>
+        </div>
+      ) : (
+        <div className="divide-y" style={{ borderColor: "var(--border)" }}>
+          {quotes.map((quote, index) => (
+            <article key={`${quote.kind}-${index}`} className="p-5">
+              <div className="mb-3 flex flex-wrap items-center gap-2">
+                <span className="rounded-full px-3 py-1 text-xs font-black" style={{ background: "var(--navy-light)", color: "var(--navy)" }}>
+                  {index + 1}. {quote.kind}
+                </span>
+                <span className="text-xs" style={{ color: "var(--text-muted)" }}>
+                  מקור: {quote.source}
+                </span>
+              </div>
+              <div
+                className="rounded-xl border-r-4 p-4"
+                style={{ borderColor: "var(--teal)", background: "var(--bg-subtle)" }}
+              >
+                <MathContent text={quote.text} className="text-sm" />
+              </div>
+            </article>
+          ))}
+        </div>
+      )}
+    </section>
+  );
+}
+
+function buildLectureQuoteBlocks({
+  lectureText,
+  lectureFilename,
+  summaryText,
+  summaryFilename,
+}: {
+  lectureText?: string;
+  lectureFilename: string | null;
+  summaryText?: string;
+  summaryFilename: string | null;
+}): QuoteBlock[] {
+  const lectureQuotes = extractMarkedQuotes(lectureText, lectureFilename ?? "הרצאה");
+  if (lectureQuotes.length > 0) return lectureQuotes.slice(0, 12);
+
+  const summaryQuotes = extractMarkedQuotes(summaryText, summaryFilename ?? "סיכום מקושר");
+  return summaryQuotes.slice(0, 12);
+}
+
+function extractMarkedQuotes(rawText: string | undefined, source: string): QuoteBlock[] {
+  if (!rawText) return [];
+
+  const cleaned = rawText
+    .replace(/--\s*\d+\s+of\s+\d+\s*--/g, "\n")
+    .replace(/\t/g, " ")
+    .replace(/[ ]{2,}/g, " ")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+
+  if (!/[א-ת]/.test(cleaned)) return [];
+
+  const markerPattern = /(הגדרה|משפט|טענה|למה|מסקנה)\s*(?:[-–—:]|\n)?/g;
+  const matches = [...cleaned.matchAll(markerPattern)];
+  const quotes: QuoteBlock[] = [];
+
+  for (let index = 0; index < matches.length; index += 1) {
+    const match = matches[index];
+    const start = match.index ?? 0;
+    const next = matches[index + 1]?.index ?? Math.min(cleaned.length, start + 1200);
+    const block = cleaned.slice(start, Math.min(next, start + 1200)).trim();
+    if (block.length < 40) continue;
+
+    quotes.push({
+      kind: match[1],
+      source,
+      text: block,
+    });
+  }
+
+  return quotes;
+}
