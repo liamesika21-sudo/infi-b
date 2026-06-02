@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { validateCookieForRequest } from "@/lib/simple-auth";
 
+export const runtime = "nodejs";
+
 export async function GET(request: Request) {
   const auth = await validateCookieForRequest(request);
 

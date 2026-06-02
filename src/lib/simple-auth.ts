@@ -20,6 +20,11 @@ type AuthFile = {
   users: Record<string, AuthUserRecord>;
 };
 
+type RedisConfig = {
+  url: string;
+  token: string;
+};
+
 export type AuthCheckResult =
   | { ok: true; email: string; boundIp: string }
   | { ok: false; reason: "missing" | "invalid" | "ip_mismatch" };
@@ -50,6 +55,21 @@ function verifySignature(value: string, signature: string): boolean {
 function getForwardedIp(value: string | null): string | null {
   if (!value) return null;
   return value.split(",")[0]?.trim() || null;
+}
+
+function getRedisConfig(): RedisConfig | null {
+  const url = process.env.UPSTASH_REDIS_REST_URL ?? process.env.KV_REST_API_URL;
+  const token = process.env.UPSTASH_REDIS_REST_TOKEN ?? process.env.KV_REST_API_TOKEN;
+
+  return url && token ? { url: url.replace(/\/$/, ""), token } : null;
+}
+
+function shouldUseRedisStore(): boolean {
+  return Boolean(getRedisConfig()) || process.env.VERCEL === "1";
+}
+
+function getUserKey(email: string): string {
+  return `auth:user:${normalizeEmail(email)}`;
 }
 
 export function getClientIp(request: Request): string {
@@ -121,6 +141,50 @@ async function readAuthFile(): Promise<AuthFile> {
   }
 }
 
+async function getRedisUser(email: string): Promise<AuthUserRecord | null> {
+  const redis = getRedisConfig();
+  if (!redis) {
+    throw new Error(
+      "Missing Redis env vars. Set UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN on Vercel."
+    );
+  }
+
+  const response = await fetch(`${redis.url}/get/${encodeURIComponent(getUserKey(email))}`, {
+    headers: { Authorization: `Bearer ${redis.token}` },
+  });
+
+  if (!response.ok) {
+    throw new Error(`Redis GET failed with ${response.status}`);
+  }
+
+  const data = (await response.json()) as { result?: string | null };
+  if (!data.result) return null;
+
+  return JSON.parse(data.result) as AuthUserRecord;
+}
+
+async function setRedisUser(user: AuthUserRecord): Promise<void> {
+  const redis = getRedisConfig();
+  if (!redis) {
+    throw new Error(
+      "Missing Redis env vars. Set UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN on Vercel."
+    );
+  }
+
+  const value = encodeURIComponent(JSON.stringify(user));
+  const response = await fetch(
+    `${redis.url}/set/${encodeURIComponent(getUserKey(user.email))}/${value}`,
+    {
+      method: "POST",
+      headers: { Authorization: `Bearer ${redis.token}` },
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error(`Redis SET failed with ${response.status}`);
+  }
+}
+
 async function writeAuthFile(authFile: AuthFile): Promise<void> {
   await mkdir(path.dirname(AUTH_FILE_PATH), { recursive: true });
   const tempPath = `${AUTH_FILE_PATH}.tmp`;
@@ -157,7 +221,10 @@ export async function loginWithEmail(email: string, request: Request) {
   }
 
   const currentIp = getClientIp(request);
-  const existingUser = authFile.users[normalizedEmail];
+  const useRedisStore = shouldUseRedisStore();
+  const existingUser = useRedisStore
+    ? await getRedisUser(normalizedEmail)
+    : authFile.users[normalizedEmail];
 
   if (existingUser && existingUser.boundIp !== currentIp) {
     return {
@@ -168,7 +235,7 @@ export async function loginWithEmail(email: string, request: Request) {
   }
 
   const now = new Date().toISOString();
-  authFile.users[normalizedEmail] = {
+  const user: AuthUserRecord = {
     email: normalizedEmail,
     boundIp: existingUser?.boundIp ?? currentIp,
     firstLoginAt: existingUser?.firstLoginAt ?? now,
@@ -176,7 +243,12 @@ export async function loginWithEmail(email: string, request: Request) {
     loginCount: (existingUser?.loginCount ?? 0) + 1,
   };
 
-  await writeAuthFile(authFile);
+  if (useRedisStore) {
+    await setRedisUser(user);
+  } else {
+    authFile.users[normalizedEmail] = user;
+    await writeAuthFile(authFile);
+  }
 
   return {
     ok: true as const,

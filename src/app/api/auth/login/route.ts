@@ -5,6 +5,8 @@ import {
   loginWithEmail,
 } from "@/lib/simple-auth";
 
+export const runtime = "nodejs";
+
 export async function POST(request: Request) {
   let email = "";
 
@@ -15,7 +17,21 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, message: "בקשה לא תקינה." }, { status: 400 });
   }
 
-  const result = await loginWithEmail(email, request);
+  let result: Awaited<ReturnType<typeof loginWithEmail>>;
+
+  try {
+    result = await loginWithEmail(email, request);
+  } catch (error) {
+    console.error("Auth login failed", error);
+
+    return NextResponse.json(
+      {
+        ok: false,
+        message: "שגיאה בשמירת פרטי הכניסה. ב-Vercel צריך להגדיר Redis/Upstash env vars לשמירת כניסות.",
+      },
+      { status: 500 }
+    );
+  }
 
   if (!result.ok) {
     return NextResponse.json(
