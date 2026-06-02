@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { AlertTriangle, BookOpenCheck, Filter, RotateCcw, Target, X } from "lucide-react";
 import type { HomeworkPriorityEntry, HomeworkQuestionPriority } from "@/lib/calculus2/analysis-types";
 import { PriorityBadge, DifficultyBadge, ExamRelevanceBadge } from "@/components/study/Badges";
+import { HomeworkHintSystem } from "@/components/study/HomeworkHintSystem";
 
 type PriorityFilter = "all" | "critical" | "high" | "medium";
 
@@ -39,9 +40,9 @@ export function HomeworkReviewClient({ priorityMap }: { priorityMap: HomeworkPri
     });
   }, [homeworkFilter, priorityFilter, questions, topicFilter]);
 
-  const criticalCount = questions.filter((question) => question.importanceLevel === "critical").length;
-  const highCount = questions.filter((question) => question.importanceLevel === "high").length;
-  const mediumCount = questions.filter((question) => question.importanceLevel === "medium").length;
+  const criticalCount = questions.filter((q) => q.importanceLevel === "critical").length;
+  const highCount = questions.filter((q) => q.importanceLevel === "high").length;
+  const mediumCount = questions.filter((q) => q.importanceLevel === "medium").length;
 
   function clearFilters() {
     setPriorityFilter("all");
@@ -51,7 +52,8 @@ export function HomeworkReviewClient({ priorityMap }: { priorityMap: HomeworkPri
 
   return (
     <div className="space-y-6">
-      <section className="relative overflow-hidden rounded-2xl bg-gradient-to-l from-[#10284d] via-[#1e3a5f] to-[#0b7285] p-6 text-white shadow-lg">
+      {/* Hero */}
+      <section className="relative overflow-hidden rounded-2xl bg-linear-to-l from-[#10284d] via-[#1e3a5f] to-[#0b7285] p-6 text-white shadow-lg">
         <div className="absolute -left-6 -top-6 h-24 w-24 rounded-full bg-white/10 blur-xl" />
         <div className="absolute -bottom-10 -right-8 h-32 w-32 rounded-full bg-white/5 blur-2xl" />
         <div className="relative z-10 flex flex-wrap items-start justify-between gap-4">
@@ -65,8 +67,8 @@ export function HomeworkReviewClient({ priorityMap }: { priorityMap: HomeworkPri
                 <h1 className="text-2xl font-extrabold">חזרת מטלות לפי חשיבות</h1>
               </div>
             </div>
-            <p className="max-w-3xl text-sm leading-7 text-white/78">
-              בלי טקסט השאלה עצמה: רק מטלה, מספר שאלה, נושא מייצג, רמת חשיבות והמסקנה שצריך לקחת לתרגול.
+            <p className="max-w-3xl text-sm leading-7 text-white/80">
+              כל שאלה כוללת נושא, רמת חשיבות ורמזים מדורגים — לחצי על &quot;צריכה כיוון?&quot; לגלות שלב-שלב.
             </p>
           </div>
           <div className="grid grid-cols-3 gap-2 text-center">
@@ -77,17 +79,19 @@ export function HomeworkReviewClient({ priorityMap }: { priorityMap: HomeworkPri
         </div>
       </section>
 
-      <section className="rounded-2xl border border-slate-200 bg-white shadow-sm">
-        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 p-4">
+      {/* Filters */}
+      <section className="rounded-2xl border bg-white shadow-sm" style={{ borderColor: "var(--border)" }}>
+        <div className="flex flex-wrap items-center justify-between gap-3 border-b p-4" style={{ borderColor: "var(--border)" }}>
           <div className="flex items-center gap-2">
-            <Filter className="h-5 w-5 text-[#0b7285]" />
-            <span className="font-bold text-slate-950">סינון שאלות מטלה</span>
-            <span className="text-sm text-slate-500">— נמצאו {filtered.length} שאלות</span>
+            <Filter className="h-5 w-5" style={{ color: "var(--teal)" }} />
+            <span className="font-bold" style={{ color: "var(--text-primary)" }}>סינון שאלות מטלה</span>
+            <span className="text-sm" style={{ color: "var(--text-muted)" }}>— נמצאו {filtered.length} שאלות</span>
           </div>
           {(priorityFilter !== "all" || homeworkFilter !== "all" || topicFilter !== "all") && (
             <button
               onClick={clearFilters}
-              className="inline-flex items-center gap-1 rounded-full bg-slate-100 px-3 py-1.5 text-xs font-bold text-slate-600 transition hover:bg-slate-200"
+              className="inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-xs font-bold transition"
+              style={{ background: "var(--bg-subtle)", color: "var(--text-secondary)" }}
             >
               <X className="h-3.5 w-3.5" />
               נקה סינון
@@ -111,7 +115,7 @@ export function HomeworkReviewClient({ priorityMap }: { priorityMap: HomeworkPri
                 active={homeworkFilter === homework.homeworkNumber}
                 onClick={() => setHomeworkFilter(homeworkFilter === homework.homeworkNumber ? "all" : homework.homeworkNumber)}
                 label={`מטלה ${homework.homeworkNumber}`}
-                count={homework.questions.filter((question) => question.importanceLevel !== "low").length}
+                count={homework.questions.filter((q) => q.importanceLevel !== "low").length}
               />
             ))}
           </FilterGroup>
@@ -132,12 +136,27 @@ export function HomeworkReviewClient({ priorityMap }: { priorityMap: HomeworkPri
         </div>
       </section>
 
+      {/* Study guidance callout */}
+      <div
+        className="rounded-xl border-r-4 px-5 py-3.5"
+        style={{ borderColor: "var(--teal)", background: "var(--teal-light)", borderWidth: "1.5px", borderRightWidth: "4px" }}
+      >
+        <p className="text-xs font-black uppercase tracking-widest mb-1" style={{ color: "var(--teal)" }}>
+          איך להשתמש
+        </p>
+        <p className="text-sm leading-7" style={{ color: "var(--text-secondary)" }}>
+          כל שאלה מציגה את הנושא וההמלצה. לחצי על <strong>צריכה כיוון?</strong> לרמז נוסף — שלב-שלב, בלי לחשוף יותר ממה שצריך.
+          זיהוי הנושא הוא חלק מהלמידה עצמה.
+        </p>
+      </div>
+
       {filtered.length === 0 ? (
-        <section className="rounded-2xl border-2 border-dashed border-slate-200 bg-white p-10 text-center">
-          <p className="text-sm text-slate-500">לא נמצאו שאלות לפי הסינון הנוכחי.</p>
+        <section className="rounded-2xl border-2 border-dashed bg-white p-10 text-center" style={{ borderColor: "var(--border)" }}>
+          <p className="text-sm" style={{ color: "var(--text-muted)" }}>לא נמצאו שאלות לפי הסינון הנוכחי.</p>
           <button
             onClick={clearFilters}
-            className="mt-4 inline-flex items-center gap-2 rounded-full bg-slate-950 px-4 py-2 text-xs font-bold text-white"
+            className="mt-4 inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-bold text-white"
+            style={{ background: "var(--navy)" }}
           >
             <RotateCcw className="h-3.5 w-3.5" />
             איפוס סינון
@@ -159,50 +178,96 @@ function HomeworkQuestionCard({
 }: {
   question: HomeworkQuestionPriority & { filename: string };
 }) {
-  const tone =
-    question.importanceLevel === "critical"
-      ? "border-red-200 bg-red-50"
-      : question.importanceLevel === "high"
-        ? "border-blue-200 bg-blue-50"
-        : "border-amber-200 bg-amber-50";
-  const mainTopic = question.topicIds[0] ?? "לא מסווג";
+  const isHot = question.importanceLevel === "critical";
+  const isHigh = question.importanceLevel === "high";
+
+  const borderStyle = isHot
+    ? { borderColor: "var(--red-border)", background: "var(--bg-card)" }
+    : isHigh
+      ? { borderColor: "var(--navy-border)", background: "var(--bg-card)" }
+      : { borderColor: "var(--border)", background: "var(--bg-card)" };
+
+  const accentColor = isHot ? "var(--red-mid)" : isHigh ? "var(--navy-mid)" : "var(--text-muted)";
 
   return (
-    <article className={`overflow-hidden rounded-2xl border bg-white shadow-sm transition hover:shadow-md ${tone}`}>
-      <div className="flex items-start gap-3 p-4">
-        <span className="flex h-14 w-14 shrink-0 flex-col items-center justify-center rounded-xl bg-gradient-to-br from-[#10284d] to-[#0b7285] text-white shadow-sm">
-          <span className="text-[10px] font-bold opacity-75">שאלה</span>
-          <span className="text-lg font-black">{question.questionNumber}</span>
-        </span>
+    <article
+      className="overflow-hidden rounded-2xl border shadow-sm transition hover:shadow-md"
+      style={borderStyle}
+    >
+      {/* Top accent bar */}
+      <div
+        className="h-1.5"
+        style={{
+          background: isHot
+            ? "linear-gradient(90deg, var(--red-mid), var(--red))"
+            : isHigh
+              ? "linear-gradient(90deg, var(--navy-mid), var(--navy))"
+              : "var(--border)",
+        }}
+      />
 
-        <div className="min-w-0 flex-1">
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="rounded-md bg-white px-2 py-0.5 text-[11px] font-bold text-slate-700 shadow-sm">
-              מטלה {question.homeworkNumber} · שבוע {question.weekNumber}
-            </span>
-            <PriorityBadge level={question.importanceLevel} />
-            <DifficultyBadge level={question.difficulty} />
-            <ExamRelevanceBadge level={question.examSimilarity} />
-          </div>
+      <div className="p-5">
+        {/* Header */}
+        <div className="flex items-start gap-3 mb-4">
+          <span
+            className="flex h-14 w-14 shrink-0 flex-col items-center justify-center rounded-xl text-white shadow-sm"
+            style={{
+              background: isHot
+                ? "linear-gradient(135deg, var(--red-mid), var(--red))"
+                : isHigh
+                  ? "linear-gradient(135deg, var(--navy-mid), var(--navy))"
+                  : "linear-gradient(135deg, var(--text-muted), var(--border-strong))",
+            }}
+          >
+            <span className="text-[10px] font-bold opacity-75">שאלה</span>
+            <span className="text-lg font-black">{question.questionNumber}</span>
+          </span>
 
-          <div className="mt-3 flex flex-wrap gap-1.5">
-            {question.topicIds.slice(0, 5).map((topic) => (
-              <span key={topic} className="rounded-full bg-white/75 px-2.5 py-1 text-xs font-semibold text-slate-700">
-                {topic}
+          <div className="min-w-0 flex-1">
+            <div className="flex flex-wrap items-center gap-2 mb-2">
+              <span
+                className="rounded-md px-2 py-0.5 text-[11px] font-bold shadow-sm"
+                style={{ background: "var(--bg-subtle)", color: "var(--text-secondary)" }}
+              >
+                מטלה {question.homeworkNumber} · שבוע {question.weekNumber}
               </span>
-            ))}
-          </div>
+              <PriorityBadge level={question.importanceLevel} />
+              <DifficultyBadge level={question.difficulty} />
+              <ExamRelevanceBadge level={question.examSimilarity} />
+            </div>
 
-          <div className="mt-4 grid gap-3 md:grid-cols-[0.8fr_1.2fr]">
-            <InfoBox icon={<Target className="h-4 w-4" />} label="נושא מייצג" value={mainTopic} />
-            <InfoBox icon={<AlertTriangle className="h-4 w-4" />} label="מסקנה לקחת מהשאלה" value={question.whyItMatters} />
-          </div>
-
-          <div className="mt-3 rounded-xl bg-white/70 p-3">
-            <p className="text-xs font-bold text-slate-500">פעולה מומלצת</p>
-            <p className="mt-1 text-sm leading-6 text-slate-800">{question.recommendedAction}</p>
+            <div className="flex flex-wrap gap-1.5">
+              {question.topicIds.slice(0, 5).map((topic) => (
+                <span
+                  key={topic}
+                  className="rounded-full px-2.5 py-1 text-xs font-semibold"
+                  style={{ background: "var(--bg-subtle)", color: "var(--text-secondary)", border: "1px solid var(--border)" }}
+                >
+                  {topic}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
+
+        {/* Info boxes */}
+        <div className="grid gap-3 md:grid-cols-[0.8fr_1.2fr] mb-0">
+          <InfoBox
+            icon={<Target className="h-4 w-4" />}
+            label="נושא מייצג"
+            value={question.topicIds[0] ?? "לא מסווג"}
+            accentColor={accentColor}
+          />
+          <InfoBox
+            icon={<AlertTriangle className="h-4 w-4" />}
+            label="מסקנה לקחת מהשאלה"
+            value={question.whyItMatters}
+            accentColor={accentColor}
+          />
+        </div>
+
+        {/* Progressive hint system */}
+        <HomeworkHintSystem question={question} />
       </div>
     </article>
   );
@@ -225,7 +290,9 @@ function HeaderMetric({ label, value, tone }: { label: string; value: number; to
 function FilterGroup({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div>
-      <p className="mb-2 text-xs font-bold text-slate-500">{label}</p>
+      <p className="mb-2 text-xs font-bold uppercase tracking-widest" style={{ color: "var(--text-muted)" }}>
+        {label}
+      </p>
       <div className="flex flex-wrap gap-2">{children}</div>
     </div>
   );
@@ -244,37 +311,61 @@ function FilterPill({
   count: number;
   tone?: "slate" | "red" | "navy" | "amber" | "teal";
 }) {
-  const activeClass = {
-    slate: "bg-slate-950 text-white",
-    red: "bg-gradient-to-l from-red-600 to-rose-700 text-white",
-    navy: "bg-gradient-to-l from-[#10284d] to-[#1e3a5f] text-white",
-    amber: "bg-gradient-to-l from-amber-500 to-orange-600 text-white",
-    teal: "bg-gradient-to-l from-[#0b7285] to-cyan-600 text-white",
+  const activeStyle: React.CSSProperties = {
+    slate: { background: "var(--text-primary)", color: "#fff" },
+    red:   { background: "linear-gradient(135deg, var(--red-mid), var(--red))", color: "#fff" },
+    navy:  { background: "linear-gradient(135deg, var(--navy-mid), var(--navy))", color: "#fff" },
+    amber: { background: "linear-gradient(135deg, var(--amber-mid), var(--amber))", color: "#fff" },
+    teal:  { background: "linear-gradient(135deg, var(--teal), #0e9bad)", color: "#fff" },
   }[tone];
 
   return (
     <button
       onClick={onClick}
-      className={`rounded-full px-3 py-1.5 text-xs font-bold transition ${
-        active ? `${activeClass} shadow` : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-      }`}
+      className="rounded-full px-3 py-1.5 text-xs font-bold transition"
+      style={
+        active
+          ? activeStyle
+          : { background: "var(--bg-subtle)", color: "var(--text-secondary)", border: "1px solid var(--border)" }
+      }
     >
       {label}
-      <span className={`mr-1.5 rounded px-1.5 py-0.5 text-[10px] ${active ? "bg-white/22" : "bg-white text-slate-600"}`}>
+      <span
+        className="mr-1.5 rounded px-1.5 py-0.5 text-[10px]"
+        style={{ background: active ? "rgba(255,255,255,0.22)" : "var(--bg-card)", color: active ? "#fff" : "var(--text-muted)" }}
+      >
         {count}
       </span>
     </button>
   );
 }
 
-function InfoBox({ icon, label, value }: { icon: React.ReactNode; label: string; value: string }) {
+function InfoBox({
+  icon,
+  label,
+  value,
+  accentColor,
+}: {
+  icon: React.ReactNode;
+  label: string;
+  value: string;
+  accentColor: string;
+}) {
   return (
-    <div className="rounded-xl bg-white/70 p-3">
-      <div className="mb-1 flex items-center gap-1.5 text-xs font-bold text-slate-500">
+    <div
+      className="rounded-xl p-3"
+      style={{ background: "var(--bg-subtle)", border: "1px solid var(--border)" }}
+    >
+      <div
+        className="mb-1 flex items-center gap-1.5 text-xs font-bold"
+        style={{ color: accentColor }}
+      >
         {icon}
         {label}
       </div>
-      <p className="text-sm font-semibold leading-6 text-slate-900">{value}</p>
+      <p className="text-sm font-semibold leading-6" style={{ color: "var(--text-primary)" }}>
+        {value}
+      </p>
     </div>
   );
 }

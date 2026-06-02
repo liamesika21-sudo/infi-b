@@ -6,7 +6,20 @@ import { readGeneratedData } from "@/lib/calculus2/generated-data";
 import { StudyCallout } from "@/components/study/StudyCallout";
 import { MathContent } from "@/components/study/MathContent";
 import { ExamRelevanceBadge } from "@/components/study/Badges";
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { getStudyGuide } from "@/lib/calculus2/study-guides";
+import { getWeekRichContent } from "@/lib/calculus2/week-rich-content";
+import { WeekRichContentPanel } from "@/components/study/WeekRichContent";
+import {
+  ArrowRight,
+  BookMarked,
+  ChevronRight,
+  AlertTriangle,
+  Wrench,
+  Star,
+  ListOrdered,
+  CheckSquare,
+} from "lucide-react";
+import { WeekHomeworkSection } from "./WeekHomeworkSection";
 
 interface Props {
   params: Promise<{ weekNumber: string }>;
@@ -25,7 +38,12 @@ export default async function WeekDetailPage({ params }: Props) {
   const lectureSummary = analysis.lectureSummaries.find((l) => l.lectureNumber === weekNum);
   const recitationSummary = analysis.recitationSummaries.find((r) => r.weekNumber === weekNum);
   const homeworkPriority = analysis.homeworkPriorityMap.find((h) => h.weekNumber === weekNum);
-  const expectedPracticedLecture = weekNum > 1 ? weekNum - 1 : null;
+
+  // Correct mapping: Recitation N practices Lecture N-1
+  const practicedLecture = weekNum > 1 ? weekNum - 1 : null;
+  // Homework N is based on Recitation N + Lecture N-1
+  const homeworkBasedOnLecture = weekNum > 1 ? weekNum - 1 : null;
+
   const lectureExtract = lectureSummary?.sourceFileId
     ? generatedData.extractedTextIndex.find((record) => record.sourceFileId === lectureSummary.sourceFileId)
     : undefined;
@@ -46,6 +64,15 @@ export default async function WeekDetailPage({ params }: Props) {
     .slice(0, 8);
 
   const hwQuestions = homeworkPriority?.questions.filter((q) => q.importanceLevel !== "low") ?? [];
+  const studyGuide = getStudyGuide(weekNum);
+  const richContent = getWeekRichContent(weekNum);
+
+  // Collect all common mistakes from recitation summary
+  const allCommonMistakes = recitationSummary?.commonMistakes ?? [];
+  // Collect conclusions / key takeaways
+  const allConclusions = recitationSummary?.conclusions ?? [];
+  // Collect must-practice items
+  const mustPractice = recitationSummary?.mustPractice ?? [];
 
   return (
     <div className="space-y-0">
@@ -60,28 +87,31 @@ export default async function WeekDetailPage({ params }: Props) {
       </div>
 
       {/* ── Hero ── */}
-      <div
-        className="rounded-2xl px-8 py-7 mb-6"
-        style={{
-          background: "linear-gradient(135deg, var(--navy) 0%, #1e4070 100%)",
-          color: "#fff",
-        }}
-      >
-        <p className="text-xs font-bold uppercase tracking-[0.18em] opacity-60 mb-1">
+      <div className="mb-8 pb-7 border-b" style={{ borderColor: "var(--border)" }}>
+        <p
+          className="text-xs font-bold uppercase tracking-[0.2em] mb-2"
+          style={{ color: "var(--text-muted)" }}
+        >
           שבוע {weekNum}
         </p>
-        <h1 className="text-3xl font-black tracking-tight leading-tight">
+        <h1
+          className="text-4xl font-black mb-4"
+          style={{ color: "var(--text-primary)", letterSpacing: "-0.03em", lineHeight: "1.15" }}
+        >
           {lectureSummary?.title ?? `שבוע ${weekNum} — אינפי ב׳`}
         </h1>
 
-        {/* Topic pills */}
         {lectureSummary && lectureSummary.mainTopics.length > 0 && (
-          <div className="mt-4 flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-1.5 mb-5">
             {lectureSummary.mainTopics.map((t) => (
               <span
                 key={t}
-                className="rounded-full px-3 py-1 text-xs font-semibold"
-                style={{ background: "rgba(255,255,255,0.15)" }}
+                className="rounded-md px-2.5 py-1 text-xs font-semibold"
+                style={{
+                  background: "var(--bg-subtle)",
+                  color: "var(--text-secondary)",
+                  border: "1px solid var(--border)",
+                }}
               >
                 {t}
               </span>
@@ -89,14 +119,65 @@ export default async function WeekDetailPage({ params }: Props) {
           </div>
         )}
 
-        {/* Recitation link label */}
-        <p className="mt-3 text-xs opacity-70">
-          הרצאה {weekNum}: חומר חדש ·{" "}
-          תרגול {weekNum}:{" "}
-          {expectedPracticedLecture ? `מתרגל הרצאה ${expectedPracticedLecture}` : "פתיחת קורס / יישור קו"} ·{" "}
-          מטלה {weekNum}: מיושרת לשבוע
-        </p>
+        {/* Course mapping — clean inline row */}
+        <div className="flex flex-wrap gap-2">
+          <MappingPill icon="📖" label={`הרצאה ${weekNum}`} desc="חומר חדש" />
+          <span className="self-center text-sm" style={{ color: "var(--border-strong)" }}>→</span>
+          <MappingPill
+            icon="✏️"
+            label={`תרגול ${weekNum}`}
+            desc={practicedLecture ? `מתרגל הרצאה ${practicedLecture}` : "פתיחת קורס"}
+            highlight
+          />
+          <span className="self-center text-sm" style={{ color: "var(--border-strong)" }}>→</span>
+          <MappingPill
+            icon="📋"
+            label={`מטלה ${weekNum}`}
+            desc={
+              homeworkBasedOnLecture
+                ? `תרגול ${weekNum} + הרצאה ${homeworkBasedOnLecture}`
+                : "חומר ראשון"
+            }
+          />
+        </div>
       </div>
+
+      {/* ── Weekly Summary Banner — Important notes, conclusions, mistakes ── */}
+      {(allCommonMistakes.length > 0 || allConclusions.length > 0 || mustPractice.length > 0) && (
+        <WeeklySummaryBanner
+          weekNum={weekNum}
+          commonMistakes={allCommonMistakes}
+          conclusions={allConclusions}
+          mustPractice={mustPractice}
+          keyTechniques={recitationSummary?.keyTechniques ?? []}
+        />
+      )}
+
+      {/* ── How to Study This Week ── */}
+      {studyGuide && (
+        <StudyGuideSection guide={studyGuide} weekNum={weekNum} />
+      )}
+
+      {/* ── Rich pedagogical content (weeks 7–9+) ── */}
+      {richContent && (
+        <section className="mb-8">
+          <div className="mb-5">
+            <p
+              className="text-xs font-bold uppercase tracking-[0.2em] mb-1"
+              style={{ color: "var(--text-muted)" }}
+            >
+              סיכום שבוע {weekNum}
+            </p>
+            <h2
+              className="text-xl font-black"
+              style={{ color: "var(--text-primary)", letterSpacing: "-0.02em" }}
+            >
+              חומר, הגדרות ומבחנים
+            </h2>
+          </div>
+          <WeekRichContentPanel content={richContent} />
+        </section>
+      )}
 
       <WeekInferenceDiagram
         weekNumber={weekNum}
@@ -105,28 +186,25 @@ export default async function WeekDetailPage({ params }: Props) {
         homeworkPriority={homeworkPriority}
       />
 
-      {/* ── 3-column layout on desktop ── */}
-      <div className="grid gap-5 lg:grid-cols-3 mb-6">
+      {/* ── 3-column layout ── */}
+      <div className="grid gap-5 lg:grid-cols-3 mb-8">
 
         {/* ─ Lecture ─ */}
-        <Column title="📖 הרצאה" subtitle={`הרצאה ${weekNum}`} accentColor="var(--navy-mid)">
+        <Column title="📖 הרצאה" subtitle={`הרצאה ${weekNum} — חומר חדש`} accentColor="var(--navy-mid)">
           {lectureSummary ? (
             <div className="space-y-5">
               {lectureSummary.ocrWarning && (
                 <StudyCallout variant="warning">{lectureSummary.ocrWarning}</StudyCallout>
               )}
 
-              {/* Definitions */}
               {lectureSummary.keyDefinitions.length > 0 && (
                 <BulletGroup label="הגדרות" color="green" items={lectureSummary.keyDefinitions} />
               )}
 
-              {/* Theorems */}
               {lectureSummary.keyTheorems.length > 0 && (
                 <BulletGroup label="משפטים" color="navy" items={lectureSummary.keyTheorems} />
               )}
 
-              {/* Formulas — rendered as actual math */}
               {lectureSummary.keyFormulas.length > 0 && (
                 <div>
                   <SectionLabel label="נוסחאות מפתח" />
@@ -138,7 +216,6 @@ export default async function WeekDetailPage({ params }: Props) {
                 </div>
               )}
 
-              {/* Exam tips */}
               {lectureSummary.examNotes.length > 0 && (
                 <div className="space-y-2">
                   {lectureSummary.examNotes.map((note, i) => (
@@ -163,40 +240,37 @@ export default async function WeekDetailPage({ params }: Props) {
           title="✏️ תרגול"
           subtitle={
             recitationSummary
-              ? `תרגול ${recitationSummary.recitationNumber} · מתרגל הרצאה ${expectedPracticedLecture ?? "פתיחה"}`
-              : ""
+              ? `תרגול ${recitationSummary.recitationNumber} · מתרגל הרצאה ${practicedLecture ?? "פתיחה"}`
+              : `תרגול ${weekNum}`
           }
           accentColor="var(--teal)"
         >
           {recitationSummary ? (
             <div className="space-y-5">
-              {expectedPracticedLecture !== recitationSummary.practicesLecture && expectedPracticedLecture !== null && (
-                <StudyCallout variant="info">
-                  לפי מבנה הקורס, תרגול {weekNum} אמור לתרגל את הרצאה {expectedPracticedLecture}. הניתוח הקיים סומן כהרצאה {recitationSummary.practicesLecture ?? "לא ידועה"}, ולכן מוצג כאן הכלל הפדגוגי המלא.
-                </StudyCallout>
-              )}
+              {practicedLecture !== null &&
+                recitationSummary.practicesLecture !== null &&
+                practicedLecture !== recitationSummary.practicesLecture && (
+                  <StudyCallout variant="info">
+                    לפי מבנה הקורס, תרגול {weekNum} מתרגל הרצאה {practicedLecture}. הניתוח הפנימי סימן הרצאה {recitationSummary.practicesLecture ?? "לא ידועה"}.
+                  </StudyCallout>
+                )}
 
-              {/* What was practiced */}
-              <p className="text-sm leading-7" style={{ color: "var(--text-secondary)" }}>
+              <p className="text-sm leading-8" style={{ color: "var(--text-secondary)" }}>
                 {recitationSummary.whatWasPracticed}
               </p>
 
-              {/* Techniques */}
               {recitationSummary.keyTechniques.length > 0 && (
                 <BulletGroup label="טכניקות" color="teal" items={recitationSummary.keyTechniques} />
               )}
 
-              {/* Must practice */}
               {recitationSummary.mustPractice.length > 0 && (
                 <BulletGroup label="חובה לתרגל" color="navy" items={recitationSummary.mustPractice} />
               )}
 
-              {/* Common mistakes */}
               {recitationSummary.commonMistakes.length > 0 && (
                 <BulletGroup label="טעויות נפוצות" color="red" items={recitationSummary.commonMistakes} />
               )}
 
-              {/* Conclusions */}
               {recitationSummary.conclusions.length > 0 && (
                 <div className="space-y-2 pt-2 border-t" style={{ borderColor: "var(--border)" }}>
                   <SectionLabel label="מסקנות" />
@@ -211,18 +285,18 @@ export default async function WeekDetailPage({ params }: Props) {
           )}
         </Column>
 
-        {/* ─ Homework ─ */}
+        {/* ─ Homework — with progressive hints ─ */}
         <Column
           title="📋 מטלה"
-          subtitle={homeworkPriority ? `מטלה ${homeworkPriority.homeworkNumber}` : ""}
+          subtitle={
+            homeworkPriority
+              ? `מטלה ${homeworkPriority.homeworkNumber} · מבוסס תרגול ${homeworkPriority.homeworkNumber}${homeworkBasedOnLecture ? ` + הרצאה ${homeworkBasedOnLecture}` : ""}`
+              : ""
+          }
           accentColor="var(--amber-mid)"
         >
           {hwQuestions.length > 0 ? (
-            <div className="space-y-3">
-              {hwQuestions.slice(0, 8).map((q) => (
-                <HomeworkQuestion key={q.questionId} q={q} />
-              ))}
-            </div>
+            <WeekHomeworkSection questions={hwQuestions} />
           ) : homeworkPriority ? (
             <p className="text-sm" style={{ color: "var(--text-muted)" }}>
               כל שאלות המטלה עדיפות נמוכה — חומר חזרה בסיסי.
@@ -233,47 +307,66 @@ export default async function WeekDetailPage({ params }: Props) {
         </Column>
       </div>
 
+      {/* ── Definitions quick-link ── */}
+      <div
+        className="mb-8 rounded-lg border px-4 py-3 flex items-center justify-between gap-3"
+        style={{ borderColor: "var(--border)" }}
+      >
+        <div className="flex items-center gap-2.5">
+          <BookMarked className="h-4 w-4 shrink-0" style={{ color: "var(--teal)" }} />
+          <p className="text-sm" style={{ color: "var(--text-secondary)" }}>
+            נתקעת בהגדרה? מאגר ההגדרות כולל פורמלי + אינטואיציה + דוגמה לכל מושג.
+          </p>
+        </div>
+        <Link
+          href="/definitions"
+          className="shrink-0 rounded-lg border px-3 py-1.5 text-xs font-bold transition hover:bg-white"
+          style={{ borderColor: "var(--teal-border)", color: "var(--teal)" }}
+        >
+          פתחי מאגר
+        </Link>
+      </div>
+
       <LectureSourceQuotes quotes={lectureQuotes} />
 
       {/* ── Recitation questions ── */}
       {recitationQuestions.length > 0 && (
-        <div
-          className="rounded-2xl border bg-white p-6 mb-6 shadow-sm"
-          style={{ borderColor: "var(--border)" }}
-        >
-          <h2 className="mb-5 text-lg font-bold" style={{ color: "var(--text-primary)" }}>
-            שאלות מהתרגול
-          </h2>
-          <div className="space-y-5">
-            {recitationQuestions.map((q, i) => (
-              <div
-                key={q.id}
-                className="flex gap-4 pb-5 border-b last:border-b-0 last:pb-0"
-                style={{ borderColor: "var(--border)" }}
-              >
-                <span
-                  className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-black text-white"
-                  style={{ background: "var(--navy)" }}
+        <div className="mb-8">
+          <SectionTitle label="שאלות מהתרגול" />
+          <div
+            className="mt-4 rounded-xl border bg-white overflow-hidden"
+            style={{ borderColor: "var(--border)", boxShadow: "0 1px 3px rgba(0,0,0,0.05)" }}
+          >
+            <div className="divide-y" style={{ borderColor: "var(--border)" }}>
+              {recitationQuestions.map((q, i) => (
+                <div
+                  key={q.id}
+                  className="flex gap-4 p-5"
                 >
-                  {i + 1}
-                </span>
-                <div className="flex-1 min-w-0">
-                  <div className="mb-2 flex flex-wrap items-center gap-1.5">
-                    <ExamRelevanceBadge level={q.examRelevance} />
-                    {q.topicIds.slice(0, 3).map((t) => (
-                      <span
-                        key={t}
-                        className="rounded-full px-2 py-0.5 text-xs"
-                        style={{ background: "var(--bg-subtle)", color: "var(--text-muted)" }}
-                      >
-                        {t}
-                      </span>
-                    ))}
+                  <span
+                    className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-black"
+                    style={{ background: "var(--bg-inset)", color: "var(--text-secondary)" }}
+                  >
+                    {i + 1}
+                  </span>
+                  <div className="flex-1 min-w-0">
+                    <div className="mb-2 flex flex-wrap items-center gap-1.5">
+                      <ExamRelevanceBadge level={q.examRelevance} />
+                      {q.topicIds.slice(0, 3).map((t) => (
+                        <span
+                          key={t}
+                          className="rounded-md px-2 py-0.5 text-xs"
+                          style={{ background: "var(--bg-subtle)", color: "var(--text-muted)", border: "1px solid var(--border)" }}
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                    <MathContent text={q.content.slice(0, 600)} className="text-sm" />
                   </div>
-                  <MathContent text={q.content.slice(0, 600)} className="text-sm" />
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       )}
@@ -305,8 +398,236 @@ export default async function WeekDetailPage({ params }: Props) {
   );
 }
 
-/* ─────────────────────────── Sub-components ─────────────────────────── */
+/* ─────────────────── Mapping Pill ─────────────────── */
+function MappingPill({
+  icon,
+  label,
+  desc,
+  highlight,
+}: {
+  icon: string;
+  label: string;
+  desc: string;
+  highlight?: boolean;
+}) {
+  return (
+    <div
+      className="flex items-center gap-2 rounded-lg px-3 py-2"
+      style={{
+        background: highlight ? "var(--navy-light)" : "var(--bg-subtle)",
+        border: `1px solid ${highlight ? "var(--navy-border)" : "var(--border)"}`,
+      }}
+    >
+      <span className="text-sm">{icon}</span>
+      <div>
+        <p
+          className="text-xs font-black"
+          style={{ color: highlight ? "var(--navy-mid)" : "var(--text-primary)" }}
+        >
+          {label}
+        </p>
+        <p className="text-[11px] leading-snug" style={{ color: "var(--text-muted)" }}>
+          {desc}
+        </p>
+      </div>
+    </div>
+  );
+}
 
+/* ─────────────────── Weekly Summary Banner ─────────────────── */
+function WeeklySummaryBanner({
+  weekNum,
+  commonMistakes,
+  conclusions,
+  mustPractice,
+  keyTechniques,
+}: {
+  weekNum: number;
+  commonMistakes: string[];
+  conclusions: string[];
+  mustPractice: string[];
+  keyTechniques: string[];
+}) {
+  return (
+    <section className="mb-8">
+      <SectionTitle label="לפני שמתחילים" sub={`סיכום שבוע ${weekNum}`} />
+      <div className="mt-4 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {conclusions.length > 0 && (
+          <SummaryCard
+            icon={<Star className="h-3.5 w-3.5" />}
+            title="מסקנות מרכזיות"
+            color="var(--amber-mid)"
+            bgColor="var(--amber-light)"
+            borderColor="var(--amber-border)"
+            items={conclusions}
+          />
+        )}
+
+        {commonMistakes.length > 0 && (
+          <SummaryCard
+            icon={<AlertTriangle className="h-3.5 w-3.5" />}
+            title="טעויות נפוצות"
+            color="var(--red-mid)"
+            bgColor="var(--red-light)"
+            borderColor="var(--red-border)"
+            items={commonMistakes}
+          />
+        )}
+
+        {(keyTechniques.length > 0 || mustPractice.length > 0) && (
+          <SummaryCard
+            icon={<Wrench className="h-3.5 w-3.5" />}
+            title="כלים מרכזיים"
+            color="var(--teal)"
+            bgColor="var(--teal-light)"
+            borderColor="var(--teal-border)"
+            items={[...keyTechniques, ...mustPractice].slice(0, 6)}
+          />
+        )}
+      </div>
+    </section>
+  );
+}
+
+function SummaryCard({
+  icon,
+  title,
+  color,
+  bgColor,
+  borderColor,
+  items,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  color: string;
+  bgColor: string;
+  borderColor: string;
+  items: string[];
+}) {
+  return (
+    <div
+      className="rounded-xl border p-4"
+      style={{ background: bgColor, borderColor }}
+    >
+      <div className="flex items-center gap-2 mb-3" style={{ color }}>
+        {icon}
+        <p className="text-xs font-black uppercase tracking-wider">{title}</p>
+      </div>
+      <ul className="space-y-1.5">
+        {items.slice(0, 5).map((item, i) => (
+          <li key={i} className="flex items-start gap-2">
+            <span
+              className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full"
+              style={{ background: color }}
+            />
+            <MathContent text={item} className="text-xs" />
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+/* ─────────────────── Study Guide Section ─────────────────── */
+function StudyGuideSection({
+  guide,
+  weekNum,
+}: {
+  guide: ReturnType<typeof getStudyGuide>;
+  weekNum: number;
+}) {
+  if (!guide) return null;
+
+  return (
+    <section className="mb-8">
+      <SectionTitle label={`איך ללמוד שבוע ${weekNum}`} sub="מדריך לימוד" />
+
+      {guide.quickTip && (
+        <p className="mt-3 mb-5 text-sm" style={{ color: "var(--text-secondary)", lineHeight: "1.8" }}>
+          {guide.quickTip}
+        </p>
+      )}
+
+      <div className="mt-4 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <GuideCard icon={<BookMarked className="h-3.5 w-3.5" />} title="מה לחזור קודם" color="var(--navy-mid)" items={guide.reviewFirst} />
+        <GuideCard icon={<CheckSquare className="h-3.5 w-3.5" />} title="חובה לשנן" color="var(--green)" items={guide.mustMemorize} />
+        <GuideCard icon={<Wrench className="h-3.5 w-3.5" />} title="כלים מרכזיים" color="var(--teal)" items={guide.centralTools} />
+        <GuideCard icon={<AlertTriangle className="h-3.5 w-3.5" />} title="טעויות נפוצות" color="var(--red-mid)" items={guide.commonMistakes} />
+      </div>
+
+      {/* Study order */}
+      {guide.studyOrder.length > 0 && (
+        <div
+          className="mt-5 rounded-xl border p-5"
+          style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}
+        >
+          <div className="flex items-center gap-2 mb-4" style={{ color: "var(--text-muted)" }}>
+            <ListOrdered className="h-3.5 w-3.5" />
+            <p className="text-xs font-bold uppercase tracking-widest">סדר לימוד מומלץ</p>
+          </div>
+          <ol className="space-y-2">
+            {guide.studyOrder.map((step, i) => (
+              <li key={i} className="study-guide-step">
+                <span className="study-guide-step-num">{i + 1}</span>
+                <MathContent text={step.text} className="text-sm" />
+              </li>
+            ))}
+          </ol>
+        </div>
+      )}
+    </section>
+  );
+}
+
+function GuideCard({
+  icon,
+  title,
+  color,
+  items,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  color: string;
+  items: string[];
+}) {
+  return (
+    <div>
+      <div className="flex items-center gap-2 mb-2" style={{ color }}>
+        {icon}
+        <p className="text-xs font-black uppercase tracking-wider">{title}</p>
+      </div>
+      <ul className="space-y-1.5">
+        {items.map((item, i) => (
+          <li key={i} className="flex items-start gap-2">
+            <span
+              className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full"
+              style={{ background: color }}
+            />
+            <MathContent text={item} className="text-xs leading-6" />
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+/* ─────────────────── Section title ─────────────────── */
+function SectionTitle({ label, sub }: { label: string; sub?: string }) {
+  return (
+    <div>
+      {sub && (
+        <p className="text-xs font-bold uppercase tracking-[0.2em] mb-1" style={{ color: "var(--text-muted)" }}>
+          {sub}
+        </p>
+      )}
+      <h2 className="text-xl font-black" style={{ color: "var(--text-primary)", letterSpacing: "-0.02em" }}>
+        {label}
+      </h2>
+    </div>
+  );
+}
+
+/* ─────────────────── Column ─────────────────── */
 function Column({
   title,
   subtitle,
@@ -320,23 +641,26 @@ function Column({
 }) {
   return (
     <div
-      className="rounded-2xl border bg-white shadow-sm overflow-hidden"
-      style={{ borderColor: "var(--border)" }}
+      className="rounded-xl border bg-white overflow-hidden"
+      style={{
+        borderColor: "var(--border)",
+        boxShadow: "0 1px 3px rgba(0,0,0,0.05), 0 4px 12px rgba(0,0,0,0.03)",
+      }}
     >
-      {/* Column header */}
       <div
         className="px-5 py-4 border-b"
         style={{
           borderColor: "var(--border)",
-          borderRight: `4px solid ${accentColor}`,
-          background: "var(--bg-subtle)",
+          borderRightWidth: "3px",
+          borderRightStyle: "solid",
+          borderRightColor: accentColor,
         }}
       >
-        <h2 className="text-base font-black" style={{ color: "var(--text-primary)" }}>
+        <h2 className="text-sm font-black" style={{ color: "var(--text-primary)" }}>
           {title}
         </h2>
         {subtitle && (
-          <p className="text-xs font-medium mt-0.5" style={{ color: "var(--text-muted)" }}>
+          <p className="text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>
             {subtitle}
           </p>
         )}
@@ -370,14 +694,14 @@ function BulletGroup({ label, color, items }: { label: string; color: BulletColo
   return (
     <div>
       <SectionLabel label={label} />
-      <ul className="mt-2 space-y-1.5">
+      <ul className="mt-2 space-y-2">
         {items.map((item, i) => (
           <li key={i} className="flex items-start gap-2">
             <span
-              className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full"
+              className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full"
               style={{ background: dotColor[color] }}
             />
-            <MathContent text={item} className="flex-1 text-sm" />
+            <MathContent text={item} className="flex-1 text-sm leading-8" />
           </li>
         ))}
       </ul>
@@ -385,92 +709,13 @@ function BulletGroup({ label, color, items }: { label: string; color: BulletColo
   );
 }
 
-/** Renders a formula string. Tries KaTeX if it looks like LaTeX, otherwise plain text. */
 function FormulaDisplay({ formula }: { formula: string }) {
-  // If it already contains LaTeX commands or $-delimited math, use MathContent
-  const hasLatex = /\\[a-z]|[$]/.test(formula);
-
-  if (hasLatex) {
-    return (
-      <div
-        className="rounded-lg border px-4 py-3"
-        style={{ borderColor: "var(--navy-border)", background: "var(--navy-light)" }}
-      >
-        <MathContent text={formula} />
-      </div>
-    );
-  }
-
-  // Plain formula text — still try to render with MathContent (preprocessor will help)
   return (
     <div
-      className="rounded-lg border px-4 py-3"
+      className="rounded-xl border px-4 py-3"
       style={{ borderColor: "var(--navy-border)", background: "var(--navy-light)" }}
     >
       <MathContent text={formula} />
-    </div>
-  );
-}
-
-function HomeworkQuestion({
-  q,
-}: {
-  q: {
-    questionNumber: number;
-    importanceLevel: string;
-    difficulty: string;
-    examSimilarity: string;
-    topicIds: string[];
-    whyItMatters: string;
-    recommendedAction: string;
-  };
-}) {
-  const isHot = q.importanceLevel === "critical" || q.importanceLevel === "high";
-
-  return (
-    <div
-      className="flex gap-3 rounded-xl p-3"
-      style={{
-        background: isHot ? "var(--amber-light)" : "var(--bg-subtle)",
-      }}
-    >
-      {/* Number */}
-      <span
-        className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-black text-white"
-        style={{ background: isHot ? "var(--amber-mid)" : "var(--text-muted)" }}
-      >
-        {q.questionNumber}
-      </span>
-
-      <div className="flex-1 min-w-0">
-        {/* Topics */}
-        {q.topicIds.length > 0 && (
-          <div className="flex flex-wrap gap-1 mb-1">
-            {q.topicIds.slice(0, 3).map((t) => (
-              <span
-                key={t}
-                className="text-xs"
-                style={{ color: isHot ? "var(--amber)" : "var(--text-muted)" }}
-              >
-                {t}
-              </span>
-            ))}
-          </div>
-        )}
-
-        {/* Why it matters */}
-        <p className="text-sm leading-6" style={{ color: "var(--text-secondary)" }}>
-          {q.whyItMatters}
-        </p>
-
-        {/* Action */}
-        <p
-          className="mt-1 text-xs font-bold"
-          style={{ color: isHot ? "var(--amber-mid)" : "var(--text-muted)" }}
-        >
-          ➤ {q.recommendedAction}
-        </p>
-      </div>
     </div>
   );
 }
@@ -483,107 +728,68 @@ function EmptyCol({ text }: { text: string }) {
   );
 }
 
+/* ─────────────────── Week Inference Diagram ─────────────────── */
 type WeekInferenceProps = {
   weekNumber: number;
-  lectureSummary:
-    | {
-        mainTopics: string[];
-        keyDefinitions: string[];
-        keyTheorems: string[];
-        keyFormulas: string[];
-        examNotes: string[];
-      }
-    | undefined;
-  recitationSummary:
-    | {
-        keyTechniques: string[];
-        conclusions: string[];
-        mustPractice: string[];
-      }
-    | undefined;
-  homeworkPriority:
-    | {
-        questions: Array<{
-          topicIds: string[];
-          whyItMatters: string;
-          importanceLevel: string;
-        }>;
-      }
-    | undefined;
+  lectureSummary: { mainTopics: string[]; keyDefinitions: string[]; keyTheorems: string[]; keyFormulas: string[]; examNotes: string[] } | undefined;
+  recitationSummary: { keyTechniques: string[]; conclusions: string[]; mustPractice: string[] } | undefined;
+  homeworkPriority: { questions: Array<{ topicIds: string[]; whyItMatters: string; importanceLevel: string }> } | undefined;
 };
 
-function WeekInferenceDiagram({
-  weekNumber,
-  lectureSummary,
-  recitationSummary,
-  homeworkPriority,
-}: WeekInferenceProps) {
+function WeekInferenceDiagram({ weekNumber, lectureSummary, recitationSummary, homeworkPriority }: WeekInferenceProps) {
   const nodes = buildInferenceNodes(lectureSummary, recitationSummary, homeworkPriority);
-
   if (nodes.length === 0) return null;
 
   return (
-    <section
-      className="mb-6 overflow-hidden rounded-2xl border bg-white shadow-sm"
-      style={{ borderColor: "var(--border)" }}
-    >
-      <div
-        className="border-b px-5 py-4"
-        style={{ borderColor: "var(--border)", background: "linear-gradient(90deg, var(--navy-light), #fff)" }}
-      >
-        <p className="text-xs font-bold uppercase tracking-[0.18em]" style={{ color: "var(--text-muted)" }}>
-          תרשים שבוע {weekNumber}
-        </p>
-        <h2 className="mt-1 text-lg font-black" style={{ color: "var(--text-primary)" }}>
-          מה ההגדרות והמשפטים מאפשרים להסיק
-        </h2>
-      </div>
-
-      <div className="p-5">
-        <div className="grid gap-3 md:grid-cols-4">
-          {nodes.map((node, index) => (
-            <div key={`${node.title}-${index}`} className="relative">
-              <InferenceNode node={node} />
-              {index < nodes.length - 1 && (
-                <div className="hidden md:block absolute left-[-18px] top-1/2 -translate-y-1/2 text-xl font-black" style={{ color: "var(--teal)" }}>
-                  ←
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
+    <section className="mb-8">
+      <SectionTitle label="מה ההגדרות מאפשרות להסיק" sub={`תרשים שבוע ${weekNumber}`} />
+      <div className="mt-4 grid gap-3 md:grid-cols-4">
+        {nodes.map((node, index) => (
+          <div key={`${node.title}-${index}`} className="relative">
+            <InferenceNode node={node} />
+            {index < nodes.length - 1 && (
+              <div
+                className="hidden md:block absolute -left-3.5 top-1/2 -translate-y-1/2 text-sm font-black"
+                style={{ color: "var(--border-strong)" }}
+              >
+                ←
+              </div>
+            )}
+          </div>
+        ))}
       </div>
     </section>
   );
 }
 
-type InferenceNodeData = {
-  title: string;
-  label: string;
-  detail: string;
-  tone: "navy" | "green" | "teal" | "amber";
-};
+type InferenceNodeData = { title: string; label: string; detail: string; tone: "navy" | "green" | "teal" | "amber" };
 
 function InferenceNode({ node }: { node: InferenceNodeData }) {
   const toneMap = {
-    navy: { bg: "var(--navy-light)", border: "var(--navy-border)", color: "var(--navy)" },
-    green: { bg: "var(--green-light)", border: "var(--green-border)", color: "var(--green)" },
-    teal: { bg: "rgba(11, 114, 133, 0.08)", border: "var(--teal-border)", color: "var(--teal)" },
-    amber: { bg: "var(--amber-light)", border: "var(--amber-border)", color: "var(--amber-mid)" },
+    navy:  { accent: "var(--navy-mid)",  bg: "var(--bg-card)" },
+    green: { accent: "var(--green-mid)", bg: "var(--bg-card)" },
+    teal:  { accent: "var(--teal)",      bg: "var(--bg-card)" },
+    amber: { accent: "var(--amber-mid)", bg: "var(--bg-card)" },
   }[node.tone];
 
   return (
     <article
       className="h-full rounded-xl border p-4"
-      style={{ background: toneMap.bg, borderColor: toneMap.border }}
+      style={{
+        background: toneMap.bg,
+        borderColor: "var(--border)",
+        borderTopWidth: "2px",
+        borderTopColor: toneMap.accent,
+        boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
+      }}
     >
-      <p className="text-xs font-black uppercase tracking-widest" style={{ color: toneMap.color }}>
+      <p className="text-[10px] font-black uppercase tracking-widest mb-2" style={{ color: toneMap.accent }}>
         {node.title}
       </p>
-      <div className="mt-2 min-h-12">
+      <div className="min-h-10">
         <MathContent text={node.label} className="text-sm font-bold" />
       </div>
-      <p className="mt-3 text-xs leading-6" style={{ color: "var(--text-secondary)" }}>
+      <p className="mt-3 text-xs leading-5" style={{ color: "var(--text-muted)" }}>
         {node.detail}
       </p>
     </article>
@@ -604,33 +810,13 @@ function buildInferenceNodes(
   const conclusion =
     firstMeaningful(recitationSummary?.conclusions) ??
     firstMeaningful(lectureSummary?.examNotes) ??
-    homeworkPriority?.questions.find((question) => question.importanceLevel !== "low")?.whyItMatters;
+    homeworkPriority?.questions.find((q) => q.importanceLevel !== "low")?.whyItMatters;
 
   return [
-    definition && {
-      title: "הגדרה",
-      label: definition,
-      detail: "מגדירה את האובייקט שעליו מותר לעבוד בהמשך השבוע.",
-      tone: "green" as const,
-    },
-    theorem && {
-      title: "משפט",
-      label: theorem,
-      detail: "נותן תנאים שמאפשרים להסיק תוצאה בלי לפתור מאפס.",
-      tone: "navy" as const,
-    },
-    (formula ?? technique) && {
-      title: formula ? "נוסחה" : "טכניקה",
-      label: formula ?? technique ?? "",
-      detail: formula ? "הופכת את המשפט לכלי חישוב/זיהוי בתרגילים." : "זה הצעד הפרקטי שמתרגלים על בסיס הרצאה קודמת.",
-      tone: "teal" as const,
-    },
-    conclusion && {
-      title: "מה מסיקים",
-      label: conclusion,
-      detail: "זו המסקנה שצריך לקחת לתרגול, מטלות ומבחני עבר.",
-      tone: "amber" as const,
-    },
+    definition && { title: "הגדרה", label: definition, detail: "מגדירה את האובייקט שעליו מותר לעבוד בהמשך השבוע.", tone: "green" as const },
+    theorem && { title: "משפט", label: theorem, detail: "נותן תנאים שמאפשרים להסיק תוצאה בלי לפתור מאפס.", tone: "navy" as const },
+    (formula ?? technique) && { title: formula ? "נוסחה" : "טכניקה", label: formula ?? technique ?? "", detail: formula ? "הופכת את המשפט לכלי חישוב/זיהוי בתרגילים." : "זה הצעד הפרקטי שמתרגלים על בסיס הרצאה קודמת.", tone: "teal" as const },
+    conclusion && { title: "מה מסיקים", label: conclusion, detail: "זו המסקנה שצריך לקחת לתרגול, מטלות ומבחני עבר.", tone: "amber" as const },
   ].filter(Boolean) as InferenceNodeData[];
 }
 
@@ -638,61 +824,51 @@ function firstMeaningful(items: string[] | undefined): string | undefined {
   return items?.find((item) => item.trim().length > 0);
 }
 
-type QuoteBlock = {
-  kind: string;
-  source: string;
-  text: string;
-};
+/* ─────────────────── Lecture Source Quotes ─────────────────── */
+type QuoteBlock = { kind: string; source: string; text: string };
 
 function LectureSourceQuotes({ quotes }: { quotes: QuoteBlock[] }) {
-  return (
-    <section
-      className="mb-6 overflow-hidden rounded-2xl border bg-white shadow-sm"
-      style={{ borderColor: "var(--border)" }}
-    >
-      <div
-        className="border-b px-5 py-4"
-        style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}
-      >
-        <p className="text-xs font-bold uppercase tracking-[0.18em]" style={{ color: "var(--text-muted)" }}>
-          ציטוט מקור
-        </p>
-        <h2 className="mt-1 text-lg font-black" style={{ color: "var(--text-primary)" }}>
-          הגדרות ומשפטים לפי סדר הופעה בהרצאה
-        </h2>
-        <p className="mt-1 text-xs leading-6" style={{ color: "var(--text-muted)" }}>
-          מוצג רק טקסט שחולץ בפועל מהקבצים. אם OCR של ההרצאה לא קריא, המערכת מציגה מקור סיכום מקושר ולא ממציאה ניסוח.
-        </p>
-      </div>
+  if (quotes.length === 0) return null;
 
-      {quotes.length === 0 ? (
-        <div className="p-5">
-          <StudyCallout variant="warning">
-            לא נמצאו ציטוטי הגדרה/משפט קריאים לשבוע זה מתוך הטקסט המחולץ. צריך OCR איכותי יותר או קובץ מקור טקסטואלי.
-          </StudyCallout>
-        </div>
-      ) : (
-        <div className="divide-y" style={{ borderColor: "var(--border)" }}>
-          {quotes.map((quote, index) => (
-            <article key={`${quote.kind}-${index}`} className="p-5">
-              <div className="mb-3 flex flex-wrap items-center gap-2">
-                <span className="rounded-full px-3 py-1 text-xs font-black" style={{ background: "var(--navy-light)", color: "var(--navy)" }}>
-                  {index + 1}. {quote.kind}
-                </span>
-                <span className="text-xs" style={{ color: "var(--text-muted)" }}>
-                  מקור: {quote.source}
-                </span>
-              </div>
-              <div
-                className="rounded-xl border-r-4 p-4"
-                style={{ borderColor: "var(--teal)", background: "var(--bg-subtle)" }}
+  return (
+    <section className="mb-8">
+      <SectionTitle label="הגדרות ומשפטים מהרצאה" sub="ציטוט מקור" />
+      <p className="mt-1 mb-4 text-xs" style={{ color: "var(--text-muted)" }}>
+        טקסט שחולץ בפועל מהקבצים — אם OCR לא קריא, מוצג סיכום מקושר.
+      </p>
+      <div
+        className="rounded-xl border bg-white divide-y overflow-hidden"
+        style={{
+          borderColor: "var(--border)",
+          boxShadow: "0 1px 3px rgba(0,0,0,0.05)",
+        }}
+      >
+        {quotes.map((quote, index) => (
+          <article key={`${quote.kind}-${index}`} className="p-5">
+            <div className="mb-3 flex flex-wrap items-center gap-2">
+              <span
+                className="rounded-md px-2.5 py-0.5 text-xs font-bold"
+                style={{ background: "var(--navy-light)", color: "var(--navy-mid)", border: "1px solid var(--navy-border)" }}
               >
-                <MathContent text={quote.text} className="text-sm" />
-              </div>
-            </article>
-          ))}
-        </div>
-      )}
+                {index + 1}. {quote.kind}
+              </span>
+              <span className="text-xs" style={{ color: "var(--text-muted)" }}>מקור: {quote.source}</span>
+            </div>
+            <div
+              className="rounded-lg p-4"
+              style={{
+                borderRight: "3px solid var(--teal)",
+                background: "var(--bg-subtle)",
+                border: "1px solid var(--border)",
+                borderRightColor: "var(--teal)",
+                borderRightWidth: "3px",
+              }}
+            >
+              <MathContent text={quote.text} className="text-sm" />
+            </div>
+          </article>
+        ))}
+      </div>
     </section>
   );
 }
@@ -710,7 +886,6 @@ function buildLectureQuoteBlocks({
 }): QuoteBlock[] {
   const lectureQuotes = extractMarkedQuotes(lectureText, lectureFilename ?? "הרצאה");
   if (lectureQuotes.length > 0) return lectureQuotes.slice(0, 12);
-
   const summaryQuotes = extractMarkedQuotes(summaryText, summaryFilename ?? "סיכום מקושר");
   return summaryQuotes.slice(0, 12);
 }
@@ -737,12 +912,7 @@ function extractMarkedQuotes(rawText: string | undefined, source: string): Quote
     const next = matches[index + 1]?.index ?? Math.min(cleaned.length, start + 1200);
     const block = cleaned.slice(start, Math.min(next, start + 1200)).trim();
     if (block.length < 40) continue;
-
-    quotes.push({
-      kind: match[1],
-      source,
-      text: block,
-    });
+    quotes.push({ kind: match[1], source, text: block });
   }
 
   return quotes;
