@@ -16,6 +16,7 @@ import {
   Target,
   Zap,
 } from "lucide-react";
+import { AuthGate } from "@/components/AuthGate";
 
 const EXAM_DATE = new Date("2026-07-01T09:00:00");
 
@@ -53,6 +54,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
   return (
     <div dir="rtl" className="min-h-screen" style={{ background: "var(--bg-page)", color: "var(--text-primary)" }}>
+      <AuthGate />
 
       {/* ── Header ── */}
       <header

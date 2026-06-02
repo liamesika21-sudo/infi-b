@@ -1,0 +1,154 @@
+"use client";
+
+import { FormEvent, useEffect, useState } from "react";
+import { Lock, Mail } from "lucide-react";
+
+type AuthState =
+  | { status: "checking" }
+  | { status: "authenticated"; email: string }
+  | { status: "blocked"; message?: string };
+
+export function AuthGate() {
+  const [authState, setAuthState] = useState<AuthState>({ status: "checking" });
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [message, setMessage] = useState("");
+  const authMessage = authState.status === "blocked" ? authState.message : undefined;
+
+  useEffect(() => {
+    let isMounted = true;
+
+    async function checkAuth() {
+      try {
+        const response = await fetch("/api/auth/status");
+        const data = (await response.json()) as { ok?: boolean; email?: string; reason?: string };
+
+        if (!isMounted) return;
+
+        if (response.ok && data.ok && data.email) {
+          setAuthState({ status: "authenticated", email: data.email });
+          return;
+        }
+
+        setAuthState({
+          status: "blocked",
+          message:
+            data.reason === "ip_mismatch"
+              ? "הכניסה הקודמת למייל הזה בוצעה ממחשב אחר."
+              : undefined,
+        });
+      } catch {
+        if (isMounted) {
+          setAuthState({ status: "blocked", message: "לא הצלחתי לבדוק הרשאה כרגע." });
+        }
+      }
+    }
+
+    checkAuth();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setIsSubmitting(true);
+    setMessage("");
+
+    try {
+      const response = await fetch("/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      const data = (await response.json()) as { ok?: boolean; email?: string; message?: string };
+
+      if (response.ok && data.ok && data.email) {
+        setAuthState({ status: "authenticated", email: data.email });
+        return;
+      }
+
+      setMessage(data.message ?? "לא ניתן להתחבר עם המייל הזה.");
+    } catch {
+      setMessage("שגיאת תקשורת. נסה שוב.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
+  if (authState.status === "authenticated") return null;
+
+  return (
+    <div
+      className="fixed inset-0 z-[100] flex items-center justify-center px-5 py-8"
+      style={{ background: "rgba(15, 14, 12, 0.58)", backdropFilter: "blur(8px)" }}
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="auth-title"
+    >
+      <form
+        onSubmit={handleSubmit}
+        className="w-full max-w-sm rounded-lg border bg-white p-5 shadow-2xl"
+        style={{ borderColor: "var(--border)" }}
+      >
+        <div className="mb-4 flex items-center gap-3">
+          <span
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-white"
+            style={{ background: "var(--navy)" }}
+          >
+            <Lock className="h-5 w-5" aria-hidden="true" />
+          </span>
+          <div>
+            <h2 id="auth-title" className="text-lg font-black">
+              כניסה לאתר
+            </h2>
+            <p className="text-sm leading-6" style={{ color: "var(--text-secondary)" }}>
+              הכנס מייל מורשה כדי להמשיך.
+            </p>
+          </div>
+        </div>
+
+        <label className="mb-2 block text-sm font-bold" htmlFor="auth-email">
+          מייל
+        </label>
+        <div
+          className="flex items-center gap-2 rounded-lg border bg-white px-3"
+          style={{ borderColor: "var(--border)" }}
+        >
+          <Mail className="h-4 w-4 shrink-0" style={{ color: "var(--text-muted)" }} aria-hidden="true" />
+          <input
+            id="auth-email"
+            type="email"
+            required
+            autoComplete="email"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+            disabled={authState.status === "checking" || isSubmitting}
+            className="min-h-11 w-full bg-transparent text-left outline-none disabled:opacity-60"
+            dir="ltr"
+            placeholder="name@example.com"
+          />
+        </div>
+
+        {(message || authState.status === "checking" || authMessage) && (
+          <p
+            className="mt-3 min-h-6 text-sm font-semibold leading-6"
+            style={{ color: message || authMessage ? "var(--red-mid)" : "var(--text-muted)" }}
+          >
+            {authState.status === "checking" ? "בודק הרשאה..." : message || authMessage}
+          </p>
+        )}
+
+        <button
+          type="submit"
+          disabled={authState.status === "checking" || isSubmitting}
+          className="mt-4 flex min-h-11 w-full items-center justify-center rounded-lg px-4 text-sm font-black text-white transition disabled:cursor-not-allowed disabled:opacity-60"
+          style={{ background: "var(--navy)" }}
+        >
+          {isSubmitting ? "מתחבר..." : "כניסה"}
+        </button>
+      </form>
+    </div>
+  );
+}
