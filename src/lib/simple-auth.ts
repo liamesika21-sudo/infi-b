@@ -9,7 +9,8 @@ const COOKIE_MAX_AGE = 60 * 60 * 24 * 180;
 
 type AuthUserRecord = {
   email: string;
-  boundIp: string;
+  boundDeviceId?: string;
+  boundIp?: string;
   firstLoginAt: string;
   lastLoginAt: string;
   loginCount: number;
@@ -26,7 +27,7 @@ type RedisConfig = {
 };
 
 export type AuthCheckResult =
-  | { ok: true; email: string; boundIp: string }
+  | { ok: true; email: string; boundDeviceId: string }
   | { ok: false; reason: "missing" | "invalid" | "ip_mismatch" };
 
 function normalizeEmail(email: string): string {
@@ -52,11 +53,6 @@ function verifySignature(value: string, signature: string): boolean {
   );
 }
 
-function getForwardedIp(value: string | null): string | null {
-  if (!value) return null;
-  return value.split(",")[0]?.trim() || null;
-}
-
 function getRedisConfig(): RedisConfig | null {
   const url = process.env.UPSTASH_REDIS_REST_URL ?? process.env.KV_REST_API_URL;
   const token = process.env.UPSTASH_REDIS_REST_TOKEN ?? process.env.KV_REST_API_TOKEN;
@@ -72,18 +68,18 @@ function getUserKey(email: string): string {
   return `auth:user:${normalizeEmail(email)}`;
 }
 
-export function getClientIp(request: Request): string {
-  return (
-    getForwardedIp(request.headers.get("x-forwarded-for")) ??
-    request.headers.get("x-real-ip") ??
-    request.headers.get("cf-connecting-ip") ??
-    "unknown"
-  );
+function normalizeDeviceId(deviceId: string): string {
+  return deviceId.trim();
 }
 
-export function createAuthCookieValue(email: string, ip: string): string {
+export function getClientDeviceId(request: Request): string {
+  const deviceId = normalizeDeviceId(request.headers.get("x-infi-device-id") ?? "");
+  return deviceId.length >= 16 && deviceId.length <= 128 ? deviceId : "";
+}
+
+export function createAuthCookieValue(email: string, deviceId: string): string {
   const payload = Buffer.from(
-    JSON.stringify({ email: normalizeEmail(email), ip }),
+    JSON.stringify({ email: normalizeEmail(email), deviceId: normalizeDeviceId(deviceId) }),
     "utf8"
   ).toString("base64url");
 
@@ -111,14 +107,27 @@ export function readAuthCookieValue(cookieValue: string | undefined): AuthCheckR
   try {
     const data = JSON.parse(Buffer.from(payload, "base64url").toString("utf8")) as {
       email?: unknown;
+      deviceId?: unknown;
       ip?: unknown;
     };
 
-    if (typeof data.email !== "string" || typeof data.ip !== "string") {
+    if (typeof data.email !== "string") {
       return { ok: false, reason: "invalid" };
     }
 
-    return { ok: true, email: normalizeEmail(data.email), boundIp: data.ip };
+    if (typeof data.deviceId === "string") {
+      return {
+        ok: true,
+        email: normalizeEmail(data.email),
+        boundDeviceId: normalizeDeviceId(data.deviceId),
+      };
+    }
+
+    if (typeof data.ip === "string") {
+      return { ok: false, reason: "ip_mismatch" };
+    }
+
+    return { ok: false, reason: "invalid" };
   } catch {
     return { ok: false, reason: "invalid" };
   }
@@ -203,8 +212,8 @@ export async function validateCookieForRequest(request: Request): Promise<AuthCh
   const authCookie = readAuthCookieValue(cookie);
   if (!authCookie.ok) return authCookie;
 
-  const currentIp = getClientIp(request);
-  if (authCookie.boundIp !== currentIp) {
+  const currentDeviceId = getClientDeviceId(request);
+  if (!currentDeviceId || authCookie.boundDeviceId !== currentDeviceId) {
     return { ok: false, reason: "ip_mismatch" };
   }
 
@@ -214,19 +223,22 @@ export async function validateCookieForRequest(request: Request): Promise<AuthCh
 export async function loginWithEmail(email: string, request: Request) {
   const normalizedEmail = normalizeEmail(email);
   const authFile = await readAuthFile();
-  const allowedEmails = new Set(authFile.allowedEmails.map(normalizeEmail));
 
-  if (!allowedEmails.has(normalizedEmail)) {
-    return { ok: false as const, status: 403, message: "המייל לא מופיע ברשימת המורשים." };
+  if (!normalizedEmail || !normalizedEmail.includes("@")) {
+    return { ok: false as const, status: 400, message: "צריך להזין כתובת מייל תקינה." };
   }
 
-  const currentIp = getClientIp(request);
+  const currentDeviceId = getClientDeviceId(request);
+  if (!currentDeviceId) {
+    return { ok: false as const, status: 400, message: "לא הצלחתי לזהות את המחשב. רענן את הדף ונסה שוב." };
+  }
+
   const useRedisStore = shouldUseRedisStore();
   const existingUser = useRedisStore
     ? await getRedisUser(normalizedEmail)
     : authFile.users[normalizedEmail];
 
-  if (existingUser && existingUser.boundIp !== currentIp) {
+  if (existingUser?.boundDeviceId && existingUser.boundDeviceId !== currentDeviceId) {
     return {
       ok: false as const,
       status: 403,
@@ -237,7 +249,8 @@ export async function loginWithEmail(email: string, request: Request) {
   const now = new Date().toISOString();
   const user: AuthUserRecord = {
     email: normalizedEmail,
-    boundIp: existingUser?.boundIp ?? currentIp,
+    boundDeviceId: existingUser?.boundDeviceId ?? currentDeviceId,
+    boundIp: existingUser?.boundIp,
     firstLoginAt: existingUser?.firstLoginAt ?? now,
     lastLoginAt: now,
     loginCount: (existingUser?.loginCount ?? 0) + 1,
@@ -253,7 +266,7 @@ export async function loginWithEmail(email: string, request: Request) {
   return {
     ok: true as const,
     email: normalizedEmail,
-    ip: currentIp,
-    cookieValue: createAuthCookieValue(normalizedEmail, currentIp),
+    deviceId: currentDeviceId,
+    cookieValue: createAuthCookieValue(normalizedEmail, currentDeviceId),
   };
 }

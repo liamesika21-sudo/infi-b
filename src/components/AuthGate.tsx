@@ -8,6 +8,31 @@ type AuthState =
   | { status: "authenticated"; email: string }
   | { status: "blocked"; message?: string };
 
+const DEVICE_ID_STORAGE_KEY = "infi_device_id";
+let fallbackDeviceId = "";
+
+function createDeviceId(): string {
+  if (typeof crypto !== "undefined" && "randomUUID" in crypto) {
+    return crypto.randomUUID();
+  }
+
+  return `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
+}
+
+function getOrCreateDeviceId(): string {
+  try {
+    const existingDeviceId = localStorage.getItem(DEVICE_ID_STORAGE_KEY);
+    if (existingDeviceId) return existingDeviceId;
+
+    const deviceId = createDeviceId();
+    localStorage.setItem(DEVICE_ID_STORAGE_KEY, deviceId);
+    return deviceId;
+  } catch {
+    fallbackDeviceId ||= createDeviceId();
+    return fallbackDeviceId;
+  }
+}
+
 export function AuthGate() {
   const [authState, setAuthState] = useState<AuthState>({ status: "checking" });
   const [email, setEmail] = useState("");
@@ -20,7 +45,9 @@ export function AuthGate() {
 
     async function checkAuth() {
       try {
-        const response = await fetch("/api/auth/status");
+        const response = await fetch("/api/auth/status", {
+          headers: { "x-infi-device-id": getOrCreateDeviceId() },
+        });
         const data = (await response.json()) as { ok?: boolean; email?: string; reason?: string };
 
         if (!isMounted) return;
@@ -59,7 +86,10 @@ export function AuthGate() {
     try {
       const response = await fetch("/api/auth/login", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "x-infi-device-id": getOrCreateDeviceId(),
+        },
         body: JSON.stringify({ email }),
       });
       const data = (await response.json()) as { ok?: boolean; email?: string; message?: string };
@@ -104,7 +134,7 @@ export function AuthGate() {
               כניסה לאתר
             </h2>
             <p className="text-sm leading-6" style={{ color: "var(--text-secondary)" }}>
-              הכנס מייל מורשה כדי להמשיך.
+              הכנס מייל. בכניסה הראשונה הוא ישויך למחשב הזה.
             </p>
           </div>
         </div>
