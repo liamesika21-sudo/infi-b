@@ -17,7 +17,6 @@ type AuthUserRecord = {
 };
 
 type AuthFile = {
-  allowedEmails: string[];
   users: Record<string, AuthUserRecord>;
 };
 
@@ -139,14 +138,11 @@ async function readAuthFile(): Promise<AuthFile> {
     const parsed = JSON.parse(raw) as Partial<AuthFile>;
 
     return {
-      allowedEmails: Array.isArray(parsed.allowedEmails)
-        ? parsed.allowedEmails.map(normalizeEmail)
-        : [],
       users: parsed.users && typeof parsed.users === "object" ? parsed.users : {},
     };
   } catch (error) {
     if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;
-    return { allowedEmails: [], users: {} };
+    return { users: {} };
   }
 }
 
@@ -238,18 +234,10 @@ export async function loginWithEmail(email: string, request: Request) {
     ? await getRedisUser(normalizedEmail)
     : authFile.users[normalizedEmail];
 
-  if (existingUser?.boundDeviceId && existingUser.boundDeviceId !== currentDeviceId) {
-    return {
-      ok: false as const,
-      status: 403,
-      message: "המייל הזה כבר משויך למחשב אחר.",
-    };
-  }
-
   const now = new Date().toISOString();
   const user: AuthUserRecord = {
     email: normalizedEmail,
-    boundDeviceId: existingUser?.boundDeviceId ?? currentDeviceId,
+    boundDeviceId: currentDeviceId,
     boundIp: existingUser?.boundIp,
     firstLoginAt: existingUser?.firstLoginAt ?? now,
     lastLoginAt: now,

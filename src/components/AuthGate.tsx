@@ -61,12 +61,12 @@ export function AuthGate() {
           status: "blocked",
           message:
             data.reason === "ip_mismatch"
-              ? "הכניסה הקודמת למייל הזה בוצעה ממחשב אחר."
+              ? "אפשר להתחבר רק דרך המחשב הזה."
               : undefined,
         });
       } catch {
         if (isMounted) {
-          setAuthState({ status: "blocked", message: "לא הצלחתי לבדוק הרשאה כרגע." });
+          setAuthState({ status: "blocked", message: "לא הצלחתי לבדוק את החיבור כרגע." });
         }
       }
     }
@@ -99,7 +99,7 @@ export function AuthGate() {
         return;
       }
 
-      setMessage(data.message ?? "לא ניתן להתחבר עם המייל הזה.");
+      setMessage(data.message ?? "לא ניתן להתחבר כרגע.");
     } catch {
       setMessage("שגיאת תקשורת. נסה שוב.");
     } finally {
@@ -134,7 +134,7 @@ export function AuthGate() {
               כניסה לאתר
             </h2>
             <p className="text-sm leading-6" style={{ color: "var(--text-secondary)" }}>
-              הכנס מייל. בכניסה הראשונה הוא ישויך למחשב הזה.
+              הכניסה זמינה רק דרך המחשב הזה.
             </p>
           </div>
         </div>
@@ -166,7 +166,7 @@ export function AuthGate() {
             className="mt-3 min-h-6 text-sm font-semibold leading-6"
             style={{ color: message || authMessage ? "var(--red-mid)" : "var(--text-muted)" }}
           >
-            {authState.status === "checking" ? "בודק הרשאה..." : message || authMessage}
+            {authState.status === "checking" ? "בודק חיבור..." : message || authMessage}
           </p>
         )}
 
