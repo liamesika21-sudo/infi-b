@@ -1,5 +1,6 @@
 import { DEFINITIONS, CATEGORY_LABELS } from "@/lib/calculus2/definitions-data";
 import { DefinitionsClient } from "./DefinitionsClient";
+import { ConvergenceTables } from "./ConvergenceTables";
 
 export default function DefinitionsPage() {
   const categoryCount = Object.fromEntries(
@@ -10,8 +11,8 @@ export default function DefinitionsPage() {
   );
 
   return (
-    <div className="space-y-8">
-      {/* Hero — minimal text-only */}
+    <div className="space-y-10">
+      {/* Hero */}
       <div className="pb-7 border-b" style={{ borderColor: "var(--border)" }}>
         <p
           className="text-xs font-bold uppercase tracking-[0.2em] mb-2"
@@ -30,7 +31,6 @@ export default function DefinitionsPage() {
           מחליף את הצורך לחפש בתרגולי PDF.
         </p>
 
-        {/* Category chips */}
         <div className="mt-5 flex flex-wrap gap-1.5">
           {Object.entries(CATEGORY_LABELS).map(([cat, label]) => (
             <span
@@ -48,8 +48,49 @@ export default function DefinitionsPage() {
         </div>
       </div>
 
-      {/* Client search + list */}
-      <DefinitionsClient />
+      {/* ── Convergence tables ── */}
+      <section>
+        <div className="mb-6 pb-4 border-b" style={{ borderColor: "var(--border)" }}>
+          <p
+            className="text-xs font-bold uppercase tracking-[0.2em] mb-1"
+            style={{ color: "var(--text-muted)" }}
+          >
+            Quick Reference
+          </p>
+          <h2
+            className="text-2xl font-black"
+            style={{ color: "var(--text-primary)", letterSpacing: "-0.025em" }}
+          >
+            טבלאות עיון — התכנסות טורים
+          </h2>
+          <p className="mt-1 text-sm" style={{ color: "var(--text-secondary)" }}>
+            כל הטורים המיוחדים, כל המבחנים, וזיהוי מהיר לפי צורת $a_n$.
+          </p>
+        </div>
+        <ConvergenceTables />
+      </section>
+
+      {/* ── Searchable definitions ── */}
+      <section>
+        <div className="mb-6 pb-4 border-b" style={{ borderColor: "var(--border)" }}>
+          <p
+            className="text-xs font-bold uppercase tracking-[0.2em] mb-1"
+            style={{ color: "var(--text-muted)" }}
+          >
+            Full Glossary
+          </p>
+          <h2
+            className="text-2xl font-black"
+            style={{ color: "var(--text-primary)", letterSpacing: "-0.025em" }}
+          >
+            כל ההגדרות — עם הסבר מלא
+          </h2>
+          <p className="mt-1 text-sm" style={{ color: "var(--text-secondary)" }}>
+            חיפוש לפי שם, קטגוריה, לחיצה להרחבה.
+          </p>
+        </div>
+        <DefinitionsClient />
+      </section>
     </div>
   );
 }
