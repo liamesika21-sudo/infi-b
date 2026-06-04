@@ -2,6 +2,7 @@
 
 import type { HomeworkQuestionPriority } from "@/lib/calculus2/analysis-types";
 import { HomeworkHintSystem } from "@/components/study/HomeworkHintSystem";
+import { MathContent } from "@/components/study/MathContent";
 
 export function WeekHomeworkSection({
   questions,
@@ -19,6 +20,7 @@ export function WeekHomeworkSection({
 
 function HomeworkQuestionCard({ q }: { q: HomeworkQuestionPriority }) {
   const isHot = q.importanceLevel === "critical" || q.importanceLevel === "high";
+  const questionText = getQuestionText(q.contentPreview);
 
   return (
     <div
@@ -57,8 +59,23 @@ function HomeworkQuestionCard({ q }: { q: HomeworkQuestionPriority }) {
             </div>
           )}
 
-          {/* Why it matters */}
-          <p className="text-sm leading-7" style={{ color: "var(--text-secondary)" }}>
+          <div
+            className="rounded-lg border px-3 py-2"
+            style={{
+              background: "var(--bg-card)",
+              borderColor: isHot ? "var(--amber-border)" : "var(--border)",
+            }}
+          >
+            <p
+              className="mb-1 text-[11px] font-black uppercase tracking-wider"
+              style={{ color: isHot ? "var(--amber-mid)" : "var(--text-muted)" }}
+            >
+              נוסח השאלה
+            </p>
+            <MathContent text={questionText} className="text-sm" />
+          </div>
+
+          <p className="mt-2 text-xs leading-6" style={{ color: "var(--text-muted)" }}>
             {q.whyItMatters}
           </p>
         </div>
@@ -68,4 +85,12 @@ function HomeworkQuestionCard({ q }: { q: HomeworkQuestionPriority }) {
       <HomeworkHintSystem question={q} />
     </div>
   );
+}
+
+function getQuestionText(contentPreview: string) {
+  const withoutSolution = contentPreview
+    .split(/\bSolution\s*:|\bSolution\b|פתרון\s*:/i)[0]
+    .trim();
+
+  return withoutSolution || contentPreview.trim() || "לא נמצא נוסח שאלה בקובץ המטלה.";
 }

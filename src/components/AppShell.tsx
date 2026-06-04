@@ -3,16 +3,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
-  BookMarked,
   Brain,
   Calendar,
-  ClipboardList,
   FileQuestion,
   FlaskConical,
   LayoutDashboard,
-  ScrollText,
   Sigma,
-  Sparkles,
   Target,
   Zap,
 } from "lucide-react";
@@ -26,117 +22,126 @@ function getDaysUntilExam(): number {
   return Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
 }
 
-const topNavItems = [
-  { href: "/dashboard",        label: "דשבורד",      icon: LayoutDashboard },
-  { href: "/weeks",            label: "שבועות",      icon: Calendar },
-  { href: "/definitions",      label: "הגדרות",      icon: BookMarked },
-  { href: "/formulas",         label: "נוסחאות",     icon: Sigma },
-  { href: "/theorems",         label: "משפטים",      icon: ScrollText },
-  { href: "/practice",         label: "תרגול",       icon: Target },
-  { href: "/simulations",      label: "סימולציות",   icon: FlaskConical },
-  { href: "/homework-review",  label: "מטלות",       icon: ClipboardList },
-  { href: "/quick-review",     label: "חזרה מהירה",  icon: Zap },
-  { href: "/past-exams",       label: "מבחני עבר",   icon: FileQuestion },
-  { href: "/mentor",           label: "מנטור",       icon: Brain },
-  { href: "/instructor-notes", label: "הערות מקס",   icon: Sparkles },
+const NAV_ITEMS = [
+  { href: "/dashboard",   label: "דשבורד",    icon: LayoutDashboard },
+  { href: "/weeks",       label: "שבועות",    icon: Calendar },
+  { href: "/formulas",    label: "נוסחאות",   icon: Sigma },
+  { href: "/practice",    label: "תרגול",     icon: Target },
+  { href: "/simulations", label: "סימולציות", icon: FlaskConical },
+  { href: "/past-exams",  label: "מבחני עבר", icon: FileQuestion },
+  { href: "/quick-review",label: "חזרה",      icon: Zap },
+  { href: "/mentor",      label: "מנטור",     icon: Brain },
 ];
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const daysLeft = getDaysUntilExam();
 
-  const urgencyColor =
+  const countdownStyle =
     daysLeft <= 7
-      ? "bg-red-600 text-white"
+      ? { background: "#dc2626", color: "#fff" }
       : daysLeft <= 21
-        ? "bg-amber-500 text-white"
-        : "bg-[var(--navy)] text-white";
+        ? { background: "#d97706", color: "#fff" }
+        : { background: "rgba(255,255,255,0.12)", color: "rgba(255,255,255,0.9)" };
 
   return (
     <div dir="rtl" className="min-h-screen" style={{ background: "var(--bg-page)", color: "var(--text-primary)" }}>
       <AuthGate />
 
-      {/* Header */}
-      <header className="sticky top-0 z-40 border-b border-white/10 bg-[#061426]/92 shadow-[0_10px_30px_rgba(3,12,27,0.22)] backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-3 lg:px-6">
+      {/* ── Header ── */}
+      <header
+        className="sticky top-0 z-40"
+        style={{
+          background: "rgba(6,20,38,0.96)",
+          backdropFilter: "blur(16px)",
+          WebkitBackdropFilter: "blur(16px)",
+          borderBottom: "1px solid rgba(255,255,255,0.08)",
+          boxShadow: "0 4px 24px rgba(0,0,0,0.25)",
+        }}
+      >
+        <div className="mx-auto flex max-w-7xl items-center gap-3 px-4 py-2.5 lg:px-6">
 
           {/* Logo */}
           <Link href="/dashboard" className="flex shrink-0 items-center gap-2.5">
             <span
-              className="flex h-9 w-9 items-center justify-center rounded-xl bg-white text-base font-bold text-[#07162a] shadow-[inset_0_-2px_8px_rgba(8,24,46,0.18)]"
+              className="flex h-8 w-8 items-center justify-center rounded-lg text-sm font-black"
+              style={{ background: "#fff", color: "#07162a" }}
             >
               ∑
             </span>
-            <span className="hidden sm:block">
-              <span className="block text-sm font-bold text-white">
+            <span className="hidden md:block leading-none">
+              <span className="block text-sm font-bold text-white" style={{ letterSpacing: "-0.02em" }}>
                 אינפי ב׳
               </span>
-              <span className="block text-xs font-medium text-white/60">
+              <span className="block text-[10px]" style={{ color: "rgba(255,255,255,0.45)" }}>
                 מועד א׳ · 90+
               </span>
             </span>
           </Link>
 
-          {/* Top Nav — desktop */}
-          <nav className="glass-menu header-glass-menu hidden min-w-0 flex-1 xl:flex">
-            {topNavItems.map(({ href, label, icon: Icon }, index) => {
-              const active = pathname === href || pathname.startsWith(href + "/");
-              return (
-                <Link
-                  key={href}
-                  href={href}
-                  className={`glass-menu-link glass-menu-link-${index + 1} ${active ? "active" : ""}`}
-                >
-                  <Icon className="h-4 w-4 shrink-0" />
-                  <span>{label}</span>
-                </Link>
-              );
-            })}
-            <svg className="glass-menu-outline" overflow="visible" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-              <rect className="glass-menu-rect" pathLength={100} x="1" y="1" width="98" height="98" rx="48" fill="transparent" />
-            </svg>
-          </nav>
+          {/* Divider */}
+          <div className="shrink-0 w-px h-5" style={{ background: "rgba(255,255,255,0.15)" }} />
 
-          {/* Mobile nav — scrollable */}
-          <nav className="glass-menu mobile-glass-menu flex min-w-0 flex-1 xl:hidden">
-            {topNavItems.slice(0, 8).map(({ href, label, icon: Icon }, index) => {
-              const active = pathname === href || pathname.startsWith(href + "/");
-              return (
-                <Link
-                  key={href}
-                  href={href}
-                  className={`glass-menu-link glass-menu-link-${index + 1} ${active ? "active" : ""}`}
-                >
-                  <Icon className="h-4 w-4 shrink-0" />
-                  <span className="hidden sm:block">{label}</span>
-                </Link>
-              );
-            })}
-            <svg className="glass-menu-outline" overflow="visible" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-              <rect className="glass-menu-rect" pathLength={100} x="1" y="1" width="98" height="98" rx="48" fill="transparent" />
-            </svg>
-          </nav>
-
-          {/* Exam countdown chip */}
-          <div
-            className={`flex shrink-0 items-center gap-2 rounded-full border border-white/20 px-3 py-1.5 text-sm font-semibold shadow-sm ${urgencyColor}`}
+          {/* Single nav — one row, scrollable */}
+          <nav
+            className="flex min-w-0 flex-1 items-center gap-0.5 overflow-x-auto"
+            style={{ scrollbarWidth: "none" }}
           >
-            <Calendar className="h-3.5 w-3.5" />
-            <span dir="ltr" className="font-mono font-bold">
-              {daysLeft}
-            </span>
-            <span className="hidden sm:block">ימים</span>
+            {NAV_ITEMS.map(({ href, label, icon: Icon }) => {
+              const active = pathname === href || pathname.startsWith(href + "/");
+              return (
+                <NavLink key={href} href={href} label={label} icon={<Icon className="h-3.5 w-3.5 shrink-0" />} active={active} />
+              );
+            })}
+          </nav>
+
+          {/* Exam countdown */}
+          <div
+            className="shrink-0 flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-bold"
+            style={countdownStyle}
+          >
+            <span className="font-mono font-black tabular-nums" dir="ltr">{daysLeft}</span>
+            <span className="hidden sm:block opacity-80">ימים</span>
           </div>
         </div>
       </header>
 
-      {/* Main */}
-      <main className="mx-auto w-full max-w-7xl px-4 py-6 lg:px-6 lg:py-8">{children}</main>
+      {/* ── Main ── */}
+      <main className="mx-auto w-full max-w-7xl px-4 py-6 lg:px-6 lg:py-8">
+        {children}
+      </main>
 
-      {/* Footer */}
-      <footer className="mx-auto max-w-7xl border-t px-4 py-4 text-center text-xs lg:px-6" style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>
+      {/* ── Footer ── */}
+      <footer
+        className="mx-auto max-w-7xl border-t px-4 py-4 text-center text-xs lg:px-6"
+        style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}
+      >
         מועד א׳ · 01.07.2026 · יעד 90+ · Calculus 2 Exam Prep
       </footer>
     </div>
+  );
+}
+
+/* Extracted so hover is handled cleanly without inline handlers */
+function NavLink({
+  href,
+  label,
+  icon,
+  active,
+}: {
+  href: string;
+  label: string;
+  icon: React.ReactNode;
+  active: boolean;
+}) {
+  return (
+    <Link
+      href={href}
+      className="nav-link flex shrink-0 items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-semibold transition-all"
+      data-active={active ? "true" : undefined}
+    >
+      {icon}
+      <span className="hidden lg:block whitespace-nowrap">{label}</span>
+    </Link>
   );
 }

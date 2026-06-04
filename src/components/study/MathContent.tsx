@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import katex from "katex";
 import "katex/dist/katex.min.css";
 import { preprocessMath } from "@/lib/math-text";
@@ -25,6 +26,20 @@ function parseMathDelim(raw: string): { html: string; displayMode: boolean } | n
   return html ? { html, displayMode } : null;
 }
 
+function renderBoldText(text: string): ReactNode {
+  if (!text.includes("**")) return text;
+  const result: React.ReactNode[] = [];
+  const re = /\*\*(.+?)\*\*/g;
+  let last = 0, idx = 0, m: RegExpExecArray | null;
+  while ((m = re.exec(text)) !== null) {
+    if (m.index > last) result.push(<span key={idx++}>{text.slice(last, m.index)}</span>);
+    result.push(<strong key={idx++}>{m[1]}</strong>);
+    last = m.index + m[0].length;
+  }
+  if (last < text.length) result.push(<span key={idx++}>{text.slice(last)}</span>);
+  return <>{result}</>;
+}
+
 /** Render a single line that may contain Hebrew + inline math. */
 function renderInlineLine(rawLine: string) {
   const processed = preprocessMath(rawLine);
@@ -45,7 +60,7 @@ function renderInlineLine(rawLine: string) {
     }
     return (
       <span key={i} dir="auto" style={{ unicodeBidi: "plaintext" }}>
-        {part}
+        {renderBoldText(part)}
       </span>
     );
   });

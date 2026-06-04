@@ -38,6 +38,7 @@ export function AuthGate() {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState("");
+  const [requiresDeviceConfirmation, setRequiresDeviceConfirmation] = useState(false);
   const authMessage = authState.status === "blocked" ? authState.message : undefined;
 
   useEffect(() => {
@@ -62,6 +63,8 @@ export function AuthGate() {
           message:
             data.reason === "ip_mismatch"
               ? "אפשר להתחבר רק דרך המחשב הזה."
+              : data.reason === "not_allowed"
+                ? "המייל הזה לא נמצא ברשימת המורשים."
               : undefined,
         });
       } catch {
@@ -78,8 +81,7 @@ export function AuthGate() {
     };
   }, []);
 
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
+  async function requestLogin(confirmDevice: boolean) {
     setIsSubmitting(true);
     setMessage("");
 
@@ -90,21 +92,33 @@ export function AuthGate() {
           "Content-Type": "application/json",
           "x-infi-device-id": getOrCreateDeviceId(),
         },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, confirmDevice }),
       });
-      const data = (await response.json()) as { ok?: boolean; email?: string; message?: string };
+      const data = (await response.json()) as { ok?: boolean; email?: string; message?: string; reason?: string };
 
       if (response.ok && data.ok && data.email) {
         setAuthState({ status: "authenticated", email: data.email });
         return;
       }
 
+      if (response.status === 409 && data.reason === "requires_device_confirmation") {
+        setRequiresDeviceConfirmation(true);
+        setMessage(data.message ?? "האם זה המחשב שתרצה להשאיר קבוע ליוזר שלך?");
+        return;
+      }
+
+      setRequiresDeviceConfirmation(false);
       setMessage(data.message ?? "לא ניתן להתחבר כרגע.");
     } catch {
       setMessage("שגיאת תקשורת. נסה שוב.");
     } finally {
       setIsSubmitting(false);
     }
+  }
+
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    void requestLogin(false);
   }
 
   if (authState.status === "authenticated") return null;
@@ -153,7 +167,10 @@ export function AuthGate() {
             required
             autoComplete="email"
             value={email}
-            onChange={(event) => setEmail(event.target.value)}
+            onChange={(event) => {
+              setEmail(event.target.value);
+              setRequiresDeviceConfirmation(false);
+            }}
             disabled={authState.status === "checking" || isSubmitting}
             className="min-h-11 w-full bg-transparent text-left outline-none disabled:opacity-60"
             dir="ltr"
@@ -178,6 +195,18 @@ export function AuthGate() {
         >
           {isSubmitting ? "מתחבר..." : "כניסה"}
         </button>
+
+        {requiresDeviceConfirmation && (
+          <button
+            type="button"
+            disabled={isSubmitting}
+            onClick={() => void requestLogin(true)}
+            className="mt-2 flex min-h-11 w-full items-center justify-center rounded-lg border px-4 text-sm font-black transition disabled:cursor-not-allowed disabled:opacity-60"
+            style={{ borderColor: "var(--red-border)", color: "var(--red-mid)", background: "var(--red-light)" }}
+          >
+            כן, זה המחשב הקבוע שלי
+          </button>
+        )}
       </form>
     </div>
   );

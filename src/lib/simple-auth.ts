@@ -6,17 +6,35 @@ export const AUTH_COOKIE_NAME = "infi_auth";
 
 const AUTH_FILE_PATH = path.join(process.cwd(), "data", "auth-users.json");
 const COOKIE_MAX_AGE = 60 * 60 * 24 * 180;
+const FREE_DEVICE_LIMIT = 3;
+
+type AuthDeviceStatus = "active" | "pending" | "fixed" | "blocked";
+
+export type AuthDeviceRecord = {
+  id: string;
+  status: AuthDeviceStatus;
+  firstSeenAt: string;
+  lastSeenAt: string;
+  loginCount: number;
+  ip?: string;
+  userAgent?: string;
+};
 
 type AuthUserRecord = {
   email: string;
   boundDeviceId?: string;
   boundIp?: string;
+  fixedDeviceId?: string;
+  fixedAt?: string;
+  devices?: AuthDeviceRecord[];
   firstLoginAt: string;
   lastLoginAt: string;
   loginCount: number;
 };
 
 type AuthFile = {
+  allowedEmails: string[];
+  adminEmails?: string[];
   users: Record<string, AuthUserRecord>;
 };
 
@@ -27,7 +45,29 @@ type RedisConfig = {
 
 export type AuthCheckResult =
   | { ok: true; email: string; boundDeviceId: string }
-  | { ok: false; reason: "missing" | "invalid" | "ip_mismatch" };
+  | { ok: false; reason: "missing" | "invalid" | "ip_mismatch" | "not_allowed" };
+
+export type LoginResult =
+  | { ok: true; email: string; deviceId: string; cookieValue: string }
+  | {
+      ok: false;
+      status: number;
+      message: string;
+      reason?: "not_allowed" | "requires_device_confirmation" | "fixed_device_mismatch";
+    };
+
+export type AdminAuthUser = Omit<AuthUserRecord, "devices"> & {
+  devices: AuthDeviceRecord[];
+  isAllowed: boolean;
+  deviceCount: number;
+  activeDeviceCount: number;
+};
+
+export type AuthAdminSnapshot = {
+  allowedEmails: string[];
+  adminEmails: string[];
+  users: AdminAuthUser[];
+};
 
 function normalizeEmail(email: string): string {
   return email.trim().toLowerCase();
@@ -65,6 +105,20 @@ function shouldUseRedisStore(): boolean {
 
 function getUserKey(email: string): string {
   return `auth:user:${normalizeEmail(email)}`;
+}
+
+function getConfiguredAdminEmails(authFile: AuthFile): string[] {
+  const envAdmins = (process.env.AUTH_ADMIN_EMAILS ?? "")
+    .split(",")
+    .map(normalizeEmail)
+    .filter(Boolean);
+
+  if (envAdmins.length > 0) return envAdmins;
+  if (Array.isArray(authFile.adminEmails) && authFile.adminEmails.length > 0) {
+    return authFile.adminEmails.map(normalizeEmail);
+  }
+
+  return ["liamesika21@gmail.com"];
 }
 
 function normalizeDeviceId(deviceId: string): string {
@@ -138,11 +192,17 @@ async function readAuthFile(): Promise<AuthFile> {
     const parsed = JSON.parse(raw) as Partial<AuthFile>;
 
     return {
+      allowedEmails: Array.isArray(parsed.allowedEmails)
+        ? parsed.allowedEmails.map(normalizeEmail)
+        : [],
+      adminEmails: Array.isArray(parsed.adminEmails)
+        ? parsed.adminEmails.map(normalizeEmail)
+        : undefined,
       users: parsed.users && typeof parsed.users === "object" ? parsed.users : {},
     };
   } catch (error) {
     if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;
-    return { users: {} };
+    return { allowedEmails: [], users: {} };
   }
 }
 
@@ -197,6 +257,90 @@ async function writeAuthFile(authFile: AuthFile): Promise<void> {
   await rename(tempPath, AUTH_FILE_PATH);
 }
 
+function getRequestIp(request: Request): string | undefined {
+  const forwardedFor = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim();
+  return (
+    forwardedFor ||
+    request.headers.get("x-real-ip")?.trim() ||
+    request.headers.get("cf-connecting-ip")?.trim() ||
+    undefined
+  );
+}
+
+function getRequestUserAgent(request: Request): string | undefined {
+  return request.headers.get("user-agent")?.trim() || undefined;
+}
+
+function getUserDevices(user: AuthUserRecord | null | undefined): AuthDeviceRecord[] {
+  const devices = Array.isArray(user?.devices) ? [...user.devices] : [];
+
+  if (user?.boundDeviceId && !devices.some((device) => device.id === user.boundDeviceId)) {
+    devices.push({
+      id: user.boundDeviceId,
+      status: user.fixedDeviceId === user.boundDeviceId ? "fixed" : "active",
+      firstSeenAt: user.firstLoginAt,
+      lastSeenAt: user.lastLoginAt,
+      loginCount: user.loginCount,
+      ip: user.boundIp,
+    });
+  }
+
+  return devices;
+}
+
+function upsertDevice(
+  devices: AuthDeviceRecord[],
+  deviceId: string,
+  now: string,
+  request: Request,
+  status: AuthDeviceStatus
+): AuthDeviceRecord[] {
+  const existingDevice = devices.find((device) => device.id === deviceId);
+  const ip = getRequestIp(request);
+  const userAgent = getRequestUserAgent(request);
+
+  if (!existingDevice) {
+    return [
+      ...devices,
+      {
+        id: deviceId,
+        status,
+        firstSeenAt: now,
+        lastSeenAt: now,
+        loginCount: status === "pending" || status === "blocked" ? 0 : 1,
+        ip,
+        userAgent,
+      },
+    ];
+  }
+
+  return devices.map((device) =>
+    device.id === deviceId
+      ? {
+          ...device,
+          status,
+          lastSeenAt: now,
+          loginCount:
+            status === "pending" || status === "blocked"
+              ? device.loginCount
+              : device.loginCount + 1,
+          ip,
+          userAgent,
+        }
+      : device
+  );
+}
+
+async function persistUser(authFile: AuthFile, user: AuthUserRecord): Promise<void> {
+  if (shouldUseRedisStore()) {
+    await setRedisUser(user);
+    return;
+  }
+
+  authFile.users[user.email] = user;
+  await writeAuthFile(authFile);
+}
+
 export async function validateCookieForRequest(request: Request): Promise<AuthCheckResult> {
   const cookie = request.headers
     .get("cookie")
@@ -213,15 +357,41 @@ export async function validateCookieForRequest(request: Request): Promise<AuthCh
     return { ok: false, reason: "ip_mismatch" };
   }
 
+  const authFile = await readAuthFile();
+  if (!authFile.allowedEmails.includes(authCookie.email)) {
+    return { ok: false, reason: "not_allowed" };
+  }
+
+  const user = shouldUseRedisStore()
+    ? await getRedisUser(authCookie.email)
+    : authFile.users[authCookie.email];
+
+  if (user?.fixedDeviceId && user.fixedDeviceId !== currentDeviceId) {
+    return { ok: false, reason: "ip_mismatch" };
+  }
+
   return authCookie;
 }
 
-export async function loginWithEmail(email: string, request: Request) {
+export async function loginWithEmail(
+  email: string,
+  request: Request,
+  options: { confirmDevice?: boolean } = {}
+): Promise<LoginResult> {
   const normalizedEmail = normalizeEmail(email);
   const authFile = await readAuthFile();
 
   if (!normalizedEmail || !normalizedEmail.includes("@")) {
     return { ok: false as const, status: 400, message: "צריך להזין כתובת מייל תקינה." };
+  }
+
+  if (!authFile.allowedEmails.includes(normalizedEmail)) {
+    return {
+      ok: false as const,
+      status: 403,
+      reason: "not_allowed",
+      message: "המייל הזה לא נמצא ברשימת המורשים.",
+    };
   }
 
   const currentDeviceId = getClientDeviceId(request);
@@ -235,21 +405,78 @@ export async function loginWithEmail(email: string, request: Request) {
     : authFile.users[normalizedEmail];
 
   const now = new Date().toISOString();
+  let devices = getUserDevices(existingUser);
+  const fixedDeviceId = existingUser?.fixedDeviceId;
+
+  if (fixedDeviceId && fixedDeviceId !== currentDeviceId) {
+    devices = upsertDevice(devices, currentDeviceId, now, request, "blocked");
+    const blockedUser: AuthUserRecord = {
+      email: normalizedEmail,
+      boundDeviceId: fixedDeviceId,
+      boundIp: existingUser?.boundIp,
+      fixedDeviceId,
+      fixedAt: existingUser?.fixedAt,
+      devices,
+      firstLoginAt: existingUser?.firstLoginAt ?? now,
+      lastLoginAt: existingUser?.lastLoginAt ?? now,
+      loginCount: existingUser?.loginCount ?? 0,
+    };
+    await persistUser(authFile, blockedUser);
+
+    return {
+      ok: false as const,
+      status: 403,
+      reason: "fixed_device_mismatch",
+      message: "המייל הזה כבר קבוע למכשיר אחר.",
+    };
+  }
+
+  const currentDevice = devices.find((device) => device.id === currentDeviceId);
+  const activeDeviceCount = devices.filter((device) => device.status === "active" || device.status === "fixed").length;
+  const needsDeviceConfirmation =
+    (!currentDevice || currentDevice.status === "pending" || currentDevice.status === "blocked") &&
+    activeDeviceCount >= FREE_DEVICE_LIMIT;
+
+  if (needsDeviceConfirmation && !options.confirmDevice) {
+    devices = upsertDevice(devices, currentDeviceId, now, request, "pending");
+    const pendingUser: AuthUserRecord = {
+      email: normalizedEmail,
+      boundDeviceId: existingUser?.boundDeviceId,
+      boundIp: existingUser?.boundIp,
+      fixedDeviceId: existingUser?.fixedDeviceId,
+      fixedAt: existingUser?.fixedAt,
+      devices,
+      firstLoginAt: existingUser?.firstLoginAt ?? now,
+      lastLoginAt: existingUser?.lastLoginAt ?? now,
+      loginCount: existingUser?.loginCount ?? 0,
+    };
+    await persistUser(authFile, pendingUser);
+
+    return {
+      ok: false as const,
+      status: 409,
+      reason: "requires_device_confirmation",
+      message: "אוי, ראינו שנכנסת מיותר ממכשיר אחד. האם זה המכשיר שתרצה שישאר קבוע ליוזר שלך?",
+    };
+  }
+
+  const nextStatus: AuthDeviceStatus =
+    needsDeviceConfirmation || options.confirmDevice ? "fixed" : "active";
+  devices = upsertDevice(devices, currentDeviceId, now, request, nextStatus);
+
   const user: AuthUserRecord = {
     email: normalizedEmail,
     boundDeviceId: currentDeviceId,
-    boundIp: existingUser?.boundIp,
+    boundIp: getRequestIp(request) ?? existingUser?.boundIp,
+    fixedDeviceId: nextStatus === "fixed" ? currentDeviceId : existingUser?.fixedDeviceId,
+    fixedAt: nextStatus === "fixed" ? now : existingUser?.fixedAt,
+    devices,
     firstLoginAt: existingUser?.firstLoginAt ?? now,
     lastLoginAt: now,
     loginCount: (existingUser?.loginCount ?? 0) + 1,
   };
 
-  if (useRedisStore) {
-    await setRedisUser(user);
-  } else {
-    authFile.users[normalizedEmail] = user;
-    await writeAuthFile(authFile);
-  }
+  await persistUser(authFile, user);
 
   return {
     ok: true as const,
@@ -257,4 +484,50 @@ export async function loginWithEmail(email: string, request: Request) {
     deviceId: currentDeviceId,
     cookieValue: createAuthCookieValue(normalizedEmail, currentDeviceId),
   };
+}
+
+export async function getAuthAdminSnapshot(): Promise<AuthAdminSnapshot> {
+  const authFile = await readAuthFile();
+  const users: AuthUserRecord[] = [];
+
+  if (shouldUseRedisStore()) {
+    const redisUsers = await Promise.all(
+      authFile.allowedEmails.map(async (email) => getRedisUser(email).catch(() => null))
+    );
+    users.push(...redisUsers.filter((user): user is AuthUserRecord => Boolean(user)));
+  } else {
+    users.push(...Object.values(authFile.users));
+  }
+
+  const allowedEmails = authFile.allowedEmails.map(normalizeEmail);
+  const mergedEmails = new Set([...allowedEmails, ...users.map((user) => normalizeEmail(user.email))]);
+  const adminUsers = [...mergedEmails].map((email) => {
+    const user = users.find((entry) => normalizeEmail(entry.email) === email);
+    const devices = getUserDevices(user);
+    return {
+      email,
+      boundDeviceId: user?.boundDeviceId,
+      boundIp: user?.boundIp,
+      fixedDeviceId: user?.fixedDeviceId,
+      fixedAt: user?.fixedAt,
+      devices,
+      firstLoginAt: user?.firstLoginAt ?? "",
+      lastLoginAt: user?.lastLoginAt ?? "",
+      loginCount: user?.loginCount ?? 0,
+      isAllowed: allowedEmails.includes(email),
+      deviceCount: devices.length,
+      activeDeviceCount: devices.filter((device) => device.status === "active" || device.status === "fixed").length,
+    };
+  });
+
+  return {
+    allowedEmails,
+    adminEmails: getConfiguredAdminEmails(authFile),
+    users: adminUsers.sort((a, b) => b.lastLoginAt.localeCompare(a.lastLoginAt)),
+  };
+}
+
+export async function isAdminEmail(email: string): Promise<boolean> {
+  const authFile = await readAuthFile();
+  return getConfiguredAdminEmails(authFile).includes(normalizeEmail(email));
 }

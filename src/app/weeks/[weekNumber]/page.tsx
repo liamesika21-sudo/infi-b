@@ -63,7 +63,7 @@ export default async function WeekDetailPage({ params }: Props) {
     })
     .slice(0, 8);
 
-  const hwQuestions = homeworkPriority?.questions.filter((q) => q.importanceLevel !== "low") ?? [];
+  const hwQuestions = homeworkPriority?.questions ?? [];
   const studyGuide = getStudyGuide(weekNum);
   const richContent = getWeekRichContent(weekNum);
 
@@ -78,12 +78,21 @@ export default async function WeekDetailPage({ params }: Props) {
     <div className="space-y-0">
 
       {/* ── Nav breadcrumb ── */}
-      <div className="flex items-center gap-1.5 py-4 text-sm" style={{ color: "var(--text-muted)" }}>
-        <Link href="/weeks" className="hover:underline" style={{ color: "var(--text-secondary)" }}>
-          שבועות
+      <div className="flex items-center justify-between py-4">
+        <div className="flex items-center gap-1.5 text-sm" style={{ color: "var(--text-muted)" }}>
+          <Link href="/weeks" className="hover:underline" style={{ color: "var(--text-secondary)" }}>
+            שבועות
+          </Link>
+          <ChevronRight className="h-3.5 w-3.5" />
+          <span>שבוע {weekNum}</span>
+        </div>
+        <Link
+          href={`/weeks/${weekNum}/summary`}
+          className="rounded-lg px-3 py-1.5 text-xs font-bold transition hover:opacity-80"
+          style={{ background: "var(--navy-light)", color: "var(--navy-mid)", border: "1px solid var(--navy-border)" }}
+        >
+          📄 סיכום שבוע
         </Link>
-        <ChevronRight className="h-3.5 w-3.5" />
-        <span>שבוע {weekNum}</span>
       </div>
 
       {/* ── Hero ── */}
@@ -297,10 +306,6 @@ export default async function WeekDetailPage({ params }: Props) {
         >
           {hwQuestions.length > 0 ? (
             <WeekHomeworkSection questions={hwQuestions} />
-          ) : homeworkPriority ? (
-            <p className="text-sm" style={{ color: "var(--text-muted)" }}>
-              כל שאלות המטלה עדיפות נמוכה — חומר חזרה בסיסי.
-            </p>
           ) : (
             <EmptyCol text="אין ניתוח מטלה לשבוע זה" />
           )}

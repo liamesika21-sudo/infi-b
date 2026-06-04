@@ -1,3 +1,14 @@
 {
+  "allowedEmails": [
+    "shoham.rosen@post.runi.ac.il",
+    "rotem.lezerovich@post.runi.ac.il",
+    "hadar.sarig@post.runi.ac.il",
+    "linoy.baliti@post.runi.ac.il",
+    "hilarahel.silber@post.runi.ac.il",
+    "liamesika21@gmail.com"
+  ],
+  "adminEmails": [
+    "liamesika21@gmail.com"
+  ],
   "users": {}
 }

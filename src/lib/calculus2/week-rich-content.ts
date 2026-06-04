@@ -4,6 +4,9 @@
  * This is the "real" content that makes the summaries useful for studying.
  */
 
+import { readFileSync } from "fs";
+import path from "path";
+
 export type SectionTag =
   | "הגדרה"
   | "משפט"
@@ -51,7 +54,13 @@ export interface WeekRichContent {
   buildOn?: string;
   /** Optional: decision tree for "what can I conclude" */
   decisionTree?: DecisionNode;
+  /** Optional full long-form study page, usually copied from a curated source. */
+  fullSummaryMarkdown?: string;
   sections: RichSection[];
+}
+
+function readContentFile(filename: string): string {
+  return readFileSync(path.join(process.cwd(), "src", "content", "calculus2", filename), "utf8");
 }
 
 /* ══════════════════════════════════════════════════════════════
@@ -325,10 +334,11 @@ const WEEK_8: WeekRichContent = {
 const WEEK_9: WeekRichContent = {
   weekNumber: 9,
   mainGoal:
-    "לפתור שאלות מעורבות על התכנסות — לזהות את המבחן הנכון לפי צורת $a_n$.",
+    "להבין טורי חזקות: תחום התכנסות, רדיוס התכנסות, בדיקת קצוות וערך מפורש ללא סיגמה.",
   guidingPrinciple:
-    "בשאלת טור: (1) תנאי הכרחי תמיד ראשון. (2) יש $(-1)^n$? → מוחלטת קודם. (3) שאר הסימנים קובעים את המבחן.",
-  buildOn: "כל מבחני שבועות 5–8",
+    "בטור חזקות קודם מוצאים את האזור הפנימי בעזרת רדיוס, ואז בודקים את הקצוות ידנית בטור המקורי.",
+  buildOn: "טורים גיאומטריים, מבחן מנה, מבחן שורש, טורי $p$, לייבניץ והתכנסות מוחלטת",
+  fullSummaryMarkdown: readContentFile("week-9-summary.md"),
   sections: [
     {
       title: "טבלת מבחנים — זיהוי מהיר",

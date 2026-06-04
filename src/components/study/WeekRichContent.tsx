@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import { MathContent } from "./MathContent";
+import { DisplayMath, MathContent } from "./MathContent";
 import { DecisionTree } from "./DecisionTree";
 import type { WeekRichContent, RichSection, SectionTag } from "@/lib/calculus2/week-rich-content";
 
@@ -85,12 +85,250 @@ export function WeekRichContentPanel({ content }: { content: WeekRichContent }) 
         </div>
       )}
 
+      {content.fullSummaryMarkdown && (
+        <FullSummaryDocument markdown={content.fullSummaryMarkdown} />
+      )}
+
       {/* Sections */}
       <div className="space-y-4">
         {content.sections.map((section, i) => (
           <RichSectionCard key={i} section={section} />
         ))}
       </div>
+    </div>
+  );
+}
+
+function FullSummaryDocument({ markdown }: { markdown: string }) {
+  const blocks = parseMarkdownBlocks(markdown);
+
+  return (
+    <article
+      className="rounded-xl border bg-white px-4 py-5 shadow-sm sm:px-6"
+      style={{ borderColor: "var(--border)" }}
+    >
+      <div className="mb-5 border-b pb-4" style={{ borderColor: "var(--border)" }}>
+        <p className="text-xs font-black uppercase tracking-widest" style={{ color: "var(--text-muted)" }}>
+          סיכום מלא
+        </p>
+        <h3 className="mt-1 text-lg font-black" style={{ color: "var(--text-primary)" }}>
+          תרגול 9 — טורי חזקות
+        </h3>
+      </div>
+
+      <div className="space-y-4">
+        {blocks.map((block, index) => (
+          <MarkdownBlock key={index} block={block} />
+        ))}
+      </div>
+    </article>
+  );
+}
+
+type MarkdownBlock =
+  | { type: "heading"; level: number; text: string }
+  | { type: "paragraph"; text: string }
+  | { type: "blockquote"; text: string }
+  | { type: "list"; ordered: boolean; items: string[] }
+  | { type: "table"; rows: string[][] }
+  | { type: "math"; lines: string[] }
+  | { type: "divider" };
+
+function parseMarkdownBlocks(markdown: string): MarkdownBlock[] {
+  const lines = markdown.replace(/\r\n/g, "\n").split("\n");
+  const blocks: MarkdownBlock[] = [];
+  let index = 0;
+
+  while (index < lines.length) {
+    const line = lines[index];
+    const trimmed = line.trim();
+
+    if (!trimmed) {
+      index += 1;
+      continue;
+    }
+
+    if (trimmed === "---") {
+      blocks.push({ type: "divider" });
+      index += 1;
+      continue;
+    }
+
+    if (trimmed === "[") {
+      const mathLines: string[] = [];
+      index += 1;
+      while (index < lines.length && lines[index].trim() !== "]") {
+        const mathLine = lines[index].trim();
+        if (mathLine && !/^=+$/.test(mathLine)) {
+          mathLines.push(mathLine.replace(/^#\s*/, ""));
+        }
+        index += 1;
+      }
+      blocks.push({ type: "math", lines: mathLines });
+      index += 1;
+      continue;
+    }
+
+    const headingMatch = trimmed.match(/^(#{1,4})\s+(.+)$/);
+    if (headingMatch) {
+      blocks.push({ type: "heading", level: headingMatch[1].length, text: headingMatch[2] });
+      index += 1;
+      continue;
+    }
+
+    if (trimmed.startsWith(">")) {
+      const quotes: string[] = [];
+      while (index < lines.length && lines[index].trim().startsWith(">")) {
+        quotes.push(lines[index].trim().replace(/^>\s?/, ""));
+        index += 1;
+      }
+      blocks.push({ type: "blockquote", text: quotes.join("\n") });
+      continue;
+    }
+
+    if (isTableLine(trimmed)) {
+      const tableLines: string[] = [];
+      while (index < lines.length && isTableLine(lines[index].trim())) {
+        tableLines.push(lines[index].trim());
+        index += 1;
+      }
+      const rows = tableLines
+        .filter((tableLine) => !/^\|\s*:?-{2,}:?\s*(\|\s*:?-{2,}:?\s*)+\|?$/.test(tableLine))
+        .map((tableLine) =>
+          tableLine
+            .replace(/^\|/, "")
+            .replace(/\|$/, "")
+            .split("|")
+            .map((cell) => cell.trim())
+        );
+      if (rows.length > 0) blocks.push({ type: "table", rows });
+      continue;
+    }
+
+    if (/^(\*|-)\s+/.test(trimmed) || /^\d+\.\s+/.test(trimmed)) {
+      const ordered = /^\d+\.\s+/.test(trimmed);
+      const items: string[] = [];
+      while (index < lines.length) {
+        const itemLine = lines[index].trim();
+        if (ordered && /^\d+\.\s+/.test(itemLine)) {
+          items.push(itemLine.replace(/^\d+\.\s+/, ""));
+          index += 1;
+          continue;
+        }
+        if (!ordered && /^(\*|-)\s+/.test(itemLine)) {
+          items.push(itemLine.replace(/^(\*|-)\s+/, ""));
+          index += 1;
+          continue;
+        }
+        break;
+      }
+      blocks.push({ type: "list", ordered, items });
+      continue;
+    }
+
+    const paragraphLines: string[] = [];
+    while (index < lines.length) {
+      const paragraphLine = lines[index].trim();
+      if (
+        !paragraphLine ||
+        paragraphLine === "---" ||
+        paragraphLine === "[" ||
+        paragraphLine.startsWith("#") ||
+        paragraphLine.startsWith(">") ||
+        isTableLine(paragraphLine) ||
+        /^(\*|-)\s+/.test(paragraphLine) ||
+        /^\d+\.\s+/.test(paragraphLine)
+      ) {
+        break;
+      }
+      paragraphLines.push(paragraphLine);
+      index += 1;
+    }
+    blocks.push({ type: "paragraph", text: paragraphLines.join("\n") });
+  }
+
+  return blocks;
+}
+
+function isTableLine(line: string): boolean {
+  return line.startsWith("|") && line.includes("|", 1);
+}
+
+function MarkdownBlock({ block }: { block: MarkdownBlock }) {
+  switch (block.type) {
+    case "heading": {
+      const size = block.level === 1 ? "text-2xl" : block.level === 2 ? "text-xl" : "text-base";
+      return (
+        <div className={block.level === 1 ? "pt-2" : "pt-1"}>
+          <MathContent text={block.text} className={`${size} font-black`} />
+        </div>
+      );
+    }
+    case "paragraph":
+      return <MathContent text={block.text} className="text-sm" />;
+    case "blockquote":
+      return (
+        <div
+          className="rounded-lg border-r-4 px-4 py-3"
+          style={{ borderColor: "var(--teal-border)", borderRightColor: "var(--teal)", background: "var(--teal-light)" }}
+        >
+          <MathContent text={block.text} className="text-sm font-semibold" />
+        </div>
+      );
+    case "list": {
+      const ListTag = block.ordered ? "ol" : "ul";
+      return (
+        <ListTag className={block.ordered ? "list-decimal space-y-1 pr-6" : "list-disc space-y-1 pr-6"}>
+          {block.items.map((item, index) => (
+            <li key={index}>
+              <MathContent text={item} className="text-sm" />
+            </li>
+          ))}
+        </ListTag>
+      );
+    }
+    case "table":
+      return <SummaryTable rows={block.rows} />;
+    case "math":
+      return (
+        <div className="space-y-2">
+          {block.lines.map((line, index) => (
+            <DisplayMath key={index} latex={line} />
+          ))}
+        </div>
+      );
+    case "divider":
+      return <hr style={{ borderColor: "var(--border)" }} />;
+  }
+}
+
+function SummaryTable({ rows }: { rows: string[][] }) {
+  const [header, ...body] = rows;
+
+  return (
+    <div className="overflow-x-auto rounded-lg border" style={{ borderColor: "var(--border)" }}>
+      <table className="w-full min-w-[520px] border-separate border-spacing-0 text-sm">
+        <thead style={{ background: "var(--bg-subtle)" }}>
+          <tr>
+            {header.map((cell, index) => (
+              <th key={index} className="border-b px-3 py-2 text-right font-black" style={{ borderColor: "var(--border)" }}>
+                <MathContent text={cell} className="text-sm" />
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {body.map((row, rowIndex) => (
+            <tr key={rowIndex}>
+              {row.map((cell, cellIndex) => (
+                <td key={cellIndex} className="border-b px-3 py-2 align-top" style={{ borderColor: "var(--border)" }}>
+                  <MathContent text={cell} className="text-sm" />
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
@@ -140,10 +378,12 @@ function RichSectionCard({ section }: { section: RichSection }) {
         <div className="px-5 py-5 space-y-4 bg-white">
           {/* Formal */}
           <div
-            className="rounded-lg p-4"
+            className="rounded-lg p-4 space-y-2"
             style={{ background: "var(--bg-subtle)", border: "1px solid var(--border)" }}
           >
-            <MathContent text={section.formal} className="text-sm" />
+            {parseMarkdownBlocks(section.formal).map((block, i) => (
+              <MarkdownBlock key={i} block={block} />
+            ))}
           </div>
 
           {/* Why it exists */}

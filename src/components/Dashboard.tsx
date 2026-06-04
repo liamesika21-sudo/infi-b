@@ -2,6 +2,7 @@ import Link from "next/link";
 import type React from "react";
 import {
   AlertTriangle,
+  BookMarked,
   BookOpen,
   Brain,
   Calendar,
@@ -13,6 +14,7 @@ import {
   Layers3,
   ScrollText,
   Sigma,
+  Sparkles,
   Target,
   TrendingUp,
   Zap,
@@ -31,18 +33,13 @@ function getDaysUntilExam(): number {
 }
 
 const moduleCards = [
-  { href: "/weeks", label: "שבועות", desc: "מפת 13 שבועות", icon: Calendar, accent: "navy" },
-  { href: "/topics", label: "נושאים", desc: "מבנה topic-first", icon: Layers3, accent: "navy" },
-  { href: "/formulas", label: "נוסחאות", desc: "בנק נוסחאות", icon: Sigma, accent: "cyan" },
-  { href: "/theorems", label: "משפטים", desc: "בנק משפטים", icon: ScrollText, accent: "cyan" },
-  { href: "/proof-patterns", label: "תבניות הוכחה", desc: "דפוסים חוזרים", icon: BookOpen, accent: "purple" },
-  { href: "/practice", label: "תרגול", desc: "שאלות לפי נושא", icon: Target, accent: "green" },
-  { href: "/simulations", label: "סימולציות", desc: "מבחני תרגול", icon: FlaskConical, accent: "amber" },
-  { href: "/past-exams", label: "מבחני עבר", desc: "תדירות ודפוסים", icon: FileQuestion, accent: "amber" },
-  { href: "/homework-review", label: "חזרת מטלות", desc: "עדיפות מטלות", icon: ClipboardList, accent: "gold" },
-  { href: "/quick-review", label: "חזרה מהירה", desc: "לפני המבחן", icon: Zap, accent: "red" },
-  { href: "/progress", label: "מעקב שליטה", desc: "סטטוס נושאים", icon: Gauge, accent: "green" },
-  { href: "/mentor", label: "מנטור", desc: "עזרה ואינטראקציה", icon: Brain, accent: "navy" },
+  { href: "/topics",           label: "נושאים",       desc: "מבנה topic-first",   icon: Layers3,    accent: "navy" },
+  { href: "/definitions",      label: "הגדרות",        desc: "בנק הגדרות",         icon: BookMarked, accent: "cyan" },
+  { href: "/theorems",         label: "משפטים",        desc: "בנק משפטים",         icon: ScrollText, accent: "cyan" },
+  { href: "/proof-patterns",   label: "תבניות הוכחה",  desc: "דפוסים חוזרים",     icon: BookOpen,   accent: "purple" },
+  { href: "/homework-review",  label: "חזרת מטלות",    desc: "עדיפות מטלות",       icon: ClipboardList, accent: "gold" },
+  { href: "/progress",         label: "מעקב שליטה",    desc: "סטטוס נושאים",       icon: Gauge,      accent: "green" },
+  { href: "/instructor-notes", label: "הערות מקס",     desc: "הערות והנחיות",      icon: Sparkles,   accent: "purple" },
 ] as const;
 
 export function Dashboard({
@@ -263,7 +260,7 @@ export function Dashboard({
       {/* Module grid */}
       <section>
         <h2 className="mb-4 text-xl font-bold" style={{ color: "var(--text-primary)" }}>
-          כל המודולים
+          עוד כלים
         </h2>
         <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
           {moduleCards.map(({ href, label, desc, icon: Icon, accent }) => (
