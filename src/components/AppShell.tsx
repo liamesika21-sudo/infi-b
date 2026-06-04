@@ -5,10 +5,12 @@ import { usePathname } from "next/navigation";
 import {
   Brain,
   Calendar,
+  ChevronDown,
   FileQuestion,
   FlaskConical,
   LayoutDashboard,
   Sigma,
+  Sparkles,
   Target,
   Zap,
 } from "lucide-react";
@@ -89,6 +91,20 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           >
             {NAV_ITEMS.map(({ href, label, icon: Icon }) => {
               const active = pathname === href || pathname.startsWith(href + "/");
+              if (href === "/weeks") {
+                return (
+                  <NavDropdown
+                    key={href}
+                    href={href}
+                    label={label}
+                    icon={<Icon className="h-3.5 w-3.5 shrink-0" />}
+                    active={active}
+                    items={[
+                      { href: "/instructor-notes", label: "מסקנות מתרגולים", icon: <Sparkles className="h-3 w-3" /> },
+                    ]}
+                  />
+                );
+              }
               return (
                 <NavLink key={href} href={href} label={label} icon={<Icon className="h-3.5 w-3.5 shrink-0" />} active={active} />
               );
@@ -122,7 +138,6 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   );
 }
 
-/* Extracted so hover is handled cleanly without inline handlers */
 function NavLink({
   href,
   label,
@@ -143,5 +158,63 @@ function NavLink({
       {icon}
       <span className="hidden lg:block whitespace-nowrap">{label}</span>
     </Link>
+  );
+}
+
+function NavDropdown({
+  href,
+  label,
+  icon,
+  active,
+  items,
+}: {
+  href: string;
+  label: string;
+  icon: React.ReactNode;
+  active: boolean;
+  items: { href: string; label: string; icon: React.ReactNode }[];
+}) {
+  return (
+    <div className="group relative shrink-0">
+      {/* Trigger */}
+      <Link
+        href={href}
+        className="nav-link flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-semibold transition-all"
+        data-active={active ? "true" : undefined}
+      >
+        {icon}
+        <span className="hidden lg:block whitespace-nowrap">{label}</span>
+        <ChevronDown className="h-2.5 w-2.5 opacity-50 hidden lg:block" />
+      </Link>
+
+      {/* Dropdown panel — appears on hover */}
+      <div
+        className="pointer-events-none absolute right-0 top-full z-50 min-w-40 opacity-0 transition-opacity group-hover:pointer-events-auto group-hover:opacity-100"
+        style={{ paddingTop: "4px" }}
+      >
+        <div
+          className="rounded-lg border overflow-hidden py-1"
+          style={{
+            background: "rgba(6,20,38,0.97)",
+            borderColor: "rgba(255,255,255,0.12)",
+            boxShadow: "0 8px 24px rgba(0,0,0,0.4)",
+          }}
+        >
+          {items.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="flex items-center gap-2 px-3 py-2 text-xs font-semibold transition-colors whitespace-nowrap"
+              style={{ color: "rgba(255,255,255,0.75)" }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#fff")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.75)")}
+            >
+              {item.icon}
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }
