@@ -7,7 +7,7 @@
     "mustReviewBeforeExam": true,
     "overallPriority": "high",
     "criticalQuestions": 0,
-    "highPriorityQuestions": 8,
+    "highPriorityQuestions": 6,
     "questions": [
       {
         "questionId": "hw-exercise-1-solution-question-1",
@@ -39,37 +39,8 @@
         "confidence": 0.56
       },
       {
-        "questionId": "hw-exercise-1-solution-question-2",
-        "questionNumber": 2,
-        "homeworkNumber": 1,
-        "weekNumber": 1,
-        "topicIds": [
-          "גבולות",
-          "טורים",
-          "נגזרות",
-          "סדרות",
-          "פונקציות",
-          "רציפות"
-        ],
-        "difficulty": "unknown",
-        "examSimilarity": "medium",
-        "importanceLevel": "low",
-        "whyItMatters": "שאלה טובה לתרגול שוטף",
-        "requiredKnowledge": [
-          "גבולות",
-          "טורים",
-          "נגזרות",
-          "סדרות",
-          "פונקציות",
-          "רציפות"
-        ],
-        "recommendedAction": "ניתן לדלג",
-        "contentPreview": "(d) lim 𝑥→∞ 𝑒2𝑥 − 𝑥 + 1  1 𝑥 . Solution: lim 𝑥→∞ 𝑒2𝑥 − 𝑥 + 1  1 𝑥 = lim 𝑥→∞𝑒ln   (𝑒2𝑥 −𝑥+1) 1 𝑥   = lim 𝑥→∞𝑒 ln(𝑒2𝑥 −𝑥+1) 𝑥 = (★) Let us calculate the limit lim 𝑥→∞ ln 𝑒2𝑥 − \ud835",
-        "confidence": 0.56
-      },
-      {
         "questionId": "hw-exercise-1-solution-question-3",
-        "questionNumber": 3,
+        "questionNumber": 2,
         "homeworkNumber": 1,
         "weekNumber": 1,
         "topicIds": [
@@ -98,7 +69,7 @@
       },
       {
         "questionId": "hw-exercise-1-solution-question-4",
-        "questionNumber": 4,
+        "questionNumber": 3,
         "homeworkNumber": 1,
         "weekNumber": 1,
         "topicIds": [
@@ -127,7 +98,7 @@
       },
       {
         "questionId": "hw-exercise-1-solution-question-5",
-        "questionNumber": 5,
+        "questionNumber": 4,
         "homeworkNumber": 1,
         "weekNumber": 1,
         "topicIds": [
@@ -156,7 +127,7 @@
       },
       {
         "questionId": "hw-exercise-1-solution-question-6",
-        "questionNumber": 6,
+        "questionNumber": 5,
         "homeworkNumber": 1,
         "weekNumber": 1,
         "topicIds": [
@@ -184,37 +155,8 @@
         "confidence": 0.56
       },
       {
-        "questionId": "hw-exercise-1-solution-question-7",
-        "questionNumber": 7,
-        "homeworkNumber": 1,
-        "weekNumber": 1,
-        "topicIds": [
-          "גבולות",
-          "טורים",
-          "נגזרות",
-          "סדרות",
-          "פונקציות",
-          "רציפות"
-        ],
-        "difficulty": "hard",
-        "examSimilarity": "high",
-        "importanceLevel": "high",
-        "whyItMatters": "שאלה מייצגת — בנה/בני הבנה יציבה",
-        "requiredKnowledge": [
-          "גבולות",
-          "טורים",
-          "נגזרות",
-          "סדרות",
-          "פונקציות",
-          "רציפות"
-        ],
-        "recommendedAction": "חזרי על השאלה הזאת — קרוב למבחן",
-        "contentPreview": "(c) Student X was kind of impressed when she saw the proof that sin(𝑥) < 𝑥 for every 0 < 𝑥 < 𝜋 2 in the first semester. Feeling powerful, she wanted to prove an inequality on her own: an inequalit",
-        "confidence": 0.56
-      },
-      {
         "questionId": "hw-exercise-1-solution-question-8",
-        "questionNumber": 8,
+        "questionNumber": 6,
         "homeworkNumber": 1,
         "weekNumber": 1,
         "topicIds": [
@@ -240,35 +182,6 @@
         "recommendedAction": "חזרי על השאלה הזאת — קרוב למבחן",
         "contentPreview": "6. Let 𝐿 ∈ R. (a) Let 𝑔1 : R → R. Suppose 𝑔1 is an odd function, i.e., 𝑔1 (−𝑥) = −𝑔1 (𝑥) for every 𝑥 ∈ R. Suppose in addition that lim 𝑥→∞𝑔1 (𝑥) = 𝐿. Prove that lim 𝑥→−∞𝑔1 (𝑥) = −𝐿. So",
         "confidence": 0.56
-      },
-      {
-        "questionId": "hw-exercise-1-solution-question-9",
-        "questionNumber": 9,
-        "homeworkNumber": 1,
-        "weekNumber": 1,
-        "topicIds": [
-          "גבולות",
-          "טורים",
-          "נגזרות",
-          "סדרות",
-          "פונקציות",
-          "רציפות"
-        ],
-        "difficulty": "hard",
-        "examSimilarity": "high",
-        "importanceLevel": "high",
-        "whyItMatters": "שאלה מייצגת — בנה/בני הבנה יציבה",
-        "requiredKnowledge": [
-          "גבולות",
-          "טורים",
-          "נגזרות",
-          "סדרות",
-          "פונקציות",
-          "רציפות"
-        ],
-        "recommendedAction": "חזרי על השאלה הזאת — קרוב למבחן",
-        "contentPreview": "(c) Let 𝑓 : R → R be a differentiable function. Consider the function defined by 𝑔(𝑥) = 𝑓 (𝑥) − 𝑓 (−𝑥) for every 𝑥 ∈ R. Suppose that lim 𝑥→∞𝑔(𝑥) = 0. Conclude, using items (a) and (b), that",
-        "confidence": 0.56
       }
     ]
   },
@@ -280,7 +193,7 @@
     "mustReviewBeforeExam": true,
     "overallPriority": "high",
     "criticalQuestions": 0,
-    "highPriorityQuestions": 7,
+    "highPriorityQuestions": 4,
     "questions": [
       {
         "questionId": "hw-exercise-2-solution-question-1",
@@ -333,33 +246,8 @@
         "confidence": 0.56
       },
       {
-        "questionId": "hw-exercise-2-solution-question-3",
-        "questionNumber": 3,
-        "homeworkNumber": 2,
-        "weekNumber": 2,
-        "topicIds": [
-          "גבולות",
-          "טורים",
-          "סדרות",
-          "פונקציות"
-        ],
-        "difficulty": "hard",
-        "examSimilarity": "high",
-        "importanceLevel": "high",
-        "whyItMatters": "שאלה מייצגת — בנה/בני הבנה יציבה",
-        "requiredKnowledge": [
-          "גבולות",
-          "טורים",
-          "סדרות",
-          "פונקציות"
-        ],
-        "recommendedAction": "חזרי על השאלה הזאת — קרוב למבחן",
-        "contentPreview": "(b) If (𝑎𝑛)∞ 𝑛=1 is increasing, then (𝑎𝑛)∞ 𝑛=1 converges in the extended sense and lim 𝑛→∞ 𝑎𝑛 = sup {𝑎𝑛 : 𝑛 ∈ N} Solution: First we assume that (𝑎𝑛)∞ 𝑛=1 is bounded from above. As (𝑎𝑛",
-        "confidence": 0.56
-      },
-      {
         "questionId": "hw-exercise-2-solution-question-4",
-        "questionNumber": 4,
+        "questionNumber": 3,
         "homeworkNumber": 2,
         "weekNumber": 2,
         "topicIds": [
@@ -384,7 +272,7 @@
       },
       {
         "questionId": "hw-exercise-2-solution-question-5",
-        "questionNumber": 5,
+        "questionNumber": 4,
         "homeworkNumber": 2,
         "weekNumber": 2,
         "topicIds": [
@@ -409,7 +297,7 @@
       },
       {
         "questionId": "hw-exercise-2-solution-question-6",
-        "questionNumber": 6,
+        "questionNumber": 5,
         "homeworkNumber": 2,
         "weekNumber": 2,
         "topicIds": [
@@ -433,58 +321,8 @@
         "confidence": 0.56
       },
       {
-        "questionId": "hw-exercise-2-solution-question-7",
-        "questionNumber": 7,
-        "homeworkNumber": 2,
-        "weekNumber": 2,
-        "topicIds": [
-          "גבולות",
-          "טורים",
-          "סדרות",
-          "פונקציות"
-        ],
-        "difficulty": "hard",
-        "examSimilarity": "high",
-        "importanceLevel": "high",
-        "whyItMatters": "שאלה מייצגת — בנה/בני הבנה יציבה",
-        "requiredKnowledge": [
-          "גבולות",
-          "טורים",
-          "סדרות",
-          "פונקציות"
-        ],
-        "recommendedAction": "חזרי על השאלה הזאת — קרוב למבחן",
-        "contentPreview": "(b) i. Let 0 ≤ 𝛼 ≤ 2. Prove that 𝛼 ≤ √2𝛼 ≤ 2. Solution: We first prove the right inequality. As 0 ≤ 𝛼 ≤ 2, then we have √𝛼 ≤ √2. Multiplying both sides of the inequality by √2 yields √2𝛼 ≤ √22 =",
-        "confidence": 0.56
-      },
-      {
-        "questionId": "hw-exercise-2-solution-question-8",
-        "questionNumber": 8,
-        "homeworkNumber": 2,
-        "weekNumber": 2,
-        "topicIds": [
-          "גבולות",
-          "טורים",
-          "סדרות",
-          "פונקציות"
-        ],
-        "difficulty": "unknown",
-        "examSimilarity": "medium",
-        "importanceLevel": "low",
-        "whyItMatters": "שאלה טובה לתרגול שוטף",
-        "requiredKnowledge": [
-          "גבולות",
-          "טורים",
-          "סדרות",
-          "פונקציות"
-        ],
-        "recommendedAction": "ניתן לדלג",
-        "contentPreview": "2𝑎𝑛 AOL = √2𝐿 Thus 𝐿 = √2𝐿 and therefore 𝐿2 = 2𝐿 and therefore 𝐿 = 0 or 𝐿 = 2. As 𝐿 ≠ 0 then 𝐿 = 2. 7",
-        "confidence": 0.56
-      },
-      {
         "questionId": "hw-exercise-2-solution-question-9",
-        "questionNumber": 9,
+        "questionNumber": 6,
         "homeworkNumber": 2,
         "weekNumber": 2,
         "topicIds": [
@@ -506,31 +344,6 @@
         "recommendedAction": "חזרי על השאלה הזאת — קרוב למבחן",
         "contentPreview": "6. Let 0 < 𝛽 < 𝛼 and let (𝑎𝑛)∞ 𝑛=1 and (𝑏𝑛)∞ 𝑛=1 be two sequences that are defined by the recursive formulas    𝑎𝑛+1 = 𝑎𝑛+𝑏𝑛 2 , 𝑏𝑛+1 = 2𝑎𝑛 𝑏𝑛 𝑎𝑛+𝑏𝑛 , ∀𝑛 ∈ N 𝑎1 = 𝛼",
         "confidence": 0.56
-      },
-      {
-        "questionId": "hw-exercise-2-solution-question-10",
-        "questionNumber": 10,
-        "homeworkNumber": 2,
-        "weekNumber": 2,
-        "topicIds": [
-          "גבולות",
-          "טורים",
-          "סדרות",
-          "פונקציות"
-        ],
-        "difficulty": "hard",
-        "examSimilarity": "high",
-        "importanceLevel": "high",
-        "whyItMatters": "שאלה מייצגת — בנה/בני הבנה יציבה",
-        "requiredKnowledge": [
-          "גבולות",
-          "טורים",
-          "סדרות",
-          "פונקציות"
-        ],
-        "recommendedAction": "חזרי על השאלה הזאת — קרוב למבחן",
-        "contentPreview": "We now show 𝐿1 = 𝐿2 and complete the proof: 𝐿1 = lim 𝑛→∞𝑎𝑛+1 = lim 𝑛→∞   𝑎𝑛 + 𝑏𝑛 2   = 𝐿1 + 𝐿2 2 ⇒ 𝐿1 2 = 𝐿2 2 ⇒ 𝐿1 = 𝐿2. (c) Prove that 𝑎𝑛 𝑏𝑛 = 𝑎1 𝑏1 for every 𝑛 ∈ N and find ",
-        "confidence": 0.56
       }
     ]
   },
@@ -541,7 +354,7 @@
     "filename": "Exercise 3 solution.pdf",
     "mustReviewBeforeExam": true,
     "overallPriority": "critical",
-    "criticalQuestions": 6,
+    "criticalQuestions": 3,
     "highPriorityQuestions": 0,
     "questions": [
       {
@@ -572,35 +385,8 @@
         "confidence": 0.56
       },
       {
-        "questionId": "hw-exercise-3-solution-question-2",
-        "questionNumber": 2,
-        "homeworkNumber": 3,
-        "weekNumber": 3,
-        "topicIds": [
-          "גבולות",
-          "טורים",
-          "נגזרות",
-          "סדרות",
-          "פונקציות"
-        ],
-        "difficulty": "unknown",
-        "examSimilarity": "high",
-        "importanceLevel": "critical",
-        "whyItMatters": "שאלה מורכבת עם הוכחה/טורים/חזקות — דפוס שחוזר במבחנים",
-        "requiredKnowledge": [
-          "גבולות",
-          "טורים",
-          "נגזרות",
-          "סדרות",
-          "פונקציות"
-        ],
-        "recommendedAction": "פתרי שוב לפני המבחן — חובה",
-        "contentPreview": "(d) ∫ √𝑥 𝑥+1 𝑑𝑥. Solution: We develop ∫ √𝑥 𝑥 + 1 𝑑𝑥 𝑡=√𝑥→𝑑𝑡= 1 2√𝑥 𝑑 𝑥 = ∫ 𝑡 𝑡2 + 1 2𝑡 𝑑𝑡 = 2 ∫ 𝑡2 𝑡2 + 1 𝑑𝑡 = 2 ∫ 𝑡2 + 1 − 1 𝑡2 + 1 𝑑𝑡 = 2 ∫   1 − 1 𝑡2 + 1   𝑑𝑡 = 2 (𝑡",
-        "confidence": 0.56
-      },
-      {
         "questionId": "hw-exercise-3-solution-question-3",
-        "questionNumber": 3,
+        "questionNumber": 2,
         "homeworkNumber": 3,
         "weekNumber": 3,
         "topicIds": [
@@ -626,35 +412,8 @@
         "confidence": 0.56
       },
       {
-        "questionId": "hw-exercise-3-solution-question-4",
-        "questionNumber": 4,
-        "homeworkNumber": 3,
-        "weekNumber": 3,
-        "topicIds": [
-          "גבולות",
-          "טורים",
-          "נגזרות",
-          "סדרות",
-          "פונקציות"
-        ],
-        "difficulty": "medium",
-        "examSimilarity": "high",
-        "importanceLevel": "critical",
-        "whyItMatters": "שאלה מורכבת עם הוכחה/טורים/חזקות — דפוס שחוזר במבחנים",
-        "requiredKnowledge": [
-          "גבולות",
-          "טורים",
-          "נגזרות",
-          "סדרות",
-          "פונקציות"
-        ],
-        "recommendedAction": "פתרי שוב לפני המבחן — חובה",
-        "contentPreview": "(b) Compute ∫ 𝑑 𝑥 cos( 𝑥) by making the substitution 𝑡 = tan 𝑥 2  . Note that 2 1−𝑡2 = 1 1+𝑡 + 1 1−𝑡 . Solution: We make the substitution 𝑡 = tan 𝑥 2  . Then 𝑑𝑡 = 1 2 𝑑𝑥 cos2 𝑥 2   1+𝑡",
-        "confidence": 0.56
-      },
-      {
         "questionId": "hw-exercise-3-solution-question-5",
-        "questionNumber": 5,
+        "questionNumber": 3,
         "homeworkNumber": 3,
         "weekNumber": 3,
         "topicIds": [
@@ -681,7 +440,7 @@
       },
       {
         "questionId": "hw-exercise-3-solution-question-6",
-        "questionNumber": 6,
+        "questionNumber": 4,
         "homeworkNumber": 3,
         "weekNumber": 3,
         "topicIds": [
@@ -708,7 +467,7 @@
       },
       {
         "questionId": "hw-exercise-3-solution-question-7",
-        "questionNumber": 7,
+        "questionNumber": 5,
         "homeworkNumber": 3,
         "weekNumber": 3,
         "topicIds": [
@@ -731,33 +490,6 @@
         ],
         "recommendedAction": "פתרי שוב לפני המבחן — חובה",
         "contentPreview": "6. Let 𝑎, 𝑏 ∈ R such that 𝑎 < 𝑏 and let 𝑓 be a function that is bounded on [𝑎, 𝑏]. (a) Suppose that there exists a sequence of partitions (𝑃𝑛)∞ 𝑛=1 of [𝑎, 𝑏] for which lim 𝑛→∞ h 𝑆 ( 𝑓 ,",
-        "confidence": 0.56
-      },
-      {
-        "questionId": "hw-exercise-3-solution-question-8",
-        "questionNumber": 8,
-        "homeworkNumber": 3,
-        "weekNumber": 3,
-        "topicIds": [
-          "גבולות",
-          "טורים",
-          "נגזרות",
-          "סדרות",
-          "פונקציות"
-        ],
-        "difficulty": "hard",
-        "examSimilarity": "high",
-        "importanceLevel": "critical",
-        "whyItMatters": "שאלה מורכבת עם הוכחה/טורים/חזקות — דפוס שחוזר במבחנים",
-        "requiredKnowledge": [
-          "גבולות",
-          "טורים",
-          "נגזרות",
-          "סדרות",
-          "פונקציות"
-        ],
-        "recommendedAction": "פתרי שוב לפני המבחן — חובה",
-        "contentPreview": "Since we know that for bounded sets ∅ ≠ 𝐴, 𝐵 ⊆ R we have sup( 𝐴 − 𝐵) = sup( 𝐴) − inf (𝐵), then sup { 𝑓 (𝑥) : 𝑥1 ≤ 𝑥 ≤ 𝑥2 } − inf { 𝑓 (𝑦) : 𝑥1 ≤ 𝑦 ≤ 𝑥2 } = sup { 𝑓 (𝑥) − 𝑓 (𝑦) : 𝑥1",
         "confidence": 0.56
       }
     ]
@@ -802,37 +534,8 @@
         "confidence": 0.56
       },
       {
-        "questionId": "hw-exercise-4-solution-question-2",
-        "questionNumber": 2,
-        "homeworkNumber": 4,
-        "weekNumber": 4,
-        "topicIds": [
-          "גבולות",
-          "טורים",
-          "נגזרות",
-          "סדרות",
-          "פונקציות",
-          "רציפות"
-        ],
-        "difficulty": "medium",
-        "examSimilarity": "high",
-        "importanceLevel": "medium",
-        "whyItMatters": "שאלה טובה לתרגול שוטף",
-        "requiredKnowledge": [
-          "גבולות",
-          "טורים",
-          "נגזרות",
-          "סדרות",
-          "פונקציות",
-          "רציפות"
-        ],
-        "recommendedAction": "ודאי שאת מבינה את הגישה",
-        "contentPreview": "(b) ∫ 1 0 ln 1 + 𝑥2  𝑑𝑥 Solution: We have ∫ 1 0 ln 1 + 𝑥2  𝑑𝑥 IBP =  𝑥 · ln 1 + 𝑥2  1 0 − ∫ 1 0 2𝑥2 1 + 𝑥2 𝑑𝑥 = ln(2) − ∫ 1 0 2 1 + 𝑥2  1 + 𝑥2 𝑑𝑥 + ∫ 1 0 2 1 + 𝑥2 𝑑𝑥 = ln(2) − 2 ∫ 1",
-        "confidence": 0.56
-      },
-      {
         "questionId": "hw-exercise-4-solution-question-3",
-        "questionNumber": 3,
+        "questionNumber": 2,
         "homeworkNumber": 4,
         "weekNumber": 4,
         "topicIds": [
@@ -861,7 +564,7 @@
       },
       {
         "questionId": "hw-exercise-4-solution-question-4",
-        "questionNumber": 4,
+        "questionNumber": 3,
         "homeworkNumber": 4,
         "weekNumber": 4,
         "topicIds": [
@@ -890,7 +593,7 @@
       },
       {
         "questionId": "hw-exercise-4-solution-question-5",
-        "questionNumber": 5,
+        "questionNumber": 4,
         "homeworkNumber": 4,
         "weekNumber": 4,
         "topicIds": [
@@ -927,7 +630,7 @@
     "mustReviewBeforeExam": true,
     "overallPriority": "critical",
     "criticalQuestions": 5,
-    "highPriorityQuestions": 1,
+    "highPriorityQuestions": 0,
     "questions": [
       {
         "questionId": "hw-exercise-5-solution-question-1",
@@ -1062,41 +765,8 @@
         "confidence": 0.56
       },
       {
-        "questionId": "hw-exercise-5-solution-question-5",
-        "questionNumber": 5,
-        "homeworkNumber": 5,
-        "weekNumber": 5,
-        "topicIds": [
-          "אינטגרלים-לא-אמיתיים",
-          "גבולות",
-          "טורים",
-          "מבחן-ההשוואה",
-          "נגזרות",
-          "סדרות",
-          "פונקציות",
-          "רציפות"
-        ],
-        "difficulty": "hard",
-        "examSimilarity": "medium",
-        "importanceLevel": "medium",
-        "whyItMatters": "שאלה טובה לתרגול שוטף",
-        "requiredKnowledge": [
-          "אינטגרלים-לא-אמיתיים",
-          "גבולות",
-          "טורים",
-          "מבחן-ההשוואה",
-          "נגזרות",
-          "סדרות",
-          "פונקציות",
-          "רציפות"
-        ],
-        "recommendedAction": "ודאי שאת מבינה את הגישה",
-        "contentPreview": "(d) If the improper integral ∫ ∞ 0 𝑓 (𝑥) 𝑑𝑥 converges absolutely, then the improper integral ∫ ∞ 0 𝑓 ( 𝑥) 𝑥 𝑑𝑥 is convergent. Solution: False. We choose 𝑓 (𝑥) = 1 1+𝑥2 for every 𝑥 ≥ 0. We",
-        "confidence": 0.56
-      },
-      {
         "questionId": "hw-exercise-5-solution-question-6",
-        "questionNumber": 6,
+        "questionNumber": 5,
         "homeworkNumber": 5,
         "weekNumber": 5,
         "topicIds": [
@@ -1126,72 +796,6 @@
         "recommendedAction": "פתרי שוב לפני המבחן — חובה",
         "contentPreview": "6. For every 0 ≤ 𝑛 ∈ Z, consider the definite integral 𝐼𝑛 defined by 𝐼𝑛 = π 𝜋 2 0 sin𝑛 (𝑥) 𝑑𝑥 (a) Prove that the sequence (𝐼𝑛)∞ 𝑛=0 is well-defined. Solution: For every 𝑛 ∈ N the functio",
         "confidence": 0.56
-      },
-      {
-        "questionId": "hw-exercise-5-solution-question-7",
-        "questionNumber": 7,
-        "homeworkNumber": 5,
-        "weekNumber": 5,
-        "topicIds": [
-          "אינטגרלים-לא-אמיתיים",
-          "גבולות",
-          "טורים",
-          "מבחן-ההשוואה",
-          "נגזרות",
-          "סדרות",
-          "פונקציות",
-          "רציפות"
-        ],
-        "difficulty": "hard",
-        "examSimilarity": "high",
-        "importanceLevel": "high",
-        "whyItMatters": "שאלה מייצגת — בנה/בני הבנה יציבה",
-        "requiredKnowledge": [
-          "אינטגרלים-לא-אמיתיים",
-          "גבולות",
-          "טורים",
-          "מבחן-ההשוואה",
-          "נגזרות",
-          "סדרות",
-          "פונקציות",
-          "רציפות"
-        ],
-        "recommendedAction": "חזרי על השאלה הזאת — קרוב למבחן",
-        "contentPreview": "(c) Conclude that for every 𝑛 ∈ N we have 𝐼2𝑛 = 2𝑛 − 1 2𝑛 · 2𝑛 − 3 2𝑛 − 2 · · · 3 4 · 1 2 · 𝜋 2 and 𝐼2𝑛+1 = 2𝑛 2𝑛 + 1 · 2𝑛 − 2 2𝑛 − 1 · · · 4 5 · 2 3 · 1 Solution: We prove the claim by ",
-        "confidence": 0.56
-      },
-      {
-        "questionId": "hw-exercise-5-solution-question-8",
-        "questionNumber": 8,
-        "homeworkNumber": 5,
-        "weekNumber": 5,
-        "topicIds": [
-          "אינטגרלים-לא-אמיתיים",
-          "גבולות",
-          "טורים",
-          "מבחן-ההשוואה",
-          "נגזרות",
-          "סדרות",
-          "פונקציות",
-          "רציפות"
-        ],
-        "difficulty": "unknown",
-        "examSimilarity": "medium",
-        "importanceLevel": "low",
-        "whyItMatters": "שאלה טובה לתרגול שוטף",
-        "requiredKnowledge": [
-          "אינטגרלים-לא-אמיתיים",
-          "גבולות",
-          "טורים",
-          "מבחן-ההשוואה",
-          "נגזרות",
-          "סדרות",
-          "פונקציות",
-          "רציפות"
-        ],
-        "recommendedAction": "ניתן לדלג",
-        "contentPreview": "(e) Conclude the Wallis formula for 𝜋: 2 1 · 2 3 · 4 3 · 4 5 · 6 5 · 6 7 · · · = 𝜋 2 Note: the left-hand side is defined by 2 1 · 2 3 · 4 3 · 4 5 · 6 5 · 6 7 · · · = lim 𝑛→∞ [ 2 1 · 2 3 · 4 3 · 4 5",
-        "confidence": 0.56
       }
     ]
   },
@@ -1202,7 +806,7 @@
     "filename": "Exercise 6 solution.pdf",
     "mustReviewBeforeExam": true,
     "overallPriority": "critical",
-    "criticalQuestions": 10,
+    "criticalQuestions": 6,
     "highPriorityQuestions": 0,
     "questions": [
       {
@@ -1235,66 +839,8 @@
         "confidence": 0.56
       },
       {
-        "questionId": "hw-exercise-6-solution-question-2",
-        "questionNumber": 2,
-        "homeworkNumber": 6,
-        "weekNumber": 6,
-        "topicIds": [
-          "גבולות",
-          "טורים",
-          "מבחן-ההשוואה",
-          "סדרות",
-          "פונקציות",
-          "רציפות"
-        ],
-        "difficulty": "medium",
-        "examSimilarity": "critical",
-        "importanceLevel": "critical",
-        "whyItMatters": "שאלה מורכבת עם הוכחה/טורים/חזקות — דפוס שחוזר במבחנים",
-        "requiredKnowledge": [
-          "גבולות",
-          "טורים",
-          "מבחן-ההשוואה",
-          "סדרות",
-          "פונקציות",
-          "רציפות"
-        ],
-        "recommendedAction": "פתרי שוב לפני המבחן — חובה",
-        "contentPreview": "Alternative solution 1: We have ∞ ∑ 𝑛=1 𝑛2 − 1 𝑛3 ≥ ∞ ∑ 𝑛=1 𝑛2 − 𝑛 𝑛3 = ∞ ∑ 𝑛=1 𝑛 − 1 𝑛2 = ∞ ∑ 𝑛=0 𝑛 (𝑛 + 1)2 = ∞ ∑ 𝑛=1 𝑛 (𝑛 + 1)2 ≥ ∞ ∑ 𝑛=1 𝑛 (𝑛 + 𝑛)2 = ∞ ∑ 𝑛=1 𝑛 4𝑛2 = 1 4 ∞ ∑",
-        "confidence": 0.56
-      },
-      {
-        "questionId": "hw-exercise-6-solution-question-3",
-        "questionNumber": 3,
-        "homeworkNumber": 6,
-        "weekNumber": 6,
-        "topicIds": [
-          "גבולות",
-          "טורים",
-          "מבחן-ההשוואה",
-          "סדרות",
-          "פונקציות",
-          "רציפות"
-        ],
-        "difficulty": "unknown",
-        "examSimilarity": "medium",
-        "importanceLevel": "low",
-        "whyItMatters": "שאלה טובה לתרגול שוטף",
-        "requiredKnowledge": [
-          "גבולות",
-          "טורים",
-          "מבחן-ההשוואה",
-          "סדרות",
-          "פונקציות",
-          "רציפות"
-        ],
-        "recommendedAction": "ניתן לדלג",
-        "contentPreview": "(e) ∞ ∑ 𝑛=1 [ arcsin ( 1 √𝑛 + 1 ) − arcsin ( 1 √𝑛 )] Solution: We have ∞ ∑ 𝑛=1 [ arcsin ( 1 √𝑛 + 1 ) − arcsin ( 1 √𝑛 )] = lim 𝑁 →∞ 𝑁 ∑ 𝑛=1 [ arcsin ( 1 √𝑛 + 1 ) − arcsin ( 1 √𝑛 )] = lim 𝑁 ",
-        "confidence": 0.56
-      },
-      {
         "questionId": "hw-exercise-6-solution-question-4",
-        "questionNumber": 4,
+        "questionNumber": 2,
         "homeworkNumber": 6,
         "weekNumber": 6,
         "topicIds": [
@@ -1322,66 +868,8 @@
         "confidence": 0.56
       },
       {
-        "questionId": "hw-exercise-6-solution-question-5",
-        "questionNumber": 5,
-        "homeworkNumber": 6,
-        "weekNumber": 6,
-        "topicIds": [
-          "גבולות",
-          "טורים",
-          "מבחן-ההשוואה",
-          "סדרות",
-          "פונקציות",
-          "רציפות"
-        ],
-        "difficulty": "hard",
-        "examSimilarity": "critical",
-        "importanceLevel": "critical",
-        "whyItMatters": "שאלה מורכבת עם הוכחה/טורים/חזקות — דפוס שחוזר במבחנים",
-        "requiredKnowledge": [
-          "גבולות",
-          "טורים",
-          "מבחן-ההשוואה",
-          "סדרות",
-          "פונקציות",
-          "רציפות"
-        ],
-        "recommendedAction": "פתרי שוב לפני המבחן — חובה",
-        "contentPreview": "(d) ∞ ∑ 𝑛=2 1 ln (tan ( 𝜋 2 − 1 𝑛 )) You can assume that 𝜋 > 3. Hint. First prove that the series is positive and well-defined. Solution: First, as 1 𝑛 ≤ 1 2 for every 2 ≤ 𝑛 ∈ N, then for every ",
-        "confidence": 0.56
-      },
-      {
-        "questionId": "hw-exercise-6-solution-question-6",
-        "questionNumber": 6,
-        "homeworkNumber": 6,
-        "weekNumber": 6,
-        "topicIds": [
-          "גבולות",
-          "טורים",
-          "מבחן-ההשוואה",
-          "סדרות",
-          "פונקציות",
-          "רציפות"
-        ],
-        "difficulty": "hard",
-        "examSimilarity": "critical",
-        "importanceLevel": "critical",
-        "whyItMatters": "שאלה מורכבת עם הוכחה/טורים/חזקות — דפוס שחוזר במבחנים",
-        "requiredKnowledge": [
-          "גבולות",
-          "טורים",
-          "מבחן-ההשוואה",
-          "סדרות",
-          "פונקציות",
-          "רציפות"
-        ],
-        "recommendedAction": "פתרי שוב לפני המבחן — חובה",
-        "contentPreview": "Alternative solution (after showing that the series is non-negative and well-defined): As 𝑥 cos 𝑥 ≤ sin 𝑥 for every 0 < 𝑥 < 𝜋 2 , then cos 𝑥 sin 𝑥 ≤ 1 𝑥 for every 0 < 𝑥 < 𝜋 2 . As, for every",
-        "confidence": 0.56
-      },
-      {
         "questionId": "hw-exercise-6-solution-question-7",
-        "questionNumber": 7,
+        "questionNumber": 3,
         "homeworkNumber": 6,
         "weekNumber": 6,
         "topicIds": [
@@ -1410,7 +898,7 @@
       },
       {
         "questionId": "hw-exercise-6-solution-question-8",
-        "questionNumber": 8,
+        "questionNumber": 4,
         "homeworkNumber": 6,
         "weekNumber": 6,
         "topicIds": [
@@ -1439,7 +927,7 @@
       },
       {
         "questionId": "hw-exercise-6-solution-question-9",
-        "questionNumber": 9,
+        "questionNumber": 5,
         "homeworkNumber": 6,
         "weekNumber": 6,
         "topicIds": [
@@ -1468,7 +956,7 @@
       },
       {
         "questionId": "hw-exercise-6-solution-question-10",
-        "questionNumber": 10,
+        "questionNumber": 6,
         "homeworkNumber": 6,
         "weekNumber": 6,
         "topicIds": [
@@ -1494,35 +982,6 @@
         "recommendedAction": "פתרי שוב לפני המבחן — חובה",
         "contentPreview": "6. Let (𝑎𝑛)∞ 𝑛=1 (𝑏𝑛)∞ 𝑛=1 be two sequences of real numbers. Prove or disprove each of the following statements: (a) Suppose that (𝑎𝑛)∞ 𝑛=1 (𝑏𝑛)∞ 𝑛=1 are non-negative. Suppose that 𝑎𝑛 < ",
         "confidence": 0.56
-      },
-      {
-        "questionId": "hw-exercise-6-solution-question-11",
-        "questionNumber": 11,
-        "homeworkNumber": 6,
-        "weekNumber": 6,
-        "topicIds": [
-          "גבולות",
-          "טורים",
-          "מבחן-ההשוואה",
-          "סדרות",
-          "פונקציות",
-          "רציפות"
-        ],
-        "difficulty": "medium",
-        "examSimilarity": "critical",
-        "importanceLevel": "critical",
-        "whyItMatters": "שאלה מורכבת עם הוכחה/טורים/חזקות — דפוס שחוזר במבחנים",
-        "requiredKnowledge": [
-          "גבולות",
-          "טורים",
-          "מבחן-ההשוואה",
-          "סדרות",
-          "פונקציות",
-          "רציפות"
-        ],
-        "recommendedAction": "פתרי שוב לפני המבחן — חובה",
-        "contentPreview": "(c) Suppose that ∑∞ 𝑛=1 𝑎𝑛 is convergent. Then the series ∑∞ 𝑛=1 𝑎2𝑛 is convergent. Solution: False. Consider the sequence defined by 𝑎𝑛 =    1 𝑘 𝑛 = 2𝑘 − 1 − 1 𝑘 𝑛 = 2𝑘 ∀𝑛 ∈ N",
-        "confidence": 0.56
       }
     ]
   },
@@ -1533,8 +992,8 @@
     "filename": "Exercise 7 solution.pdf",
     "mustReviewBeforeExam": true,
     "overallPriority": "critical",
-    "criticalQuestions": 5,
-    "highPriorityQuestions": 1,
+    "criticalQuestions": 3,
+    "highPriorityQuestions": 0,
     "questions": [
       {
         "questionId": "hw-exercise-7-solution-question-1",
@@ -1568,70 +1027,8 @@
         "confidence": 0.56
       },
       {
-        "questionId": "hw-exercise-7-solution-question-2",
-        "questionNumber": 2,
-        "homeworkNumber": 7,
-        "weekNumber": 7,
-        "topicIds": [
-          "אינטגרלים-לא-אמיתיים",
-          "גבולות",
-          "טורים",
-          "מבחן-המנה",
-          "מבחן-השורש",
-          "סדרות",
-          "פונקציות"
-        ],
-        "difficulty": "hard",
-        "examSimilarity": "critical",
-        "importanceLevel": "critical",
-        "whyItMatters": "שאלה מורכבת עם הוכחה/טורים/חזקות — דפוס שחוזר במבחנים",
-        "requiredKnowledge": [
-          "אינטגרלים-לא-אמיתיים",
-          "גבולות",
-          "טורים",
-          "מבחן-המנה",
-          "מבחן-השורש",
-          "סדרות",
-          "פונקציות"
-        ],
-        "recommendedAction": "פתרי שוב לפני המבחן — חובה",
-        "contentPreview": "(c) ∞ ∑ 𝑛=1 (𝑛!)2 2 · 4 · 6 · · · · · (4𝑛) Solution: We use the ratio test 𝐿 = lim 𝑛→∞ 𝑎𝑛+1 𝑎𝑛 = lim 𝑛→∞ [(𝑛 + 1)!]2 2 · 4 · 6 · · · · · (4𝑛) 2 · 4 · 6 · · · · · (4𝑛) · (4𝑛 + 2)(4𝑛 + 4)",
-        "confidence": 0.56
-      },
-      {
-        "questionId": "hw-exercise-7-solution-question-3",
-        "questionNumber": 3,
-        "homeworkNumber": 7,
-        "weekNumber": 7,
-        "topicIds": [
-          "אינטגרלים-לא-אמיתיים",
-          "גבולות",
-          "טורים",
-          "מבחן-המנה",
-          "מבחן-השורש",
-          "סדרות",
-          "פונקציות"
-        ],
-        "difficulty": "hard",
-        "examSimilarity": "high",
-        "importanceLevel": "high",
-        "whyItMatters": "שאלה מייצגת — בנה/בני הבנה יציבה",
-        "requiredKnowledge": [
-          "אינטגרלים-לא-אמיתיים",
-          "גבולות",
-          "טורים",
-          "מבחן-המנה",
-          "מבחן-השורש",
-          "סדרות",
-          "פונקציות"
-        ],
-        "recommendedAction": "חזרי על השאלה הזאת — קרוב למבחן",
-        "contentPreview": "(f) Student A solved item (b) in the following way: We compute lim 𝑛→∞ 𝑛 √2 · 4 · 6 · · · 2𝑛 𝑛 √𝑛𝑛 = lim 𝑛→∞ 2 1 𝑛 · 4 1 𝑛 · · · (2𝑛) 1 𝑛 𝑛 = AOL 1 · 1 · 1 · · · 1 ∞ = 0 Thus, by the root ",
-        "confidence": 0.56
-      },
-      {
         "questionId": "hw-exercise-7-solution-question-4",
-        "questionNumber": 4,
+        "questionNumber": 2,
         "homeworkNumber": 7,
         "weekNumber": 7,
         "topicIds": [
@@ -1662,7 +1059,7 @@
       },
       {
         "questionId": "hw-exercise-7-solution-question-5",
-        "questionNumber": 5,
+        "questionNumber": 3,
         "homeworkNumber": 7,
         "weekNumber": 7,
         "topicIds": [
@@ -1689,37 +1086,6 @@
         ],
         "recommendedAction": "פתרי שוב לפני המבחן — חובה",
         "contentPreview": "4. Prove or disprove each of the following statements: (a) Let (𝑎𝑛)∞ 𝑛=1 be a sequence of non-negative numbers. If lim 𝑛→∞ (𝑛 · 𝑎𝑛) = 0, then ∑∞ 𝑛=1 𝑎𝑛 < ∞. Solution: False. We choose 𝑎1 = ",
-        "confidence": 0.56
-      },
-      {
-        "questionId": "hw-exercise-7-solution-question-6",
-        "questionNumber": 6,
-        "homeworkNumber": 7,
-        "weekNumber": 7,
-        "topicIds": [
-          "אינטגרלים-לא-אמיתיים",
-          "גבולות",
-          "טורים",
-          "מבחן-המנה",
-          "מבחן-השורש",
-          "סדרות",
-          "פונקציות"
-        ],
-        "difficulty": "hard",
-        "examSimilarity": "high",
-        "importanceLevel": "critical",
-        "whyItMatters": "שאלה מורכבת עם הוכחה/טורים/חזקות — דפוס שחוזר במבחנים",
-        "requiredKnowledge": [
-          "אינטגרלים-לא-אמיתיים",
-          "גבולות",
-          "טורים",
-          "מבחן-המנה",
-          "מבחן-השורש",
-          "סדרות",
-          "פונקציות"
-        ],
-        "recommendedAction": "פתרי שוב לפני המבחן — חובה",
-        "contentPreview": "(c) We have 𝜋 2 ≤ ∞ ∑ 𝑛=1 1 (𝑛 + 1)√𝑛 ≤ 2𝜋 3 You can assume that 𝜋 > 3. Solution: True. Consider the function defined by 𝑓 (𝑥) = 1 (𝑥 + 1)√𝑥 , ∀𝑥 ≥ 1 We note that 𝑓 (𝑥) > 0 for every 𝑥 ≥",
         "confidence": 0.56
       }
     ]

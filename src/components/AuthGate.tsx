@@ -38,7 +38,6 @@ export function AuthGate() {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState("");
-  const [requiresDeviceConfirmation, setRequiresDeviceConfirmation] = useState(false);
   const authMessage = authState.status === "blocked" ? authState.message : undefined;
 
   useEffect(() => {
@@ -101,13 +100,6 @@ export function AuthGate() {
         return;
       }
 
-      if (response.status === 409 && data.reason === "requires_device_confirmation") {
-        setRequiresDeviceConfirmation(true);
-        setMessage(data.message ?? "האם זה המחשב שתרצה להשאיר קבוע ליוזר שלך?");
-        return;
-      }
-
-      setRequiresDeviceConfirmation(false);
       setMessage(data.message ?? "לא ניתן להתחבר כרגע.");
     } catch {
       setMessage("שגיאת תקשורת. נסה שוב.");
@@ -169,7 +161,6 @@ export function AuthGate() {
             value={email}
             onChange={(event) => {
               setEmail(event.target.value);
-              setRequiresDeviceConfirmation(false);
             }}
             disabled={authState.status === "checking" || isSubmitting}
             className="min-h-11 w-full bg-transparent text-left outline-none disabled:opacity-60"
@@ -196,17 +187,16 @@ export function AuthGate() {
           {isSubmitting ? "מתחבר..." : "כניסה"}
         </button>
 
-        {requiresDeviceConfirmation && (
-          <button
-            type="button"
-            disabled={isSubmitting}
-            onClick={() => void requestLogin(true)}
-            className="mt-2 flex min-h-11 w-full items-center justify-center rounded-lg border px-4 text-sm font-black transition disabled:cursor-not-allowed disabled:opacity-60"
-            style={{ borderColor: "var(--red-border)", color: "var(--red-mid)", background: "var(--red-light)" }}
-          >
-            כן, זה המחשב הקבוע שלי
-          </button>
-        )}
+        <div
+          className="mt-4 rounded-lg border px-3 py-2 text-xs font-semibold leading-6"
+          style={{
+            background: "var(--amber-light)",
+            borderColor: "var(--amber-border)",
+            color: "var(--amber)",
+          }}
+        >
+          שימי לב: ההתחברות היא בעזרת מייל בלבד. ניסיון התחברות מאותו מייל במכשיר נוסף יחסום את המשתמש ויירשם באדמין.
+        </div>
       </form>
     </div>
   );

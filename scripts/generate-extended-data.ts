@@ -407,7 +407,18 @@ async function main() {
 
   // ── 3. Homework priority map ──
   const homeworkPriorityMap = homeworkAnalysis.map((hw) => {
-    const questions = hw.questions.map((q, index) => {
+    // Filter out sub-parts like (a), (b), (c) that were incorrectly split as separate questions.
+    // A real homework question starts with a top-level number ("1." "2.") or an action keyword.
+    // Each homework has ≤6 main questions; sub-parts inflate the count.
+    // Keep only top-level numbered questions. Sub-parts start with "(letter)"
+    // and solution paragraphs have no question number in their first 60 chars.
+    const mainOnly = hw.questions.filter((q) => {
+      const c = q.content.trimStart();
+      return !c.startsWith("(") && /[1-9]\. /.test(c.slice(0, 60));
+    });
+    const filtered = mainOnly.length > 0 ? mainOnly : hw.questions;
+
+    const questions = filtered.map((q, index) => {
       const content = q.content;
       const isLong = content.length > 400;
       const hasProof = /הוכיח|prove|הפרך|disprove|נובע|follows/i.test(content);

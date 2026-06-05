@@ -182,9 +182,14 @@ function extractExamples(record: ExtractedTextRecord, topicIds: string[], prefix
 
 function extractQuestions(record: ExtractedTextRecord, sourceType: QuestionItem["sourceType"], topicIds: string[], prefix: string): QuestionItem[] {
   const blocks = splitText(record.extractedText);
-  const candidates = blocks.filter((block) =>
-    /(^|\s)(\d+\.|\(\w\)|[א-ת]\)|Question|Exercise|Compute|Prove|Determine|הוכח|חשבו|מצא|קבע)/i.test(block),
-  );
+
+  // For homework: only count top-level numbered questions (1. 2. 3.), NOT sub-parts (a) (b) (c).
+  // Sub-parts start with "(" and solution paragraphs lack a question number in their first 60 chars.
+  const isQuestion = sourceType === "homework"
+    ? (block: string) => { const c = block.trimStart(); return !c.startsWith("(") && /[1-9]\. /.test(c.slice(0, 60)); }
+    : (block: string) => /(^|\s)(\d+\.|\(\w\)|[א-ת]\)|Question|Exercise|Compute|Prove|Determine|הוכח|חשבו|מצא|קבע)/i.test(block);
+
+  const candidates = blocks.filter(isQuestion);
   return candidates.slice(0, 40).map((block, index) => ({
     id: `${prefix}-question-${index + 1}`,
     sourceType,

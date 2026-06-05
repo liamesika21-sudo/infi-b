@@ -8,7 +8,9 @@ import {
   ChevronDown,
   FileQuestion,
   FlaskConical,
+  Lightbulb,
   LayoutDashboard,
+  ShieldCheck,
   Sigma,
   Sparkles,
   Target,
@@ -27,12 +29,15 @@ function getDaysUntilExam(): number {
 const NAV_ITEMS = [
   { href: "/dashboard",   label: "דשבורד",    icon: LayoutDashboard },
   { href: "/weeks",       label: "שבועות",    icon: Calendar },
+  { href: "/intuition-map", label: "אינטואיציה", icon: Lightbulb },
   { href: "/formulas",    label: "נוסחאות",   icon: Sigma },
   { href: "/practice",    label: "תרגול",     icon: Target },
   { href: "/simulations", label: "סימולציות", icon: FlaskConical },
   { href: "/past-exams",  label: "מבחני עבר", icon: FileQuestion },
-  { href: "/quick-review",label: "חזרה",      icon: Zap },
-  { href: "/mentor",      label: "מנטור",     icon: Brain },
+  { href: "/quick-review",     label: "חזרה",        icon: Zap },
+  { href: "/mentor",           label: "מנטור",       icon: Brain },
+  { href: "/instructor-notes", label: "הערות מקס",   icon: Sparkles },
+  { href: "/admin",            label: "אדמין",       icon: ShieldCheck },
 ];
 
 export function AppShell({ children }: { children: React.ReactNode }) {

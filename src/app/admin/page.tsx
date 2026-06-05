@@ -52,8 +52,12 @@ function getStatusClass(status: AuthDeviceRecord["status"]): string {
   }
 }
 
+function hasMultiDeviceAttempt(user: AdminAuthUser): boolean {
+  return user.deviceCount > 1 || user.devices.some((device) => device.status === "blocked");
+}
+
 function countRiskUsers(users: AdminAuthUser[]): number {
-  return users.filter((user) => user.deviceCount >= 3 || Boolean(user.fixedDeviceId)).length;
+  return users.filter(hasMultiDeviceAttempt).length;
 }
 
 export default async function AdminPage() {
@@ -79,6 +83,7 @@ export default async function AdminPage() {
   const totalLogins = snapshot.users.reduce((sum, user) => sum + user.loginCount, 0);
   const totalDevices = snapshot.users.reduce((sum, user) => sum + user.deviceCount, 0);
   const riskUsers = countRiskUsers(snapshot.users);
+  const multiDeviceUsers = snapshot.users.filter(hasMultiDeviceAttempt);
 
   return (
     <div className="space-y-6" dir="rtl">
@@ -93,7 +98,7 @@ export default async function AdminPage() {
             </div>
             <h1 className="mt-2 text-3xl font-black">בקרת כניסות</h1>
             <p className="mt-2 text-sm" style={{ color: "var(--text-secondary)" }}>
-              מעקב אחרי מיילים מורשים, מכשירים ייחודיים, כניסות ומכשיר קבוע.
+              מעקב אחרי מיילים מורשים, מכשיר קבוע, ניסיונות כניסה חסומים וריבוי מכשירים.
             </p>
           </div>
 
@@ -101,10 +106,39 @@ export default async function AdminPage() {
             <Metric label="מיילים מורשים" value={snapshot.allowedEmails.length} />
             <Metric label="כניסות" value={totalLogins} />
             <Metric label="מכשירים" value={totalDevices} />
-            <Metric label="דורשים בדיקה" value={riskUsers} tone="warning" />
+            <Metric label="ריבוי מכשירים" value={riskUsers} tone="warning" />
           </div>
         </div>
       </section>
+
+      {multiDeviceUsers.length > 0 && (
+        <section
+          className="rounded-lg border p-5 shadow-sm"
+          style={{ background: "var(--red-light)", borderColor: "var(--red-border)" }}
+        >
+          <h2 className="text-lg font-black" style={{ color: "var(--red-mid)" }}>
+            משתמשים עם ניסיון כניסה ממספר מכשירים
+          </h2>
+          <div className="mt-3 grid gap-2">
+            {multiDeviceUsers.map((user) => {
+              const blockedCount = user.devices.filter((device) => device.status === "blocked").length;
+              return (
+                <a
+                  key={user.email}
+                  href={`#user-${encodeURIComponent(user.email)}`}
+                  className="rounded-lg border bg-white px-4 py-3 text-sm font-bold transition hover:bg-[var(--bg-subtle)]"
+                  style={{ borderColor: "var(--red-border)", color: "var(--text-primary)" }}
+                >
+                  <span dir="ltr">{user.email}</span>
+                  <span className="mx-2" style={{ color: "var(--text-muted)" }}>·</span>
+                  {user.deviceCount} מכשירים
+                  {blockedCount > 0 && <> · {blockedCount} חסומים</>}
+                </a>
+              );
+            })}
+          </div>
+        </section>
+      )}
 
       <section className="grid gap-4">
         {snapshot.users.map((user) => (
@@ -136,10 +170,11 @@ function Metric({ label, value, tone = "default" }: { label: string; value: numb
 
 function UserAccessCard({ user }: { user: AdminAuthUser }) {
   const hasFixedDevice = Boolean(user.fixedDeviceId);
-  const hasManyDevices = user.deviceCount >= 3;
+  const hasManyDevices = hasMultiDeviceAttempt(user);
+  const blockedDevices = user.devices.filter((device) => device.status === "blocked");
 
   return (
-    <article className="rounded-lg border bg-white p-5 shadow-sm" style={{ borderColor: "var(--border)" }}>
+    <article id={`user-${encodeURIComponent(user.email)}`} className="scroll-mt-24 rounded-lg border bg-white p-5 shadow-sm" style={{ borderColor: "var(--border)" }}>
       <div className="flex flex-col gap-3 lg:flex-row lg:items-start lg:justify-between">
         <div className="min-w-0">
           <div className="flex flex-wrap items-center gap-2">
@@ -151,7 +186,7 @@ function UserAccessCard({ user }: { user: AdminAuthUser }) {
               {user.isAllowed ? "מורשה" : "לא מורשה"}
             </span>
             {hasFixedDevice && <span className="badge badge-green">מכשיר קבוע</span>}
-            {hasManyDevices && <span className="badge badge-amber">ריבוי מכשירים</span>}
+            {hasManyDevices && <span className="badge badge-red">ניסיון ממספר מכשירים</span>}
           </div>
           <p className="mt-2 text-sm" style={{ color: "var(--text-secondary)" }}>
             כניסה ראשונה: {formatDate(user.firstLoginAt)} · כניסה אחרונה: {formatDate(user.lastLoginAt)}
@@ -164,6 +199,16 @@ function UserAccessCard({ user }: { user: AdminAuthUser }) {
           <MiniMetric label="פעילים" value={user.activeDeviceCount} />
         </div>
       </div>
+
+      {hasManyDevices && (
+        <div
+          className="mt-4 rounded-lg border px-4 py-3 text-sm font-semibold leading-7"
+          style={{ background: "var(--red-light)", borderColor: "var(--red-border)", color: "var(--red-mid)" }}
+        >
+          נמצא ניסיון כניסה ממספר מכשירים עבור <span dir="ltr">{user.email}</span>.
+          {blockedDevices.length > 0 && <> {blockedDevices.length} מכשיר/ים סומנו כחסומים.</>}
+        </div>
+      )}
 
       {user.devices.length === 0 ? (
         <div className="mt-4 rounded-lg border border-dashed p-5 text-center text-sm" style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>

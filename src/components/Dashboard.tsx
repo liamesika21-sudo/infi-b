@@ -22,6 +22,7 @@ import {
 import { calculus2Course } from "@/lib/calculus2/config";
 import type { GeneratedDataSnapshot, MaterialInventory } from "@/lib/calculus2";
 import type { readAnalysisData } from "@/lib/calculus2/analysis-reader";
+import type { LectureSummary } from "@/lib/calculus2/analysis-types";
 import { StudyCallout } from "@/components/study/StudyCallout";
 
 const EXAM_DATE = new Date("2026-07-01T09:00:00");
@@ -263,6 +264,11 @@ export function Dashboard({
           )}
         </section>
       </div>
+
+      {/* Lecture overview table */}
+      {analysisData.lectureSummaries.length > 0 && (
+        <LectureOverviewTable lectureSummaries={analysisData.lectureSummaries} />
+      )}
 
       {/* Module grid */}
       <section>
@@ -623,5 +629,140 @@ function ModuleLink({
         </span>
       </span>
     </Link>
+  );
+}
+
+/* ─────────────────── Lecture Overview Table ─────────────────── */
+function LectureOverviewTable({ lectureSummaries }: { lectureSummaries: LectureSummary[] }) {
+  const sorted = [...lectureSummaries].sort((a, b) => a.lectureNumber - b.lectureNumber);
+
+  return (
+    <section>
+      <div className="mb-4 flex items-baseline justify-between">
+        <h2 className="text-xl font-bold" style={{ color: "var(--text-primary)" }}>
+          מה למדנו בכל הרצאה
+        </h2>
+        <p className="text-xs" style={{ color: "var(--text-muted)" }}>הגדרות ומשפטים לפי שבוע</p>
+      </div>
+
+      <div
+        className="overflow-x-auto rounded-xl border bg-white shadow-sm"
+        style={{ borderColor: "var(--border)" }}
+      >
+        <table className="w-full border-separate border-spacing-0 text-sm">
+          <thead style={{ background: "var(--bg-subtle)" }}>
+            <tr>
+              <th
+                className="border-b px-4 py-3 text-right text-xs font-black uppercase tracking-wider"
+                style={{ borderColor: "var(--border)", color: "var(--text-muted)", width: "52px" }}
+              >
+                שבוע
+              </th>
+              <th
+                className="border-b px-4 py-3 text-right text-xs font-black uppercase tracking-wider"
+                style={{ borderColor: "var(--border)", color: "var(--text-muted)", minWidth: "160px" }}
+              >
+                נושא
+              </th>
+              <th
+                className="border-b px-4 py-3 text-right text-xs font-black uppercase tracking-wider"
+                style={{ borderColor: "var(--border)", color: "var(--text-muted)", minWidth: "200px" }}
+              >
+                הגדרות
+              </th>
+              <th
+                className="border-b px-4 py-3 text-right text-xs font-black uppercase tracking-wider"
+                style={{ borderColor: "var(--border)", color: "var(--text-muted)", minWidth: "200px" }}
+              >
+                משפטים
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {sorted.map((lec, i) => (
+              <tr
+                key={lec.lectureNumber}
+                style={{ background: i % 2 === 1 ? "var(--bg-subtle)" : "#fff" }}
+              >
+                {/* Week number — links to /weeks/N */}
+                <td
+                  className="border-b px-4 py-3 align-top"
+                  style={{ borderColor: "var(--border)" }}
+                >
+                  <Link
+                    href={`/weeks/${lec.lectureNumber}`}
+                    className="inline-flex h-7 w-7 items-center justify-center rounded-md text-xs font-black transition hover:opacity-70"
+                    style={{
+                      background: "var(--navy-light)",
+                      color: "var(--navy-mid)",
+                      border: "1px solid var(--navy-border)",
+                    }}
+                  >
+                    {lec.lectureNumber}
+                  </Link>
+                </td>
+
+                {/* Title + main topics */}
+                <td
+                  className="border-b px-4 py-3 align-top"
+                  style={{ borderColor: "var(--border)" }}
+                >
+                  <p className="font-semibold leading-snug" style={{ color: "var(--text-primary)" }}>
+                    {lec.title}
+                  </p>
+                  {lec.mainTopics.length > 0 && (
+                    <p
+                      className="mt-0.5 text-xs leading-snug"
+                      style={{ color: "var(--text-muted)" }}
+                    >
+                      {lec.mainTopics.slice(0, 3).join(" · ")}
+                    </p>
+                  )}
+                </td>
+
+                {/* Key definitions */}
+                <td
+                  className="border-b px-4 py-3 align-top"
+                  style={{ borderColor: "var(--border)" }}
+                >
+                  <LectureChipList items={lec.keyDefinitions} color="green" />
+                </td>
+
+                {/* Key theorems */}
+                <td
+                  className="border-b px-4 py-3 align-top"
+                  style={{ borderColor: "var(--border)" }}
+                >
+                  <LectureChipList items={lec.keyTheorems} color="navy" />
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  );
+}
+
+function LectureChipList({ items, color }: { items: string[]; color: "green" | "navy" }) {
+  if (items.length === 0) {
+    return <span className="text-xs" style={{ color: "var(--text-muted)" }}>—</span>;
+  }
+  const styles = {
+    green: { bg: "var(--green-light)", text: "var(--green-mid)",  border: "var(--green-border)" },
+    navy:  { bg: "var(--navy-light)",  text: "var(--navy-mid)",   border: "var(--navy-border)" },
+  }[color];
+  return (
+    <div className="flex flex-wrap gap-1">
+      {items.slice(0, 6).map((item, i) => (
+        <span
+          key={i}
+          className="rounded px-1.5 py-0.5 text-[11px] font-medium leading-snug"
+          style={{ background: styles.bg, color: styles.text, border: `1px solid ${styles.border}` }}
+        >
+          {item}
+        </span>
+      ))}
+    </div>
   );
 }

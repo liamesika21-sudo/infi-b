@@ -1,5 +1,6 @@
 import katex from "katex";
 import "katex/dist/katex.min.css";
+import { TheoremsSidebar } from "./TheoremsSidebar";
 
 /* ─── Tiny KaTeX helper (server-side) ─── */
 function K({ m, d = false }: { m: string; d?: boolean }) {
@@ -134,7 +135,10 @@ function SubSection({ title, color = S.primary, children }: { title: string; col
 export default function TheoremsPage() {
   return (
     <div dir="rtl" style={{ background: S.bg, minHeight: "100vh", fontFamily: "'Noto Sans Hebrew', 'Segoe UI', sans-serif", color: "#2c2c2c", lineHeight: 1.8 }}>
-      <div style={{ maxWidth: 900, margin: "0 auto", padding: "24px 16px" }}>
+      <div style={{ maxWidth: 1160, margin: "0 auto", padding: "24px 16px", display: "flex", gap: 24, alignItems: "flex-start" }}>
+
+        {/* ── Main content ── */}
+        <div style={{ flex: 1, minWidth: 0 }}>
 
         {/* Header */}
         <div style={{ background: `linear-gradient(135deg, ${S.primary}, #2c5f8a)`, color: "#fff", padding: "36px 40px", borderRadius: 12, marginBottom: 28, textAlign: "center", boxShadow: S.shadow }}>
@@ -536,6 +540,11 @@ export default function TheoremsPage() {
         <div style={{ textAlign: "center", color: "#888", fontSize: "0.85rem", padding: "20px 0" }}>
           אינפי ב׳ — מועד א׳ · 01.07.2026 · יעד 90+ · Max Mahlin
         </div>
+        </div>{/* end main content */}
+
+        {/* ── Sticky sidebar (left side in RTL, hidden below xl) ── */}
+        <TheoremsSidebar />
+
       </div>
     </div>
   );

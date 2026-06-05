@@ -9,12 +9,10 @@ export const runtime = "nodejs";
 
 export async function POST(request: Request) {
   let email = "";
-  let confirmDevice = false;
 
   try {
-    const body = (await request.json()) as { email?: unknown; confirmDevice?: unknown };
+    const body = (await request.json()) as { email?: unknown };
     email = typeof body.email === "string" ? body.email : "";
-    confirmDevice = body.confirmDevice === true;
   } catch {
     return NextResponse.json({ ok: false, message: "בקשה לא תקינה." }, { status: 400 });
   }
@@ -22,7 +20,7 @@ export async function POST(request: Request) {
   let result: Awaited<ReturnType<typeof loginWithEmail>>;
 
   try {
-    result = await loginWithEmail(email, request, { confirmDevice });
+    result = await loginWithEmail(email, request);
   } catch (error) {
     console.error("Auth login failed", error);
 

@@ -20,7 +20,7 @@
       "משפט דרבו המורחב"
     ],
     "keyFormulas": [
-      "$\\lim_{x \\to x_0} \\frac{f(x)}{g(x)} = \\lim_{x \\to x_0} \\frac{f'(x)}{g'(x)}$ (בתנאי שהגבול בצורה $0/0$ או $\\infty/\\infty$)"
+      "lim f/g = lim f'/g' (בתנאים)"
     ],
     "examNotes": [
       "לופיטל מופיע בכמעט כל בחינה — שנני תנאים",
@@ -55,8 +55,8 @@
       "משפט ה-Squeeze"
     ],
     "keyFormulas": [
-      "$\\lim_{n\\to\\infty}\\!\\left(1+\\frac{1}{n}\\right)^{\\!n} = e$",
-      "$\\lim_{n\\to\\infty} n^{1/n} = 1$"
+      "lim (1+1/n)^n = e",
+      "lim n^(1/n) = 1"
     ],
     "examNotes": [
       "שאלות על סדרות רקורסיביות — מונוטוניות + גבול",
@@ -91,8 +91,8 @@
       "פיתוח טיילור עם שארית"
     ],
     "keyFormulas": [
-      "$P_n(x) = \\sum_{k=0}^{n} \\frac{f^{(k)}(x_0)}{k!}(x-x_0)^k$",
-      "$R_n(x) = \\frac{f^{(n+1)}(\\xi)}{(n+1)!}(x-x_0)^{n+1}$"
+      "Pₙ(x) = Σ f^(k)(x₀)/k! · (x-x₀)^k",
+      "Rₙ(x) = f^(n+1)(ξ)/(n+1)! · (x-x₀)^(n+1)"
     ],
     "examNotes": [
       "MVT — כלי הוכחה עיקרי",
@@ -127,8 +127,8 @@
       "IBP"
     ],
     "keyFormulas": [
-      "$\\int_a^b f(x)\\,dx = F(b) - F(a)$",
-      "$\\int u\\,dv = uv - \\int v\\,du$"
+      "∫ₐᵇ f(x)dx = F(b)-F(a)",
+      "∫u dv = uv - ∫v du"
     ],
     "examNotes": [
       "אינטגרל — נושא מרכזי, מופיע בכל מבחן",
@@ -160,8 +160,8 @@
       "משפט פיתוח לשברים חלקיים"
     ],
     "keyFormulas": [
-      "$\\int \\sin^2 x\\,dx = \\tfrac{x}{2} - \\tfrac{\\sin 2x}{4} + C$",
-      "$\\int \\cos^2 x\\,dx = \\tfrac{x}{2} + \\tfrac{\\sin 2x}{4} + C$"
+      "∫sin²x dx = x/2 - sin(2x)/4",
+      "∫cos²x dx = x/2 + sin(2x)/4"
     ],
     "examNotes": [
       "פירוק לשברים חלקיים — שיטה לבחינה",
@@ -197,8 +197,8 @@
       "מבחן האינטגרל"
     ],
     "keyFormulas": [
-      "$\\sum_{n=1}^{\\infty} \\frac{1}{n^p}$ מתכנס $\\iff p > 1$",
-      "$\\sum_{n=0}^{\\infty} q^n = \\frac{1}{1-q}$ כאשר $|q| < 1$"
+      "Σ 1/nᵖ מתכנס ↔ p > 1",
+      "Σ qⁿ = 1/(1-q) ל|q|<1"
     ],
     "examNotes": [
       "מבחני התכנסות — נושא מרכזי בכל בחינה",
@@ -233,8 +233,8 @@
       "מבחן לייבניץ"
     ],
     "keyFormulas": [
-      "$R = \\lim_{n\\to\\infty} \\left|\\frac{a_n}{a_{n+1}}\\right|$",
-      "$R = \\frac{1}{\\displaystyle\\lim_{n\\to\\infty} |a_n|^{1/n}}$"
+      "R = lim |aₙ₊₁/aₙ|⁻¹",
+      "R = lim |aₙ|^(-1/n)"
     ],
     "examNotes": [
       "מבחן מנה — שכיח ביותר",
@@ -268,8 +268,8 @@
       "אינטגרציה של טור חזקות"
     ],
     "keyFormulas": [
-      "$R = \\frac{1}{\\limsup_{n\\to\\infty} |a_n|^{1/n}}$",
-      "$\\frac{d}{dx}\\sum a_n x^n = \\sum n\\,a_n x^{n-1}$ (אותו $R$)"
+      "R = 1/limsup|aₙ|^(1/n)",
+      "Σaₙxⁿ גזיר ← Σnaₙxⁿ⁻¹ עם אותו R"
     ],
     "examNotes": [
       "רדיוס התכנסות — שאלה שכיחה",
@@ -302,11 +302,11 @@
       "כל פונקציה C^∞ שווה לטור טיילור שלה בתחום R"
     ],
     "keyFormulas": [
-      "$e^x = \\sum_{n=0}^{\\infty} \\frac{x^n}{n!}$",
-      "$\\sin x = \\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n+1}}{(2n+1)!}$",
-      "$\\cos x = \\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n}}{(2n)!}$",
-      "$\\ln(1+x) = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} x^n}{n}$, $\\; |x| \\le 1,\\, x \\ne -1$",
-      "$\\frac{1}{1-x} = \\sum_{n=0}^{\\infty} x^n$, $\\; |x| < 1$"
+      "eˣ = Σ xⁿ/n! (כל x)",
+      "sin x = Σ (-1)ⁿx^(2n+1)/(2n+1)!",
+      "cos x = Σ (-1)ⁿx^(2n)/(2n)!",
+      "ln(1+x) = Σ (-1)ⁿ⁺¹xⁿ/n (|x|≤1, x≠-1)",
+      "1/(1-x) = Σ xⁿ (|x|<1)"
     ],
     "examNotes": [
       "טורי מקלורן עיקריים — חובה לשנן",

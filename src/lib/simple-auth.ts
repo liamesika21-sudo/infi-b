@@ -6,7 +6,6 @@ export const AUTH_COOKIE_NAME = "infi_auth";
 
 const AUTH_FILE_PATH = path.join(process.cwd(), "data", "auth-users.json");
 const COOKIE_MAX_AGE = 60 * 60 * 24 * 180;
-const FREE_DEVICE_LIMIT = 3;
 
 type AuthDeviceStatus = "active" | "pending" | "fixed" | "blocked";
 
@@ -53,7 +52,7 @@ export type LoginResult =
       ok: false;
       status: number;
       message: string;
-      reason?: "not_allowed" | "requires_device_confirmation" | "fixed_device_mismatch";
+      reason?: "not_allowed" | "fixed_device_mismatch";
     };
 
 export type AdminAuthUser = Omit<AuthUserRecord, "devices"> & {
@@ -375,8 +374,7 @@ export async function validateCookieForRequest(request: Request): Promise<AuthCh
 
 export async function loginWithEmail(
   email: string,
-  request: Request,
-  options: { confirmDevice?: boolean } = {}
+  request: Request
 ): Promise<LoginResult> {
   const normalizedEmail = normalizeEmail(email);
   const authFile = await readAuthFile();
@@ -406,7 +404,7 @@ export async function loginWithEmail(
 
   const now = new Date().toISOString();
   let devices = getUserDevices(existingUser);
-  const fixedDeviceId = existingUser?.fixedDeviceId;
+  const fixedDeviceId = existingUser?.fixedDeviceId ?? existingUser?.boundDeviceId;
 
   if (fixedDeviceId && fixedDeviceId !== currentDeviceId) {
     devices = upsertDevice(devices, currentDeviceId, now, request, "blocked");
@@ -427,19 +425,17 @@ export async function loginWithEmail(
       ok: false as const,
       status: 403,
       reason: "fixed_device_mismatch",
-      message: "המייל הזה כבר קבוע למכשיר אחר.",
+      message: "המייל הזה כבר קבוע למכשיר אחר. ניסיון התחברות ממכשיר נוסף נחסם ונרשם באדמין.",
     };
   }
 
-  const currentDevice = devices.find((device) => device.id === currentDeviceId);
-  const activeDeviceCount = devices.filter((device) => device.status === "active" || device.status === "fixed").length;
-  const needsDeviceConfirmation =
-    (!currentDevice || currentDevice.status === "pending" || currentDevice.status === "blocked") &&
-    activeDeviceCount >= FREE_DEVICE_LIMIT;
+  const hasKnownDifferentDevice = devices.some(
+    (device) => device.id !== currentDeviceId && device.status !== "blocked"
+  );
 
-  if (needsDeviceConfirmation && !options.confirmDevice) {
-    devices = upsertDevice(devices, currentDeviceId, now, request, "pending");
-    const pendingUser: AuthUserRecord = {
+  if (!fixedDeviceId && hasKnownDifferentDevice) {
+    devices = upsertDevice(devices, currentDeviceId, now, request, "blocked");
+    const blockedUser: AuthUserRecord = {
       email: normalizedEmail,
       boundDeviceId: existingUser?.boundDeviceId,
       boundIp: existingUser?.boundIp,
@@ -450,26 +446,25 @@ export async function loginWithEmail(
       lastLoginAt: existingUser?.lastLoginAt ?? now,
       loginCount: existingUser?.loginCount ?? 0,
     };
-    await persistUser(authFile, pendingUser);
+    await persistUser(authFile, blockedUser);
 
     return {
       ok: false as const,
-      status: 409,
-      reason: "requires_device_confirmation",
-      message: "אוי, ראינו שנכנסת מיותר ממכשיר אחד. האם זה המכשיר שתרצה שישאר קבוע ליוזר שלך?",
+      status: 403,
+      reason: "fixed_device_mismatch",
+      message: "זוהה ניסיון התחברות ממכשיר נוסף. המשתמש נחסם לכניסה מהמכשיר הזה ונרשם באדמין.",
     };
   }
 
-  const nextStatus: AuthDeviceStatus =
-    needsDeviceConfirmation || options.confirmDevice ? "fixed" : "active";
+  const nextStatus: AuthDeviceStatus = "fixed";
   devices = upsertDevice(devices, currentDeviceId, now, request, nextStatus);
 
   const user: AuthUserRecord = {
     email: normalizedEmail,
     boundDeviceId: currentDeviceId,
     boundIp: getRequestIp(request) ?? existingUser?.boundIp,
-    fixedDeviceId: nextStatus === "fixed" ? currentDeviceId : existingUser?.fixedDeviceId,
-    fixedAt: nextStatus === "fixed" ? now : existingUser?.fixedAt,
+    fixedDeviceId: currentDeviceId,
+    fixedAt: existingUser?.fixedAt ?? now,
     devices,
     firstLoginAt: existingUser?.firstLoginAt ?? now,
     lastLoginAt: now,
