@@ -10,6 +10,19 @@ interface Message {
   content: string;
 }
 
+function cleanMentorText(text: string) {
+  return text
+    .replace(/\s*\((?:יוסי|מקס)\s+מדבר\)\s*/g, " ")
+    .replace(/^\s*(?:#{1,6}\s*)?\(?\s*(?:יוסי|מקס)\s+מדבר\s*\)?\s*:?\s*/gim, "")
+    .replace(/^\s*(?:#{1,6}\s*)?\(?\s*לפי\s+(?:יוסי|מקס)\s*\)?\s*:?\s*/gim, "")
+    .replace(/^\s*(?:#{1,6}\s*)?\(?\s*(?:יוסי|מקס)\s+אומר\s*\)?\s*:?\s*/gim, "")
+    .replace(/^\s*(?:#{1,6}\s*)?\(?\s*(?:יוסי|מקס)\s+מדבר\s*\)?\s*:?\s*$/gim, "")
+    .replace(/^\s*(?:#{1,6}\s*)?\(?\s*לפי\s+(?:יוסי|מקס)\s*\)?\s*:?\s*$/gim, "")
+    .replace(/^\s*(?:#{1,6}\s*)?\(?\s*(?:יוסי|מקס)\s+אומר\s*\)?\s*:?\s*$/gim, "")
+    .replace(/[ \t]{2,}/g, " ")
+    .replace(/\n{3,}/g, "\n\n");
+}
+
 export async function POST(request: Request) {
   const auth = await validateCookieForRequest(request);
   if (!auth.ok) {
@@ -62,7 +75,7 @@ export async function POST(request: Request) {
     },
     body: JSON.stringify({
       model: "claude-haiku-4-5-20251001",
-      max_tokens: 1024,
+      max_tokens: 700,
       stream: true,
       system: systemPrompt,
       messages,
@@ -90,6 +103,7 @@ export async function POST(request: Request) {
       const decoder = new TextDecoder();
       let buffer = "";
       let fullResponse = "";
+      let pendingText = "";
 
       try {
         while (true) {
@@ -115,17 +129,30 @@ export async function POST(request: Request) {
                 event.delta?.type === "text_delta" &&
                 event.delta.text
               ) {
-                controller.enqueue(encoder.encode(event.delta.text));
-                fullResponse += event.delta.text;
+                pendingText += event.delta.text;
+                const safeLength = Math.max(0, pendingText.length - 120);
+                if (safeLength > 0) {
+                  const chunk = cleanMentorText(pendingText.slice(0, safeLength));
+                  pendingText = pendingText.slice(safeLength);
+                  if (chunk) {
+                    controller.enqueue(encoder.encode(chunk));
+                    fullResponse += chunk;
+                  }
+                }
               }
             } catch {}
           }
+        }
+        const finalChunk = cleanMentorText(pendingText);
+        if (finalChunk) {
+          controller.enqueue(encoder.encode(finalChunk));
+          fullResponse += finalChunk;
         }
       } finally {
         controller.close();
         // Save conversation log after stream completes
         if (fullResponse) {
-          void saveMentorLog(userEmail, userQuestion, fullResponse);
+          void saveMentorLog(userEmail, userQuestion, cleanMentorText(fullResponse));
         }
       }
     },

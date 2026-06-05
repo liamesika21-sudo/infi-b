@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
-import { Send, Sparkles, Lock, ChevronDown } from "lucide-react";
+import { Send, Sparkles, Lock } from "lucide-react";
 import katex from "katex";
 import "katex/dist/katex.min.css";
 
@@ -93,9 +93,9 @@ const STARTER_QUESTIONS = [
 // ── Pro gate ───────────────────────────────────────────────────────────────
 
 const PRO_FEATURES = [
-  { icon: "🧠", title: "מתנהג כמו מקס", desc: "הסברים אינטואיטיביים, טיפים לבחינה ונקודות הדגש מהתרגולים" },
-  { icon: "📐", title: "ניסוח של יוסי", desc: "הגדרות והוכחות בניסוח הפורמלי המדויק של הקורס" },
-  { icon: "✏️", title: "שאלות בסגנון בחינה", desc: "תרגול שאלות בדיוק כמו מה שיוסי שם במבחן" },
+  { icon: "🧠", title: "הסבר קצר ומדויק", desc: "הסברים אינטואיטיביים, טיפים לבחינה ונקודות הדגש מהתרגולים" },
+  { icon: "📐", title: "ניסוח פורמלי כשצריך", desc: "הגדרות והוכחות בניסוח המדויק של הקורס" },
+  { icon: "✏️", title: "שאלות בסגנון בחינה", desc: "תרגול שאלות לפי הדפוסים שמופיעים במבחנים" },
   { icon: "🎯", title: "ממוקד בחומר בלבד", desc: "עונה רק על נושאי הקורס — גבולות, סדרות, אינטגרלים, טורים" },
 ];
 
@@ -115,7 +115,7 @@ function ProGate() {
             מנטור AI — תוכנית פרו
           </h1>
           <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
-            צ׳אט AI שמתנהג בדיוק כמו <strong>מקס ויוסי</strong> — שואל, מסביר, מדריך ובונה
+            צ׳אט AI שמכיר את ההרצאות והתרגולים — שואל, מסביר, מדריך ובונה
             שאלות בסגנון הבחינה. מוגבל ל-150 הודעות לכיסוי עלויות.
           </p>
         </div>
@@ -341,7 +341,7 @@ function ChatInterface({ status }: { status: MentorStatus }) {
               מנטור אינפי ב׳
             </p>
             <p className="text-[11px]" style={{ color: "var(--text-muted)" }}>
-              מבוסס על מקס ויוסי
+              מבוסס על חומר הקורס
             </p>
           </div>
         </div>
