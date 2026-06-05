@@ -1,391 +1,409 @@
 "use client";
 
-import { useState, useMemo } from "react";
-import { BookOpen, FlaskConical, FileQuestion, Filter, ChevronDown, ChevronUp } from "lucide-react";
+import { useState } from "react";
+import { ChevronDown, FlaskConical, BookOpen, FileQuestion } from "lucide-react";
 import type { QuestionItem } from "@/lib/calculus2/analysis-types";
 
-// ── Helpers ────────────────────────────────────────────────────────────────
+// ── Group metadata ─────────────────────────────────────────────────────────
 
-function sourceLabel(t: string) {
-  if (t === "recitation") return "תרגול";
-  if (t === "homework") return "מטלה";
-  if (t === "past_exam") return "מבחן עבר";
-  return t;
+interface SourceGroup {
+  id: string;
+  label: string;         // "תרגול 1"
+  sublabel: string;      // "לופיטל, דרבו"
+  type: "recitation" | "homework" | "past_exam";
+  sortKey: number;
+  questions: QuestionItem[];
 }
 
-function sourceIcon(t: string) {
-  if (t === "recitation") return <FlaskConical className="h-3.5 w-3.5" />;
-  if (t === "homework") return <BookOpen className="h-3.5 w-3.5" />;
-  return <FileQuestion className="h-3.5 w-3.5" />;
-}
-
-const SOURCE_COLORS: Record<string, { bg: string; text: string; border: string }> = {
-  recitation: { bg: "var(--cyan-light)", text: "var(--cyan)", border: "var(--cyan-border)" },
-  homework:   { bg: "var(--gold-light)", text: "var(--gold)", border: "var(--gold-border)" },
-  past_exam:  { bg: "var(--purple-light)", text: "var(--purple)", border: "var(--purple-border)" },
+const RECITATION_TOPICS: Record<number, string> = {
+  1:  "לופיטל ודרבו",
+  2:  "סדרות",
+  3:  "אינטגרל לא-מסוים",
+  4:  "אינטגרל מסוים",
+  5:  "אינטגרל לא-אמיתי",
+  6:  "טורים בסיסיים",
+  7:  "מבחני התכנסות",
+  8:  "התכנסות מוחלטת",
+  9:  "טורי חזקות",
+  10: "מקלורן",
 };
 
-const DIFF_COLORS: Record<string, { bg: string; text: string }> = {
-  easy:   { bg: "var(--green-light)", text: "var(--green)" },
-  medium: { bg: "var(--amber-light)", text: "var(--amber-mid)" },
-  hard:   { bg: "var(--red-light)", text: "var(--red-mid)" },
-  mixed:  { bg: "var(--purple-light)", text: "var(--purple)" },
+const HOMEWORK_TOPICS: Record<number, string> = {
+  1: "גבולות",
+  2: "סדרות ונגזרות",
+  3: "אינטגרל לא-מסוים",
+  4: "אינטגרל מסוים",
+  5: "אינטגרל לא-אמיתי",
+  6: "טורים",
+  7: "טורי חזקות",
 };
 
-const REL_COLORS: Record<string, { bg: string; text: string }> = {
-  critical: { bg: "var(--red-light)", text: "var(--red-mid)" },
-  high:     { bg: "var(--amber-light)", text: "var(--amber-mid)" },
-  medium:   { bg: "var(--navy-light)", text: "var(--navy-mid)" },
-  low:      { bg: "var(--bg-subtle)", text: "var(--text-muted)" },
-};
+function parseSourceGroup(fileId: string): { type: SourceGroup["type"]; label: string; sublabel: string; sortKey: number } | null {
+  // recitation-recitation-N-*
+  const recMatch = fileId.match(/recitation-recitation-(\d+)-/i)
+    ?? fileId.match(/recitation-script-.*?(\d+)/i);
+  if (recMatch) {
+    const n = parseInt(recMatch[1]);
+    // recitation-9 is numbered as script-recitation-9
+    const scriptMatch = fileId.includes("script");
+    const num = scriptMatch ? (fileId.includes("10") || fileId.includes("תרגול-10") ? 10 : 9) : n;
+    return {
+      type: "recitation",
+      label: `תרגול ${num}`,
+      sublabel: RECITATION_TOPICS[num] ?? "",
+      sortKey: num,
+    };
+  }
 
-function diffLabel(d: string) {
-  const m: Record<string, string> = { easy: "קל", medium: "בינוני", hard: "קשה", mixed: "מעורב" };
-  return m[d] ?? d;
-}
-function relLabel(r: string) {
-  const m: Record<string, string> = { critical: "קריטי", high: "גבוה", medium: "בינוני", low: "נמוך" };
-  return m[r] ?? r;
-}
+  // hw-exercise-N-*
+  const hwMatch = fileId.match(/hw-exercise-(\d+)-/i);
+  if (hwMatch) {
+    const n = parseInt(hwMatch[1]);
+    return {
+      type: "homework",
+      label: `מטלה ${n}`,
+      sublabel: HOMEWORK_TOPICS[n] ?? "",
+      sortKey: 100 + n,
+    };
+  }
 
-// Extract week number from sourceFileId or topicIds
-function guessWeek(q: QuestionItem): number | null {
-  const m = q.sourceFileId.match(/recitation-?(\d+)|lecture-?(\d+)|exercise-?(\d+)/i);
-  if (m) return parseInt(m[1] ?? m[2] ?? m[3]);
+  // past-exams-*
+  if (fileId.startsWith("past-exams-")) {
+    const yearMatch = fileId.match(/(\d{4})/);
+    const year = yearMatch?.[1] ?? "";
+    const isA = /moeda|moed-a|term-a/i.test(fileId);
+    const isB = /moedb|moed-b|term-b/i.test(fileId);
+    const isSim = /simulation/i.test(fileId);
+    const isFormula = /formula/i.test(fileId);
+    const isTheoremList = /theorem.*list|list.*theorem/i.test(fileId);
+    const isExcluded = /excluded|not.*material/i.test(fileId);
+
+    if (isExcluded) return { type: "past_exam", label: "שאלות שאינן בחומר", sublabel: "", sortKey: 210 };
+    if (isFormula) return { type: "past_exam", label: "גיליון נוסחאות", sublabel: year, sortKey: 205 };
+    if (isTheoremList) return { type: "past_exam", label: "רשימת משפטים", sublabel: year, sortKey: 206 };
+    if (isSim) return { type: "past_exam", label: `סימולציה ${year}`, sublabel: "", sortKey: 200 };
+    if (isA) return { type: "past_exam", label: `מועד א׳ ${year}`, sublabel: "", sortKey: 150 + (2026 - parseInt(year)) };
+    if (isB) return { type: "past_exam", label: `מועד ב׳ ${year}`, sublabel: "", sortKey: 175 + (2026 - parseInt(year)) };
+    return { type: "past_exam", label: fileId.replace("past-exams-", "").replace(/-/g, " "), sublabel: "", sortKey: 199 };
+  }
+
   return null;
 }
 
-// Detect language direction from content
-function isRtl(text: string): boolean {
-  const heCount = (text.match(/[֐-׿]/g) || []).length;
-  const enCount = (text.match(/[a-zA-Z]/g) || []).length;
-  return heCount >= enCount;
+function buildGroups(questions: QuestionItem[]): SourceGroup[] {
+  const map = new Map<string, SourceGroup>();
+
+  for (const q of questions) {
+    const meta = parseSourceGroup(q.sourceFileId);
+    if (!meta) continue;
+    const key = q.sourceFileId;
+    if (!map.has(key)) {
+      map.set(key, { id: key, ...meta, questions: [] });
+    }
+    map.get(key)!.questions.push(q);
+  }
+
+  return Array.from(map.values()).sort((a, b) => a.sortKey - b.sortKey);
 }
 
-// ── Question Card ──────────────────────────────────────────────────────────
+// ── Sidebar nav ────────────────────────────────────────────────────────────
 
-function QuestionCard({ q, index }: { q: QuestionItem; index: number }) {
-  const [expanded, setExpanded] = useState(false);
-  const sc = SOURCE_COLORS[q.sourceType] ?? SOURCE_COLORS.recitation;
-  const dc = DIFF_COLORS[q.difficulty] ?? {};
-  const rc = REL_COLORS[q.examRelevance] ?? {};
-  const week = guessWeek(q);
-  const rtl = isRtl(q.content);
+const TYPE_ICON = {
+  recitation: <FlaskConical className="h-3.5 w-3.5 shrink-0" />,
+  homework:   <BookOpen className="h-3.5 w-3.5 shrink-0" />,
+  past_exam:  <FileQuestion className="h-3.5 w-3.5 shrink-0" />,
+};
 
-  // Split content into paragraphs — helps with long OCR blocks
-  const preview = q.content.slice(0, 280).trim();
-  const hasMore = q.content.length > 280;
-  const displayContent = expanded ? q.content : preview;
+const TYPE_SECTION: { type: SourceGroup["type"]; title: string }[] = [
+  { type: "recitation", title: "תרגולים" },
+  { type: "homework",   title: "מטלות" },
+  { type: "past_exam",  title: "מבחני עבר" },
+];
+
+function Sidebar({ groups, active, onSelect }: {
+  groups: SourceGroup[];
+  active: string;
+  onSelect: (id: string) => void;
+}) {
+  return (
+    <aside className="hidden lg:block shrink-0 sticky self-start" style={{ width: 210, top: 68 }}>
+      <div className="rounded-xl border bg-white p-3 shadow-sm" style={{ borderColor: "var(--border)" }}>
+        {TYPE_SECTION.map(({ type, title }) => {
+          const gs = groups.filter(g => g.type === type);
+          if (!gs.length) return null;
+          return (
+            <div key={type} className="mb-3 last:mb-0">
+              <p
+                className="mb-1.5 px-2 text-[10px] font-black uppercase tracking-widest"
+                style={{ color: "var(--text-muted)" }}
+              >
+                {title}
+              </p>
+              {gs.map(g => (
+                <button
+                  key={g.id}
+                  onClick={() => {
+                    onSelect(g.id);
+                    document.getElementById(`group-${g.id}`)?.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }}
+                  className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-xs font-semibold transition-all text-right"
+                  style={{
+                    background: active === g.id ? "var(--navy-light)" : "transparent",
+                    color: active === g.id ? "var(--navy-mid)" : "var(--text-secondary)",
+                    border: active === g.id ? "1px solid var(--navy-border)" : "1px solid transparent",
+                  }}
+                >
+                  <span style={{ color: active === g.id ? "var(--navy-mid)" : "var(--text-muted)" }}>
+                    {TYPE_ICON[g.type]}
+                  </span>
+                  <span className="flex-1 truncate">{g.label}</span>
+                  <span
+                    className="shrink-0 rounded-full px-1.5 text-[9px] font-bold"
+                    style={{
+                      background: active === g.id ? "var(--navy)" : "var(--bg-subtle)",
+                      color: active === g.id ? "#fff" : "var(--text-muted)",
+                    }}
+                  >
+                    {g.questions.length}
+                  </span>
+                </button>
+              ))}
+            </div>
+          );
+        })}
+      </div>
+    </aside>
+  );
+}
+
+// ── Question display ───────────────────────────────────────────────────────
+
+const DIFF_LABEL: Record<string, string> = { easy: "קל", medium: "בינוני", hard: "קשה", mixed: "מעורב" };
+const DIFF_COLOR: Record<string, { bg: string; text: string }> = {
+  easy:   { bg: "var(--green-light)", text: "var(--green)" },
+  medium: { bg: "var(--amber-light)", text: "var(--amber-mid)" },
+  hard:   { bg: "var(--red-light)",   text: "var(--red-mid)" },
+};
+const REL_COLOR: Record<string, { bg: string; text: string }> = {
+  critical: { bg: "var(--red-light)",    text: "var(--red-mid)" },
+  high:     { bg: "var(--amber-light)",  text: "var(--amber-mid)" },
+};
+
+function QuestionRow({ q, index }: { q: QuestionItem; index: number }) {
+  const [open, setOpen] = useState(false);
+  const dc = DIFF_COLOR[q.difficulty];
+  const rc = REL_COLOR[q.examRelevance];
+
+  // Detect language direction
+  const heChars = (q.content.match(/[֐-׿]/g) || []).length;
+  const enChars = (q.content.match(/[a-zA-Z]/g) || []).length;
+  const dir = heChars >= enChars ? "rtl" : "ltr";
+
+  const preview = q.content.slice(0, 300).trim();
+  const hasMore = q.content.length > 300;
+  const displayText = open ? q.content : preview;
 
   return (
-    <article
-      className="rounded-2xl border overflow-hidden shadow-sm transition-shadow hover:shadow-md"
+    <div
+      className="rounded-xl border overflow-hidden"
       style={{ borderColor: "var(--border)", background: "#fff" }}
     >
-      {/* ── Top bar ── */}
+      {/* mini header */}
       <div
-        className="flex items-center gap-2 px-4 py-2.5 border-b"
-        style={{ borderColor: "var(--border)", background: sc.bg }}
+        className="flex items-center gap-2 px-4 py-2 border-b text-xs"
+        style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}
       >
-        {/* Number */}
         <span
-          className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[10px] font-black text-white"
-          style={{ background: sc.text }}
+          className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[9px] font-black text-white"
+          style={{ background: "var(--navy)" }}
         >
           {index + 1}
         </span>
 
-        {/* Source badge */}
-        <span
-          className="flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-bold"
-          style={{ background: sc.bg, color: sc.text, border: `1px solid ${sc.border}` }}
-        >
-          {sourceIcon(q.sourceType)}
-          {sourceLabel(q.sourceType)}
-          {week && ` · שבוע ${week}`}
-        </span>
-
-        {/* Difficulty */}
-        {q.difficulty && q.difficulty !== "unknown" && (
-          <span
-            className="rounded-full px-2 py-0.5 text-[10px] font-semibold"
-            style={{ background: dc.bg, color: dc.text }}
-          >
-            {diffLabel(q.difficulty)}
-          </span>
-        )}
-
-        {/* Exam relevance */}
-        {q.examRelevance && (q.examRelevance === "critical" || q.examRelevance === "high") && (
-          <span
-            className="rounded-full px-2 py-0.5 text-[10px] font-semibold"
-            style={{ background: rc.bg, color: rc.text }}
-          >
-            {relLabel(q.examRelevance)} למבחן
-          </span>
-        )}
-
-        {/* Question number from source */}
         {q.questionNumber && (
-          <span className="mr-auto text-[10px] font-medium" style={{ color: sc.text, opacity: 0.7 }}>
+          <span className="font-semibold" style={{ color: "var(--text-secondary)" }}>
             שאלה {q.questionNumber}
           </span>
         )}
+
+        {dc && (
+          <span className="rounded-full px-2 py-0.5 text-[10px] font-semibold" style={dc}>
+            {DIFF_LABEL[q.difficulty]}
+          </span>
+        )}
+        {rc && (
+          <span className="rounded-full px-2 py-0.5 text-[10px] font-semibold" style={rc}>
+            {q.examRelevance === "critical" ? "קריטי" : "חשוב"}
+          </span>
+        )}
+
+        {q.topicIds.slice(0, 3).map(t => (
+          <span
+            key={t}
+            className="rounded-full px-1.5 py-0.5 text-[9px]"
+            style={{ background: "var(--bg-page)", color: "var(--text-muted)", border: "1px solid var(--border)" }}
+          >
+            {t}
+          </span>
+        ))}
       </div>
 
-      {/* ── Content ── */}
-      <div className="px-5 py-4">
-        <ContentBlock text={displayContent} rtl={rtl} />
+      {/* content */}
+      <div className="px-4 py-3">
+        <pre
+          className="text-sm font-sans"
+          style={{
+            direction: dir,
+            textAlign: dir === "rtl" ? "right" : "left",
+            lineHeight: "1.85",
+            color: "var(--text-primary)",
+            whiteSpace: "pre-wrap",
+            wordBreak: "break-word",
+            margin: 0,
+            fontFamily: "inherit",
+          }}
+        >
+          {displayText}
+          {!open && hasMore && "…"}
+        </pre>
 
         {hasMore && (
           <button
-            onClick={() => setExpanded(v => !v)}
-            className="mt-3 flex items-center gap-1 text-xs font-semibold transition-opacity hover:opacity-70"
-            style={{ color: "var(--text-muted)" }}
+            onClick={() => setOpen(v => !v)}
+            className="mt-2 flex items-center gap-1 text-xs font-semibold"
+            style={{ color: "var(--navy-mid)" }}
           >
-            {expanded ? <ChevronUp className="h-3.5 w-3.5" /> : <ChevronDown className="h-3.5 w-3.5" />}
-            {expanded ? "הצג פחות" : "הצג הכל"}
+            <ChevronDown
+              className="h-3.5 w-3.5 transition-transform"
+              style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
+            />
+            {open ? "פחות" : "הצג הכל"}
           </button>
         )}
       </div>
-
-      {/* ── Topic chips ── */}
-      {q.topicIds.length > 0 && (
-        <div className="flex flex-wrap gap-1 px-5 pb-4">
-          {q.topicIds.slice(0, 5).map(t => (
-            <span
-              key={t}
-              className="rounded-full px-2 py-0.5 text-[10px]"
-              style={{ background: "var(--bg-subtle)", color: "var(--text-muted)", border: "1px solid var(--border)" }}
-            >
-              {t}
-            </span>
-          ))}
-        </div>
-      )}
-    </article>
-  );
-}
-
-// ── ContentBlock — renders OCR math text readably ─────────────────────────
-
-function ContentBlock({ text, rtl }: { text: string; rtl: boolean }) {
-  // Split into paragraphs by blank lines or sentence-final periods + newlines
-  const paras = text.split(/\n\s*\n|\n(?=[.•])/g)
-    .map(p => p.trim())
-    .filter(p => p.length > 1);
-
-  return (
-    <div className="space-y-2.5">
-      {paras.map((para, i) => {
-        // Numbered list items (.1 .2 etc, common in RTL PDFs)
-        const isListItem = /^\.\d|^•|^\d+\.|^\([a-z]\)/.test(para.trim());
-
-        return (
-          <p
-            key={i}
-            className="text-sm"
-            style={{
-              direction: rtl ? "rtl" : "ltr",
-              textAlign: rtl ? "right" : "left",
-              lineHeight: "1.9",
-              color: "var(--text-primary)",
-              fontFamily: isListItem
-                ? "inherit"
-                : "'SFMono-Regular', 'Fira Code', Menlo, monospace",
-              paddingRight: isListItem && rtl ? "1rem" : undefined,
-              paddingLeft: isListItem && !rtl ? "1rem" : undefined,
-              borderRight: isListItem && rtl ? "2px solid var(--navy-border)" : undefined,
-              borderLeft: isListItem && !rtl ? "2px solid var(--navy-border)" : undefined,
-            }}
-          >
-            {para}
-          </p>
-        );
-      })}
     </div>
   );
 }
 
-// ── Main Client Component ──────────────────────────────────────────────────
+// ── Group panel (details element) ─────────────────────────────────────────
 
-const SOURCES = ["all", "recitation", "homework", "past_exam"] as const;
-type SourceFilter = typeof SOURCES[number];
-const DIFFS = ["all", "easy", "medium", "hard"] as const;
-type DiffFilter = typeof DIFFS[number];
-const RELEVANCE = ["all", "critical", "high", "medium"] as const;
-type RelFilter = typeof RELEVANCE[number];
+const GROUP_COLORS: Record<SourceGroup["type"], { accent: string; bg: string; border: string }> = {
+  recitation: { accent: "var(--cyan)", bg: "var(--cyan-light)", border: "var(--cyan-border)" },
+  homework:   { accent: "var(--gold)", bg: "var(--gold-light)", border: "var(--gold-border)" },
+  past_exam:  { accent: "var(--purple)", bg: "var(--purple-light)", border: "var(--purple-border)" },
+};
+
+function GroupPanel({ group, defaultOpen }: { group: SourceGroup; defaultOpen: boolean }) {
+  const c = GROUP_COLORS[group.type];
+
+  return (
+    <details
+      id={`group-${group.id}`}
+      open={defaultOpen}
+      className="group scroll-mt-20 rounded-2xl border overflow-hidden shadow-sm"
+      style={{ borderColor: "var(--border)" }}
+    >
+      {/* Summary / header */}
+      <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 select-none">
+        <div className="flex items-center gap-3 min-w-0">
+          {/* Type icon */}
+          <span
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-white text-sm"
+            style={{ background: c.accent }}
+          >
+            {TYPE_ICON[group.type]}
+          </span>
+          <div className="min-w-0">
+            <div className="flex items-center gap-2">
+              <h2 className="text-lg font-black" style={{ color: "var(--text-primary)" }}>
+                {group.label}
+              </h2>
+              {group.sublabel && (
+                <span className="text-sm font-medium" style={{ color: "var(--text-muted)" }}>
+                  — {group.sublabel}
+                </span>
+              )}
+            </div>
+            <p className="text-xs" style={{ color: "var(--text-muted)" }}>
+              {group.questions.length} שאלות
+            </p>
+          </div>
+        </div>
+
+        <ChevronDown
+          className="h-5 w-5 shrink-0 transition-transform group-open:rotate-180"
+          style={{ color: "var(--text-muted)" }}
+        />
+      </summary>
+
+      {/* Questions list */}
+      <div
+        className="border-t px-5 py-4 space-y-3"
+        style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}
+      >
+        {group.questions.map((q, i) => (
+          <QuestionRow key={q.id} q={q} index={i} />
+        ))}
+      </div>
+    </details>
+  );
+}
+
+// ── Page Client ────────────────────────────────────────────────────────────
 
 export function PracticePageClient({ questions }: { questions: QuestionItem[] }) {
-  const [source, setSource] = useState<SourceFilter>("all");
-  const [diff, setDiff] = useState<DiffFilter>("all");
-  const [rel, setRel] = useState<RelFilter>("all");
-  const [weekFilter, setWeekFilter] = useState<number | "all">("all");
-  const [showFilters, setShowFilters] = useState(false);
+  const groups = buildGroups(questions);
+  const [active, setActive] = useState(groups[0]?.id ?? "");
 
-  const counts = useMemo(() => ({
-    recitation: questions.filter(q => q.sourceType === "recitation").length,
-    homework:   questions.filter(q => q.sourceType === "homework").length,
-    past_exam:  questions.filter(q => q.sourceType === "past_exam").length,
-  }), [questions]);
-
-  const weeks = useMemo(() => {
-    const ws = new Set<number>();
-    questions.forEach(q => { const w = guessWeek(q); if (w) ws.add(w); });
-    return Array.from(ws).sort((a, b) => a - b);
-  }, [questions]);
-
-  const filtered = useMemo(() => {
-    return questions.filter(q => {
-      if (source !== "all" && q.sourceType !== source) return false;
-      if (diff !== "all" && q.difficulty !== diff) return false;
-      if (rel !== "all" && q.examRelevance !== rel) return false;
-      if (weekFilter !== "all" && guessWeek(q) !== weekFilter) return false;
-      return true;
-    });
-  }, [questions, source, diff, rel, weekFilter]);
+  const recitations = groups.filter(g => g.type === "recitation");
+  const homework    = groups.filter(g => g.type === "homework");
+  const pastExams   = groups.filter(g => g.type === "past_exam");
 
   return (
-    <div className="space-y-6">
+    <div className="flex gap-6 items-start">
+      <Sidebar groups={groups} active={active} onSelect={setActive} />
 
-      {/* ── Source tabs ── */}
-      <div className="flex flex-wrap gap-2">
-        {([
-          { key: "all",        label: `הכל (${questions.length})`,          color: "var(--text-secondary)" },
-          { key: "recitation", label: `תרגולים (${counts.recitation})`,     color: "var(--cyan)" },
-          { key: "homework",   label: `מטלות (${counts.homework})`,          color: "var(--gold)" },
-          { key: "past_exam",  label: `מבחני עבר (${counts.past_exam})`,    color: "var(--purple)" },
-        ] as { key: SourceFilter; label: string; color: string }[]).map(tab => (
-          <button
-            key={tab.key}
-            onClick={() => setSource(tab.key)}
-            className="rounded-lg px-4 py-2 text-sm font-semibold transition-all"
-            style={{
-              background: source === tab.key ? tab.color : "var(--bg-subtle)",
-              color: source === tab.key ? "#fff" : "var(--text-secondary)",
-              border: `1px solid ${source === tab.key ? tab.color : "var(--border)"}`,
-            }}
-          >
-            {tab.label}
-          </button>
-        ))}
+      <main className="min-w-0 flex-1 space-y-4">
 
-        {/* Filters toggle */}
-        <button
-          onClick={() => setShowFilters(v => !v)}
-          className="mr-auto flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-semibold transition-all"
-          style={{
-            background: showFilters ? "var(--navy-light)" : "var(--bg-subtle)",
-            color: showFilters ? "var(--navy-mid)" : "var(--text-secondary)",
-            border: `1px solid ${showFilters ? "var(--navy-border)" : "var(--border)"}`,
-          }}
-        >
-          <Filter className="h-3.5 w-3.5" />
-          סינון
-        </button>
-      </div>
-
-      {/* ── Expandable filters ── */}
-      {showFilters && (
-        <div
-          className="rounded-xl border p-4 space-y-4"
-          style={{ background: "var(--bg-subtle)", borderColor: "var(--border)" }}
-        >
-          {/* Week */}
-          {weeks.length > 0 && (
-            <div>
-              <p className="mb-2 text-xs font-bold" style={{ color: "var(--text-muted)" }}>שבוע</p>
-              <div className="flex flex-wrap gap-1.5">
-                <FilterChip label="הכל" active={weekFilter === "all"} onClick={() => setWeekFilter("all")} />
-                {weeks.map(w => (
-                  <FilterChip key={w} label={`שבוע ${w}`} active={weekFilter === w} onClick={() => setWeekFilter(w)} />
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Difficulty */}
-          <div>
-            <p className="mb-2 text-xs font-bold" style={{ color: "var(--text-muted)" }}>קושי</p>
-            <div className="flex flex-wrap gap-1.5">
-              {(["all", "easy", "medium", "hard"] as DiffFilter[]).map(d => (
-                <FilterChip
-                  key={d}
-                  label={d === "all" ? "הכל" : diffLabel(d)}
-                  active={diff === d}
-                  onClick={() => setDiff(d)}
-                />
-              ))}
-            </div>
-          </div>
-
-          {/* Relevance */}
-          <div>
-            <p className="mb-2 text-xs font-bold" style={{ color: "var(--text-muted)" }}>חשיבות למבחן</p>
-            <div className="flex flex-wrap gap-1.5">
-              {(["all", "critical", "high", "medium"] as RelFilter[]).map(r => (
-                <FilterChip
-                  key={r}
-                  label={r === "all" ? "הכל" : relLabel(r)}
-                  active={rel === r}
-                  onClick={() => setRel(r)}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* ── Results count ── */}
-      <div className="flex items-center justify-between">
-        <p className="text-sm font-semibold" style={{ color: "var(--text-secondary)" }}>
-          {filtered.length} שאלות
-        </p>
-        {(source !== "all" || diff !== "all" || rel !== "all" || weekFilter !== "all") && (
-          <button
-            onClick={() => { setSource("all"); setDiff("all"); setRel("all"); setWeekFilter("all"); }}
-            className="text-xs font-semibold transition-opacity hover:opacity-70"
-            style={{ color: "var(--red-mid)" }}
-          >
-            נקה סינון
-          </button>
+        {recitations.length > 0 && (
+          <Section title="תרגולים" color="var(--cyan)">
+            {recitations.map((g, i) => (
+              <GroupPanel key={g.id} group={g} defaultOpen={i === 0} />
+            ))}
+          </Section>
         )}
-      </div>
 
-      {/* ── Questions grid ── */}
-      {filtered.length === 0 ? (
-        <div className="rounded-xl border-2 border-dashed p-10 text-center" style={{ borderColor: "var(--border)" }}>
-          <p className="text-sm" style={{ color: "var(--text-muted)" }}>אין שאלות תואמות לסינון.</p>
-        </div>
-      ) : (
-        <div className="grid gap-4 lg:grid-cols-2">
-          {filtered.slice(0, 60).map((q, i) => (
-            <QuestionCard key={q.id} q={q} index={i} />
-          ))}
-        </div>
-      )}
+        {homework.length > 0 && (
+          <Section title="מטלות" color="var(--gold)">
+            {homework.map((g, i) => (
+              <GroupPanel key={g.id} group={g} defaultOpen={i === 0} />
+            ))}
+          </Section>
+        )}
 
-      {filtered.length > 60 && (
-        <p className="text-center text-sm" style={{ color: "var(--text-muted)" }}>
-          מוצגות 60 מתוך {filtered.length} שאלות · צמצם/י עם הסינון לתוצאות ממוקדות יותר
-        </p>
-      )}
+        {pastExams.length > 0 && (
+          <Section title="מבחני עבר" color="var(--purple)">
+            {pastExams.map((g, i) => (
+              <GroupPanel key={g.id} group={g} defaultOpen={i === 0} />
+            ))}
+          </Section>
+        )}
+      </main>
     </div>
   );
 }
 
-function FilterChip({ label, active, onClick }: { label: string; active: boolean; onClick: () => void }) {
+function Section({ title, color, children }: { title: string; color: string; children: React.ReactNode }) {
   return (
-    <button
-      onClick={onClick}
-      className="rounded-full px-3 py-1 text-xs font-semibold transition-all"
-      style={{
-        background: active ? "var(--navy)" : "var(--bg-card, #fff)",
-        color: active ? "#fff" : "var(--text-secondary)",
-        border: `1px solid ${active ? "var(--navy)" : "var(--border)"}`,
-      }}
-    >
-      {label}
-    </button>
+    <section className="space-y-3">
+      <div
+        className="flex items-center gap-2 border-b pb-2"
+        style={{ borderColor: "var(--border)" }}
+      >
+        <span className="h-3 w-3 rounded-full" style={{ background: color }} />
+        <h2 className="text-base font-black" style={{ color: "var(--text-secondary)" }}>{title}</h2>
+      </div>
+      {children}
+    </section>
   );
 }

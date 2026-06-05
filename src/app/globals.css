@@ -226,10 +226,12 @@ p { margin: 0; }
 .week-section-nav {
   --week-section-main: var(--teal);
   --week-section-main-soft: rgba(11, 114, 133, 0.12);
-  position: sticky;
+  position: fixed;
   top: 7.25rem;
+  right: max(1.5rem, calc((100vw - 80rem) / 2 + 1.5rem));
   z-index: 25;
   display: flex;
+  width: 230px;
   max-height: calc(100dvh - 8.25rem);
   min-height: 0;
   flex-direction: column;
@@ -242,6 +244,12 @@ p { margin: 0; }
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   overflow: hidden;
+}
+
+@media (min-width: 1280px) {
+  .week-section-nav {
+    width: 250px;
+  }
 }
 
 .week-section-nav-title {
@@ -349,8 +357,11 @@ p { margin: 0; }
   }
 
   .week-section-nav {
+    position: sticky;
     top: 5.95rem;
+    right: auto;
     z-index: 29;
+    width: auto;
     max-height: none;
     margin-inline: 0;
     border-inline: 0;
