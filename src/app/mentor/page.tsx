@@ -1,114 +1,564 @@
-import { readAnalysisData } from "@/lib/calculus2/analysis-reader";
-import { PageHeader } from "@/components/study/StudyCard";
-import { StudyCallout } from "@/components/study/StudyCallout";
+"use client";
 
-export default async function MentorPage() {
-  const analysis = await readAnalysisData();
-  const kb = analysis.mentorKnowledgeBase;
-  const hasKb = kb !== null;
+import { useEffect, useRef, useState, useCallback } from "react";
+import { Send, Sparkles, Lock, ChevronDown } from "lucide-react";
+import katex from "katex";
+import "katex/dist/katex.min.css";
 
-  const starterQuestions = [
-    "הסברי לי את מבחן ההשוואה לטורים",
-    "מה ההבדל בין התכנסות מוחלטת לבתנאי?",
-    "איך מחשבים רדיוס התכנסות של טור חזקות?",
-    "הסברי את משפט לופיטל ומתי משתמשים בו",
-    "מה זה טור טיילור ואיך בונים אותו?",
-    "איך מוכיחים שסדרה רקורסיבית מתכנסת?",
-    "עזרי לי לסכם את נושאי הטורים",
-    "בני לי שאלת תרגול על אינטגרלים לא מסוימים",
-  ];
+// ── Types ──────────────────────────────────────────────────────────────────
+interface Message {
+  role: "user" | "assistant";
+  content: string;
+}
+
+interface MentorStatus {
+  isPro: boolean;
+  used: number;
+  limit: number;
+  email?: string;
+}
+
+// ── Math rendering ─────────────────────────────────────────────────────────
+
+function renderMathToHtml(text: string): string {
+  // Replace $$...$$ first, then $...$
+  let result = text;
+
+  result = result.replace(/\$\$([\s\S]+?)\$\$/g, (_, math: string) => {
+    try {
+      return katex.renderToString(math.trim(), { displayMode: true, throwOnError: false });
+    } catch {
+      return `$$${math}$$`;
+    }
+  });
+
+  result = result.replace(/\$([^$\n]+?)\$/g, (_, math: string) => {
+    try {
+      return katex.renderToString(math.trim(), { displayMode: false, throwOnError: false });
+    } catch {
+      return `$${math}$`;
+    }
+  });
+
+  return result;
+}
+
+function formatMessageHtml(content: string): string {
+  const lines = content.split("\n");
+  const parts: string[] = [];
+  let inList = false;
+
+  for (const raw of lines) {
+    const line = raw;
+
+    if (line.trim() === "") {
+      if (inList) { parts.push("</ul>"); inList = false; }
+      parts.push("<br/>");
+      continue;
+    }
+
+    // Bold: **text**
+    const processed = renderMathToHtml(
+      line
+        .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+        .replace(/^#{1,3} (.+)$/, "<strong>$1</strong>")
+    );
+
+    if (line.startsWith("- ") || line.startsWith("• ")) {
+      if (!inList) { parts.push('<ul style="margin: 4px 0; padding-right: 16px;">'); inList = true; }
+      parts.push(`<li>${processed.replace(/^[•\-] /, "")}</li>`);
+    } else {
+      if (inList) { parts.push("</ul>"); inList = false; }
+      parts.push(`<span>${processed}</span><br/>`);
+    }
+  }
+
+  if (inList) parts.push("</ul>");
+  return parts.join("");
+}
+
+// ── Starter questions ──────────────────────────────────────────────────────
+
+const STARTER_QUESTIONS = [
+  "הסבר את מבחן ד'אלמבר (מנה) ומתי משתמשים בו",
+  "מה ההבדל בין התכנסות מוחלטת לבתנאי?",
+  "איך מחשבים רדיוס התכנסות של טור חזקות?",
+  "הסבר את משפט לופיטל עם דוגמה",
+  "מה זה טור מקלורן ואיך בונים אותו?",
+  "איך מוכיחים שסדרה רקורסיבית מתכנסת?",
+  "מה הטעות הכי נפוצה באינטגרלים לא אמיתיים?",
+  "בני לי שאלת בחינה על טורי חזקות",
+];
+
+// ── Credit bar ─────────────────────────────────────────────────────────────
+
+function CreditBar({ used, limit }: { used: number; limit: number }) {
+  const pct = Math.min((used / limit) * 100, 100);
+  const color = pct >= 90 ? "#dc2626" : pct >= 70 ? "#d97706" : "var(--navy-mid)";
 
   return (
-    <div className="space-y-6">
-      <PageHeader
-        eyebrow="AI Mentor"
-        title="מנטור אינפי ב׳"
-        description="המנטור יבנה על מאגר ידע מהחומרים שלך. מחובר לשאלות, נוסחאות, משפטים ושאלות עם פתרון."
-      />
-
-      {/* KB Status */}
-      <div className="grid gap-4 sm:grid-cols-3">
-        <KbStat label="נוסחאות במאגר" value={kb?.formulas.length ?? 0} available={hasKb} />
-        <KbStat label="משפטים במאגר" value={kb?.theorems.length ?? 0} available={hasKb} />
-        <KbStat label="שאלות במאגר" value={kb?.questionBankSummary.length ?? 0} available={hasKb} />
+    <div className="flex items-center gap-3">
+      <div
+        className="relative h-1.5 flex-1 rounded-full overflow-hidden"
+        style={{ background: "var(--border)" }}
+      >
+        <div
+          className="h-full rounded-full transition-all"
+          style={{ width: `${pct}%`, background: color }}
+        />
       </div>
-
-      {!hasKb && (
-        <StudyCallout variant="warning">
-          המנטור טרם נוצר. הריצי{" "}
-          <code dir="ltr" className="rounded bg-white/60 px-1 font-mono text-xs">npm run analyze:calculus2</code>{" "}
-          כדי לבנות את מאגר הידע.
-        </StudyCallout>
-      )}
-
-      {/* Starter questions */}
-      <section className="rounded-xl border bg-white p-5 shadow-sm" style={{ borderColor: "var(--border)" }}>
-        <h2 className="mb-4 text-lg font-bold" style={{ color: "var(--text-primary)" }}>
-          שאלות פתיחה מומלצות
-        </h2>
-        <div className="grid gap-2 sm:grid-cols-2">
-          {starterQuestions.map((q, i) => (
-            <div
-              key={i}
-              className="flex items-start gap-2 rounded-lg border p-3 cursor-pointer transition hover:border-current"
-              style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}
-            >
-              <span className="mt-0.5 text-xs" style={{ color: "var(--text-muted)" }}>💬</span>
-              <p className="text-sm" style={{ color: "var(--text-secondary)" }}>{q}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Modes */}
-      <section className="rounded-xl border bg-white p-5 shadow-sm" style={{ borderColor: "var(--border)" }}>
-        <h2 className="mb-4 text-lg font-bold" style={{ color: "var(--text-primary)" }}>
-          מצבי לימוד
-        </h2>
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {[
-            { mode: "הסבר נושא", desc: "הסבר אינטואיטיבי + פורמלי של נושא", icon: "📖" },
-            { mode: "בחן אותי", desc: "שאלות תרגול לפי נושא שתבחרי", icon: "✏️" },
-            { mode: "עזרי לי לפתור", desc: "ניתוח שאלה והכוון לפתרון", icon: "🧮" },
-            { mode: "בני סשן לימוד", desc: "תכנון לימוד לפי נושא ומשך", icon: "📅" },
-            { mode: "חזרה על משפט", desc: "ניסוח, תנאים ויישום", icon: "📐" },
-            { mode: "צור שאלה דומה", desc: "שאלה בסגנון בחינה על נושא", icon: "⭐" },
-          ].map(({ mode, desc, icon }) => (
-            <div
-              key={mode}
-              className="rounded-lg border p-4"
-              style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}
-            >
-              <p className="text-base">{icon}</p>
-              <p className="mt-1 text-sm font-semibold" style={{ color: "var(--text-primary)" }}>{mode}</p>
-              <p className="mt-0.5 text-xs" style={{ color: "var(--text-muted)" }}>{desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <StudyCallout variant="info">
-        <strong>שלב הבא:</strong> חיבור API של Claude לממשק מנטור. הבסיס — מאגר ידע, שאלות מתרגולים ומטלות — כבר קיים.
-      </StudyCallout>
+      <span className="shrink-0 text-xs font-mono tabular-nums" style={{ color: "var(--text-muted)" }}>
+        {used}/{limit}
+      </span>
     </div>
   );
 }
 
-function KbStat({ label, value, available }: { label: string; value: number; available: boolean }) {
+// ── Pro gate ───────────────────────────────────────────────────────────────
+
+const PRO_FEATURES = [
+  { icon: "🧠", title: "מתנהג כמו מקס", desc: "הסברים אינטואיטיביים, טיפים לבחינה ונקודות הדגש מהתרגולים" },
+  { icon: "📐", title: "ניסוח של יוסי", desc: "הגדרות והוכחות בניסוח הפורמלי המדויק של הקורס" },
+  { icon: "✏️", title: "שאלות בסגנון בחינה", desc: "תרגול שאלות בדיוק כמו מה שיוסי שם במבחן" },
+  { icon: "🎯", title: "ממוקד בחומר בלבד", desc: "עונה רק על נושאי הקורס — גבולות, סדרות, אינטגרלים, טורים" },
+];
+
+function ProGate() {
   return (
-    <div
-      className="rounded-xl border p-4 text-center"
-      style={{
-        background: available ? "var(--green-light)" : "var(--bg-subtle)",
-        borderColor: available ? "var(--green-border)" : "var(--border)",
-      }}
-    >
-      <p className="text-2xl font-bold" style={{ color: available ? "var(--green)" : "var(--text-muted)" }}>
-        {value}
-      </p>
-      <p className="mt-1 text-xs font-medium" style={{ color: available ? "var(--green)" : "var(--text-muted)", opacity: 0.9 }}>
-        {label}
-      </p>
+    <div className="mx-auto max-w-lg py-12 space-y-8">
+      {/* Hero */}
+      <div className="text-center space-y-4">
+        <div
+          className="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl"
+          style={{ background: "rgba(7,22,42,0.08)", border: "1px solid var(--border)" }}
+        >
+          <Lock className="h-9 w-9" style={{ color: "var(--navy-mid)" }} />
+        </div>
+        <div>
+          <h1 className="text-2xl font-black" style={{ color: "var(--text-primary)" }}>
+            מנטור AI — תוכנית פרו
+          </h1>
+          <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
+            צ׳אט AI שמתנהג בדיוק כמו <strong>מקס ויוסי</strong> — שואל, מסביר, מדריך ובונה
+            שאלות בסגנון הבחינה. מוגבל ל-150 הודעות לכיסוי עלויות.
+          </p>
+        </div>
+      </div>
+
+      {/* Feature cards */}
+      <div className="grid grid-cols-2 gap-3">
+        {PRO_FEATURES.map((f) => (
+          <div
+            key={f.title}
+            className="rounded-xl border p-4 space-y-1.5"
+            style={{ background: "var(--bg-subtle)", borderColor: "var(--border)" }}
+          >
+            <span className="text-xl">{f.icon}</span>
+            <p className="text-sm font-bold" style={{ color: "var(--text-primary)" }}>{f.title}</p>
+            <p className="text-xs leading-snug" style={{ color: "var(--text-muted)" }}>{f.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* CTA */}
+      <div
+        className="rounded-2xl border p-6 text-center space-y-4"
+        style={{ background: "var(--bg-subtle)", borderColor: "var(--border)" }}
+      >
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: "var(--text-muted)" }}>
+            שדרג תכנית
+          </p>
+          <p className="text-3xl font-black" style={{ color: "var(--text-primary)" }}>
+            ₪38 <span className="text-base font-normal" style={{ color: "var(--text-muted)" }}>חד פעמי</span>
+          </p>
+          <p className="text-xs mt-1" style={{ color: "var(--text-muted)" }}>כולל גישה מלאה לפלטפורמה + מנטור AI</p>
+        </div>
+        <a
+          href="https://wa.me/972505730440?text=%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A9%D7%93%D7%A8%D7%92%20%D7%9C%D7%A4%D7%A8%D7%95%20%D7%9E%D7%A0%D7%98%D7%95%D7%A8%20AI"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full rounded-xl py-3 text-sm font-bold text-white text-center transition hover:opacity-90"
+          style={{ background: "var(--navy-mid)" }}
+        >
+          שדרג עכשיו — צור קשר
+        </a>
+        <p className="text-xs" style={{ color: "var(--text-muted)" }}>
+          יש לך כבר גישה? בדוק שנכנסת עם האימייל הנכון
+        </p>
+      </div>
     </div>
   );
+}
+
+// ── Message bubble ─────────────────────────────────────────────────────────
+
+function MessageBubble({ msg, isStreaming }: { msg: Message; isStreaming?: boolean }) {
+  const isUser = msg.role === "user";
+
+  return (
+    <div className={`flex gap-3 ${isUser ? "flex-row-reverse" : "flex-row"}`}>
+      {/* Avatar */}
+      <div
+        className="shrink-0 flex h-8 w-8 items-center justify-center rounded-full text-xs font-black"
+        style={
+          isUser
+            ? { background: "var(--navy-mid)", color: "#fff" }
+            : { background: "var(--bg-subtle)", border: "1px solid var(--border)", color: "var(--text-secondary)" }
+        }
+      >
+        {isUser ? "אני" : "M"}
+      </div>
+
+      {/* Bubble */}
+      <div
+        className="max-w-[80%] rounded-2xl px-4 py-3 text-sm leading-relaxed"
+        style={
+          isUser
+            ? { background: "var(--navy-mid)", color: "#fff" }
+            : {
+                background: "var(--bg-subtle)",
+                border: "1px solid var(--border)",
+                color: "var(--text-primary)",
+              }
+        }
+      >
+        {isUser ? (
+          <p>{msg.content}</p>
+        ) : (
+          <div
+            dangerouslySetInnerHTML={{ __html: formatMessageHtml(msg.content) }}
+            style={{ direction: "rtl" }}
+          />
+        )}
+        {isStreaming && (
+          <span
+            className="inline-block w-1.5 h-4 rounded-sm animate-pulse ml-0.5"
+            style={{ background: "var(--navy-mid)", verticalAlign: "middle" }}
+          />
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ── Main chat UI ───────────────────────────────────────────────────────────
+
+function ChatInterface({ status }: { status: MentorStatus }) {
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [input, setInput] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [streamingContent, setStreamingContent] = useState("");
+  const [creditsUsed, setCreditsUsed] = useState(status.used);
+  const [error, setError] = useState<string | null>(null);
+  const bottomRef = useRef<HTMLDivElement>(null);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  const scrollToBottom = useCallback(() => {
+    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, []);
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages, streamingContent, scrollToBottom]);
+
+  const sendMessage = useCallback(
+    async (text: string) => {
+      const trimmed = text.trim();
+      if (!trimmed || isLoading) return;
+
+      if (creditsUsed >= status.limit) {
+        setError(`נגמרו הקרדיטים (${status.limit}/${status.limit})`);
+        return;
+      }
+
+      setError(null);
+      const userMsg: Message = { role: "user", content: trimmed };
+      const nextMessages = [...messages, userMsg];
+      setMessages(nextMessages);
+      setInput("");
+      setIsLoading(true);
+      setStreamingContent("");
+
+      // Auto-resize textarea
+      if (textareaRef.current) {
+        textareaRef.current.style.height = "auto";
+      }
+
+      try {
+        const res = await fetch("/api/mentor/chat", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ messages: nextMessages }),
+        });
+
+        if (!res.ok) {
+          const data = (await res.json().catch(() => ({}))) as { error?: string };
+          throw new Error(data.error ?? "שגיאה לא צפויה");
+        }
+
+        // Update credit count from header
+        const newUsed = res.headers.get("X-Credits-Used");
+        if (newUsed) setCreditsUsed(parseInt(newUsed, 10));
+
+        // Stream the response
+        const reader = res.body!.getReader();
+        const decoder = new TextDecoder();
+        let accumulated = "";
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          const chunk = decoder.decode(value, { stream: true });
+          accumulated += chunk;
+          setStreamingContent(accumulated);
+        }
+
+        // Finalize
+        setMessages((prev) => [...prev, { role: "assistant", content: accumulated }]);
+        setStreamingContent("");
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "שגיאה בלתי צפויה");
+      } finally {
+        setIsLoading(false);
+      }
+    },
+    [messages, isLoading, creditsUsed, status.limit]
+  );
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      void sendMessage(input);
+    }
+  };
+
+  const handleTextareaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setInput(e.target.value);
+    e.target.style.height = "auto";
+    e.target.style.height = `${Math.min(e.target.scrollHeight, 160)}px`;
+  };
+
+  const showStarters = messages.length === 0 && !isLoading;
+
+  return (
+    <div className="flex flex-col" style={{ height: "calc(100vh - 140px)", minHeight: "500px" }}>
+      {/* Header */}
+      <div
+        className="shrink-0 flex items-center justify-between rounded-t-2xl px-5 py-3.5"
+        style={{
+          background: "var(--bg-subtle)",
+          border: "1px solid var(--border)",
+          borderBottom: "none",
+          borderRadius: "16px 16px 0 0",
+        }}
+      >
+        <div className="flex items-center gap-2.5">
+          <div
+            className="flex h-8 w-8 items-center justify-center rounded-lg"
+            style={{ background: "var(--navy-mid)" }}
+          >
+            <Sparkles className="h-4 w-4 text-white" />
+          </div>
+          <div>
+            <p className="text-sm font-bold" style={{ color: "var(--text-primary)" }}>
+              מנטור אינפי ב׳
+            </p>
+            <p className="text-[11px]" style={{ color: "var(--text-muted)" }}>
+              מבוסס על מקס ויוסי
+            </p>
+          </div>
+        </div>
+        <div className="flex items-center gap-3 min-w-[140px]">
+          <CreditBar used={creditsUsed} limit={status.limit} />
+        </div>
+      </div>
+
+      {/* Messages area */}
+      <div
+        className="flex-1 overflow-y-auto px-5 py-4 space-y-4"
+        style={{ border: "1px solid var(--border)", borderTop: "none", borderBottom: "none" }}
+      >
+        {/* Starter questions */}
+        {showStarters && (
+          <div className="py-4">
+            <p
+              className="text-sm font-semibold mb-3 text-center"
+              style={{ color: "var(--text-secondary)" }}
+            >
+              שאל אותי כל דבר על חומר הקורס
+            </p>
+            <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+              {STARTER_QUESTIONS.map((q) => (
+                <button
+                  key={q}
+                  onClick={() => void sendMessage(q)}
+                  className="rounded-xl border px-3 py-2.5 text-right text-sm transition hover:opacity-80 cursor-pointer"
+                  style={{
+                    borderColor: "var(--border)",
+                    background: "var(--bg-subtle)",
+                    color: "var(--text-secondary)",
+                  }}
+                >
+                  {q}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Message history */}
+        {messages.map((msg, i) => (
+          <MessageBubble key={i} msg={msg} />
+        ))}
+
+        {/* Streaming response */}
+        {isLoading && streamingContent && (
+          <MessageBubble
+            msg={{ role: "assistant", content: streamingContent }}
+            isStreaming
+          />
+        )}
+
+        {/* Loading indicator (before first chunk) */}
+        {isLoading && !streamingContent && (
+          <div className="flex gap-3">
+            <div
+              className="shrink-0 flex h-8 w-8 items-center justify-center rounded-full text-xs font-black"
+              style={{ background: "var(--bg-subtle)", border: "1px solid var(--border)", color: "var(--text-secondary)" }}
+            >
+              M
+            </div>
+            <div
+              className="flex items-center gap-1.5 rounded-2xl px-4 py-3"
+              style={{ background: "var(--bg-subtle)", border: "1px solid var(--border)" }}
+            >
+              {[0, 1, 2].map((i) => (
+                <span
+                  key={i}
+                  className="block h-1.5 w-1.5 rounded-full animate-bounce"
+                  style={{
+                    background: "var(--text-muted)",
+                    animationDelay: `${i * 0.15}s`,
+                  }}
+                />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Error */}
+        {error && (
+          <div
+            className="rounded-xl border px-4 py-3 text-sm"
+            style={{
+              background: "rgba(220,38,38,0.08)",
+              borderColor: "rgba(220,38,38,0.25)",
+              color: "#dc2626",
+            }}
+          >
+            {error}
+          </div>
+        )}
+
+        <div ref={bottomRef} />
+      </div>
+
+      {/* Input area */}
+      <div
+        className="shrink-0 flex items-end gap-2.5 rounded-b-2xl px-4 py-3"
+        style={{
+          background: "var(--bg-subtle)",
+          border: "1px solid var(--border)",
+          borderTop: "1px solid var(--border)",
+          borderRadius: "0 0 16px 16px",
+        }}
+      >
+        <textarea
+          ref={textareaRef}
+          value={input}
+          onChange={handleTextareaChange}
+          onKeyDown={handleKeyDown}
+          placeholder="שאל שאלה על חומר הקורס... (Enter לשליחה, Shift+Enter לשורה חדשה)"
+          rows={1}
+          disabled={isLoading || creditsUsed >= status.limit}
+          className="flex-1 resize-none rounded-xl border px-3 py-2.5 text-sm outline-none transition"
+          style={{
+            background: "var(--bg-page)",
+            borderColor: "var(--border)",
+            color: "var(--text-primary)",
+            direction: "rtl",
+            minHeight: "42px",
+            maxHeight: "160px",
+          }}
+        />
+        <button
+          onClick={() => void sendMessage(input)}
+          disabled={!input.trim() || isLoading || creditsUsed >= status.limit}
+          className="shrink-0 flex h-10 w-10 items-center justify-center rounded-xl transition disabled:opacity-40"
+          style={{ background: "var(--navy-mid)", color: "#fff" }}
+        >
+          <Send className="h-4 w-4" style={{ transform: "scaleX(-1)" }} />
+        </button>
+      </div>
+
+      {/* Limit warning */}
+      {creditsUsed >= status.limit - 10 && creditsUsed < status.limit && (
+        <p className="mt-2 text-center text-xs" style={{ color: "#d97706" }}>
+          נותרו {status.limit - creditsUsed} הודעות בלבד
+        </p>
+      )}
+      {creditsUsed >= status.limit && (
+        <p className="mt-2 text-center text-xs" style={{ color: "#dc2626" }}>
+          הגעת למגבלת ההודעות. לקרדיטים נוספים פנה אלינו.
+        </p>
+      )}
+    </div>
+  );
+}
+
+// ── Page ───────────────────────────────────────────────────────────────────
+
+export default function MentorPage() {
+  const [status, setStatus] = useState<MentorStatus | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("/api/mentor/status")
+      .then((r) => r.json())
+      .then((data: { isPro?: boolean; used?: number; limit?: number; email?: string }) => {
+        setStatus({
+          isPro: data.isPro ?? false,
+          used: data.used ?? 0,
+          limit: data.limit ?? 150,
+          email: data.email,
+        });
+      })
+      .catch(() => {
+        setStatus({ isPro: false, used: 0, limit: 150 });
+      })
+      .finally(() => setLoading(false));
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center py-20">
+        <div className="flex gap-1.5">
+          {[0, 1, 2].map((i) => (
+            <span
+              key={i}
+              className="block h-2 w-2 rounded-full animate-bounce"
+              style={{ background: "var(--text-muted)", animationDelay: `${i * 0.15}s` }}
+            />
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  if (!status?.isPro) {
+    return <ProGate />;
+  }
+
+  return <ChatInterface status={status} />;
 }

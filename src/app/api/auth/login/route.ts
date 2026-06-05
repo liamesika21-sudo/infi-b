@@ -43,6 +43,7 @@ export async function POST(request: Request) {
   const response = NextResponse.json({
     ok: true,
     email: result.email,
+    isFirstLogin: result.isFirstLogin,
   });
 
   response.cookies.set(AUTH_COOKIE_NAME, result.cookieValue, getAuthCookieOptions());

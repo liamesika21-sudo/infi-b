@@ -4,7 +4,7 @@ import { submitRegistrationRequest } from "@/lib/simple-auth";
 export const runtime = "nodejs";
 
 export async function POST(request: Request) {
-  let body: { email?: unknown; phone?: unknown; wantsMentor?: unknown };
+  let body: { email?: unknown; phone?: unknown; plan?: unknown; wantsMentor?: unknown };
 
   try {
     body = (await request.json()) as typeof body;
@@ -14,10 +14,15 @@ export async function POST(request: Request) {
 
   const email = typeof body.email === "string" ? body.email : "";
   const phone = typeof body.phone === "string" ? body.phone : "";
-  const wantsMentor = body.wantsMentor === true;
+  const plan =
+    body.plan === "basic" || body.plan === "pro"
+      ? body.plan
+      : body.wantsMentor === true
+        ? "pro"
+        : "basic";
 
   try {
-    const registrationRequest = await submitRegistrationRequest(email, phone, wantsMentor, request);
+    const registrationRequest = await submitRegistrationRequest(email, phone, plan, request);
 
     return NextResponse.json({
       ok: true,

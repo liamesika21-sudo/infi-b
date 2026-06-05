@@ -31,12 +31,16 @@ type AuthUserRecord = {
   loginCount: number;
 };
 
+export type RegistrationPlan = "basic" | "pro";
+
 export type RegistrationRequest = {
   email: string;
   phone: string;
-  wantsMentor: boolean;
-  basePriceIls: number;
-  mentorPriceIls: number;
+  plan: RegistrationPlan;
+  wantsMentor?: boolean;
+  basePriceIls?: number;
+  mentorPriceIls?: number;
+  planPriceIls: number;
   totalPriceIls: number;
   createdAt: string;
   ip?: string;
@@ -45,6 +49,7 @@ export type RegistrationRequest = {
 
 type AuthFile = {
   allowedEmails: string[];
+  proEmails?: string[];
   adminEmails?: string[];
   users: Record<string, AuthUserRecord>;
   registrationRequests?: RegistrationRequest[];
@@ -60,12 +65,12 @@ export type AuthCheckResult =
   | { ok: false; reason: "missing" | "invalid" | "ip_mismatch" | "not_allowed" };
 
 export type LoginResult =
-  | { ok: true; email: string; deviceId: string; cookieValue: string }
+  | { ok: true; email: string; deviceId: string; cookieValue: string; isFirstLogin: boolean }
   | {
       ok: false;
       status: number;
       message: string;
-      reason?: "not_allowed" | "fixed_device_mismatch";
+      reason?: "not_allowed";
     };
 
 export type AdminAuthUser = Omit<AuthUserRecord, "devices"> & {
@@ -212,6 +217,9 @@ async function readAuthFile(): Promise<AuthFile> {
       allowedEmails: Array.isArray(parsed.allowedEmails)
         ? parsed.allowedEmails.map(normalizeEmail)
         : [],
+      proEmails: Array.isArray(parsed.proEmails)
+        ? parsed.proEmails.map(normalizeEmail)
+        : [],
       adminEmails: Array.isArray(parsed.adminEmails)
         ? parsed.adminEmails.map(normalizeEmail)
         : undefined,
@@ -222,15 +230,27 @@ async function readAuthFile(): Promise<AuthFile> {
               const candidate = request as Partial<RegistrationRequest>;
               return typeof candidate.email === "string" && typeof candidate.phone === "string";
             })
-            .map((request) => ({
-              ...request,
-              email: normalizeEmail(request.email),
-              wantsMentor: Boolean(request.wantsMentor),
-              basePriceIls: Number(request.basePriceIls) || 14,
-              mentorPriceIls: Number(request.mentorPriceIls) || (request.wantsMentor ? 24 : 0),
-              totalPriceIls: Number(request.totalPriceIls) || (request.wantsMentor ? 38 : 14),
-              createdAt: request.createdAt || "",
-            }))
+            .map((request) => {
+              const plan: RegistrationPlan =
+                request.plan === "basic" || request.plan === "pro"
+                  ? request.plan
+                  : request.wantsMentor
+                    ? "pro"
+                    : "basic";
+              const planPriceIls = Number(request.planPriceIls) || (plan === "pro" ? 49 : 19);
+
+              return {
+                ...request,
+                email: normalizeEmail(request.email),
+                plan,
+                wantsMentor: plan === "pro",
+                basePriceIls: Number(request.basePriceIls) || (plan === "pro" ? 19 : planPriceIls),
+                mentorPriceIls: Number(request.mentorPriceIls) || (plan === "pro" ? 30 : 0),
+                planPriceIls,
+                totalPriceIls: Number(request.totalPriceIls) || planPriceIls,
+                createdAt: request.createdAt || "",
+              };
+            })
         : [],
     };
   } catch (error) {
@@ -454,11 +474,12 @@ async function persistRegistrationRequest(
 export async function submitRegistrationRequest(
   email: string,
   phone: string,
-  wantsMentor: boolean,
+  plan: RegistrationPlan,
   request: Request
 ): Promise<RegistrationRequest> {
   const normalizedEmail = normalizeEmail(email);
   const normalizedPhone = phone.trim();
+  const selectedPlan: RegistrationPlan = plan === "pro" ? "pro" : "basic";
 
   if (!normalizedEmail || !normalizedEmail.includes("@")) {
     throw new Error("invalid_email");
@@ -471,10 +492,10 @@ export async function submitRegistrationRequest(
   const registrationRequest: RegistrationRequest = {
     email: normalizedEmail,
     phone: normalizedPhone,
-    wantsMentor,
-    basePriceIls: 14,
-    mentorPriceIls: wantsMentor ? 24 : 0,
-    totalPriceIls: wantsMentor ? 38 : 14,
+    plan: selectedPlan,
+    wantsMentor: selectedPlan === "pro",
+    planPriceIls: selectedPlan === "pro" ? 49 : 19,
+    totalPriceIls: selectedPlan === "pro" ? 49 : 19,
     createdAt: new Date().toISOString(),
     ip: getRequestIp(request),
     userAgent: getRequestUserAgent(request),
@@ -496,22 +517,9 @@ export async function validateCookieForRequest(request: Request): Promise<AuthCh
   const authCookie = readAuthCookieValue(cookie);
   if (!authCookie.ok) return authCookie;
 
-  const currentDeviceId = getClientDeviceId(request);
-  if (!currentDeviceId || authCookie.boundDeviceId !== currentDeviceId) {
-    return { ok: false, reason: "ip_mismatch" };
-  }
-
   const authFile = await readAuthFile();
   if (!authFile.allowedEmails.includes(authCookie.email)) {
     return { ok: false, reason: "not_allowed" };
-  }
-
-  const user = shouldUseRedisStore()
-    ? await getRedisUser(authCookie.email)
-    : authFile.users[authCookie.email];
-
-  if (user?.fixedDeviceId && user.fixedDeviceId !== currentDeviceId) {
-    return { ok: false, reason: "ip_mismatch" };
   }
 
   return authCookie;
@@ -546,60 +554,10 @@ export async function loginWithEmail(
   const existingUser = useRedisStore
     ? await getRedisUser(normalizedEmail)
     : authFile.users[normalizedEmail];
+  const isFirstLogin = !existingUser || existingUser.loginCount === 0;
 
   const now = new Date().toISOString();
   let devices = getUserDevices(existingUser);
-  const fixedDeviceId = existingUser?.fixedDeviceId ?? existingUser?.boundDeviceId;
-
-  if (fixedDeviceId && fixedDeviceId !== currentDeviceId) {
-    devices = upsertDevice(devices, currentDeviceId, now, request, "blocked");
-    const blockedUser: AuthUserRecord = {
-      email: normalizedEmail,
-      boundDeviceId: fixedDeviceId,
-      boundIp: existingUser?.boundIp,
-      fixedDeviceId,
-      fixedAt: existingUser?.fixedAt,
-      devices,
-      firstLoginAt: existingUser?.firstLoginAt ?? now,
-      lastLoginAt: existingUser?.lastLoginAt ?? now,
-      loginCount: existingUser?.loginCount ?? 0,
-    };
-    await persistUser(authFile, blockedUser);
-
-    return {
-      ok: false as const,
-      status: 403,
-      reason: "fixed_device_mismatch",
-      message: "המייל הזה כבר קבוע למכשיר אחר. ניסיון התחברות ממכשיר נוסף נחסם ונרשם באדמין.",
-    };
-  }
-
-  const hasKnownDifferentDevice = devices.some(
-    (device) => device.id !== currentDeviceId && device.status !== "blocked"
-  );
-
-  if (!fixedDeviceId && hasKnownDifferentDevice) {
-    devices = upsertDevice(devices, currentDeviceId, now, request, "blocked");
-    const blockedUser: AuthUserRecord = {
-      email: normalizedEmail,
-      boundDeviceId: existingUser?.boundDeviceId,
-      boundIp: existingUser?.boundIp,
-      fixedDeviceId: existingUser?.fixedDeviceId,
-      fixedAt: existingUser?.fixedAt,
-      devices,
-      firstLoginAt: existingUser?.firstLoginAt ?? now,
-      lastLoginAt: existingUser?.lastLoginAt ?? now,
-      loginCount: existingUser?.loginCount ?? 0,
-    };
-    await persistUser(authFile, blockedUser);
-
-    return {
-      ok: false as const,
-      status: 403,
-      reason: "fixed_device_mismatch",
-      message: "זוהה ניסיון התחברות ממכשיר נוסף. המשתמש נחסם לכניסה מהמכשיר הזה ונרשם באדמין.",
-    };
-  }
 
   const nextStatus: AuthDeviceStatus = "fixed";
   devices = upsertDevice(devices, currentDeviceId, now, request, nextStatus);
@@ -623,6 +581,7 @@ export async function loginWithEmail(
     email: normalizedEmail,
     deviceId: currentDeviceId,
     cookieValue: createAuthCookieValue(normalizedEmail, currentDeviceId),
+    isFirstLogin,
   };
 }
 
@@ -672,4 +631,15 @@ export async function getAuthAdminSnapshot(): Promise<AuthAdminSnapshot> {
 export async function isAdminEmail(email: string): Promise<boolean> {
   const authFile = await readAuthFile();
   return getConfiguredAdminEmails(authFile).includes(normalizeEmail(email));
+}
+
+export async function isProEmail(email: string): Promise<boolean> {
+  const envPro = (process.env.PRO_EMAILS ?? "")
+    .split(",")
+    .map(normalizeEmail)
+    .filter(Boolean);
+  if (envPro.length > 0) return envPro.includes(normalizeEmail(email));
+
+  const authFile = await readAuthFile();
+  return (authFile.proEmails ?? []).includes(normalizeEmail(email));
 }

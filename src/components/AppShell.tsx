@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useCallback, useState } from "react";
 import {
   Brain,
   Calendar,
@@ -17,6 +18,7 @@ import {
   Zap,
 } from "lucide-react";
 import { AuthGate } from "@/components/AuthGate";
+import { OnboardingTour } from "@/components/OnboardingTour";
 
 const EXAM_DATE = new Date("2026-07-01T09:00:00");
 
@@ -27,22 +29,28 @@ function getDaysUntilExam(): number {
 }
 
 const NAV_ITEMS = [
-  { href: "/dashboard",   label: "דשבורד",    icon: LayoutDashboard },
-  { href: "/weeks",       label: "שבועות",    icon: Calendar },
-  { href: "/intuition-map", label: "אינטואיציה", icon: Lightbulb },
-  { href: "/formulas",    label: "נוסחאות",   icon: Sigma },
-  { href: "/practice",    label: "תרגול",     icon: Target },
-  { href: "/simulations", label: "סימולציות", icon: FlaskConical },
-  { href: "/past-exams",  label: "מבחני עבר", icon: FileQuestion },
-  { href: "/quick-review",     label: "חזרה",        icon: Zap },
-  { href: "/mentor",           label: "מנטור",       icon: Brain },
-  { href: "/instructor-notes", label: "הערות מקס",   icon: Sparkles },
-  { href: "/admin",            label: "אדמין",       icon: ShieldCheck },
+  { href: "/dashboard",   label: "דשבורד",    icon: LayoutDashboard, tourId: "nav-dashboard" },
+  { href: "/weeks",       label: "שבועות",    icon: Calendar, tourId: "nav-weeks" },
+  { href: "/intuition-map", label: "אינטואיציה", icon: Lightbulb, tourId: "nav-intuition" },
+  { href: "/formulas",    label: "נוסחאות",   icon: Sigma, tourId: "nav-formulas" },
+  { href: "/practice",    label: "תרגול",     icon: Target, tourId: "nav-practice" },
+  { href: "/simulations", label: "סימולציות", icon: FlaskConical, tourId: "nav-simulations" },
+  { href: "/past-exams",  label: "מבחני עבר", icon: FileQuestion, tourId: "nav-past-exams" },
+  { href: "/quick-review",     label: "חזרה",        icon: Zap, tourId: "nav-quick-review" },
+  { href: "/mentor",           label: "מנטור",       icon: Brain, tourId: "nav-mentor" },
+  { href: "/instructor-notes", label: "הערות מקס",   icon: Sparkles, tourId: "nav-instructor-notes" },
+  { href: "/admin",            label: "אדמין",       icon: ShieldCheck, tourId: "nav-admin" },
 ];
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
+  const [onboardingEmail, setOnboardingEmail] = useState<string | null>(null);
   const daysLeft = getDaysUntilExam();
+  const handleAuthenticated = useCallback((email: string, options?: { showOnboarding?: boolean }) => {
+    if (options?.showOnboarding) {
+      setOnboardingEmail(email);
+    }
+  }, []);
 
   const countdownStyle =
     daysLeft <= 7
@@ -53,10 +61,14 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
   return (
     <div dir="rtl" className="min-h-screen" style={{ background: "var(--bg-page)", color: "var(--text-primary)" }}>
-      <AuthGate />
+      <AuthGate
+        onAuthenticated={handleAuthenticated}
+      />
+      <OnboardingTour email={onboardingEmail} enabled={Boolean(onboardingEmail)} />
 
       {/* ── Header ── */}
       <header
+        data-tour="app-header"
         className="sticky top-0 z-40"
         style={{
           background: "rgba(6,20,38,0.96)",
@@ -94,7 +106,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             className="flex min-w-0 flex-1 items-center gap-0.5 overflow-x-auto"
             style={{ scrollbarWidth: "none" }}
           >
-            {NAV_ITEMS.map(({ href, label, icon: Icon }) => {
+            {NAV_ITEMS.map(({ href, label, icon: Icon, tourId }) => {
               const active = pathname === href || pathname.startsWith(href + "/");
               if (href === "/weeks") {
                 return (
@@ -104,6 +116,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                     label={label}
                     icon={<Icon className="h-3.5 w-3.5 shrink-0" />}
                     active={active}
+                    tourId={tourId}
                     items={[
                       { href: "/instructor-notes", label: "מסקנות מתרגולים", icon: <Sparkles className="h-3 w-3" /> },
                     ]}
@@ -111,13 +124,14 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                 );
               }
               return (
-                <NavLink key={href} href={href} label={label} icon={<Icon className="h-3.5 w-3.5 shrink-0" />} active={active} />
+                <NavLink key={href} href={href} label={label} icon={<Icon className="h-3.5 w-3.5 shrink-0" />} active={active} tourId={tourId} />
               );
             })}
           </nav>
 
           {/* Exam countdown */}
           <div
+            data-tour="exam-countdown"
             className="shrink-0 flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-bold"
             style={countdownStyle}
           >
@@ -148,15 +162,18 @@ function NavLink({
   label,
   icon,
   active,
+  tourId,
 }: {
   href: string;
   label: string;
   icon: React.ReactNode;
   active: boolean;
+  tourId?: string;
 }) {
   return (
     <Link
       href={href}
+      data-tour={tourId}
       className="nav-link flex shrink-0 items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-semibold transition-all"
       data-active={active ? "true" : undefined}
     >
@@ -171,12 +188,14 @@ function NavDropdown({
   label,
   icon,
   active,
+  tourId,
   items,
 }: {
   href: string;
   label: string;
   icon: React.ReactNode;
   active: boolean;
+  tourId?: string;
   items: { href: string; label: string; icon: React.ReactNode }[];
 }) {
   return (
@@ -184,6 +203,7 @@ function NavDropdown({
       {/* Trigger */}
       <Link
         href={href}
+        data-tour={tourId}
         className="nav-link flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-semibold transition-all"
         data-active={active ? "true" : undefined}
       >

@@ -85,7 +85,7 @@ export default async function AdminPage() {
   const totalDevices = snapshot.users.reduce((sum, user) => sum + user.deviceCount, 0);
   const riskUsers = countRiskUsers(snapshot.users);
   const multiDeviceUsers = snapshot.users.filter(hasMultiDeviceAttempt);
-  const mentorRegistrations = snapshot.registrationRequests.filter((request) => request.wantsMentor).length;
+  const proRegistrations = snapshot.registrationRequests.filter((request) => request.plan === "pro").length;
 
   return (
     <div className="space-y-6" dir="rtl">
@@ -122,12 +122,12 @@ export default async function AdminPage() {
               <h2 className="text-xl font-black">בקשות הרשמה</h2>
             </div>
             <p className="mt-2 text-sm" style={{ color: "var(--text-secondary)" }}>
-              פרטים שהושארו מטופס ההרשמה: הרשמה 14₪, ומנטור AI בתוספת 24₪ עם קרדיטים מוגבלים.
+              פרטים שהושארו מטופס ההרשמה: Basic ב-19₪, או Pro ב-49₪ כולל מנטור צ&apos;אט שמכיר הרצאות, תרגולים, תמלולים וסיכומים.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-2 text-center sm:min-w-[260px]">
             <MiniMetric label="סה״כ פניות" value={snapshot.registrationRequests.length} />
-            <MiniMetric label="עם מנטור" value={mentorRegistrations} />
+            <MiniMetric label="Pro" value={proRegistrations} />
           </div>
         </div>
 
@@ -238,12 +238,13 @@ function RegistrationRow({ request }: { request: RegistrationRequest }) {
       </TableCell>
       <TableCell>
         <div className="flex flex-wrap gap-2">
-          <span className="badge badge-green">הרשמה 14₪</span>
-          {request.wantsMentor && (
+          {request.plan === "pro" ? (
             <span className="badge badge-purple">
               <Sparkles className="ml-1 h-3 w-3" aria-hidden="true" />
-              מנטור AI 24₪
+              Pro 49₪
             </span>
+          ) : (
+            <span className="badge badge-green">Basic 19₪</span>
           )}
         </div>
       </TableCell>
