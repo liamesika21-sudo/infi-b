@@ -171,7 +171,15 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         className="mx-auto max-w-7xl border-t px-4 py-4 text-center text-xs lg:px-6"
         style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}
       >
-        Mentora · אינפי ב׳ · מועד א׳ · 01.07.2026 · יעד 90+
+        Mentora · אינפי ב׳ · מועד א׳ · 01.07.2026 · יעד 90+ ·{" "}
+        <a
+          href="https://www.mentora-edu.com/pro"
+          target="_blank"
+          rel="noreferrer"
+          className="font-semibold underline underline-offset-4 transition-colors hover:text-[var(--text-primary)]"
+        >
+          Mentora Pro
+        </a>
       </footer>
     </div>
   );
