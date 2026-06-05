@@ -178,8 +178,8 @@ export default async function WeekDetailPage({ params }: Props) {
         </div>
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-[210px_minmax(0,1fr)] lg:items-start">
-        <aside className="lg:sticky lg:top-20 lg:self-start">
+      <div className="grid gap-6 lg:grid-cols-[230px_minmax(0,1fr)] lg:items-start xl:grid-cols-[250px_minmax(0,1fr)]">
+        <aside className="week-section-nav-shell">
           <WeekSectionSidebar sections={weekSections} />
         </aside>
 
