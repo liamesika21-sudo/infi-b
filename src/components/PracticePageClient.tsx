@@ -45,13 +45,12 @@ function parseSourceGroup(fileId: string): { type: SourceGroup["type"]; label: s
   if (recMatch) {
     const n = parseInt(recMatch[1]);
     // recitation-9 is numbered as script-recitation-9
-    const scriptMatch = fileId.includes("script");
-    const num = scriptMatch ? (fileId.includes("10") || fileId.includes("תרגול-10") ? 10 : 9) : n;
+
     return {
       type: "recitation",
-      label: `תרגול ${num}`,
-      sublabel: RECITATION_TOPICS[num] ?? "",
-      sortKey: num,
+      label: `תרגול ${n}`,
+      sublabel: RECITATION_TOPICS[n] ?? "",
+      sortKey: n,
     };
   }
 
@@ -227,12 +226,12 @@ function QuestionRow({ q, index }: { q: QuestionItem; index: number }) {
         )}
 
         {dc && (
-          <span className="rounded-full px-2 py-0.5 text-[10px] font-semibold" style={dc}>
+          <span className="rounded-full px-2 py-0.5 text-[10px] font-semibold" style={{ background: dc.bg, color: dc.text }}>
             {DIFF_LABEL[q.difficulty]}
           </span>
         )}
         {rc && (
-          <span className="rounded-full px-2 py-0.5 text-[10px] font-semibold" style={rc}>
+          <span className="rounded-full px-2 py-0.5 text-[10px] font-semibold" style={{ background: rc.bg, color: rc.text }}>
             {q.examRelevance === "critical" ? "קריטי" : "חשוב"}
           </span>
         )}
