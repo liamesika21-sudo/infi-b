@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import {
   Brain,
   Calendar,
@@ -45,7 +45,16 @@ const NAV_ITEMS = [
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const [onboardingEmail, setOnboardingEmail] = useState<string | null>(null);
+  const [isAdmin, setIsAdmin] = useState(false);
   const daysLeft = getDaysUntilExam();
+
+  useEffect(() => {
+    fetch("/api/auth/status")
+      .then((r) => r.json())
+      .then((d: { isAdmin?: boolean }) => { if (d.isAdmin) setIsAdmin(true); })
+      .catch(() => {});
+  }, []);
+
   const handleAuthenticated = useCallback((email: string, options?: { showOnboarding?: boolean }) => {
     if (options?.showOnboarding) {
       setOnboardingEmail(email);
@@ -106,7 +115,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             className="flex min-w-0 flex-1 items-center gap-0.5 overflow-x-auto"
             style={{ scrollbarWidth: "none" }}
           >
-            {NAV_ITEMS.map(({ href, label, icon: Icon, tourId }) => {
+            {NAV_ITEMS.filter(({ href }) => href !== "/admin" || isAdmin).map(({ href, label, icon: Icon, tourId }) => {
               const active = pathname === href || pathname.startsWith(href + "/");
               if (href === "/weeks") {
                 return (

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { validateCookieForRequest } from "@/lib/simple-auth";
+import { validateCookieForRequest, isAdminEmail } from "@/lib/simple-auth";
 
 export const runtime = "nodejs";
 
@@ -10,5 +10,6 @@ export async function GET(request: Request) {
     return NextResponse.json({ ok: false, reason: auth.reason }, { status: 401 });
   }
 
-  return NextResponse.json({ ok: true, email: auth.email });
+  const isAdmin = await isAdminEmail(auth.email);
+  return NextResponse.json({ ok: true, email: auth.email, isAdmin });
 }
