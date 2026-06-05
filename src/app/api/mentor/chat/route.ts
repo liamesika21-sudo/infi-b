@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { validateCookieForRequest, isProEmail } from "@/lib/simple-auth";
-import { getMentorUsage, incrementMentorUsage, MENTOR_CREDIT_LIMIT } from "@/lib/mentor-credits";
+import { getMentorUsage, incrementMentorUsage, saveMentorLog, MENTOR_CREDIT_LIMIT } from "@/lib/mentor-credits";
 import { buildMentorSystemPrompt } from "@/lib/calculus2/mentor-system-prompt";
 
 export const runtime = "nodejs";
@@ -81,11 +81,15 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "שגיאה בשרת AI" }, { status: 502 });
   }
 
+  const userQuestion = messages[messages.length - 1].content;
+  const userEmail = auth.email;
+
   const stream = new ReadableStream({
     async start(controller) {
       const reader = body.getReader();
       const decoder = new TextDecoder();
       let buffer = "";
+      let fullResponse = "";
 
       try {
         while (true) {
@@ -112,12 +116,17 @@ export async function POST(request: Request) {
                 event.delta.text
               ) {
                 controller.enqueue(encoder.encode(event.delta.text));
+                fullResponse += event.delta.text;
               }
             } catch {}
           }
         }
       } finally {
         controller.close();
+        // Save conversation log after stream completes
+        if (fullResponse) {
+          void saveMentorLog(userEmail, userQuestion, fullResponse);
+        }
       }
     },
   });

@@ -1,6 +1,6 @@
 import { cookies } from "next/headers";
 import type { ReactNode } from "react";
-import { ClipboardList, Monitor, Phone, ShieldCheck, Sparkles, Smartphone, UserCheck, UserX } from "lucide-react";
+import { ClipboardList, MessageSquare, Monitor, Phone, ShieldCheck, Sparkles, Smartphone, UserCheck, UserX } from "lucide-react";
 import {
   AUTH_COOKIE_NAME,
   getAuthAdminSnapshot,
@@ -10,6 +10,7 @@ import {
   type AuthDeviceRecord,
   type RegistrationRequest,
 } from "@/lib/simple-auth";
+import { getMentorLogs, type MentorLogEntry } from "@/lib/mentor-credits";
 
 export const runtime = "nodejs";
 
@@ -80,7 +81,10 @@ export default async function AdminPage() {
     );
   }
 
-  const snapshot = await getAuthAdminSnapshot();
+  const [snapshot, mentorLogs] = await Promise.all([
+    getAuthAdminSnapshot(),
+    getMentorLogs(),
+  ]);
   const totalLogins = snapshot.users.reduce((sum, user) => sum + user.loginCount, 0);
   const totalDevices = snapshot.users.reduce((sum, user) => sum + user.deviceCount, 0);
   const riskUsers = countRiskUsers(snapshot.users);
@@ -193,7 +197,58 @@ export default async function AdminPage() {
           <UserAccessCard key={user.email} user={user} />
         ))}
       </section>
+
+      {/* ── Mentor conversations ── */}
+      <section className="rounded-lg border bg-white shadow-sm" style={{ borderColor: "var(--border)" }}>
+        <div className="flex items-center gap-2 border-b px-5 py-4" style={{ borderColor: "var(--border)" }}>
+          <MessageSquare className="h-4 w-4" style={{ color: "var(--navy-mid)" }} />
+          <h2 className="text-sm font-black">שיחות מנטור AI</h2>
+          <span className="mr-auto rounded-full px-2 py-0.5 text-xs font-bold"
+            style={{ background: "var(--bg-subtle)", color: "var(--text-muted)" }}>
+            {mentorLogs.length}
+          </span>
+        </div>
+        {mentorLogs.length === 0 ? (
+          <p className="px-5 py-8 text-center text-sm" style={{ color: "var(--text-muted)" }}>אין שיחות עדיין</p>
+        ) : (
+          <div className="divide-y" style={{ borderColor: "var(--border)" }}>
+            {mentorLogs.map((log, i) => (
+              <MentorLogRow key={i} log={log} />
+            ))}
+          </div>
+        )}
+      </section>
     </div>
+  );
+}
+
+function MentorLogRow({ log }: { log: MentorLogEntry }) {
+  const date = new Intl.DateTimeFormat("he-IL", { dateStyle: "short", timeStyle: "short" }).format(new Date(log.ts));
+  return (
+    <details className="group px-5 py-3 cursor-pointer" style={{ listStyle: "none" }}>
+      <summary className="flex items-start gap-3 list-none">
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className="text-xs font-bold" style={{ color: "var(--navy-mid)" }}>{log.email}</span>
+            <span className="text-xs" style={{ color: "var(--text-muted)" }}>{date}</span>
+          </div>
+          <p className="mt-0.5 text-sm truncate" style={{ color: "var(--text-primary)" }}>
+            {log.q.slice(0, 120)}
+          </p>
+        </div>
+        <span className="shrink-0 text-xs mt-1" style={{ color: "var(--text-muted)" }}>▼</span>
+      </summary>
+      <div className="mt-3 space-y-2 text-sm">
+        <div className="rounded-lg px-3 py-2" style={{ background: "rgba(7,22,42,0.06)" }}>
+          <p className="text-xs font-bold mb-1" style={{ color: "var(--navy-mid)" }}>שאלה</p>
+          <p style={{ color: "var(--text-primary)", whiteSpace: "pre-wrap" }}>{log.q}</p>
+        </div>
+        <div className="rounded-lg px-3 py-2" style={{ background: "var(--bg-subtle)" }}>
+          <p className="text-xs font-bold mb-1" style={{ color: "var(--text-secondary)" }}>תשובה</p>
+          <p style={{ color: "var(--text-secondary)", whiteSpace: "pre-wrap" }}>{log.a}</p>
+        </div>
+      </div>
+    </details>
   );
 }
 
