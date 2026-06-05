@@ -15,11 +15,15 @@
       "past-exams-moeda-2022-eng-solution",
       "past-exams-moeda-calculus2-2025-solution",
       "past-exams-moedb-2023-eng-sol",
+      "recitation-recitation-5-hebrew",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
       "summerize-שבוע-4-אינפי-2"
     ],
     "detectedInWeeks": [
       4,
       5,
+      6,
       7
     ],
     "confidence": 0.95,
@@ -68,15 +72,20 @@
       "past-exams-moedb-calculus2-2025-solutions",
       "past-exams-simulation-calculus2-2025-solutions",
       "recitation-recitation-1-hebrew-1",
+      "recitation-recitation-10-hebrew",
       "recitation-recitation-2-hebrew",
       "recitation-recitation-4-hebrew",
+      "recitation-recitation-5-hebrew",
       "recitation-recitation-6-hebrew",
       "recitation-recitation-7-hebrew",
-      "recitation-recitation-8-hebrew",
       "recitation-recitation-8-hebrew-2",
-      "recitation-recitation-9-hebrew",
-      "summerize-calculus2-week9-rtl-polished",
+      "recitation-script-recitation-9-max",
       "summerize-recitation-8-hebrew",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
       "summerize-סיכום-מאגד-הרצאות-4-5-חדו״א-2",
       "summerize-שבוע-2-אינפי-2",
       "summerize-שבוע-4-אינפי-2",
@@ -91,7 +100,8 @@
       6,
       7,
       8,
-      9
+      9,
+      10
     ],
     "confidence": 0.95,
     "sourceSnippets": [
@@ -112,20 +122,25 @@
     ],
     "detectedInFiles": [
       "past-exams-moedb-calculus2-2025-solutions",
-      "recitation-recitation-8-hebrew",
       "recitation-recitation-8-hebrew-2",
+      "recitation-script-recitation-9-max",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
       "summerize-שבוע-7-סיכום"
     ],
     "detectedInWeeks": [
+      4,
       7,
-      8
+      8,
+      9
     ],
     "confidence": 0.95,
     "sourceSnippets": [
       "etermine whether the following series converges or diverges: ∞ X n=2 \" sin(n) ln(n) · 1 · 4 · 7 · · · (3n − 2) 5n · n! # Solution: We check absolute convergence: ∞ X n=2 sin(n) ln(n) · 1 · 4 · 7 · · · (3n − 2) 5n · n! ≤ ∞ X n=1 1 · 4 · 7 · · · (3n − 2) ln(n) · 5n · n! We now use the ratio test: L = lim n→∞ an+1 an = lim n→∞ h 1·4·7···(3n−2)·(3n+1) 5n+1·(n+1)!·ln(n+1) i h 1·4·7·",
       "תרגול 8 היום: התכנסות בהחלט, התכנסות בתנאי. • טור לייבניץ. • השמת סוגריים. • תזכורת: התכנסות בהחלט: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי . ∞ ∑ n=k | an |< ∞ מתכנס בהחלט אם ∞ ∑ n=k an נאמר שהטור משפט )מבחן התכנסות בהחלט(: סדרה של מספ",
-      "תרגול 8 היום: התכנסות בהחלט, התכנסות בתנאי. • טור לייבניץ. • השמת סוגריים. • תזכורת: התכנסות בהחלט: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי . ∞ ∑ n=k | an |< ∞ מתכנס בהחלט אם ∞ ∑ n=k an נאמר שהטור משפט )מבחן התכנסות בהחלט(: סדרה של מספ",
-      "ים ומבחני השוואה מבחן המנה ומבחן האינטגרל ,מבחן השורש הרמוני וטורים עם לוגים pהטור ה־ כללי בחירה מהירים למבחן מתאים התכנסות בתנאי ולייבניץ ,התכנסות בהחלט השמת סוגריים וטעויות נפוצות :מטרת הדף ותרגול 7 הרצאה ,6 הכללים וההערות החשובות מהרצאה ,סיכום קצר ומדויק של המשפטים .- ללא דוגמאות חישוביות 7 :העיקרון המוביל אלא להחליט אם הוא מתכנס או מתבדר בעזרת ,”לחשב את סכום הטור“ לא"
+      "אז אם אתה לוקח איקס שהוא 5 ואיקס שהוא 1, המרחק בין 5 ל3 והמרחק בין 1 ל3 זה אותו מרחק, נכון? כן. ומה שיוסי הראה לך שההתכנסות, היא קוראת שם התכנסות בהחלט. נכון. אז אם זה התכנסות בהחלט, זה לא משנה אם זה מרחק שלילי או חיובי, זה אותו דבר. אוקיי. עכשיו, למה זה קורה שם בהתכנסות בהחלט? פה צריך לקפוץ לתוך ההוכחה של משפט הבל ולראות מה קורה שם בפועל. אבל זה בפועל מה שקורה. שבגל",
+      "קצרה - סעיף עבור מתקבל . 1 p < 1 1−p 1 עבור מתקבל . 2 p ≥ 1 ∞ 14 -- 14 of 27 -- - מבחני השוואה והתכנסות מוחלטת 3 חלק .השוואת אינטגרלים והתכנסות בהחלט 4 הרצאה · 2 אינפי משפט - מבחן ההשוואה 2 :ונניח כי , שתי פונקציות המוגדרות ב־ ותהיינה יהי . לכל אינטגרביליות ב־ ו־ , לכל ,מתכנס אם :אז מתקיים a ∈ R f , g [a, ∞) 0 ≤ f (x) ≤ g(x) x ≥ a f , g [a, b] b > a g(x) dx ∫",
+      "ות או אי־דיוקים הסיכום מכיל הגדרות משפטים הוכחות דוגמאות הערות/מסקנות מפת נושאים 01 מבחן האינטגרל השלמת ההוכחה והשוואה לאינטגרל לא אמיתי 02 התכנסות בהחלט התכנסות בהחלט והתכנסות בתנאי 03 טורים מתחלפים מבחן לייבניץ והוכחתו ,הגדרה 04 השמת סוגריים קיבוץ איברי טור ומבחן הסוגריים 1 -- 1 of 15 -- - מבחן האינטגרל 1 חלק .השלמת מבחן האינטגרל והוכחתו לפי טענת העזר 7 הרצאה · 2 אינ"
     ]
   },
   {
@@ -138,9 +153,9 @@
     ],
     "detectedInFiles": [
       "past-exams-moedb-calculus2-2024-solutions",
-      "recitation-recitation-8-hebrew",
       "recitation-recitation-8-hebrew-2",
-      "summerize-calculus2-week9-rtl-polished",
+      "recitation-script-recitation-9-max",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
       "summerize-שבוע-7-סיכום"
     ],
     "detectedInWeeks": [
@@ -152,8 +167,8 @@
     "sourceSnippets": [
       "wer series ∑∞ n=0 xn n+1 . 5.1.1. (5 points) Find the domain of convergence of the power series. Solution: Note that for x = −1 we obtain a conditionally convergent series as ∞ ∑ n=0 (−1)n n + 1 = ∞ ∑ n=1 (−1)n−1 n = ∞ ∑ n=1 (−1)n+1 n = Leibniz and ∞ ∑ n=0 |(−1)n| n + 1 = ∞ ∑ n=0 1 n + 1 = ∞ ∑ n=1 1 n Harmonic = ∞ Thus, the point x = −1 is an endpoint of the domain of convergence,",
       "תרגול 8 היום: התכנסות בהחלט, התכנסות בתנאי. • טור לייבניץ. • השמת סוגריים. • תזכורת: התכנסות בהחלט: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי . ∞ ∑ n=k | an |< ∞ מתכנס בהחלט אם ∞ ∑ n=k an נאמר שהטור משפט )מבחן התכנסות בהחלט(: סדרה של מספרים ממשיים. (an",
-      "תרגול 8 היום: התכנסות בהחלט, התכנסות בתנאי. • טור לייבניץ. • השמת סוגריים. • תזכורת: התכנסות בהחלט: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי . ∞ ∑ n=k | an |< ∞ מתכנס בהחלט אם ∞ ∑ n=k an נאמר שהטור משפט )מבחן התכנסות בהחלט(: סדרה של מספרים ממשיים. (an",
-      "נס בהחלט לכל x ∈ ℝ . x = x₀ ± R :קצוות .חייבים לבדוק כל קצה בנפרד כתרגיל טורים רגיל .אין כלל קבוע :חשוב .בתוך הרדיוס הטור מתכנס בהחלט תמיד .התכנסות בתנאי יכולה לקרות רק בקצוות נוסחאות לחישוב 3§ R קושי־הדמר — מבחן השורש L = lim(n→∞) ⁿ√|aₙ| L = 0 → R = ∞ | L = ∞ → R = 0 | 0 < L < ∞ → R = 1/L מבחן המנה L = lim(n→∞) |aₙ₊₁ / aₙ| :אותם חוקים בדיוק L=0→R=∞ , L=∞→R=0 , 0<L<∞→R=1",
+      "פעם, אבל אתם חייבים לזכור את זה. שיעורי בית 8, שאלה אחת. תרגול שמונה השאלות הראשונות כתבנו ככה, קודם כל לבדוק התכנסות בהחלט, אם לא, בודקים התכנסות בתנאי. ולכן במבט אתם חייבים לשאול את עצמכם מה קורה כששמים פה ערך מוחלט. אתם יודעים שאם תשימו ערך מוחלט, תקבלו את מה שכתוב למעלה, ולכן זה מתכנס בהחלט. כי הוכחנו את זה לפני רגע למעלה. ולכן אני מוצא שספציפית בתרגיל הזה, התור מת",
+      "גדרות משפטים הוכחות דוגמאות הערות/מסקנות מפת נושאים 01 מבחן האינטגרל השלמת ההוכחה והשוואה לאינטגרל לא אמיתי 02 התכנסות בהחלט התכנסות בהחלט והתכנסות בתנאי 03 טורים מתחלפים מבחן לייבניץ והוכחתו ,הגדרה 04 השמת סוגריים קיבוץ איברי טור ומבחן הסוגריים 1 -- 1 of 15 -- - מבחן האינטגרל 1 חלק .השלמת מבחן האינטגרל והוכחתו לפי טענת העזר 7 הרצאה · 2 אינפי - מבחן האינטגרל 5 משפט :ננ",
       "יס מהרצאה טורים אי־שליליים ומבחני השוואה מבחן המנה ומבחן האינטגרל ,מבחן השורש הרמוני וטורים עם לוגים pהטור ה־ כללי בחירה מהירים למבחן מתאים התכנסות בתנאי ולייבניץ ,התכנסות בהחלט השמת סוגריים וטעויות נפוצות :מטרת הדף ותרגול 7 הרצאה ,6 הכללים וההערות החשובות מהרצאה ,סיכום קצר ומדויק של המשפטים .- ללא דוגמאות חישוביות 7 :העיקרון המוביל אלא להחליט אם הוא מתכנס או מתבדר בעזרת"
     ]
   },
@@ -201,8 +216,7 @@
       "past-exams-moedb-2023-eng-sol",
       "past-exams-moedb-calculus2-2024-solutions",
       "past-exams-moedb-calculus2-2025-solutions",
-      "recitation-recitation-9-hebrew",
-      "summerize-calculus2-week9-rtl-polished"
+      "recitation-script-recitation-9-max"
     ],
     "detectedInWeeks": [
       9
@@ -234,6 +248,7 @@
       "hw-exercise-5-solution",
       "hw-exercise-6-solution",
       "hw-exercise-7-solution",
+      "lecture-lecture-10-group-2-calculus-2-2026",
       "lecture-lecture-5-group-2-calculus-2-2026",
       "lecture-lecture-6-group-2-calculus-2-2026",
       "lecture-lecture-7-group-2-calculus-2-2026",
@@ -249,12 +264,17 @@
       "past-exams-moedb-calculus2-2024-solutions",
       "past-exams-moedb-calculus2-2025-solutions",
       "past-exams-simulation-calculus2-2025-solutions",
+      "recitation-recitation-5-hebrew",
       "recitation-recitation-6-hebrew",
       "recitation-recitation-7-hebrew",
-      "recitation-recitation-8-hebrew",
       "recitation-recitation-8-hebrew-2",
-      "recitation-recitation-9-hebrew",
-      "summerize-calculus2-week9-rtl-polished",
+      "recitation-script-recitation-9-max",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
       "summerize-סיכום-מאגד-הרצאות-4-5-חדו״א-2",
       "summerize-שבוע-2-אינפי-2",
       "summerize-שבוע-4-אינפי-2",
@@ -269,7 +289,8 @@
       6,
       7,
       8,
-      9
+      9,
+      10
     ],
     "confidence": 0.95,
     "sourceSnippets": [
@@ -297,11 +318,15 @@
       "past-exams-moedb-2022-solutions",
       "past-exams-moedb-calculus2-2024-solutions",
       "past-exams-moedb-calculus2-2025-solutions",
+      "recitation-recitation-5-hebrew",
       "recitation-recitation-6-hebrew",
       "recitation-recitation-7-hebrew",
-      "recitation-recitation-8-hebrew",
       "recitation-recitation-8-hebrew-2",
-      "recitation-recitation-9-hebrew",
+      "recitation-script-recitation-9-max",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
       "summerize-שבוע-4-אינפי-2",
       "summerize-שבוע-7-סיכום"
     ],
@@ -336,10 +361,12 @@
       "past-exams-moeda-calculus2-2025-solution",
       "past-exams-moedb-calculus2-2025-solutions",
       "recitation-recitation-7-hebrew",
-      "summerize-calculus2-week9-rtl-polished",
+      "recitation-script-recitation-9-max",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
       "summerize-שבוע-7-סיכום"
     ],
     "detectedInWeeks": [
+      6,
       7,
       9
     ],
@@ -349,7 +376,7 @@
       "· 4 · 6 · · · · · (4n) Hint: Ensure that you understand the pattern of the series’ terms before writing your solution. Solution: We use the ratio test, L = lim n→∞ an+1 an = lim n→∞ [(n + 1)!]2 2 · 4 · 6 · · · · · (4n) 2 · 4 · 6 · · · · · (4n) · (4n + 2)(4n + 4) · (n!)2 = lim n→∞ (n + 1)2 (4n + 2)(4n + 4) = lim n→∞ \u00101 + 1 n \u00112 \u00104 + 2 n \u0011 \u00104 + 4 n \u0011 = 1 16 4 -- 4 of 7",
       "lute convergence: ∞ X n=2 sin(n) ln(n) · 1 · 4 · 7 · · · (3n − 2) 5n · n! ≤ ∞ X n=1 1 · 4 · 7 · · · (3n − 2) ln(n) · 5n · n! We now use the ratio test: L = lim n→∞ an+1 an = lim n→∞ h 1·4·7···(3n−2)·(3n+1) 5n+1·(n+1)!·ln(n+1) i h 1·4·7···(3n−2) 5n·n!·ln(n) i = lim n→∞ 1 · 4 · 7 · · · (3n − 2) · (3n + 1) · 5n · n! · ln(n) 5n+1 · (n + 1)! · 1 · 4 · 7 · · · (3n − 2) · ln",
       "תרגול 7 היום: מבחן ההשוואה. • מבחן ההשוואה הגבולי. • מבחן השורש. • מבחן המנה. • מבחן האינטגרל. • תזכורת: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי .n ≥ k לכל an ≥ 0 הוא טור אי שלילי אם ∞ ∑ n=k an נאמר שהטור משפט )מבחן ההשוואה לטורים אי שליליים(: שתי סדרות של מספרים ממשיים. (bn)∞ n=k ו",
-      "אי יכולה לקרות רק בקצוות נוסחאות לחישוב 3§ R קושי־הדמר — מבחן השורש L = lim(n→∞) ⁿ√|aₙ| L = 0 → R = ∞ | L = ∞ → R = 0 | 0 < L < ∞ → R = 1/L מבחן המנה L = lim(n→∞) |aₙ₊₁ / aₙ| :אותם חוקים בדיוק L=0→R=∞ , L=∞→R=0 , 0<L<∞→R=1/L . 1 -- 1 of 6 -- :אזהרה הנוסחאות דורשות קיום של הגבול L — אם הגבול לא קיים . לא ניתן להשתמש .בנוסחה בכל תרגיל — סדר עבודה 4§ לזהות את x₀ ואת a"
+      "לבסיס? להקשיב טוב. הנוסחה הזאת והנוסחה הזאת, ואני רוצה שתכירו טוב את המינוחים, קוראים להם נוסחת המנה ונוסחת השורש. מה אתם מכירים לפני כן? מבחן המנה ומבחן השורש. מה ההבדל? נוסחת המנה ונוסחת השורש מתייחסות רק לאיין, לא כולל את הדבר הזה. הן מתייחסות רק לאיין עצמו. איך מוכיחים? איך יוסי הוכיח את נוסחת השורש שקרא לה קושי אדמר? הוא השתמש במבחן השורש על כל הביטוי הזה, ע"
     ]
   },
   {
@@ -365,12 +392,13 @@
       "past-exams-moeda-calculus2-2024-solution",
       "past-exams-moedb-calculus2-2025-solutions",
       "recitation-recitation-7-hebrew",
-      "recitation-recitation-8-hebrew",
       "recitation-recitation-8-hebrew-2",
-      "summerize-calculus2-week9-rtl-polished",
+      "recitation-script-recitation-9-max",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
       "summerize-שבוע-7-סיכום"
     ],
     "detectedInWeeks": [
+      6,
       7,
       8,
       9
@@ -413,6 +441,8 @@
       "past-exams-simulation-calculus2-2025-solutions",
       "recitation-recitation-3-hebrew",
       "recitation-recitation-7-hebrew",
+      "recitation-script-recitation-9-max",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
       "summerize-שבוע-2-אינפי-2",
       "summerize-שבוע-4-אינפי-2"
     ],
@@ -422,7 +452,8 @@
       3,
       4,
       5,
-      7
+      7,
+      9
     ],
     "confidence": 0.95,
     "sourceSnippets": [
@@ -453,6 +484,7 @@
       "hw-exercise-6-solution",
       "hw-exercise-7-solution",
       "lecture-lecture-1-group-1-calculus-2-2026",
+      "lecture-lecture-10-group-2-calculus-2-2026",
       "lecture-lecture-2-group-1-calculus-2-2026",
       "lecture-lecture-3-group-2-calculus-2-2026",
       "lecture-lecture-4-group-1-calculus-2-2026",
@@ -474,16 +506,22 @@
       "past-exams-moedb-calculus2-2025-solutions",
       "past-exams-simulation-calculus2-2025-solutions",
       "recitation-recitation-1-hebrew-1",
+      "recitation-recitation-10-hebrew",
       "recitation-recitation-2-hebrew",
       "recitation-recitation-3-hebrew",
       "recitation-recitation-4-hebrew",
+      "recitation-recitation-5-hebrew",
       "recitation-recitation-6-hebrew",
       "recitation-recitation-7-hebrew",
-      "recitation-recitation-8-hebrew",
       "recitation-recitation-8-hebrew-2",
-      "recitation-recitation-9-hebrew",
-      "summerize-calculus2-week9-rtl-polished",
+      "recitation-script-recitation-9-max",
       "summerize-note-27-may-2026-2",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
       "summerize-שבוע-2-אינפי-2",
       "summerize-שבוע-4-אינפי-2",
       "summerize-שבוע-7-סיכום"
@@ -498,6 +536,7 @@
       7,
       8,
       9,
+      10,
       27
     ],
     "confidence": 0.95,
@@ -540,8 +579,15 @@
       "recitation-recitation-1-hebrew-1",
       "recitation-recitation-2-hebrew",
       "recitation-recitation-4-hebrew",
+      "recitation-recitation-5-hebrew",
       "recitation-recitation-7-hebrew",
-      "summerize-calculus2-week9-rtl-polished",
+      "recitation-script-recitation-9-max",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
       "summerize-סיכום-מאגד-הרצאות-4-5-חדו״א-2",
       "summerize-שבוע-2-אינפי-2",
       "summerize-שבוע-4-אינפי-2",
@@ -580,7 +626,7 @@
       "past-exams-moeda-calculus2-2024-solution",
       "past-exams-moeda-calculus2-2025-solution",
       "past-exams-moedb-2022-solutions",
-      "recitation-recitation-9-hebrew"
+      "recitation-script-recitation-9-max"
     ],
     "detectedInWeeks": [
       9
@@ -620,6 +666,10 @@
       "past-exams-simulation-calculus2-2025-solutions",
       "recitation-recitation-2-hebrew",
       "recitation-recitation-4-hebrew",
+      "recitation-recitation-5-hebrew",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
       "summerize-סיכום-מאגד-הרצאות-4-5-חדו״א-2",
       "summerize-שבוע-2-אינפי-2",
       "summerize-שבוע-4-אינפי-2"
@@ -627,6 +677,7 @@
     "detectedInWeeks": [
       1,
       2,
+      3,
       4,
       5,
       6

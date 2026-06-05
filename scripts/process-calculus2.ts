@@ -18,7 +18,6 @@ async function main() {
   const extractedRecords: ExtractedTextRecord[] = [];
 
   for (const file of inventory.sourceFiles) {
-    if (file.extension !== ".pdf") continue;
     process.stdout.write(`Extracting ${file.relativePath} ... `);
     const result = await extractTextFromFile(file);
     extractedRecords.push(result);

@@ -232,10 +232,10 @@
     "needsReview": false,
     "questions": [
       {
-        "id": "sim-q-recitation-recitation-8-hebrew-question-1",
+        "id": "sim-q-recitation-recitation-8-hebrew-2-question-1",
         "sourceBasis": "recitation",
         "basedOnSourceIds": [
-          "recitation-recitation-8-hebrew"
+          "recitation-recitation-8-hebrew-2"
         ],
         "topicIds": [
           "גבולות",
@@ -261,10 +261,10 @@
         "hint": "חשבי R עם נוסחת המנה"
       },
       {
-        "id": "sim-q-recitation-recitation-8-hebrew-question-2",
+        "id": "sim-q-recitation-recitation-8-hebrew-2-question-2",
         "sourceBasis": "recitation",
         "basedOnSourceIds": [
-          "recitation-recitation-8-hebrew"
+          "recitation-recitation-8-hebrew-2"
         ],
         "topicIds": [
           "גבולות",
@@ -290,52 +290,76 @@
         "solutionOutline": "בדקי קצוות בנפרד אחרי מציאת R"
       },
       {
-        "id": "sim-q-recitation-recitation-9-hebrew-question-1",
+        "id": "sim-q-recitation-script-recitation-9-max-question-1",
         "sourceBasis": "recitation",
         "basedOnSourceIds": [
-          "recitation-recitation-9-hebrew"
+          "recitation-script-recitation-9-max"
         ],
         "topicIds": [
           "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
           "טורי-חזקות",
           "טורים",
           "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
           "סדרות",
+          "פונקציות",
           "רדיוס-התכנסות"
         ],
-        "content": "דוגמאות: , ומצאו את תחוםR עבור כל אחד מהטורים הבאים, חשבו את רדיוס ההתכנסות, ההתכנסות. בתחום ההתכנסות, מצאו ערך מפורש )ללא סימן הסיגמה(. . ∞ ∑ n=0 (−1)n x2n .1 פתרון: מדובר בטור גיאומטרי, נסדר את הטור ∞ ∑ n=0 (−1)n x2n = ∞ ∑ n=0 (−1)n (x2)n = ∞ ∑ n=0 (−x2)n = t=−x2 ∞ ∑ n=0 tn = |t|<1 1 1 − t = 1 1 − (−x2) = 1 1 + x2 , כלומר הטור מתכנס אם\"ם| t |< 1 הטור מתכנס אם\"ם | −x2 |< 1 ⇔| x2 |< 1 ⇔ x2 < 1 ⇔ −1 < x < 1 .R = 1 ולכן רדיוס ההתכנסות של הטור הוא x0 = 0 נשים לב ש . ∞ ∑ n=0 (2x+3)2n 42n .2 פתרון: מדובר בטור גיאומטרי, נסדר את הטור ∞ ∑ n=0 (2x + 3)2n 42n = ∞ ∑ n=0 ( 2x + 3 4 )2n = ∞ ∑ n=0 (( 2x + 3 4 )2)n = t=( 2x+3 4 )2 ∞ ∑ n=0 tn = |t|<1 1 1 − t = 1 1 − ( 2x+3 4 )2 , כלומר הטור מתכנס אם\"ם| t |< 1 הטור מתכנס אם\"ם | ( 2x + 3 4 )2 |< 1 ⇔ ( 2x + 3 4 )2 < 1 ⇔ −1 < 2x + 3 4 < 1 ⇔ −4 < 2x + 3 < 4 ⇔ −7 < 2x < 1 ⇔ −3.5 < x < 0.5 .R = 2 ולכן רדיוס ההתכנסות של הטור הוא x0 = −1.5 נשים לב ש 3",
+        "content": "מינוס 1. מינוס 1, מצוין. בוא נשאל עוד שאלה למשל, מה זה ה'2 פה?",
         "requiredKnowledge": [
           "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
           "טורי-חזקות",
           "טורים",
           "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
           "סדרות",
+          "פונקציות",
           "רדיוס-התכנסות"
         ],
         "difficulty": "medium",
         "examRelevance": "medium"
       },
       {
-        "id": "sim-q-recitation-recitation-9-hebrew-question-2",
+        "id": "sim-q-recitation-script-recitation-9-max-question-2",
         "sourceBasis": "recitation",
         "basedOnSourceIds": [
-          "recitation-recitation-9-hebrew"
+          "recitation-script-recitation-9-max"
         ],
         "topicIds": [
           "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
           "טורי-חזקות",
           "טורים",
           "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
           "סדרות",
+          "פונקציות",
           "רדיוס-התכנסות"
         ],
-        "content": "תרגיל: שתי סדרות של מספרים ממשיים. (bn)∞ n=0 ו (an)∞ n=0 יהיו בהתאמה R2 6 = R1 טורי חזקות עם רדיוסי התכנסות ∞ ∑ n=0 bn · xn , ∞ ∑ n=0 an · xn יהיו .R1, R2 6 = ∞ כך ש . ∞ ∑ n=0 (an ± bn) · xn מצאו את רדיוס ההתכנסות של טור החזקות פתרון: ראשית נשים לב שלא נוכל להשתמש בנוסחת המנה או השורש מכיוון שלא נתון שהגבולות קיימים. נחלק את הפתרון לשלושה חלקים )נראה שרטוט בכיתה(: .x ∈ R יהי , במקרה זה שני הטורים מתכנסים ולכן גם הסכום מתכנס| x |< min {R1, R2} 1. אם מאשט\"מ. , במקרה זה אנחנו יודעים שטור אחדmin {R1, R2} <| x |< max {R1, R2} 2. אם מתבדר שווה מתבדר(. ± מתכנס וטור אחד מתבדר ולכן הטור מתבדר )מתכנס , במקרה זה שני הטורים מתבדרים. נראה שגם הטור של| x |> max {R1, R2} 3. אם הסכום מתבדר. ולכן ממשפט | x |> max {R1, R2} מתכנס עבור ∞ ∑ n=0 (an ± bn)·xn נניח בשלילה ש , סתירה!2 \"אבל\" הטור מתכנס גם באיזור .R = min {R1, R2} לסיכום: מצאנו שרדיוס ההתכנסות של הטור של הסכום הוא .(| x |> min {R1, R2} ומתבדר לכל | x |< min {R1, R2} )הטור מתכנס לכל 4",
+        "content": "אם אני מציב אין שווה 1, אני אקבל מינוס 1 בחזקת 1 פחות 1, כפול איקס ועוד 1 בחזקת 3, לחלק ל5 בחזקת 1 פחות 2.",
         "requiredKnowledge": [
           "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
           "טורי-חזקות",
           "טורים",
           "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
           "סדרות",
+          "פונקציות",
           "רדיוס-התכנסות"
         ],
         "difficulty": "medium",
@@ -383,7 +407,7 @@
         "examRelevance": "medium"
       },
       {
-        "id": "sim-q-hw-exercise-1-solution-question-3",
+        "id": "sim-q-hw-exercise-1-solution-question-2",
         "sourceBasis": "homework",
         "basedOnSourceIds": [
           "hw-exercise-1-solution"
@@ -448,7 +472,7 @@
           "פונקציות",
           "רציפות"
         ],
-        "content": "Alternative solution 1: We have ∞ ∑ 𝑛=1 𝑛2 − 1 𝑛3 ≥ ∞ ∑ 𝑛=1 𝑛2 − 𝑛 𝑛3 = ∞ ∑ 𝑛=1 𝑛 − 1 𝑛2 = ∞ ∑ 𝑛=0 𝑛 (𝑛 + 1)2 = ∞ ∑ 𝑛=1 𝑛 (𝑛 + 1)2 ≥ ∞ ∑ 𝑛=1 𝑛 (𝑛 + 𝑛)2 = ∞ ∑ 𝑛=1 𝑛 4𝑛2 = 1 4 ∞ ∑ 𝑛=1 1 𝑛 = ∞ By the comparison test, ∑∞ 𝑛=1 𝑛2 −1 𝑛3 = ∞. Alternative solution 2: We have ∞ ∑ 𝑛=1 𝑛2 − 1 𝑛3 = ∞ ∑ 𝑛=1 ( 1 𝑛 − 1 𝑛3 ) = divergent − convergent = divergent (d) ∞ ∑ 𝑛=1 ln ( 2𝑛 + 3 2𝑛 + 1 ) Solution: We have ∞ ∑ 𝑛=1 ln ( 2𝑛 + 3 2𝑛 + 1 ) ln ( 𝑥 𝑦 ) =ln 𝑥−ln 𝑦 = ∞ ∑ 𝑛=1 [ln(2𝑛 + 3) − ln(2𝑛 + 1)] definition = lim 𝑁 →∞ 𝑁 ∑ 𝑛=1 ln ( 2𝑛 + 3 2𝑛 + 1 ) = lim 𝑁 →∞ 𝑁 ∑ 𝑛=1 [ln(2𝑛 + 3) − ln(2𝑛 + 1)] = lim 𝑁 →∞ [HHH ln(5) − ln(3) + HHH ln(7) − HHH ln(5) + · · · + ln(2𝑁 + 3) − XXXXX ln(2𝑁 + 1)] = lim 𝑁 →∞ [ln(2𝑁 + 3) − ln(3)] Heine’s lemma = lim 𝑥→∞ [ln 𝑥 − ln 3] = ∞ Hence the series is divergent. Alternative solution: Note that for every 𝑛 ∈ N we have 2𝑛+3 2𝑛+1 ≥ 1 which implies that ln ( 2𝑛+3 2𝑛+1 ) ≥ 0. It follows that the series is non-negative. We now compute ∞ ∑ 𝑛=1 ln ( 2𝑛 + 3 2𝑛 + 1 ) = ∞ ∑ 𝑛=1 ln ( 1 + 2 2𝑛 + 1 ) ln(1+𝑥) ≥ 𝑥 𝑥+1 ≥ ∞ ∑ 𝑛=1 ( 2 2𝑛+1 ) (1 + 2 2𝑛+1 ) = ∞ ∑ 𝑛=1 2 2𝑛 + 3 ≥ ∞ ∑ 𝑛=1 2 2𝑛 + 3𝑛 = 2 5 ∞ ∑ 𝑛=1 ",
+        "content": "2. Determine whether each of the following series converges or diverges. (a) ∞ ∑ 𝑛=2 1 ln(𝑛) Solution: Note that 1 ln(𝑛) ≥ 0 for every 𝑛 ≥ 3. We now write ∞ ∑ 𝑛=3 1 ln(𝑛) ≥ ∞ ∑ 𝑛=3 1 𝑛 tail of Harmonic = ∞ It follows that the series ∑∞ 𝑛=3 1 ln(𝑛) is divergent by the comparison test, and therefore the series ∑∞ 𝑛=2 1 ln(𝑛) is divergent as it has a divergent tail. (b) ∞ ∑ 𝑛=1 (√𝑛 + 2 − √𝑛 )3 Solution: We note that ∞ ∑ 𝑛=1 (√𝑛 + 2 − √𝑛 )3 = ∞ ∑ 𝑛=1 ( 𝑛 + 2 − 𝑛 √𝑛 + 2 + √𝑛 )3 = ∞ ∑ 𝑛=1 8 (√𝑛 + 2 + √𝑛 )3 We have = lim 𝑛→∞ [ 8 (√𝑛+2+√𝑛)3 ] [ 1 𝑛 3 2 ] = lim 𝑛→∞ 8𝑛 3 2 (√𝑛 + 2 + √𝑛 )3 = lim 𝑛→∞ 8 (√ 1 + 2 𝑛 + 1 )3 = 1 Thus, the series converges together with the 3 2 -Harmonic series. (c) ∞ ∑ 𝑛=1 1 (𝑛 + 𝑒)𝑛 − 𝑒𝑛 Solution: By the comparison test ∞ ∑ 𝑛=3 1 (𝑛 + 𝑒)𝑛 − 𝑒𝑛 ≤ ∞ ∑ 𝑛=3 1 (𝑒 + 𝑒)𝑛 − 𝑒𝑛 = ∞ ∑ 𝑛=3 1 2𝑛 · 𝑒𝑛 − 𝑒𝑛 ≤ ∞ ∑ 𝑛=3 1 2 · 𝑒𝑛 − 𝑒𝑛 = ∞ ∑ 𝑛=3 1 𝑒𝑛 tail of geometric < ∞ It follows that ∑∞ 𝑛=3 1 (𝑛+𝑒)𝑛 −𝑒𝑛 < ∞ and therefore ∑∞ 𝑛=1 1 (𝑛+𝑒)𝑛 −𝑒𝑛 < ∞. 4",
         "requiredKnowledge": [
           "גבולות",
           "טורים",

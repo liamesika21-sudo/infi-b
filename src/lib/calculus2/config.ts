@@ -7,7 +7,7 @@ export const calculus2Course: Calculus2Course = {
   mode: "moed-a-exam-prep",
   targetScoreLabel: "90+",
   totalWeeks: 13,
-  availableWeeks: 9,
+  availableWeeks: 10,
   sourceRoot: "docs",
 };
 

@@ -136,6 +136,23 @@
     "weekNumber": 1
   },
   {
+    "id": "lecture-lecture-10-group-2-calculus-2-2026",
+    "filename": "Lecture 10 group 2 calculus 2 2026.pdf",
+    "relativePath": "docs/lecture/Lecture 10 group 2 calculus 2 2026.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/lecture/Lecture 10 group 2 calculus 2 2026.pdf",
+    "extension": ".pdf",
+    "sourceType": "lecture",
+    "status": "classified",
+    "detectedLabels": [
+      "lecture",
+      "week-aligned"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "lectureNumber": 10,
+    "weekNumber": 10
+  },
+  {
     "id": "lecture-lecture-2-group-1-calculus-2-2026",
     "filename": "Lecture 2 group 1 calculus 2 2026.pdf",
     "relativePath": "docs/lecture/Lecture 2 group 1 calculus 2 2026.pdf",
@@ -505,6 +522,24 @@
     "practicedLectureNumber": null
   },
   {
+    "id": "recitation-recitation-10-hebrew",
+    "filename": "Recitation 10-Hebrew.pdf",
+    "relativePath": "docs/recitation/Recitation 10-Hebrew.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/recitation/Recitation 10-Hebrew.pdf",
+    "extension": ".pdf",
+    "sourceType": "recitation",
+    "status": "classified",
+    "detectedLabels": [
+      "recitation",
+      "offset-practice"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "recitationNumber": 10,
+    "weekNumber": 10,
+    "practicedLectureNumber": 9
+  },
+  {
     "id": "recitation-recitation-2-hebrew",
     "filename": "Recitation 2-Hebrew.pdf",
     "relativePath": "docs/recitation/Recitation 2-Hebrew.pdf",
@@ -559,6 +594,24 @@
     "practicedLectureNumber": 3
   },
   {
+    "id": "recitation-recitation-5-hebrew",
+    "filename": "Recitation 5-Hebrew.pdf",
+    "relativePath": "docs/recitation/Recitation 5-Hebrew.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/recitation/Recitation 5-Hebrew.pdf",
+    "extension": ".pdf",
+    "sourceType": "recitation",
+    "status": "classified",
+    "detectedLabels": [
+      "recitation",
+      "offset-practice"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "recitationNumber": 5,
+    "weekNumber": 5,
+    "practicedLectureNumber": 4
+  },
+  {
     "id": "recitation-recitation-6-hebrew",
     "filename": "Recitation 6-Hebrew.pdf",
     "relativePath": "docs/recitation/Recitation 6-Hebrew.pdf",
@@ -595,24 +648,6 @@
     "practicedLectureNumber": 6
   },
   {
-    "id": "recitation-recitation-8-hebrew",
-    "filename": "Recitation 8 Hebrew.pdf",
-    "relativePath": "docs/recitation/Recitation 8 Hebrew.pdf",
-    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/recitation/Recitation 8 Hebrew.pdf",
-    "extension": ".pdf",
-    "sourceType": "recitation",
-    "status": "classified",
-    "detectedLabels": [
-      "recitation",
-      "offset-practice"
-    ],
-    "classificationConfidence": 0.85,
-    "warnings": [],
-    "recitationNumber": 8,
-    "weekNumber": 8,
-    "practicedLectureNumber": 7
-  },
-  {
     "id": "recitation-recitation-8-hebrew-2",
     "filename": "Recitation 8-Hebrew-2.pdf",
     "relativePath": "docs/recitation/Recitation 8-Hebrew-2.pdf",
@@ -631,29 +666,11 @@
     "practicedLectureNumber": 7
   },
   {
-    "id": "recitation-recitation-8-hebrew",
-    "filename": "Recitation 8-Hebrew.pdf",
-    "relativePath": "docs/recitation/Recitation 8-Hebrew.pdf",
-    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/recitation/Recitation 8-Hebrew.pdf",
-    "extension": ".pdf",
-    "sourceType": "recitation",
-    "status": "classified",
-    "detectedLabels": [
-      "recitation",
-      "offset-practice"
-    ],
-    "classificationConfidence": 0.85,
-    "warnings": [],
-    "recitationNumber": 8,
-    "weekNumber": 8,
-    "practicedLectureNumber": 7
-  },
-  {
-    "id": "recitation-recitation-9-hebrew",
-    "filename": "Recitation_9-Hebrew.pdf",
-    "relativePath": "docs/recitation/Recitation_9-Hebrew.pdf",
-    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/recitation/Recitation_9-Hebrew.pdf",
-    "extension": ".pdf",
+    "id": "recitation-script-recitation-9-max",
+    "filename": "recitation-9-max.txt",
+    "relativePath": "docs/recitation/script/recitation-9-max.txt",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/recitation/script/recitation-9-max.txt",
+    "extension": ".txt",
     "sourceType": "recitation",
     "status": "classified",
     "detectedLabels": [
@@ -665,22 +682,6 @@
     "recitationNumber": 9,
     "weekNumber": 9,
     "practicedLectureNumber": 8
-  },
-  {
-    "id": "summerize-calculus2-week9-rtl-polished",
-    "filename": "calculus2_week9_RTL_polished.pdf",
-    "relativePath": "docs/summerize/calculus2_week9_RTL_polished.pdf",
-    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/summerize/calculus2_week9_RTL_polished.pdf",
-    "extension": ".pdf",
-    "sourceType": "summary",
-    "status": "classified",
-    "detectedLabels": [
-      "summary",
-      "study-material"
-    ],
-    "classificationConfidence": 0.85,
-    "warnings": [],
-    "weekNumber": 9
   },
   {
     "id": "summerize-note-25-may-2026",
@@ -729,6 +730,118 @@
     "classificationConfidence": 0.85,
     "warnings": [],
     "weekNumber": 8
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+    "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+    "relativePath": "docs/summerize/sum-lecture/סיכום אינפי 2 הרצאה 1.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/summerize/sum-lecture/סיכום אינפי 2 הרצאה 1.pdf",
+    "extension": ".pdf",
+    "sourceType": "summary",
+    "status": "classified",
+    "detectedLabels": [
+      "summary",
+      "study-material"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "weekNumber": 1
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+    "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+    "relativePath": "docs/summerize/sum-lecture/סיכום אינפי 2 הרצאה 2.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/summerize/sum-lecture/סיכום אינפי 2 הרצאה 2.pdf",
+    "extension": ".pdf",
+    "sourceType": "summary",
+    "status": "classified",
+    "detectedLabels": [
+      "summary",
+      "study-material"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "weekNumber": 2
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+    "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+    "relativePath": "docs/summerize/sum-lecture/סיכום אינפי 2 הרצאה 3.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/summerize/sum-lecture/סיכום אינפי 2 הרצאה 3.pdf",
+    "extension": ".pdf",
+    "sourceType": "summary",
+    "status": "classified",
+    "detectedLabels": [
+      "summary",
+      "study-material"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "weekNumber": 3
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+    "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+    "relativePath": "docs/summerize/sum-lecture/סיכום אינפי 2 הרצאה 4.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/summerize/sum-lecture/סיכום אינפי 2 הרצאה 4.pdf",
+    "extension": ".pdf",
+    "sourceType": "summary",
+    "status": "classified",
+    "detectedLabels": [
+      "summary",
+      "study-material"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "weekNumber": 4
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+    "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+    "relativePath": "docs/summerize/sum-lecture/סיכום אינפי 2 הרצאה 5.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/summerize/sum-lecture/סיכום אינפי 2 הרצאה 5.pdf",
+    "extension": ".pdf",
+    "sourceType": "summary",
+    "status": "classified",
+    "detectedLabels": [
+      "summary",
+      "study-material"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "weekNumber": 5
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+    "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+    "relativePath": "docs/summerize/sum-lecture/סיכום אינפי 2 הרצאה 6.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/summerize/sum-lecture/סיכום אינפי 2 הרצאה 6.pdf",
+    "extension": ".pdf",
+    "sourceType": "summary",
+    "status": "classified",
+    "detectedLabels": [
+      "summary",
+      "study-material"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "weekNumber": 6
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+    "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+    "relativePath": "docs/summerize/sum-lecture/סיכום אינפי 2 הרצאה 7.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/summerize/sum-lecture/סיכום אינפי 2 הרצאה 7.pdf",
+    "extension": ".pdf",
+    "sourceType": "summary",
+    "status": "classified",
+    "detectedLabels": [
+      "summary",
+      "study-material"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "weekNumber": 7
   },
   {
     "id": "summerize-הרצאות-1-2",

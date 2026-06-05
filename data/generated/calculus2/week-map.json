@@ -16,6 +16,7 @@
       "hw-exercise-1-solution",
       "lecture-lecture-1-group-1-calculus-2-2026",
       "recitation-recitation-1-hebrew-1",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
       "summerize-הרצאות-1-2"
     ],
     "lectureFileIds": [
@@ -28,6 +29,7 @@
       "hw-exercise-1-solution"
     ],
     "summaryFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
       "summerize-הרצאות-1-2"
     ],
     "topicCoverage": [
@@ -58,6 +60,7 @@
       "hw-exercise-2-solution",
       "lecture-lecture-2-group-1-calculus-2-2026",
       "recitation-recitation-2-hebrew",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
       "summerize-שבוע-2-אינפי-2"
     ],
     "lectureFileIds": [
@@ -70,6 +73,7 @@
       "hw-exercise-2-solution"
     ],
     "summaryFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
       "summerize-שבוע-2-אינפי-2"
     ],
     "topicCoverage": [
@@ -100,6 +104,7 @@
       "hw-exercise-3-solution",
       "lecture-lecture-3-group-2-calculus-2-2026",
       "recitation-recitation-3-hebrew",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
       "summerize-שבוע-3"
     ],
     "lectureFileIds": [
@@ -112,6 +117,7 @@
       "hw-exercise-3-solution"
     ],
     "summaryFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
       "summerize-שבוע-3"
     ],
     "topicCoverage": [
@@ -119,7 +125,8 @@
       "טורים",
       "נגזרות",
       "סדרות",
-      "פונקציות"
+      "פונקציות",
+      "רציפות"
     ],
     "examRelevance": "unknown",
     "masteryStatus": "not_started"
@@ -141,6 +148,7 @@
       "hw-exercise-4-solution",
       "lecture-lecture-4-group-1-calculus-2-2026",
       "recitation-recitation-4-hebrew",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
       "summerize-סיכום-מאגד-הרצאות-4-5-חדו״א-2",
       "summerize-שבוע-4-אינפי-2",
       "summerize-שבוע-4"
@@ -155,6 +163,7 @@
       "hw-exercise-4-solution"
     ],
     "summaryFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
       "summerize-סיכום-מאגד-הרצאות-4-5-חדו״א-2",
       "summerize-שבוע-4-אינפי-2",
       "summerize-שבוע-4"
@@ -162,6 +171,7 @@
     "topicCoverage": [
       "אינטגרלים לא אמיתיים",
       "גבולות",
+      "התכנסות בהחלט",
       "טורים",
       "מבחן ההשוואה",
       "נגזרות",
@@ -181,22 +191,28 @@
     "homeworkNumber": 5,
     "materialStatus": {
       "lecture": "available",
-      "recitation": "missing",
+      "recitation": "available",
       "homework": "available",
-      "summary": "missing"
+      "summary": "available"
     },
     "sourceFileIds": [
       "hw-exercise-5-solution",
-      "lecture-lecture-5-group-2-calculus-2-2026"
+      "lecture-lecture-5-group-2-calculus-2-2026",
+      "recitation-recitation-5-hebrew",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
     ],
     "lectureFileIds": [
       "lecture-lecture-5-group-2-calculus-2-2026"
     ],
-    "recitationFileIds": [],
+    "recitationFileIds": [
+      "recitation-recitation-5-hebrew"
+    ],
     "homeworkFileIds": [
       "hw-exercise-5-solution"
     ],
-    "summaryFileIds": [],
+    "summaryFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
     "topicCoverage": [
       "אינטגרלים לא אמיתיים",
       "גבולות",
@@ -221,12 +237,13 @@
       "lecture": "available",
       "recitation": "available",
       "homework": "available",
-      "summary": "missing"
+      "summary": "available"
     },
     "sourceFileIds": [
       "hw-exercise-6-solution",
       "lecture-lecture-6-group-2-calculus-2-2026",
-      "recitation-recitation-6-hebrew"
+      "recitation-recitation-6-hebrew",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
     ],
     "lectureFileIds": [
       "lecture-lecture-6-group-2-calculus-2-2026"
@@ -237,11 +254,16 @@
     "homeworkFileIds": [
       "hw-exercise-6-solution"
     ],
-    "summaryFileIds": [],
+    "summaryFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
     "topicCoverage": [
+      "אינטגרלים לא אמיתיים",
       "גבולות",
       "טורים",
       "מבחן ההשוואה",
+      "מבחן המנה",
+      "מבחן השורש",
       "סדרות",
       "פונקציות",
       "רציפות"
@@ -266,6 +288,7 @@
       "hw-exercise-7-solution",
       "lecture-lecture-7-group-2-calculus-2-2026",
       "recitation-recitation-7-hebrew",
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
       "summerize-שבוע-7-סיכום"
     ],
     "lectureFileIds": [
@@ -278,6 +301,7 @@
       "hw-exercise-7-solution"
     ],
     "summaryFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
       "summerize-שבוע-7-סיכום"
     ],
     "topicCoverage": [
@@ -305,24 +329,20 @@
     "homeworkNumber": 8,
     "materialStatus": {
       "lecture": "available",
-      "recitation": "multiple",
+      "recitation": "available",
       "homework": "missing",
       "summary": "available"
     },
     "sourceFileIds": [
       "lecture-lecture-8-group-1-calculus-2-2026",
-      "recitation-recitation-8-hebrew",
       "recitation-recitation-8-hebrew-2",
-      "recitation-recitation-8-hebrew",
       "summerize-recitation-8-hebrew"
     ],
     "lectureFileIds": [
       "lecture-lecture-8-group-1-calculus-2-2026"
     ],
     "recitationFileIds": [
-      "recitation-recitation-8-hebrew",
-      "recitation-recitation-8-hebrew-2",
-      "recitation-recitation-8-hebrew"
+      "recitation-recitation-8-hebrew-2"
     ],
     "homeworkFileIds": [],
     "summaryFileIds": [
@@ -351,31 +371,30 @@
       "lecture": "available",
       "recitation": "available",
       "homework": "missing",
-      "summary": "available"
+      "summary": "missing"
     },
     "sourceFileIds": [
       "lecture-lecture-9-group-2-calculus-2-2026",
-      "recitation-recitation-9-hebrew",
-      "summerize-calculus2-week9-rtl-polished"
+      "recitation-script-recitation-9-max"
     ],
     "lectureFileIds": [
       "lecture-lecture-9-group-2-calculus-2-2026"
     ],
     "recitationFileIds": [
-      "recitation-recitation-9-hebrew"
+      "recitation-script-recitation-9-max"
     ],
     "homeworkFileIds": [],
-    "summaryFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
+    "summaryFileIds": [],
     "topicCoverage": [
       "גבולות",
+      "התכנסות בהחלט",
       "התכנסות בתנאי",
       "טורי חזקות",
       "טורים",
       "מבחן ההשוואה",
       "מבחן המנה",
       "מבחן השורש",
+      "נגזרות",
       "סדרות",
       "פונקציות",
       "רדיוס התכנסות"
@@ -391,17 +410,28 @@
     "practicedLectureNumber": 9,
     "homeworkNumber": 10,
     "materialStatus": {
-      "lecture": "missing",
-      "recitation": "missing",
+      "lecture": "available",
+      "recitation": "available",
       "homework": "missing",
       "summary": "missing"
     },
-    "sourceFileIds": [],
-    "lectureFileIds": [],
-    "recitationFileIds": [],
+    "sourceFileIds": [
+      "lecture-lecture-10-group-2-calculus-2-2026",
+      "recitation-recitation-10-hebrew"
+    ],
+    "lectureFileIds": [
+      "lecture-lecture-10-group-2-calculus-2-2026"
+    ],
+    "recitationFileIds": [
+      "recitation-recitation-10-hebrew"
+    ],
     "homeworkFileIds": [],
     "summaryFileIds": [],
-    "topicCoverage": [],
+    "topicCoverage": [
+      "גבולות",
+      "טורים",
+      "סדרות"
+    ],
     "examRelevance": "unknown",
     "masteryStatus": "not_started"
   },

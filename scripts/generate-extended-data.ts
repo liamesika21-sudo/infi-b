@@ -211,6 +211,29 @@ const RECITATION_META: Record<number, {
       "טורי מקלורן עיקריים: עליך לשנן eˣ, sin x, cos x, ln(1+x), 1/(1-x)",
     ],
   },
+  10: {
+    mainThemes: ["טורי טיילור", "סכומי טורים", "התכנסות של טורי פונקציות"],
+    practicesLecture: 9,
+    whatWasPracticed: "המשך עבודה עם טורי חזקות וטיילור: זיהוי מבנה, חישוב תחומי התכנסות, שימוש בגזירה/אינטגרציה של טור, והכנה למעבר לסדרות וטורי פונקציות.",
+    keyTechniques: ["זיהוי טור חזקות", "בדיקת קצוות", "גזירה ואינטגרציה איבר-איבר", "שימוש בטורי מקלורן ידועים"],
+    examRelevance: "critical",
+    mustPractice: [
+      "לזהות אם ביטוי הוא טור חזקות או לא",
+      "למצוא $x_0$, מקדמים ורדיוס התכנסות",
+      "לבדוק קצוות אחרי כל פעולה על טור",
+      "לחשב סכומים באמצעות טורי מקלורן מוכרים",
+    ],
+    commonMistakes: [
+      "בלבול בין המקדם $a_n$ לבין הצבה של $n$ בביטוי",
+      "התייחסות לביטויים עם חזקות שליליות או $\\sin x$ כטורי חזקות",
+      "שכחה שהרדיוס נשמר בגזירה/אינטגרציה אבל הקצוות לא בהכרח",
+    ],
+    conclusions: [
+      "טור חזקות הוא פולינום אינסופי סביב מרכז $x_0$ — קודם מזהים את הצורה",
+      "בתוך הרדיוס יש התכנסות בהחלט; בקצוות חייבים בדיקה נפרדת",
+      "טורי מקלורן בסיסיים הם כלי חישוב, לא רק נוסחאות לשינון",
+    ],
+  },
 };
 
 // ─── Lecture meta ─────────────────────────────────────────────────────────
@@ -320,6 +343,15 @@ const LECTURE_META: Record<number, {
     dataQuality: "good",
     summarySourceFile: "calculus2_week9_RTL_polished.pdf",
   },
+  10: {
+    title: "סדרות וטורי פונקציות — התכנסות נקודתית ובמידה שווה",
+    mainTopics: ["סדרות פונקציות", "טורי פונקציות", "התכנסות נקודתית", "התכנסות במידה שווה", "קריטריון ויירשטראס"],
+    keyDefinitions: ["התכנסות נקודתית של סדרת פונקציות", "התכנסות במידה שווה", "טור פונקציות"],
+    keyTheorems: ["קריטריון קושי להתכנסות במידה שווה", "מבחן Weierstrass לטורי פונקציות", "החלפת גבול עם אינטגרל/נגזרת בתנאים"],
+    keyFormulas: ["sup |f_n(x)-f(x)| → 0", "Σ M_n מתכנס ו-|f_n(x)|≤M_n ⇒ Σf_n מתכנס במידה שווה"],
+    examNotes: ["התכנסות במידה שווה היא נושא הוכח/הפרך קלאסי", "חשוב להבדיל בין בדיקה נקודתית לכל $x$ לבין חסם אחיד על כל התחום"],
+    dataQuality: "partial",
+  },
 };
 
 // ─── Main ─────────────────────────────────────────────────────────────────
@@ -377,7 +409,7 @@ async function main() {
   await writeJson("recitation-summaries.json", recitationSummaries);
 
   // ── 2. Lecture summaries ──
-  const lectureNumbers = [...new Set([...lectureAnalysis.map((l) => l.lectureNumber), ...[1,2,3,4,5,6,7,8,9]])].sort((a,b)=>a-b);
+  const lectureNumbers = [...new Set([...lectureAnalysis.map((l) => l.lectureNumber), ...[1,2,3,4,5,6,7,8,9,10]])].sort((a,b)=>a-b);
 
   const lectureSummaries = lectureNumbers.map((lectureNumber) => {
     const analysisData = lectureAnalysis.find((l) => l.lectureNumber === lectureNumber);

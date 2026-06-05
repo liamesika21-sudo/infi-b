@@ -443,6 +443,69 @@
     "confidence": 0.58
   },
   {
+    "id": "lecture-lecture-10-group-2-calculus-2-2026-formula-1",
+    "title": "נוסחה/ביטוי 1",
+    "plainText": "88 f left x right e x is macln plaa Gas 1",
+    "topicIds": [
+      "טורים",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "lecture-lecture-10-group-2-calculus-2-2026"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "lecture-lecture-10-group-2-calculus-2-2026",
+        "filename": "Lecture 10 group 2 calculus 2 2026.pdf",
+        "text": "88 f left x right e x is macln plaa Gas 1"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.38
+  },
+  {
+    "id": "lecture-lecture-10-group-2-calculus-2-2026-formula-2",
+    "title": "נוסחה/ביטוי 2",
+    "plainText": "88 f left x right sin x is japan as Gp",
+    "topicIds": [
+      "טורים",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "lecture-lecture-10-group-2-calculus-2-2026"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "lecture-lecture-10-group-2-calculus-2-2026",
+        "filename": "Lecture 10 group 2 calculus 2 2026.pdf",
+        "text": "88 f left x right sin x is japan as Gp"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.38
+  },
+  {
+    "id": "lecture-lecture-10-group-2-calculus-2-2026-formula-3",
+    "title": "נוסחה/ביטוי 3",
+    "plainText": "88 f left x right cos x is men as Gp",
+    "topicIds": [
+      "טורים",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "lecture-lecture-10-group-2-calculus-2-2026"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "lecture-lecture-10-group-2-calculus-2-2026",
+        "filename": "Lecture 10 group 2 calculus 2 2026.pdf",
+        "text": "88 f left x right cos x is men as Gp"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.38
+  },
+  {
     "id": "lecture-lecture-2-group-1-calculus-2-2026-formula-1",
     "title": "נוסחה/ביטוי 1",
     "plainText": "Scostax sinx C",
@@ -4323,832 +4386,6 @@
     "confidence": 0.38
   },
   {
-    "id": "summerize-calculus2-week9-rtl-polished-formula-1",
-    "title": "נוסחה/ביטוי 1",
-    "plainText": "Σ(n=0→∞) aₙ · (x − x₀)ⁿ = a₀ + a₁(x−x₀) + a₂(x−x₀)² + ...",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בתנאי",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "sourceFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "summerize-calculus2-week9-rtl-polished",
-        "filename": "calculus2_week9_RTL_polished.pdf",
-        "text": "Σ(n=0→∞) aₙ · (x − x₀)ⁿ = a₀ + a₁(x−x₀) + a₂(x−x₀)² + ...",
-        "startOffset": 161,
-        "endOffset": 218
-      }
-    ],
-    "examImportance": "medium",
-    "confidence": 0.58
-  },
-  {
-    "id": "summerize-calculus2-week9-rtl-polished-formula-2",
-    "title": "נוסחה/ביטוי 2",
-    "plainText": ":נקודת עוגן הטור תמיד מתכנס ב־ x = x₀ לערך , a₀ .",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בתנאי",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "sourceFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "summerize-calculus2-week9-rtl-polished",
-        "filename": "calculus2_week9_RTL_polished.pdf",
-        "text": ":נקודת עוגן הטור תמיד מתכנס ב־ x = x₀ לערך , a₀ ."
-      }
-    ],
-    "examImportance": "medium",
-    "confidence": 0.58
-  },
-  {
-    "id": "summerize-calculus2-week9-rtl-polished-formula-3",
-    "title": "נוסחה/ביטוי 3",
-    "plainText": "R = 0 הטור מתכנס רק ב־ x = x₀ .מתבדר — בכל נקודה אחרת .",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בתנאי",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "sourceFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "summerize-calculus2-week9-rtl-polished",
-        "filename": "calculus2_week9_RTL_polished.pdf",
-        "text": "R = 0 הטור מתכנס רק ב־ x = x₀ .מתבדר — בכל נקודה אחרת ."
-      }
-    ],
-    "examImportance": "medium",
-    "confidence": 0.58
-  },
-  {
-    "id": "summerize-calculus2-week9-rtl-polished-formula-4",
-    "title": "נוסחה/ביטוי 4",
-    "plainText": "0 < R < ∞ הטור מתכנס בהחלט ב־ (x₀−R, x₀+R) .את הקצוות בודקים בנפרד .ומתבדר מחוץ לקטע ,",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בתנאי",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "sourceFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "summerize-calculus2-week9-rtl-polished",
-        "filename": "calculus2_week9_RTL_polished.pdf",
-        "text": "0 < R < ∞ הטור מתכנס בהחלט ב־ (x₀−R, x₀+R) .את הקצוות בודקים בנפרד .ומתבדר מחוץ לקטע ,"
-      }
-    ],
-    "examImportance": "medium",
-    "confidence": 0.58
-  },
-  {
-    "id": "summerize-calculus2-week9-rtl-polished-formula-5",
-    "title": "נוסחה/ביטוי 5",
-    "plainText": "R = ∞ הטור מתכנס בהחלט לכל x ∈ ℝ .",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בתנאי",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "sourceFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "summerize-calculus2-week9-rtl-polished",
-        "filename": "calculus2_week9_RTL_polished.pdf",
-        "text": "R = ∞ הטור מתכנס בהחלט לכל x ∈ ℝ ."
-      }
-    ],
-    "examImportance": "medium",
-    "confidence": 0.58
-  },
-  {
-    "id": "summerize-calculus2-week9-rtl-polished-formula-6",
-    "title": "נוסחה/ביטוי 6",
-    "plainText": "x = x₀ ± R :קצוות .חייבים לבדוק כל קצה בנפרד כתרגיל טורים רגיל .אין כלל קבוע",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בתנאי",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "sourceFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "summerize-calculus2-week9-rtl-polished",
-        "filename": "calculus2_week9_RTL_polished.pdf",
-        "text": "x = x₀ ± R :קצוות .חייבים לבדוק כל קצה בנפרד כתרגיל טורים רגיל .אין כלל קבוע"
-      }
-    ],
-    "examImportance": "medium",
-    "confidence": 0.58
-  },
-  {
-    "id": "summerize-calculus2-week9-rtl-polished-formula-7",
-    "title": "נוסחה/ביטוי 7",
-    "plainText": "L = lim(n→∞) ⁿ√|aₙ|",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בתנאי",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "sourceFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "summerize-calculus2-week9-rtl-polished",
-        "filename": "calculus2_week9_RTL_polished.pdf",
-        "text": "L = lim(n→∞) ⁿ√|aₙ|",
-        "startOffset": 805,
-        "endOffset": 824
-      }
-    ],
-    "examImportance": "medium",
-    "confidence": 0.58
-  },
-  {
-    "id": "summerize-calculus2-week9-rtl-polished-formula-8",
-    "title": "נוסחה/ביטוי 8",
-    "plainText": "L = 0 → R = ∞ | L = ∞ → R = 0 | 0 < L < ∞ → R = 1/L",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בתנאי",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "sourceFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "summerize-calculus2-week9-rtl-polished",
-        "filename": "calculus2_week9_RTL_polished.pdf",
-        "text": "L = 0 → R = ∞ | L = ∞ → R = 0 | 0 < L < ∞ → R = 1/L"
-      }
-    ],
-    "examImportance": "medium",
-    "confidence": 0.58
-  },
-  {
-    "id": "summerize-calculus2-week9-rtl-polished-formula-9",
-    "title": "נוסחה/ביטוי 9",
-    "plainText": "L = lim(n→∞) |aₙ₊₁ / aₙ|",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בתנאי",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "sourceFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "summerize-calculus2-week9-rtl-polished",
-        "filename": "calculus2_week9_RTL_polished.pdf",
-        "text": "L = lim(n→∞) |aₙ₊₁ / aₙ|",
-        "startOffset": 887,
-        "endOffset": 911
-      }
-    ],
-    "examImportance": "medium",
-    "confidence": 0.58
-  },
-  {
-    "id": "summerize-calculus2-week9-rtl-polished-formula-10",
-    "title": "נוסחה/ביטוי 10",
-    "plainText": ":אותם חוקים בדיוק L=0→R=∞ , L=∞→R=0 , 0<L<∞→R=1/L .",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בתנאי",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "sourceFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "summerize-calculus2-week9-rtl-polished",
-        "filename": "calculus2_week9_RTL_polished.pdf",
-        "text": ":אותם חוקים בדיוק L=0→R=∞ , L=∞→R=0 , 0<L<∞→R=1/L ."
-      }
-    ],
-    "examImportance": "medium",
-    "confidence": 0.58
-  },
-  {
-    "id": "summerize-calculus2-week9-rtl-polished-formula-11",
-    "title": "נוסחה/ביטוי 11",
-    "plainText": ":לבדוק קצה שמאלי x = x₀ − R .כתרגיל טורים רגיל",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בתנאי",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "sourceFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "summerize-calculus2-week9-rtl-polished",
-        "filename": "calculus2_week9_RTL_polished.pdf",
-        "text": ":לבדוק קצה שמאלי x = x₀ − R .כתרגיל טורים רגיל"
-      }
-    ],
-    "examImportance": "medium",
-    "confidence": 0.58
-  },
-  {
-    "id": "summerize-calculus2-week9-rtl-polished-formula-12",
-    "title": "נוסחה/ביטוי 12",
-    "plainText": ":לבדוק קצה ימני x = x₀ + R .כתרגיל טורים רגיל",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בתנאי",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "sourceFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "summerize-calculus2-week9-rtl-polished",
-        "filename": "calculus2_week9_RTL_polished.pdf",
-        "text": ":לבדוק קצה ימני x = x₀ + R .כתרגיל טורים רגיל"
-      }
-    ],
-    "examImportance": "medium",
-    "confidence": 0.58
-  },
-  {
-    "id": "summerize-calculus2-week9-rtl-polished-formula-13",
-    "title": "נוסחה/ביטוי 13",
-    "plainText": "sin(1/n) 0 ליד :לחפש שקילות אסימפטוטית sin(1/n) ~ 1/n ולכן , sin²(1/n) ~ 1/n² .",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בתנאי",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "sourceFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "summerize-calculus2-week9-rtl-polished",
-        "filename": "calculus2_week9_RTL_polished.pdf",
-        "text": "sin(1/n) 0 ליד :לחפש שקילות אסימפטוטית sin(1/n) ~ 1/n ולכן , sin²(1/n) ~ 1/n² ."
-      }
-    ],
-    "examImportance": "medium",
-    "confidence": 0.38
-  },
-  {
-    "id": "summerize-calculus2-week9-rtl-polished-formula-14",
-    "title": "נוסחה/ביטוי 14",
-    "plainText": "סכום שני טורים כאשר R₁ ≠ R₂ לרוב הרדיוס של הסכום הוא , min{R₁,R₂} כאשר . R₁ = R₂ .אי אפשר להסיק מראש —",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בתנאי",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "sourceFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "summerize-calculus2-week9-rtl-polished",
-        "filename": "calculus2_week9_RTL_polished.pdf",
-        "text": "סכום שני טורים כאשר R₁ ≠ R₂ לרוב הרדיוס של הסכום הוא , min{R₁,R₂} כאשר . R₁ = R₂ .אי אפשר להסיק מראש —"
-      }
-    ],
-    "examImportance": "medium",
-    "confidence": 0.58
-  },
-  {
-    "id": "summerize-calculus2-week9-rtl-polished-formula-15",
-    "title": "נוסחה/ביטוי 15",
-    "plainText": "Σ(n=0→∞) aₙ · (x−x₀)ⁿ = a₀ + a₁(x−x₀) + a₂(x−x₀)² + ...",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בתנאי",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "sourceFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "summerize-calculus2-week9-rtl-polished",
-        "filename": "calculus2_week9_RTL_polished.pdf",
-        "text": "Σ(n=0→∞) aₙ · (x−x₀)ⁿ = a₀ + a₁(x−x₀) + a₂(x−x₀)² + ...",
-        "startOffset": 2083,
-        "endOffset": 2138
-      }
-    ],
-    "examImportance": "medium",
-    "confidence": 0.58
-  },
-  {
-    "id": "summerize-calculus2-week9-rtl-polished-formula-16",
-    "title": "נוסחה/ביטוי 16",
-    "plainText": ":ניסוח הטור תמיד מתכנס בנקודה x = x₀ לערך , a₀ .",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בתנאי",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "sourceFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "summerize-calculus2-week9-rtl-polished",
-        "filename": "calculus2_week9_RTL_polished.pdf",
-        "text": ":ניסוח הטור תמיד מתכנס בנקודה x = x₀ לערך , a₀ ."
-      }
-    ],
-    "examImportance": "medium",
-    "confidence": 0.58
-  },
-  {
-    "id": "summerize-calculus2-week9-rtl-polished-formula-17",
-    "title": "נוסחה/ביטוי 17",
-    "plainText": "aₙ · (x₀ − x₀)ⁿ = aₙ · 0ⁿ = 0 for n ≥ 1",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בתנאי",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "sourceFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "summerize-calculus2-week9-rtl-polished",
-        "filename": "calculus2_week9_RTL_polished.pdf",
-        "text": "aₙ · (x₀ − x₀)ⁿ = aₙ · 0ⁿ = 0 for n ≥ 1",
-        "startOffset": 2396,
-        "endOffset": 2435
-      }
-    ],
-    "examImportance": "medium",
-    "confidence": 0.58
-  },
-  {
-    "id": "summerize-calculus2-week9-rtl-polished-formula-18",
-    "title": "נוסחה/ביטוי 18",
-    "plainText": "R = sup { r ≥ 0 : the series converges absolutely for every x ∈ [x₀−r, x₀+r] }",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בתנאי",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "sourceFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "summerize-calculus2-week9-rtl-polished",
-        "filename": "calculus2_week9_RTL_polished.pdf",
-        "text": "R = sup { r ≥ 0 : the series converges absolutely for every x ∈ [x₀−r, x₀+r] }",
-        "startOffset": 2656,
-        "endOffset": 2734
-      }
-    ],
-    "examImportance": "medium",
-    "confidence": 0.58
-  },
-  {
-    "id": "summerize-calculus2-week9-rtl-polished-formula-19",
-    "title": "נוסחה/ביטוי 19",
-    "plainText": ":ניסוח לכל טור חזקות קיים R ∈ [0,∞] :כך ש",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בתנאי",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "sourceFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "summerize-calculus2-week9-rtl-polished",
-        "filename": "calculus2_week9_RTL_polished.pdf",
-        "text": ":ניסוח לכל טור חזקות קיים R ∈ [0,∞] :כך ש"
-      }
-    ],
-    "examImportance": "medium",
-    "confidence": 0.58
-  },
-  {
-    "id": "summerize-calculus2-week9-rtl-polished-formula-20",
-    "title": "נוסחה/ביטוי 20",
-    "plainText": "R = ∞ הטור מתכנס בהחלט לכל x ∈ ℝ .",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בתנאי",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "sourceFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "summerize-calculus2-week9-rtl-polished",
-        "filename": "calculus2_week9_RTL_polished.pdf",
-        "text": "R = ∞ הטור מתכנס בהחלט לכל x ∈ ℝ ."
-      }
-    ],
-    "examImportance": "medium",
-    "confidence": 0.58
-  },
-  {
-    "id": "summerize-calculus2-week9-rtl-polished-formula-21",
-    "title": "נוסחה/ביטוי 21",
-    "plainText": "R = 0 הטור מתכנס רק במרכז x = x₀ ומתבדר לכל , x ≠ x₀ .",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בתנאי",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "sourceFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "summerize-calculus2-week9-rtl-polished",
-        "filename": "calculus2_week9_RTL_polished.pdf",
-        "text": "R = 0 הטור מתכנס רק במרכז x = x₀ ומתבדר לכל , x ≠ x₀ ."
-      }
-    ],
-    "examImportance": "medium",
-    "confidence": 0.58
-  },
-  {
-    "id": "summerize-calculus2-week9-rtl-polished-formula-22",
-    "title": "נוסחה/ביטוי 22",
-    "plainText": "0 < R < ∞ |x−x₀| < R ;מתכנס בהחלט ⇒ |x−x₀| > R ;מתבדר ⇒ |x−x₀| = R .לבדוק בנפרד ⇒",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בתנאי",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "sourceFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "summerize-calculus2-week9-rtl-polished",
-        "filename": "calculus2_week9_RTL_polished.pdf",
-        "text": "0 < R < ∞ |x−x₀| < R ;מתכנס בהחלט ⇒ |x−x₀| > R ;מתבדר ⇒ |x−x₀| = R .לבדוק בנפרד ⇒"
-      }
-    ],
-    "examImportance": "medium",
-    "confidence": 0.58
-  },
-  {
-    "id": "summerize-calculus2-week9-rtl-polished-formula-23",
-    "title": "נוסחה/ביטוי 23",
-    "plainText": "L = lim(n→∞) ⁿ√|aₙ|",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בתנאי",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "sourceFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "summerize-calculus2-week9-rtl-polished",
-        "filename": "calculus2_week9_RTL_polished.pdf",
-        "text": "L = lim(n→∞) ⁿ√|aₙ|",
-        "startOffset": 805,
-        "endOffset": 824
-      }
-    ],
-    "examImportance": "medium",
-    "confidence": 0.58
-  },
-  {
-    "id": "summerize-calculus2-week9-rtl-polished-formula-24",
-    "title": "נוסחה/ביטוי 24",
-    "plainText": "L = 0 → R = ∞ | L = ∞ → R = 0 | 0<L<∞ → R = 1/L",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בתנאי",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "sourceFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "summerize-calculus2-week9-rtl-polished",
-        "filename": "calculus2_week9_RTL_polished.pdf",
-        "text": "L = 0 → R = ∞ | L = ∞ → R = 0 | 0<L<∞ → R = 1/L"
-      }
-    ],
-    "examImportance": "medium",
-    "confidence": 0.58
-  },
-  {
-    "id": "summerize-calculus2-week9-rtl-polished-formula-25",
-    "title": "נוסחה/ביטוי 25",
-    "plainText": ":לפי מבחן השורש ⁿ√|aₙ(x−x₀)ⁿ| = ⁿ√|aₙ| · |x−x₀| → L·|x−x₀| לכן ההתכנסות מתקבלת כאשר הביטוי קטן .",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בתנאי",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "sourceFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "summerize-calculus2-week9-rtl-polished",
-        "filename": "calculus2_week9_RTL_polished.pdf",
-        "text": ":לפי מבחן השורש ⁿ√|aₙ(x−x₀)ⁿ| = ⁿ√|aₙ| · |x−x₀| → L·|x−x₀| לכן ההתכנסות מתקבלת כאשר הביטוי קטן ."
-      }
-    ],
-    "examImportance": "medium",
-    "confidence": 0.58
-  },
-  {
-    "id": "summerize-calculus2-week9-rtl-polished-formula-26",
-    "title": "נוסחה/ביטוי 26",
-    "plainText": "L = lim(n→∞) |aₙ₊₁ / aₙ|",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בתנאי",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "sourceFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "summerize-calculus2-week9-rtl-polished",
-        "filename": "calculus2_week9_RTL_polished.pdf",
-        "text": "L = lim(n→∞) |aₙ₊₁ / aₙ|",
-        "startOffset": 887,
-        "endOffset": 911
-      }
-    ],
-    "examImportance": "medium",
-    "confidence": 0.58
-  },
-  {
-    "id": "summerize-calculus2-week9-rtl-polished-formula-27",
-    "title": "נוסחה/ביטוי 27",
-    "plainText": "אז R = 1/L .לפי אותם חוקים של מבחן השורש",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בתנאי",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "sourceFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "summerize-calculus2-week9-rtl-polished",
-        "filename": "calculus2_week9_RTL_polished.pdf",
-        "text": "אז R = 1/L .לפי אותם חוקים של מבחן השורש"
-      }
-    ],
-    "examImportance": "medium",
-    "confidence": 0.58
-  },
-  {
-    "id": "summerize-calculus2-week9-rtl-polished-formula-28",
-    "title": "נוסחה/ביטוי 28",
-    "plainText": "מבחן המנה נוח כשיש עצרת n! מבחן השורש נוח כשיש .או מכפלות n√ או nⁿ .",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בתנאי",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "sourceFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "summerize-calculus2-week9-rtl-polished",
-        "filename": "calculus2_week9_RTL_polished.pdf",
-        "text": "מבחן המנה נוח כשיש עצרת n! מבחן השורש נוח כשיש .או מכפלות n√ או nⁿ ."
-      }
-    ],
-    "examImportance": "medium",
-    "confidence": 0.58
-  },
-  {
-    "id": "summerize-calculus2-week9-rtl-polished-formula-29",
-    "title": "נוסחה/ביטוי 29",
-    "plainText": ":זהירות כאשר R₁ = R₂ .יכול לקרות ביטול בין המקדמים .אי אפשר להסיק מראש מה הרדיוס של הסכום —",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בתנאי",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "sourceFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "summerize-calculus2-week9-rtl-polished",
-        "filename": "calculus2_week9_RTL_polished.pdf",
-        "text": ":זהירות כאשר R₁ = R₂ .יכול לקרות ביטול בין המקדמים .אי אפשר להסיק מראש מה הרדיוס של הסכום —"
-      }
-    ],
-    "examImportance": "medium",
-    "confidence": 0.58
-  },
-  {
-    "id": "summerize-calculus2-week9-rtl-polished-formula-30",
-    "title": "נוסחה/ביטוי 30",
-    "plainText": "Σ(−1)ⁿx²ⁿ t = −x² |t|<1 → −1<x<1 :והסכום , 1/(1+x²) .",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בתנאי",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "sourceFileIds": [
-      "summerize-calculus2-week9-rtl-polished"
-    ],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "summerize-calculus2-week9-rtl-polished",
-        "filename": "calculus2_week9_RTL_polished.pdf",
-        "text": "Σ(−1)ⁿx²ⁿ t = −x² |t|<1 → −1<x<1 :והסכום , 1/(1+x²) ."
-      }
-    ],
-    "examImportance": "medium",
-    "confidence": 0.58
-  },
-  {
     "id": "summerize-note-27-may-2026-2-formula-1",
     "title": "נוסחה/ביטוי 1",
     "plainText": "HOpas fionled begic17347sosinceye",
@@ -5567,6 +4804,5178 @@
         "text": "(1) n+1 a n = 1 + 0 + 1",
         "startOffset": 1777,
         "endOffset": 1800
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1-formula-1",
+    "title": "נוסחה/ביטוי 1",
+    "plainText": "0 ≤ k ∈ Z (a ) n n=k",
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+        "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+        "text": "0 ≤ k ∈ Z (a ) n n=k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1-formula-2",
+    "title": "נוסחה/ביטוי 2",
+    "plainText": "a : {n ∈ Z : n ≥ k} → R",
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+        "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+        "text": "a : {n ∈ Z : n ≥ k} → R",
+        "startOffset": 950,
+        "endOffset": 973
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.38
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1-formula-3",
+    "title": "נוסחה/ביטוי 3",
+    "plainText": "n ≥ k an n",
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+        "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+        "text": "n ≥ k an n"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.38
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1-formula-4",
+    "title": "נוסחה/ביטוי 4",
+    "plainText": "a = n a(n)",
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+        "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+        "text": "a = n a(n)"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1-formula-5",
+    "title": "נוסחה/ביטוי 5",
+    "plainText": "(a ) n n=0",
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+        "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+        "text": "(a ) n n=0"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1-formula-6",
+    "title": "נוסחה/ביטוי 6",
+    "plainText": "a = n (−1) ∀n ≥n 0",
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+        "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+        "text": "a = n (−1) ∀n ≥n 0"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1-formula-7",
+    "title": "נוסחה/ביטוי 7",
+    "plainText": "a = 0 1, a = 1 −1, a = 2 1, a = 3 −1, …",
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+        "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+        "text": "a = 0 1, a = 1 −1, a = 2 1, a = 3 −1, …"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1-formula-8",
+    "title": "נוסחה/ביטוי 8",
+    "plainText": "(F ) n n=0",
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+        "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+        "text": "(F ) n n=0"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1-formula-9",
+    "title": "נוסחה/ביטוי 9",
+    "plainText": "F = n F + n−1 F ∀n ≥ n−2 2",
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+        "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+        "text": "F = n F + n−1 F ∀n ≥ n−2 2"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1-formula-10",
+    "title": "נוסחה/ביטוי 10",
+    "plainText": "F = 0 0, F = 1 1",
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+        "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+        "text": "F = 0 0, F = 1 1"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1-formula-11",
+    "title": "נוסחה/ביטוי 11",
+    "plainText": "0 ≤ k , k ∈ 1 2 Z (a ) n n=k1",
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+        "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+        "text": "0 ≤ k , k ∈ 1 2 Z (a ) n n=k1"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1-formula-12",
+    "title": "נוסחה/ביטוי 12",
+    "plainText": "(b ) n n=k2",
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+        "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+        "text": "(b ) n n=k2"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1-formula-13",
+    "title": "נוסחה/ביטוי 13",
+    "plainText": "(a ) = n n=k1",
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+        "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+        "text": "(a ) = n n=k1"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1-formula-14",
+    "title": "נוסחה/ביטוי 14",
+    "plainText": "∞ (b ) n n=k2",
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+        "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+        "text": "∞ (b ) n n=k2"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1-formula-15",
+    "title": "נוסחה/ביטוי 15",
+    "plainText": "k = 1 k2",
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+        "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+        "text": "k = 1 k2"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1-formula-16",
+    "title": "נוסחה/ביטוי 16",
+    "plainText": "n ≥ k1 a = n bn",
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+        "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+        "text": "n ≥ k1 a = n bn"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1-formula-17",
+    "title": "נוסחה/ביטוי 17",
+    "plainText": "0 ≤ k ∈ Z (a ) n n=k",
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+        "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+        "text": "0 ≤ k ∈ Z (a ) n n=k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1-formula-18",
+    "title": "נוסחה/ביטוי 18",
+    "plainText": "L (a ) n n=k",
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+        "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+        "text": "L (a ) n n=k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1-formula-19",
+    "title": "נוסחה/ביטוי 19",
+    "plainText": "L lim a = n→∞ n L",
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+        "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+        "text": "L lim a = n→∞ n L"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1-formula-20",
+    "title": "נוסחה/ביטוי 20",
+    "plainText": "ε > 0 N ∈ N n ≥ N",
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+        "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+        "text": "ε > 0 N ∈ N n ≥ N"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.38
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1-formula-21",
+    "title": "נוסחה/ביטוי 21",
+    "plainText": "lim f (x) = x→∞ L",
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+        "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+        "text": "lim f (x) = x→∞ L"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1-formula-22",
+    "title": "נוסחה/ביטוי 22",
+    "plainText": "0 ≤ k ∈ Z (a ) n n=k",
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+        "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+        "text": "0 ≤ k ∈ Z (a ) n n=k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1-formula-23",
+    "title": "נוסחה/ביטוי 23",
+    "plainText": "(a ) n n=k",
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+        "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+        "text": "(a ) n n=k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1-formula-24",
+    "title": "נוסחה/ביטוי 24",
+    "plainText": "∞ M ∈ R n ≥ k a ≤ n M",
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+        "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+        "text": "∞ M ∈ R n ≥ k a ≤ n M"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1-formula-25",
+    "title": "נוסחה/ביטוי 25",
+    "plainText": "(a ) n n=k",
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+        "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+        "text": "(a ) n n=k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1-formula-26",
+    "title": "נוסחה/ביטוי 26",
+    "plainText": "∞ m ∈ R n ≥ k a ≥ n m",
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+        "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+        "text": "∞ m ∈ R n ≥ k a ≥ n m"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1-formula-27",
+    "title": "נוסחה/ביטוי 27",
+    "plainText": "(a ) n n=k",
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+        "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+        "text": "(a ) n n=k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1-formula-28",
+    "title": "נוסחה/ביטוי 28",
+    "plainText": "M > 0 n ≥ k ∣a ∣ ≤ n M",
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+        "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+        "text": "M > 0 n ≥ k ∣a ∣ ≤ n M"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.38
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1-formula-29",
+    "title": "נוסחה/ביטוי 29",
+    "plainText": "(a ) n n=k",
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+        "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+        "text": "(a ) n n=k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1-formula-30",
+    "title": "נוסחה/ביטוי 30",
+    "plainText": "n ∈ N n ≥ N",
+    "topicIds": [
+      "גבולות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
+        "filename": "סיכום אינפי 2 הרצאה 1.pdf",
+        "text": "n ∈ N n ≥ N"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.38
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2-formula-1",
+    "title": "נוסחה/ביטוי 1",
+    "plainText": "F (x) =′ f (x) ∀x ∈ I",
+    "topicIds": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+        "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+        "text": "F (x) =′ f (x) ∀x ∈ I"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2-formula-2",
+    "title": "נוסחה/ביטוי 2",
+    "plainText": "f (x) dx = ∫ {F (x) + C : C ∈ R}",
+    "topicIds": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+        "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+        "text": "f (x) dx = ∫ {F (x) + C : C ∈ R}"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2-formula-3",
+    "title": "נוסחה/ביטוי 3",
+    "plainText": "cos x dx = ∫ sin x + C",
+    "topicIds": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+        "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+        "text": "cos x dx = ∫ sin x + C"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2-formula-4",
+    "title": "נוסחה/ביטוי 4",
+    "plainText": "sin x dx = ∫ − cos x + C",
+    "topicIds": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+        "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+        "text": "sin x dx = ∫ − cos x + C"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2-formula-5",
+    "title": "נוסחה/ביטוי 5",
+    "plainText": "x dx = ∫ α +α+1",
+    "topicIds": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+        "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+        "text": "x dx = ∫ α +α+1"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2-formula-6",
+    "title": "נוסחה/ביטוי 6",
+    "plainText": "C α =  −1",
+    "topicIds": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+        "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+        "text": "C α =  −1"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2-formula-7",
+    "title": "נוסחה/ביטוי 7",
+    "plainText": "= ∫ 1+x2",
+    "topicIds": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+        "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+        "text": "= ∫ 1+x2"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2-formula-8",
+    "title": "נוסחה/ביטוי 8",
+    "plainText": "= ∫ 1−x2",
+    "topicIds": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+        "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+        "text": "= ∫ 1−x2"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2-formula-9",
+    "title": "נוסחה/ביטוי 9",
+    "plainText": "dx arcsin x + C",
+    "topicIds": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+        "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+        "text": "dx arcsin x + C",
+        "startOffset": 1020,
+        "endOffset": 1035
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.38
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2-formula-10",
+    "title": "נוסחה/ביטוי 10",
+    "plainText": "F (x) = G(x) + C",
+    "topicIds": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+        "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+        "text": "F (x) = G(x) + C",
+        "startOffset": 1291,
+        "endOffset": 1307
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2-formula-11",
+    "title": "נוסחה/ביטוי 11",
+    "plainText": "h(x) = F (x) − G(x)",
+    "topicIds": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+        "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+        "text": "h(x) = F (x) − G(x)",
+        "startOffset": 1308,
+        "endOffset": 1327
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2-formula-12",
+    "title": "נוסחה/ביטוי 12",
+    "plainText": "h (x) =′ F (x) −′ G (x) =′ f (x) − f (x) = 0",
+    "topicIds": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+        "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+        "text": "h (x) =′ F (x) −′ G (x) =′ f (x) − f (x) = 0",
+        "startOffset": 1328,
+        "endOffset": 1372
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2-formula-13",
+    "title": "נוסחה/ביטוי 13",
+    "plainText": "h I C ∈ R h(x) = C",
+    "topicIds": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+        "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+        "text": "h I C ∈ R h(x) = C"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2-formula-14",
+    "title": "נוסחה/ביטוי 14",
+    "plainText": "F (x) = G(x) + C",
+    "topicIds": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+        "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+        "text": "F (x) = G(x) + C",
+        "startOffset": 1291,
+        "endOffset": 1307
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2-formula-15",
+    "title": "נוסחה/ביטוי 15",
+    "plainText": "(αf (x) + ∫ βg(x)) dx = α f (x) dx + ∫ β g(x) dx ∫",
+    "topicIds": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+        "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+        "text": "(αf (x) + ∫ βg(x)) dx = α f (x) dx + ∫ β g(x) dx ∫"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2-formula-16",
+    "title": "נוסחה/ביטוי 16",
+    "plainText": "u (x)v(x) dx = ∫ ′ u(x)v(x) − u(x)v (x) dx ∫ ′",
+    "topicIds": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+        "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+        "text": "u (x)v(x) dx = ∫ ′ u(x)v(x) − u(x)v (x) dx ∫ ′"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2-formula-17",
+    "title": "נוסחה/ביטוי 17",
+    "plainText": "(u(x)v(x)) =′ u (x)v(x) +′ u(x)v (x)′",
+    "topicIds": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+        "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+        "text": "(u(x)v(x)) =′ u (x)v(x) +′ u(x)v (x)′",
+        "startOffset": 1987,
+        "endOffset": 2024
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2-formula-18",
+    "title": "נוסחה/ביטוי 18",
+    "plainText": "u (x)v(x) =′ (u(x)v(x)) −′ u(x)v (x)′",
+    "topicIds": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+        "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+        "text": "u (x)v(x) =′ (u(x)v(x)) −′ u(x)v (x)′",
+        "startOffset": 2025,
+        "endOffset": 2062
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2-formula-19",
+    "title": "נוסחה/ביטוי 19",
+    "plainText": "u (x)v(x) dx = ∫ ′ u(x)v(x) − u(x)v (x) dx ∫ ′",
+    "topicIds": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+        "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+        "text": "u (x)v(x) dx = ∫ ′ u(x)v(x) − u(x)v (x) dx ∫ ′"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2-formula-20",
+    "title": "נוסחה/ביטוי 20",
+    "plainText": "f (g(x))g (x) dx = ∫ ′ F (g(x)) + C",
+    "topicIds": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+        "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+        "text": "f (g(x))g (x) dx = ∫ ′ F (g(x)) + C"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2-formula-21",
+    "title": "נוסחה/ביטוי 21",
+    "plainText": "t = g(x) dt = g (x)dx′",
+    "topicIds": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+        "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+        "text": "t = g(x) dt = g (x)dx′"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2-formula-22",
+    "title": "נוסחה/ביטוי 22",
+    "plainText": "xe dx = ∫ x2",
+    "topicIds": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+        "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+        "text": "xe dx = ∫ x2"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2-formula-23",
+    "title": "נוסחה/ביטוי 23",
+    "plainText": "x dx = ∫ α +",
+    "topicIds": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+        "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+        "text": "x dx = ∫ α +"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2-formula-24",
+    "title": "נוסחה/ביטוי 24",
+    "plainText": "C α =  −1",
+    "topicIds": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+        "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+        "text": "C α =  −1"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2-formula-25",
+    "title": "נוסחה/ביטוי 25",
+    "plainText": "= ∫ 1 + x2",
+    "topicIds": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+        "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+        "text": "= ∫ 1 + x2"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2-formula-26",
+    "title": "נוסחה/ביטוי 26",
+    "plainText": "xe dx ∫ x",
+    "topicIds": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+        "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+        "text": "xe dx ∫ x"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2-formula-27",
+    "title": "נוסחה/ביטוי 27",
+    "plainText": "xe dx = ∫ x xe −x e dx = ∫ x xe −x e +x C",
+    "topicIds": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+        "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+        "text": "xe dx = ∫ x xe −x e dx = ∫ x xe −x e +x C"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2-formula-28",
+    "title": "נוסחה/ביטוי 28",
+    "plainText": "x e dx ∫ 2 x",
+    "topicIds": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+        "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+        "text": "x e dx ∫ 2 x"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2-formula-29",
+    "title": "נוסחה/ביטוי 29",
+    "plainText": "x e dx = ∫ 2 x x e −2 x 2 xe dx ∫ x",
+    "topicIds": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+        "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+        "text": "x e dx = ∫ 2 x x e −2 x 2 xe dx ∫ x"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2-formula-30",
+    "title": "נוסחה/ביטוי 30",
+    "plainText": "= x e −2 x 2xe +x 2e +x C",
+    "topicIds": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
+        "filename": "סיכום אינפי 2 הרצאה 2.pdf",
+        "text": "= x e −2 x 2xe +x 2e +x C",
+        "startOffset": 2714,
+        "endOffset": 2739
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3-formula-1",
+    "title": "נוסחה/ביטוי 1",
+    "plainText": "(αf (x) + ∫a",
+    "topicIds": [
+      "טורים",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+        "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+        "text": "(αf (x) + ∫a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3-formula-2",
+    "title": "נוסחה/ביטוי 2",
+    "plainText": "βg(x)) dx = α f (x) dx + ∫a",
+    "topicIds": [
+      "טורים",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+        "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+        "text": "βg(x)) dx = α f (x) dx + ∫a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3-formula-3",
+    "title": "נוסחה/ביטוי 3",
+    "plainText": "β g(x) dx ∫a",
+    "topicIds": [
+      "טורים",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+        "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+        "text": "β g(x) dx ∫a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3-formula-4",
+    "title": "נוסחה/ביטוי 4",
+    "plainText": "f (x) dx = ∫a",
+    "topicIds": [
+      "טורים",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+        "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+        "text": "f (x) dx = ∫a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3-formula-5",
+    "title": "נוסחה/ביטוי 5",
+    "plainText": "f (x) dx + ∫a",
+    "topicIds": [
+      "טורים",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+        "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+        "text": "f (x) dx + ∫a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3-formula-6",
+    "title": "נוסחה/ביטוי 6",
+    "plainText": "f (x) dx ∫c",
+    "topicIds": [
+      "טורים",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+        "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+        "text": "f (x) dx ∫c"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3-formula-7",
+    "title": "נוסחה/ביטוי 7",
+    "plainText": "f [a, b] f (x) ≥ 0 x ∈ [a, b]",
+    "topicIds": [
+      "טורים",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+        "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+        "text": "f [a, b] f (x) ≥ 0 x ∈ [a, b]"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.38
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3-formula-8",
+    "title": "נוסחה/ביטוי 8",
+    "plainText": "f (x) dx ≥ ∫a",
+    "topicIds": [
+      "טורים",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+        "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+        "text": "f (x) dx ≥ ∫a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3-formula-9",
+    "title": "נוסחה/ביטוי 9",
+    "plainText": "f , g [a, b] f (x) ≤ g(x) x ∈ [a, b]",
+    "topicIds": [
+      "טורים",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+        "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+        "text": "f , g [a, b] f (x) ≤ g(x) x ∈ [a, b]"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.38
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3-formula-10",
+    "title": "נוסחה/ביטוי 10",
+    "plainText": "f (x) dx ≤ ∫a",
+    "topicIds": [
+      "טורים",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+        "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+        "text": "f (x) dx ≤ ∫a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3-formula-11",
+    "title": "נוסחה/ביטוי 11",
+    "plainText": "g(x) dx ∫a",
+    "topicIds": [
+      "טורים",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+        "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+        "text": "g(x) dx ∫a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3-formula-12",
+    "title": "נוסחה/ביטוי 12",
+    "plainText": "h = g − f h(x) ≥ 0 x ∈ [a, b]",
+    "topicIds": [
+      "טורים",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+        "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+        "text": "h = g − f h(x) ≥ 0 x ∈ [a, b]"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3-formula-13",
+    "title": "נוסחה/ביטוי 13",
+    "plainText": "0 ≤ h(x) dx = ∫a",
+    "topicIds": [
+      "טורים",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+        "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+        "text": "0 ≤ h(x) dx = ∫a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3-formula-14",
+    "title": "נוסחה/ביטוי 14",
+    "plainText": "g(x) dx − ∫a",
+    "topicIds": [
+      "טורים",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+        "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+        "text": "g(x) dx − ∫a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3-formula-15",
+    "title": "נוסחה/ביטוי 15",
+    "plainText": "f (x) dx ∫a",
+    "topicIds": [
+      "טורים",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+        "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+        "text": "f (x) dx ∫a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3-formula-16",
+    "title": "נוסחה/ביטוי 16",
+    "plainText": "f (x) dx ≤ ∫a",
+    "topicIds": [
+      "טורים",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+        "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+        "text": "f (x) dx ≤ ∫a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3-formula-17",
+    "title": "נוסחה/ביטוי 17",
+    "plainText": "g(x) dx ∫a",
+    "topicIds": [
+      "טורים",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+        "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+        "text": "g(x) dx ∫a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3-formula-18",
+    "title": "נוסחה/ביטוי 18",
+    "plainText": "f [a, b] m ≤ f (x) ≤ M x ∈ [a, b]",
+    "topicIds": [
+      "טורים",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+        "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+        "text": "f [a, b] m ≤ f (x) ≤ M x ∈ [a, b]"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.38
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3-formula-19",
+    "title": "נוסחה/ביטוי 19",
+    "plainText": "m(b − a) ≤ f (x) dx ≤ ∫a",
+    "topicIds": [
+      "טורים",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+        "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+        "text": "m(b − a) ≤ f (x) dx ≤ ∫a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3-formula-20",
+    "title": "נוסחה/ביטוי 20",
+    "plainText": "f (x) dx ≤ ∫a",
+    "topicIds": [
+      "טורים",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+        "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+        "text": "f (x) dx ≤ ∫a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3-formula-21",
+    "title": "נוסחה/ביטוי 21",
+    "plainText": "∣f (x)∣ dx ∫a",
+    "topicIds": [
+      "טורים",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+        "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+        "text": "∣f (x)∣ dx ∫a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3-formula-22",
+    "title": "נוסחה/ביטוי 22",
+    "plainText": "f (x) dx = ∫a",
+    "topicIds": [
+      "טורים",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+        "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+        "text": "f (x) dx = ∫a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3-formula-23",
+    "title": "נוסחה/ביטוי 23",
+    "plainText": "m ≤ f (x) ≤ M",
+    "topicIds": [
+      "טורים",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+        "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+        "text": "m ≤ f (x) ≤ M",
+        "startOffset": 1771,
+        "endOffset": 1784
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.38
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3-formula-24",
+    "title": "נוסחה/ביטוי 24",
+    "plainText": "m(b − a) ≤ f (x) dx ≤ ∫a",
+    "topicIds": [
+      "טורים",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+        "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+        "text": "m(b − a) ≤ f (x) dx ≤ ∫a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3-formula-25",
+    "title": "נוסחה/ביטוי 25",
+    "plainText": "f (c) = f (x) dx",
+    "topicIds": [
+      "טורים",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+        "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+        "text": "f (c) = f (x) dx"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3-formula-26",
+    "title": "נוסחה/ביטוי 26",
+    "plainText": "F (x) = f (t) dt ∫a",
+    "topicIds": [
+      "טורים",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+        "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+        "text": "F (x) = f (t) dt ∫a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3-formula-27",
+    "title": "נוסחה/ביטוי 27",
+    "plainText": "f K > 0 ∣f (t)∣ ≤ K t ∈ [a, b]",
+    "topicIds": [
+      "טורים",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+        "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+        "text": "f K > 0 ∣f (t)∣ ≤ K t ∈ [a, b]"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.38
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3-formula-28",
+    "title": "נוסחה/ביטוי 28",
+    "plainText": "∣F (x) − F (x )∣ = 0 f (t) dt ≤ ∫x0",
+    "topicIds": [
+      "טורים",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+        "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+        "text": "∣F (x) − F (x )∣ = 0 f (t) dt ≤ ∫x0"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3-formula-29",
+    "title": "נוסחה/ביטוי 29",
+    "plainText": "∣f (t)∣ dt ≤ ∫x0",
+    "topicIds": [
+      "טורים",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+        "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+        "text": "∣f (t)∣ dt ≤ ∫x0"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3-formula-30",
+    "title": "נוסחה/ביטוי 30",
+    "plainText": "ε > 0 δ = ε/K",
+    "topicIds": [
+      "טורים",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
+        "filename": "סיכום אינפי 2 הרצאה 3.pdf",
+        "text": "ε > 0 δ = ε/K"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4-formula-1",
+    "title": "נוסחה/ביטוי 1",
+    "plainText": "u (x)v(x) dx = ∫a",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "התכנסות-בהחלט",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+        "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+        "text": "u (x)v(x) dx = ∫a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4-formula-2",
+    "title": "נוסחה/ביטוי 2",
+    "plainText": "b u(x)v (x) dx ∫a",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "התכנסות-בהחלט",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+        "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+        "text": "b u(x)v (x) dx ∫a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4-formula-3",
+    "title": "נוסחה/ביטוי 3",
+    "plainText": "u (x)v(x) dx = ∫a",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "התכנסות-בהחלט",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+        "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+        "text": "u (x)v(x) dx = ∫a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4-formula-4",
+    "title": "נוסחה/ביטוי 4",
+    "plainText": "′ u (x)v(x) + u(x)v (x) − u(x)v (x) dx ∫a",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "התכנסות-בהחלט",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+        "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+        "text": "′ u (x)v(x) + u(x)v (x) − u(x)v (x) dx ∫a",
+        "startOffset": 805,
+        "endOffset": 846
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4-formula-5",
+    "title": "נוסחה/ביטוי 5",
+    "plainText": "= u (x)v(x) + u(x)v (x) dx − ∫a",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "התכנסות-בהחלט",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+        "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+        "text": "= u (x)v(x) + u(x)v (x) dx − ∫a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4-formula-6",
+    "title": "נוסחה/ביטוי 6",
+    "plainText": "[ ′ ′ ] u(x)v (x) dx ∫a",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "התכנסות-בהחלט",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+        "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+        "text": "[ ′ ′ ] u(x)v (x) dx ∫a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4-formula-7",
+    "title": "נוסחה/ביטוי 7",
+    "plainText": "= u(x)v(x) dx − ∫a",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "התכנסות-בהחלט",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+        "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+        "text": "= u(x)v(x) dx − ∫a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4-formula-8",
+    "title": "נוסחה/ביטוי 8",
+    "plainText": "( )′ u(x)v (x) dx ∫a",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "התכנסות-בהחלט",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+        "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+        "text": "( )′ u(x)v (x) dx ∫a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4-formula-9",
+    "title": "נוסחה/ביטוי 9",
+    "plainText": "= [u(x)v(x)] − a",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "התכנסות-בהחלט",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+        "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+        "text": "= [u(x)v(x)] − a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4-formula-10",
+    "title": "נוסחה/ביטוי 10",
+    "plainText": "b u(x)v (x) dx ∫a",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "התכנסות-בהחלט",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+        "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+        "text": "b u(x)v (x) dx ∫a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4-formula-11",
+    "title": "נוסחה/ביטוי 11",
+    "plainText": ":מתחילים מכלל המכפלה 1 (u(x)v(x)) =′ u (x)v(x) +′ u(x)v (x)′",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "התכנסות-בהחלט",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+        "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+        "text": ":מתחילים מכלל המכפלה 1 (u(x)v(x)) =′ u (x)v(x) +′ u(x)v (x)′"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4-formula-12",
+    "title": "נוסחה/ביטוי 12",
+    "plainText": "g(f (x)) ⋅ ∫a",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "התכנסות-בהחלט",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+        "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+        "text": "g(f (x)) ⋅ ∫a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4-formula-13",
+    "title": "נוסחה/ביטוי 13",
+    "plainText": "f (x) dx =′ g(t) dt ∫f (a)",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "התכנסות-בהחלט",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+        "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+        "text": "f (x) dx =′ g(t) dt ∫f (a)"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4-formula-14",
+    "title": "נוסחה/ביטוי 14",
+    "plainText": "x ln x dx = ∫1",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "התכנסות-בהחלט",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+        "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+        "text": "x ln x dx = ∫1"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4-formula-15",
+    "title": "נוסחה/ביטוי 15",
+    "plainText": "ln x − [ 2",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "התכנסות-בהחלט",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+        "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+        "text": "ln x − [ 2"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.38
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4-formula-16",
+    "title": "נוסחה/ביטוי 16",
+    "plainText": "= ln 3 −",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "התכנסות-בהחלט",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+        "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+        "text": "= ln 3 −",
+        "startOffset": 1723,
+        "endOffset": 1731
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4-formula-17",
+    "title": "נוסחה/ביטוי 17",
+    "plainText": "xe dx = ∫0",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "התכנסות-בהחלט",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+        "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+        "text": "xe dx = ∫0"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4-formula-18",
+    "title": "נוסחה/ביטוי 18",
+    "plainText": "dt e dt =",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "התכנסות-בהחלט",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+        "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+        "text": "dt e dt =",
+        "startOffset": 1785,
+        "endOffset": 1794
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4-formula-19",
+    "title": "נוסחה/ביטוי 19",
+    "plainText": "a ∈ R f : [a, ∞) → R",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "התכנסות-בהחלט",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+        "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+        "text": "a ∈ R f : [a, ∞) → R"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4-formula-20",
+    "title": "נוסחה/ביטוי 20",
+    "plainText": "f (x) dx ∫a",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "התכנסות-בהחלט",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+        "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+        "text": "f (x) dx ∫a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4-formula-21",
+    "title": "נוסחה/ביטוי 21",
+    "plainText": "f (x) dx = ∫a",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "התכנסות-בהחלט",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+        "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+        "text": "f (x) dx = ∫a"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4-formula-22",
+    "title": "נוסחה/ביטוי 22",
+    "plainText": "b ∈ R f : (−∞, b] → R",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "התכנסות-בהחלט",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+        "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+        "text": "b ∈ R f : (−∞, b] → R"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4-formula-23",
+    "title": "נוסחה/ביטוי 23",
+    "plainText": "f (x) dx ∫−∞",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "התכנסות-בהחלט",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+        "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+        "text": "f (x) dx ∫−∞"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4-formula-24",
+    "title": "נוסחה/ביטוי 24",
+    "plainText": "f (x) dx = ∫−∞",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "התכנסות-בהחלט",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+        "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+        "text": "f (x) dx = ∫−∞"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4-formula-25",
+    "title": "נוסחה/ביטוי 25",
+    "plainText": "f (x) dx ∫−∞",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "התכנסות-בהחלט",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+        "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+        "text": "f (x) dx ∫−∞"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4-formula-26",
+    "title": "נוסחה/ביטוי 26",
+    "plainText": "f (x) dx ∫−∞",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "התכנסות-בהחלט",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+        "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+        "text": "f (x) dx ∫−∞"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4-formula-27",
+    "title": "נוסחה/ביטוי 27",
+    "plainText": "f (x) dx ∫0",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "התכנסות-בהחלט",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+        "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+        "text": "f (x) dx ∫0"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4-formula-28",
+    "title": "נוסחה/ביטוי 28",
+    "plainText": "f (x) dx = ∫−∞",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "התכנסות-בהחלט",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+        "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+        "text": "f (x) dx = ∫−∞"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4-formula-29",
+    "title": "נוסחה/ביטוי 29",
+    "plainText": "f (x) dx + ∫−∞",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "התכנסות-בהחלט",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+        "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+        "text": "f (x) dx + ∫−∞"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4-formula-30",
+    "title": "נוסחה/ביטוי 30",
+    "plainText": "f (x) dx ∫0",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "התכנסות-בהחלט",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
+        "filename": "סיכום אינפי 2 הרצאה 4.pdf",
+        "text": "f (x) dx ∫0"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5-formula-1",
+    "title": "נוסחה/ביטוי 1",
+    "plainText": "lim [( 2",
+    "topicIds": [
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+        "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+        "text": "lim [( 2",
+        "startOffset": 1069,
+        "endOffset": 1077
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5-formula-2",
+    "title": "נוסחה/ביטוי 2",
+    "plainText": "0 ≤ k ∈ Z (a ) n n=k",
+    "topicIds": [
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+        "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+        "text": "0 ≤ k ∈ Z (a ) n n=k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5-formula-3",
+    "title": "נוסחה/ביטוי 3",
+    "plainText": "(S ) N N =k",
+    "topicIds": [
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+        "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+        "text": "(S ) N N =k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5-formula-4",
+    "title": "נוסחה/ביטוי 4",
+    "plainText": "S = N a לכל N ≥",
+    "topicIds": [
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+        "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+        "text": "S = N a לכל N ≥"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5-formula-5",
+    "title": "נוסחה/ביטוי 5",
+    "plainText": "S = k a , S = k k+1 a + k a , S = k+1 k+2 a + k a + k+1 ak+2",
+    "topicIds": [
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+        "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+        "text": "S = k a , S = k k+1 a + k a , S = k+1 k+2 a + k a + k+1 ak+2"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5-formula-6",
+    "title": "נוסחה/ביטוי 6",
+    "plainText": "∞ n (a ) n n=k",
+    "topicIds": [
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+        "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+        "text": "∞ n (a ) n n=k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5-formula-7",
+    "title": "נוסחה/ביטוי 7",
+    "plainText": "S = N ∀N ∈",
+    "topicIds": [
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+        "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+        "text": "S = N ∀N ∈"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5-formula-8",
+    "title": "נוסחה/ביטוי 8",
+    "plainText": "lim S = N S lim S = 2N S",
+    "topicIds": [
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+        "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+        "text": "lim S = N S lim S = 2N S"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5-formula-9",
+    "title": "נוסחה/ביטוי 9",
+    "plainText": "S − 2N S = N",
+    "topicIds": [
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+        "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+        "text": "S − 2N S = N"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5-formula-10",
+    "title": "נוסחה/ביטוי 10",
+    "plainText": "S − 2N S ≥ N N ⋅ =",
+    "topicIds": [
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+        "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+        "text": "S − 2N S ≥ N N ⋅ ="
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5-formula-11",
+    "title": "נוסחה/ביטוי 11",
+    "plainText": "lim 2N S ) = N S − S = 0",
+    "topicIds": [
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+        "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+        "text": "lim 2N S ) = N S − S = 0"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5-formula-12",
+    "title": "נוסחה/ביטוי 12",
+    "plainText": "(a ) n n=0",
+    "topicIds": [
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+        "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+        "text": "(a ) n n=0"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5-formula-13",
+    "title": "נוסחה/ביטוי 13",
+    "plainText": "0 ≤ k ∈ Z",
+    "topicIds": [
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+        "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+        "text": "0 ≤ k ∈ Z",
+        "startOffset": 1382,
+        "endOffset": 1391
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.38
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5-formula-14",
+    "title": "נוסחה/ביטוי 14",
+    "plainText": "(a ) n n=0",
+    "topicIds": [
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+        "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+        "text": "(a ) n n=0"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5-formula-15",
+    "title": "נוסחה/ביטוי 15",
+    "plainText": "0 ≤ k ∈ Z a ∑n=0",
+    "topicIds": [
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+        "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+        "text": "0 ≤ k ∈ Z a ∑n=0"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5-formula-16",
+    "title": "נוסחה/ביטוי 16",
+    "plainText": "n a ∑n=k",
+    "topicIds": [
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+        "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+        "text": "n a ∑n=k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5-formula-17",
+    "title": "נוסחה/ביטוי 17",
+    "plainText": "∞ n S ∈ R",
+    "topicIds": [
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+        "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+        "text": "∞ n S ∈ R"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5-formula-18",
+    "title": "נוסחה/ביטוי 18",
+    "plainText": "0 ≤ k ∈ Z (a ) n n=k",
+    "topicIds": [
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+        "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+        "text": "0 ≤ k ∈ Z (a ) n n=k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5-formula-19",
+    "title": "נוסחה/ביטוי 19",
+    "plainText": "(b ) n n=k",
+    "topicIds": [
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+        "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+        "text": "(b ) n n=k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5-formula-20",
+    "title": "נוסחה/ביטוי 20",
+    "plainText": "α, β ∈ R a ∑ n",
+    "topicIds": [
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+        "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+        "text": "α, β ∈ R a ∑ n"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5-formula-21",
+    "title": "נוסחה/ביטוי 21",
+    "plainText": "(αa + ∑n=k",
+    "topicIds": [
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+        "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+        "text": "(αa + ∑n=k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5-formula-22",
+    "title": "נוסחה/ביטוי 22",
+    "plainText": "∞ n βb ) n",
+    "topicIds": [
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+        "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+        "text": "∞ n βb ) n"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5-formula-23",
+    "title": "נוסחה/ביטוי 23",
+    "plainText": "n βb ) = n α a +",
+    "topicIds": [
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+        "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+        "text": "n βb ) = n α a +"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5-formula-24",
+    "title": "נוסחה/ביטוי 24",
+    "plainText": "a ∑ n b ∑ n S , S ∈ 1 2 R",
+    "topicIds": [
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+        "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+        "text": "a ∑ n b ∑ n S , S ∈ 1 2 R"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5-formula-25",
+    "title": "נוסחה/ביטוי 25",
+    "plainText": "S = 1 a , S =",
+    "topicIds": [
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+        "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+        "text": "S = 1 a , S ="
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5-formula-26",
+    "title": "נוסחה/ביטוי 26",
+    "plainText": "n βb ) = n (αa +",
+    "topicIds": [
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+        "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+        "text": "n βb ) = n (αa +"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5-formula-27",
+    "title": "נוסחה/ביטוי 27",
+    "plainText": "= α a + β b =",
+    "topicIds": [
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+        "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+        "text": "= α a + β b ="
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5-formula-28",
+    "title": "נוסחה/ביטוי 28",
+    "plainText": "a ∑ n b ∑ n (a ± ∑ n b ) n",
+    "topicIds": [
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+        "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+        "text": "a ∑ n b ∑ n (a ± ∑ n b ) n"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5-formula-29",
+    "title": "נוסחה/ביטוי 29",
+    "plainText": "n b ) = n a ±",
+    "topicIds": [
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+        "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+        "text": "n b ) = n a ±"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5-formula-30",
+    "title": "נוסחה/ביטוי 30",
+    "plainText": "α = 1 β = ±1",
+    "topicIds": [
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-5",
+        "filename": "סיכום אינפי 2 הרצאה 5.pdf",
+        "text": "α = 1 β = ±1"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6-formula-1",
+    "title": "נוסחה/ביטוי 1",
+    "plainText": "0 ≤ k ∈ Z (a ) n n=k",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+        "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+        "text": "0 ≤ k ∈ Z (a ) n n=k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6-formula-2",
+    "title": "נוסחה/ביטוי 2",
+    "plainText": "(b ) n n=k",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+        "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+        "text": "(b ) n n=k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6-formula-3",
+    "title": "נוסחה/ביטוי 3",
+    "plainText": "n ≥ k a ≥ n 0 b > n 0",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+        "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+        "text": "n ≥ k a ≥ n 0 b > n 0"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.38
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6-formula-4",
+    "title": "נוסחה/ביטוי 4",
+    "plainText": "L ∈ R L > 0 L = limn→∞ bn",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+        "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+        "text": "L ∈ R L > 0 L = limn→∞ bn"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6-formula-5",
+    "title": "נוסחה/ביטוי 5",
+    "plainText": "n ∞ ⟺ a <",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+        "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+        "text": "n ∞ ⟺ a <"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6-formula-6",
+    "title": "נוסחה/ביטוי 6",
+    "plainText": "b < ∑n=k",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+        "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+        "text": "b < ∑n=k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6-formula-7",
+    "title": "נוסחה/ביטוי 7",
+    "plainText": "N ∈ 1 N n ≥ N1",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+        "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+        "text": "N ∈ 1 N n ≥ N1"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.38
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6-formula-8",
+    "title": "נוסחה/ביטוי 8",
+    "plainText": "0 ≤ a ≤ n (L + 1)b n ≥ n N1",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+        "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+        "text": "0 ≤ a ≤ n (L + 1)b n ≥ n N1"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.38
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6-formula-9",
+    "title": "נוסחה/ביטוי 9",
+    "plainText": "a < ∑n=k",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+        "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+        "text": "a < ∑n=k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6-formula-10",
+    "title": "נוסחה/ביטוי 10",
+    "plainText": "a < ∑n=k",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+        "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+        "text": "a < ∑n=k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6-formula-11",
+    "title": "נוסחה/ביטוי 11",
+    "plainText": "∞ n ∞ L > 0 N ∈ 1 N n ≥ N1",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+        "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+        "text": "∞ n ∞ L > 0 N ∈ 1 N n ≥ N1"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6-formula-12",
+    "title": "נוסחה/ביטוי 12",
+    "plainText": "an L − =",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+        "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+        "text": "an L − =",
+        "startOffset": 1481,
+        "endOffset": 1489
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6-formula-13",
+    "title": "נוסחה/ביטוי 13",
+    "plainText": "0 ≤ b ≤ n a n ≥",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+        "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+        "text": "0 ≤ b ≤ n a n ≥"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.38
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6-formula-14",
+    "title": "נוסחה/ביטוי 14",
+    "plainText": "b < ∑n=k",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+        "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+        "text": "b < ∑n=k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6-formula-15",
+    "title": "נוסחה/ביטוי 15",
+    "plainText": "0 ≤ k ∈ Z (a ) n n=k",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+        "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+        "text": "0 ≤ k ∈ Z (a ) n n=k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6-formula-16",
+    "title": "נוסחה/ביטוי 16",
+    "plainText": "n ≥ k a ≥ n 0 b > n 0",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+        "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+        "text": "n ≥ k a ≥ n 0 b > n 0"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.38
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6-formula-17",
+    "title": "נוסחה/ביטוי 17",
+    "plainText": "lim = n→∞ bn",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+        "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+        "text": "lim = n→∞ bn"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6-formula-18",
+    "title": "נוסחה/ביטוי 18",
+    "plainText": "n ∞ ⟹ a <",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+        "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+        "text": "n ∞ ⟹ a <"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6-formula-19",
+    "title": "נוסחה/ביטוי 19",
+    "plainText": "0 ≤ k ∈ Z (a ) n n=k",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+        "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+        "text": "0 ≤ k ∈ Z (a ) n n=k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6-formula-20",
+    "title": "נוסחה/ביטוי 20",
+    "plainText": "n ≥ k a > n 0 b > n 0",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+        "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+        "text": "n ≥ k a > n 0 b > n 0"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.38
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6-formula-21",
+    "title": "נוסחה/ביטוי 21",
+    "plainText": "lim = n→∞ bn",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+        "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+        "text": "lim = n→∞ bn"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6-formula-22",
+    "title": "נוסחה/ביטוי 22",
+    "plainText": "n ∞ ⟹ b <",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+        "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+        "text": "n ∞ ⟹ b <"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6-formula-23",
+    "title": "נוסחה/ביטוי 23",
+    "plainText": "α > 4 α ≤ 4",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+        "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+        "text": "α > 4 α ≤ 4"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.38
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6-formula-24",
+    "title": "נוסחה/ביטוי 24",
+    "plainText": "b = n n2",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+        "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+        "text": "b = n n2"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6-formula-25",
+    "title": "נוסחה/ביטוי 25",
+    "plainText": "lim − x2",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+        "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+        "text": "lim − x2",
+        "startOffset": 3168,
+        "endOffset": 3176
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6-formula-26",
+    "title": "נוסחה/ביטוי 26",
+    "plainText": "lim 1 + x2",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+        "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+        "text": "lim 1 + x2",
+        "startOffset": 3194,
+        "endOffset": 3204
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6-formula-27",
+    "title": "נוסחה/ביטוי 27",
+    "plainText": "− arctan(n ) ∑n=1",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+        "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+        "text": "− arctan(n ) ∑n=1"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6-formula-28",
+    "title": "נוסחה/ביטוי 28",
+    "plainText": "0 ≤ k ∈ Z (a ) n n=k",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+        "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+        "text": "0 ≤ k ∈ Z (a ) n n=k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6-formula-29",
+    "title": "נוסחה/ביטוי 29",
+    "plainText": "n ≥ k a ≥ n 0",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+        "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+        "text": "n ≥ k a ≥ n 0"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.38
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6-formula-30",
+    "title": "נוסחה/ביטוי 30",
+    "plainText": "L ∈ R L = limn→∞ n an 0 ≤ L < 1",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
+        "filename": "סיכום אינפי 2 הרצאה 6.pdf",
+        "text": "L ∈ R L = limn→∞ n an 0 ≤ L < 1"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7-formula-1",
+    "title": "נוסחה/ביטוי 1",
+    "plainText": "0 ≤ k ∈ Z f [k, ∞)",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+        "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+        "text": "0 ≤ k ∈ Z f [k, ∞)"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7-formula-2",
+    "title": "נוסחה/ביטוי 2",
+    "plainText": "lim f (x) = x→∞ 0",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+        "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+        "text": "lim f (x) = x→∞ 0"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7-formula-3",
+    "title": "נוסחה/ביטוי 3",
+    "plainText": "f (x) dx ≤ ∫k",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+        "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+        "text": "f (x) dx ≤ ∫k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7-formula-4",
+    "title": "נוסחה/ביטוי 4",
+    "plainText": "f (k) + f (x) dx ∫k",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+        "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+        "text": "f (k) + f (x) dx ∫k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7-formula-5",
+    "title": "נוסחה/ביטוי 5",
+    "plainText": ":תחת הנחות המשפט מתקיים . יהי n ≥ k",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+        "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+        "text": ":תחת הנחות המשפט מתקיים . יהי n ≥ k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.38
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7-formula-6",
+    "title": "נוסחה/ביטוי 6",
+    "plainText": "f (n + 1) ≤ f (x) dx ≤ ∫n",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+        "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+        "text": "f (n + 1) ≤ f (x) dx ≤ ∫n"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7-formula-7",
+    "title": "נוסחה/ביטוי 7",
+    "plainText": "n ≥ k f x ∈ [n, n + 1]",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+        "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+        "text": "n ≥ k f x ∈ [n, n + 1]"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.38
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7-formula-8",
+    "title": "נוסחה/ביטוי 8",
+    "plainText": "f (n + 1) ≤ f (x) ≤ f (n)",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+        "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+        "text": "f (n + 1) ≤ f (x) ≤ f (n)",
+        "startOffset": 1199,
+        "endOffset": 1224
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.38
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7-formula-9",
+    "title": "נוסחה/ביטוי 9",
+    "plainText": "f (n + ∫n",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+        "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+        "text": "f (n + ∫n"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7-formula-10",
+    "title": "נוסחה/ביטוי 10",
+    "plainText": "1) dx ≤ f (x) dx ≤ ∫n",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+        "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+        "text": "1) dx ≤ f (x) dx ≤ ∫n"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7-formula-11",
+    "title": "נוסחה/ביטוי 11",
+    "plainText": "f (n) dx ∫n",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+        "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+        "text": "f (n) dx ∫n"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7-formula-12",
+    "title": "נוסחה/ביטוי 12",
+    "plainText": "f (n + 1) ≤ f (x) dx ≤ ∫n",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+        "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+        "text": "f (n + 1) ≤ f (x) dx ≤ ∫n"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7-formula-13",
+    "title": "נוסחה/ביטוי 13",
+    "plainText": "f lim f (x) = x→∞ 0",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+        "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+        "text": "f lim f (x) = x→∞ 0"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7-formula-14",
+    "title": "נוסחה/ביטוי 14",
+    "plainText": "inf{f (x) : x ≥ k} = 0",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+        "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+        "text": "inf{f (x) : x ≥ k} = 0",
+        "startOffset": 1395,
+        "endOffset": 1417
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7-formula-15",
+    "title": "נוסחה/ביטוי 15",
+    "plainText": "f (x) ≥ 0 x ≥ k",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+        "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+        "text": "f (x) ≥ 0 x ≥ k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.38
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7-formula-16",
+    "title": "נוסחה/ביטוי 16",
+    "plainText": "f (n) < ∑n=k",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+        "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+        "text": "f (n) < ∑n=k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7-formula-17",
+    "title": "נוסחה/ביטוי 17",
+    "plainText": "∞ ∞ S ∈ R",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+        "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+        "text": "∞ ∞ S ∈ R"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7-formula-18",
+    "title": "נוסחה/ביטוי 18",
+    "plainText": "S = f (n)",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+        "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+        "text": "S = f (n)"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7-formula-19",
+    "title": "נוסחה/ביטוי 19",
+    "plainText": "F (x) = f (t) dt x ≥ ∫k",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+        "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+        "text": "F (x) = f (t) dt x ≥ ∫k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7-formula-20",
+    "title": "נוסחה/ביטוי 20",
+    "plainText": "f ≥ 0 F x < 1 x2",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+        "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+        "text": "f ≥ 0 F x < 1 x2"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.38
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7-formula-21",
+    "title": "נוסחה/ביטוי 21",
+    "plainText": "F (x ) − 2 F (x ) = 1 f (t) dt ≥ ∫x1",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+        "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+        "text": "F (x ) − 2 F (x ) = 1 f (t) dt ≥ ∫x1"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7-formula-22",
+    "title": "נוסחה/ביטוי 22",
+    "plainText": "x ≥ k N = [x]",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+        "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+        "text": "x ≥ k N = [x]"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7-formula-23",
+    "title": "נוסחה/ביטוי 23",
+    "plainText": "F (x) ≤ F (N ) = f (t) dt ∫k",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+        "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+        "text": "F (x) ≤ F (N ) = f (t) dt ∫k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7-formula-24",
+    "title": "נוסחה/ביטוי 24",
+    "plainText": "= f (t) dt + ∫k",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+        "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+        "text": "= f (t) dt + ∫k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7-formula-25",
+    "title": "נוסחה/ביטוי 25",
+    "plainText": "⋯ + f (t) dt ∫N −1",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+        "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+        "text": "⋯ + f (t) dt ∫N −1"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7-formula-26",
+    "title": "נוסחה/ביטוי 26",
+    "plainText": "≤ f (k) + f (k + 1) + ⋯ + f (N − 1) = f (n)",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+        "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+        "text": "≤ f (k) + f (k + 1) + ⋯ + f (N − 1) = f (n)",
+        "startOffset": 1952,
+        "endOffset": 1995
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7-formula-27",
+    "title": "נוסחה/ביטוי 27",
+    "plainText": "≤ sup f (n) : N ≥ k = {",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+        "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+        "text": "≤ sup f (n) : N ≥ k = {"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7-formula-28",
+    "title": "נוסחה/ביטוי 28",
+    "plainText": "} f (n) =",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+        "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+        "text": "} f (n) ="
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7-formula-29",
+    "title": "נוסחה/ביטוי 29",
+    "plainText": "F f (x) dx < ∫k",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+        "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+        "text": "F f (x) dx < ∫k"
+      }
+    ],
+    "examImportance": "medium",
+    "confidence": 0.58
+  },
+  {
+    "id": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7-formula-30",
+    "title": "נוסחה/ביטוי 30",
+    "plainText": "f (x) dx < ∫k",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות"
+    ],
+    "sourceFileIds": [
+      "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7"
+    ],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-7",
+        "filename": "סיכום אינפי 2 הרצאה 7.pdf",
+        "text": "f (x) dx < ∫k"
       }
     ],
     "examImportance": "medium",

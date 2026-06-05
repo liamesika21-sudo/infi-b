@@ -187,60 +187,6 @@
     "confidence": 0.52
   },
   {
-    "id": "recitation-recitation-8-hebrew-proof-pattern-1",
-    "title": "∞ ∑ n=1 [ (−1)n+1 n · (1 + 1 n )n]",
-    "patternType": "comparison",
-    "steps": [
-      "Identify the relevant assumptions from the source statement.",
-      "Compare to a known convergent/divergent object.",
-      "Reduce the claim to a limit statement.",
-      "Construct or justify the required existence statement.",
-      "Close the argument using the cited theorem or criterion."
-    ],
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בהחלט",
-      "התכנסות-בתנאי",
-      "טורים",
-      "מבחן-ההשוואה",
-      "מבחן-השורש",
-      "סדרות"
-    ],
-    "sourceFileIds": [
-      "recitation-recitation-8-hebrew"
-    ],
-    "relatedQuestionIds": [],
-    "commonMistakes": [],
-    "examImportance": "medium",
-    "confidence": 0.52
-  },
-  {
-    "id": "recitation-recitation-8-hebrew-proof-pattern-2",
-    "title": "∞ ∑ n=1 (−1) n+1an , אזי הטור lim n→∞an = 0 סדרה אי שלילית כך ש (an)∞ n=1 3",
-    "patternType": "limit",
-    "steps": [
-      "Identify the relevant assumptions from the source statement.",
-      "Reduce the claim to a limit statement.",
-      "Close the argument using the cited theorem or criterion."
-    ],
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בהחלט",
-      "התכנסות-בתנאי",
-      "טורים",
-      "מבחן-ההשוואה",
-      "מבחן-השורש",
-      "סדרות"
-    ],
-    "sourceFileIds": [
-      "recitation-recitation-8-hebrew"
-    ],
-    "relatedQuestionIds": [],
-    "commonMistakes": [],
-    "examImportance": "medium",
-    "confidence": 0.52
-  },
-  {
     "id": "recitation-recitation-8-hebrew-2-proof-pattern-1",
     "title": "∞ ∑ n=1 [ (−1)n+1 n · (1 + 1 n )n]",
     "patternType": "comparison",
@@ -288,6 +234,157 @@
     ],
     "sourceFileIds": [
       "recitation-recitation-8-hebrew-2"
+    ],
+    "relatedQuestionIds": [],
+    "commonMistakes": [],
+    "examImportance": "medium",
+    "confidence": 0.52
+  },
+  {
+    "id": "recitation-script-recitation-9-max-proof-pattern-1",
+    "title": "אז זה וואלה, זה וואחד משפט באינפי",
+    "patternType": "proof-from-markers",
+    "steps": [
+      "Identify the relevant assumptions from the source statement.",
+      "Close the argument using the cited theorem or criterion."
+    ],
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "sourceFileIds": [
+      "recitation-script-recitation-9-max"
+    ],
+    "relatedQuestionIds": [],
+    "commonMistakes": [],
+    "examImportance": "medium",
+    "confidence": 0.52
+  },
+  {
+    "id": "recitation-script-recitation-9-max-proof-pattern-2",
+    "title": "נכון",
+    "patternType": "proof-from-markers",
+    "steps": [
+      "Identify the relevant assumptions from the source statement.",
+      "Close the argument using the cited theorem or criterion."
+    ],
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "sourceFileIds": [
+      "recitation-script-recitation-9-max"
+    ],
+    "relatedQuestionIds": [],
+    "commonMistakes": [],
+    "examImportance": "medium",
+    "confidence": 0.52
+  },
+  {
+    "id": "recitation-script-recitation-9-max-proof-pattern-3",
+    "title": "זאת שאלה בשיעורי בית, זה שאלה הסעיף הראשון בהוכחה, סעיף חימום כזה",
+    "patternType": "proof-from-markers",
+    "steps": [
+      "Identify the relevant assumptions from the source statement.",
+      "Close the argument using the cited theorem or criterion."
+    ],
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "sourceFileIds": [
+      "recitation-script-recitation-9-max"
+    ],
+    "relatedQuestionIds": [],
+    "commonMistakes": [],
+    "examImportance": "medium",
+    "confidence": 0.52
+  },
+  {
+    "id": "recitation-script-recitation-9-max-proof-pattern-4",
+    "title": "מה קורה בקצוות, לא יודע ולא אכפת לי, כי שאלו אותי רק על הרדיוס",
+    "patternType": "proof-from-markers",
+    "steps": [
+      "Identify the relevant assumptions from the source statement.",
+      "Close the argument using the cited theorem or criterion."
+    ],
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "sourceFileIds": [
+      "recitation-script-recitation-9-max"
+    ],
+    "relatedQuestionIds": [],
+    "commonMistakes": [],
+    "examImportance": "medium",
+    "confidence": 0.52
+  },
+  {
+    "id": "recitation-script-recitation-9-max-proof-pattern-5",
+    "title": "אז מבחן ההשוואה יפתור את זה ברגע",
+    "patternType": "comparison",
+    "steps": [
+      "Identify the relevant assumptions from the source statement.",
+      "Compare to a known convergent/divergent object.",
+      "Close the argument using the cited theorem or criterion."
+    ],
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "sourceFileIds": [
+      "recitation-script-recitation-9-max"
     ],
     "relatedQuestionIds": [],
     "commonMistakes": [],

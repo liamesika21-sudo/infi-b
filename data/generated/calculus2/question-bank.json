@@ -120,6 +120,424 @@
     "confidence": 0.56
   },
   {
+    "id": "recitation-recitation-10-hebrew-question-1",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-recitation-10-hebrew",
+    "questionNumber": "10",
+    "content": "10 : . • . • : 1 < x < 1 1 X n=0 x n = 1 1 x 1 < x  1 ln (1 + x) = 1 X n=1 (1) n+1 x n n 1  x  1 arctan (x) = 1 X n=0 (1) n x 2n+1 2n + 1 x 2 R e x = 1 X n=0 x n n! sin x = 1 X n=0 (1) n x 2n+1 (2n + 1)! cos x = 1 X n=0 (1) n x 2n (2n)! 1",
+    "topicIds": [
+      "גבולות",
+      "סדרות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-recitation-10-hebrew",
+      "filename": "Recitation 10-Hebrew.pdf",
+      "text": "10 : . • . • : 1 < x < 1 1 X n=0 x n = 1 1 x 1 < x  1 ln (1 + x) = 1 X n=1 (1) n+1 x n n 1  x  1 arctan (x) = 1 X n=0 (1) n x 2n+1 2n + 1 x 2 R e x = 1 X n=0 x n n! sin x = 1 X n=0 (1) n x 2n+1 (2n + 1)! cos x = 1 X n=0 (1) n x 2n (2n)! 1"
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-recitation-10-hebrew-question-2",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-recitation-10-hebrew",
+    "questionNumber": "1",
+    "content": ": : . (a n ) 1 n=0 x 0 2 R R 1 X n=0 a n (x x 0 ) n = a 0 + a 1 (x x 0 ) + a 2 (x x 0 ) 2 + ... R > 0 f (x) = 1 X n=0 a n (x x 0 ) n .| x x 0 |< R",
+    "topicIds": [
+      "גבולות",
+      "סדרות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-recitation-10-hebrew",
+      "filename": "Recitation 10-Hebrew.pdf",
+      "text": ": : . (a n ) 1 n=0 x 0 2 R R 1 X n=0 a n (x x 0 ) n = a 0 + a 1 (x x 0 ) + a 2 (x x 0 ) 2 + ... R > 0 f (x) = 1 X n=0 a n (x x 0 ) n .| x x 0 |< R"
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-recitation-10-hebrew-question-3",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-recitation-10-hebrew",
+    "questionNumber": "1",
+    "content": "1 X n=1 a n · n (x x 0 ) n1 = a 1 + 2a 2 (x x 0 ) + 3a 3 (x x 0 ) 2 + ... .R , | x x 0 |< R , f .2 f 0 (x) = 1 X n=1 a n · n (x x 0 ) n1 , 1 P n=0 a n (x x 0 ) n .3 1 P n=0 a n ·(xx 0 ) n+1 n+1 .R , x 1 P n=0 a n ·(xx 0 ) n+1 n+1 .x 2 R .4 1 X n=0 a n · (x x 0 ) n+1 n + 1 = Z x x 0 f (t) dt 2",
+    "topicIds": [
+      "גבולות",
+      "סדרות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-recitation-10-hebrew",
+      "filename": "Recitation 10-Hebrew.pdf",
+      "text": "1 X n=1 a n · n (x x 0 ) n1 = a 1 + 2a 2 (x x 0 ) + 3a 3 (x x 0 ) 2 + ... .R , | x x 0 |< R , f .2 f 0 (x) = 1 X n=1 a n · n (x x 0 ) n1 , 1 P n=0 a n (x x 0 ) n .3 1 P n=0 a n ·(xx 0 ) n+1 n+1 .R , x 1 P n=0 a n ·(xx 0 ) n+1 n+1 .x 2 R .4 1 X n=0 a n · (x x 0 ) n+1 n + 1 = Z x x 0 f (t) dt 2"
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-recitation-10-hebrew-question-4",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-recitation-10-hebrew",
+    "questionNumber": "1",
+    "content": "L = lim n!1 n p|a n | = lim n!1 n r 1 n = lim n!1 1 n 1 n = 1 t R = 1 L = 1 t 0 = 0 | t |< 1 )| x 2 |< 1 ) x 2 < 1 ) 1 < x < 1 : :x = 1 x 1 X n=1 x 2n n = 1· 1 X n=1 1 2n n = 1· 1 X n=1 1 n = 1 :x = 1 x 1 X n=1 x 2n n = (1) · 1 X n=1 (1) 2n n = (1) · 1 X n=1 1 n = .1 < x < 1 : .1 < x < 1 \" 3",
+    "topicIds": [
+      "גבולות",
+      "סדרות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-recitation-10-hebrew",
+      "filename": "Recitation 10-Hebrew.pdf",
+      "text": "L = lim n!1 n p|a n | = lim n!1 n r 1 n = lim n!1 1 n 1 n = 1 t R = 1 L = 1 t 0 = 0 | t |< 1 )| x 2 |< 1 ) x 2 < 1 ) 1 < x < 1 : :x = 1 x 1 X n=1 x 2n n = 1· 1 X n=1 1 2n n = 1· 1 X n=1 1 n = 1 :x = 1 x 1 X n=1 x 2n n = (1) · 1 X n=1 (1) 2n n = (1) · 1 X n=1 1 n = .1 < x < 1 : .1 < x < 1 \" 3"
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-recitation-10-hebrew-question-5",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-recitation-10-hebrew",
+    "questionNumber": "2",
+    "content": ". , x .2 : :1 1 < x  1 ln (1 + x) = 1 X n=1 (1) n+1 x n n = 1 X n=1 (1) n x n n = 1 X n=1 (x) n n 1  t < 1 t = x ln (1 t) = 1 X n=1 t n n 1 < u < 1 u 2 = t ln 1 u 2 = 1 X n=1 u 2n n u u · ln 1 u 2 = 1 X n=1 u 2n+1 n",
+    "topicIds": [
+      "גבולות",
+      "סדרות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-recitation-10-hebrew",
+      "filename": "Recitation 10-Hebrew.pdf",
+      "text": ". , x .2 : :1 1 < x  1 ln (1 + x) = 1 X n=1 (1) n+1 x n n = 1 X n=1 (1) n x n n = 1 X n=1 (x) n n 1  t < 1 t = x ln (1 t) = 1 X n=1 t n n 1 < u < 1 u 2 = t ln 1 u 2 = 1 X n=1 u 2n n u u · ln 1 u 2 = 1 X n=1 u 2n+1 n"
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-recitation-10-hebrew-question-6",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-recitation-10-hebrew",
+    "questionNumber": "(x)",
+    "content": "g (x) = 1 X n=1 x 2n+1 n = x · ln 1 x 2 .1 < x < 1 :2 . .1 < x < 1 1 P n=1 x n n 1 < x < 1 f (x) = 1 X n=1 x n n 1 < x < 1 f 0 (x) = 1 X n=1 nx n1 n = 1 X n=1 x n1 = k=n1 1 X k=0 x k = |x|<1 1 1 x",
+    "topicIds": [
+      "גבולות",
+      "סדרות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-recitation-10-hebrew",
+      "filename": "Recitation 10-Hebrew.pdf",
+      "text": "g (x) = 1 X n=1 x 2n+1 n = x · ln 1 x 2 .1 < x < 1 :2 . .1 < x < 1 1 P n=1 x n n 1 < x < 1 f (x) = 1 X n=1 x n n 1 < x < 1 f 0 (x) = 1 X n=1 nx n1 n = 1 X n=1 x n1 = k=n1 1 X k=0 x k = |x|<1 1 1 x"
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-recitation-10-hebrew-question-7",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-recitation-10-hebrew",
+    "questionNumber": "(x)",
+    "content": "f (x) = ln | 1 x |= 1 X n=1 x n n .1 < x < 1",
+    "topicIds": [
+      "גבולות",
+      "סדרות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-recitation-10-hebrew",
+      "filename": "Recitation 10-Hebrew.pdf",
+      "text": "f (x) = ln | 1 x |= 1 X n=1 x n n .1 < x < 1"
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-recitation-10-hebrew-question-8",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-recitation-10-hebrew",
+    "questionNumber": "1",
+    "content": "1 X n=1 x 2n+1 n = x 1 X n=1 x 2n n = x · f x 2 = x · ln | 1 x2 | .1 < x < 1 :3 1 < x < 1 1 X n=1 x 2n+1 n = x 1 X n=1 x 2n n 1 < x < 1 h (x) = 1 X n=1 x 2n n",
+    "topicIds": [
+      "גבולות",
+      "סדרות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-recitation-10-hebrew",
+      "filename": "Recitation 10-Hebrew.pdf",
+      "text": "1 X n=1 x 2n+1 n = x 1 X n=1 x 2n n = x · f x 2 = x · ln | 1 x2 | .1 < x < 1 :3 1 < x < 1 1 X n=1 x 2n+1 n = x 1 X n=1 x 2n n 1 < x < 1 h (x) = 1 X n=1 x 2n n"
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-recitation-10-hebrew-question-9",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-recitation-10-hebrew",
+    "questionNumber": "1",
+    "content": "1 < x < 1 h 0 (x) = 1 X n=1 2nx 2n1 n = 1 X n=1 2x 2n1 = k=n1 2· 1 X k=0 x 2k+1 2x· 1 X k=0 x 2k = 2x · 1 1 x 2 = 2x 1 x 2",
+    "topicIds": [
+      "גבולות",
+      "סדרות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-recitation-10-hebrew",
+      "filename": "Recitation 10-Hebrew.pdf",
+      "text": "1 < x < 1 h 0 (x) = 1 X n=1 2nx 2n1 n = 1 X n=1 2x 2n1 = k=n1 2· 1 X k=0 x 2k+1 2x· 1 X k=0 x 2k = 2x · 1 1 x 2 = 2x 1 x 2"
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-recitation-10-hebrew-question-10",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-recitation-10-hebrew",
+    "questionNumber": "0",
+    "content": "h 0 (x) = 2x 1 x 2 C 2 R h (x) = ln | 1 x 2 | +C",
+    "topicIds": [
+      "גבולות",
+      "סדרות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-recitation-10-hebrew",
+      "filename": "Recitation 10-Hebrew.pdf",
+      "text": "h 0 (x) = 2x 1 x 2 C 2 R h (x) = ln | 1 x 2 | +C"
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-recitation-10-hebrew-question-11",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-recitation-10-hebrew",
+    "questionNumber": "(x)",
+    "content": "h (x) = ln | 1 x 2 |= 1 X n=1 x 2n n . 1 < x < 1",
+    "topicIds": [
+      "גבולות",
+      "סדרות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-recitation-10-hebrew",
+      "filename": "Recitation 10-Hebrew.pdf",
+      "text": "h (x) = ln | 1 x 2 |= 1 X n=1 x 2n n . 1 < x < 1"
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-recitation-10-hebrew-question-12",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-recitation-10-hebrew",
+    "questionNumber": "(x)",
+    "content": "g (x) = 1 X n=1 x 2n+1 n = x 1 X n=1 x 2n n = x · h (x) = x · ln | 1 x 2 | .1 < x < 1 .( ) 6",
+    "topicIds": [
+      "גבולות",
+      "סדרות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-recitation-10-hebrew",
+      "filename": "Recitation 10-Hebrew.pdf",
+      "text": "g (x) = 1 X n=1 x 2n+1 n = x 1 X n=1 x 2n n = x · h (x) = x · ln | 1 x 2 | .1 < x < 1 .( ) 6"
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-recitation-10-hebrew-question-13",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-recitation-10-hebrew",
+    "questionNumber": "1",
+    "content": "L = lim n!1 n p|a n | = lim n!1 n pn = lim n!1 n 1 n = 1 t R = 1 1 = 1 t 0 = 0 | t |< 1 : :t = 1 1 X n=0 n · 1n = 1 X n=0 n = 1 :t = 1 1 X n=0 n · (1) n ( )",
+    "topicIds": [
+      "גבולות",
+      "סדרות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-recitation-10-hebrew",
+      "filename": "Recitation 10-Hebrew.pdf",
+      "text": "L = lim n!1 n p|a n | = lim n!1 n pn = lim n!1 n 1 n = 1 t R = 1 1 = 1 t 0 = 0 | t |< 1 : :t = 1 1 X n=0 n · 1n = 1 X n=0 n = 1 :t = 1 1 X n=0 n · (1) n ( )"
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-recitation-10-hebrew-question-14",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-recitation-10-hebrew",
+    "questionNumber": "(x)",
+    "content": ". x f (x) = 1 P n=0 n · (3x 1) n .2 .f (x) ( ) : | t |< 1 .t 1 X n=0 n · t n = t 1 X n=0 n · t n1 = t 1 X n=0 (t n ) 0",
+    "topicIds": [
+      "גבולות",
+      "סדרות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-recitation-10-hebrew",
+      "filename": "Recitation 10-Hebrew.pdf",
+      "text": ". x f (x) = 1 P n=0 n · (3x 1) n .2 .f (x) ( ) : | t |< 1 .t 1 X n=0 n · t n = t 1 X n=0 n · t n1 = t 1 X n=0 (t n ) 0"
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-recitation-10-hebrew-question-15",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-recitation-10-hebrew",
+    "questionNumber": "1",
+    "content": "t 1 X n=0 t n ! 0 = t ✓ 1 1 t ◆ 0 = t · 0 · (1 t) 1 · (1) (1 t) 2 = t (1 t) 2 x f (x) = 1 X n=0 n · (3x 1) n = 1 3x1 ⇣ 1 1 3x1 ⌘ 2 = 1 (3x 1) ⇣ 1 1 3x1 ⌘ 2 .x > 2 3 x < 0 . 1 P n=0 n 2 n .3 : .x > 2 3 x < 0 \" 1 P n=0 n · (3x 1) n x = 1 f (1) = 1 X n=0 n (3 · 1 1) n = 1 X n=0 n 2n = 1 (3 · 1 1) ⇣ 1 1 3·11 ⌘ 2 = 1 2 · 1 2 2 = 2 8",
+    "topicIds": [
+      "גבולות",
+      "סדרות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-recitation-10-hebrew",
+      "filename": "Recitation 10-Hebrew.pdf",
+      "text": "t 1 X n=0 t n ! 0 = t ✓ 1 1 t ◆ 0 = t · 0 · (1 t) 1 · (1) (1 t) 2 = t (1 t) 2 x f (x) = 1 X n=0 n · (3x 1) n = 1 3x1 ⇣ 1 1 3x1 ⌘ 2 = 1 (3x 1) ⇣ 1 1 3x1 ⌘ 2 .x > 2 3 x < 0 . 1 P n=0 n 2 n .3 : .x > 2 3 x < 0 \" 1 P n=0 n · (3x 1) n x = 1 f (1) = 1 X n=0 n (3 · 1 1) n = 1 X n=0 n 2n = 1 (3 · 1 1) ⇣ 1 1 3·11 ⌘ 2 = 1 2 · 1 2 2 = 2 8"
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-recitation-10-hebrew-question-16",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-recitation-10-hebrew",
+    "questionNumber": "2",
+    "content": ": .x 2 R f (x) = R x 0 e t 2 dt x 0 = 0 .1 : t 2 R x 2 R e x = 1 P n=0 1 n! x n e t 2 = 1 X n=0 1 n! t 2 n = 1 X n=0 1 n! (1) n · t 2n x 2 R Z x 0 e t 2 dt = Z x 0 1 X n=0 1 n! (1) n · t 2n dt = 1 X n=0 Z x 0 1 n! (1) n · t 2n dt = 1 X n=0 1 n! (1) n · Z x 0 t 2n dt = 1 X n=0 1 n! (1) n  t 2n+1 2n + 1 x 0 1 X n=0 (1) n n! · ✓ x 2n+1 2n + 1 02n+1 2n + 1 ◆ = 1 X n=0 (1) n · x 2n+1 (2n + 1) · n! , , .1 9",
+    "topicIds": [
+      "גבולות",
+      "סדרות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-recitation-10-hebrew",
+      "filename": "Recitation 10-Hebrew.pdf",
+      "text": ": .x 2 R f (x) = R x 0 e t 2 dt x 0 = 0 .1 : t 2 R x 2 R e x = 1 P n=0 1 n! x n e t 2 = 1 X n=0 1 n! t 2 n = 1 X n=0 1 n! (1) n · t 2n x 2 R Z x 0 e t 2 dt = Z x 0 1 X n=0 1 n! (1) n · t 2n dt = 1 X n=0 Z x 0 1 n! (1) n · t 2n dt = 1 X n=0 1 n! (1) n · Z x 0 t 2n dt = 1 X n=0 1 n! (1) n  t 2n+1 2n + 1 x 0 1 X n=0 (1) n n! · ✓ x 2n+1 2n + 1 02n+1 2n + 1 ◆ = 1 X n=0 (1) n · x 2n+1 (2n + 1) · n! , , .1 9"
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-recitation-10-hebrew-question-17",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-recitation-10-hebrew",
+    "questionNumber": "1",
+    "content": "1 P n=1 x n 2 n ·(n+1)! .2 . : ( ) R = 1 .x 2 R .x 2 R e x = 1 P n=0 x n n! .( x = 0 ) x 6 = 0 1 X n=1 x n 2n · (n + 1)! = 1 X n=1 x 2 n (n + 1)! · 2 x · x 2 = 2 x · 1 X n=1 x 2 n+1 (n + 1)! = k=n+1 2 x · 1 X k=2 x 2 k k! = 2 x · 0 B B @ 1 X k=0 x 2 k k! 1 |{z} k=0 x 2 |{z} k=1 1 C C A = 2 x · ⇣ e x 2 1 x 2 ⌘ = 2 x · e x 2 2 x 1 : 1 X n=1 x n 2n · (n + 1)! = ( 2 x · e x 2 2 x 1 x 6 = 0 0 x = 0 .x 2 R f (x) = ( sin x x x 6 = 0 1 x = 0 .3 .0  n 2 Z f (n) (0) : ) , .( n x 0 = 0 x 2 R sin x sin x = 1 X n=0 (1) n x 2n+1 (2n + 1)! = x x 3 3! + x 5 5! ...",
+    "topicIds": [
+      "גבולות",
+      "סדרות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-recitation-10-hebrew",
+      "filename": "Recitation 10-Hebrew.pdf",
+      "text": "1 P n=1 x n 2 n ·(n+1)! .2 . : ( ) R = 1 .x 2 R .x 2 R e x = 1 P n=0 x n n! .( x = 0 ) x 6 = 0 1 X n=1 x n 2n · (n + 1)! = 1 X n=1 x 2 n (n + 1)! · 2 x · x 2 = 2 x · 1 X n=1 x 2 n+1 (n + 1)! = k=n+1 2 x · 1 X k=2 x 2 k k! = 2 x · 0 B B @ 1 X k=0 x 2 k k! 1 |{z} k=0 x 2 |{z} k=1 1 C C A = 2 x · ⇣ e x 2 1 x 2 ⌘ = 2 x · e x 2 2 x 1 : 1 X n=1 x n 2n · (n + 1)! = ( 2 x · e x 2 2 x 1 x 6 = 0 0 x = 0 .x 2 R f (x) = ( sin x x x 6 = 0 1 x = 0 .3 .0  n 2 Z f (n) (0) : ) , .( n x 0 = 0 x 2 R sin x sin x = 1 X n=0 (1) n x 2n+1 (2n + 1)! = x x 3 3! + x 5 5! ..."
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-recitation-10-hebrew-question-18",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-recitation-10-hebrew",
+    "questionNumber": "6",
+    "content": "x 6 = 0 sin x x sin x x = 1 P n=0 (1) n x 2n+1 (2n+1)! x = Ax ✓ 1+ 1 P n=1 (1) n x 2n (2n+1)! ◆ Ax = 1+ 1 X n=1 (1) n x 2n (2n + 1)! = 1 x 2 3! + x 4 5! x 6 7! + ... .f (0) = 1 1 x = 0 x 2 R f (x) = 1+ 1 X n=1 (1) n x 2n (2n + 1)! .x 0 = 0",
+    "topicIds": [
+      "גבולות",
+      "סדרות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-recitation-10-hebrew",
+      "filename": "Recitation 10-Hebrew.pdf",
+      "text": "x 6 = 0 sin x x sin x x = 1 P n=0 (1) n x 2n+1 (2n+1)! x = Ax ✓ 1+ 1 P n=1 (1) n x 2n (2n+1)! ◆ Ax = 1+ 1 X n=1 (1) n x 2n (2n + 1)! = 1 x 2 3! + x 4 5! x 6 7! + ... .f (0) = 1 1 x = 0 x 2 R f (x) = 1+ 1 X n=1 (1) n x 2n (2n + 1)! .x 0 = 0"
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-recitation-10-hebrew-question-19",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-recitation-10-hebrew",
+    "questionNumber": "1",
+    "content": "a n = ( (1) k (2k+1)! n = 2k 0 n = 2k 1 ) a n = ( (1) n 2 (n+1)! 0 0  n 2 Z f (n) (x 0 ) = a n · n! 0  n 2 Z x 0 = 0 f (n) (0) = a n · n! = ( (1) n 2 (n+1)! · n! 0 · n!",
+    "topicIds": [
+      "גבולות",
+      "סדרות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-recitation-10-hebrew",
+      "filename": "Recitation 10-Hebrew.pdf",
+      "text": "a n = ( (1) k (2k+1)! n = 2k 0 n = 2k 1 ) a n = ( (1) n 2 (n+1)! 0 0  n 2 Z f (n) (x 0 ) = a n · n! 0  n 2 Z x 0 = 0 f (n) (0) = a n · n! = ( (1) n 2 (n+1)! · n! 0 · n!"
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-recitation-10-hebrew-question-20",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-recitation-10-hebrew",
+    "questionNumber": "4",
+    "content": ".4 f (x) = 1 X n=1 (1) n+1 (2n 2)! · (2n + 1) · x 2n . x . () : ,t = x 2 1 X n=1 (1) n+1 (2n 2)! · (2n + 1) · t n",
+    "topicIds": [
+      "גבולות",
+      "סדרות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-recitation-10-hebrew",
+      "filename": "Recitation 10-Hebrew.pdf",
+      "text": ".4 f (x) = 1 X n=1 (1) n+1 (2n 2)! · (2n + 1) · x 2n . x . () : ,t = x 2 1 X n=1 (1) n+1 (2n 2)! · (2n + 1) · t n"
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-recitation-10-hebrew-question-21",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-recitation-10-hebrew",
+    "questionNumber": "1",
+    "content": "= lim n!1 2n + 3 2n + 1 · (2n 2)! (2n)! = 0 ) R = 1 .x 2 R x 2 2 R , t 2 R . x f (x) () : x 2 R f (x) = 1 X n=1 (1) n+1 (2n 2)! · (2n + 1) · x 2n = 1 X n=1 (1) n+1 (2n 2)! x 2n+1 0 = 1 X n=1 (1) n+1 (2n 2)! x 2n+1 ! 0 = 1 X n=1 (1) n+1 (2n 2)! x 2n+1 ! 0 = k=n1 1 X k=0 (1) k+1+1 (2k)! x 2(k+1)+1 ! 0 = x 3 · 1 X k=0 (1) k (2k)! x 2k ! 0 = x 3 · cos x 0 = 3x 2 cos x x 3 sin x 12",
+    "topicIds": [
+      "גבולות",
+      "סדרות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-recitation-10-hebrew",
+      "filename": "Recitation 10-Hebrew.pdf",
+      "text": "= lim n!1 2n + 3 2n + 1 · (2n 2)! (2n)! = 0 ) R = 1 .x 2 R x 2 2 R , t 2 R . x f (x) () : x 2 R f (x) = 1 X n=1 (1) n+1 (2n 2)! · (2n + 1) · x 2n = 1 X n=1 (1) n+1 (2n 2)! x 2n+1 0 = 1 X n=1 (1) n+1 (2n 2)! x 2n+1 ! 0 = 1 X n=1 (1) n+1 (2n 2)! x 2n+1 ! 0 = k=n1 1 X k=0 (1) k+1+1 (2k)! x 2(k+1)+1 ! 0 = x 3 · 1 X k=0 (1) k (2k)! x 2k ! 0 = x 3 · cos x 0 = 3x 2 cos x x 3 sin x 12"
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-recitation-10-hebrew-question-22",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-recitation-10-hebrew",
+    "questionNumber": "2",
+    "content": ": x 2 R F (x) + C = Z 1 X n=1 (1) n+1 (2n 2)! · (2n + 1) · x 2n dx = 1 X n=1 (1) n+1 (2n 2)! · (2n + 1) Z x 2n dx = 1 X n=1 (1) n+1 (2n 2)! ·XXXX (2n + 1) · x 2n+1 XXX X 2n + 1 = 1 X n=1 (1) n+1 (2n 2)! · x 2n+1 = k=n1 1 X k=0 (1) k+2 (2k)! · x 2k+3 x 3 1 X k=0 (1) k (2k)! · x 2k = x 3 cos x x 2 R f (x) = (F (x) + C) 0 = 3x 2 cos x x 3 sin x 13",
+    "topicIds": [
+      "גבולות",
+      "סדרות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-recitation-10-hebrew",
+      "filename": "Recitation 10-Hebrew.pdf",
+      "text": ": x 2 R F (x) + C = Z 1 X n=1 (1) n+1 (2n 2)! · (2n + 1) · x 2n dx = 1 X n=1 (1) n+1 (2n 2)! · (2n + 1) Z x 2n dx = 1 X n=1 (1) n+1 (2n 2)! ·XXXX (2n + 1) · x 2n+1 XXX X 2n + 1 = 1 X n=1 (1) n+1 (2n 2)! · x 2n+1 = k=n1 1 X k=0 (1) k+2 (2k)! · x 2k+3 x 3 1 X k=0 (1) k (2k)! · x 2k = x 3 cos x x 2 R f (x) = (F (x) + C) 0 = 3x 2 cos x x 3 sin x 13"
+    },
+    "confidence": 0.56
+  },
+  {
     "id": "recitation-recitation-2-hebrew-question-1",
     "sourceType": "recitation",
     "sourceFileId": "recitation-recitation-2-hebrew",
@@ -654,6 +1072,178 @@
     "confidence": 0.56
   },
   {
+    "id": "recitation-recitation-5-hebrew-question-1",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-recitation-5-hebrew",
+    "questionNumber": "5",
+    "content": "תרגול 5 היום: אינטגרל לא אמיתי. • טור גיאומטרי. • תזכורת: .b > a לכל [a, b] אינטגרבילית ב f . נניח ש f : [a, ∞) → R ותהי a ∈ R יהי . lim b→∞ ∫ b a f (x) dx מתכנס, אם קיים הגבול ∫ ∞ a f (x) dx נאמר כי האינטגרל הלא אמיתי במקרה זה נגדיר ∫ ∞ a f (x) dx = lim b→∞ ∫ b a f (x) dx באופן דומה נגדיר ∫ b −∞ f (x) dx = lim a→−∞ ∫ b a f (x) dx ∫ 0 −∞ f (x) dx ו ∫ ∞ 0 f (x) dx מתכנס אם ∫ ∞ −∞ f (x) dx . נאמר כיf : R → R תהי שניהם מתכנסים. במקרה זה נגדיר ∫ ∞ −∞ f (x) dx = ∫ 0 −∞ f (x) dx + ∫ ∞ 0 f (x) dx .(a, b] פונקציה המוגדרת ב f ותהי a < b כך ש a, b ∈ R תהיינה . נאמר שהאינטגרל הלא אמיתי0 < δ < b − a לכל [a + δ, b] אינטגרבילית ב f נניח ש . lim δ→0+ ∫ b a+δ f (x) dx מתכנס, אם קיים הגבול ∫ b a f (x) dx .∫ b a f (x) dx = lim δ→0+ ∫ b a+δ f (x) dx במקרה זה נגדיר .[a, b) פונקציה המוגדרת ב f ותהי a < b כך ש a, b ∈ R תהיינה . נאמר שהאינטגרל הלא אמיתי0 < δ < b − a לכל [a, b − δ] אינטגרבילית ב f נניח ש . lim δ→0+ ∫ b−δ a f (x) dx מתכנס, אם קיים הגבול ∫ b a f (x) dx .∫ b a f (x) dx = lim δ→0+ ∫ b−δ a f (x) dx במקרה זה נגדיר 1",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "difficulty": "medium",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-recitation-5-hebrew",
+      "filename": "Recitation 5-Hebrew.pdf",
+      "text": "תרגול 5 היום: אינטגרל לא אמיתי. • טור גיאומטרי. • תזכורת: .b > a לכל [a, b] אינטגרבילית ב f . נניח ש f : [a, ∞) → R ותהי a ∈ R יהי . lim b→∞ ∫ b a f (x) dx מתכנס, אם קיים הגבול ∫ ∞ a f (x) dx נאמר כי האינטגרל הלא אמיתי במקרה זה נגדיר ∫ ∞ a f (x) dx = lim b→∞ ∫ b a f (x) dx באופן דומה נגדיר ∫ b −∞ f (x) dx = lim a→−∞ ∫ b a f (x) dx ∫ 0 −∞ f (x) dx ו ∫ ∞ 0 f (x) dx מתכנס אם ∫ ∞ −∞ f (x) dx . נאמר כיf : R → R תהי שניהם מתכנסים. במקרה זה נגדיר ∫ ∞ −∞ f (x) dx = ∫ 0 −∞ f (x) dx + ∫ ∞ 0 f (x) dx .(a, b] פונקציה המוגדרת ב f ותהי a < b כך ש a, b ∈ R תהיינה . נאמר שהאינטגרל הלא אמיתי0 < δ < b − a לכל [a + δ, b] אינטגרבילית ב f נניח ש . lim δ→0+ ∫ b a+δ f (x) dx מתכנס, אם קיים הגבול ∫ b a f (x) dx .∫ b a f (x) dx = lim δ→0+ ∫ b a+δ f (x) dx במקרה זה נגדיר .[a, b) פונקציה המוגדרת ב f ותהי a < b כך ש a, b ∈ R תהיינה . נאמר שהאינטגרל הלא אמיתי0 < δ < b − a לכל [a, b − δ] אינטגרבילית ב f נניח ש . lim "
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-recitation-5-hebrew-question-2",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-recitation-5-hebrew",
+    "questionNumber": "1",
+    "content": "דוגמאות: 1. קבעו האם האינטגרל הלא אמיתי הבא מתכנס, אם כן ־ חשבו את ערכו ∫ ∞ 2 1 x · ln x dx פתרון: נעבוד עם ההגדרה ∫ ∞ 2 1 x · ln x dx = lim b→∞ ∫ b 2 1 x · ln x dx = lim b→∞ [ln | ln x |]b 2 = lim b→∞ (ln | ln b | − ln | ln 2 |) = ∞ )לא מתכנס(. מתבדר לכן האינטגרל מתכנס. ∫ ∞ 0 epxdx האינטגרל הלא אמיתי p ∈ R 2. קבעו עבור אילו ערכי פתרון: .p > 0 ,p = 0 ,p < 0 נפריד למקרים: :p = 0 עבור ∫ ∞ 0 e0·xdx = lim b→∞ ∫ b 0 1 · dx = lim b→∞ (b − 0) = ∞ :p > 0 עבור ∫ ∞ 0 epxdx = lim b→∞ ∫ b 0 epxdx = lim b→∞ [ ept p ]b 0 = lim b→∞ ( epb p − 1 p ) = ∞ :p < 0 עבור ∫ ∞ 0 epxdx = lim b→∞ ∫ b 0 epxdx = lim b→∞ [ ept p ]b 0 = lim b→∞ ( epb p − 1 p ) = 0 − 1 p = − 1 p לסיכום: ∫ ∞ 0 epxdx = {− 1 p p < 0 ∞ p ≥ 0 2",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "difficulty": "medium",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-recitation-5-hebrew",
+      "filename": "Recitation 5-Hebrew.pdf",
+      "text": "דוגמאות: 1. קבעו האם האינטגרל הלא אמיתי הבא מתכנס, אם כן ־ חשבו את ערכו ∫ ∞ 2 1 x · ln x dx פתרון: נעבוד עם ההגדרה ∫ ∞ 2 1 x · ln x dx = lim b→∞ ∫ b 2 1 x · ln x dx = lim b→∞ [ln | ln x |]b 2 = lim b→∞ (ln | ln b | − ln | ln 2 |) = ∞ )לא מתכנס(. מתבדר לכן האינטגרל מתכנס. ∫ ∞ 0 epxdx האינטגרל הלא אמיתי p ∈ R 2. קבעו עבור אילו ערכי פתרון: .p > 0 ,p = 0 ,p < 0 נפריד למקרים: :p = 0 עבור ∫ ∞ 0 e0·xdx = lim b→∞ ∫ b 0 1 · dx = lim b→∞ (b − 0) = ∞ :p > 0 עבור ∫ ∞ 0 epxdx = lim b→∞ ∫ b 0 epxdx = lim b→∞ [ ept p ]b 0 = lim b→∞ ( epb p − 1 p ) = ∞ :p < 0 עבור ∫ ∞ 0 epxdx = lim b→∞ ∫ b 0 epxdx = lim b→∞ [ ept p ]b 0 = lim b→∞ ( epb p − 1 p ) = 0 − 1 p = − 1 p לסיכום: ∫ ∞ 0 epxdx = {− 1 p p < 0 ∞ p ≥ 0 2"
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-recitation-5-hebrew-question-3",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-recitation-5-hebrew",
+    "questionNumber": "3",
+    "content": "3. קבעו האם האינטגרל הלא אמיתי הבא מתכנס, אם כן ־ חשבו את ערכו ∫ ∞ −∞ 1 ex + e−x dx פתרון: נעבוד עם ההגדרה ∫ ∞ −∞ 1 ex + e−x dx = ∫ 0 −∞ 1 ex + e−x dx + ∫ ∞ 0 1 ex + e−x dx נחשב את כל אחד מהאינטגרלים בנפרד ∫ 0 −∞ 1 ex + e−x dx = lim a→−∞ ∫ 0 a 1 ex + 1 ex dx = lim a→−∞ ∫ 0 a ex e2x + 1 dx = lim a→−∞ [arctan (ex)]0 a = lim a→−∞ (arctan (1) − arctan (ea)) = lim a→−∞ ( π 4 − arctan (ea) ) = π 4 − 0 = π 4 ∫ ∞ 0 1 ex + e−x dx = lim b→∞ ∫ b 0 1 ex + 1 ex dx = lim b→∞ ∫ b 0 ex e2x + 1 dx = lim b→∞ [arctan (ex)]b 0 = lim b→∞ (arctan (eb) − arctan (1)) = π 2 − π 4 = π 4 שני הגבולות קיימים, לכן האינטגרל שווה לסכומם ∫ ∞ −∞ 1 ex + e−x dx = π 4 + π 4 = π 2 3",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "difficulty": "medium",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-recitation-5-hebrew",
+      "filename": "Recitation 5-Hebrew.pdf",
+      "text": "3. קבעו האם האינטגרל הלא אמיתי הבא מתכנס, אם כן ־ חשבו את ערכו ∫ ∞ −∞ 1 ex + e−x dx פתרון: נעבוד עם ההגדרה ∫ ∞ −∞ 1 ex + e−x dx = ∫ 0 −∞ 1 ex + e−x dx + ∫ ∞ 0 1 ex + e−x dx נחשב את כל אחד מהאינטגרלים בנפרד ∫ 0 −∞ 1 ex + e−x dx = lim a→−∞ ∫ 0 a 1 ex + 1 ex dx = lim a→−∞ ∫ 0 a ex e2x + 1 dx = lim a→−∞ [arctan (ex)]0 a = lim a→−∞ (arctan (1) − arctan (ea)) = lim a→−∞ ( π 4 − arctan (ea) ) = π 4 − 0 = π 4 ∫ ∞ 0 1 ex + e−x dx = lim b→∞ ∫ b 0 1 ex + 1 ex dx = lim b→∞ ∫ b 0 ex e2x + 1 dx = lim b→∞ [arctan (ex)]b 0 = lim b→∞ (arctan (eb) − arctan (1)) = π 2 − π 4 = π 4 שני הגבולות קיימים, לכן האינטגרל שווה לסכומם ∫ ∞ −∞ 1 ex + e−x dx = π 4 + π 4 = π 2 3",
+      "startOffset": 1750,
+      "endOffset": 2403
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-recitation-5-hebrew-question-4",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-recitation-5-hebrew",
+    "questionNumber": "4",
+    "content": "4. קבעו האם האינטגרל הלא אמיתי הבא מתכנס, אם כן ־ חשבו את ערכו ∫ 1 −1 1 x dx פתרון: נעבוד עם ההגדרה ∫ 1 −1 1 x dx = ∫ 0 −1 1 x dx + ∫ 1 0 1 x dx נחשב את האינטגרל השמאלי ∫ 0 −1 1 t dt = lim δ→0+ ∫ 0−δ −1 1 x dx = lim δ→0+ [ln | x |]−δ −1 = lim δ→0+ (ln | −δ | − ln | −1 |) = lim δ→0+ ln δ = −∞ .האינטגרל מתבדר קיבלנו שהאינטגרל מתבדר באחד מהתחומים ולכן 4",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "difficulty": "medium",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-recitation-5-hebrew",
+      "filename": "Recitation 5-Hebrew.pdf",
+      "text": "4. קבעו האם האינטגרל הלא אמיתי הבא מתכנס, אם כן ־ חשבו את ערכו ∫ 1 −1 1 x dx פתרון: נעבוד עם ההגדרה ∫ 1 −1 1 x dx = ∫ 0 −1 1 x dx + ∫ 1 0 1 x dx נחשב את האינטגרל השמאלי ∫ 0 −1 1 t dt = lim δ→0+ ∫ 0−δ −1 1 x dx = lim δ→0+ [ln | x |]−δ −1 = lim δ→0+ (ln | −δ | − ln | −1 |) = lim δ→0+ ln δ = −∞ .האינטגרל מתבדר קיבלנו שהאינטגרל מתבדר באחד מהתחומים ולכן 4",
+      "startOffset": 2419,
+      "endOffset": 2771
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-recitation-5-hebrew-question-5",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-recitation-5-hebrew",
+    "questionNumber": "0",
+    "content": "תזכורת )מבחן ההשוואה(: . נניח כי[a, ∞) שתי פונקציות המוגדרות ב f, g ותהיינה a ∈ R יהי .x ≥ a לכל 0 ≤ f (x) ≤ g (x).1 .b > a לכל [a, b] אינטגרביליות ב f, g .2 מתכנס. ∫ ∞ a g(x)dx .3 מתכנס ובנוסף, ∫ ∞ a f (x)dx אזי ∫ ∞ a f (x)dx ≤ ∫ ∞ a g(x)dx מתקיים p ∈ R לכל ∫ ∞ 1 dx xp = { 1 p−1 p > 1 ∞ p ≤ 1 ∫ 1 0 dx xp = { 1 1−p p < 1 ∞ p ≥ 1 דוגמאות: קבעו האם האינטגרלים הלא אמיתיים הבאים מתכנסים או מתבדרים: ∫ ∞ 1 x+1 x3+x2+1 dx .1 פתרון: ∫ ∞ 1 x + 1 x3 + x2 + 1 dx ≤ ∫ ∞ 1 x + x x3 + x2 dx ≤ ∫ ∞ 1 2x x3 dx = 2 ∫ ∞ 1 1 x2 dx < p>1 ∞ .∫ ∞ 1 x+1 x3+x2+1 dx < ∞ ולכן ∫ ∞ 1 arctan(x) x dx .2 פתרון: arctan(x) ≥ arctan (1) = π 4 מתקיים x ≥ 1 היא פונקציה עולה, לכן לכל arctan ולכן ∫ ∞ 1 arctan(x) x dx ≥ ∫ ∞ 1 π 4x dx = π 4 ∫ ∞ 1 1 x dx = p=1 ∞ .∫ ∞ 1 arctan(x) x dx = ∞ ולכן 5",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "difficulty": "medium",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-recitation-5-hebrew",
+      "filename": "Recitation 5-Hebrew.pdf",
+      "text": "תזכורת )מבחן ההשוואה(: . נניח כי[a, ∞) שתי פונקציות המוגדרות ב f, g ותהיינה a ∈ R יהי .x ≥ a לכל 0 ≤ f (x) ≤ g (x).1 .b > a לכל [a, b] אינטגרביליות ב f, g .2 מתכנס. ∫ ∞ a g(x)dx .3 מתכנס ובנוסף, ∫ ∞ a f (x)dx אזי ∫ ∞ a f (x)dx ≤ ∫ ∞ a g(x)dx מתקיים p ∈ R לכל ∫ ∞ 1 dx xp = { 1 p−1 p > 1 ∞ p ≤ 1 ∫ 1 0 dx xp = { 1 1−p p < 1 ∞ p ≥ 1 דוגמאות: קבעו האם האינטגרלים הלא אמיתיים הבאים מתכנסים או מתבדרים: ∫ ∞ 1 x+1 x3+x2+1 dx .1 פתרון: ∫ ∞ 1 x + 1 x3 + x2 + 1 dx ≤ ∫ ∞ 1 x + x x3 + x2 dx ≤ ∫ ∞ 1 2x x3 dx = 2 ∫ ∞ 1 1 x2 dx < p>1 ∞ .∫ ∞ 1 x+1 x3+x2+1 dx < ∞ ולכן ∫ ∞ 1 arctan(x) x dx .2 פתרון: arctan(x) ≥ arctan (1) = π 4 מתקיים x ≥ 1 היא פונקציה עולה, לכן לכל arctan ולכן ∫ ∞ 1 arctan(x) x dx ≥ ∫ ∞ 1 π 4x dx = π 4 ∫ ∞ 1 1 x dx = p=1 ∞ .∫ ∞ 1 arctan(x) x dx = ∞ ולכן 5"
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-recitation-5-hebrew-question-6",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-recitation-5-hebrew",
+    "questionNumber": "1",
+    "content": "∫ 1 0 x sin x dx .3 פתרון: ולכן אינטגרבילית והיא [0, 1] רציפה בקטע f (x) = { x sin x x 6 = 0 1 x = 0 הפונקציה מתכנס. ∫ 1 0 x sin x dx נבדלת בנקודה אחת מהפונקציה הנתונה בשאלה ולכן האינטגרל ∫ 1 0 1 sin x dx .4 פתרון: מתקיים 0 < x ≤ 1 נשים לב כי לכל 0 < sin x ≤ x ⇒ 0 < 1 x ≤ 1 sin x ולכן ∫ 1 0 1 sin x dx ≥ ∫ 1 0 1 x dx = p=1 ∞ .∫ 1 0 1 sin x dx = ∞ ולכן תזכורת: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי . lim N →∞ N ∑ n=k an מתכנס אם קיים הגבול ∞ ∑ n=k an נאמר שהטור במקרה זה נגדיר ∞ ∑ n=k an = lim N →∞ N ∑ n=k an הטור הגיאומטרי: , אזיq ∈ R יהי ∞ ∑ n=0 qn = { 1 1−q −1 < q < 1 diverges else 6",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "difficulty": "medium",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-recitation-5-hebrew",
+      "filename": "Recitation 5-Hebrew.pdf",
+      "text": "∫ 1 0 x sin x dx .3 פתרון: ולכן אינטגרבילית והיא [0, 1] רציפה בקטע f (x) = { x sin x x 6 = 0 1 x = 0 הפונקציה מתכנס. ∫ 1 0 x sin x dx נבדלת בנקודה אחת מהפונקציה הנתונה בשאלה ולכן האינטגרל ∫ 1 0 1 sin x dx .4 פתרון: מתקיים 0 < x ≤ 1 נשים לב כי לכל 0 < sin x ≤ x ⇒ 0 < 1 x ≤ 1 sin x ולכן ∫ 1 0 1 sin x dx ≥ ∫ 1 0 1 x dx = p=1 ∞ .∫ 1 0 1 sin x dx = ∞ ולכן תזכורת: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי . lim N →∞ N ∑ n=k an מתכנס אם קיים הגבול ∞ ∑ n=k an נאמר שהטור במקרה זה נגדיר ∞ ∑ n=k an = lim N →∞ N ∑ n=k an הטור הגיאומטרי: , אזיq ∈ R יהי ∞ ∑ n=0 qn = { 1 1−q −1 < q < 1 diverges else 6"
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-recitation-5-hebrew-question-7",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-recitation-5-hebrew",
+    "questionNumber": "1",
+    "content": "דוגמא: קבעו האם הטור הבא מתכנס, אם כן מצאו את ערכו: ∞ ∑ n=1 (−2)3n−2 · 5−2n−5 פתרון: נחשב ∞ ∑ n=1 (−2)3n−2 · 5−2n−5 = ∞ ∑ n=1 (−2)3n 4 · 5−2n 55 = 1 4 · 55 ∞ ∑ n=1 (−8)n · ( 1 25 )n = 1 4 · 55 ∞ ∑ n=1 ( −8 25 )n = k=n−1,n=k+1 1 4 · 55 · ∞ ∑ k=0 ( − 8 25 )k+1 = 1 4 · 55 · ( − 8 25 ) · ∞ ∑ k=0 ( − 8 25 )k = 1 4 · 55 · ( − 8 25 ) · 1 1 − (− 8 25 ) = − 2 33 · 55 .− 2 33·55 ושווה ל הטור מתכנס דרך נוספת: 1 4 · 55 ∞ ∑ n=1 ( −8 25 )n = 1 4 · 55 ( ∞ ∑ n=0 ( −8 25 )n − 1 ) = 1 4 · 55 ( 1 1 − (− 8 25 ) − 1 ) = 1 4 · 55 ( 25 33 − 1 ) = 1 4 · 55 ( − 8 25 ) = − 2 33 · 55 .− 2 33·55 ושווה ל הטור מתכנס 7",
+    "topicIds": [
+      "אינטגרלים-לא-אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "difficulty": "medium",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-recitation-5-hebrew",
+      "filename": "Recitation 5-Hebrew.pdf",
+      "text": "דוגמא: קבעו האם הטור הבא מתכנס, אם כן מצאו את ערכו: ∞ ∑ n=1 (−2)3n−2 · 5−2n−5 פתרון: נחשב ∞ ∑ n=1 (−2)3n−2 · 5−2n−5 = ∞ ∑ n=1 (−2)3n 4 · 5−2n 55 = 1 4 · 55 ∞ ∑ n=1 (−8)n · ( 1 25 )n = 1 4 · 55 ∞ ∑ n=1 ( −8 25 )n = k=n−1,n=k+1 1 4 · 55 · ∞ ∑ k=0 ( − 8 25 )k+1 = 1 4 · 55 · ( − 8 25 ) · ∞ ∑ k=0 ( − 8 25 )k = 1 4 · 55 · ( − 8 25 ) · 1 1 − (− 8 25 ) = − 2 33 · 55 .− 2 33·55 ושווה ל הטור מתכנס דרך נוספת: 1 4 · 55 ∞ ∑ n=1 ( −8 25 )n = 1 4 · 55 ( ∞ ∑ n=0 ( −8 25 )n − 1 ) = 1 4 · 55 ( 1 1 − (− 8 25 ) − 1 ) = 1 4 · 55 ( 25 33 − 1 ) = 1 4 · 55 ( − 8 25 ) = − 2 33 · 55 .− 2 33·55 ושווה ל הטור מתכנס 7"
+    },
+    "confidence": 0.56
+  },
+  {
     "id": "recitation-recitation-6-hebrew-question-1",
     "sourceType": "recitation",
     "sourceFileId": "recitation-recitation-6-hebrew",
@@ -980,128 +1570,6 @@
     "confidence": 0.56
   },
   {
-    "id": "recitation-recitation-8-hebrew-question-1",
-    "sourceType": "recitation",
-    "sourceFileId": "recitation-recitation-8-hebrew",
-    "questionNumber": "1",
-    "content": "דוגמאות: קבעו האם הטורים הבאים מתכנסים בהחלט, מתכנסים בתנאי או מתבדרים. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] .1 פתרון: נבדוק תחילה התכנסות בהחלט ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ = ∞ ∑ n=1 [∣ ∣arctan (n) + sin n∣ ∣ · 1 1 + cos2 n · n 3n ] 4 ≤ ∞ ∑ n=1 [(∣ ∣arctan (n)∣ ∣ + ∣ ∣sin n∣ ∣) · 1 1 + cos2 n · n 3n ] ≤ ∞ ∑ n=1 [( π 2 + 1 ) · 1 1 + 0 · n 3n ] = ∞ ∑ n=1 [( π 2 + 1 ) · n 3n ] = ( π 2 + 1 ) ∞ ∑ n=1 n 3n מתכנס. נראה זאת על ידי מבחן השורש ∞ ∑ n=1 n 3n הטור lim n→∞ n √ n 3n = lim n→∞ n 1 n 3 = AOL 1 3 < 1 ולכן ממבחן ההשוואה הטור ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ מתכנס בהחלט. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] מתכנס ולכן הטור 3",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בהחלט",
-      "התכנסות-בתנאי",
-      "טורים",
-      "מבחן-ההשוואה",
-      "מבחן-השורש",
-      "סדרות"
-    ],
-    "difficulty": "medium",
-    "examRelevance": "medium",
-    "sourceSnippet": {
-      "sourceFileId": "recitation-recitation-8-hebrew",
-      "filename": "Recitation 8-Hebrew.pdf",
-      "text": "דוגמאות: קבעו האם הטורים הבאים מתכנסים בהחלט, מתכנסים בתנאי או מתבדרים. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] .1 פתרון: נבדוק תחילה התכנסות בהחלט ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ = ∞ ∑ n=1 [∣ ∣arctan (n) + sin n∣ ∣ · 1 1 + cos2 n · n 3n ] 4 ≤ ∞ ∑ n=1 [(∣ ∣arctan (n)∣ ∣ + ∣ ∣sin n∣ ∣) · 1 1 + cos2 n · n 3n ] ≤ ∞ ∑ n=1 [( π 2 + 1 ) · 1 1 + 0 · n 3n ] = ∞ ∑ n=1 [( π 2 + 1 ) · n 3n ] = ( π 2 + 1 ) ∞ ∑ n=1 n 3n מתכנס. נראה זאת על ידי מבחן השורש ∞ ∑ n=1 n 3n הטור lim n→∞ n √ n 3n = lim n→∞ n 1 n 3 = AOL 1 3 < 1 ולכן ממבחן ההשוואה הטור ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ מתכנס בהחלט. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] מתכנס ולכן הטור 3"
-    },
-    "confidence": 0.56
-  },
-  {
-    "id": "recitation-recitation-8-hebrew-question-2",
-    "sourceType": "recitation",
-    "sourceFileId": "recitation-recitation-8-hebrew",
-    "questionNumber": "1",
-    "content": "תרגיל: קבעו האם הטור הבא מתכנס או מתבדר 1 − 1 4 + 1 2 − 1 42 + 1 3 − 1 43 + 1 4 − 1 44 + ... פתרון: נשים סוגריים באופן הבא: ( 1 − 1 4 ) + ( 1 2 − 1 42 ) + ( 1 3 − 1 43 ) + ( 1 4 − 1 44 ) + ... קיבלנו את הטור ∞ ∑ n=1 ( 1 n − 1 4n ) זהו טור מתבדר, מכיוון שהוא מורכב מטור מתבדר פחות טור מתכנס, ולכן ממשפט השמת הסוגריים, גם הטור המקורי מתבדר. תרגיל: . ∞ ∑ n=1 1 n2 = π2 6 נניח כי . ∞ ∑ n=1 1 n2 = ∞ ∑ n=1 [ 1 (2n−1)2 + 1 (2n)2 ] 1. הוכיחו כי פתרון: מתכנס, אז ממשפט השמת הסוגריים נקבל כי ∞ ∑ n=1 1 n2 היות שהטור ∞ ∑ n=1 1 n2 = ( 1 + 1 22 ) + ( 1 32 + 1 42 ) + ... = ∞ ∑ n=1 ( 1 (2n − 1)2 + 1 (2n)2 ) 6",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בהחלט",
-      "התכנסות-בתנאי",
-      "טורים",
-      "מבחן-ההשוואה",
-      "מבחן-השורש",
-      "סדרות"
-    ],
-    "difficulty": "medium",
-    "examRelevance": "medium",
-    "sourceSnippet": {
-      "sourceFileId": "recitation-recitation-8-hebrew",
-      "filename": "Recitation 8-Hebrew.pdf",
-      "text": "תרגיל: קבעו האם הטור הבא מתכנס או מתבדר 1 − 1 4 + 1 2 − 1 42 + 1 3 − 1 43 + 1 4 − 1 44 + ... פתרון: נשים סוגריים באופן הבא: ( 1 − 1 4 ) + ( 1 2 − 1 42 ) + ( 1 3 − 1 43 ) + ( 1 4 − 1 44 ) + ... קיבלנו את הטור ∞ ∑ n=1 ( 1 n − 1 4n ) זהו טור מתבדר, מכיוון שהוא מורכב מטור מתבדר פחות טור מתכנס, ולכן ממשפט השמת הסוגריים, גם הטור המקורי מתבדר. תרגיל: . ∞ ∑ n=1 1 n2 = π2 6 נניח כי . ∞ ∑ n=1 1 n2 = ∞ ∑ n=1 [ 1 (2n−1)2 + 1 (2n)2 ] 1. הוכיחו כי פתרון: מתכנס, אז ממשפט השמת הסוגריים נקבל כי ∞ ∑ n=1 1 n2 היות שהטור ∞ ∑ n=1 1 n2 = ( 1 + 1 22 ) + ( 1 32 + 1 42 ) + ... = ∞ ∑ n=1 ( 1 (2n − 1)2 + 1 (2n)2 ) 6"
-    },
-    "confidence": 0.56
-  },
-  {
-    "id": "recitation-recitation-8-hebrew-question-3",
-    "sourceType": "recitation",
-    "sourceFileId": "recitation-recitation-8-hebrew",
-    "questionNumber": "1",
-    "content": ". ∞ ∑ n=1 1 (2n−1)2 = π2 8 2. הוכיחו כי פתרון: נשים לב כי מתקיים ∞ ∑ n=1 1 (2n)2 = 1 4 ∞ ∑ n=1 1 n2 = 1 4 · π2 6 מתכנס )ניתן להראות זאת ∞ ∑ n=1 1 (2n)2 מתכנס והטור ∞ ∑ n=1 1 (2n−1)2 היות שהטור (, אז ∞ ∑ n=1 1 n2 בקלות על ידי מבחן ההשוואה הגבולי עם הטור ∞ ∑ n=1 ( 1 (2n − 1)2 + 1 (2n)2 ) = AOS ∞ ∑ n=1 1 (2n − 1)2 + ∞ ∑ n=1 1 (2n)2 ולכן מהסעיף הראשון נקבל כי π2 6 = ∞ ∑ n=1 1 (2n − 1)2 + 1 4 · π2 6 ולכן ∞ ∑ n=1 1 (2n − 1)2 = 3 4 · π2 6 = π2 8 . ∞ ∑ n=1 (−1)n+1 1 n2 = π2 12 3. הוכיחו כי פתרון: מתכנס )טור לייבניץ(, אז ממשפט השמת הסוגריים ∞ ∑ n=1 (−1)n+1 1 n2 היות שהטור נקבל כי ∞ ∑ n=1 (−1)n+1 1 n2 = ( 1 − 1 22 ) + ( 1 32 − 1 42 ) +... = ∞ ∑ n=1 ( 1 (2n − 1)2 − 1 (2n)2 ) ולכן ∞ ∑ n=1 (−1)n+1 1 n2 = ∞ ∑ n=1 ( 1 (2n − 1)2 − 1 (2n)2 ) = AOS ∞ ∑ n=1 1 (2n − 1)2 − ∞ ∑ n=1 1 (2n)2 = π2 8 − 1 4 · π2 6 = π2 8 − π2 24 = 3π2 − π2 24 = 2π2 24 = π2 12 7",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בהחלט",
-      "התכנסות-בתנאי",
-      "טורים",
-      "מבחן-ההשוואה",
-      "מבחן-השורש",
-      "סדרות"
-    ],
-    "difficulty": "medium",
-    "examRelevance": "medium",
-    "sourceSnippet": {
-      "sourceFileId": "recitation-recitation-8-hebrew",
-      "filename": "Recitation 8-Hebrew.pdf",
-      "text": ". ∞ ∑ n=1 1 (2n−1)2 = π2 8 2. הוכיחו כי פתרון: נשים לב כי מתקיים ∞ ∑ n=1 1 (2n)2 = 1 4 ∞ ∑ n=1 1 n2 = 1 4 · π2 6 מתכנס )ניתן להראות זאת ∞ ∑ n=1 1 (2n)2 מתכנס והטור ∞ ∑ n=1 1 (2n−1)2 היות שהטור (, אז ∞ ∑ n=1 1 n2 בקלות על ידי מבחן ההשוואה הגבולי עם הטור ∞ ∑ n=1 ( 1 (2n − 1)2 + 1 (2n)2 ) = AOS ∞ ∑ n=1 1 (2n − 1)2 + ∞ ∑ n=1 1 (2n)2 ולכן מהסעיף הראשון נקבל כי π2 6 = ∞ ∑ n=1 1 (2n − 1)2 + 1 4 · π2 6 ולכן ∞ ∑ n=1 1 (2n − 1)2 = 3 4 · π2 6 = π2 8 . ∞ ∑ n=1 (−1)n+1 1 n2 = π2 12 3. הוכיחו כי פתרון: מתכנס )טור לייבניץ(, אז ממשפט השמת הסוגריים ∞ ∑ n=1 (−1)n+1 1 n2 היות שהטור נקבל כי ∞ ∑ n=1 (−1)n+1 1 n2 = ( 1 − 1 22 ) + ( 1 32 − 1 42 ) +... = ∞ ∑ n=1 ( 1 (2n − 1)2 − 1 (2n)2 ) ולכן ∞ ∑ n=1 (−1)n+1 1 n2 = ∞ ∑ n=1 ( 1 (2n − 1)2 − 1 (2n)2 ) = AOS ∞ ∑ n=1 1 (2n − 1)2 − ∞ ∑ n=1 1 (2n)2 = π2 8 − 1 4 · π2 6 = π2 8 − π2 24 = 3π2 − π2 24 = 2π2 24 = π2 12 7"
-    },
-    "confidence": 0.56
-  },
-  {
-    "id": "recitation-recitation-8-hebrew-question-4",
-    "sourceType": "recitation",
-    "sourceFileId": "recitation-recitation-8-hebrew",
-    "questionNumber": "1",
-    "content": "הוכיחו או הפריכו כל אחת מהטענות הבאות: סדרה של מספרים ממשיים. (an)∞ n=1 תהי מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס, אזי ∞ ∑ n=1 an 1. אם פתרון: הטענה לא נכונה. נגדיר 2 ≤ n ∈ N ולכל a1 = 0 דוגמא נגדית: an = (−1)n+1 ln n נשים לב ש ∞ ∑ n=1 an = ∞ ∑ n=2 (−1)n+1 ln n מקיים את התנאים של המסקנה בתזכורת ולכן מתכנס, אבל ∞ ∑ n=1 ∣ ∣ ∣ an n ∣ ∣ ∣ = ∞ ∑ n=2 ∣ ∣ ∣ ∣ ∣ ∣ [ (−1)n ln n ] n ∣ ∣ ∣ ∣ ∣ ∣ = ∞ ∑ n=2 1 n ln n = ∞ לא מתכנס בהחלט. ∞ ∑ n=1 an n ולכן מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס, אזי ∞ ∑ n=1 a2 n 2. אם פתרון: הטענה נכונה. מתקיים n ∈ N נשים לב שלכל ( | an | − 1 n )2 ≥ 0 ⇒ a2 n − 2 | an | n + 1 n2 ≥ 0 ⇒ | an | n ≤ 1 2 · ( a2 n + 1 n2 ) נשים לב ששני הביטויים הם אי שליליים ולכן נוכל להשתמש במבחן ההשוואה, ∞ ∑ n=1 | an | n ≤ ∞ ∑ n=1 1 2 · ( a2 n + 1 n2 ) < ∞ מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס ולכן ∞ ∑ n=1 |an| n ולכן 8",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בהחלט",
-      "התכנסות-בתנאי",
-      "טורים",
-      "מבחן-ההשוואה",
-      "מבחן-השורש",
-      "סדרות"
-    ],
-    "difficulty": "medium",
-    "examRelevance": "medium",
-    "sourceSnippet": {
-      "sourceFileId": "recitation-recitation-8-hebrew",
-      "filename": "Recitation 8-Hebrew.pdf",
-      "text": "הוכיחו או הפריכו כל אחת מהטענות הבאות: סדרה של מספרים ממשיים. (an)∞ n=1 תהי מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס, אזי ∞ ∑ n=1 an 1. אם פתרון: הטענה לא נכונה. נגדיר 2 ≤ n ∈ N ולכל a1 = 0 דוגמא נגדית: an = (−1)n+1 ln n נשים לב ש ∞ ∑ n=1 an = ∞ ∑ n=2 (−1)n+1 ln n מקיים את התנאים של המסקנה בתזכורת ולכן מתכנס, אבל ∞ ∑ n=1 ∣ ∣ ∣ an n ∣ ∣ ∣ = ∞ ∑ n=2 ∣ ∣ ∣ ∣ ∣ ∣ [ (−1)n ln n ] n ∣ ∣ ∣ ∣ ∣ ∣ = ∞ ∑ n=2 1 n ln n = ∞ לא מתכנס בהחלט. ∞ ∑ n=1 an n ולכן מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס, אזי ∞ ∑ n=1 a2 n 2. אם פתרון: הטענה נכונה. מתקיים n ∈ N נשים לב שלכל ( | an | − 1 n )2 ≥ 0 ⇒ a2 n − 2 | an | n + 1 n2 ≥ 0 ⇒ | an | n ≤ 1 2 · ( a2 n + 1 n2 ) נשים לב ששני הביטויים הם אי שליליים ולכן נוכל להשתמש במבחן ההשוואה, ∞ ∑ n=1 | an | n ≤ ∞ ∑ n=1 1 2 · ( a2 n + 1 n2 ) < ∞ מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס ולכן ∞ ∑ n=1 |an| n ולכן 8",
-      "startOffset": 4906,
-      "endOffset": 5714
-    },
-    "confidence": 0.56
-  },
-  {
-    "id": "recitation-recitation-8-hebrew-question-5",
-    "sourceType": "recitation",
-    "sourceFileId": "recitation-recitation-8-hebrew",
-    "questionNumber": "1",
-    "content": "∞ ∑ n=1 (−1) n+1an , אזי הטור lim n→∞an = 0 סדרה אי שלילית כך ש (an)∞ n=1 3. נניח כי מתכנס. פתרון: הטענה לא נכונה )חלק מהתנאים של משפט לייבניץ לא רשומים(. .1, 0, 1 2 , 0, 1 3 , ... נבחר את הסדרה כלומר נבחר את הסדרה an = { 1 k n = 2k − 1 0 n = 2k = { 2 n+1 n is odd 0 n is even כי הגבול של האיברים במקומות הזוגיים שווה לגבול של lim n→∞an = 0 נשים לב כי האיברים במקומות האי זוגיים ושניהם שווים לאפס. נראה כי הטור מתבדר ∞ ∑ n=1 (−1) n+1an = 1 + 0 + 1 2 + 0 + 1 3 + 0 + ... נשים סוגריים באופן הבא: (1 + 0) + ( 1 2 + 0 ) + ( 1 3 + 0 ) .. קיבלנו את הטור ∞ ∑ n=1 ( 1 n + 0 ) = ∞ ∑ n=1 1 n זהו טור מתבדר, ולכן ממשפט השמת הסוגריים, גם הטור המקורי מתבדר. 9",
-    "topicIds": [
-      "גבולות",
-      "התכנסות-בהחלט",
-      "התכנסות-בתנאי",
-      "טורים",
-      "מבחן-ההשוואה",
-      "מבחן-השורש",
-      "סדרות"
-    ],
-    "difficulty": "medium",
-    "examRelevance": "medium",
-    "sourceSnippet": {
-      "sourceFileId": "recitation-recitation-8-hebrew",
-      "filename": "Recitation 8-Hebrew.pdf",
-      "text": "∞ ∑ n=1 (−1) n+1an , אזי הטור lim n→∞an = 0 סדרה אי שלילית כך ש (an)∞ n=1 3. נניח כי מתכנס. פתרון: הטענה לא נכונה )חלק מהתנאים של משפט לייבניץ לא רשומים(. .1, 0, 1 2 , 0, 1 3 , ... נבחר את הסדרה כלומר נבחר את הסדרה an = { 1 k n = 2k − 1 0 n = 2k = { 2 n+1 n is odd 0 n is even כי הגבול של האיברים במקומות הזוגיים שווה לגבול של lim n→∞an = 0 נשים לב כי האיברים במקומות האי זוגיים ושניהם שווים לאפס. נראה כי הטור מתבדר ∞ ∑ n=1 (−1) n+1an = 1 + 0 + 1 2 + 0 + 1 3 + 0 + ... נשים סוגריים באופן הבא: (1 + 0) + ( 1 2 + 0 ) + ( 1 3 + 0 ) .. קיבלנו את הטור ∞ ∑ n=1 ( 1 n + 0 ) = ∞ ∑ n=1 1 n זהו טור מתבדר, ולכן ממשפט השמת הסוגריים, גם הטור המקורי מתבדר. 9"
-    },
-    "confidence": 0.56
-  },
-  {
     "id": "recitation-recitation-8-hebrew-2-question-1",
     "sourceType": "recitation",
     "sourceFileId": "recitation-recitation-8-hebrew-2",
@@ -1224,119 +1692,1242 @@
     "confidence": 0.56
   },
   {
-    "id": "recitation-recitation-9-hebrew-question-1",
+    "id": "recitation-script-recitation-9-max-question-1",
     "sourceType": "recitation",
-    "sourceFileId": "recitation-recitation-9-hebrew",
-    "questionNumber": "0",
-    "content": "דוגמאות: , ומצאו את תחוםR עבור כל אחד מהטורים הבאים, חשבו את רדיוס ההתכנסות, ההתכנסות. בתחום ההתכנסות, מצאו ערך מפורש )ללא סימן הסיגמה(. . ∞ ∑ n=0 (−1)n x2n .1 פתרון: מדובר בטור גיאומטרי, נסדר את הטור ∞ ∑ n=0 (−1)n x2n = ∞ ∑ n=0 (−1)n (x2)n = ∞ ∑ n=0 (−x2)n = t=−x2 ∞ ∑ n=0 tn = |t|<1 1 1 − t = 1 1 − (−x2) = 1 1 + x2 , כלומר הטור מתכנס אם\"ם| t |< 1 הטור מתכנס אם\"ם | −x2 |< 1 ⇔| x2 |< 1 ⇔ x2 < 1 ⇔ −1 < x < 1 .R = 1 ולכן רדיוס ההתכנסות של הטור הוא x0 = 0 נשים לב ש . ∞ ∑ n=0 (2x+3)2n 42n .2 פתרון: מדובר בטור גיאומטרי, נסדר את הטור ∞ ∑ n=0 (2x + 3)2n 42n = ∞ ∑ n=0 ( 2x + 3 4 )2n = ∞ ∑ n=0 (( 2x + 3 4 )2)n = t=( 2x+3 4 )2 ∞ ∑ n=0 tn = |t|<1 1 1 − t = 1 1 − ( 2x+3 4 )2 , כלומר הטור מתכנס אם\"ם| t |< 1 הטור מתכנס אם\"ם | ( 2x + 3 4 )2 |< 1 ⇔ ( 2x + 3 4 )2 < 1 ⇔ −1 < 2x + 3 4 < 1 ⇔ −4 < 2x + 3 < 4 ⇔ −7 < 2x < 1 ⇔ −3.5 < x < 0.5 .R = 2 ולכן רדיוס ההתכנסות של הטור הוא x0 = −1.5 נשים לב ש 3",
-    "topicIds": [
-      "גבולות",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-ההשוואה",
-      "סדרות",
-      "רדיוס-התכנסות"
-    ],
-    "difficulty": "medium",
-    "examRelevance": "medium",
-    "sourceSnippet": {
-      "sourceFileId": "recitation-recitation-9-hebrew",
-      "filename": "Recitation_9-Hebrew.pdf",
-      "text": "דוגמאות: , ומצאו את תחוםR עבור כל אחד מהטורים הבאים, חשבו את רדיוס ההתכנסות, ההתכנסות. בתחום ההתכנסות, מצאו ערך מפורש )ללא סימן הסיגמה(. . ∞ ∑ n=0 (−1)n x2n .1 פתרון: מדובר בטור גיאומטרי, נסדר את הטור ∞ ∑ n=0 (−1)n x2n = ∞ ∑ n=0 (−1)n (x2)n = ∞ ∑ n=0 (−x2)n = t=−x2 ∞ ∑ n=0 tn = |t|<1 1 1 − t = 1 1 − (−x2) = 1 1 + x2 , כלומר הטור מתכנס אם\"ם| t |< 1 הטור מתכנס אם\"ם | −x2 |< 1 ⇔| x2 |< 1 ⇔ x2 < 1 ⇔ −1 < x < 1 .R = 1 ולכן רדיוס ההתכנסות של הטור הוא x0 = 0 נשים לב ש . ∞ ∑ n=0 (2x+3)2n 42n .2 פתרון: מדובר בטור גיאומטרי, נסדר את הטור ∞ ∑ n=0 (2x + 3)2n 42n = ∞ ∑ n=0 ( 2x + 3 4 )2n = ∞ ∑ n=0 (( 2x + 3 4 )2)n = t=( 2x+3 4 )2 ∞ ∑ n=0 tn = |t|<1 1 1 − t = 1 1 − ( 2x+3 4 )2 , כלומר הטור מתכנס אם\"ם| t |< 1 הטור מתכנס אם\"ם | ( 2x + 3 4 )2 |< 1 ⇔ ( 2x + 3 4 )2 < 1 ⇔ −1 < 2x + 3 4 < 1 ⇔ −4 < 2x + 3 < 4 ⇔ −7 < 2x < 1 ⇔ −3.5 < x < 0.5 .R = 2 ולכן רדיוס ההתכנסות של הטור הוא x0 = −1.5 נשים לב ש 3"
-    },
-    "confidence": 0.56
-  },
-  {
-    "id": "recitation-recitation-9-hebrew-question-2",
-    "sourceType": "recitation",
-    "sourceFileId": "recitation-recitation-9-hebrew",
-    "questionNumber": "0",
-    "content": "תרגיל: שתי סדרות של מספרים ממשיים. (bn)∞ n=0 ו (an)∞ n=0 יהיו בהתאמה R2 6 = R1 טורי חזקות עם רדיוסי התכנסות ∞ ∑ n=0 bn · xn , ∞ ∑ n=0 an · xn יהיו .R1, R2 6 = ∞ כך ש . ∞ ∑ n=0 (an ± bn) · xn מצאו את רדיוס ההתכנסות של טור החזקות פתרון: ראשית נשים לב שלא נוכל להשתמש בנוסחת המנה או השורש מכיוון שלא נתון שהגבולות קיימים. נחלק את הפתרון לשלושה חלקים )נראה שרטוט בכיתה(: .x ∈ R יהי , במקרה זה שני הטורים מתכנסים ולכן גם הסכום מתכנס| x |< min {R1, R2} 1. אם מאשט\"מ. , במקרה זה אנחנו יודעים שטור אחדmin {R1, R2} <| x |< max {R1, R2} 2. אם מתבדר שווה מתבדר(. ± מתכנס וטור אחד מתבדר ולכן הטור מתבדר )מתכנס , במקרה זה שני הטורים מתבדרים. נראה שגם הטור של| x |> max {R1, R2} 3. אם הסכום מתבדר. ולכן ממשפט | x |> max {R1, R2} מתכנס עבור ∞ ∑ n=0 (an ± bn)·xn נניח בשלילה ש , סתירה!2 \"אבל\" הטור מתכנס גם באיזור .R = min {R1, R2} לסיכום: מצאנו שרדיוס ההתכנסות של הטור של הסכום הוא .(| x |> min {R1, R2} ומתבדר לכל | x |< min {R1, R2} )הטור מתכנס לכל 4",
-    "topicIds": [
-      "גבולות",
-      "טורי-חזקות",
-      "טורים",
-      "מבחן-ההשוואה",
-      "סדרות",
-      "רדיוס-התכנסות"
-    ],
-    "difficulty": "medium",
-    "examRelevance": "medium",
-    "sourceSnippet": {
-      "sourceFileId": "recitation-recitation-9-hebrew",
-      "filename": "Recitation_9-Hebrew.pdf",
-      "text": "תרגיל: שתי סדרות של מספרים ממשיים. (bn)∞ n=0 ו (an)∞ n=0 יהיו בהתאמה R2 6 = R1 טורי חזקות עם רדיוסי התכנסות ∞ ∑ n=0 bn · xn , ∞ ∑ n=0 an · xn יהיו .R1, R2 6 = ∞ כך ש . ∞ ∑ n=0 (an ± bn) · xn מצאו את רדיוס ההתכנסות של טור החזקות פתרון: ראשית נשים לב שלא נוכל להשתמש בנוסחת המנה או השורש מכיוון שלא נתון שהגבולות קיימים. נחלק את הפתרון לשלושה חלקים )נראה שרטוט בכיתה(: .x ∈ R יהי , במקרה זה שני הטורים מתכנסים ולכן גם הסכום מתכנס| x |< min {R1, R2} 1. אם מאשט\"מ. , במקרה זה אנחנו יודעים שטור אחדmin {R1, R2} <| x |< max {R1, R2} 2. אם מתבדר שווה מתבדר(. ± מתכנס וטור אחד מתבדר ולכן הטור מתבדר )מתכנס , במקרה זה שני הטורים מתבדרים. נראה שגם הטור של| x |> max {R1, R2} 3. אם הסכום מתבדר. ולכן ממשפט | x |> max {R1, R2} מתכנס עבור ∞ ∑ n=0 (an ± bn)·xn נניח בשלילה ש , סתירה!2 \"אבל\" הטור מתכנס גם באיזור .R = min {R1, R2} לסיכום: מצאנו שרדיוס ההתכנסות של הטור של הסכום הוא .(| x |> min {R1, R2} ומתבדר לכל "
-    },
-    "confidence": 0.56
-  },
-  {
-    "id": "recitation-recitation-9-hebrew-question-3",
-    "sourceType": "recitation",
-    "sourceFileId": "recitation-recitation-9-hebrew",
+    "sourceFileId": "recitation-script-recitation-9-max",
     "questionNumber": "1",
-    "content": "דוגמא: . ∞ ∑ n=1 4n n · x2n+3 חשבו את תחום ההתכנסות של טור החזקות הבא: פתרון: נסדר את הטור ∞ ∑ n=1 4n n · x2n+3 = x3 ∞ ∑ n=1 4n n · x2n נסתכל על הטור ∞ ∑ n=1 4n n · x2n = t=x2 ∞ ∑ n=1 4n n · tn כעת נמצא את רדיוס ההתכנסות L = lim n→∞ n √ 4n n = lim n→∞ 4 n 1 n = AOL 4 הוא t ולכן רדיוס ההתכנסות של הטור עם R = 1 L = 1 4 ולכן הטור מתכנס לכל t0 = 0 נשים לב ש | t |< 1 4 ⇒| x2 |< 1 4 ⇒ x2 < 1 4 ⇒ − 1 2 < x < 1 2 .x < − 1 2 או x > 1 2 ומתבדר לכל כעת נבדוק את הקצוות בנפרד: , כי מכפלה של מספר קבוע לא תשנה אתx3 נשים לב שאין צורך להציב ב . ∞ ∑ n=1 4n n · x2n ההתכנסות או ההתבדרות של הטור ולכן נציב את הקצוות בביטוי :x = 1 2 עבור ∞ ∑ n=1 4n n · ( 1 2 )2n = ∞ ∑ n=1 1 n = ∞ :x = − 1 2 עבור ∞ ∑ n=1 4n n · ( − 1 2 )2n = ∞ ∑ n=1 1 n = ∞ ,− 1 2 < x < 1 2 לסיכום קיבלנו שתחום ההתכנסות של הטור הוא: .− 1 2 < x < 1 2 כלומר הטור מתכנס אם\"ם 5",
+    "content": "מינוס 1. מינוס 1, מצוין. בוא נשאל עוד שאלה למשל, מה זה ה'2 פה?",
     "topicIds": [
       "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
       "טורי-חזקות",
       "טורים",
       "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
       "סדרות",
+      "פונקציות",
       "רדיוס-התכנסות"
     ],
-    "difficulty": "medium",
+    "difficulty": "unknown",
     "examRelevance": "medium",
     "sourceSnippet": {
-      "sourceFileId": "recitation-recitation-9-hebrew",
-      "filename": "Recitation_9-Hebrew.pdf",
-      "text": "דוגמא: . ∞ ∑ n=1 4n n · x2n+3 חשבו את תחום ההתכנסות של טור החזקות הבא: פתרון: נסדר את הטור ∞ ∑ n=1 4n n · x2n+3 = x3 ∞ ∑ n=1 4n n · x2n נסתכל על הטור ∞ ∑ n=1 4n n · x2n = t=x2 ∞ ∑ n=1 4n n · tn כעת נמצא את רדיוס ההתכנסות L = lim n→∞ n √ 4n n = lim n→∞ 4 n 1 n = AOL 4 הוא t ולכן רדיוס ההתכנסות של הטור עם R = 1 L = 1 4 ולכן הטור מתכנס לכל t0 = 0 נשים לב ש | t |< 1 4 ⇒| x2 |< 1 4 ⇒ x2 < 1 4 ⇒ − 1 2 < x < 1 2 .x < − 1 2 או x > 1 2 ומתבדר לכל כעת נבדוק את הקצוות בנפרד: , כי מכפלה של מספר קבוע לא תשנה אתx3 נשים לב שאין צורך להציב ב . ∞ ∑ n=1 4n n · x2n ההתכנסות או ההתבדרות של הטור ולכן נציב את הקצוות בביטוי :x = 1 2 עבור ∞ ∑ n=1 4n n · ( 1 2 )2n = ∞ ∑ n=1 1 n = ∞ :x = − 1 2 עבור ∞ ∑ n=1 4n n · ( − 1 2 )2n = ∞ ∑ n=1 1 n = ∞ ,− 1 2 < x < 1 2 לסיכום קיבלנו שתחום ההתכנסות של הטור הוא: .− 1 2 < x < 1 2 כלומר הטור מתכנס אם\"ם 5"
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "מינוס 1. מינוס 1, מצוין. בוא נשאל עוד שאלה למשל, מה זה ה'2 פה?",
+      "startOffset": 881,
+      "endOffset": 943
     },
     "confidence": 0.56
   },
   {
-    "id": "recitation-recitation-9-hebrew-question-4",
+    "id": "recitation-script-recitation-9-max-question-2",
     "sourceType": "recitation",
-    "sourceFileId": "recitation-recitation-9-hebrew",
+    "sourceFileId": "recitation-script-recitation-9-max",
     "questionNumber": "1",
-    "content": "דוגמא נוספת: . ∞ ∑ n=1 sin2 ( 1 n ) · (x − 3)n חשבו את תחום ההתכנסות של טור החזקות הבא: פתרון: נמצא תחילה את רדיוס ההתכנסות ∞ ∑ n=1 sin2 ( 1 n ) · (x − 3)n = ∞ ∑ n=1 sin2 ( 1 n ) · tn R = 1 L = lim n→∞ sin2 ( 1 n ) sin2 ( 1 n+1 ) = lim n→∞       [ sin2( 1 n ) [ 1 n2 ] ] [ sin2( 1 n+1 ) [ 1 (n+1)2 ] ] · (n + 1)2 n2       = 1 1 · 1 = 1 לכן הטור מתכנס לכל | t |< 1 ⇒| x − 3 |< 1 ⇒ 2 < x < 4 .x < 2 או x > 4 ומתבדר לכל נבדוק בנפרד את הקצוות: :x = 2 עבור ∞ ∑ n=1 sin2 ( 1 n ) (2 − 3)n = ∞ ∑ n=1 sin2 ( 1 n ) (−1)n הטור מתכנס בהחלט, כי ∞ ∑ n=1 | sin2 ( 1 n ) (−1)n |= ∞ ∑ n=1 sin2 ( 1 n ) ≤ ∞ ∑ n=1 1 n2 < ∞ :x = 4 עבור ∞ ∑ n=1 sin2 ( 1 n ) (4 − 3)n = ∞ ∑ n=1 sin2 ( 1 n ) ≤ ∞ ∑ n=1 1 n2 < ∞ ,2 ≤ x ≤ 4 לסיכום קיבלנו שתחום ההתכנסות של הטור הוא: .2 ≤ x ≤ 4 כלומר הטור מתכנס אם\"ם 6",
+    "content": "אם אני מציב אין שווה 1, אני אקבל מינוס 1 בחזקת 1 פחות 1, כפול איקס ועוד 1 בחזקת 3, לחלק ל5 בחזקת 1 פחות 2.",
     "topicIds": [
       "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
       "טורי-חזקות",
       "טורים",
       "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
       "סדרות",
+      "פונקציות",
       "רדיוס-התכנסות"
     ],
-    "difficulty": "medium",
+    "difficulty": "unknown",
     "examRelevance": "medium",
     "sourceSnippet": {
-      "sourceFileId": "recitation-recitation-9-hebrew",
-      "filename": "Recitation_9-Hebrew.pdf",
-      "text": "דוגמא נוספת: . ∞ ∑ n=1 sin2 ( 1 n ) · (x − 3)n חשבו את תחום ההתכנסות של טור החזקות הבא: פתרון: נמצא תחילה את רדיוס ההתכנסות ∞ ∑ n=1 sin2 ( 1 n ) · (x − 3)n = ∞ ∑ n=1 sin2 ( 1 n ) · tn R = 1 L = lim n→∞ sin2 ( 1 n ) sin2 ( 1 n+1 ) = lim n→∞       [ sin2( 1 n ) [ 1 n2 ] ] [ sin2( 1 n+1 ) [ 1 (n+1)2 ] ] · (n + 1)2 n2       = 1 1 · 1 = 1 לכן הטור מתכנס לכל | t |< 1 ⇒| x − 3 |< 1 ⇒ 2 < x < 4 .x < 2 או x > 4 ומתבדר לכל נבדוק בנפרד את הקצוות: :x = 2 עבור ∞ ∑ n=1 sin2 ( 1 n ) (2 − 3)n = ∞ ∑ n=1 sin2 ( 1 n ) (−1)n הטור מתכנס בהחלט, כי ∞ ∑ n=1 | sin2 ( 1 n ) (−1)n |= ∞ ∑ n=1 sin2 ( 1 n ) ≤ ∞ ∑ n=1 1 n2 < ∞ :x = 4 עבור ∞ ∑ n=1 sin2 ( 1 n ) (4 − 3)n = ∞ ∑ n=1 sin2 ( 1 n ) ≤ ∞ ∑ n=1 1 n2 < ∞ ,2 ≤ x ≤ 4 לסיכום קיבלנו שתחום ההתכנסות של הטור הוא: .2 ≤ x ≤ 4 כלומר הטור מתכנס אם\"ם 6"
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "אם אני מציב אין שווה 1, אני אקבל מינוס 1 בחזקת 1 פחות 1, כפול איקס ועוד 1 בחזקת 3, לחלק ל5 בחזקת 1 פחות 2.",
+      "startOffset": 2047,
+      "endOffset": 2153
     },
     "confidence": 0.56
   },
   {
-    "id": "recitation-recitation-9-hebrew-question-5",
+    "id": "recitation-script-recitation-9-max-question-3",
     "sourceType": "recitation",
-    "sourceFileId": "recitation-recitation-9-hebrew",
-    "questionNumber": "0",
-    "content": "הוכיחו או הפריכו כל אחת מהטענות הבאות: שתי סדרות של מספרים ממשיים. (bn)∞ n=0 ו (an)∞ n=0 יהיו .R טור חזקות עם רדיוס התכנסות ∞ ∑ n=0 an · xn 1. יהי מתכנס בהחלט. ∞ ∑ n=0 an , אזיR > 1 אם פתרון: הטענה נכונה. ולכן x = 1 , אזי בפרט הטור מתכנס בהחלט בR > 1 והיות ש x0 = 0 נשים לב ש ∞ ∑ n=0 an · 1n = ∞ ∑ n=0 an מתכנס בהחלט. טורי חזקות עם רדיוסי ∞ ∑ n=0 bn · (x − x0)n , ∞ ∑ n=0 an · (x − x0)n ויהיו x0 ∈ R 2. יהי בהתאמה. R2, R1 התכנסות .R1 ≥ R2 אזי 0 ≤ n ∈ Z לכל | an |≤| bn | אם פתרון: הטענה נכונה. .R1 ≥ 0 = R2 , אזR2 = 0 אם אחרת: מתכנס ∞ ∑ n=0 bn · (x − x0)n . אזי טור החזקות| x1 − x0 |< R2 כך ש x1 ∈ R יהי , כלומרx1 בהחלט ב ∞ ∑ n=0 | bn | · | x1 − x0 |n< ∞ , אזי0 ≤ n ∈ Z לכל | an |≤| bn | היות ש ∞ ∑ n=0 | an | · | x1 − x0 |n≤ ∞ ∑ n=0 | bn | · | x1 − x0 |n< ∞ .x1 מתכנס בהחלט ב ∞ ∑ n=0 an · (x − x0)n ולכן ממבחן ההשוואה טור החזקות | x−x0 |< R2 כך ש x ∈ R מתכנס בהחלט לכל ∞ ∑ n=0 an·(x − x0)n לכן טור החזקות .R1 ≥ R2 ולכן 7",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "2",
+    "content": "איי 2 זה המקדם של איקס בריבוע, או במקרה הזה איקס ועוד אחד בריבוע. אין פה איקס ועוד אחד בריבוע, שזה אומר מיידית שאיי 2 הוא 0. ואם תשאלו אותי מה זה,",
     "topicIds": [
       "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
       "טורי-חזקות",
       "טורים",
       "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
       "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "איי 2 זה המקדם של איקס בריבוע, או במקרה הזה איקס ועוד אחד בריבוע. אין פה איקס ועוד אחד בריבוע, שזה אומר מיידית שאיי 2 הוא 0. ואם תשאלו אותי מה זה,",
+      "startOffset": 2308,
+      "endOffset": 2454
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-4",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "1",
+    "content": "זה איי 1. ואם תשאלו אותי מה זה, זה איי 3. ומה זה איי 4? ברור 0, אין מה לחשוב, אין פה חזקות זוגיות בכלל. אם אין פה חזקות זוגיות, זה אומר שהמקדם הוא פשוט 0.",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "זה איי 1. ואם תשאלו אותי מה זה, זה איי 3. ומה זה איי 4? ברור 0, אין מה לחשוב, אין פה חזקות זוגיות בכלל. אם אין פה חזקות זוגיות, זה אומר שהמקדם הוא פשוט 0.",
+      "startOffset": 2456,
+      "endOffset": 2610
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-5",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "1",
+    "content": "מינוס 1. מצוין. כל מי שחשב בראש ש1 וטעה, אני אגיד לכם למה טעיתם אם חשבתם 1. כי איי 2 זה לא מה שמתקבל כשאני מציב אין שווה 2.",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
       "רדיוס-התכנסות"
     ],
     "difficulty": "medium",
     "examRelevance": "medium",
     "sourceSnippet": {
-      "sourceFileId": "recitation-recitation-9-hebrew",
-      "filename": "Recitation_9-Hebrew.pdf",
-      "text": "הוכיחו או הפריכו כל אחת מהטענות הבאות: שתי סדרות של מספרים ממשיים. (bn)∞ n=0 ו (an)∞ n=0 יהיו .R טור חזקות עם רדיוס התכנסות ∞ ∑ n=0 an · xn 1. יהי מתכנס בהחלט. ∞ ∑ n=0 an , אזיR > 1 אם פתרון: הטענה נכונה. ולכן x = 1 , אזי בפרט הטור מתכנס בהחלט בR > 1 והיות ש x0 = 0 נשים לב ש ∞ ∑ n=0 an · 1n = ∞ ∑ n=0 an מתכנס בהחלט. טורי חזקות עם רדיוסי ∞ ∑ n=0 bn · (x − x0)n , ∞ ∑ n=0 an · (x − x0)n ויהיו x0 ∈ R 2. יהי בהתאמה. R2, R1 התכנסות .R1 ≥ R2 אזי 0 ≤ n ∈ Z לכל | an |≤| bn | אם פתרון: הטענה נכונה. .R1 ≥ 0 = R2 , אזR2 = 0 אם אחרת: מתכנס ∞ ∑ n=0 bn · (x − x0)n . אזי טור החזקות| x1 − x0 |< R2 כך ש x1 ∈ R יהי , כלומרx1 בהחלט ב ∞ ∑ n=0 | bn | · | x1 − x0 |n< ∞ , אזי0 ≤ n ∈ Z לכל | an |≤| bn | היות ש ∞ ∑ n=0 | an | · | x1 − x0 |n≤ ∞ ∑ n=0 | bn | · | x1 − x0 |n< ∞ .x1 מתכנס בהחלט ב ∞ ∑ n=0 an · (x − x0)n ולכן ממבחן ההשוואה טור החזקות | x−x0 |< R2 כך ש x ∈ R מתכנס בהחלט לכל ∞ ∑ n=0 an·(x − x0)n לכן טור ה",
-      "startOffset": 4770,
-      "endOffset": 5691
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "מינוס 1. מצוין. כל מי שחשב בראש ש1 וטעה, אני אגיד לכם למה טעיתם אם חשבתם 1. כי איי 2 זה לא מה שמתקבל כשאני מציב אין שווה 2.",
+      "startOffset": 9144,
+      "endOffset": 9267
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-6",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "2",
+    "content": "אין 2 זה המקדם של איקס בריבוע, איקס בריבוע פה מתקבל כשאני מציב אין שווה 1, כשאני מציב אין שווה 1 זה איקס בריבוע ופה כתוב מינוס 1 בחזקת 1 שזה מינוס 1.",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "אין 2 זה המקדם של איקס בריבוע, איקס בריבוע פה מתקבל כשאני מציב אין שווה 1, כשאני מציב אין שווה 1 זה איקס בריבוע ופה כתוב מינוס 1 בחזקת 1 שזה מינוס 1.",
+      "startOffset": 9269,
+      "endOffset": 9418
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-7",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "7",
+    "content": "אז זה וואלה, זה וואחד משפט באינפי. זה הוכחה מורכבת, זה משפט כבד. האם זה מה שקרה פה? ממש לא. לא, פשוט נתת שם חדש. בדיוק, חבר'ה, זה מי שאמר סימון, אהבתי.",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "hard",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "אז זה וואלה, זה וואחד משפט באינפי. זה הוכחה מורכבת, זה משפט כבד. האם זה מה שקרה פה? ממש לא. לא, פשוט נתת שם חדש. בדיוק, חבר'ה, זה מי שאמר סימון, אהבתי.",
+      "startOffset": 10874,
+      "endOffset": 11025
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-8",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "8",
+    "content": "יש לי פה פרמטר, אני קורא לו בשם אחר. ואני חושב שדוגמה טובה לזה, אני אראה לכם את זה למשל למטה פה. נגיד מישהו יגיד לכם את השאלה הבאה, קבעו עבור אילו ערכי אלפא הטור הזה מתכנס.",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "medium",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "יש לי פה פרמטר, אני קורא לו בשם אחר. ואני חושב שדוגמה טובה לזה, אני אראה לכם את זה למשל למטה פה. נגיד מישהו יגיד לכם את השאלה הבאה, קבעו עבור אילו ערכי אלפא הטור הזה מתכנס.",
+      "startOffset": 11242,
+      "endOffset": 11414
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-9",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "1",
+    "content": "שזה אם ורק אם איקס בריבוע קטן מ1, שזה אם ורק אם איקס בין 1 למינוס 1.",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "שזה אם ורק אם איקס בריבוע קטן מ1, שזה אם ורק אם איקס בין 1 למינוס 1.",
+      "startOffset": 12388,
+      "endOffset": 12456
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-10",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "6",
+    "content": "בגדול, מה שאתם אומרים להסתכל כאילו על התרגיל הזה, להגיד שמע, התבלבלת בתרגול, למה לא עשית את זה כבר בתרגול 6? מה זה קשור עכשיו? כאילו, אנחנו ידענו לפתור את זה בתרגול 6. כרגע אני עושה שאלות חימום, שדרכן אני מנסה להבין מה זה אומר ההצבה הזאת.",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "בגדול, מה שאתם אומרים להסתכל כאילו על התרגיל הזה, להגיד שמע, התבלבלת בתרגול, למה לא עשית את זה כבר בתרגול 6? מה זה קשור עכשיו? כאילו, אנחנו ידענו לפתור את זה בתרגול 6. כרגע אני עושה שאלות חימום, שדרכן אני מנסה להבין מה זה אומר ההצבה הזאת.",
+      "startOffset": 12848,
+      "endOffset": 13086
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-11",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "1",
+    "content": "הכול זה אם ורק אם. שני החצים האלה זה אם ורק אם. אז זאת אומרת, מה שאתה תכלס אומר פה על הדף זה, הדבר הזה עובד אם איקס הוא בין 1 למינוס 1.",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "הכול זה אם ורק אם. שני החצים האלה זה אם ורק אם. אז זאת אומרת, מה שאתה תכלס אומר פה על הדף זה, הדבר הזה עובד אם איקס הוא בין 1 למינוס 1.",
+      "startOffset": 14170,
+      "endOffset": 14305
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-12",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "12",
+    "content": "ופה עשיתי הכל הפוך. אני אומר, פה קודם מצאתי את תחום ההתכנסות ואחרי זה בדיעבד גיליתי מה הרדיוס, שזה קצת מוזר, זה לא מה שנעשה בשאלות היותר קשות. אבל למה זה אמור להפריע לך? כאילו, אין עם זה שום בעיה.",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "medium",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "ופה עשיתי הכל הפוך. אני אומר, פה קודם מצאתי את תחום ההתכנסות ואחרי זה בדיעבד גיליתי מה הרדיוס, שזה קצת מוזר, זה לא מה שנעשה בשאלות היותר קשות. אבל למה זה אמור להפריע לך? כאילו, אין עם זה שום בעיה.",
+      "startOffset": 14721,
+      "endOffset": 14917
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-13",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "1.5",
+    "content": "מינוס 1.5. מינוס 1.5, ואני רוצה, ואם אני אשאל אתכם מה זה איי 3 פה, אז זה יהיה קצת מבלבל, אני אגיד לכם למה. כי אם אתם באמת רוצים לכתוב את זה בצורה של תוך עסקאות, אז אתם צריכים לכתוב את זה ככה.",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "מינוס 1.5. מינוס 1.5, ואני רוצה, ואם אני אשאל אתכם מה זה איי 3 פה, אז זה יהיה קצת מבלבל, אני אגיד לכם למה. כי אם אתם באמת רוצים לכתוב את זה בצורה של תוך עסקאות, אז אתם צריכים לכתוב את זה ככה.",
+      "startOffset": 15969,
+      "endOffset": 16160
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-14",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "2",
+    "content": "צריך להיות 2 בחזקת שניהן, איקס ועוד 1.5 בחזקת שניהן, לחלק ל4 בחזקת שניהן.",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "צריך להיות 2 בחזקת שניהן, איקס ועוד 1.5 בחזקת שניהן, לחלק ל4 בחזקת שניהן.",
+      "startOffset": 16162,
+      "endOffset": 16235
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-15",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "2",
+    "content": "לא הבנתי. חכה, חכה, שנייה, עוד שנייה אני אצור שאלות. אני אומר, יש לי פה איזשהו רדוס שהוא 2, שאני יודע להבין את זה באופן מיידי, כי אני רואה שהמרחק לפה הוא 2 והמרחק לפה הוא 2.",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "לא הבנתי. חכה, חכה, שנייה, עוד שנייה אני אצור שאלות. אני אומר, יש לי פה איזשהו רדוס שהוא 2, שאני יודע להבין את זה באופן מיידי, כי אני רואה שהמרחק לפה הוא 2 והמרחק לפה הוא 2.",
+      "startOffset": 17943,
+      "endOffset": 18116
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-16",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "9",
+    "content": "ומה אני רוצה להגיד לסיכום השאלה הזאת, לפני שאתם שואלים שאלות, אז אני רק אסכם כמה דברים. אחד, הבנתי מה לעשות כשהכל בחזקות אין. זה שאלה אחת, סיימנו עם שאלה אחת בשיעורי הבית 9.",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "ומה אני רוצה להגיד לסיכום השאלה הזאת, לפני שאתם שואלים שאלות, אז אני רק אסכם כמה דברים. אחד, הבנתי מה לעשות כשהכל בחזקות אין. זה שאלה אחת, סיימנו עם שאלה אחת בשיעורי הבית 9.",
+      "startOffset": 18118,
+      "endOffset": 18291
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-17",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "17",
+    "content": "זה שאלות שאני אוהב שאתם שואלים וחושבים עליהן, כי אינטואיציות והבנה עמוקה של המבנה של טורחסקוט, זה מאוד מאוד חשוב כדי לפתור אחרי זה שאלות של הוכח או הפריח וכך הלאה, ואנחנו נתעסק בזה בסוף התרגול.",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "hard",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "זה שאלות שאני אוהב שאתם שואלים וחושבים עליהן, כי אינטואיציות והבנה עמוקה של המבנה של טורחסקוט, זה מאוד מאוד חשוב כדי לפתור אחרי זה שאלות של הוכח או הפריח וכך הלאה, ואנחנו נתעסק בזה בסוף התרגול.",
+      "startOffset": 21271,
+      "endOffset": 21464
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-18",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "2",
+    "content": "אז לא נגיד דברים כאלה באינפי. אבל אני אניח, לצורך השרטוט טיוטה שלי, אני אניח שהר 2 גדול מהר 1. מותר לי בטיוטה לעשות מה שאני רוצה. בפתרון הפורמלי אני אכתוב המינימום והמקסימום.",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "אז לא נגיד דברים כאלה באינפי. אבל אני אניח, לצורך השרטוט טיוטה שלי, אני אניח שהר 2 גדול מהר 1. מותר לי בטיוטה לעשות מה שאני רוצה. בפתרון הפורמלי אני אכתוב המינימום והמקסימום.",
+      "startOffset": 24121,
+      "endOffset": 24295
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-19",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "3",
+    "content": "זה אזור 3, זה אזור 3. ומה אני יודע לגבי אזור 1? מה אתם אומרים לגבי הטור הזה?",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "זה אזור 3, זה אזור 3. ומה אני יודע לגבי אזור 1? מה אתם אומרים לגבי הטור הזה?",
+      "startOffset": 25142,
+      "endOffset": 25218
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-20",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "2",
+    "content": "אם אזור 2 נמחק, אני לא יכול להעסיק שום דבר לאזור 3 במשפט הבל, והאמת שזה בכלל לא נכון כשער 1 שווה לער 2. אם אתם רוצים להמשיך לחקור את זה, תעשו בבית, אני לא אפתח את זה לדיון, אני רק אומר, זה לא נכון כשער 1 שווה לער 2. למה?",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "אם אזור 2 נמחק, אני לא יכול להעסיק שום דבר לאזור 3 במשפט הבל, והאמת שזה בכלל לא נכון כשער 1 שווה לער 2. אם אתם רוצים להמשיך לחקור את זה, תעשו בבית, אני לא אפתח את זה לדיון, אני רק אומר, זה לא נכון כשער 1 שווה לער 2. למה?",
+      "startOffset": 27942,
+      "endOffset": 28162
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-21",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "21",
+    "content": "טוב, אז אני מקווה שככה הבנו איך אפשר בצורה נחמדה להתמודד פה, ותכלס הוכחנו משפט שימושי להמשך. אתם יכולים להשתמש במשפט הזה כשאתם פותרים שאלות בשיעורי בית. יכול לעזור לכם גם. שאלות סיכום לגבי התרגיל הזה.",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "hard",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "טוב, אז אני מקווה שככה הבנו איך אפשר בצורה נחמדה להתמודד פה, ותכלס הוכחנו משפט שימושי להמשך. אתם יכולים להשתמש במשפט הזה כשאתם פותרים שאלות בשיעורי בית. יכול לעזור לכם גם. שאלות סיכום לגבי התרגיל הזה.",
+      "startOffset": 29636,
+      "endOffset": 29836
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-22",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "22",
+    "content": "ואז אתה לא יכול להגיד במשפט הבל שבאזור שלו זה מתבדר ואז זה בכלל לא נכון. אפשר לחשוב על זה בבית. הבנתי, סבבה. אם אין לכם מספיק הוכח או הפרש, תרגישו שהתרגיל קצר מדי.",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "hard",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "ואז אתה לא יכול להגיד במשפט הבל שבאזור שלו זה מתבדר ואז זה בכלל לא נכון. אפשר לחשוב על זה בבית. הבנתי, סבבה. אם אין לכם מספיק הוכח או הפרש, תרגישו שהתרגיל קצר מדי.",
+      "startOffset": 30400,
+      "endOffset": 30563
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-23",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "23",
+    "content": "היה לו עוד אחד. בסדר? הנה, הוכח או הפרח, מה קורה כשער אחד שווה לער שתיים? עוד שאלות?",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "hard",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "היה לו עוד אחד. בסדר? הנה, הוכח או הפרח, מה קורה כשער אחד שווה לער שתיים? עוד שאלות?",
+      "startOffset": 30565,
+      "endOffset": 30649
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-24",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "1",
+    "content": "כשאתם מציבים אין שווה 1 פה, אתם מקבלים איקס בחזקת 5. זה אומר שכל ה... אין פה איקס בחזקת 4, אין איקס בחזקת 3, אין איקס בחזקת 2, אין איקס בחזקת 1, זה אומר שכולם אפסים שם.",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "כשאתם מציבים אין שווה 1 פה, אתם מקבלים איקס בחזקת 5. זה אומר שכל ה... אין פה איקס בחזקת 4, אין איקס בחזקת 3, אין איקס בחזקת 2, אין איקס בחזקת 1, זה אומר שכולם אפסים שם.",
+      "startOffset": 31569,
+      "endOffset": 31737
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-25",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "8",
+    "content": "זה חשוב לשים לב. מה זה 8? תשובה מהירה. 4 בריבוע חלקי 2. מה זה 8?",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "זה חשוב לשים לב. מה זה 8? תשובה מהירה. 4 בריבוע חלקי 2. מה זה 8?",
+      "startOffset": 31739,
+      "endOffset": 31803
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-26",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "0",
+    "content": "0. למה 0? איזה חזקות יש פה? רק חזקות אי זוגיות, נכון? יש פה איקס בחמישית, איקס בשביעית, איקס בתשיעית, אין חזקות זוגיות. יאללה, שאלה שעכשיו לא 0, מה זה אי 5?",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "0. למה 0? איזה חזקות יש פה? רק חזקות אי זוגיות, נכון? יש פה איקס בחמישית, איקס בשביעית, איקס בתשיעית, אין חזקות זוגיות. יאללה, שאלה שעכשיו לא 0, מה זה אי 5?",
+      "startOffset": 31805,
+      "endOffset": 31961
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-27",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "4",
+    "content": "4. 4. למה? כי איי 5 מתקבל כשאני מציב אין שווה 1. כשאני מציב אין שווה 1 אני מקבל איקס בחזקת 5, 4 בחזקת 1 חלקי 1, אז זה 4 בחזקת 1 חלקי 1. טוב, למה אני עושה את זה בכלל? אנחנו נבין עוד מעט.",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "4. 4. למה? כי איי 5 מתקבל כשאני מציב אין שווה 1. כשאני מציב אין שווה 1 אני מקבל איקס בחזקת 5, 4 בחזקת 1 חלקי 1, אז זה 4 בחזקת 1 חלקי 1. טוב, למה אני עושה את זה בכלל? אנחנו נבין עוד מעט.",
+      "startOffset": 31963,
+      "endOffset": 32148
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-28",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "28",
+    "content": "נכון? אם אני מוצא את הרדיוס, החיים טובים. אז אני חוזר לשיחה שעשינו בהתחלה. בשאלות הראשונות עשינו משהו מאוד מאוד מוזר. קודם מצאנו את תחום ההתכנסות ואחרי זה את הרדיוס, שזה מוזר לעשות את זה, אבל זה היה אקטור גיאומטרי.",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "medium",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "נכון? אם אני מוצא את הרדיוס, החיים טובים. אז אני חוזר לשיחה שעשינו בהתחלה. בשאלות הראשונות עשינו משהו מאוד מאוד מוזר. קודם מצאנו את תחום ההתכנסות ואחרי זה את הרדיוס, שזה מוזר לעשות את זה, אבל זה היה אקטור גיאומטרי.",
+      "startOffset": 33072,
+      "endOffset": 33286
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-29",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "0",
+    "content": "למה באסה? כי הגבול שלו יהיה 0, אבל הגבול שלו לא יהיה 0. אם הגבול של הזוגי והאי זוגי לא יוצא אותו דבר, זה אומר שהגבול לא קיים במובן הרחב, וזה אומר שאני בכלל לא יכול להשתמש בכל מה שכתוב פה.",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "למה באסה? כי הגבול שלו יהיה 0, אבל הגבול שלו לא יהיה 0. אם הגבול של הזוגי והאי זוגי לא יוצא אותו דבר, זה אומר שהגבול לא קיים במובן הרחב, וזה אומר שאני בכלל לא יכול להשתמש בכל מה שכתוב פה.",
+      "startOffset": 35588,
+      "endOffset": 35775
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-30",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "4",
+    "content": "של 4 בחזקת אין חלקי אין, שזה לימיט של אין שואף לאין סוף של 4 לחלק לאין בחזקת 1 חלקי אין, שכל ילד שהיה כבר בשני התרגולים האחרונים יודע שזה גבול שכל הזמן חוזר על עצמו שהוא 1, שזה 4.",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "של 4 בחזקת אין חלקי אין, שזה לימיט של אין שואף לאין סוף של 4 לחלק לאין בחזקת 1 חלקי אין, שכל ילד שהיה כבר בשני התרגולים האחרונים יודע שזה גבול שכל הזמן חוזר על עצמו שהוא 1, שזה 4.",
+      "startOffset": 39421,
+      "endOffset": 39600
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-31",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "31",
+    "content": "ואז משם כבר נמצא תחום ההתכנסות של הטור. הרי מה מצאנו בטורי חזקות? קיצורי דרך. בגלל שיש את התכונה הסימטרית הנפלאה, אז אם מוצאים זה מתכנס בתנאי, סבבה.",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "medium",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "ואז משם כבר נמצא תחום ההתכנסות של הטור. הרי מה מצאנו בטורי חזקות? קיצורי דרך. בגלל שיש את התכונה הסימטרית הנפלאה, אז אם מוצאים זה מתכנס בתנאי, סבבה.",
+      "startOffset": 44820,
+      "endOffset": 44968
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-32",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "32",
+    "content": "אני נותן פה המון נקודות קטנות כאלה, אני מקווה שאתם סגורים עליהן, צוברים את ארגז הכלים ותתמודדו יפה בבית. בואו נעשה עוד דוגמה מאותו רעיון, עם איזה אלמנט שהוא טיפה שונה. אז חשבו על תחום ההתכנסות של טור החזקות הבא.",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "medium",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "אני נותן פה המון נקודות קטנות כאלה, אני מקווה שאתם סגורים עליהן, צוברים את ארגז הכלים ותתמודדו יפה בבית. בואו נעשה עוד דוגמה מאותו רעיון, עם איזה אלמנט שהוא טיפה שונה. אז חשבו על תחום ההתכנסות של טור החזקות הבא.",
+      "startOffset": 45204,
+      "endOffset": 45415
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-33",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "1",
+    "content": "כמה הגבול הזה שווה? 1. אבל האמת שלא הסברתי את זה פה ואתם בעיקרון צריכים להסביר את זה. את זה אתם יכולים לקחת את הלמה של היינה, להציב איקס אין שווה 1 חלקי אין לצד, ואז יהיה סינוס איקס בריבוע חלקי איקס בריבוע. 1. אותו דבר נחזור על זה פה.",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "כמה הגבול הזה שווה? 1. אבל האמת שלא הסברתי את זה פה ואתם בעיקרון צריכים להסביר את זה. את זה אתם יכולים לקחת את הלמה של היינה, להציב איקס אין שווה 1 חלקי אין לצד, ואז יהיה סינוס איקס בריבוע חלקי איקס בריבוע. 1. אותו דבר נחזור על זה פה.",
+      "startOffset": 48096,
+      "endOffset": 48330
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-34",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "4",
+    "content": "את השאר אני כבר יודע. בוא נעשה את זה. אז למשל עבור איקס שווה 4, מה אנחנו מקבלים פה? אם אני מציג פה איקס שווה 4, זה 4 פחות 3 בחזקת 1, זה פשוט 1.",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "את השאר אני כבר יודע. בוא נעשה את זה. אז למשל עבור איקס שווה 4, מה אנחנו מקבלים פה? אם אני מציג פה איקס שווה 4, זה 4 פחות 3 בחזקת 1, זה פשוט 1.",
+      "startOffset": 48968,
+      "endOffset": 49111
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-35",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "6",
+    "content": "אני אגיד לכם מה התשובה, שבעיקרון זאת שאלה משיעורי בית 6. מה הבעיה? אנחנו כבר בשבוע 9, אנחנו לא זוכרים פיקס מה קרה בשבוע 6. אבל אני כן רוצה להעיר פה איזושהי הערה כללית חשובה,",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "אני אגיד לכם מה התשובה, שבעיקרון זאת שאלה משיעורי בית 6. מה הבעיה? אנחנו כבר בשבוע 9, אנחנו לא זוכרים פיקס מה קרה בשבוע 6. אבל אני כן רוצה להעיר פה איזושהי הערה כללית חשובה,",
+      "startOffset": 49316,
+      "endOffset": 49489
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-36",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "1",
+    "content": "אז זה תמיד כזה סינוס של 1, סינוס של 1 חלקי מספר שגדול מ1, או 1. אז ברור שזה מסתדר פה. אז אם סינוס איקס קטן שווה מאיקס, אז גם סינוס בריבוע איקס קטן שווה מאיקס בריבוע, כל עוד זה חיובי כמובן, וזה חיובי.",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "אז זה תמיד כזה סינוס של 1, סינוס של 1 חלקי מספר שגדול מ1, או 1. אז ברור שזה מסתדר פה. אז אם סינוס איקס קטן שווה מאיקס, אז גם סינוס בריבוע איקס קטן שווה מאיקס בריבוע, כל עוד זה חיובי כמובן, וזה חיובי.",
+      "startOffset": 50294,
+      "endOffset": 50493
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-37",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "4",
+    "content": "אז זה מה שקורה פה באיקס שווה 4. מה קורה עבור איקס שווה 2? עבור איקס שווה 2 אנחנו מקבלים, אם אני חוזר לפה, 2 פחות 3 בחזקתנו, שזה מינוס 1 בחזקתנו. אז אני שואל אתכם,",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "unknown",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "אז זה מה שקורה פה באיקס שווה 4. מה קורה עבור איקס שווה 2? עבור איקס שווה 2 אנחנו מקבלים, אם אני חוזר לפה, 2 פחות 3 בחזקתנו, שזה מינוס 1 בחזקתנו. אז אני שואל אתכם,",
+      "startOffset": 50965,
+      "endOffset": 51127
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-38",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "2",
+    "content": "אתם יודעים שאם תשימו ערך מוחלט, תקבלו את מה שכתוב למעלה, ולכן זה מתכנס בהחלט. כי הוכחנו את זה לפני רגע למעלה. ולכן אני מוצא שספציפית בתרגיל הזה, התור מתכנס גם ב2 וגם ב4. ולכן לסיכום אני אכתוב את הדבר הזה.",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "hard",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "אתם יודעים שאם תשימו ערך מוחלט, תקבלו את מה שכתוב למעלה, ולכן זה מתכנס בהחלט. כי הוכחנו את זה לפני רגע למעלה. ולכן אני מוצא שספציפית בתרגיל הזה, התור מתכנס גם ב2 וגם ב4. ולכן לסיכום אני אכתוב את הדבר הזה.",
+      "startOffset": 52206,
+      "endOffset": 52410
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-39",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "6",
+    "content": "יופי, סיימנו את סעיף א' של שבוע הבא, שזה בעצם התרגיל של היום, שזה כולל לדעת איך נמצאים את הרדיוס, וזה כולל לדעת לבדוק קצוות, שכל בדיקה מהקצוות זה שבועות 6 עד 8.",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "medium",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "יופי, סיימנו את סעיף א' של שבוע הבא, שזה בעצם התרגיל של היום, שזה כולל לדעת איך נמצאים את הרדיוס, וזה כולל לדעת לבדוק קצוות, שכל בדיקה מהקצוות זה שבועות 6 עד 8.",
+      "startOffset": 52541,
+      "endOffset": 52701
+    },
+    "confidence": 0.56
+  },
+  {
+    "id": "recitation-script-recitation-9-max-question-40",
+    "sourceType": "recitation",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "questionNumber": "40",
+    "content": "שאלות סיכום, אולי אני אשים את זה פה, רואים את זה יותר יפה, לגבי התרגיל הזה. לא משנה, אותו דבר. ונעבור לפרק האחרון של התרגול הזה, קצת הוכח או הפרח, לצבור קצת אינטואיציות לקראת שיעורי הבית.",
+    "topicIds": [
+      "גבולות",
+      "התכנסות-בהחלט",
+      "התכנסות-בתנאי",
+      "טורי-חזקות",
+      "טורים",
+      "מבחן-ההשוואה",
+      "מבחן-המנה",
+      "מבחן-השורש",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס-התכנסות"
+    ],
+    "difficulty": "hard",
+    "examRelevance": "medium",
+    "sourceSnippet": {
+      "sourceFileId": "recitation-script-recitation-9-max",
+      "filename": "recitation-9-max.txt",
+      "text": "שאלות סיכום, אולי אני אשים את זה פה, רואים את זה יותר יפה, לגבי התרגיל הזה. לא משנה, אותו דבר. ונעבור לפרק האחרון של התרגול הזה, קצת הוכח או הפרח, לצבור קצת אינטואיציות לקראת שיעורי הבית.",
+      "startOffset": 52754,
+      "endOffset": 52941
     },
     "confidence": 0.56
   },
@@ -1367,29 +2958,6 @@
     "id": "hw-exercise-1-solution-question-2",
     "sourceType": "homework",
     "sourceFileId": "hw-exercise-1-solution",
-    "questionNumber": "(d)",
-    "content": "(d) lim 𝑥→∞ 𝑒2𝑥 − 𝑥 + 1  1 𝑥 . Solution: lim 𝑥→∞ 𝑒2𝑥 − 𝑥 + 1  1 𝑥 = lim 𝑥→∞𝑒ln   (𝑒2𝑥 −𝑥+1) 1 𝑥   = lim 𝑥→∞𝑒 ln(𝑒2𝑥 −𝑥+1) 𝑥 = (★) Let us calculate the limit lim 𝑥→∞ ln 𝑒2𝑥 − 𝑥 + 1  𝑥 ? ∞ = lim 𝑥→∞ h 𝑒2𝑥 ·2−1 𝑒2𝑥 −𝑥+1 i 1 = lim 𝑥→∞ 𝑒2𝑥 · 2 − 1 𝑒2𝑥 − 𝑥 + 1 ? ∞ = lim 𝑥→∞ 4 · 𝑒2𝑥 2 · 𝑒2𝑥 − 1 ? ∞ = lim 𝑥→∞ 8 · 𝑒2𝑥 4 · 𝑒2𝑥 = lim 𝑥→∞2 = 2 We conclude that (★) = lim 𝑥→∞𝑒 ln [(𝑒2𝑥 −𝑥+1)] 𝑥 AOL = 𝑒2 (e) lim 𝑥→0 ( 𝑥+𝑒) 𝑥 −𝑒𝑥 𝑥2 . Solution: By AOD for every 𝑥 > −𝑒, (𝑥 + 𝑒)𝑥 is differentiable and ((𝑥 + 𝑒)𝑥 )′ =   𝑒𝑥 ln( 𝑥+𝑒)  ′ = (𝑥 + 𝑒)𝑥 ·   ln (𝑥 + 𝑒) + 𝑥 𝑥 + 𝑒   Now lim 𝑥→0 (𝑥 + 𝑒)𝑥 − 𝑒𝑥 𝑥2 0 0 = lim 𝑥→0 (𝑥 + 𝑒)𝑥 · ln (𝑥 + 𝑒) + 𝑥 𝑥+𝑒   − 𝑒𝑥 2𝑥 0 0 = lim 𝑥→0 (𝑥 + 𝑒)𝑥 · ln (𝑥 + 𝑒) + 𝑥 𝑥+𝑒  2 + (𝑥 + 𝑒)𝑥 ·   1 𝑥+𝑒 + 𝑒 ( 𝑥+𝑒)2   − 𝑒𝑥 2 AOL = 1 · (1 + 0)2 + 1 · 1 𝑒 + 1 𝑒   − 1 2 = 2 𝑒   2 = 1 𝑒 2",
-    "topicIds": [
-      "גבולות",
-      "טורים",
-      "נגזרות",
-      "סדרות",
-      "פונקציות",
-      "רציפות"
-    ],
-    "difficulty": "unknown",
-    "examRelevance": "medium",
-    "sourceSnippet": {
-      "sourceFileId": "hw-exercise-1-solution",
-      "filename": "Exercise 1 solution.pdf",
-      "text": "(d) lim 𝑥→∞ 𝑒2𝑥 − 𝑥 + 1  1 𝑥 . Solution: lim 𝑥→∞ 𝑒2𝑥 − 𝑥 + 1  1 𝑥 = lim 𝑥→∞𝑒ln   (𝑒2𝑥 −𝑥+1) 1 𝑥   = lim 𝑥→∞𝑒 ln(𝑒2𝑥 −𝑥+1) 𝑥 = (★) Let us calculate the limit lim 𝑥→∞ ln 𝑒2𝑥 − 𝑥 + 1  𝑥 ? ∞ = lim 𝑥→∞ h 𝑒2𝑥 ·2−1 𝑒2𝑥 −𝑥+1 i 1 = lim 𝑥→∞ 𝑒2𝑥 · 2 − 1 𝑒2𝑥 − 𝑥 + 1 ? ∞ = lim 𝑥→∞ 4 · 𝑒2𝑥 2 · 𝑒2𝑥 − 1 ? ∞ = lim 𝑥→∞ 8 · 𝑒2𝑥 4 · 𝑒2𝑥 = lim 𝑥→∞2 = 2 We conclude that (★) = lim 𝑥→∞𝑒 ln [(𝑒2𝑥 −𝑥+1)] 𝑥 AOL = 𝑒2 (e) lim 𝑥→0 ( 𝑥+𝑒) 𝑥 −𝑒𝑥 𝑥2 . Solution: By AOD for every 𝑥 > −𝑒, (𝑥 + 𝑒)𝑥 is differentiable and ((𝑥 + 𝑒)𝑥 )′ =   𝑒𝑥 ln( 𝑥+𝑒)  ′ = (𝑥 + 𝑒)𝑥 ·   ln (𝑥 + 𝑒) + 𝑥 𝑥 + 𝑒   Now lim 𝑥→0 (𝑥 + 𝑒)𝑥 − 𝑒𝑥 𝑥2 0 0 = lim 𝑥→0 (𝑥 + 𝑒)𝑥 · ln (𝑥 + 𝑒) + 𝑥 𝑥+𝑒   − 𝑒𝑥 2𝑥 0 0 = lim 𝑥→0 (𝑥 + 𝑒)𝑥 · ln (𝑥 + 𝑒) + 𝑥 𝑥+𝑒  2 + (𝑥 + 𝑒)𝑥 ·   1 𝑥+𝑒 + 𝑒 ( 𝑥+𝑒)2   − 𝑒𝑥 2 AOL = 1 · (1 + 0)2 + 1 · 1 𝑒 + 1 𝑒   − 1 2 = "
-    },
-    "confidence": 0.56
-  },
-  {
-    "id": "hw-exercise-1-solution-question-3",
-    "sourceType": "homework",
-    "sourceFileId": "hw-exercise-1-solution",
     "questionNumber": "2",
     "content": "2. Let 𝑥0 ∈ R and let 𝑓 be a function that is defined on a neighborhood of 𝑥0. Suppose that 𝑓 is differentiable at every 𝑥 in the neighborhood for which 𝑥 ≠ 𝑥0. Let 𝐿 ∈ R and suppose also that lim 𝑥→𝑥0 𝑓 ′ (𝑥) = 𝐿. (a) Give an example of a function satisfying the conditions above, and such that 𝑓 is not differentiable at 𝑥0. Solution: Consider the function defined by 𝑓 (𝑥) =    0 𝑥 ≠ 0 1 𝑥 = 0 for every 𝑥 ∈ R. We choose 𝑥0 = 0. Note that for every 𝑥 ≠ 0, 𝑓 is differentiable by AOD at 𝑥 and that for every 𝑥 ≠ 0 we have 𝑓 ′ (𝑥) = 0. It follows that lim 𝑥→0 𝑓 ′ (𝑥) = lim 𝑥→0 0 = 0 Note also that lim 𝑥→0 𝑓 (𝑥) = lim 𝑥→00 = 0 ≠ 1 = 𝑓 (0), which implies that 𝑓 is not continuous at 𝑥0 = 0 and therefore 𝑓 is not differentiable at 𝑥0 = 0. (b) Suppose, in addition, that 𝑓 is continuous at 𝑥0. Prove that 𝑓 is continuously differentiable at 𝑥0. Solution: As 𝑓 is continuous at 𝑥0, then lim 𝑥→𝑥0 𝑓 (𝑥) = 𝑓 (𝑥0). It follows that lim 𝑥→𝑥0 [ 𝑓 (𝑥) − 𝑓 (𝑥0)] AOL = 0 Thus, by L’Hˆopital’s rule 𝑓 ′ (𝑥0) = lim 𝑥→𝑥0 𝑓 (𝑥) − 𝑓 (𝑥0) 𝑥 − 𝑥0 0 0 = lim 𝑥→𝑥0 𝑓 ′ (𝑥) 1 = lim 𝑥→𝑥0 𝑓 ′ (𝑥) = 𝐿 It follows that 𝑓 is continuously differentiable at 𝑥0 and that 𝑓 ′ (𝑥0) = 𝐿 = lim 𝑥→𝑥0 𝑓 ′ (𝑥). (c) Conclude that there exists no function 𝑓 : (−1, 1) → R for which 𝑓 ′ (𝑥) =    𝑥 sin 1 𝑥   𝑥 ≠ 0 1 𝑥 = 0 for every 𝑥 ∈ (−1, 1). Solution: ATC that such a function exists. As 𝑓 is differentiable at 𝑥0 = 0 then 𝑓 is continuous at 𝑥0 = 0. As lim 𝑥→0 𝑓 (𝑥) = lim 𝑥→0[𝑥 sin 1 𝑥 ] 𝐵×𝑉 = 0, then by item (b), 𝑓 is continuously differentiable at 𝑥0 = 0 and therefore 1 = 𝑓 ′ (0) = lim 𝑥→0 𝑓 ′ (𝑥) = 0 Contradiction. 3",
     "topicIds": [
@@ -1412,7 +2980,7 @@
     "confidence": 0.56
   },
   {
-    "id": "hw-exercise-1-solution-question-4",
+    "id": "hw-exercise-1-solution-question-3",
     "sourceType": "homework",
     "sourceFileId": "hw-exercise-1-solution",
     "questionNumber": "3",
@@ -1437,7 +3005,7 @@
     "confidence": 0.56
   },
   {
-    "id": "hw-exercise-1-solution-question-5",
+    "id": "hw-exercise-1-solution-question-4",
     "sourceType": "homework",
     "sourceFileId": "hw-exercise-1-solution",
     "questionNumber": "4",
@@ -1462,7 +3030,7 @@
     "confidence": 0.56
   },
   {
-    "id": "hw-exercise-1-solution-question-6",
+    "id": "hw-exercise-1-solution-question-5",
     "sourceType": "homework",
     "sourceFileId": "hw-exercise-1-solution",
     "questionNumber": "5",
@@ -1487,32 +3055,7 @@
     "confidence": 0.56
   },
   {
-    "id": "hw-exercise-1-solution-question-7",
-    "sourceType": "homework",
-    "sourceFileId": "hw-exercise-1-solution",
-    "questionNumber": "(c)",
-    "content": "(c) Student X was kind of impressed when she saw the proof that sin(𝑥) < 𝑥 for every 0 < 𝑥 < 𝜋 2 in the first semester. Feeling powerful, she wanted to prove an inequality on her own: an inequality that would be both more impressive and more accurate. She asked her TA for help. Prove that there exists a 𝛿 > 0 such that for every 0 < 𝑥 < 𝛿 we have 𝑥 − 0.17𝑥3 < sin(𝑥) < 𝑥 − 0.16𝑥3 Solution: We compute lim 𝑥→0+ sin(𝑥) − 𝑥 𝑥3 0 0 = lim 𝑥→0+ cos(𝑥) − 1 3𝑥2 − 1 2 famous = − 1 6 As lim 𝑥→0+ sin( 𝑥) −𝑥 𝑥3 = − 1 6 , then there exists a 𝛿1 > 0 such that for every 0 < 𝑥 < 𝛿1 we have −0.17 < sin(𝑥) − 𝑥 𝑥3 < −0.16 (★) Choose 𝛿 = 𝛿1 and let 0 < 𝑥 < 𝛿. Then (★) hold for that 𝑥. Multiplying by 𝑥3 we obtain 𝑥 − 0.17𝑥3 < sin(𝑥) < 𝑥 − 0.16𝑥3. 7",
-    "topicIds": [
-      "גבולות",
-      "טורים",
-      "נגזרות",
-      "סדרות",
-      "פונקציות",
-      "רציפות"
-    ],
-    "difficulty": "hard",
-    "examRelevance": "medium",
-    "sourceSnippet": {
-      "sourceFileId": "hw-exercise-1-solution",
-      "filename": "Exercise 1 solution.pdf",
-      "text": "(c) Student X was kind of impressed when she saw the proof that sin(𝑥) < 𝑥 for every 0 < 𝑥 < 𝜋 2 in the first semester. Feeling powerful, she wanted to prove an inequality on her own: an inequality that would be both more impressive and more accurate. She asked her TA for help. Prove that there exists a 𝛿 > 0 such that for every 0 < 𝑥 < 𝛿 we have 𝑥 − 0.17𝑥3 < sin(𝑥) < 𝑥 − 0.16𝑥3 Solution: We compute lim 𝑥→0+ sin(𝑥) − 𝑥 𝑥3 0 0 = lim 𝑥→0+ cos(𝑥) − 1 3𝑥2 − 1 2 famous = − 1 6 As lim 𝑥→0+ sin( 𝑥) −𝑥 𝑥3 = − 1 6 , then there exists a 𝛿1 > 0 such that for every 0 < 𝑥 < 𝛿1 we have −0.17 < sin(𝑥) − 𝑥 𝑥3 < −0.16 (★) Choose 𝛿 = 𝛿1 and let 0 < 𝑥 < 𝛿. Then (★) hold for that 𝑥. Multiplying by 𝑥3 we obtain 𝑥 − 0.17𝑥3 < sin(𝑥) < 𝑥 − 0.16𝑥3. 7",
-      "startOffset": 8434,
-      "endOffset": 9209
-    },
-    "confidence": 0.56
-  },
-  {
-    "id": "hw-exercise-1-solution-question-8",
+    "id": "hw-exercise-1-solution-question-6",
     "sourceType": "homework",
     "sourceFileId": "hw-exercise-1-solution",
     "questionNumber": "6",
@@ -1531,31 +3074,6 @@
       "sourceFileId": "hw-exercise-1-solution",
       "filename": "Exercise 1 solution.pdf",
       "text": "6. Let 𝐿 ∈ R. (a) Let 𝑔1 : R → R. Suppose 𝑔1 is an odd function, i.e., 𝑔1 (−𝑥) = −𝑔1 (𝑥) for every 𝑥 ∈ R. Suppose in addition that lim 𝑥→∞𝑔1 (𝑥) = 𝐿. Prove that lim 𝑥→−∞𝑔1 (𝑥) = −𝐿. Solution: We compute lim 𝑥→−∞𝑔1 (𝑥) 𝑡=−𝑥 = lim 𝑡→∞𝑔1 (−𝑡) odd = lim 𝑡→∞ − 𝑔1 (𝑡) AOL = −𝐿 (b) Let 𝑔2 : R → R be a continuous function. Prove that if lim 𝑥→∞𝑔2 (𝑥) = lim 𝑥→−∞𝑔2 (𝑥) = 𝐿, then 𝑔2 has an extreme point in R. Solution: First, if 𝑔2 is constant then every point is extreme. We now assume 𝑔2 is not constant and consider the function defined by Ψ(𝑥) =    𝑔2 (tan(𝑥)) − 𝜋 2 < 𝑥 < 𝜋 2 𝐿 𝑥 = 𝜋 2 𝐿 𝑥 = − 𝜋 2 , ∀𝑥 ∈ h − 𝜋 2 , 𝜋 2 i Note that as 𝑔2 is continuous and as lim 𝑥→∞𝑔2 (𝑥) = lim 𝑥→−∞𝑔2 (𝑥) = 𝐿, then lim 𝑥→ 𝜋 2 − Ψ(𝑥) = lim 𝑥→ 𝜋 2 − 𝑔2 (tan(𝑥)) 𝑦=tan( 𝑥) = lim 𝑦→∞ 𝑔2 (𝑦) = 𝐿 = Ψ   𝜋 2   and similarly, lim 𝑥→− "
-    },
-    "confidence": 0.56
-  },
-  {
-    "id": "hw-exercise-1-solution-question-9",
-    "sourceType": "homework",
-    "sourceFileId": "hw-exercise-1-solution",
-    "questionNumber": "(c)",
-    "content": "(c) Let 𝑓 : R → R be a differentiable function. Consider the function defined by 𝑔(𝑥) = 𝑓 (𝑥) − 𝑓 (−𝑥) for every 𝑥 ∈ R. Suppose that lim 𝑥→∞𝑔(𝑥) = 0. Conclude, using items (a) and (b), that there exists a 𝑐 ∈ R for which 𝑔′ (𝑐) = 0. Solution: We first show that 𝑔 is an odd function: let 𝑥 ∈ R. We note that 𝑔(−𝑥) = 𝑓 (−𝑥) − 𝑓 (−(−𝑥)) = 𝑓 (−𝑥) − 𝑓 (𝑥) = −( 𝑓 (𝑥) − 𝑓 (−𝑥)) = −𝑔(𝑥) Since we assumed lim 𝑥→∞ 𝑔(𝑥) = 0 then by item (a) we also obtain lim 𝑥→−∞𝑔(𝑥) = −0 = 0. As 𝑓 is differentiable, then by AOD 𝑔 is differentiable and therefore continuous and therefore by item (b) there exists an 𝑐 ∈ R such that 𝑐 is an extreme point. As 𝑔 is differentiable, then by Fermat’s theorem we have 𝑔′ (𝑐) = 0. (d) Prove that there exists a 𝑑 ∈ R for which 𝑓 ′ (𝑑) = 0. Solution: By AOD, 𝑔 is differentiable 𝑔′ (𝑥) = 𝑓 ′ (𝑥) − 𝑓 ′ (−𝑥) · (−1) = 𝑓 ′ (𝑥) + 𝑓 ′ (−𝑥), ∀𝑥 ∈ R As 𝑔′ (𝑐) = 0, then 𝑓 ′ (𝑐) + 𝑓 ′ (−𝑐) = 0 ⇒ 𝑓 ′ (𝑐) = − 𝑓 ′ (−𝑐). If 𝑐 = −𝑐 then 𝑐 = 0 and therefore 𝑓 ′ (0) = − 𝑓 ′ (0) ⇒ 𝑓 ′ (0) = 0. We choose 𝑑 = 0 and complete the proof. Otherwise, 𝑐, −𝑐 are two different points. As 𝑓 ′ (−𝑐) = − 𝑓 ′ (𝑐), then 𝑓 ′ (𝑐) · 𝑓 ′ (−𝑐) = − [ 𝑓 ′ (𝑐)]2 ≤ 0 Thus, by the generalized Darboux theorem, there exists a 𝑑 ∈ R between −𝑐 and 𝑐 for which 𝑓 ′ (𝑑) = 0. 9",
-    "topicIds": [
-      "גבולות",
-      "טורים",
-      "נגזרות",
-      "סדרות",
-      "פונקציות",
-      "רציפות"
-    ],
-    "difficulty": "hard",
-    "examRelevance": "medium",
-    "sourceSnippet": {
-      "sourceFileId": "hw-exercise-1-solution",
-      "filename": "Exercise 1 solution.pdf",
-      "text": "(c) Let 𝑓 : R → R be a differentiable function. Consider the function defined by 𝑔(𝑥) = 𝑓 (𝑥) − 𝑓 (−𝑥) for every 𝑥 ∈ R. Suppose that lim 𝑥→∞𝑔(𝑥) = 0. Conclude, using items (a) and (b), that there exists a 𝑐 ∈ R for which 𝑔′ (𝑐) = 0. Solution: We first show that 𝑔 is an odd function: let 𝑥 ∈ R. We note that 𝑔(−𝑥) = 𝑓 (−𝑥) − 𝑓 (−(−𝑥)) = 𝑓 (−𝑥) − 𝑓 (𝑥) = −( 𝑓 (𝑥) − 𝑓 (−𝑥)) = −𝑔(𝑥) Since we assumed lim 𝑥→∞ 𝑔(𝑥) = 0 then by item (a) we also obtain lim 𝑥→−∞𝑔(𝑥) = −0 = 0. As 𝑓 is differentiable, then by AOD 𝑔 is differentiable and therefore continuous and therefore by item (b) there exists an 𝑐 ∈ R such that 𝑐 is an extreme point. As 𝑔 is differentiable, then by Fermat’s theorem we have 𝑔′ (𝑐) = 0. (d) Prove that there exists a 𝑑 ∈ R for which 𝑓 ′ (𝑑) = 0. Solution: By AOD, 𝑔 is differentiable 𝑔′ (𝑥) = 𝑓 ′ (𝑥) − 𝑓 ′ (−𝑥) · (−1) = 𝑓 ′ (𝑥) ",
-      "startOffset": 11289,
-      "endOffset": 12638
     },
     "confidence": 0.56
   },
@@ -1605,27 +3123,6 @@
     "id": "hw-exercise-2-solution-question-3",
     "sourceType": "homework",
     "sourceFileId": "hw-exercise-2-solution",
-    "questionNumber": "(b)",
-    "content": "(b) If (𝑎𝑛)∞ 𝑛=1 is increasing, then (𝑎𝑛)∞ 𝑛=1 converges in the extended sense and lim 𝑛→∞ 𝑎𝑛 = sup {𝑎𝑛 : 𝑛 ∈ N} Solution: First we assume that (𝑎𝑛)∞ 𝑛=1 is bounded from above. As (𝑎𝑛)∞ 𝑛=1 is bounded from above (and clearly not empty), then by the least upper bound theorem, there exists an ¯𝑠 ∈ R such that ¯𝑠 = sup {𝑎𝑛 | 𝑛 ∈ N}. Let 𝜖 > 0. By the 𝜖 property of ¯𝑠, there exists an 𝑛1 ≥ 1 for which ¯𝑠 − 𝜖 < 𝑎𝑛1 ≤ ¯𝑠. We choose 𝑁 ∈ N such that 𝑁 > 𝑛1 (by the Archimedean property there exists such N). let 𝑛 ≥ 𝑁. As (𝑎𝑛)∞ 𝑛=1 is increasing and 𝑛 > 𝑛1, we have ¯𝑠 − 𝜖 < 𝑎𝑛1 ≤ 𝑎𝑛 note that 𝑎𝑛 ≤ ¯𝑠 < ¯𝑠 + 𝜖, so ¯𝑠 − 𝜖 < 𝑎𝑛1 ≤ 𝑎𝑛 < ¯𝑠 + 𝜖 therefore |𝑎𝑛 − ¯𝑠| < 𝜖. We proved that (𝑎𝑛)∞ 𝑛=1 converges, and that lim 𝑛→∞𝑎𝑛 = ¯𝑠. Now we assume that (𝑎𝑛)∞ 𝑛=1 is not bounded from above. Let 𝐾 > 0. As (𝑎𝑛)∞ 𝑛=1 is not bounded from above, there exists an 𝑛1 ≥ 1 for which 𝑎𝑛1 > 𝐾. We choose 𝑁 ∈ N such that 𝑁 > 𝑛1 (by the Archimedean property there exists such N). Let 𝑛 ≥ 𝑁. As (𝑎𝑛)∞ 𝑛=1 is increasing and 𝑛 > 𝑛1, we have 𝑎𝑛 ≥ 𝑎𝑛1 > 𝐾, thus lim 𝑛→∞𝑎𝑛 = sup {𝑎𝑛 | 𝑛 ∈ N} = ∞. (c) Suppose that (𝑎𝑛)∞ 𝑛=1 is bounded and consider the sequence (𝑏𝑘 )∞ 𝑘=1 defined by 𝑏𝑘 = inf {𝑎𝑛 : 𝑛 ≥ 𝑘 } ∀𝑘 ∈ N Prove that (𝑏𝑘 )∞ 𝑘=1 is convergent. Hint: prove that (𝑏𝑘 )∞ 𝑘=1 is increasing and bounded from above. Solution: First, as the sequence (𝑎𝑛)∞ 𝑛=1 is bounded, then for every 𝑘 ∈ N, the set {𝑎𝑛 : 𝑛 ≥ 𝑘 } is bounded from below, and as it is not empty, then by the greatest lower bound theorem 𝑏𝑘 is well defined. Also, as (𝑎𝑛)∞ 𝑛=1 is bounded from above, then there exists an 𝑀 ∈ R such that 𝑎𝑛 ≤ 𝑀 for every 𝑛 ∈ N. It follows that for every 𝑘 ∈ N, 𝑀 is an upper bound of the ",
-    "topicIds": [
-      "גבולות",
-      "טורים",
-      "סדרות",
-      "פונקציות"
-    ],
-    "difficulty": "hard",
-    "examRelevance": "medium",
-    "sourceSnippet": {
-      "sourceFileId": "hw-exercise-2-solution",
-      "filename": "Exercise 2 solution.pdf",
-      "text": "(b) If (𝑎𝑛)∞ 𝑛=1 is increasing, then (𝑎𝑛)∞ 𝑛=1 converges in the extended sense and lim 𝑛→∞ 𝑎𝑛 = sup {𝑎𝑛 : 𝑛 ∈ N} Solution: First we assume that (𝑎𝑛)∞ 𝑛=1 is bounded from above. As (𝑎𝑛)∞ 𝑛=1 is bounded from above (and clearly not empty), then by the least upper bound theorem, there exists an ¯𝑠 ∈ R such that ¯𝑠 = sup {𝑎𝑛 | 𝑛 ∈ N}. Let 𝜖 > 0. By the 𝜖 property of ¯𝑠, there exists an 𝑛1 ≥ 1 for which ¯𝑠 − 𝜖 < 𝑎𝑛1 ≤ ¯𝑠. We choose 𝑁 ∈ N such that 𝑁 > 𝑛1 (by the Archimedean property there exists such N). let 𝑛 ≥ 𝑁. As (𝑎𝑛)∞ 𝑛=1 is increasing and 𝑛 > 𝑛1, we have ¯𝑠 − 𝜖 < 𝑎𝑛1 ≤ 𝑎𝑛 note that 𝑎𝑛 ≤ ¯𝑠 < ¯𝑠 + 𝜖, so ¯𝑠 − 𝜖 < 𝑎𝑛1 ≤ 𝑎𝑛 < ¯𝑠 + 𝜖 therefore |𝑎𝑛 − ¯𝑠| < 𝜖. We proved that (𝑎𝑛)∞ 𝑛=1 converges, and that lim 𝑛→∞𝑎𝑛 = ¯𝑠. Now we assume that (𝑎𝑛)∞ 𝑛=1 is not bounded from above. Let 𝐾 > 0. As (𝑎𝑛)∞ 𝑛=1 is not bounded fr"
-    },
-    "confidence": 0.56
-  },
-  {
-    "id": "hw-exercise-2-solution-question-4",
-    "sourceType": "homework",
-    "sourceFileId": "hw-exercise-2-solution",
     "questionNumber": "3",
     "content": "3. (a) Let 𝑎 ∈ R and let 𝑓 be a function that is defined on [𝑎, ∞). Assume that lim 𝑥→∞ 𝑓 (𝑥) = ∞. Prove that for every sequence (𝑥𝑛)∞ 𝑛=1 such that lim 𝑛→∞𝑥𝑛 = ∞, we have lim 𝑛→∞ 𝑓 (𝑥𝑛) = ∞. Solution: Let (𝑥𝑛)∞ 𝑛=1 be a sequence such that lim 𝑛→∞𝑥𝑛 = ∞. Let 𝐾 > 0. As lim 𝑥→∞ 𝑓 (𝑥) = ∞ then there exists an 𝑀1 > 0 such that for every 𝑥 > 𝑀1 we have 𝑓 (𝑥) > 𝐾 (★) As lim 𝑛→∞𝑥𝑛 = ∞ then there exists an 𝑁1 ∈ N such that for every 𝑛 ≥ 𝑁1 we have 𝑥𝑛 > 𝑀1 (★★) Choose 𝑁 = 𝑁1 and let 𝑛 ≥ 𝑁. Then (★★) holds for 𝑛 and therefore (★) holds for 𝑥𝑛. It follows that 𝑓 (𝑥𝑛) (★) > 𝐾 therefore lim 𝑛→∞ 𝑓 (𝑥𝑛) = ∞. (b) Compute the following limit: lim 𝑛→∞  𝑛 + 𝑛2 ln 𝑛 − 𝑛2 ln(𝑛 + 1)  Solution: We have lim 𝑛→∞  𝑛 + 𝑛2 ln 𝑛 − 𝑛2 ln(𝑛 + 1)  = lim 𝑛→∞   𝑛 − 𝑛2 ln   𝑛 + 1 𝑛    = lim 𝑛→∞ 𝑛2   1 𝑛 − ln   𝑛 + 1 𝑛    = lim 𝑛→∞ 1 𝑛 − ln 1 + 1 𝑛   1 𝑛2 𝑥𝑛= 1 𝑛 = lim 𝑥→0 𝑥 − ln (1 + 𝑥) 𝑥2 0 0 = lim 𝑥→0 1 − 1 1+𝑥 2𝑥 0 0 = lim 𝑥→0 1 (1+𝑥)2 2 = 1 2 4",
     "topicIds": [
@@ -1646,7 +3143,7 @@
     "confidence": 0.56
   },
   {
-    "id": "hw-exercise-2-solution-question-5",
+    "id": "hw-exercise-2-solution-question-4",
     "sourceType": "homework",
     "sourceFileId": "hw-exercise-2-solution",
     "questionNumber": "4",
@@ -1669,7 +3166,7 @@
     "confidence": 0.56
   },
   {
-    "id": "hw-exercise-2-solution-question-6",
+    "id": "hw-exercise-2-solution-question-5",
     "sourceType": "homework",
     "sourceFileId": "hw-exercise-2-solution",
     "questionNumber": "5",
@@ -1692,51 +3189,7 @@
     "confidence": 0.56
   },
   {
-    "id": "hw-exercise-2-solution-question-7",
-    "sourceType": "homework",
-    "sourceFileId": "hw-exercise-2-solution",
-    "questionNumber": "(b)",
-    "content": "(b) i. Let 0 ≤ 𝛼 ≤ 2. Prove that 𝛼 ≤ √2𝛼 ≤ 2. Solution: We first prove the right inequality. As 0 ≤ 𝛼 ≤ 2, then we have √𝛼 ≤ √2. Multiplying both sides of the inequality by √2 yields √2𝛼 ≤ √22 = 2. We now prove the left inequality. As 0 ≤ 𝛼 ≤ 2, then 𝛼2 ≤ 2𝛼. Taking the square root to both sides of the inequality yields 𝛼 ≤ √2𝛼. ii. Let (𝑎𝑛)∞ 𝑛=1 be the sequence of real numbers defined by the recursive formula    𝑎𝑛+1 = √2𝑎𝑛 ∀𝑛 ∈ N 𝑎1 = √2 Prove that the sequence (𝑎𝑛)∞ 𝑛=1 is convergent. Solution: We first prove that for every 𝑛 ∈ N we have 𝑎𝑛 ≥ 0, from which follows that the sequence (𝑎𝑛)∞ 𝑛=1 is well-defined. We prove that by using induction: Base case: we have 𝑎1 = √2 ≥ 0. Induction step: Let 𝑛 ∈ N and suppose that 𝑎𝑛 ≥ 0. Then 𝑎𝑛+1 =√︁ 2𝑎𝑛 𝑎𝑛 ≥0 ≥ 0 We now prove that the sequence (𝑎𝑛)∞ 𝑛=1 is increasing and bounded from above by 2, from which follows that the sequence (𝑎𝑛)∞ 𝑛=1 is convergent. We prove that for every 𝑛 ∈ N we have 𝑎𝑛 ≤ 𝑎𝑛+1 ≤ 2 by induction. Base case: we have 𝑎1 = √2 √2≥1 ≤√︁ 2 · √2 = 𝑎2. Induction step: Let 𝑛 ∈ N and suppose that 𝑎𝑛 ≤ 𝑎𝑛+1 ≤ 2. As 0 ≤ 𝑎𝑛+1 ≤ 2, then by the previous item we have 𝑎𝑛+1 ≤ √2 · 𝑎𝑛+1 ≤ 2 ⇒ 𝑎𝑛+1 ≤ 𝑎𝑛+2 ≤ 2. iii. Prove that √︂ 2 √︃ 2√︁ 2√2... = 2, that is, prove that lim 𝑛→∞𝑎𝑛 = 2. Solution: As the sequence (𝑎𝑛)∞ 𝑛=1 is convergent, then there exists an 𝐿 ∈ R such that 𝐿 = lim 𝑛→∞𝑎𝑛 increasing = sup {𝑎𝑛 : 𝑛 ∈ N}. Note that 𝐿 upper bound ≥ 𝑎1 = √2 and therefore 𝐿 ≠ 0. We now compute 𝐿 = lim 𝑛→∞𝑎𝑛+1 = lim 𝑛→∞ √︁",
-    "topicIds": [
-      "גבולות",
-      "טורים",
-      "סדרות",
-      "פונקציות"
-    ],
-    "difficulty": "hard",
-    "examRelevance": "medium",
-    "sourceSnippet": {
-      "sourceFileId": "hw-exercise-2-solution",
-      "filename": "Exercise 2 solution.pdf",
-      "text": "(b) i. Let 0 ≤ 𝛼 ≤ 2. Prove that 𝛼 ≤ √2𝛼 ≤ 2. Solution: We first prove the right inequality. As 0 ≤ 𝛼 ≤ 2, then we have √𝛼 ≤ √2. Multiplying both sides of the inequality by √2 yields √2𝛼 ≤ √22 = 2. We now prove the left inequality. As 0 ≤ 𝛼 ≤ 2, then 𝛼2 ≤ 2𝛼. Taking the square root to both sides of the inequality yields 𝛼 ≤ √2𝛼. ii. Let (𝑎𝑛)∞ 𝑛=1 be the sequence of real numbers defined by the recursive formula    𝑎𝑛+1 = √2𝑎𝑛 ∀𝑛 ∈ N 𝑎1 = √2 Prove that the sequence (𝑎𝑛)∞ 𝑛=1 is convergent. Solution: We first prove that for every 𝑛 ∈ N we have 𝑎𝑛 ≥ 0, from which follows that the sequence (𝑎𝑛)∞ 𝑛=1 is well-defined. We prove that by using induction: Base case: we have 𝑎1 = √2 ≥ 0. Induction step: Let 𝑛 ∈ N and suppose that 𝑎𝑛 ≥ 0. Then 𝑎𝑛+1 =√︁ 2𝑎𝑛 𝑎𝑛 ≥0 ≥ 0 We now prove that the sequence (𝑎𝑛)∞ 𝑛=1 is increasing and bounded from above by 2, f",
-      "startOffset": 7794,
-      "endOffset": 9372
-    },
-    "confidence": 0.56
-  },
-  {
-    "id": "hw-exercise-2-solution-question-8",
-    "sourceType": "homework",
-    "sourceFileId": "hw-exercise-2-solution",
-    "questionNumber": "2",
-    "content": "2𝑎𝑛 AOL = √2𝐿 Thus 𝐿 = √2𝐿 and therefore 𝐿2 = 2𝐿 and therefore 𝐿 = 0 or 𝐿 = 2. As 𝐿 ≠ 0 then 𝐿 = 2. 7",
-    "topicIds": [
-      "גבולות",
-      "טורים",
-      "סדרות",
-      "פונקציות"
-    ],
-    "difficulty": "unknown",
-    "examRelevance": "medium",
-    "sourceSnippet": {
-      "sourceFileId": "hw-exercise-2-solution",
-      "filename": "Exercise 2 solution.pdf",
-      "text": "2𝑎𝑛 AOL = √2𝐿 Thus 𝐿 = √2𝐿 and therefore 𝐿2 = 2𝐿 and therefore 𝐿 = 0 or 𝐿 = 2. As 𝐿 ≠ 0 then 𝐿 = 2. 7"
-    },
-    "confidence": 0.56
-  },
-  {
-    "id": "hw-exercise-2-solution-question-9",
+    "id": "hw-exercise-2-solution-question-6",
     "sourceType": "homework",
     "sourceFileId": "hw-exercise-2-solution",
     "questionNumber": "6",
@@ -1755,29 +3208,6 @@
       "text": "6. Let 0 < 𝛽 < 𝛼 and let (𝑎𝑛)∞ 𝑛=1 and (𝑏𝑛)∞ 𝑛=1 be two sequences that are defined by the recursive formulas    𝑎𝑛+1 = 𝑎𝑛+𝑏𝑛 2 , 𝑏𝑛+1 = 2𝑎𝑛 𝑏𝑛 𝑎𝑛+𝑏𝑛 , ∀𝑛 ∈ N 𝑎1 = 𝛼, 𝑏1 = 𝛽 (a) Prove that (𝑎𝑛)∞ 𝑛=1 and (𝑏𝑛)∞ 𝑛=1 are well-defined, and prove that 𝑎𝑛+1 ≥ 𝑏𝑛+1 for every 𝑛 ∈ N. Solution: We first prove by induction that 𝑎𝑛, 𝑏𝑛 > 0 for every 𝑛 ∈ N. Base case: (𝑛 = 1). It is already given that 0 < 𝑏1 < 𝑎1. Induction step: (𝑛 ⇒ 𝑛 + 1.) Let 𝑛 ∈ N and suppose that 𝑎𝑛, 𝑏𝑛 > 0. Then 𝑎𝑛+1 = 𝑎𝑛+𝑏𝑛 2 > 0, 𝑏𝑛+1 = 2𝑎𝑛 𝑏𝑛 𝑎𝑛+𝑏𝑛 > 0. Thus (𝑎𝑛)∞ 𝑛=1 and (𝑏𝑛)∞ 𝑛=1 are well-defined. We prove now that 𝑎𝑛+1 ≥ 𝑏𝑛+1 for every 𝑛 ∈ N. Let 𝑛 ∈ N. As (𝑎𝑛 − 𝑏𝑛)2 ≥ 0 for every 𝑛 ∈ N, then 𝑎2 𝑛 − 2𝑎𝑛 𝑏𝑛 + 𝑏2 𝑛 ≥ 0 ⇒ 𝑎2 𝑛 + 2𝑎𝑛 𝑏𝑛 − 4𝑎𝑛 𝑏𝑛 + 𝑏2 𝑛 ≥ 0 ⇒ 𝑎2 𝑛 + 2𝑎𝑛 𝑏𝑛 + 𝑏2 𝑛 ≥ 4𝑎𝑛 𝑏𝑛 ⇒ (𝑎𝑛 + 𝑏",
       "startOffset": 9504,
       "endOffset": 11217
-    },
-    "confidence": 0.56
-  },
-  {
-    "id": "hw-exercise-2-solution-question-10",
-    "sourceType": "homework",
-    "sourceFileId": "hw-exercise-2-solution",
-    "questionNumber": "1",
-    "content": "We now show 𝐿1 = 𝐿2 and complete the proof: 𝐿1 = lim 𝑛→∞𝑎𝑛+1 = lim 𝑛→∞   𝑎𝑛 + 𝑏𝑛 2   = 𝐿1 + 𝐿2 2 ⇒ 𝐿1 2 = 𝐿2 2 ⇒ 𝐿1 = 𝐿2. (c) Prove that 𝑎𝑛 𝑏𝑛 = 𝑎1 𝑏1 for every 𝑛 ∈ N and find the value of 𝐿. Solution: We prove by induction that 𝑎𝑛 𝑏𝑛 = 𝑎1 𝑏1 for every 𝑛 ∈ N. Base case: Clearly 𝑎1 𝑏1 = 𝑎1 𝑏1. Induction step: Let 𝑛 ∈ N. We assume that 𝑎𝑛 𝑏𝑛 = 𝑎1 𝑏1. Then 𝑎𝑛+1 𝑏𝑛+1 = 𝑎𝑛+𝑏𝑛 2 · 2𝑎𝑛 𝑏𝑛 𝑎𝑛+𝑏𝑛 = 𝑎𝑛 𝑏𝑛 = 𝑎1 𝑏1. Now we find the value of 𝐿. We note that lim 𝑛→∞ [𝑎1 𝑏1] = 𝑎1 𝑏1. By item (b) we obtain that lim 𝑛→∞ [𝑎𝑛 𝑏𝑛] = 𝐿2 Thus 𝐿2 = 𝑎1 𝑏1 ⇒ 𝐿 = ±√𝑎1 𝑏1 As 𝑎𝑛, 𝑏𝑛 > 0 for every 𝑛 ∈ N, then by the monotonicity of limits we have 𝐿 ≥ 0, thus 𝐿 = √𝑎1 𝑏1. 9",
-    "topicIds": [
-      "גבולות",
-      "טורים",
-      "סדרות",
-      "פונקציות"
-    ],
-    "difficulty": "hard",
-    "examRelevance": "medium",
-    "sourceSnippet": {
-      "sourceFileId": "hw-exercise-2-solution",
-      "filename": "Exercise 2 solution.pdf",
-      "text": "We now show 𝐿1 = 𝐿2 and complete the proof: 𝐿1 = lim 𝑛→∞𝑎𝑛+1 = lim 𝑛→∞   𝑎𝑛 + 𝑏𝑛 2   = 𝐿1 + 𝐿2 2 ⇒ 𝐿1 2 = 𝐿2 2 ⇒ 𝐿1 = 𝐿2. (c) Prove that 𝑎𝑛 𝑏𝑛 = 𝑎1 𝑏1 for every 𝑛 ∈ N and find the value of 𝐿. Solution: We prove by induction that 𝑎𝑛 𝑏𝑛 = 𝑎1 𝑏1 for every 𝑛 ∈ N. Base case: Clearly 𝑎1 𝑏1 = 𝑎1 𝑏1. Induction step: Let 𝑛 ∈ N. We assume that 𝑎𝑛 𝑏𝑛 = 𝑎1 𝑏1. Then 𝑎𝑛+1 𝑏𝑛+1 = 𝑎𝑛+𝑏𝑛 2 · 2𝑎𝑛 𝑏𝑛 𝑎𝑛+𝑏𝑛 = 𝑎𝑛 𝑏𝑛 = 𝑎1 𝑏1. Now we find the value of 𝐿. We note that lim 𝑛→∞ [𝑎1 𝑏1] = 𝑎1 𝑏1. By item (b) we obtain that lim 𝑛→∞ [𝑎𝑛 𝑏𝑛] = 𝐿2 Thus 𝐿2 = 𝑎1 𝑏1 ⇒ 𝐿 = ±√𝑎1 𝑏1 As 𝑎𝑛, 𝑏𝑛 > 0 for every 𝑛 ∈ N, then by the monotonicity of limits we have 𝐿 ≥ 0, thus 𝐿 = √𝑎1 𝑏1. 9",
-      "startOffset": 11233,
-      "endOffset": 11976
     },
     "confidence": 0.56
   },
@@ -1807,28 +3237,6 @@
     "id": "hw-exercise-3-solution-question-2",
     "sourceType": "homework",
     "sourceFileId": "hw-exercise-3-solution",
-    "questionNumber": "(d)",
-    "content": "(d) ∫ √𝑥 𝑥+1 𝑑𝑥. Solution: We develop ∫ √𝑥 𝑥 + 1 𝑑𝑥 𝑡=√𝑥→𝑑𝑡= 1 2√𝑥 𝑑 𝑥 = ∫ 𝑡 𝑡2 + 1 2𝑡 𝑑𝑡 = 2 ∫ 𝑡2 𝑡2 + 1 𝑑𝑡 = 2 ∫ 𝑡2 + 1 − 1 𝑡2 + 1 𝑑𝑡 = 2 ∫   1 − 1 𝑡2 + 1   𝑑𝑡 = 2 (𝑡 − arctan 𝑡) + 𝐶 = 2 √𝑥 − arctan √𝑥   + 𝐶 (e) ∫ 𝑑 𝑥 √𝑥+ 3 √𝑥 . Solution: Set 𝑡 = 6 √𝑥. Then 𝑑𝑡 = 1 6 𝑥− 5 6 𝑑𝑥 = 1 6 𝑡−5, so 𝑑𝑥 = 6𝑡5 𝑑𝑡. It follows that ∫ 𝑑𝑥 √𝑥 + 3 √𝑥 = ∫ 6𝑡5 𝑑𝑡 𝑡3 + 𝑡2 = ∫ 6𝑡5 𝑡2 (𝑡 + 1) 𝑑𝑡 = ∫ 6𝑡3 𝑡 + 1 𝑑𝑡. Now perform polynomial long division: 𝑡3 𝑡 + 1 = 𝑡2 − 𝑡 + 1 − 1 𝑡 + 1 . Hence ∫ 6𝑡3 𝑡 + 1 𝑑𝑡 = 6 ∫   𝑡2 − 𝑡 + 1 − 1 𝑡 + 1   𝑑𝑡 = 6   𝑡3 3 − 𝑡2 2 + 𝑡 − ln |𝑡 + 1|   + 𝐶 = 2𝑡3 − 3𝑡2 + 6𝑡 − 6 ln |𝑡 + 1| + 𝐶. Substituting back 𝑡 = 𝑥1/6, we obtain ∫ 𝑑𝑥 √𝑥 + 3 √𝑥 = 2√𝑥 − 3 3 √𝑥 + 6 6 √𝑥 − 6 ln 6 √𝑥 + 1  + 𝐶. 2",
-    "topicIds": [
-      "גבולות",
-      "טורים",
-      "נגזרות",
-      "סדרות",
-      "פונקציות"
-    ],
-    "difficulty": "unknown",
-    "examRelevance": "medium",
-    "sourceSnippet": {
-      "sourceFileId": "hw-exercise-3-solution",
-      "filename": "Exercise 3 solution.pdf",
-      "text": "(d) ∫ √𝑥 𝑥+1 𝑑𝑥. Solution: We develop ∫ √𝑥 𝑥 + 1 𝑑𝑥 𝑡=√𝑥→𝑑𝑡= 1 2√𝑥 𝑑 𝑥 = ∫ 𝑡 𝑡2 + 1 2𝑡 𝑑𝑡 = 2 ∫ 𝑡2 𝑡2 + 1 𝑑𝑡 = 2 ∫ 𝑡2 + 1 − 1 𝑡2 + 1 𝑑𝑡 = 2 ∫   1 − 1 𝑡2 + 1   𝑑𝑡 = 2 (𝑡 − arctan 𝑡) + 𝐶 = 2 √𝑥 − arctan √𝑥   + 𝐶 (e) ∫ 𝑑 𝑥 √𝑥+ 3 √𝑥 . Solution: Set 𝑡 = 6 √𝑥. Then 𝑑𝑡 = 1 6 𝑥− 5 6 𝑑𝑥 = 1 6 𝑡−5, so 𝑑𝑥 = 6𝑡5 𝑑𝑡. It follows that ∫ 𝑑𝑥 √𝑥 + 3 √𝑥 = ∫ 6𝑡5 𝑑𝑡 𝑡3 + 𝑡2 = ∫ 6𝑡5 𝑡2 (𝑡 + 1) 𝑑𝑡 = ∫ 6𝑡3 𝑡 + 1 𝑑𝑡. Now perform polynomial long division: 𝑡3 𝑡 + 1 = 𝑡2 − 𝑡 + 1 − 1 𝑡 + 1 . Hence ∫ 6𝑡3 𝑡 + 1 𝑑𝑡 = 6 ∫   𝑡2 − 𝑡 + 1 − 1 𝑡 + 1   𝑑𝑡 = 6   𝑡3 3 − 𝑡2 2 + 𝑡 − ln |𝑡 + 1|   + 𝐶 = 2𝑡3 − 3𝑡2 + 6𝑡 − 6 ln |𝑡 + 1| + 𝐶. Substituting back 𝑡 = 𝑥1/6, we obtain ∫ 𝑑𝑥 √𝑥 + 3 √𝑥 = 2√𝑥 − 3 3 √𝑥 + 6 6 √𝑥 − 6 ln 6 √𝑥 + 1  + 𝐶. 2"
-    },
-    "confidence": 0.56
-  },
-  {
-    "id": "hw-exercise-3-solution-question-3",
-    "sourceType": "homework",
-    "sourceFileId": "hw-exercise-3-solution",
     "questionNumber": "2",
     "content": "2. Compute each of the following indefinite integrals: (a) ∫ sin (ln 𝑥) 𝑑𝑥. Solution: We develop: ∫ sin (ln 𝑥) 𝑑𝑥 IBP = 𝑥 · sin (ln 𝑥) − ∫ 𝑥 · cos (ln 𝑥) · 1 𝑥 𝑑𝑥 IBP = 𝑥 · sin (ln 𝑥) −   𝑥 · cos (ln 𝑥) + ∫ 𝑥 · sin (ln 𝑥) · 1 𝑥 𝑑𝑥   Rearranging, we obtain that 2 ∫ sin (ln 𝑥) 𝑑𝑥 = 𝑥 · sin (ln 𝑥) − 𝑥 · cos (ln 𝑥) + 𝐶 Dividing both sides of the equation by 2, we conclude that ∫ sin (ln 𝑥) 𝑑𝑥 = 𝑥 · sin (ln 𝑥) − 𝑥 · cos (ln 𝑥) 2 + 𝐶 (b) ∫ arctan √𝑥  𝑑𝑥. Solution: We write ∫ arctan √𝑥  𝑑𝑥 IBP = 𝑥 arctan √𝑥  − ∫ \" 𝑥 · 1 2√𝑥 1 + 𝑥 # 𝑑𝑥 = 𝑥 arctan √𝑥  − ∫ √𝑥 2(1 + 𝑥) 𝑑𝑥 𝑡=√𝑥,𝑑𝑡= 1 2√𝑥 𝑑 𝑥= 1 2𝑡 𝑑 𝑥 = 𝑥 arctan √𝑥  − 1 2 ∫ 𝑡 1 + 𝑡2 2𝑡𝑑𝑡 = 𝑥 arctan √𝑥  − ∫ 𝑡2 + 1 − 1 1 + 𝑡2 𝑑𝑡 = 𝑥 arctan √𝑥  − (𝑡 − arctan 𝑡) + 𝐶 = 𝑥 arctan √𝑥  − √𝑥 + arctan √𝑥  + 𝐶 = arctan √𝑥  (𝑥 + 1) − √𝑥 + 𝐶 3. (a) Compute the indefinite integral ∫ 𝑑 𝑥 cos( 𝑥) by writing 1 cos(𝑥) = cos(𝑥) cos2 (𝑥) = cos(𝑥) 1 − sin2 (𝑥) = cos(𝑥) (1 − sin(𝑥))(1 + sin(𝑥)) = 1 2 · cos(𝑥) 1 + sin(𝑥) + 1 2 · cos(𝑥) 1 − sin(𝑥) . Solution: We write ∫ 𝑑𝑥 cos(𝑥) = 1 2 ∫ cos(𝑥) 1 + sin(𝑥) 𝑑𝑥 + 1 2 ∫ cos(𝑥) 1 − sin(𝑥) 𝑑𝑥 = 1 2 ln |1 + sin(𝑥)| − 1 2 ln |1 − sin(𝑥)| + 𝐶 = 1 2 ln 1 + sin(𝑥) 1 − sin(𝑥) + 𝐶 3",
     "topicIds": [
@@ -1850,29 +3258,7 @@
     "confidence": 0.56
   },
   {
-    "id": "hw-exercise-3-solution-question-4",
-    "sourceType": "homework",
-    "sourceFileId": "hw-exercise-3-solution",
-    "questionNumber": "(b)",
-    "content": "(b) Compute ∫ 𝑑 𝑥 cos( 𝑥) by making the substitution 𝑡 = tan 𝑥 2  . Note that 2 1−𝑡2 = 1 1+𝑡 + 1 1−𝑡 . Solution: We make the substitution 𝑡 = tan 𝑥 2  . Then 𝑑𝑡 = 1 2 𝑑𝑥 cos2 𝑥 2   1+𝑡2= 1 cos2 ( 𝑥 2 ) = 1 2 (1 + 𝑡2)𝑑𝑥 ⇒ 𝑑𝑥 = 2 1 + 𝑡2 𝑑𝑡 We also know that for every 𝑥 ∈ R cos(𝑥) = 2 cos2   𝑥 2   − 1 1+𝑡2= 1 cos2 ( 𝑥 2 ) = 2 1 + 𝑡2 − 1 = 1 − 𝑡2 1 + 𝑡2 It follows that ∫ 𝑑𝑥 cos(𝑥) = ∫ 1 + 𝑡2 1 − 𝑡2 · 2 1 + 𝑡2 𝑑𝑡 = ∫ 2𝑑𝑡 1 − 𝑡2 = ∫ 𝑑𝑡 1 + 𝑡 + ∫ 𝑑𝑡 1 − 𝑡 = ln |1 + 𝑡| − ln |1 − 𝑡| + 𝐶 = ln 1 + tan   𝑥 2   − ln 1 − tan   𝑥 2   + 𝐶 = ln 1 + tan 𝑥 2   1 − tan 𝑥 2   + 𝐶 (c) Conclude that for every − 𝜋 2 < 𝑥 < 𝜋 2 we have 1 + sin(𝑥) 1 − sin(𝑥) = 1 + tan 𝑥 2   1 − tan 𝑥 2   !2 . Solution: As two anti-derivatives of the same function differ by a constant on an interval, there exists a 𝐶 ∈ R such that for every − 𝜋 2 < 𝑥 < 𝜋 2 we have 1 2 ln 1 + sin(𝑥) 1 − sin(𝑥) = ln 1 + tan 𝑥 2   1 − tan 𝑥 2   + 𝐶. Plugging 𝑥 = 0 we obtain 𝐶 = 0 and therefore for every − 𝜋 2 < 𝑥 < 𝜋 2 we have ln √︄",
-    "topicIds": [
-      "גבולות",
-      "טורים",
-      "נגזרות",
-      "סדרות",
-      "פונקציות"
-    ],
-    "difficulty": "medium",
-    "examRelevance": "medium",
-    "sourceSnippet": {
-      "sourceFileId": "hw-exercise-3-solution",
-      "filename": "Exercise 3 solution.pdf",
-      "text": "(b) Compute ∫ 𝑑 𝑥 cos( 𝑥) by making the substitution 𝑡 = tan 𝑥 2  . Note that 2 1−𝑡2 = 1 1+𝑡 + 1 1−𝑡 . Solution: We make the substitution 𝑡 = tan 𝑥 2  . Then 𝑑𝑡 = 1 2 𝑑𝑥 cos2 𝑥 2   1+𝑡2= 1 cos2 ( 𝑥 2 ) = 1 2 (1 + 𝑡2)𝑑𝑥 ⇒ 𝑑𝑥 = 2 1 + 𝑡2 𝑑𝑡 We also know that for every 𝑥 ∈ R cos(𝑥) = 2 cos2   𝑥 2   − 1 1+𝑡2= 1 cos2 ( 𝑥 2 ) = 2 1 + 𝑡2 − 1 = 1 − 𝑡2 1 + 𝑡2 It follows that ∫ 𝑑𝑥 cos(𝑥) = ∫ 1 + 𝑡2 1 − 𝑡2 · 2 1 + 𝑡2 𝑑𝑡 = ∫ 2𝑑𝑡 1 − 𝑡2 = ∫ 𝑑𝑡 1 + 𝑡 + ∫ 𝑑𝑡 1 − 𝑡 = ln |1 + 𝑡| − ln |1 − 𝑡| + 𝐶 = ln 1 + tan   𝑥 2   − ln 1 − tan   𝑥 2   + 𝐶 = ln 1 + tan 𝑥 2   1 − tan 𝑥 2   + 𝐶 (c) Conclude that for every − 𝜋 2 < 𝑥 < 𝜋 2 we have 1 + sin(𝑥) 1 − sin(𝑥) = 1 + tan 𝑥 2   1 − tan 𝑥 2   !2 . Solution: As two anti-derivatives of the same function differ by a constant on an interval, there exists a 𝐶 ∈ R such that for every − 𝜋 2 < 𝑥 < 𝜋 2 we hav"
-    },
-    "confidence": 0.56
-  },
-  {
-    "id": "hw-exercise-3-solution-question-5",
+    "id": "hw-exercise-3-solution-question-3",
     "sourceType": "homework",
     "sourceFileId": "hw-exercise-3-solution",
     "questionNumber": "4",
@@ -1896,7 +3282,7 @@
     "confidence": 0.56
   },
   {
-    "id": "hw-exercise-3-solution-question-6",
+    "id": "hw-exercise-3-solution-question-4",
     "sourceType": "homework",
     "sourceFileId": "hw-exercise-3-solution",
     "questionNumber": "5",
@@ -1920,7 +3306,7 @@
     "confidence": 0.56
   },
   {
-    "id": "hw-exercise-3-solution-question-7",
+    "id": "hw-exercise-3-solution-question-5",
     "sourceType": "homework",
     "sourceFileId": "hw-exercise-3-solution",
     "questionNumber": "6",
@@ -1940,30 +3326,6 @@
       "text": "6. Let 𝑎, 𝑏 ∈ R such that 𝑎 < 𝑏 and let 𝑓 be a function that is bounded on [𝑎, 𝑏]. (a) Suppose that there exists a sequence of partitions (𝑃𝑛)∞ 𝑛=1 of [𝑎, 𝑏] for which lim 𝑛→∞ h 𝑆 ( 𝑓 , 𝑃𝑛) − 𝑆 ( 𝑓 , 𝑃𝑛) i = 0 Prove that 𝑓 is integrable on [𝑎, 𝑏] and that lim 𝑛→∞ 𝑆 ( 𝑓 , 𝑃𝑛) = lim 𝑛→∞ 𝑆 ( 𝑓 , 𝑃𝑛) = ∫ 𝑏 𝑎 𝑓 (𝑥) 𝑑𝑥 Solution: We know that for every 𝑛 ∈ N we have 𝑆 ( 𝑓 , 𝑃𝑛) ≤ 𝐼 ( 𝑓 ) ≤ 𝐼 ( 𝑓 ) ≤ 𝑆 ( 𝑓 , 𝑃𝑛) Since lim 𝑛→∞ h 𝑆 ( 𝑓 , 𝑃𝑛) − 𝑆 ( 𝑓 , 𝑃𝑛) i = 0, and as lim 𝑛→∞𝐼 ( 𝑓 ) = 𝐼 ( 𝑓 ), then by the inverse squeeze rule for sequences we have lim 𝑛→∞ 𝑆 ( 𝑓 , 𝑃𝑛) = lim 𝑛→∞ 𝑆 ( 𝑓 , 𝑃𝑛) = 𝐼 ( 𝑓 ) Similarly, lim 𝑛→∞ 𝑆 ( 𝑓 , 𝑃𝑛) = lim 𝑛→∞ 𝑆 ( 𝑓 , 𝑃𝑛) = 𝐼 ( 𝑓 ) It follows that 𝐼 ( 𝑓 ) = 𝐼 ( 𝑓 ), and therefore 𝑓 is integrable and lim 𝑛→∞ 𝑆 ( 𝑓 , 𝑃𝑛) = lim 𝑛→∞ 𝑆 ( 𝑓 , 𝑃𝑛) = 𝐼 ( 𝑓 ) = 𝐼 ( 𝑓 )",
       "startOffset": 7395,
       "endOffset": 8784
-    },
-    "confidence": 0.56
-  },
-  {
-    "id": "hw-exercise-3-solution-question-8",
-    "sourceType": "homework",
-    "sourceFileId": "hw-exercise-3-solution",
-    "questionNumber": "1",
-    "content": "Since we know that for bounded sets ∅ ≠ 𝐴, 𝐵 ⊆ R we have sup( 𝐴 − 𝐵) = sup( 𝐴) − inf (𝐵), then sup { 𝑓 (𝑥) : 𝑥1 ≤ 𝑥 ≤ 𝑥2 } − inf { 𝑓 (𝑦) : 𝑥1 ≤ 𝑦 ≤ 𝑥2 } = sup { 𝑓 (𝑥) − 𝑓 (𝑦) : 𝑥1 ≤ 𝑥, 𝑦 ≤ 𝑥2 } minimality ≤ 𝑀 · (𝑥2 − 𝑥1) ii. Given a partition of size 𝑛, 𝑃 = (𝑥0, . . . , 𝑥𝑛) of [𝑎, 𝑏], we define Δ (𝑃) = max {𝑥𝑘 − 𝑥𝑘−1 : 1 ≤ 𝑘 ≤ 𝑛} Let (𝑃𝑛)∞ 𝑛=1 be a sequence of partitions of [𝑎, 𝑏] for which 𝑃𝑛 is a partition of size 𝑛 for every 𝑛 ∈ N and such that lim 𝑛→∞ Δ(𝑃𝑛) = 0 Prove that lim 𝑛→∞ h 𝑆 ( 𝑓 , 𝑃𝑛) − 𝑆 ( 𝑓 , 𝑃𝑛) i = 0 and conclude that 𝑓 is integrable on [𝑎, 𝑏] and lim 𝑛→∞ 𝑆 ( 𝑓 , 𝑃𝑛) = lim 𝑛→∞ 𝑆 ( 𝑓 , 𝑃𝑛) = ∫ 𝑏 𝑎 𝑓 (𝑥) 𝑑𝑥 Solution: By the previous item, for every 𝑛 and for every 1 ≤ 𝑘 ≤ 𝑛, it holds that 𝑀𝑘 − 𝑚𝑘 = sup { 𝑓 (𝑥) : 𝑥𝑘−1 ≤ 𝑥 ≤ 𝑥𝑘 } − inf { 𝑓 (𝑦) : 𝑥𝑘−1 ≤ 𝑦 ≤ 𝑥𝑘 } ≤ 𝑀 · (𝑥𝑘 − 𝑥𝑘−1) ≤ 𝑀 · Δ(𝑃𝑛) Thus, 0 ≤ 𝑆 ( 𝑓 , 𝑃𝑛) − 𝑆 ( 𝑓 , 𝑃𝑛) = 𝑛 ∑︁ 𝑘=1 𝑀𝑘 · (𝑥𝑘 − 𝑥𝑘−1) − 𝑛 ∑︁ 𝑘=1 𝑚𝑘 · (𝑥𝑘 − 𝑥𝑘−1) = 𝑛 ∑︁ 𝑘=1 (𝑀𝑘 − 𝑚𝑘 ) · (𝑥𝑘 − 𝑥𝑘−1) ≤ 𝑀 · Δ(𝑃𝑛) · 𝑛 ∑︁ 𝑘=1 (𝑥𝑘 − 𝑥𝑘−1) = 𝑀 · Δ(𝑃𝑛) · (𝑏 − 𝑎) Taking the limit as 𝑛 → ∞, we obtain that lim 𝑛→∞ h 𝑆 ( 𝑓 , 𝑃𝑛) − 𝑆 ( 𝑓 , 𝑃𝑛) i = 0. Thus, by item (i), it follows that 𝑓 is integrable and lim 𝑛→∞ 𝑆 ( 𝑓 , 𝑃𝑛) = lim 𝑛→∞ 𝑆 ( 𝑓 , 𝑃𝑛) = ∫ 𝑏 𝑎 𝑓 (𝑥) 𝑑𝑥 8",
-    "topicIds": [
-      "גבולות",
-      "טורים",
-      "נגזרות",
-      "סדרות",
-      "פונקציות"
-    ],
-    "difficulty": "hard",
-    "examRelevance": "medium",
-    "sourceSnippet": {
-      "sourceFileId": "hw-exercise-3-solution",
-      "filename": "Exercise 3 solution.pdf",
-      "text": "Since we know that for bounded sets ∅ ≠ 𝐴, 𝐵 ⊆ R we have sup( 𝐴 − 𝐵) = sup( 𝐴) − inf (𝐵), then sup { 𝑓 (𝑥) : 𝑥1 ≤ 𝑥 ≤ 𝑥2 } − inf { 𝑓 (𝑦) : 𝑥1 ≤ 𝑦 ≤ 𝑥2 } = sup { 𝑓 (𝑥) − 𝑓 (𝑦) : 𝑥1 ≤ 𝑥, 𝑦 ≤ 𝑥2 } minimality ≤ 𝑀 · (𝑥2 − 𝑥1) ii. Given a partition of size 𝑛, 𝑃 = (𝑥0, . . . , 𝑥𝑛) of [𝑎, 𝑏], we define Δ (𝑃) = max {𝑥𝑘 − 𝑥𝑘−1 : 1 ≤ 𝑘 ≤ 𝑛} Let (𝑃𝑛)∞ 𝑛=1 be a sequence of partitions of [𝑎, 𝑏] for which 𝑃𝑛 is a partition of size 𝑛 for every 𝑛 ∈ N and such that lim 𝑛→∞ Δ(𝑃𝑛) = 0 Prove that lim 𝑛→∞ h 𝑆 ( 𝑓 , 𝑃𝑛) − 𝑆 ( 𝑓 , 𝑃𝑛) i = 0 and conclude that 𝑓 is integrable on [𝑎, 𝑏] and lim 𝑛→∞ 𝑆 ( 𝑓 , 𝑃𝑛) = lim 𝑛→∞ 𝑆 ( 𝑓 , 𝑃𝑛) = ∫ 𝑏 𝑎 𝑓 (𝑥) 𝑑𝑥 Solution: By the previous item, for every 𝑛 and for every 1 ≤ 𝑘 ≤ 𝑛, it holds that 𝑀𝑘 − 𝑚𝑘 = sup { 𝑓 (𝑥) : 𝑥𝑘−1 ≤ 𝑥 ≤ 𝑥𝑘 } − inf { 𝑓 (𝑦) : 𝑥𝑘−1 ≤ 𝑦 ≤ 𝑥𝑘 } ≤ 𝑀 · (𝑥𝑘 ",
-      "startOffset": 8800,
-      "endOffset": 10185
     },
     "confidence": 0.56
   },
@@ -1994,29 +3356,6 @@
     "id": "hw-exercise-4-solution-question-2",
     "sourceType": "homework",
     "sourceFileId": "hw-exercise-4-solution",
-    "questionNumber": "(b)",
-    "content": "(b) ∫ 1 0 ln 1 + 𝑥2  𝑑𝑥 Solution: We have ∫ 1 0 ln 1 + 𝑥2  𝑑𝑥 IBP =  𝑥 · ln 1 + 𝑥2  1 0 − ∫ 1 0 2𝑥2 1 + 𝑥2 𝑑𝑥 = ln(2) − ∫ 1 0 2 1 + 𝑥2  1 + 𝑥2 𝑑𝑥 + ∫ 1 0 2 1 + 𝑥2 𝑑𝑥 = ln(2) − 2 ∫ 1 0 𝑑𝑥 + 2 ∫ 1 0 𝑑𝑥 1 + 𝑥2 = ln(2) − 2 [𝑥]1 0 + 2 [arctan 𝑥]1 0 = ln(2) − 2 + 𝜋 2 (c) ∫ 1 2 0 arccos(𝑥) 𝑑𝑥 Solution: We use integration by parts, ∫ 1 2 0 arccos(𝑥) 𝑑𝑥 𝑢′=1, 𝑣=arccos( 𝑥) = [𝑥 · arccos(𝑥)] 1 2 0 + ∫ 1 2 0 𝑥 √1 − 𝑥2 𝑑𝑥 =𝑡=1−𝑥2⇒𝑑𝑡=−2𝑥𝑑 𝑥 = 1 2 arccos   1 2   − 1 2 ∫ 3 4 1 𝑑𝑡 √𝑡 = 𝜋 6 + ∫ 1 3 4 𝑑𝑡 2√𝑡 = 𝜋 6 +  √𝑡 1 3 4 = 𝜋 6 + 1 − √3 2 We now give an alternative solution: we use the method of substitution: As sin(𝑡) ≥ 0 for every 𝑡 ∈  0, 𝜋 2   and as cos2 (𝑡) + sin2 (𝑡) = 1, then sin(𝑡) =√︁ 1 − cos2 (𝑡) for every 𝑡 ∈  0, 𝜋 2  . We now compute ∫ 1 2 0 arccos(𝑥) 𝑑𝑥 𝑡=arccos( 𝑥)→𝑑𝑡=− 𝑑𝑥 √1−𝑥2 = − ∫ arccos( 1 2 ) 𝜋 2 𝑡√1 − 𝑥2 𝑑𝑡 = ∫ 𝜋 2 arccos( 1 2 ) 𝑡√︁ 1 − cos2 (𝑡) 𝑑𝑡 = ∫ 𝜋 2 𝜋 3 𝑡 sin(𝑡) 𝑑𝑡 𝑢′=sin(𝑡 ), 𝑣=𝑡 = [−𝑡 cos(𝑡)] 𝜋 2 𝜋 3 + ∫ 𝜋 2 𝜋 3 cos(𝑡) 𝑑𝑡 = 𝜋 6 + ∫ 𝜋 2 𝜋 3 cos(𝑡) 𝑑𝑡 = 𝜋 6 + [sin(𝑡)] 𝜋 2 𝜋 3 = 𝜋 6 + 1 − √3 2 2",
-    "topicIds": [
-      "גבולות",
-      "טורים",
-      "נגזרות",
-      "סדרות",
-      "פונקציות",
-      "רציפות"
-    ],
-    "difficulty": "medium",
-    "examRelevance": "medium",
-    "sourceSnippet": {
-      "sourceFileId": "hw-exercise-4-solution",
-      "filename": "Exercise 4 solution.pdf",
-      "text": "(b) ∫ 1 0 ln 1 + 𝑥2  𝑑𝑥 Solution: We have ∫ 1 0 ln 1 + 𝑥2  𝑑𝑥 IBP =  𝑥 · ln 1 + 𝑥2  1 0 − ∫ 1 0 2𝑥2 1 + 𝑥2 𝑑𝑥 = ln(2) − ∫ 1 0 2 1 + 𝑥2  1 + 𝑥2 𝑑𝑥 + ∫ 1 0 2 1 + 𝑥2 𝑑𝑥 = ln(2) − 2 ∫ 1 0 𝑑𝑥 + 2 ∫ 1 0 𝑑𝑥 1 + 𝑥2 = ln(2) − 2 [𝑥]1 0 + 2 [arctan 𝑥]1 0 = ln(2) − 2 + 𝜋 2 (c) ∫ 1 2 0 arccos(𝑥) 𝑑𝑥 Solution: We use integration by parts, ∫ 1 2 0 arccos(𝑥) 𝑑𝑥 𝑢′=1, 𝑣=arccos( 𝑥) = [𝑥 · arccos(𝑥)] 1 2 0 + ∫ 1 2 0 𝑥 √1 − 𝑥2 𝑑𝑥 =𝑡=1−𝑥2⇒𝑑𝑡=−2𝑥𝑑 𝑥 = 1 2 arccos   1 2   − 1 2 ∫ 3 4 1 𝑑𝑡 √𝑡 = 𝜋 6 + ∫ 1 3 4 𝑑𝑡 2√𝑡 = 𝜋 6 +  √𝑡 1 3 4 = 𝜋 6 + 1 − √3 2 We now give an alternative solution: we use the method of substitution: As sin(𝑡) ≥ 0 for every 𝑡 ∈  0, 𝜋 2   and as cos2 (𝑡) + sin2 (𝑡) = 1, then sin(𝑡) =√︁ 1 − cos2 (𝑡) for every 𝑡 ∈  0, 𝜋 2  . We now compute ∫ 1 2 0 arccos(𝑥) 𝑑𝑥 𝑡=arccos( 𝑥)→𝑑𝑡=− 𝑑𝑥 √1−𝑥2 = − ∫ arccos( 1 2 ) 𝜋 2 𝑡√1 − \ud835"
-    },
-    "confidence": 0.56
-  },
-  {
-    "id": "hw-exercise-4-solution-question-3",
-    "sourceType": "homework",
-    "sourceFileId": "hw-exercise-4-solution",
     "questionNumber": "2",
     "content": "2. (a) Compute the definite integral ∫ 𝜋 4 0 tan(𝑥) 𝑑𝑥. Solution: We have ∫ 𝜋 4 0 tan(𝑥) 𝑑𝑥 = ∫ 𝜋 4 0 sin(𝑥) cos(𝑥) 𝑑𝑥 𝑡=cos( 𝑥)⇒𝑑𝑡=− sin( 𝑥) 𝑑 𝑥 = − ∫ 2√2 1 𝑑𝑡 𝑡 = − [ln |𝑡|] √2 2 1 = − ln √2 2 ! = 1 2 ln(2) (b) Conclude that ln(2) 2𝑒 ≤ ∫ 𝜋 4 0 𝑒−𝑥 tan(𝑥) 𝑑𝑥 ≤ ln(2) 2 Note: you may assume that 𝜋 < 4. Solution: Note that the function 𝑒−𝑥 tan(𝑥) is continuous on  0, 𝜋 4   by AOC, and therefore the definite integral ∫ 𝜋 4 0 𝑒−𝑥 tan(𝑥) 𝑑𝑥 exists. Consider the function defined by 𝑓 (𝑥) = 𝑒−𝑥 for every 𝑥 ∈  0, 𝜋 4  . Note that 𝑓 is decreasing on  0, 𝜋 4   and therefore 1 𝑒 𝜋 4 = 𝑓   𝜋 4   ≤ 𝑓 (𝑥) ≤ 𝑓 (0) = 1 ∀𝑥 ∈ h 0, 𝜋 4 i multiplying the above inequality by tan(𝑥) ≥ 0 for every 𝑥 ∈  0, 𝜋 4   we obtain tan(𝑥) 𝑒 𝜋 4 ≤ 𝑒−𝑥 tan(𝑥) ≤ tan(𝑥) ∀𝑥 ∈ h 0, 𝜋 4 i Integrating all sides of the inequality, then by the monotonicity of the definite integral the inequalities are preserved. Using item (a) we conclude that ln(2) 2𝑒 𝜋<4 ≤ ln(2) 2𝑒 𝜋 4 = 1 𝑒 𝜋 4 ∫ 𝜋 4 0 tan(𝑥) 𝑑𝑥 ≤ ∫ 𝜋 4 0 𝑒−𝑥 tan(𝑥) 𝑑𝑥 ≤ ∫ 𝜋 4 0 tan(𝑥) 𝑑𝑥 = ln(2) 2 3",
     "topicIds": [
@@ -2039,7 +3378,7 @@
     "confidence": 0.56
   },
   {
-    "id": "hw-exercise-4-solution-question-4",
+    "id": "hw-exercise-4-solution-question-3",
     "sourceType": "homework",
     "sourceFileId": "hw-exercise-4-solution",
     "questionNumber": "3",
@@ -2064,7 +3403,7 @@
     "confidence": 0.56
   },
   {
-    "id": "hw-exercise-4-solution-question-5",
+    "id": "hw-exercise-4-solution-question-4",
     "sourceType": "homework",
     "sourceFileId": "hw-exercise-4-solution",
     "questionNumber": "4",
@@ -2196,33 +3535,6 @@
     "id": "hw-exercise-5-solution-question-5",
     "sourceType": "homework",
     "sourceFileId": "hw-exercise-5-solution",
-    "questionNumber": "(d)",
-    "content": "(d) If the improper integral ∫ ∞ 0 𝑓 (𝑥) 𝑑𝑥 converges absolutely, then the improper integral ∫ ∞ 0 𝑓 ( 𝑥) 𝑥 𝑑𝑥 is convergent. Solution: False. We choose 𝑓 (𝑥) = 1 1+𝑥2 for every 𝑥 ≥ 0. We have seen in class that the improper integral ∫ ∞ 0 𝑓 (𝑥) 𝑑𝑥 satisfies π ∞ 0 | 𝑓 (𝑥)| 𝑑𝑥 = π ∞ 0 𝑑𝑥 1 + 𝑥2 = 𝜋 2 hence the integral converges absolutely. But π 1 0 𝑓 (𝑥) 𝑥 𝑑𝑥 = π 1 0 𝑑𝑥 𝑥(1 + 𝑥2) ≥ π 1 0 𝑑𝑥 2𝑥 = 1 2 π 1 0 𝑑𝑥 𝑥 = ∞ and therefore ∫ 1 0 𝑓 ( 𝑥) 𝑥 𝑑𝑥 = ∞ and therefore ∫ ∞ 0 𝑓 ( 𝑥) 𝑥 𝑑𝑥 diverges. 5",
-    "topicIds": [
-      "אינטגרלים-לא-אמיתיים",
-      "גבולות",
-      "טורים",
-      "מבחן-ההשוואה",
-      "נגזרות",
-      "סדרות",
-      "פונקציות",
-      "רציפות"
-    ],
-    "difficulty": "hard",
-    "examRelevance": "medium",
-    "sourceSnippet": {
-      "sourceFileId": "hw-exercise-5-solution",
-      "filename": "Exercise 5 solution.pdf",
-      "text": "(d) If the improper integral ∫ ∞ 0 𝑓 (𝑥) 𝑑𝑥 converges absolutely, then the improper integral ∫ ∞ 0 𝑓 ( 𝑥) 𝑥 𝑑𝑥 is convergent. Solution: False. We choose 𝑓 (𝑥) = 1 1+𝑥2 for every 𝑥 ≥ 0. We have seen in class that the improper integral ∫ ∞ 0 𝑓 (𝑥) 𝑑𝑥 satisfies π ∞ 0 | 𝑓 (𝑥)| 𝑑𝑥 = π ∞ 0 𝑑𝑥 1 + 𝑥2 = 𝜋 2 hence the integral converges absolutely. But π 1 0 𝑓 (𝑥) 𝑥 𝑑𝑥 = π 1 0 𝑑𝑥 𝑥(1 + 𝑥2) ≥ π 1 0 𝑑𝑥 2𝑥 = 1 2 π 1 0 𝑑𝑥 𝑥 = ∞ and therefore ∫ 1 0 𝑓 ( 𝑥) 𝑥 𝑑𝑥 = ∞ and therefore ∫ ∞ 0 𝑓 ( 𝑥) 𝑥 𝑑𝑥 diverges. 5",
-      "startOffset": 6280,
-      "endOffset": 6828
-    },
-    "confidence": 0.56
-  },
-  {
-    "id": "hw-exercise-5-solution-question-6",
-    "sourceType": "homework",
-    "sourceFileId": "hw-exercise-5-solution",
     "questionNumber": "6",
     "content": "6. For every 0 ≤ 𝑛 ∈ Z, consider the definite integral 𝐼𝑛 defined by 𝐼𝑛 = π 𝜋 2 0 sin𝑛 (𝑥) 𝑑𝑥 (a) Prove that the sequence (𝐼𝑛)∞ 𝑛=0 is well-defined. Solution: For every 𝑛 ∈ N the function 𝑓 (𝑥) = sin𝑛 (𝑥) for every 𝑥 ∈ [0, 𝜋 2 ] is continuous by AOC, and therefore integrable on [0, 𝜋 2 ]. It follows that the integral 𝐼𝑛 = ∫ 𝜋 2 0 sin𝑛 (𝑥) 𝑑𝑥 exists, and consequently the sequence (𝐼𝑛)∞ 𝑛=1 is well-defined. For 𝑛 = 0 it holds that 𝑓 (𝑥) = sin0 (𝑥) = 1 for every 0 < 𝑥 ≤ 𝜋 2 , and therefore 𝑓 has a removable discontinuity at 𝑥 = 0. Consequently, 𝑓 is integrable on [0, 𝜋 2 ] and therefore 𝐼0 is well-defined. (b) Prove that the sequence (𝐼𝑛)∞ 𝑛=0 satisfies the following recurrence formula    𝐼𝑛 = 𝑛−1 𝑛 𝐼𝑛−2 ∀𝑛 ≥ 2 𝐼0 = 𝜋 2 𝐼1 = 1 Solution: We first compute 𝐼0 = π 𝜋 2 0 sin0 (𝑥) 𝑑𝑥 = π 𝜋 2 0 1 𝑑𝑥 = 𝜋 2 and 𝐼1 = π 𝜋 2 0 sin(𝑥) 𝑑𝑥 = [− cos(𝑥)] 𝜋 2 0 = − cos ( 𝜋 2 ) + cos(0) = 1. We now prove that 𝐼𝑛 = 𝑛−1 𝑛 𝐼𝑛−2 for every 𝑛 ≥ 2. Let 𝑛 ≥ 2. We integrate by parts with 𝑢′ = sin 𝑥 and 𝑣 = sin𝑛−1 (𝑥). Then 𝐼𝑛 = π 𝜋 2 0 sin𝑛 (𝑥) 𝑑𝑥 = π 𝜋 2 0 sin(𝑥) · sin𝑛−1 (𝑥) 𝑑𝑥 IBP = [− cos(𝑥) · sin𝑛−1 (𝑥)] 𝜋 2 0 + (𝑛 − 1) π 𝜋 2 0 cos(𝑥) · sin𝑛−2 (𝑥) 𝑑𝑥 = (𝑛 − 1) π 𝜋 2 0 cos(𝑥) · sin𝑛−2 (𝑥) 𝑑𝑥 = (𝑛 − 1) π 𝜋 2 0 [1 − sin2 (𝑥)] · sin𝑛−2 (𝑥) 𝑑𝑥 = (𝑛 − 1) π 𝜋 2 0 sin𝑛−2 (𝑥) 𝑑𝑥 − (𝑛 − 1) π 𝜋 2 0 sin𝑛 (𝑥) 𝑑𝑥 = (𝑛 − 1)𝐼𝑛−2 − (𝑛 − 1)𝐼𝑛 Thus, 𝐼𝑛 = (𝑛 − 1)𝐼𝑛−2 − (𝑛 − 1)𝐼𝑛 ⇒ 𝑛𝐼𝑛 = (𝑛 − 1)𝐼𝑛−2 ⇒ 𝐼𝑛 = 𝑛−1 𝑛 𝐼𝑛−2. 6",
     "topicIds": [
@@ -2243,60 +3555,6 @@
       "text": "6. For every 0 ≤ 𝑛 ∈ Z, consider the definite integral 𝐼𝑛 defined by 𝐼𝑛 = π 𝜋 2 0 sin𝑛 (𝑥) 𝑑𝑥 (a) Prove that the sequence (𝐼𝑛)∞ 𝑛=0 is well-defined. Solution: For every 𝑛 ∈ N the function 𝑓 (𝑥) = sin𝑛 (𝑥) for every 𝑥 ∈ [0, 𝜋 2 ] is continuous by AOC, and therefore integrable on [0, 𝜋 2 ]. It follows that the integral 𝐼𝑛 = ∫ 𝜋 2 0 sin𝑛 (𝑥) 𝑑𝑥 exists, and consequently the sequence (𝐼𝑛)∞ 𝑛=1 is well-defined. For 𝑛 = 0 it holds that 𝑓 (𝑥) = sin0 (𝑥) = 1 for every 0 < 𝑥 ≤ 𝜋 2 , and therefore 𝑓 has a removable discontinuity at 𝑥 = 0. Consequently, 𝑓 is integrable on [0, 𝜋 2 ] and therefore 𝐼0 is well-defined. (b) Prove that the sequence (𝐼𝑛)∞ 𝑛=0 satisfies the following recurrence formula    𝐼𝑛 = 𝑛−1 𝑛 𝐼𝑛−2 ∀𝑛 ≥ 2 𝐼0 = 𝜋 2 𝐼1 = 1 Solution: We first compute 𝐼0 = π 𝜋 2 0 sin0 (𝑥) 𝑑𝑥 = π 𝜋 2 0 1 𝑑𝑥 = 𝜋 2 and 𝐼1 = π 𝜋",
       "startOffset": 6844,
       "endOffset": 8416
-    },
-    "confidence": 0.56
-  },
-  {
-    "id": "hw-exercise-5-solution-question-7",
-    "sourceType": "homework",
-    "sourceFileId": "hw-exercise-5-solution",
-    "questionNumber": "(c)",
-    "content": "(c) Conclude that for every 𝑛 ∈ N we have 𝐼2𝑛 = 2𝑛 − 1 2𝑛 · 2𝑛 − 3 2𝑛 − 2 · · · 3 4 · 1 2 · 𝜋 2 and 𝐼2𝑛+1 = 2𝑛 2𝑛 + 1 · 2𝑛 − 2 2𝑛 − 1 · · · 4 5 · 2 3 · 1 Solution: We prove the claim by induction on 𝑛. Base case: (𝑛 = 1) We already know that 𝐼0 = 𝜋 2 and that 𝐼1 = 1. Induction step Let 𝑛 ∈ N and assume the proposition holds for 2𝑛 − 1 and for 2𝑛 − 2. We prove that the proposition holds for 2𝑛 and for 2𝑛 + 1: 𝐼2𝑛 = 2𝑛 − 1 2𝑛 · 𝐼2𝑛−2 induction hypothesis = 2𝑛 − 1 2𝑛 · 2𝑛 − 3 2𝑛 − 2 · · · 3 4 · 1 2 · 𝜋 2 and 𝐼2𝑛+1 = 2𝑛 2𝑛 + 1 𝐼2𝑛−1 induction hypothesis = 2𝑛 2𝑛 + 1 · 2𝑛 − 2 2𝑛 − 1 · · · 4 5 · 2 3 · 1 (d) Conclude that lim 𝑛→∞ 𝐼2𝑛+1 𝐼2𝑛 = 1. Solution: As 0 ≤ sin(𝑥) ≤ 1 for every 𝑥 ∈ [0, 𝜋 2 ], then for every 𝑛 ∈ N and for every 𝑥 ∈ [0, 𝜋 2 ] we have 𝐼𝑛+1 = π 𝜋 2 0 sin𝑛+1 (𝑥) 𝑑𝑥 ≤ π 𝜋 2 0 sin𝑛 (𝑥) 𝑑𝑥 = 𝐼𝑛 It follows that the sequence (𝐼𝑛)∞ 𝑛=1 is decreasing and therefore 𝐼2𝑛+1 ≤ 𝐼2𝑛 ⇒ 𝐼2𝑛+1 𝐼2𝑛 ≤ 1, ∀𝑛 ∈ N In addition, we know by item (c) 𝐼2𝑛+1 = 2𝑛 2𝑛 + 1 𝐼2𝑛−1 ≥ 2𝑛 2𝑛 + 1 𝐼2𝑛 ⇒ 𝐼2𝑛+1 𝐼2𝑛 = 2𝑛 2𝑛 + 1 = 1 1 + 1 2𝑛 We conclude that 1 1 + 1 2𝑛 ≤ 𝐼2𝑛+1 𝐼2𝑛 ≤ 1, ∀𝑛 ∈ N and by the squeeze rule, lim 𝑛→∞ 𝐼2𝑛+1 𝐼2𝑛 = 1. 7",
-    "topicIds": [
-      "אינטגרלים-לא-אמיתיים",
-      "גבולות",
-      "טורים",
-      "מבחן-ההשוואה",
-      "נגזרות",
-      "סדרות",
-      "פונקציות",
-      "רציפות"
-    ],
-    "difficulty": "hard",
-    "examRelevance": "medium",
-    "sourceSnippet": {
-      "sourceFileId": "hw-exercise-5-solution",
-      "filename": "Exercise 5 solution.pdf",
-      "text": "(c) Conclude that for every 𝑛 ∈ N we have 𝐼2𝑛 = 2𝑛 − 1 2𝑛 · 2𝑛 − 3 2𝑛 − 2 · · · 3 4 · 1 2 · 𝜋 2 and 𝐼2𝑛+1 = 2𝑛 2𝑛 + 1 · 2𝑛 − 2 2𝑛 − 1 · · · 4 5 · 2 3 · 1 Solution: We prove the claim by induction on 𝑛. Base case: (𝑛 = 1) We already know that 𝐼0 = 𝜋 2 and that 𝐼1 = 1. Induction step Let 𝑛 ∈ N and assume the proposition holds for 2𝑛 − 1 and for 2𝑛 − 2. We prove that the proposition holds for 2𝑛 and for 2𝑛 + 1: 𝐼2𝑛 = 2𝑛 − 1 2𝑛 · 𝐼2𝑛−2 induction hypothesis = 2𝑛 − 1 2𝑛 · 2𝑛 − 3 2𝑛 − 2 · · · 3 4 · 1 2 · 𝜋 2 and 𝐼2𝑛+1 = 2𝑛 2𝑛 + 1 𝐼2𝑛−1 induction hypothesis = 2𝑛 2𝑛 + 1 · 2𝑛 − 2 2𝑛 − 1 · · · 4 5 · 2 3 · 1 (d) Conclude that lim 𝑛→∞ 𝐼2𝑛+1 𝐼2𝑛 = 1. Solution: As 0 ≤ sin(𝑥) ≤ 1 for every 𝑥 ∈ [0, 𝜋 2 ], then for every 𝑛 ∈ N and for every 𝑥 ∈ [0, 𝜋 2 ] we have 𝐼𝑛+1 = π 𝜋 2 0 sin𝑛+1 (𝑥) 𝑑𝑥 ≤ π 𝜋 2 0 sin𝑛 (𝑥) 𝑑𝑥 = 𝐼𝑛 It follows that the",
-      "startOffset": 8432,
-      "endOffset": 9667
-    },
-    "confidence": 0.56
-  },
-  {
-    "id": "hw-exercise-5-solution-question-8",
-    "sourceType": "homework",
-    "sourceFileId": "hw-exercise-5-solution",
-    "questionNumber": "(e)",
-    "content": "(e) Conclude the Wallis formula for 𝜋: 2 1 · 2 3 · 4 3 · 4 5 · 6 5 · 6 7 · · · = 𝜋 2 Note: the left-hand side is defined by 2 1 · 2 3 · 4 3 · 4 5 · 6 5 · 6 7 · · · = lim 𝑛→∞ [ 2 1 · 2 3 · 4 3 · 4 5 · 6 5 · 6 7 · · · · · 2𝑛 2𝑛 − 1 · 2𝑛 2𝑛 + 1 ] Solution: We have lim 𝑛→∞ [ 2 1 · 2 3 · 4 3 · 4 5 · 6 5 · 6 7 · · · · · 2𝑛 2𝑛 − 1 · 2𝑛 2𝑛 + 1 ] = lim 𝑛→∞ [ 2 · 4 · 6 · · · 2𝑛 3 · 5 · 7 · · · (2𝑛 + 1) · 2 · 4 · 6 · · · 2𝑛 1 · 3 · 5 · · · (2𝑛 − 1) ] = lim 𝑛→∞ [ 2·4·6···2𝑛 3·5·7··· (2𝑛+1) ] [ 1·3·5··· (2𝑛−1) 2·4·6···2𝑛 ] = lim 𝑛→∞        𝐼2𝑛+1 [ 1·3·5··· (2𝑛−1) 2·4·6···2𝑛 · 𝜋 2 ] · 𝜋 2        = lim 𝑛→∞ [ 𝐼2𝑛+1 𝐼2𝑛 · 𝜋 2 ] = 𝜋 2 8",
-    "topicIds": [
-      "אינטגרלים-לא-אמיתיים",
-      "גבולות",
-      "טורים",
-      "מבחן-ההשוואה",
-      "נגזרות",
-      "סדרות",
-      "פונקציות",
-      "רציפות"
-    ],
-    "difficulty": "unknown",
-    "examRelevance": "medium",
-    "sourceSnippet": {
-      "sourceFileId": "hw-exercise-5-solution",
-      "filename": "Exercise 5 solution.pdf",
-      "text": "(e) Conclude the Wallis formula for 𝜋: 2 1 · 2 3 · 4 3 · 4 5 · 6 5 · 6 7 · · · = 𝜋 2 Note: the left-hand side is defined by 2 1 · 2 3 · 4 3 · 4 5 · 6 5 · 6 7 · · · = lim 𝑛→∞ [ 2 1 · 2 3 · 4 3 · 4 5 · 6 5 · 6 7 · · · · · 2𝑛 2𝑛 − 1 · 2𝑛 2𝑛 + 1 ] Solution: We have lim 𝑛→∞ [ 2 1 · 2 3 · 4 3 · 4 5 · 6 5 · 6 7 · · · · · 2𝑛 2𝑛 − 1 · 2𝑛 2𝑛 + 1 ] = lim 𝑛→∞ [ 2 · 4 · 6 · · · 2𝑛 3 · 5 · 7 · · · (2𝑛 + 1) · 2 · 4 · 6 · · · 2𝑛 1 · 3 · 5 · · · (2𝑛 − 1) ] = lim 𝑛→∞ [ 2·4·6···2𝑛 3·5·7··· (2𝑛+1) ] [ 1·3·5··· (2𝑛−1) 2·4·6···2𝑛 ] = lim 𝑛→∞        𝐼2𝑛+1 [ 1·3·5··· (2𝑛−1) 2·4·6···2𝑛 · 𝜋 2 ] · 𝜋 2        = lim 𝑛→∞ [ 𝐼2𝑛+1 𝐼2𝑛 · 𝜋 2 ] = 𝜋 2 8",
-      "startOffset": 9683,
-      "endOffset": 10359
     },
     "confidence": 0.56
   },
@@ -2327,52 +3585,6 @@
     "id": "hw-exercise-6-solution-question-2",
     "sourceType": "homework",
     "sourceFileId": "hw-exercise-6-solution",
-    "questionNumber": "1",
-    "content": "Alternative solution 1: We have ∞ ∑ 𝑛=1 𝑛2 − 1 𝑛3 ≥ ∞ ∑ 𝑛=1 𝑛2 − 𝑛 𝑛3 = ∞ ∑ 𝑛=1 𝑛 − 1 𝑛2 = ∞ ∑ 𝑛=0 𝑛 (𝑛 + 1)2 = ∞ ∑ 𝑛=1 𝑛 (𝑛 + 1)2 ≥ ∞ ∑ 𝑛=1 𝑛 (𝑛 + 𝑛)2 = ∞ ∑ 𝑛=1 𝑛 4𝑛2 = 1 4 ∞ ∑ 𝑛=1 1 𝑛 = ∞ By the comparison test, ∑∞ 𝑛=1 𝑛2 −1 𝑛3 = ∞. Alternative solution 2: We have ∞ ∑ 𝑛=1 𝑛2 − 1 𝑛3 = ∞ ∑ 𝑛=1 ( 1 𝑛 − 1 𝑛3 ) = divergent − convergent = divergent (d) ∞ ∑ 𝑛=1 ln ( 2𝑛 + 3 2𝑛 + 1 ) Solution: We have ∞ ∑ 𝑛=1 ln ( 2𝑛 + 3 2𝑛 + 1 ) ln ( 𝑥 𝑦 ) =ln 𝑥−ln 𝑦 = ∞ ∑ 𝑛=1 [ln(2𝑛 + 3) − ln(2𝑛 + 1)] definition = lim 𝑁 →∞ 𝑁 ∑ 𝑛=1 ln ( 2𝑛 + 3 2𝑛 + 1 ) = lim 𝑁 →∞ 𝑁 ∑ 𝑛=1 [ln(2𝑛 + 3) − ln(2𝑛 + 1)] = lim 𝑁 →∞ [HHH ln(5) − ln(3) + HHH ln(7) − HHH ln(5) + · · · + ln(2𝑁 + 3) − XXXXX ln(2𝑁 + 1)] = lim 𝑁 →∞ [ln(2𝑁 + 3) − ln(3)] Heine’s lemma = lim 𝑥→∞ [ln 𝑥 − ln 3] = ∞ Hence the series is divergent. Alternative solution: Note that for every 𝑛 ∈ N we have 2𝑛+3 2𝑛+1 ≥ 1 which implies that ln ( 2𝑛+3 2𝑛+1 ) ≥ 0. It follows that the series is non-negative. We now compute ∞ ∑ 𝑛=1 ln ( 2𝑛 + 3 2𝑛 + 1 ) = ∞ ∑ 𝑛=1 ln ( 1 + 2 2𝑛 + 1 ) ln(1+𝑥) ≥ 𝑥 𝑥+1 ≥ ∞ ∑ 𝑛=1 ( 2 2𝑛+1 ) (1 + 2 2𝑛+1 ) = ∞ ∑ 𝑛=1 2 2𝑛 + 3 ≥ ∞ ∑ 𝑛=1 2 2𝑛 + 3𝑛 = 2 5 ∞ ∑ 𝑛=1 1 𝑛 = ∞ It follows that the series is divergent, and ∑∞ 𝑛=1 ln ( 2𝑛+3 2𝑛+1 ) = ∞. 2",
-    "topicIds": [
-      "גבולות",
-      "טורים",
-      "מבחן-ההשוואה",
-      "סדרות",
-      "פונקציות",
-      "רציפות"
-    ],
-    "difficulty": "medium",
-    "examRelevance": "medium",
-    "sourceSnippet": {
-      "sourceFileId": "hw-exercise-6-solution",
-      "filename": "Exercise 6 solution.pdf",
-      "text": "Alternative solution 1: We have ∞ ∑ 𝑛=1 𝑛2 − 1 𝑛3 ≥ ∞ ∑ 𝑛=1 𝑛2 − 𝑛 𝑛3 = ∞ ∑ 𝑛=1 𝑛 − 1 𝑛2 = ∞ ∑ 𝑛=0 𝑛 (𝑛 + 1)2 = ∞ ∑ 𝑛=1 𝑛 (𝑛 + 1)2 ≥ ∞ ∑ 𝑛=1 𝑛 (𝑛 + 𝑛)2 = ∞ ∑ 𝑛=1 𝑛 4𝑛2 = 1 4 ∞ ∑ 𝑛=1 1 𝑛 = ∞ By the comparison test, ∑∞ 𝑛=1 𝑛2 −1 𝑛3 = ∞. Alternative solution 2: We have ∞ ∑ 𝑛=1 𝑛2 − 1 𝑛3 = ∞ ∑ 𝑛=1 ( 1 𝑛 − 1 𝑛3 ) = divergent − convergent = divergent (d) ∞ ∑ 𝑛=1 ln ( 2𝑛 + 3 2𝑛 + 1 ) Solution: We have ∞ ∑ 𝑛=1 ln ( 2𝑛 + 3 2𝑛 + 1 ) ln ( 𝑥 𝑦 ) =ln 𝑥−ln 𝑦 = ∞ ∑ 𝑛=1 [ln(2𝑛 + 3) − ln(2𝑛 + 1)] definition = lim 𝑁 →∞ 𝑁 ∑ 𝑛=1 ln ( 2𝑛 + 3 2𝑛 + 1 ) = lim 𝑁 →∞ 𝑁 ∑ 𝑛=1 [ln(2𝑛 + 3) − ln(2𝑛 + 1)] = lim 𝑁 →∞ [HHH ln(5) − ln(3) + HHH ln(7) − HHH ln(5) + · · · + ln(2𝑁 + 3) − XXXXX ln(2𝑁 + 1)] = lim 𝑁 →∞ [ln(2𝑁 + 3) − ln(3)] Heine’s lemma = lim 𝑥→∞ [ln 𝑥 − ln 3] = ∞ Hence the series is divergent. Alternative solution: Note that for every 𝑛 ∈ N we hav"
-    },
-    "confidence": 0.56
-  },
-  {
-    "id": "hw-exercise-6-solution-question-3",
-    "sourceType": "homework",
-    "sourceFileId": "hw-exercise-6-solution",
-    "questionNumber": "(e)",
-    "content": "(e) ∞ ∑ 𝑛=1 [ arcsin ( 1 √𝑛 + 1 ) − arcsin ( 1 √𝑛 )] Solution: We have ∞ ∑ 𝑛=1 [ arcsin ( 1 √𝑛 + 1 ) − arcsin ( 1 √𝑛 )] = lim 𝑁 →∞ 𝑁 ∑ 𝑛=1 [ arcsin ( 1 √𝑛 + 1 ) − arcsin ( 1 √𝑛 )] = lim 𝑁 →∞ [HHHHHH arcsin ( 1 √2 ) − arcsin(1) + HHHHHH arcsin ( 1 √3 ) − HHHHHH arcsin ( 1 √2 ) + · · · + arcsin ( 1 √𝑁 + 1 ) − HHHHHH arcsin ( 1 √𝑁 )] = lim 𝑁 →∞ [ arcsin ( 1 √𝑁 + 1 ) − arcsin(1) ] = − arcsin(1) = − 𝜋 2 . 3",
-    "topicIds": [
-      "גבולות",
-      "טורים",
-      "מבחן-ההשוואה",
-      "סדרות",
-      "פונקציות",
-      "רציפות"
-    ],
-    "difficulty": "unknown",
-    "examRelevance": "medium",
-    "sourceSnippet": {
-      "sourceFileId": "hw-exercise-6-solution",
-      "filename": "Exercise 6 solution.pdf",
-      "text": "(e) ∞ ∑ 𝑛=1 [ arcsin ( 1 √𝑛 + 1 ) − arcsin ( 1 √𝑛 )] Solution: We have ∞ ∑ 𝑛=1 [ arcsin ( 1 √𝑛 + 1 ) − arcsin ( 1 √𝑛 )] = lim 𝑁 →∞ 𝑁 ∑ 𝑛=1 [ arcsin ( 1 √𝑛 + 1 ) − arcsin ( 1 √𝑛 )] = lim 𝑁 →∞ [HHHHHH arcsin ( 1 √2 ) − arcsin(1) + HHHHHH arcsin ( 1 √3 ) − HHHHHH arcsin ( 1 √2 ) + · · · + arcsin ( 1 √𝑁 + 1 ) − HHHHHH arcsin ( 1 √𝑁 )] = lim 𝑁 →∞ [ arcsin ( 1 √𝑁 + 1 ) − arcsin(1) ] = − arcsin(1) = − 𝜋 2 . 3"
-    },
-    "confidence": 0.56
-  },
-  {
-    "id": "hw-exercise-6-solution-question-4",
-    "sourceType": "homework",
-    "sourceFileId": "hw-exercise-6-solution",
     "questionNumber": "2",
     "content": "2. Determine whether each of the following series converges or diverges. (a) ∞ ∑ 𝑛=2 1 ln(𝑛) Solution: Note that 1 ln(𝑛) ≥ 0 for every 𝑛 ≥ 3. We now write ∞ ∑ 𝑛=3 1 ln(𝑛) ≥ ∞ ∑ 𝑛=3 1 𝑛 tail of Harmonic = ∞ It follows that the series ∑∞ 𝑛=3 1 ln(𝑛) is divergent by the comparison test, and therefore the series ∑∞ 𝑛=2 1 ln(𝑛) is divergent as it has a divergent tail. (b) ∞ ∑ 𝑛=1 (√𝑛 + 2 − √𝑛 )3 Solution: We note that ∞ ∑ 𝑛=1 (√𝑛 + 2 − √𝑛 )3 = ∞ ∑ 𝑛=1 ( 𝑛 + 2 − 𝑛 √𝑛 + 2 + √𝑛 )3 = ∞ ∑ 𝑛=1 8 (√𝑛 + 2 + √𝑛 )3 We have = lim 𝑛→∞ [ 8 (√𝑛+2+√𝑛)3 ] [ 1 𝑛 3 2 ] = lim 𝑛→∞ 8𝑛 3 2 (√𝑛 + 2 + √𝑛 )3 = lim 𝑛→∞ 8 (√ 1 + 2 𝑛 + 1 )3 = 1 Thus, the series converges together with the 3 2 -Harmonic series. (c) ∞ ∑ 𝑛=1 1 (𝑛 + 𝑒)𝑛 − 𝑒𝑛 Solution: By the comparison test ∞ ∑ 𝑛=3 1 (𝑛 + 𝑒)𝑛 − 𝑒𝑛 ≤ ∞ ∑ 𝑛=3 1 (𝑒 + 𝑒)𝑛 − 𝑒𝑛 = ∞ ∑ 𝑛=3 1 2𝑛 · 𝑒𝑛 − 𝑒𝑛 ≤ ∞ ∑ 𝑛=3 1 2 · 𝑒𝑛 − 𝑒𝑛 = ∞ ∑ 𝑛=3 1 𝑒𝑛 tail of geometric < ∞ It follows that ∑∞ 𝑛=3 1 (𝑛+𝑒)𝑛 −𝑒𝑛 < ∞ and therefore ∑∞ 𝑛=1 1 (𝑛+𝑒)𝑛 −𝑒𝑛 < ∞. 4",
     "topicIds": [
@@ -2395,55 +3607,7 @@
     "confidence": 0.56
   },
   {
-    "id": "hw-exercise-6-solution-question-5",
-    "sourceType": "homework",
-    "sourceFileId": "hw-exercise-6-solution",
-    "questionNumber": "(d)",
-    "content": "(d) ∞ ∑ 𝑛=2 1 ln (tan ( 𝜋 2 − 1 𝑛 )) You can assume that 𝜋 > 3. Hint. First prove that the series is positive and well-defined. Solution: First, as 1 𝑛 ≤ 1 2 for every 2 ≤ 𝑛 ∈ N, then for every 2 ≤ 𝑛 ∈ N we have 𝜋 2 > 𝜋 2 − 1 𝑛 ≥ 2𝜋 4 − 2 4 𝜋>3>2 > 2𝜋 4 − 𝜋 4 = 𝜋 4 As tan is strictly increasing on [ 𝜋 4 , 𝜋 2 ), then for every 2 ≤ 𝑛 ∈ N tan ( 𝜋 2 − 1 𝑛 ) > tan ( 𝜋 4 ) = 1 As ln is increasing, then for every 2 ≤ 𝑛 ∈ N ln ( tan ( 𝜋 2 − 1 𝑛 )) > ln(1) = 0 and therefore the series is non-negative and well-defined. We note that lim 𝑥→∞ ln ( tan ( 𝜋 2 − 1 𝑥 )) 𝑡=tan( 𝜋 2 − 1 𝑥 ) = lim 𝑡→∞ ln 𝑡 = ∞ We have lim 𝑛→∞ ( 1 ln(tan( 𝜋 2 − 1 𝑛 )) ) ( 1 ln 𝑛 ) = lim 𝑛→∞ ln 𝑛 ln (tan ( 𝜋 2 − 1 𝑛 )) Heine’s lemma,𝑥𝑛=𝑛 = lim 𝑥→∞ ln 𝑥 ln (tan ( 𝜋 2 − 1 𝑥 )) ? ∞ = 𝐿 lim 𝑥→∞ ( 1 𝑥 ) ( 1 tan( 𝜋 2 − 1 𝑥 ) ) · ( 1 cos2 ( 𝜋 2 )− 1 𝑥 ) · ( 1 𝑥2 ) = lim 𝑥→∞ 𝑥 tan ( 𝜋 2 − 1 𝑥 ) ( 1 cos2 ( 𝜋 2 )− 1 𝑥 ) = lim 𝑥→∞ [ 𝑥 tan ( 𝜋 2 − 1 𝑥 ) cos2 ( 𝜋 2 − 1 𝑥 )] = lim 𝑥→∞ [ 𝑥 · sin ( 𝜋 2 − 1 𝑥 ) cos ( 𝜋 2 − 1 𝑥 ) · cos2 ( 𝜋 2 − 1 𝑥 )] = lim 𝑥→∞ [ 𝑥 sin ( 𝜋 2 − 1 𝑥 ) cos ( 𝜋 2 − 1 𝑥 )] = lim 𝑥→∞ [ 𝑥 cos ( 1 𝑥 ) sin ( 1 𝑥 )] = lim 𝑥→∞ cos ( 1 𝑥 ) · sin ( 1 𝑥 ) ( 1 𝑥 ) 𝑡= 1 𝑥 = lim 𝑡→0+ [ cos 𝑡 · sin 𝑡 𝑡 ] = 1 · 1 = 1. It follows that the series diverges together with the series ∑∞ 𝑛=2 1 ln(𝑛) . 5",
-    "topicIds": [
-      "גבולות",
-      "טורים",
-      "מבחן-ההשוואה",
-      "סדרות",
-      "פונקציות",
-      "רציפות"
-    ],
-    "difficulty": "hard",
-    "examRelevance": "medium",
-    "sourceSnippet": {
-      "sourceFileId": "hw-exercise-6-solution",
-      "filename": "Exercise 6 solution.pdf",
-      "text": "(d) ∞ ∑ 𝑛=2 1 ln (tan ( 𝜋 2 − 1 𝑛 )) You can assume that 𝜋 > 3. Hint. First prove that the series is positive and well-defined. Solution: First, as 1 𝑛 ≤ 1 2 for every 2 ≤ 𝑛 ∈ N, then for every 2 ≤ 𝑛 ∈ N we have 𝜋 2 > 𝜋 2 − 1 𝑛 ≥ 2𝜋 4 − 2 4 𝜋>3>2 > 2𝜋 4 − 𝜋 4 = 𝜋 4 As tan is strictly increasing on [ 𝜋 4 , 𝜋 2 ), then for every 2 ≤ 𝑛 ∈ N tan ( 𝜋 2 − 1 𝑛 ) > tan ( 𝜋 4 ) = 1 As ln is increasing, then for every 2 ≤ 𝑛 ∈ N ln ( tan ( 𝜋 2 − 1 𝑛 )) > ln(1) = 0 and therefore the series is non-negative and well-defined. We note that lim 𝑥→∞ ln ( tan ( 𝜋 2 − 1 𝑥 )) 𝑡=tan( 𝜋 2 − 1 𝑥 ) = lim 𝑡→∞ ln 𝑡 = ∞ We have lim 𝑛→∞ ( 1 ln(tan( 𝜋 2 − 1 𝑛 )) ) ( 1 ln 𝑛 ) = lim 𝑛→∞ ln 𝑛 ln (tan ( 𝜋 2 − 1 𝑛 )) Heine’s lemma,𝑥𝑛=𝑛 = lim 𝑥→∞ ln 𝑥 ln (tan ( 𝜋 2 − 1 𝑥 )) ? ∞ = 𝐿 lim 𝑥→∞ ( 1 𝑥 ) ( 1 tan( 𝜋 2 − 1 𝑥 ) ) · ( 1 cos2 ( 𝜋 2 )− 1 𝑥 ) · ( 1 𝑥2 ) = lim 𝑥→∞ 𝑥"
-    },
-    "confidence": 0.56
-  },
-  {
-    "id": "hw-exercise-6-solution-question-6",
-    "sourceType": "homework",
-    "sourceFileId": "hw-exercise-6-solution",
-    "questionNumber": "0",
-    "content": "Alternative solution (after showing that the series is non-negative and well-defined): As 𝑥 cos 𝑥 ≤ sin 𝑥 for every 0 < 𝑥 < 𝜋 2 , then cos 𝑥 sin 𝑥 ≤ 1 𝑥 for every 0 < 𝑥 < 𝜋 2 . As, for every 2 ≤ 𝑛 ∈ N we have 0 < 1 𝑛 ≤ 1 2 𝜋>3>1 < 𝜋 2 , then for every 2 ≤ 𝑛 ∈ N we have tan ( 𝜋 2 − 1 𝑛 ) = cot ( 1 𝑛 ) = cos ( 1 𝑛 ) sin ( 1 𝑛 ) ≤ 1 ( 1 𝑛 ) = 𝑛 As ln is strictly increasing, then for every 2 ≤ 𝑛 ∈ N ln ( tan ( 𝜋 2 − 1 𝑛 )) ≤ ln 𝑛 and therefore (both sides are positive) 1 ln (tan ( 𝜋 2 − 1 𝑛 )) ≥ 1 ln 𝑛 thus ∞ ∑ 𝑛=2 1 ln (tan ( 𝜋 2 − 1 𝑛 )) ≥ ∞ ∑ 𝑛=2 1 ln 𝑛 = ∞ Thus the series ∑∞ 𝑛=2 1 ln(tan( 𝜋 2 − 1 𝑛 )) diverges. (e) ∞ ∑ 𝑛=1 ∫ 1 𝑛 0 sin2 (𝑡) 𝑡 𝑑𝑡 First prove that the sequence is well-defined. Solution: First, as lim 𝑡→0 sin2 (𝑡 ) 𝑡 0 0 = lim 𝑡→0 2 sin(𝑡 ) cos(𝑡 ) 1 = 0, then the function defined by 𝑓 (𝑡) = sin2 (𝑡 ) 𝑡 for every 𝑡 > 0 has a removable discontinuity at 𝑡 = 0. Thus, the integral ∫ 1 𝑛 0 sin2 (𝑡 ) 𝑡 𝑑𝑡 is well-defined for every 𝑛 ∈ N. As sin(𝑡) ≤ 𝑡 for every 𝑡 > 0, then sin2 (𝑡 ) 𝑡 ≤ 𝑡 for every 𝑡 > 0. By the monotonicity of the definite integral (the point 𝑡 = 0 doesn’t affect the integral), we have 0 ≤ ∫ 1 𝑛 0 sin2 (𝑡) 𝑡 𝑑𝑡 ≤ ∫ 1 𝑛 0 𝑡 𝑑𝑡 = [ 𝑡2 2 ] 1 𝑛 0 = 1 2𝑛2 , ∀𝑛 ∈ N Thus, by the comparison principle we have ∞ ∑ 𝑛=1 ∫ 1 𝑛 0 sin2 (𝑡) 𝑡 𝑑𝑡 ≤ ∞ ∑ 𝑛=1 1 2𝑛2 = 1 2 ∞ ∑ 𝑛=1 1 𝑛2 < ∞ 6",
-    "topicIds": [
-      "גבולות",
-      "טורים",
-      "מבחן-ההשוואה",
-      "סדרות",
-      "פונקציות",
-      "רציפות"
-    ],
-    "difficulty": "hard",
-    "examRelevance": "medium",
-    "sourceSnippet": {
-      "sourceFileId": "hw-exercise-6-solution",
-      "filename": "Exercise 6 solution.pdf",
-      "text": "Alternative solution (after showing that the series is non-negative and well-defined): As 𝑥 cos 𝑥 ≤ sin 𝑥 for every 0 < 𝑥 < 𝜋 2 , then cos 𝑥 sin 𝑥 ≤ 1 𝑥 for every 0 < 𝑥 < 𝜋 2 . As, for every 2 ≤ 𝑛 ∈ N we have 0 < 1 𝑛 ≤ 1 2 𝜋>3>1 < 𝜋 2 , then for every 2 ≤ 𝑛 ∈ N we have tan ( 𝜋 2 − 1 𝑛 ) = cot ( 1 𝑛 ) = cos ( 1 𝑛 ) sin ( 1 𝑛 ) ≤ 1 ( 1 𝑛 ) = 𝑛 As ln is strictly increasing, then for every 2 ≤ 𝑛 ∈ N ln ( tan ( 𝜋 2 − 1 𝑛 )) ≤ ln 𝑛 and therefore (both sides are positive) 1 ln (tan ( 𝜋 2 − 1 𝑛 )) ≥ 1 ln 𝑛 thus ∞ ∑ 𝑛=2 1 ln (tan ( 𝜋 2 − 1 𝑛 )) ≥ ∞ ∑ 𝑛=2 1 ln 𝑛 = ∞ Thus the series ∑∞ 𝑛=2 1 ln(tan( 𝜋 2 − 1 𝑛 )) diverges. (e) ∞ ∑ 𝑛=1 ∫ 1 𝑛 0 sin2 (𝑡) 𝑡 𝑑𝑡 First prove that the sequence is well-defined. Solution: First, as lim 𝑡→0 sin2 (𝑡 ) 𝑡 0 0 = lim 𝑡→0 2 sin(𝑡 ) cos(𝑡 ) 1 = 0, then the function defined by 𝑓 (𝑡) = sin2 (𝑡 ) 𝑡 for every 𝑡 > 0 ha",
-      "startOffset": 5116,
-      "endOffset": 6523
-    },
-    "confidence": 0.56
-  },
-  {
-    "id": "hw-exercise-6-solution-question-7",
+    "id": "hw-exercise-6-solution-question-3",
     "sourceType": "homework",
     "sourceFileId": "hw-exercise-6-solution",
     "questionNumber": "3",
@@ -2468,7 +3632,7 @@
     "confidence": 0.56
   },
   {
-    "id": "hw-exercise-6-solution-question-8",
+    "id": "hw-exercise-6-solution-question-4",
     "sourceType": "homework",
     "sourceFileId": "hw-exercise-6-solution",
     "questionNumber": "4",
@@ -2491,7 +3655,7 @@
     "confidence": 0.56
   },
   {
-    "id": "hw-exercise-6-solution-question-9",
+    "id": "hw-exercise-6-solution-question-5",
     "sourceType": "homework",
     "sourceFileId": "hw-exercise-6-solution",
     "questionNumber": "5",
@@ -2514,7 +3678,7 @@
     "confidence": 0.56
   },
   {
-    "id": "hw-exercise-6-solution-question-10",
+    "id": "hw-exercise-6-solution-question-6",
     "sourceType": "homework",
     "sourceFileId": "hw-exercise-6-solution",
     "questionNumber": "6",
@@ -2533,29 +3697,6 @@
       "sourceFileId": "hw-exercise-6-solution",
       "filename": "Exercise 6 solution.pdf",
       "text": "6. Let (𝑎𝑛)∞ 𝑛=1 (𝑏𝑛)∞ 𝑛=1 be two sequences of real numbers. Prove or disprove each of the following statements: (a) Suppose that (𝑎𝑛)∞ 𝑛=1 (𝑏𝑛)∞ 𝑛=1 are non-negative. Suppose that 𝑎𝑛 < 𝑏𝑛 for every 𝑛 ∈ N and ∑∞ 𝑛=1 𝑏𝑛 < ∞. Then ∑∞ 𝑛=1 𝑎𝑛 < ∑∞ 𝑛=1 𝑏𝑛. Solution: True. As 𝑎𝑛 < 𝑏𝑛 for every 𝑛 ∈ N, then 𝑎1 < 𝑏1. As ∑∞ 𝑛=1 𝑏𝑛 < ∞, then ∑∞ 𝑛=2 𝑏𝑛 < ∞. As 𝑎𝑛 < 𝑏𝑛 for every 𝑛 ∈ N and ∑∞ 𝑛=2 𝑏𝑛 < ∞, then by the comparison principle ∑∞ 𝑛=2 𝑎𝑛 < ∞ and ∞ ∑ 𝑛=2 𝑎𝑛 ≤ ∞ ∑ 𝑛=2 𝑏𝑛 < ∞ thus 𝑎1 + ∞ ∑ 𝑛=2 𝑎𝑛 < 𝑏1 + ∞ ∑ 𝑛=2 𝑏𝑛 ∞ ∑ 𝑛=1 𝑎𝑛 < ∞ ∑ 𝑛=1 𝑏𝑛 (b) Consider the sequence defined by 𝑆𝑁 = ∑𝑁 𝑛=1 𝑎𝑛 for every 𝑁 ∈ N. Suppose that 𝑏𝑛 = 𝑆2 𝑛 − 2𝑆𝑛−1 + 3 for every 2 ≤ 𝑛 ∈ N. If the series ∑∞ 𝑛=2 𝑏𝑛 is convergent, then the series ∑∞ 𝑛=1 𝑎𝑛 is divergent. Solution: True. ATC that the series ∑∞ 𝑛=1 𝑎𝑛 is convergent. Then ∃"
-    },
-    "confidence": 0.56
-  },
-  {
-    "id": "hw-exercise-6-solution-question-11",
-    "sourceType": "homework",
-    "sourceFileId": "hw-exercise-6-solution",
-    "questionNumber": "(c)",
-    "content": "(c) Suppose that ∑∞ 𝑛=1 𝑎𝑛 is convergent. Then the series ∑∞ 𝑛=1 𝑎2𝑛 is convergent. Solution: False. Consider the sequence defined by 𝑎𝑛 =    1 𝑘 𝑛 = 2𝑘 − 1 − 1 𝑘 𝑛 = 2𝑘 ∀𝑛 ∈ N Note that lim 𝑘→∞ 𝑎2𝑘−1 = lim 𝑘→∞ 1 𝑘 = 0, and lim 𝑘→∞ 𝑎2𝑘 = lim 𝑘→∞ ( − 1 𝑘 ) = 0 It follows that lim 𝑛→∞ 𝑎𝑛 = 0, and therefore, by Q4, the series ∑∞ 𝑛=1 𝑎𝑛 is convergent. However ∞ ∑ 𝑛=1 𝑎2𝑛 = ∞ ∑ 𝑛=1 ( − 1 𝑛 ) minus Harmonic = diverges (d) Suppose that ∑∞ 𝑛=1 𝑎𝑛 is convergent. Then the series ∑∞ 𝑛=1 𝑎2𝑛−1+𝑎2𝑛 2 is convergent. Solution: True. First, as the series ∑∞ 𝑛=1 𝑎𝑛 is convergent then there exists an 𝑠 ∈ R such that 𝑠 = lim 𝑁 →∞ 𝑁 ∑ 𝑛=1 𝑎𝑛. Consider the sequence (𝑆𝑁 )∞ 𝑁 =1 defined by 𝑆𝑁 = 𝑁 ∑ 𝑛=1 𝑎𝑛, ∀𝑁 ∈ N. Then lim 𝑁 →∞ 𝑆𝑁 = 𝑠, and therefore, by the Inheritance theorem, lim 𝑁 →∞ 𝑆2𝑁 = 𝑠. It follows that ∞ ∑ 𝑛=1 𝑎2𝑛−1 + 𝑎2𝑛 2 = lim 𝑁 →∞ [ 𝑎1 + 𝑎2 2 + 𝑎3 + 𝑎4 2 + · · · + 𝑎2𝑁 −1 + 𝑎2𝑁 2 ] = lim 𝑁 →∞ 1 2 [(𝑎1 + 𝑎2) + (𝑎3 + 𝑎4) + · · · + (𝑎2𝑁 −1 + 𝑎2𝑁 ] = lim 𝑁 →∞ 1 2 [(𝑎1 + 𝑎2 + · · · + 𝑎2𝑁 ] = lim 𝑁 →∞ 1 2 𝑆2𝑁 AOL = 1 2 𝑠. It follows that the series ∑∞ 𝑛=1 𝑎2𝑛−1+𝑎2𝑛 2 is convergent, and ∞ ∑ 𝑛=1 𝑎2𝑛−1 + 𝑎2𝑛 2 = 1 2 ∞ ∑ 𝑛=1 𝑎𝑛 = 1 2 𝑠. 11",
-    "topicIds": [
-      "גבולות",
-      "טורים",
-      "מבחן-ההשוואה",
-      "סדרות",
-      "פונקציות",
-      "רציפות"
-    ],
-    "difficulty": "medium",
-    "examRelevance": "medium",
-    "sourceSnippet": {
-      "sourceFileId": "hw-exercise-6-solution",
-      "filename": "Exercise 6 solution.pdf",
-      "text": "(c) Suppose that ∑∞ 𝑛=1 𝑎𝑛 is convergent. Then the series ∑∞ 𝑛=1 𝑎2𝑛 is convergent. Solution: False. Consider the sequence defined by 𝑎𝑛 =    1 𝑘 𝑛 = 2𝑘 − 1 − 1 𝑘 𝑛 = 2𝑘 ∀𝑛 ∈ N Note that lim 𝑘→∞ 𝑎2𝑘−1 = lim 𝑘→∞ 1 𝑘 = 0, and lim 𝑘→∞ 𝑎2𝑘 = lim 𝑘→∞ ( − 1 𝑘 ) = 0 It follows that lim 𝑛→∞ 𝑎𝑛 = 0, and therefore, by Q4, the series ∑∞ 𝑛=1 𝑎𝑛 is convergent. However ∞ ∑ 𝑛=1 𝑎2𝑛 = ∞ ∑ 𝑛=1 ( − 1 𝑛 ) minus Harmonic = diverges (d) Suppose that ∑∞ 𝑛=1 𝑎𝑛 is convergent. Then the series ∑∞ 𝑛=1 𝑎2𝑛−1+𝑎2𝑛 2 is convergent. Solution: True. First, as the series ∑∞ 𝑛=1 𝑎𝑛 is convergent then there exists an 𝑠 ∈ R such that 𝑠 = lim 𝑁 →∞ 𝑁 ∑ 𝑛=1 𝑎𝑛. Consider the sequence (𝑆𝑁 )∞ 𝑁 =1 defined by 𝑆𝑁 = 𝑁 ∑ 𝑛=1 𝑎𝑛, ∀𝑁 ∈ N. Then lim 𝑁 →∞ 𝑆𝑁 = 𝑠, and therefore, by the Inheritance theorem, lim 𝑁 →∞ 𝑆2𝑁 = 𝑠. It follows that ∞ ∑ 𝑛=1 𝑎2𝑛−1 + "
     },
     "confidence": 0.56
   },
@@ -2587,56 +3728,6 @@
     "id": "hw-exercise-7-solution-question-2",
     "sourceType": "homework",
     "sourceFileId": "hw-exercise-7-solution",
-    "questionNumber": "(c)",
-    "content": "(c) ∞ ∑ 𝑛=1 (𝑛!)2 2 · 4 · 6 · · · · · (4𝑛) Solution: We use the ratio test 𝐿 = lim 𝑛→∞ 𝑎𝑛+1 𝑎𝑛 = lim 𝑛→∞ [(𝑛 + 1)!]2 2 · 4 · 6 · · · · · (4𝑛) 2 · 4 · 6 · · · · · (4𝑛) · (4𝑛 + 2)(4𝑛 + 4) · (𝑛!)2 = lim 𝑛→∞ (𝑛 + 1)2 (4𝑛 + 2)(4𝑛 + 4) = lim 𝑛→∞ (1 + 1 𝑛 )2 (4 + 2 𝑛 ) (4 + 4 𝑛 ) = 1 16 It follows that 𝐿 < 1 and consequently, the series is convergent. (d) ∞ ∑ 𝑛=1 [ 𝑛2𝑛 · ( 1 − cos ( 1 𝑛 ))𝑛 ] Solution: We use the root test 𝐿 = lim 𝑛→∞ 𝑛 √𝑎𝑛 = lim 𝑛→∞ [ 𝑛2 · ( 1 − cos ( 1 𝑛 ))] = lim 𝑛→∞ 1 − cos ( 1 𝑛 ) ( 1 𝑛2 ) Heine = lim 𝑥→0 1 − cos(𝑥) 𝑥2 = lim 𝑥→0 [ − cos(𝑥) − 1 𝑥2 ] − 1 2 famous = 1 2 < 1 Thus, the series is convergent. (e) ∞ ∑ 𝑛=2 𝑛 √𝑛2 · 𝑎𝑛 𝑛1.5 , where 𝑎 ≥ 0 Solution: We use the root test 𝐿 = lim 𝑛→∞ 𝑛 √𝑎𝑛 = lim 𝑛→∞ 𝑛 √ 𝑛 √𝑛2 · 𝑎𝑛 𝑛1.5 = lim 𝑛→∞ 𝑛2√𝑛2 · 𝑎 ( 𝑛 √𝑛)1.5 = 𝑎 It follows that the series converges for 0 ≤ 𝑎 < 1 and diverges for 𝑎 > 1. For 𝑎 = 1 the series is ∑∞ 𝑛=2 𝑛√𝑛2 𝑛1.5 , and it converges with the 1.5-Harmonic series as 𝐿 = lim 𝑛→∞ 𝑎𝑛 𝑏𝑛 = lim 𝑛→∞ [ 𝑛√𝑛2 𝑛1.5 ] [ 1 𝑛1.5 ] = lim 𝑛→∞ ( 𝑛 √𝑛)2 = 1 Thus, the series is convergent if and only if 0 ≤ 𝑎 ≤ 1. 2",
-    "topicIds": [
-      "אינטגרלים-לא-אמיתיים",
-      "גבולות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "difficulty": "hard",
-    "examRelevance": "medium",
-    "sourceSnippet": {
-      "sourceFileId": "hw-exercise-7-solution",
-      "filename": "Exercise 7 solution.pdf",
-      "text": "(c) ∞ ∑ 𝑛=1 (𝑛!)2 2 · 4 · 6 · · · · · (4𝑛) Solution: We use the ratio test 𝐿 = lim 𝑛→∞ 𝑎𝑛+1 𝑎𝑛 = lim 𝑛→∞ [(𝑛 + 1)!]2 2 · 4 · 6 · · · · · (4𝑛) 2 · 4 · 6 · · · · · (4𝑛) · (4𝑛 + 2)(4𝑛 + 4) · (𝑛!)2 = lim 𝑛→∞ (𝑛 + 1)2 (4𝑛 + 2)(4𝑛 + 4) = lim 𝑛→∞ (1 + 1 𝑛 )2 (4 + 2 𝑛 ) (4 + 4 𝑛 ) = 1 16 It follows that 𝐿 < 1 and consequently, the series is convergent. (d) ∞ ∑ 𝑛=1 [ 𝑛2𝑛 · ( 1 − cos ( 1 𝑛 ))𝑛 ] Solution: We use the root test 𝐿 = lim 𝑛→∞ 𝑛 √𝑎𝑛 = lim 𝑛→∞ [ 𝑛2 · ( 1 − cos ( 1 𝑛 ))] = lim 𝑛→∞ 1 − cos ( 1 𝑛 ) ( 1 𝑛2 ) Heine = lim 𝑥→0 1 − cos(𝑥) 𝑥2 = lim 𝑥→0 [ − cos(𝑥) − 1 𝑥2 ] − 1 2 famous = 1 2 < 1 Thus, the series is convergent. (e) ∞ ∑ 𝑛=2 𝑛 √𝑛2 · 𝑎𝑛 𝑛1.5 , where 𝑎 ≥ 0 Solution: We use the root test 𝐿 = lim 𝑛→∞ 𝑛 √𝑎𝑛 = lim 𝑛→∞ 𝑛 √ 𝑛 √𝑛2 · 𝑎𝑛 𝑛1.5 = lim 𝑛→∞ 𝑛2√𝑛2 · 𝑎 ( 𝑛 √𝑛)1.5 = 𝑎 It follows that the series converges for 0 ≤ \ud835"
-    },
-    "confidence": 0.56
-  },
-  {
-    "id": "hw-exercise-7-solution-question-3",
-    "sourceType": "homework",
-    "sourceFileId": "hw-exercise-7-solution",
-    "questionNumber": "(f)",
-    "content": "(f) Student A solved item (b) in the following way: We compute lim 𝑛→∞ 𝑛 √2 · 4 · 6 · · · 2𝑛 𝑛 √𝑛𝑛 = lim 𝑛→∞ 2 1 𝑛 · 4 1 𝑛 · · · (2𝑛) 1 𝑛 𝑛 = AOL 1 · 1 · 1 · · · 1 ∞ = 0 Thus, by the root test, the series ∑∞ 𝑛=1 2·4·6···2𝑛 𝑛𝑛 is convergent. Explain student A’s mistake. Solution: Student A abused the algebra of limits. He used the algebra of limits on a number of functions that is not fixed, but depends on 𝑛. However, when using AOL, one needs to determine the number of functions and only then use the theorem, independently of 𝑛. 2. Find all values of 𝑝 ≥ 0 for which the following series is convergent ∞ ∑ 𝑛=3 1 𝑛 · ln(𝑛) · ln(ln(𝑛)) · [ln(ln(ln(𝑛)))] 𝑝 Solution: Let 𝑝 ≥ 0 and consider the function defined by 𝑓 (𝑥) = 1 𝑥 · ln(𝑥) · ln(ln(𝑥)) · [ln(ln(ln(𝑥)))] 𝑝 ∀𝑥 ≥ 27 Note that 𝑥 ≥ 27 = 33 ⇒ 𝑥 > 𝑒𝑒 ⇒ ln(𝑥) > 𝑒 ⇒ ln(ln(𝑥)) > 1 ⇒ ln(ln(ln(𝑥)) > 0 Thus, 𝑓 is well defined. We observe that since 𝑝 ≥ 0, we have lim 𝑥→∞ 𝑓 (𝑥) = 1 ∞ = 0. Also, note that 𝑓 is decreasing, since 𝑥 · ln(𝑥) · ln(ln(𝑥)) · [ln(ln(ln(𝑥)))] 𝑝 is increasing and positive for every 𝑥 ≥ 27. Thus, by the integral test, the series is convergent if and only if ∫ ∞ 27 𝑓 (𝑥) 𝑑𝑥 is convergent. We compute ∫ ∞ 27 𝑓 (𝑥) 𝑑𝑥 = ∫ ∞ 27 𝑑𝑥 𝑥 · ln(𝑥) · ln(ln(𝑥)) · [ln(ln(ln(𝑥)))] 𝑝 𝑡=ln( 𝑥)⇒𝑑 𝑥=𝑥𝑑𝑡 = ∫ ∞ ln(27) 𝑑𝑡 𝑡 · ln(𝑡) · [𝑙𝑛(ln(𝑡))] 𝑝 𝑢=ln(𝑡 )⇒𝑑𝑡=𝑡 𝑑𝑢 = ∫ ∞ ln(ln(27) ) 𝑑𝑢 𝑢 · [ln(𝑢)] 𝑝 𝑠=ln(𝑢)⇒𝑑𝑢=𝑠𝑑𝑠 = ∫ ∞ ln(ln(ln(27) ) ) 𝑑𝑠 𝑠𝑝 Thus, the series is convergent if and only if 𝑝 > 1. 3",
-    "topicIds": [
-      "אינטגרלים-לא-אמיתיים",
-      "גבולות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "difficulty": "hard",
-    "examRelevance": "medium",
-    "sourceSnippet": {
-      "sourceFileId": "hw-exercise-7-solution",
-      "filename": "Exercise 7 solution.pdf",
-      "text": "(f) Student A solved item (b) in the following way: We compute lim 𝑛→∞ 𝑛 √2 · 4 · 6 · · · 2𝑛 𝑛 √𝑛𝑛 = lim 𝑛→∞ 2 1 𝑛 · 4 1 𝑛 · · · (2𝑛) 1 𝑛 𝑛 = AOL 1 · 1 · 1 · · · 1 ∞ = 0 Thus, by the root test, the series ∑∞ 𝑛=1 2·4·6···2𝑛 𝑛𝑛 is convergent. Explain student A’s mistake. Solution: Student A abused the algebra of limits. He used the algebra of limits on a number of functions that is not fixed, but depends on 𝑛. However, when using AOL, one needs to determine the number of functions and only then use the theorem, independently of 𝑛. 2. Find all values of 𝑝 ≥ 0 for which the following series is convergent ∞ ∑ 𝑛=3 1 𝑛 · ln(𝑛) · ln(ln(𝑛)) · [ln(ln(ln(𝑛)))] 𝑝 Solution: Let 𝑝 ≥ 0 and consider the function defined by 𝑓 (𝑥) = 1 𝑥 · ln(𝑥) · ln(ln(𝑥)) · [ln(ln(ln(𝑥)))] 𝑝 ∀𝑥 ≥ 27 Note that 𝑥 ≥ 27 = 33 ⇒ 𝑥 > 𝑒𝑒 ⇒ ln(𝑥) > 𝑒 ⇒ ln(ln(𝑥)) > 1 ⇒ ln(ln(ln(𝑥)) > 0 Thu",
-      "startOffset": 2146,
-      "endOffset": 3711
-    },
-    "confidence": 0.56
-  },
-  {
-    "id": "hw-exercise-7-solution-question-4",
-    "sourceType": "homework",
-    "sourceFileId": "hw-exercise-7-solution",
     "questionNumber": "3",
     "content": "3. In this problem we will prove the existence of the Euler constant, that will be re-visited in the course of Probability. Let (𝑇𝑁 )∞ 𝑁 =1 be the sequence of real numbers defined by 𝑇𝑁 = ∑𝑁 𝑛=1 1 𝑛 − ∫ 𝑁 1 𝑑 𝑥 𝑥 for every 𝑁 ∈ N. (a) Prove that (𝑇𝑁 )∞ 𝑁 =1 is decreasing. Hint. recall the inequality 𝑓 (𝑛 + 1) ≤ ∫ 𝑛+1 𝑛 𝑓 (𝑥) 𝑑𝑥 ≤ 𝑓 (𝑛) that we have seen in lecture 6. Solution: We note that for every 𝑛 ∈ N we have 1 𝑛 + 1 ≤ (★★) ∫ 𝑛+1 𝑛 𝑑𝑥 𝑥 ≤ (★) 1 𝑛 Let 𝑁 ∈ N. Then 𝑇𝑁 +1 − 𝑇𝑁 = 𝑁 +1 ∑ 𝑛=1 1 𝑛 − ∫ 𝑁 +1 1 𝑑𝑥 𝑥 − ( 𝑁 ∑ 𝑛=1 1 𝑛 − ∫ 𝑁 1 𝑑𝑥 𝑥 ) = 1 𝑁 + 1 − ∫ 𝑁 +1 1 𝑑𝑥 𝑥 + ∫ 𝑁 1 𝑑𝑥 𝑥 = 1 𝑁 + 1 − ∫ 𝑁 +1 𝑁 𝑑𝑥 𝑥 ≤ (★★) 1 𝑁 + 1 − 1 𝑁 + 1 = 0 Thus (𝑇𝑁 )∞ 𝑁 =1 is decreasing. (b) Conclude that there exists a constant 𝛾 ≥ 0 for which 𝛾 = lim 𝑁 →∞ [∑𝑁 𝑛=1 1 𝑛 − ln 𝑁]. Solution: Let 𝑁 ∈ N. Then 𝑇𝑁 = 𝑁 ∑ 𝑛=1 1 𝑛 − ∫ 𝑁 1 𝑑𝑥 𝑥 = 𝑁 ∑ 𝑛=1 ( 1 𝑛 − ∫ 𝑛+1 𝑛 𝑑𝑥 𝑥 ) + ∫ 𝑁 +1 𝑁 𝑑𝑥 𝑥 ≥ (★) 0 + ∫ 𝑁 +1 𝑁 𝑑𝑥 𝑥 ≥ 0 thus (𝑇𝑁 )∞ 𝑁 =1 is bounded from below by 0 and therefore lim 𝑁 →∞𝑇𝑁 exists, and by the monotonicity of limits we get that lim 𝑁 →∞𝑇𝑁 ≥ lim 𝑁 →∞0 = 0 We note that for every 𝑁 ∈ N we have ∫ 𝑁 1 𝑑𝑥 𝑥 = [ln | 𝑥 |] 𝑁 1 = ln 𝑁 − ln 1 = ln 𝑁 thus there exists an 𝛾 ≥ 0 for which 𝛾 = lim 𝑁 →∞ [ 𝑁 ∑ 𝑛=1 1 𝑛 − ln(𝑁) ] 4",
     "topicIds": [
@@ -2660,7 +3751,7 @@
     "confidence": 0.56
   },
   {
-    "id": "hw-exercise-7-solution-question-5",
+    "id": "hw-exercise-7-solution-question-3",
     "sourceType": "homework",
     "sourceFileId": "hw-exercise-7-solution",
     "questionNumber": "4",
@@ -2682,30 +3773,6 @@
       "text": "4. Prove or disprove each of the following statements: (a) Let (𝑎𝑛)∞ 𝑛=1 be a sequence of non-negative numbers. If lim 𝑛→∞ (𝑛 · 𝑎𝑛) = 0, then ∑∞ 𝑛=1 𝑎𝑛 < ∞. Solution: False. We choose 𝑎1 = 1 and 𝑎𝑛 = 1 𝑛·ln 𝑛 for every 2 ≤ 𝑛 ∈ N. We note that lim 𝑛→∞ (𝑛 · 𝑎𝑛) = lim 𝑛→∞ [ 𝑛 · 1 𝑛 · ln 𝑛 ] = lim 𝑛→∞ 1 ln 𝑛 = 0 but we proved in class that ∞ ∑ 𝑛=2 1 𝑛 · ln 𝑛 = ∞ Thus ∑∞ 𝑛=1 𝑎𝑛 = ∞, since it has a divergent tail. (b) Let (𝑎𝑛)∞ 𝑛=1 be a sequence of positive numbers. Suppose that 𝑎𝑛+1 𝑎𝑛 ≤ 𝑛2 (𝑛 + 1)2 ∀𝑛 ∈ N then the series ∑∞ 𝑛=1 𝑎𝑛 is convergent. Solution: True. Consider the sequence (𝑏𝑛)∞ 𝑛=1 defined by 𝑏𝑛 = 1 𝑛2 for every 𝑛 ∈ N. Note that for every 𝑛 ∈ N we have 𝑎𝑛+1 𝑎𝑛 ≤ 𝑛2 (𝑛 + 1)2 = [ 1 (𝑛+1)2 ] [ 1 𝑛2 ] = 𝑏𝑛+1 𝑏𝑛 Since the 2-Harmonic series is convergent, the series ∑∞ 𝑛=1 𝑎𝑛 is convergent. 5",
       "startOffset": 5084,
       "endOffset": 5956
-    },
-    "confidence": 0.56
-  },
-  {
-    "id": "hw-exercise-7-solution-question-6",
-    "sourceType": "homework",
-    "sourceFileId": "hw-exercise-7-solution",
-    "questionNumber": "(c)",
-    "content": "(c) We have 𝜋 2 ≤ ∞ ∑ 𝑛=1 1 (𝑛 + 1)√𝑛 ≤ 2𝜋 3 You can assume that 𝜋 > 3. Solution: True. Consider the function defined by 𝑓 (𝑥) = 1 (𝑥 + 1)√𝑥 , ∀𝑥 ≥ 1 We note that 𝑓 (𝑥) > 0 for every 𝑥 ≥ 1. We note that 𝑓 is decreasing (as the functions 𝑥 + 1, √𝑥 are increasing and positive for every 𝑥 ≥ 1) and that lim 𝑥→∞ 𝑓 (𝑥) AOL = 0. We now compute the improper integral ∫ ∞ 1 𝑑𝑥 (𝑥 + 1)√𝑥 𝑡=√𝑥 = ∫ ∞ 1 2𝑡 𝑑𝑡 (𝑡2 + 1)𝑡 = 2 ∫ ∞ 1 𝑑𝑡 1 + 𝑡2 = 2 [arctan(𝑡)]∞ 1 = 2 [ 𝜋 2 − 𝜋 4 ] = 𝜋 2 Thus, by the integral test, we have ∫ ∞ 1 𝑑𝑥 (𝑥 + 1)√𝑥 ≤ ∞ ∑ 𝑛=1 1 (𝑛 + 1)√𝑛 ≤ 𝑓 (1) + ∫ ∞ 1 𝑑𝑥 (𝑥 + 1)√𝑥 Therefore 𝜋 2 ≤ ∞ ∑ 𝑛=1 1 (𝑛 + 1)√𝑛 ≤ 1 2 + 𝜋 2 As 𝜋 > 3, then 1 2 ≤ 𝜋 6 and therefore 1 2 + 𝜋 2 ≤ 𝜋 6 + 𝜋 2 = 2𝜋 3 It follows that 𝜋 2 ≤ ∞ ∑ 𝑛=1 1 (𝑛 + 1)√𝑛 ≤ 2𝜋 3 6",
-    "topicIds": [
-      "אינטגרלים-לא-אמיתיים",
-      "גבולות",
-      "טורים",
-      "מבחן-המנה",
-      "מבחן-השורש",
-      "סדרות",
-      "פונקציות"
-    ],
-    "difficulty": "hard",
-    "examRelevance": "medium",
-    "sourceSnippet": {
-      "sourceFileId": "hw-exercise-7-solution",
-      "filename": "Exercise 7 solution.pdf",
-      "text": "(c) We have 𝜋 2 ≤ ∞ ∑ 𝑛=1 1 (𝑛 + 1)√𝑛 ≤ 2𝜋 3 You can assume that 𝜋 > 3. Solution: True. Consider the function defined by 𝑓 (𝑥) = 1 (𝑥 + 1)√𝑥 , ∀𝑥 ≥ 1 We note that 𝑓 (𝑥) > 0 for every 𝑥 ≥ 1. We note that 𝑓 is decreasing (as the functions 𝑥 + 1, √𝑥 are increasing and positive for every 𝑥 ≥ 1) and that lim 𝑥→∞ 𝑓 (𝑥) AOL = 0. We now compute the improper integral ∫ ∞ 1 𝑑𝑥 (𝑥 + 1)√𝑥 𝑡=√𝑥 = ∫ ∞ 1 2𝑡 𝑑𝑡 (𝑡2 + 1)𝑡 = 2 ∫ ∞ 1 𝑑𝑡 1 + 𝑡2 = 2 [arctan(𝑡)]∞ 1 = 2 [ 𝜋 2 − 𝜋 4 ] = 𝜋 2 Thus, by the integral test, we have ∫ ∞ 1 𝑑𝑥 (𝑥 + 1)√𝑥 ≤ ∞ ∑ 𝑛=1 1 (𝑛 + 1)√𝑛 ≤ 𝑓 (1) + ∫ ∞ 1 𝑑𝑥 (𝑥 + 1)√𝑥 Therefore 𝜋 2 ≤ ∞ ∑ 𝑛=1 1 (𝑛 + 1)√𝑛 ≤ 1 2 + 𝜋 2 As 𝜋 > 3, then 1 2 ≤ 𝜋 6 and therefore 1 2 + 𝜋 2 ≤ 𝜋 6 + 𝜋 2 = 2𝜋 3 It follows that 𝜋 2 ≤ ∞ ∑ 𝑛=1 1 (𝑛 + 1)√𝑛 ≤ 2𝜋 3 6"
     },
     "confidence": 0.56
   },

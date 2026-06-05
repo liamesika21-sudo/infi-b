@@ -317,5 +317,42 @@
     "extractedTheorems": 0,
     "extractedFormulas": 4,
     "confidence": 0.8999999999999999
+  },
+  {
+    "lectureNumber": 10,
+    "weekNumber": 10,
+    "sourceFileId": "lecture-lecture-10-group-2-calculus-2-2026",
+    "filename": "Lecture 10 group 2 calculus 2 2026.pdf",
+    "title": "סדרות וטורי פונקציות — התכנסות נקודתית ובמידה שווה",
+    "mainTopics": [
+      "סדרות פונקציות",
+      "טורי פונקציות",
+      "התכנסות נקודתית",
+      "התכנסות במידה שווה",
+      "קריטריון ויירשטראס"
+    ],
+    "keyDefinitions": [
+      "התכנסות נקודתית של סדרת פונקציות",
+      "התכנסות במידה שווה",
+      "טור פונקציות"
+    ],
+    "keyTheorems": [
+      "קריטריון קושי להתכנסות במידה שווה",
+      "מבחן Weierstrass לטורי פונקציות",
+      "החלפת גבול עם אינטגרל/נגזרת בתנאים"
+    ],
+    "keyFormulas": [
+      "sup |f_n(x)-f(x)| → 0",
+      "Σ M_n מתכנס ו-|f_n(x)|≤M_n ⇒ Σf_n מתכנס במידה שווה"
+    ],
+    "examNotes": [
+      "התכנסות במידה שווה היא נושא הוכח/הפרך קלאסי",
+      "חשוב להבדיל בין בדיקה נקודתית לכל $x$ לבין חסם אחיד על כל התחום"
+    ],
+    "dataQuality": "partial",
+    "summarySourceFile": null,
+    "extractedTheorems": 0,
+    "extractedFormulas": 0,
+    "confidence": 0.82
   }
 ]

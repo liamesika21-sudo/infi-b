@@ -51,6 +51,73 @@
     "confidence": 0.8999999999999999
   },
   {
+    "recitationNumber": 10,
+    "weekNumber": 10,
+    "sourceFileId": "recitation-recitation-10-hebrew",
+    "filename": "Recitation 10-Hebrew.pdf",
+    "practicesLecture": 9,
+    "mainThemes": [
+      "טורי טיילור",
+      "סכומי טורים",
+      "התכנסות של טורי פונקציות"
+    ],
+    "whatWasPracticed": "המשך עבודה עם טורי חזקות וטיילור: זיהוי מבנה, חישוב תחומי התכנסות, שימוש בגזירה/אינטגרציה של טור, והכנה למעבר לסדרות וטורי פונקציות.",
+    "keyTechniques": [
+      "זיהוי טור חזקות",
+      "בדיקת קצוות",
+      "גזירה ואינטגרציה איבר-איבר",
+      "שימוש בטורי מקלורן ידועים"
+    ],
+    "examRelevance": "critical",
+    "questionCount": 22,
+    "questionIds": [
+      "recitation-recitation-10-hebrew-question-1",
+      "recitation-recitation-10-hebrew-question-2",
+      "recitation-recitation-10-hebrew-question-3",
+      "recitation-recitation-10-hebrew-question-4",
+      "recitation-recitation-10-hebrew-question-5",
+      "recitation-recitation-10-hebrew-question-6",
+      "recitation-recitation-10-hebrew-question-7",
+      "recitation-recitation-10-hebrew-question-8",
+      "recitation-recitation-10-hebrew-question-9",
+      "recitation-recitation-10-hebrew-question-10",
+      "recitation-recitation-10-hebrew-question-11",
+      "recitation-recitation-10-hebrew-question-12",
+      "recitation-recitation-10-hebrew-question-13",
+      "recitation-recitation-10-hebrew-question-14",
+      "recitation-recitation-10-hebrew-question-15",
+      "recitation-recitation-10-hebrew-question-16",
+      "recitation-recitation-10-hebrew-question-17",
+      "recitation-recitation-10-hebrew-question-18",
+      "recitation-recitation-10-hebrew-question-19",
+      "recitation-recitation-10-hebrew-question-20",
+      "recitation-recitation-10-hebrew-question-21",
+      "recitation-recitation-10-hebrew-question-22"
+    ],
+    "solutionPatternCount": 0,
+    "mustPractice": [
+      "לזהות אם ביטוי הוא טור חזקות או לא",
+      "למצוא $x_0$, מקדמים ורדיוס התכנסות",
+      "לבדוק קצוות אחרי כל פעולה על טור",
+      "לחשב סכומים באמצעות טורי מקלורן מוכרים"
+    ],
+    "commonMistakes": [
+      "בלבול בין המקדם $a_n$ לבין הצבה של $n$ בביטוי",
+      "התייחסות לביטויים עם חזקות שליליות או $\\sin x$ כטורי חזקות",
+      "שכחה שהרדיוס נשמר בגזירה/אינטגרציה אבל הקצוות לא בהכרח"
+    ],
+    "conclusions": [
+      "טור חזקות הוא פולינום אינסופי סביב מרכז $x_0$ — קודם מזהים את הצורה",
+      "בתוך הרדיוס יש התכנסות בהחלט; בקצוות חייבים בדיקה נפרדת",
+      "טורי מקלורן בסיסיים הם כלי חישוב, לא רק נוסחאות לשינון"
+    ],
+    "topicCoverage": [
+      "גבולות",
+      "סדרות"
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
     "recitationNumber": 2,
     "weekNumber": 2,
     "sourceFileId": "recitation-recitation-2-hebrew",
@@ -211,6 +278,49 @@
     "confidence": 0.8999999999999999
   },
   {
+    "recitationNumber": 5,
+    "weekNumber": 5,
+    "sourceFileId": "recitation-recitation-5-hebrew",
+    "filename": "Recitation 5-Hebrew.pdf",
+    "practicesLecture": 4,
+    "mainThemes": [
+      "אינטגרלים לא אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "whatWasPracticed": "תרגול 5 — נושאים: אינטגרלים לא אמיתיים, גבולות, טורים, מבחן ההשוואה, סדרות, פונקציות, רציפות",
+    "keyTechniques": [],
+    "examRelevance": "medium",
+    "questionCount": 7,
+    "questionIds": [
+      "recitation-recitation-5-hebrew-question-1",
+      "recitation-recitation-5-hebrew-question-2",
+      "recitation-recitation-5-hebrew-question-3",
+      "recitation-recitation-5-hebrew-question-4",
+      "recitation-recitation-5-hebrew-question-5",
+      "recitation-recitation-5-hebrew-question-6",
+      "recitation-recitation-5-hebrew-question-7"
+    ],
+    "solutionPatternCount": 0,
+    "mustPractice": [],
+    "commonMistakes": [],
+    "conclusions": [],
+    "topicCoverage": [
+      "אינטגרלים לא אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
     "recitationNumber": 6,
     "weekNumber": 6,
     "sourceFileId": "recitation-recitation-6-hebrew",
@@ -325,58 +435,6 @@
   {
     "recitationNumber": 8,
     "weekNumber": 8,
-    "sourceFileId": "recitation-recitation-8-hebrew",
-    "filename": "Recitation 8 Hebrew.pdf",
-    "practicesLecture": 7,
-    "mainThemes": [
-      "התכנסות בהחלט",
-      "התכנסות בתנאי",
-      "מבחן לייבניץ"
-    ],
-    "whatWasPracticed": "הבחנה בין התכנסות מוחלטת לבין התכנסות בתנאי, הוכחות Leibniz, וטורים חלופיים.",
-    "keyTechniques": [
-      "הוכחת התכנסות בתנאי (Leibniz)",
-      "הוכחת אי-התכנסות מוחלטת",
-      "השוואת כוחות"
-    ],
-    "examRelevance": "high",
-    "questionCount": 5,
-    "questionIds": [
-      "recitation-recitation-8-hebrew-question-1",
-      "recitation-recitation-8-hebrew-question-2",
-      "recitation-recitation-8-hebrew-question-3",
-      "recitation-recitation-8-hebrew-question-4",
-      "recitation-recitation-8-hebrew-question-5"
-    ],
-    "solutionPatternCount": 2,
-    "mustPractice": [
-      "מציאת כל x שבהם טור מתכנס (בהחלט/בתנאי/מתבדר)",
-      "שאלות על תחום התכנסות מלא עם בדיקת קצוות",
-      "הוכחת התכנסות בתנאי vs מוחלטת"
-    ],
-    "commonMistakes": [
-      "שכחת בדיקת קצוות תחום ההתכנסות",
-      "הנחה שהתכנסות בתנאי → מתכנס מוחלט (שגוי)"
-    ],
-    "conclusions": [
-      "בתוך רדיוס ההתכנסות — מוחלט תמיד",
-      "בקצוות — יש לבדוק ידנית, ייתכן כל מצב",
-      "הסדר גורם: aₙ≥0 חיוני ל-Leibniz"
-    ],
-    "topicCoverage": [
-      "גבולות",
-      "התכנסות בהחלט",
-      "התכנסות בתנאי",
-      "טורים",
-      "מבחן ההשוואה",
-      "מבחן השורש",
-      "סדרות"
-    ],
-    "confidence": 0.8999999999999999
-  },
-  {
-    "recitationNumber": 8,
-    "weekNumber": 8,
     "sourceFileId": "recitation-recitation-8-hebrew-2",
     "filename": "Recitation 8-Hebrew-2.pdf",
     "practicesLecture": 7,
@@ -427,62 +485,10 @@
     "confidence": 0.8999999999999999
   },
   {
-    "recitationNumber": 8,
-    "weekNumber": 8,
-    "sourceFileId": "recitation-recitation-8-hebrew",
-    "filename": "Recitation 8-Hebrew.pdf",
-    "practicesLecture": 7,
-    "mainThemes": [
-      "התכנסות בהחלט",
-      "התכנסות בתנאי",
-      "מבחן לייבניץ"
-    ],
-    "whatWasPracticed": "הבחנה בין התכנסות מוחלטת לבין התכנסות בתנאי, הוכחות Leibniz, וטורים חלופיים.",
-    "keyTechniques": [
-      "הוכחת התכנסות בתנאי (Leibniz)",
-      "הוכחת אי-התכנסות מוחלטת",
-      "השוואת כוחות"
-    ],
-    "examRelevance": "high",
-    "questionCount": 5,
-    "questionIds": [
-      "recitation-recitation-8-hebrew-question-1",
-      "recitation-recitation-8-hebrew-question-2",
-      "recitation-recitation-8-hebrew-question-3",
-      "recitation-recitation-8-hebrew-question-4",
-      "recitation-recitation-8-hebrew-question-5"
-    ],
-    "solutionPatternCount": 2,
-    "mustPractice": [
-      "מציאת כל x שבהם טור מתכנס (בהחלט/בתנאי/מתבדר)",
-      "שאלות על תחום התכנסות מלא עם בדיקת קצוות",
-      "הוכחת התכנסות בתנאי vs מוחלטת"
-    ],
-    "commonMistakes": [
-      "שכחת בדיקת קצוות תחום ההתכנסות",
-      "הנחה שהתכנסות בתנאי → מתכנס מוחלט (שגוי)"
-    ],
-    "conclusions": [
-      "בתוך רדיוס ההתכנסות — מוחלט תמיד",
-      "בקצוות — יש לבדוק ידנית, ייתכן כל מצב",
-      "הסדר גורם: aₙ≥0 חיוני ל-Leibniz"
-    ],
-    "topicCoverage": [
-      "גבולות",
-      "התכנסות בהחלט",
-      "התכנסות בתנאי",
-      "טורים",
-      "מבחן ההשוואה",
-      "מבחן השורש",
-      "סדרות"
-    ],
-    "confidence": 0.8999999999999999
-  },
-  {
     "recitationNumber": 9,
     "weekNumber": 9,
-    "sourceFileId": "recitation-recitation-9-hebrew",
-    "filename": "Recitation_9-Hebrew.pdf",
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "filename": "recitation-9-max.txt",
     "practicesLecture": 8,
     "mainThemes": [
       "טורי חזקות",
@@ -497,15 +503,50 @@
       "טיילור/מקלורן"
     ],
     "examRelevance": "critical",
-    "questionCount": 5,
+    "questionCount": 40,
     "questionIds": [
-      "recitation-recitation-9-hebrew-question-1",
-      "recitation-recitation-9-hebrew-question-2",
-      "recitation-recitation-9-hebrew-question-3",
-      "recitation-recitation-9-hebrew-question-4",
-      "recitation-recitation-9-hebrew-question-5"
+      "recitation-script-recitation-9-max-question-1",
+      "recitation-script-recitation-9-max-question-2",
+      "recitation-script-recitation-9-max-question-3",
+      "recitation-script-recitation-9-max-question-4",
+      "recitation-script-recitation-9-max-question-5",
+      "recitation-script-recitation-9-max-question-6",
+      "recitation-script-recitation-9-max-question-7",
+      "recitation-script-recitation-9-max-question-8",
+      "recitation-script-recitation-9-max-question-9",
+      "recitation-script-recitation-9-max-question-10",
+      "recitation-script-recitation-9-max-question-11",
+      "recitation-script-recitation-9-max-question-12",
+      "recitation-script-recitation-9-max-question-13",
+      "recitation-script-recitation-9-max-question-14",
+      "recitation-script-recitation-9-max-question-15",
+      "recitation-script-recitation-9-max-question-16",
+      "recitation-script-recitation-9-max-question-17",
+      "recitation-script-recitation-9-max-question-18",
+      "recitation-script-recitation-9-max-question-19",
+      "recitation-script-recitation-9-max-question-20",
+      "recitation-script-recitation-9-max-question-21",
+      "recitation-script-recitation-9-max-question-22",
+      "recitation-script-recitation-9-max-question-23",
+      "recitation-script-recitation-9-max-question-24",
+      "recitation-script-recitation-9-max-question-25",
+      "recitation-script-recitation-9-max-question-26",
+      "recitation-script-recitation-9-max-question-27",
+      "recitation-script-recitation-9-max-question-28",
+      "recitation-script-recitation-9-max-question-29",
+      "recitation-script-recitation-9-max-question-30",
+      "recitation-script-recitation-9-max-question-31",
+      "recitation-script-recitation-9-max-question-32",
+      "recitation-script-recitation-9-max-question-33",
+      "recitation-script-recitation-9-max-question-34",
+      "recitation-script-recitation-9-max-question-35",
+      "recitation-script-recitation-9-max-question-36",
+      "recitation-script-recitation-9-max-question-37",
+      "recitation-script-recitation-9-max-question-38",
+      "recitation-script-recitation-9-max-question-39",
+      "recitation-script-recitation-9-max-question-40"
     ],
-    "solutionPatternCount": 0,
+    "solutionPatternCount": 5,
     "mustPractice": [
       "חישוב R של ∑aₙxⁿ",
       "גזירה ואינטגרציה של ∑aₙxⁿ",
@@ -515,7 +556,10 @@
     "commonMistakes": [
       "גזירה/אינטגרציה שינוי R אך לא בדיקת קצוות מחדש",
       "שכחה ש-R לא משתנה בגזירה/אינטגרציה, אבל הקצוות כן",
-      "טעויות בנוסחת המקדמים aₙ = f^(n)(0)/n!"
+      "טעויות בנוסחת המקדמים aₙ = f^(n)(0)/n!",
+      "אז אני בטוח שאם הייתי נותן, הייתי עושה עכשיו איזשהו סקר, לא מעט סטודנטים היו חושבים שאיי 2 בטור הזה, זה מה שמתקבל כשמציבים אין שווה 2, וזה ממש לא נכון.",
+      "אם אזור 2 נמחק, אני לא יכול להעסיק שום דבר לאזור 3 במשפט הבל, והאמת שזה בכלל לא נכון כשער 1 שווה לער 2. אם אתם רוצים להמשיך לחקור את זה, תעשו בבית, אני לא אפתח את זה לדיון, אני רק אומר, זה לא נכון כשער 1 שווה לער 2. למה?",
+      "ואז אתה לא יכול להגיד במשפט הבל שבאזור שלו זה מתבדר ואז זה בכלל לא נכון. אפשר לחשוב על זה בבית. הבנתי, סבבה. אם אין לכם מספיק הוכח או הפרש, תרגישו שהתרגיל קצר מדי."
     ],
     "conclusions": [
       "גזירה/אינטגרציה של טור חזקות: R לא משתנה, הקצוות — בדקי מחדש",
@@ -523,10 +567,16 @@
     ],
     "topicCoverage": [
       "גבולות",
+      "התכנסות בהחלט",
+      "התכנסות בתנאי",
       "טורי חזקות",
       "טורים",
       "מבחן ההשוואה",
+      "מבחן המנה",
+      "מבחן השורש",
+      "נגזרות",
       "סדרות",
+      "פונקציות",
       "רדיוס התכנסות"
     ],
     "confidence": 0.8999999999999999

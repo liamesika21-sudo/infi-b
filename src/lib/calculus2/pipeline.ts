@@ -17,6 +17,7 @@ import type {
 } from "./types";
 
 const DOCS_ROOT = path.join(process.cwd(), "docs");
+const SUPPORTED_TEXT_EXTENSIONS = new Set([".md", ".txt"]);
 
 async function walkFiles(root: string): Promise<string[]> {
   const entries = await fs.readdir(root, { withFileTypes: true });
@@ -31,16 +32,52 @@ async function walkFiles(root: string): Promise<string[]> {
   return files.flat();
 }
 
+function isSupportedSourcePath(relativePath: string): boolean {
+  const extension = path.extname(relativePath).toLowerCase();
+  if (extension === ".pdf") return true;
+  if (!SUPPORTED_TEXT_EXTENSIONS.has(extension)) return false;
+
+  const normalized = relativePath.toLowerCase();
+  if (!normalized.includes("docs/recitation/script/")) return false;
+
+  // Keep the high-quality updated transcripts without importing every old script duplicate.
+  return /(?:recitation|תרגול)[_\s-]*(?:9|10)/i.test(relativePath);
+}
+
+function isCleanRecitationTranscript(file: SourceFile): boolean {
+  return (
+    file.sourceType === "recitation" &&
+    SUPPORTED_TEXT_EXTENSIONS.has(file.extension) &&
+    file.relativePath.includes("docs/recitation/script/")
+  );
+}
+
 export async function scanDocsFolder(rootDir = DOCS_ROOT): Promise<MaterialInventory> {
   const absoluteRoot = path.resolve(rootDir);
   const discovered = await walkFiles(absoluteRoot);
-  const sourceFiles = discovered
+  const classifiedSourceFiles = discovered
     .filter((file) => !path.basename(file).startsWith("."))
+    .filter((file) => isSupportedSourcePath(path.relative(process.cwd(), file)))
     .map((absolutePath) => {
       const relativePath = path.relative(process.cwd(), absolutePath);
       return classifySourceFile(relativePath, absolutePath);
     })
     .sort((a, b) => a.relativePath.localeCompare(b.relativePath));
+  const transcriptRecitationNumbers = new Set(
+    classifiedSourceFiles
+      .filter(isCleanRecitationTranscript)
+      .map((file) => file.recitationNumber)
+      .filter((number): number is number => typeof number === "number"),
+  );
+  const sourceFiles = classifiedSourceFiles.filter(
+    (file) =>
+      !(
+        file.sourceType === "recitation" &&
+        file.extension === ".pdf" &&
+        file.recitationNumber &&
+        transcriptRecitationNumbers.has(file.recitationNumber)
+      ),
+  );
 
   const weeks = buildWeekMap(calculus2Course.totalWeeks, sourceFiles);
   const countsByType = sourceFiles.reduce<MaterialInventory["countsByType"]>(

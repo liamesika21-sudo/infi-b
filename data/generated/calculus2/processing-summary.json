@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-05-29T17:53:37.415Z",
-  "totalFilesScanned": 50,
-  "lecturesFound": 9,
+  "generatedAt": "2026-06-05T11:08:02.525Z",
+  "totalFilesScanned": 57,
+  "lecturesFound": 10,
   "recitationsFound": 10,
   "homeworkFilesFound": 7,
-  "summariesFound": 11,
+  "summariesFound": 17,
   "pastExamFilesFound": 13,
-  "extractionSuccesses": 48,
+  "extractionSuccesses": 55,
   "extractionFailures": 0,
   "needsOcr": 2,
   "detectedTopicsCount": 16,
-  "durationMs": 3776
+  "durationMs": 4497
 }

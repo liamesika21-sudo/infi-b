@@ -9,6 +9,31 @@ type PdfParseModule = {
 };
 
 export async function extractTextFromFile(file: SourceFile): Promise<ExtractedTextRecord> {
+  if (file.extension === ".txt" || file.extension === ".md") {
+    try {
+      const extractedText = normalizeExtractedText(await fs.readFile(file.absolutePath, "utf8"));
+      const status = extractedText.trim().length < 80 ? "needs_ocr" : "success";
+
+      return {
+        sourceFileId: file.id,
+        filename: file.filename,
+        filePath: file.relativePath,
+        extractedText,
+        status,
+        error: status === "needs_ocr" ? "Text file is empty or too short." : undefined,
+      };
+    } catch (error) {
+      return {
+        sourceFileId: file.id,
+        filename: file.filename,
+        filePath: file.relativePath,
+        extractedText: "",
+        status: "failed",
+        error: error instanceof Error ? error.message : String(error),
+      };
+    }
+  }
+
   if (file.extension !== ".pdf") {
     return {
       sourceFileId: file.id,

@@ -486,6 +486,112 @@
     "confidence": 0.8999999999999999
   },
   {
+    "lectureNumber": 10,
+    "weekNumber": 10,
+    "sourceFileId": "lecture-lecture-10-group-2-calculus-2-2026",
+    "filename": "Lecture 10 group 2 calculus 2 2026.pdf",
+    "extractionStatus": "success",
+    "title": "Lecture 10 group 2 calculus 2 2026",
+    "detectedTopics": [
+      "טורים",
+      "סדרות"
+    ],
+    "definitions": [],
+    "theorems": [],
+    "formulas": [
+      {
+        "id": "lecture-lecture-10-group-2-calculus-2-2026-formula-1",
+        "title": "נוסחה/ביטוי 1",
+        "plainText": "88 f left x right e x is macln plaa Gas 1",
+        "topicIds": [
+          "טורים",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-10-group-2-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-10-group-2-calculus-2-2026",
+            "filename": "Lecture 10 group 2 calculus 2 2026.pdf",
+            "text": "88 f left x right e x is macln plaa Gas 1"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-10-group-2-calculus-2-2026-formula-2",
+        "title": "נוסחה/ביטוי 2",
+        "plainText": "88 f left x right sin x is japan as Gp",
+        "topicIds": [
+          "טורים",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-10-group-2-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-10-group-2-calculus-2-2026",
+            "filename": "Lecture 10 group 2 calculus 2 2026.pdf",
+            "text": "88 f left x right sin x is japan as Gp"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-10-group-2-calculus-2-2026-formula-3",
+        "title": "נוסחה/ביטוי 3",
+        "plainText": "88 f left x right cos x is men as Gp",
+        "topicIds": [
+          "טורים",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-10-group-2-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-10-group-2-calculus-2-2026",
+            "filename": "Lecture 10 group 2 calculus 2 2026.pdf",
+            "text": "88 f left x right cos x is men as Gp"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      }
+    ],
+    "proofPatterns": [],
+    "examples": [],
+    "remarks": [],
+    "importantForExam": [],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "lecture-lecture-10-group-2-calculus-2-2026",
+        "filename": "Lecture 10 group 2 calculus 2 2026.pdf",
+        "text": "4.6.26 10 7 0377It x 0 inmathbbR ohm Gaen 17 Goes Jojon 01 R a pl'eNN ON 7730 left langle a n right rangle n 0 infty cdot R 0 is 711 sum_ n 0 infty a n left x x 0 right n Ilysm 7 0 if jigan 17120 O'D left x x 0 right R 8 f left x right sum_ n 0 infty a n left x x 0 right n x 0 0 para n 7752 f 0 leq n in mathbb Z 88 Sk 1801121 a n frac f left n right left x 0 right n e a pie and 7 f left x right sum_ n 0 infty a n left x x 0 right n a 0 a 1 left x x 0 right a 2 left x x 0 right 2 ldots f left x 0 right a 0 0 0 ldots a 0 Sapl x x 0 531 1081 a 0 f left x 0 right frac f left 0 right left x 0 right 0left x x 0 right R 88 72k 7k san Jenn f left x right a 1 2 cdot a 2 left x x 0 right 3 a 3 cdot left x x 0 right 2 ldots days x x 0 a 3 f left x 0 right a 1 0 0 ldots a 1"
+      },
+      {
+        "sourceFileId": "lecture-lecture-10-group-2-calculus-2-2026",
+        "filename": "Lecture 10 group 2 calculus 2 2026.pdf",
+        "text": "1081 a 1 f left x 0 right frac f left 1 right left x 0 right 1left x x 0 right R 88 72k nak san Jenn f left x right 2 a 2 3 cdot 2 cdot a 3 cdot left x x 0 right ldots days x x 0 a 3 f left x 0 right 2 a 2 mks.p.sn 8 7 5 71 a 2 frac f left 2 right left x 0 right 2 1081 172k 7km7 s an Jenn 1183 n left x x 0 right R 88 f left n right left x right n cdot a n left n 1 right cdot n cdot ldots cdot 2 cdot a n 1 left x x 0 right ldots days x x 0 a 3 f left n right left x 0 right n cdot a n day n a pm a n frac f left n right left x 0 right n 7 28 f left 1 0 2 right left rightold f left 1 0 1 right left 0 right Jk Iden11 Jan f left x right ar c t g x 7 37127"
+      },
+      {
+        "sourceFileId": "lecture-lecture-10-group-2-calculus-2-2026",
+        "filename": "Lecture 10 group 2 calculus 2 2026.pdf",
+        "text": "88 s Dia if'm a r c t g x sum_ n 0 infty frac left 1 right n x 2 n 2 n 1 x frac x 3 3 frac x 5 5 ldots1 Mm Jan 18 a 1 0 1 frac f left 1 0 1 right left 0 right left 1 0 1 right 1 leq x leq 1 f left 1 0 1 right left 0 right a 1 0 1 cdot 1 0 1 frac left 1 right 5 0 1 0 1 cdot 1 0 1 1 0 0 1081 f left langle 1 0 2 right rangle left 0 right 0 f 0 leq N in mathbb Z It x 0 in mathbb R M 177327 71807 plidla X 0 a pira N 77527 7110 I 78 7321N X 0 2100 f N 720N TN left x right sum_ n0N frac f left n right left x0 right n cdot left xx0 right nf left x0 right f left x0 right cdot left xx0 right frac f left x0 right 2 cdot left xx0 right 2 ldots frac f left N right left x0 right N cdot left xx0 right N"
+      },
+      {
+        "sourceFileId": "lecture-lecture-10-group-2-calculus-2-2026",
+        "filename": "Lecture 10 group 2 calculus 2 2026.pdf",
+        "text": "730N x 0 2'20 f 8 7 807 5719 This madly N R N left x right f left x right T N left x right pipan 1 7707 o 78rad p job 112 788N pj812 T 0 left x right f left x 0 right T 1 left x right f left x 0 right f left x 0 right cdot left x x 0 right ONT 7817 T 2 left x right f left x 0 right f left x 0 right cdot left x x 0 right frac f left x 0 right 2 cdot left x x 0 right 22 78rad plot k M T N left X right e G P'es.jo knhtla N adrnnplj.dk 2707Pipan i TN left x right sum_ n0N frac f left n right left x0 right n cdot left xx0 right nf left x0 right f left x0 right cdot left xx0 right frac f left x0 right 2 cdot left xx0 right 2"
+      }
+    ],
+    "confidence": 0.82
+  },
+  {
     "lectureNumber": 2,
     "weekNumber": 2,
     "sourceFileId": "lecture-lecture-2-group-1-calculus-2-2026",

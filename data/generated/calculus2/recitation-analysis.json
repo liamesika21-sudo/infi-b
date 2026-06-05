@@ -212,6 +212,472 @@
     "confidence": 0.8999999999999999
   },
   {
+    "recitationNumber": 10,
+    "weekNumber": 10,
+    "practicedLectureNumber": 9,
+    "sourceFileId": "recitation-recitation-10-hebrew",
+    "filename": "Recitation 10-Hebrew.pdf",
+    "practicedTopics": [
+      "גבולות",
+      "סדרות"
+    ],
+    "questions": [
+      {
+        "id": "recitation-recitation-10-hebrew-question-1",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-10-hebrew",
+        "questionNumber": "10",
+        "content": "10 : . • . • : 1 < x < 1 1 X n=0 x n = 1 1 x 1 < x  1 ln (1 + x) = 1 X n=1 (1) n+1 x n n 1  x  1 arctan (x) = 1 X n=0 (1) n x 2n+1 2n + 1 x 2 R e x = 1 X n=0 x n n! sin x = 1 X n=0 (1) n x 2n+1 (2n + 1)! cos x = 1 X n=0 (1) n x 2n (2n)! 1",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-10-hebrew",
+          "filename": "Recitation 10-Hebrew.pdf",
+          "text": "10 : . • . • : 1 < x < 1 1 X n=0 x n = 1 1 x 1 < x  1 ln (1 + x) = 1 X n=1 (1) n+1 x n n 1  x  1 arctan (x) = 1 X n=0 (1) n x 2n+1 2n + 1 x 2 R e x = 1 X n=0 x n n! sin x = 1 X n=0 (1) n x 2n+1 (2n + 1)! cos x = 1 X n=0 (1) n x 2n (2n)! 1"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-10-hebrew-question-2",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-10-hebrew",
+        "questionNumber": "1",
+        "content": ": : . (a n ) 1 n=0 x 0 2 R R 1 X n=0 a n (x x 0 ) n = a 0 + a 1 (x x 0 ) + a 2 (x x 0 ) 2 + ... R > 0 f (x) = 1 X n=0 a n (x x 0 ) n .| x x 0 |< R",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-10-hebrew",
+          "filename": "Recitation 10-Hebrew.pdf",
+          "text": ": : . (a n ) 1 n=0 x 0 2 R R 1 X n=0 a n (x x 0 ) n = a 0 + a 1 (x x 0 ) + a 2 (x x 0 ) 2 + ... R > 0 f (x) = 1 X n=0 a n (x x 0 ) n .| x x 0 |< R"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-10-hebrew-question-3",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-10-hebrew",
+        "questionNumber": "1",
+        "content": "1 X n=1 a n · n (x x 0 ) n1 = a 1 + 2a 2 (x x 0 ) + 3a 3 (x x 0 ) 2 + ... .R , | x x 0 |< R , f .2 f 0 (x) = 1 X n=1 a n · n (x x 0 ) n1 , 1 P n=0 a n (x x 0 ) n .3 1 P n=0 a n ·(xx 0 ) n+1 n+1 .R , x 1 P n=0 a n ·(xx 0 ) n+1 n+1 .x 2 R .4 1 X n=0 a n · (x x 0 ) n+1 n + 1 = Z x x 0 f (t) dt 2",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-10-hebrew",
+          "filename": "Recitation 10-Hebrew.pdf",
+          "text": "1 X n=1 a n · n (x x 0 ) n1 = a 1 + 2a 2 (x x 0 ) + 3a 3 (x x 0 ) 2 + ... .R , | x x 0 |< R , f .2 f 0 (x) = 1 X n=1 a n · n (x x 0 ) n1 , 1 P n=0 a n (x x 0 ) n .3 1 P n=0 a n ·(xx 0 ) n+1 n+1 .R , x 1 P n=0 a n ·(xx 0 ) n+1 n+1 .x 2 R .4 1 X n=0 a n · (x x 0 ) n+1 n + 1 = Z x x 0 f (t) dt 2"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-10-hebrew-question-4",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-10-hebrew",
+        "questionNumber": "1",
+        "content": "L = lim n!1 n p|a n | = lim n!1 n r 1 n = lim n!1 1 n 1 n = 1 t R = 1 L = 1 t 0 = 0 | t |< 1 )| x 2 |< 1 ) x 2 < 1 ) 1 < x < 1 : :x = 1 x 1 X n=1 x 2n n = 1· 1 X n=1 1 2n n = 1· 1 X n=1 1 n = 1 :x = 1 x 1 X n=1 x 2n n = (1) · 1 X n=1 (1) 2n n = (1) · 1 X n=1 1 n = .1 < x < 1 : .1 < x < 1 \" 3",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-10-hebrew",
+          "filename": "Recitation 10-Hebrew.pdf",
+          "text": "L = lim n!1 n p|a n | = lim n!1 n r 1 n = lim n!1 1 n 1 n = 1 t R = 1 L = 1 t 0 = 0 | t |< 1 )| x 2 |< 1 ) x 2 < 1 ) 1 < x < 1 : :x = 1 x 1 X n=1 x 2n n = 1· 1 X n=1 1 2n n = 1· 1 X n=1 1 n = 1 :x = 1 x 1 X n=1 x 2n n = (1) · 1 X n=1 (1) 2n n = (1) · 1 X n=1 1 n = .1 < x < 1 : .1 < x < 1 \" 3"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-10-hebrew-question-5",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-10-hebrew",
+        "questionNumber": "2",
+        "content": ". , x .2 : :1 1 < x  1 ln (1 + x) = 1 X n=1 (1) n+1 x n n = 1 X n=1 (1) n x n n = 1 X n=1 (x) n n 1  t < 1 t = x ln (1 t) = 1 X n=1 t n n 1 < u < 1 u 2 = t ln 1 u 2 = 1 X n=1 u 2n n u u · ln 1 u 2 = 1 X n=1 u 2n+1 n",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-10-hebrew",
+          "filename": "Recitation 10-Hebrew.pdf",
+          "text": ". , x .2 : :1 1 < x  1 ln (1 + x) = 1 X n=1 (1) n+1 x n n = 1 X n=1 (1) n x n n = 1 X n=1 (x) n n 1  t < 1 t = x ln (1 t) = 1 X n=1 t n n 1 < u < 1 u 2 = t ln 1 u 2 = 1 X n=1 u 2n n u u · ln 1 u 2 = 1 X n=1 u 2n+1 n"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-10-hebrew-question-6",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-10-hebrew",
+        "questionNumber": "(x)",
+        "content": "g (x) = 1 X n=1 x 2n+1 n = x · ln 1 x 2 .1 < x < 1 :2 . .1 < x < 1 1 P n=1 x n n 1 < x < 1 f (x) = 1 X n=1 x n n 1 < x < 1 f 0 (x) = 1 X n=1 nx n1 n = 1 X n=1 x n1 = k=n1 1 X k=0 x k = |x|<1 1 1 x",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-10-hebrew",
+          "filename": "Recitation 10-Hebrew.pdf",
+          "text": "g (x) = 1 X n=1 x 2n+1 n = x · ln 1 x 2 .1 < x < 1 :2 . .1 < x < 1 1 P n=1 x n n 1 < x < 1 f (x) = 1 X n=1 x n n 1 < x < 1 f 0 (x) = 1 X n=1 nx n1 n = 1 X n=1 x n1 = k=n1 1 X k=0 x k = |x|<1 1 1 x"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-10-hebrew-question-7",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-10-hebrew",
+        "questionNumber": "(x)",
+        "content": "f (x) = ln | 1 x |= 1 X n=1 x n n .1 < x < 1",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-10-hebrew",
+          "filename": "Recitation 10-Hebrew.pdf",
+          "text": "f (x) = ln | 1 x |= 1 X n=1 x n n .1 < x < 1"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-10-hebrew-question-8",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-10-hebrew",
+        "questionNumber": "1",
+        "content": "1 X n=1 x 2n+1 n = x 1 X n=1 x 2n n = x · f x 2 = x · ln | 1 x2 | .1 < x < 1 :3 1 < x < 1 1 X n=1 x 2n+1 n = x 1 X n=1 x 2n n 1 < x < 1 h (x) = 1 X n=1 x 2n n",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-10-hebrew",
+          "filename": "Recitation 10-Hebrew.pdf",
+          "text": "1 X n=1 x 2n+1 n = x 1 X n=1 x 2n n = x · f x 2 = x · ln | 1 x2 | .1 < x < 1 :3 1 < x < 1 1 X n=1 x 2n+1 n = x 1 X n=1 x 2n n 1 < x < 1 h (x) = 1 X n=1 x 2n n"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-10-hebrew-question-9",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-10-hebrew",
+        "questionNumber": "1",
+        "content": "1 < x < 1 h 0 (x) = 1 X n=1 2nx 2n1 n = 1 X n=1 2x 2n1 = k=n1 2· 1 X k=0 x 2k+1 2x· 1 X k=0 x 2k = 2x · 1 1 x 2 = 2x 1 x 2",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-10-hebrew",
+          "filename": "Recitation 10-Hebrew.pdf",
+          "text": "1 < x < 1 h 0 (x) = 1 X n=1 2nx 2n1 n = 1 X n=1 2x 2n1 = k=n1 2· 1 X k=0 x 2k+1 2x· 1 X k=0 x 2k = 2x · 1 1 x 2 = 2x 1 x 2"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-10-hebrew-question-10",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-10-hebrew",
+        "questionNumber": "0",
+        "content": "h 0 (x) = 2x 1 x 2 C 2 R h (x) = ln | 1 x 2 | +C",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-10-hebrew",
+          "filename": "Recitation 10-Hebrew.pdf",
+          "text": "h 0 (x) = 2x 1 x 2 C 2 R h (x) = ln | 1 x 2 | +C"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-10-hebrew-question-11",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-10-hebrew",
+        "questionNumber": "(x)",
+        "content": "h (x) = ln | 1 x 2 |= 1 X n=1 x 2n n . 1 < x < 1",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-10-hebrew",
+          "filename": "Recitation 10-Hebrew.pdf",
+          "text": "h (x) = ln | 1 x 2 |= 1 X n=1 x 2n n . 1 < x < 1"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-10-hebrew-question-12",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-10-hebrew",
+        "questionNumber": "(x)",
+        "content": "g (x) = 1 X n=1 x 2n+1 n = x 1 X n=1 x 2n n = x · h (x) = x · ln | 1 x 2 | .1 < x < 1 .( ) 6",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-10-hebrew",
+          "filename": "Recitation 10-Hebrew.pdf",
+          "text": "g (x) = 1 X n=1 x 2n+1 n = x 1 X n=1 x 2n n = x · h (x) = x · ln | 1 x 2 | .1 < x < 1 .( ) 6"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-10-hebrew-question-13",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-10-hebrew",
+        "questionNumber": "1",
+        "content": "L = lim n!1 n p|a n | = lim n!1 n pn = lim n!1 n 1 n = 1 t R = 1 1 = 1 t 0 = 0 | t |< 1 : :t = 1 1 X n=0 n · 1n = 1 X n=0 n = 1 :t = 1 1 X n=0 n · (1) n ( )",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-10-hebrew",
+          "filename": "Recitation 10-Hebrew.pdf",
+          "text": "L = lim n!1 n p|a n | = lim n!1 n pn = lim n!1 n 1 n = 1 t R = 1 1 = 1 t 0 = 0 | t |< 1 : :t = 1 1 X n=0 n · 1n = 1 X n=0 n = 1 :t = 1 1 X n=0 n · (1) n ( )"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-10-hebrew-question-14",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-10-hebrew",
+        "questionNumber": "(x)",
+        "content": ". x f (x) = 1 P n=0 n · (3x 1) n .2 .f (x) ( ) : | t |< 1 .t 1 X n=0 n · t n = t 1 X n=0 n · t n1 = t 1 X n=0 (t n ) 0",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-10-hebrew",
+          "filename": "Recitation 10-Hebrew.pdf",
+          "text": ". x f (x) = 1 P n=0 n · (3x 1) n .2 .f (x) ( ) : | t |< 1 .t 1 X n=0 n · t n = t 1 X n=0 n · t n1 = t 1 X n=0 (t n ) 0"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-10-hebrew-question-15",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-10-hebrew",
+        "questionNumber": "1",
+        "content": "t 1 X n=0 t n ! 0 = t ✓ 1 1 t ◆ 0 = t · 0 · (1 t) 1 · (1) (1 t) 2 = t (1 t) 2 x f (x) = 1 X n=0 n · (3x 1) n = 1 3x1 ⇣ 1 1 3x1 ⌘ 2 = 1 (3x 1) ⇣ 1 1 3x1 ⌘ 2 .x > 2 3 x < 0 . 1 P n=0 n 2 n .3 : .x > 2 3 x < 0 \" 1 P n=0 n · (3x 1) n x = 1 f (1) = 1 X n=0 n (3 · 1 1) n = 1 X n=0 n 2n = 1 (3 · 1 1) ⇣ 1 1 3·11 ⌘ 2 = 1 2 · 1 2 2 = 2 8",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-10-hebrew",
+          "filename": "Recitation 10-Hebrew.pdf",
+          "text": "t 1 X n=0 t n ! 0 = t ✓ 1 1 t ◆ 0 = t · 0 · (1 t) 1 · (1) (1 t) 2 = t (1 t) 2 x f (x) = 1 X n=0 n · (3x 1) n = 1 3x1 ⇣ 1 1 3x1 ⌘ 2 = 1 (3x 1) ⇣ 1 1 3x1 ⌘ 2 .x > 2 3 x < 0 . 1 P n=0 n 2 n .3 : .x > 2 3 x < 0 \" 1 P n=0 n · (3x 1) n x = 1 f (1) = 1 X n=0 n (3 · 1 1) n = 1 X n=0 n 2n = 1 (3 · 1 1) ⇣ 1 1 3·11 ⌘ 2 = 1 2 · 1 2 2 = 2 8"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-10-hebrew-question-16",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-10-hebrew",
+        "questionNumber": "2",
+        "content": ": .x 2 R f (x) = R x 0 e t 2 dt x 0 = 0 .1 : t 2 R x 2 R e x = 1 P n=0 1 n! x n e t 2 = 1 X n=0 1 n! t 2 n = 1 X n=0 1 n! (1) n · t 2n x 2 R Z x 0 e t 2 dt = Z x 0 1 X n=0 1 n! (1) n · t 2n dt = 1 X n=0 Z x 0 1 n! (1) n · t 2n dt = 1 X n=0 1 n! (1) n · Z x 0 t 2n dt = 1 X n=0 1 n! (1) n  t 2n+1 2n + 1 x 0 1 X n=0 (1) n n! · ✓ x 2n+1 2n + 1 02n+1 2n + 1 ◆ = 1 X n=0 (1) n · x 2n+1 (2n + 1) · n! , , .1 9",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-10-hebrew",
+          "filename": "Recitation 10-Hebrew.pdf",
+          "text": ": .x 2 R f (x) = R x 0 e t 2 dt x 0 = 0 .1 : t 2 R x 2 R e x = 1 P n=0 1 n! x n e t 2 = 1 X n=0 1 n! t 2 n = 1 X n=0 1 n! (1) n · t 2n x 2 R Z x 0 e t 2 dt = Z x 0 1 X n=0 1 n! (1) n · t 2n dt = 1 X n=0 Z x 0 1 n! (1) n · t 2n dt = 1 X n=0 1 n! (1) n · Z x 0 t 2n dt = 1 X n=0 1 n! (1) n  t 2n+1 2n + 1 x 0 1 X n=0 (1) n n! · ✓ x 2n+1 2n + 1 02n+1 2n + 1 ◆ = 1 X n=0 (1) n · x 2n+1 (2n + 1) · n! , , .1 9"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-10-hebrew-question-17",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-10-hebrew",
+        "questionNumber": "1",
+        "content": "1 P n=1 x n 2 n ·(n+1)! .2 . : ( ) R = 1 .x 2 R .x 2 R e x = 1 P n=0 x n n! .( x = 0 ) x 6 = 0 1 X n=1 x n 2n · (n + 1)! = 1 X n=1 x 2 n (n + 1)! · 2 x · x 2 = 2 x · 1 X n=1 x 2 n+1 (n + 1)! = k=n+1 2 x · 1 X k=2 x 2 k k! = 2 x · 0 B B @ 1 X k=0 x 2 k k! 1 |{z} k=0 x 2 |{z} k=1 1 C C A = 2 x · ⇣ e x 2 1 x 2 ⌘ = 2 x · e x 2 2 x 1 : 1 X n=1 x n 2n · (n + 1)! = ( 2 x · e x 2 2 x 1 x 6 = 0 0 x = 0 .x 2 R f (x) = ( sin x x x 6 = 0 1 x = 0 .3 .0  n 2 Z f (n) (0) : ) , .( n x 0 = 0 x 2 R sin x sin x = 1 X n=0 (1) n x 2n+1 (2n + 1)! = x x 3 3! + x 5 5! ...",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-10-hebrew",
+          "filename": "Recitation 10-Hebrew.pdf",
+          "text": "1 P n=1 x n 2 n ·(n+1)! .2 . : ( ) R = 1 .x 2 R .x 2 R e x = 1 P n=0 x n n! .( x = 0 ) x 6 = 0 1 X n=1 x n 2n · (n + 1)! = 1 X n=1 x 2 n (n + 1)! · 2 x · x 2 = 2 x · 1 X n=1 x 2 n+1 (n + 1)! = k=n+1 2 x · 1 X k=2 x 2 k k! = 2 x · 0 B B @ 1 X k=0 x 2 k k! 1 |{z} k=0 x 2 |{z} k=1 1 C C A = 2 x · ⇣ e x 2 1 x 2 ⌘ = 2 x · e x 2 2 x 1 : 1 X n=1 x n 2n · (n + 1)! = ( 2 x · e x 2 2 x 1 x 6 = 0 0 x = 0 .x 2 R f (x) = ( sin x x x 6 = 0 1 x = 0 .3 .0  n 2 Z f (n) (0) : ) , .( n x 0 = 0 x 2 R sin x sin x = 1 X n=0 (1) n x 2n+1 (2n + 1)! = x x 3 3! + x 5 5! ..."
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-10-hebrew-question-18",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-10-hebrew",
+        "questionNumber": "6",
+        "content": "x 6 = 0 sin x x sin x x = 1 P n=0 (1) n x 2n+1 (2n+1)! x = Ax ✓ 1+ 1 P n=1 (1) n x 2n (2n+1)! ◆ Ax = 1+ 1 X n=1 (1) n x 2n (2n + 1)! = 1 x 2 3! + x 4 5! x 6 7! + ... .f (0) = 1 1 x = 0 x 2 R f (x) = 1+ 1 X n=1 (1) n x 2n (2n + 1)! .x 0 = 0",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-10-hebrew",
+          "filename": "Recitation 10-Hebrew.pdf",
+          "text": "x 6 = 0 sin x x sin x x = 1 P n=0 (1) n x 2n+1 (2n+1)! x = Ax ✓ 1+ 1 P n=1 (1) n x 2n (2n+1)! ◆ Ax = 1+ 1 X n=1 (1) n x 2n (2n + 1)! = 1 x 2 3! + x 4 5! x 6 7! + ... .f (0) = 1 1 x = 0 x 2 R f (x) = 1+ 1 X n=1 (1) n x 2n (2n + 1)! .x 0 = 0"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-10-hebrew-question-19",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-10-hebrew",
+        "questionNumber": "1",
+        "content": "a n = ( (1) k (2k+1)! n = 2k 0 n = 2k 1 ) a n = ( (1) n 2 (n+1)! 0 0  n 2 Z f (n) (x 0 ) = a n · n! 0  n 2 Z x 0 = 0 f (n) (0) = a n · n! = ( (1) n 2 (n+1)! · n! 0 · n!",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-10-hebrew",
+          "filename": "Recitation 10-Hebrew.pdf",
+          "text": "a n = ( (1) k (2k+1)! n = 2k 0 n = 2k 1 ) a n = ( (1) n 2 (n+1)! 0 0  n 2 Z f (n) (x 0 ) = a n · n! 0  n 2 Z x 0 = 0 f (n) (0) = a n · n! = ( (1) n 2 (n+1)! · n! 0 · n!"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-10-hebrew-question-20",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-10-hebrew",
+        "questionNumber": "4",
+        "content": ".4 f (x) = 1 X n=1 (1) n+1 (2n 2)! · (2n + 1) · x 2n . x . () : ,t = x 2 1 X n=1 (1) n+1 (2n 2)! · (2n + 1) · t n",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-10-hebrew",
+          "filename": "Recitation 10-Hebrew.pdf",
+          "text": ".4 f (x) = 1 X n=1 (1) n+1 (2n 2)! · (2n + 1) · x 2n . x . () : ,t = x 2 1 X n=1 (1) n+1 (2n 2)! · (2n + 1) · t n"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-10-hebrew-question-21",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-10-hebrew",
+        "questionNumber": "1",
+        "content": "= lim n!1 2n + 3 2n + 1 · (2n 2)! (2n)! = 0 ) R = 1 .x 2 R x 2 2 R , t 2 R . x f (x) () : x 2 R f (x) = 1 X n=1 (1) n+1 (2n 2)! · (2n + 1) · x 2n = 1 X n=1 (1) n+1 (2n 2)! x 2n+1 0 = 1 X n=1 (1) n+1 (2n 2)! x 2n+1 ! 0 = 1 X n=1 (1) n+1 (2n 2)! x 2n+1 ! 0 = k=n1 1 X k=0 (1) k+1+1 (2k)! x 2(k+1)+1 ! 0 = x 3 · 1 X k=0 (1) k (2k)! x 2k ! 0 = x 3 · cos x 0 = 3x 2 cos x x 3 sin x 12",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-10-hebrew",
+          "filename": "Recitation 10-Hebrew.pdf",
+          "text": "= lim n!1 2n + 3 2n + 1 · (2n 2)! (2n)! = 0 ) R = 1 .x 2 R x 2 2 R , t 2 R . x f (x) () : x 2 R f (x) = 1 X n=1 (1) n+1 (2n 2)! · (2n + 1) · x 2n = 1 X n=1 (1) n+1 (2n 2)! x 2n+1 0 = 1 X n=1 (1) n+1 (2n 2)! x 2n+1 ! 0 = 1 X n=1 (1) n+1 (2n 2)! x 2n+1 ! 0 = k=n1 1 X k=0 (1) k+1+1 (2k)! x 2(k+1)+1 ! 0 = x 3 · 1 X k=0 (1) k (2k)! x 2k ! 0 = x 3 · cos x 0 = 3x 2 cos x x 3 sin x 12"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-10-hebrew-question-22",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-10-hebrew",
+        "questionNumber": "2",
+        "content": ": x 2 R F (x) + C = Z 1 X n=1 (1) n+1 (2n 2)! · (2n + 1) · x 2n dx = 1 X n=1 (1) n+1 (2n 2)! · (2n + 1) Z x 2n dx = 1 X n=1 (1) n+1 (2n 2)! ·XXXX (2n + 1) · x 2n+1 XXX X 2n + 1 = 1 X n=1 (1) n+1 (2n 2)! · x 2n+1 = k=n1 1 X k=0 (1) k+2 (2k)! · x 2k+3 x 3 1 X k=0 (1) k (2k)! · x 2k = x 3 cos x x 2 R f (x) = (F (x) + C) 0 = 3x 2 cos x x 3 sin x 13",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-10-hebrew",
+          "filename": "Recitation 10-Hebrew.pdf",
+          "text": ": x 2 R F (x) + C = Z 1 X n=1 (1) n+1 (2n 2)! · (2n + 1) · x 2n dx = 1 X n=1 (1) n+1 (2n 2)! · (2n + 1) Z x 2n dx = 1 X n=1 (1) n+1 (2n 2)! ·XXXX (2n + 1) · x 2n+1 XXX X 2n + 1 = 1 X n=1 (1) n+1 (2n 2)! · x 2n+1 = k=n1 1 X k=0 (1) k+2 (2k)! · x 2k+3 x 3 1 X k=0 (1) k (2k)! · x 2k = x 3 cos x x 2 R f (x) = (F (x) + C) 0 = 3x 2 cos x x 3 sin x 13"
+        },
+        "confidence": 0.56
+      }
+    ],
+    "solutionPatterns": [],
+    "techniques": [
+      "גבול"
+    ],
+    "commonMistakes": [],
+    "linkedLectureNumber": 9,
+    "topicOverlapWithLinkedLecture": [
+      "גבולות",
+      "סדרות"
+    ],
+    "mappingNeedsReview": false,
+    "examRelevanceNotes": [],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "recitation-recitation-10-hebrew",
+        "filename": "Recitation 10-Hebrew.pdf",
+        "text": "10 : . • . • : 1 < x < 1 1 X n=0 x n = 1 1 x 1 < x  1 ln (1 + x) = 1 X n=1 (1) n+1 x n n 1  x  1 arctan (x) = 1 X n=0 (1) n x 2n+1 2n + 1 x 2 R e x = 1 X n=0 x n n! sin x = 1 X n=0 (1) n x 2n+1 (2n + 1)! cos x = 1 X n=0 (1) n x 2n (2n)! 1"
+      },
+      {
+        "sourceFileId": "recitation-recitation-10-hebrew",
+        "filename": "Recitation 10-Hebrew.pdf",
+        "text": ": : . (a n ) 1 n=0 x 0 2 R R 1 X n=0 a n (x x 0 ) n = a 0 + a 1 (x x 0 ) + a 2 (x x 0 ) 2 + ... R > 0 f (x) = 1 X n=0 a n (x x 0 ) n .| x x 0 |< R"
+      },
+      {
+        "sourceFileId": "recitation-recitation-10-hebrew",
+        "filename": "Recitation 10-Hebrew.pdf",
+        "text": "1 X n=1 a n · n (x x 0 ) n1 = a 1 + 2a 2 (x x 0 ) + 3a 3 (x x 0 ) 2 + ... .R , | x x 0 |< R , f .2 f 0 (x) = 1 X n=1 a n · n (x x 0 ) n1 , 1 P n=0 a n (x x 0 ) n .3 1 P n=0 a n ·(xx 0 ) n+1 n+1 .R , x 1 P n=0 a n ·(xx 0 ) n+1 n+1 .x 2 R .4 1 X n=0 a n · (x x 0 ) n+1 n + 1 = Z x x 0 f (t) dt 2"
+      },
+      {
+        "sourceFileId": "recitation-recitation-10-hebrew",
+        "filename": "Recitation 10-Hebrew.pdf",
+        "text": "L = lim n!1 n p|a n | = lim n!1 n r 1 n = lim n!1 1 n 1 n = 1 t R = 1 L = 1 t 0 = 0 | t |< 1 )| x 2 |< 1 ) x 2 < 1 ) 1 < x < 1 : :x = 1 x 1 X n=1 x 2n n = 1· 1 X n=1 1 2n n = 1· 1 X n=1 1 n = 1 :x = 1 x 1 X n=1 x 2n n = (1) · 1 X n=1 (1) 2n n = (1) · 1 X n=1 1 n = .1 < x < 1 : .1 < x < 1 \" 3"
+      }
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
     "recitationNumber": 2,
     "weekNumber": 2,
     "practicedLectureNumber": 1,
@@ -1038,6 +1504,237 @@
     "confidence": 0.8999999999999999
   },
   {
+    "recitationNumber": 5,
+    "weekNumber": 5,
+    "practicedLectureNumber": 4,
+    "sourceFileId": "recitation-recitation-5-hebrew",
+    "filename": "Recitation 5-Hebrew.pdf",
+    "practicedTopics": [
+      "אינטגרלים לא אמיתיים",
+      "גבולות",
+      "טורים",
+      "מבחן ההשוואה",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "questions": [
+      {
+        "id": "recitation-recitation-5-hebrew-question-1",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-5-hebrew",
+        "questionNumber": "5",
+        "content": "תרגול 5 היום: אינטגרל לא אמיתי. • טור גיאומטרי. • תזכורת: .b > a לכל [a, b] אינטגרבילית ב f . נניח ש f : [a, ∞) → R ותהי a ∈ R יהי . lim b→∞ ∫ b a f (x) dx מתכנס, אם קיים הגבול ∫ ∞ a f (x) dx נאמר כי האינטגרל הלא אמיתי במקרה זה נגדיר ∫ ∞ a f (x) dx = lim b→∞ ∫ b a f (x) dx באופן דומה נגדיר ∫ b −∞ f (x) dx = lim a→−∞ ∫ b a f (x) dx ∫ 0 −∞ f (x) dx ו ∫ ∞ 0 f (x) dx מתכנס אם ∫ ∞ −∞ f (x) dx . נאמר כיf : R → R תהי שניהם מתכנסים. במקרה זה נגדיר ∫ ∞ −∞ f (x) dx = ∫ 0 −∞ f (x) dx + ∫ ∞ 0 f (x) dx .(a, b] פונקציה המוגדרת ב f ותהי a < b כך ש a, b ∈ R תהיינה . נאמר שהאינטגרל הלא אמיתי0 < δ < b − a לכל [a + δ, b] אינטגרבילית ב f נניח ש . lim δ→0+ ∫ b a+δ f (x) dx מתכנס, אם קיים הגבול ∫ b a f (x) dx .∫ b a f (x) dx = lim δ→0+ ∫ b a+δ f (x) dx במקרה זה נגדיר .[a, b) פונקציה המוגדרת ב f ותהי a < b כך ש a, b ∈ R תהיינה . נאמר שהאינטגרל הלא אמיתי0 < δ < b − a לכל [a, b − δ] אינטגרבילית ב f נניח ש . lim δ→0+ ∫ b−δ a f (x) dx מתכנס, אם קיים הגבול ∫ b a f (x) dx .∫ b a f (x) dx = lim δ→0+ ∫ b−δ a f (x) dx במקרה זה נגדיר 1",
+        "topicIds": [
+          "אינטגרלים-לא-אמיתיים",
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-5-hebrew",
+          "filename": "Recitation 5-Hebrew.pdf",
+          "text": "תרגול 5 היום: אינטגרל לא אמיתי. • טור גיאומטרי. • תזכורת: .b > a לכל [a, b] אינטגרבילית ב f . נניח ש f : [a, ∞) → R ותהי a ∈ R יהי . lim b→∞ ∫ b a f (x) dx מתכנס, אם קיים הגבול ∫ ∞ a f (x) dx נאמר כי האינטגרל הלא אמיתי במקרה זה נגדיר ∫ ∞ a f (x) dx = lim b→∞ ∫ b a f (x) dx באופן דומה נגדיר ∫ b −∞ f (x) dx = lim a→−∞ ∫ b a f (x) dx ∫ 0 −∞ f (x) dx ו ∫ ∞ 0 f (x) dx מתכנס אם ∫ ∞ −∞ f (x) dx . נאמר כיf : R → R תהי שניהם מתכנסים. במקרה זה נגדיר ∫ ∞ −∞ f (x) dx = ∫ 0 −∞ f (x) dx + ∫ ∞ 0 f (x) dx .(a, b] פונקציה המוגדרת ב f ותהי a < b כך ש a, b ∈ R תהיינה . נאמר שהאינטגרל הלא אמיתי0 < δ < b − a לכל [a + δ, b] אינטגרבילית ב f נניח ש . lim δ→0+ ∫ b a+δ f (x) dx מתכנס, אם קיים הגבול ∫ b a f (x) dx .∫ b a f (x) dx = lim δ→0+ ∫ b a+δ f (x) dx במקרה זה נגדיר .[a, b) פונקציה המוגדרת ב f ותהי a < b כך ש a, b ∈ R תהיינה . נאמר שהאינטגרל הלא אמיתי0 < δ < b − a לכל [a, b − δ] אינטגרבילית ב f נניח ש . lim "
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-5-hebrew-question-2",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-5-hebrew",
+        "questionNumber": "1",
+        "content": "דוגמאות: 1. קבעו האם האינטגרל הלא אמיתי הבא מתכנס, אם כן ־ חשבו את ערכו ∫ ∞ 2 1 x · ln x dx פתרון: נעבוד עם ההגדרה ∫ ∞ 2 1 x · ln x dx = lim b→∞ ∫ b 2 1 x · ln x dx = lim b→∞ [ln | ln x |]b 2 = lim b→∞ (ln | ln b | − ln | ln 2 |) = ∞ )לא מתכנס(. מתבדר לכן האינטגרל מתכנס. ∫ ∞ 0 epxdx האינטגרל הלא אמיתי p ∈ R 2. קבעו עבור אילו ערכי פתרון: .p > 0 ,p = 0 ,p < 0 נפריד למקרים: :p = 0 עבור ∫ ∞ 0 e0·xdx = lim b→∞ ∫ b 0 1 · dx = lim b→∞ (b − 0) = ∞ :p > 0 עבור ∫ ∞ 0 epxdx = lim b→∞ ∫ b 0 epxdx = lim b→∞ [ ept p ]b 0 = lim b→∞ ( epb p − 1 p ) = ∞ :p < 0 עבור ∫ ∞ 0 epxdx = lim b→∞ ∫ b 0 epxdx = lim b→∞ [ ept p ]b 0 = lim b→∞ ( epb p − 1 p ) = 0 − 1 p = − 1 p לסיכום: ∫ ∞ 0 epxdx = {− 1 p p < 0 ∞ p ≥ 0 2",
+        "topicIds": [
+          "אינטגרלים-לא-אמיתיים",
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-5-hebrew",
+          "filename": "Recitation 5-Hebrew.pdf",
+          "text": "דוגמאות: 1. קבעו האם האינטגרל הלא אמיתי הבא מתכנס, אם כן ־ חשבו את ערכו ∫ ∞ 2 1 x · ln x dx פתרון: נעבוד עם ההגדרה ∫ ∞ 2 1 x · ln x dx = lim b→∞ ∫ b 2 1 x · ln x dx = lim b→∞ [ln | ln x |]b 2 = lim b→∞ (ln | ln b | − ln | ln 2 |) = ∞ )לא מתכנס(. מתבדר לכן האינטגרל מתכנס. ∫ ∞ 0 epxdx האינטגרל הלא אמיתי p ∈ R 2. קבעו עבור אילו ערכי פתרון: .p > 0 ,p = 0 ,p < 0 נפריד למקרים: :p = 0 עבור ∫ ∞ 0 e0·xdx = lim b→∞ ∫ b 0 1 · dx = lim b→∞ (b − 0) = ∞ :p > 0 עבור ∫ ∞ 0 epxdx = lim b→∞ ∫ b 0 epxdx = lim b→∞ [ ept p ]b 0 = lim b→∞ ( epb p − 1 p ) = ∞ :p < 0 עבור ∫ ∞ 0 epxdx = lim b→∞ ∫ b 0 epxdx = lim b→∞ [ ept p ]b 0 = lim b→∞ ( epb p − 1 p ) = 0 − 1 p = − 1 p לסיכום: ∫ ∞ 0 epxdx = {− 1 p p < 0 ∞ p ≥ 0 2"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-5-hebrew-question-3",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-5-hebrew",
+        "questionNumber": "3",
+        "content": "3. קבעו האם האינטגרל הלא אמיתי הבא מתכנס, אם כן ־ חשבו את ערכו ∫ ∞ −∞ 1 ex + e−x dx פתרון: נעבוד עם ההגדרה ∫ ∞ −∞ 1 ex + e−x dx = ∫ 0 −∞ 1 ex + e−x dx + ∫ ∞ 0 1 ex + e−x dx נחשב את כל אחד מהאינטגרלים בנפרד ∫ 0 −∞ 1 ex + e−x dx = lim a→−∞ ∫ 0 a 1 ex + 1 ex dx = lim a→−∞ ∫ 0 a ex e2x + 1 dx = lim a→−∞ [arctan (ex)]0 a = lim a→−∞ (arctan (1) − arctan (ea)) = lim a→−∞ ( π 4 − arctan (ea) ) = π 4 − 0 = π 4 ∫ ∞ 0 1 ex + e−x dx = lim b→∞ ∫ b 0 1 ex + 1 ex dx = lim b→∞ ∫ b 0 ex e2x + 1 dx = lim b→∞ [arctan (ex)]b 0 = lim b→∞ (arctan (eb) − arctan (1)) = π 2 − π 4 = π 4 שני הגבולות קיימים, לכן האינטגרל שווה לסכומם ∫ ∞ −∞ 1 ex + e−x dx = π 4 + π 4 = π 2 3",
+        "topicIds": [
+          "אינטגרלים-לא-אמיתיים",
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-5-hebrew",
+          "filename": "Recitation 5-Hebrew.pdf",
+          "text": "3. קבעו האם האינטגרל הלא אמיתי הבא מתכנס, אם כן ־ חשבו את ערכו ∫ ∞ −∞ 1 ex + e−x dx פתרון: נעבוד עם ההגדרה ∫ ∞ −∞ 1 ex + e−x dx = ∫ 0 −∞ 1 ex + e−x dx + ∫ ∞ 0 1 ex + e−x dx נחשב את כל אחד מהאינטגרלים בנפרד ∫ 0 −∞ 1 ex + e−x dx = lim a→−∞ ∫ 0 a 1 ex + 1 ex dx = lim a→−∞ ∫ 0 a ex e2x + 1 dx = lim a→−∞ [arctan (ex)]0 a = lim a→−∞ (arctan (1) − arctan (ea)) = lim a→−∞ ( π 4 − arctan (ea) ) = π 4 − 0 = π 4 ∫ ∞ 0 1 ex + e−x dx = lim b→∞ ∫ b 0 1 ex + 1 ex dx = lim b→∞ ∫ b 0 ex e2x + 1 dx = lim b→∞ [arctan (ex)]b 0 = lim b→∞ (arctan (eb) − arctan (1)) = π 2 − π 4 = π 4 שני הגבולות קיימים, לכן האינטגרל שווה לסכומם ∫ ∞ −∞ 1 ex + e−x dx = π 4 + π 4 = π 2 3",
+          "startOffset": 1750,
+          "endOffset": 2403
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-5-hebrew-question-4",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-5-hebrew",
+        "questionNumber": "4",
+        "content": "4. קבעו האם האינטגרל הלא אמיתי הבא מתכנס, אם כן ־ חשבו את ערכו ∫ 1 −1 1 x dx פתרון: נעבוד עם ההגדרה ∫ 1 −1 1 x dx = ∫ 0 −1 1 x dx + ∫ 1 0 1 x dx נחשב את האינטגרל השמאלי ∫ 0 −1 1 t dt = lim δ→0+ ∫ 0−δ −1 1 x dx = lim δ→0+ [ln | x |]−δ −1 = lim δ→0+ (ln | −δ | − ln | −1 |) = lim δ→0+ ln δ = −∞ .האינטגרל מתבדר קיבלנו שהאינטגרל מתבדר באחד מהתחומים ולכן 4",
+        "topicIds": [
+          "אינטגרלים-לא-אמיתיים",
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-5-hebrew",
+          "filename": "Recitation 5-Hebrew.pdf",
+          "text": "4. קבעו האם האינטגרל הלא אמיתי הבא מתכנס, אם כן ־ חשבו את ערכו ∫ 1 −1 1 x dx פתרון: נעבוד עם ההגדרה ∫ 1 −1 1 x dx = ∫ 0 −1 1 x dx + ∫ 1 0 1 x dx נחשב את האינטגרל השמאלי ∫ 0 −1 1 t dt = lim δ→0+ ∫ 0−δ −1 1 x dx = lim δ→0+ [ln | x |]−δ −1 = lim δ→0+ (ln | −δ | − ln | −1 |) = lim δ→0+ ln δ = −∞ .האינטגרל מתבדר קיבלנו שהאינטגרל מתבדר באחד מהתחומים ולכן 4",
+          "startOffset": 2419,
+          "endOffset": 2771
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-5-hebrew-question-5",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-5-hebrew",
+        "questionNumber": "0",
+        "content": "תזכורת )מבחן ההשוואה(: . נניח כי[a, ∞) שתי פונקציות המוגדרות ב f, g ותהיינה a ∈ R יהי .x ≥ a לכל 0 ≤ f (x) ≤ g (x).1 .b > a לכל [a, b] אינטגרביליות ב f, g .2 מתכנס. ∫ ∞ a g(x)dx .3 מתכנס ובנוסף, ∫ ∞ a f (x)dx אזי ∫ ∞ a f (x)dx ≤ ∫ ∞ a g(x)dx מתקיים p ∈ R לכל ∫ ∞ 1 dx xp = { 1 p−1 p > 1 ∞ p ≤ 1 ∫ 1 0 dx xp = { 1 1−p p < 1 ∞ p ≥ 1 דוגמאות: קבעו האם האינטגרלים הלא אמיתיים הבאים מתכנסים או מתבדרים: ∫ ∞ 1 x+1 x3+x2+1 dx .1 פתרון: ∫ ∞ 1 x + 1 x3 + x2 + 1 dx ≤ ∫ ∞ 1 x + x x3 + x2 dx ≤ ∫ ∞ 1 2x x3 dx = 2 ∫ ∞ 1 1 x2 dx < p>1 ∞ .∫ ∞ 1 x+1 x3+x2+1 dx < ∞ ולכן ∫ ∞ 1 arctan(x) x dx .2 פתרון: arctan(x) ≥ arctan (1) = π 4 מתקיים x ≥ 1 היא פונקציה עולה, לכן לכל arctan ולכן ∫ ∞ 1 arctan(x) x dx ≥ ∫ ∞ 1 π 4x dx = π 4 ∫ ∞ 1 1 x dx = p=1 ∞ .∫ ∞ 1 arctan(x) x dx = ∞ ולכן 5",
+        "topicIds": [
+          "אינטגרלים-לא-אמיתיים",
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-5-hebrew",
+          "filename": "Recitation 5-Hebrew.pdf",
+          "text": "תזכורת )מבחן ההשוואה(: . נניח כי[a, ∞) שתי פונקציות המוגדרות ב f, g ותהיינה a ∈ R יהי .x ≥ a לכל 0 ≤ f (x) ≤ g (x).1 .b > a לכל [a, b] אינטגרביליות ב f, g .2 מתכנס. ∫ ∞ a g(x)dx .3 מתכנס ובנוסף, ∫ ∞ a f (x)dx אזי ∫ ∞ a f (x)dx ≤ ∫ ∞ a g(x)dx מתקיים p ∈ R לכל ∫ ∞ 1 dx xp = { 1 p−1 p > 1 ∞ p ≤ 1 ∫ 1 0 dx xp = { 1 1−p p < 1 ∞ p ≥ 1 דוגמאות: קבעו האם האינטגרלים הלא אמיתיים הבאים מתכנסים או מתבדרים: ∫ ∞ 1 x+1 x3+x2+1 dx .1 פתרון: ∫ ∞ 1 x + 1 x3 + x2 + 1 dx ≤ ∫ ∞ 1 x + x x3 + x2 dx ≤ ∫ ∞ 1 2x x3 dx = 2 ∫ ∞ 1 1 x2 dx < p>1 ∞ .∫ ∞ 1 x+1 x3+x2+1 dx < ∞ ולכן ∫ ∞ 1 arctan(x) x dx .2 פתרון: arctan(x) ≥ arctan (1) = π 4 מתקיים x ≥ 1 היא פונקציה עולה, לכן לכל arctan ולכן ∫ ∞ 1 arctan(x) x dx ≥ ∫ ∞ 1 π 4x dx = π 4 ∫ ∞ 1 1 x dx = p=1 ∞ .∫ ∞ 1 arctan(x) x dx = ∞ ולכן 5"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-5-hebrew-question-6",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-5-hebrew",
+        "questionNumber": "1",
+        "content": "∫ 1 0 x sin x dx .3 פתרון: ולכן אינטגרבילית והיא [0, 1] רציפה בקטע f (x) = { x sin x x 6 = 0 1 x = 0 הפונקציה מתכנס. ∫ 1 0 x sin x dx נבדלת בנקודה אחת מהפונקציה הנתונה בשאלה ולכן האינטגרל ∫ 1 0 1 sin x dx .4 פתרון: מתקיים 0 < x ≤ 1 נשים לב כי לכל 0 < sin x ≤ x ⇒ 0 < 1 x ≤ 1 sin x ולכן ∫ 1 0 1 sin x dx ≥ ∫ 1 0 1 x dx = p=1 ∞ .∫ 1 0 1 sin x dx = ∞ ולכן תזכורת: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי . lim N →∞ N ∑ n=k an מתכנס אם קיים הגבול ∞ ∑ n=k an נאמר שהטור במקרה זה נגדיר ∞ ∑ n=k an = lim N →∞ N ∑ n=k an הטור הגיאומטרי: , אזיq ∈ R יהי ∞ ∑ n=0 qn = { 1 1−q −1 < q < 1 diverges else 6",
+        "topicIds": [
+          "אינטגרלים-לא-אמיתיים",
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-5-hebrew",
+          "filename": "Recitation 5-Hebrew.pdf",
+          "text": "∫ 1 0 x sin x dx .3 פתרון: ולכן אינטגרבילית והיא [0, 1] רציפה בקטע f (x) = { x sin x x 6 = 0 1 x = 0 הפונקציה מתכנס. ∫ 1 0 x sin x dx נבדלת בנקודה אחת מהפונקציה הנתונה בשאלה ולכן האינטגרל ∫ 1 0 1 sin x dx .4 פתרון: מתקיים 0 < x ≤ 1 נשים לב כי לכל 0 < sin x ≤ x ⇒ 0 < 1 x ≤ 1 sin x ולכן ∫ 1 0 1 sin x dx ≥ ∫ 1 0 1 x dx = p=1 ∞ .∫ 1 0 1 sin x dx = ∞ ולכן תזכורת: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי . lim N →∞ N ∑ n=k an מתכנס אם קיים הגבול ∞ ∑ n=k an נאמר שהטור במקרה זה נגדיר ∞ ∑ n=k an = lim N →∞ N ∑ n=k an הטור הגיאומטרי: , אזיq ∈ R יהי ∞ ∑ n=0 qn = { 1 1−q −1 < q < 1 diverges else 6"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-5-hebrew-question-7",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-5-hebrew",
+        "questionNumber": "1",
+        "content": "דוגמא: קבעו האם הטור הבא מתכנס, אם כן מצאו את ערכו: ∞ ∑ n=1 (−2)3n−2 · 5−2n−5 פתרון: נחשב ∞ ∑ n=1 (−2)3n−2 · 5−2n−5 = ∞ ∑ n=1 (−2)3n 4 · 5−2n 55 = 1 4 · 55 ∞ ∑ n=1 (−8)n · ( 1 25 )n = 1 4 · 55 ∞ ∑ n=1 ( −8 25 )n = k=n−1,n=k+1 1 4 · 55 · ∞ ∑ k=0 ( − 8 25 )k+1 = 1 4 · 55 · ( − 8 25 ) · ∞ ∑ k=0 ( − 8 25 )k = 1 4 · 55 · ( − 8 25 ) · 1 1 − (− 8 25 ) = − 2 33 · 55 .− 2 33·55 ושווה ל הטור מתכנס דרך נוספת: 1 4 · 55 ∞ ∑ n=1 ( −8 25 )n = 1 4 · 55 ( ∞ ∑ n=0 ( −8 25 )n − 1 ) = 1 4 · 55 ( 1 1 − (− 8 25 ) − 1 ) = 1 4 · 55 ( 25 33 − 1 ) = 1 4 · 55 ( − 8 25 ) = − 2 33 · 55 .− 2 33·55 ושווה ל הטור מתכנס 7",
+        "topicIds": [
+          "אינטגרלים-לא-אמיתיים",
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-5-hebrew",
+          "filename": "Recitation 5-Hebrew.pdf",
+          "text": "דוגמא: קבעו האם הטור הבא מתכנס, אם כן מצאו את ערכו: ∞ ∑ n=1 (−2)3n−2 · 5−2n−5 פתרון: נחשב ∞ ∑ n=1 (−2)3n−2 · 5−2n−5 = ∞ ∑ n=1 (−2)3n 4 · 5−2n 55 = 1 4 · 55 ∞ ∑ n=1 (−8)n · ( 1 25 )n = 1 4 · 55 ∞ ∑ n=1 ( −8 25 )n = k=n−1,n=k+1 1 4 · 55 · ∞ ∑ k=0 ( − 8 25 )k+1 = 1 4 · 55 · ( − 8 25 ) · ∞ ∑ k=0 ( − 8 25 )k = 1 4 · 55 · ( − 8 25 ) · 1 1 − (− 8 25 ) = − 2 33 · 55 .− 2 33·55 ושווה ל הטור מתכנס דרך נוספת: 1 4 · 55 ∞ ∑ n=1 ( −8 25 )n = 1 4 · 55 ( ∞ ∑ n=0 ( −8 25 )n − 1 ) = 1 4 · 55 ( 1 1 − (− 8 25 ) − 1 ) = 1 4 · 55 ( 25 33 − 1 ) = 1 4 · 55 ( − 8 25 ) = − 2 33 · 55 .− 2 33·55 ושווה ל הטור מתכנס 7"
+        },
+        "confidence": 0.56
+      }
+    ],
+    "solutionPatterns": [],
+    "techniques": [
+      "מבחן ההשוואה",
+      "אינטגרל לא אמיתי",
+      "גבול"
+    ],
+    "commonMistakes": [],
+    "linkedLectureNumber": 4,
+    "topicOverlapWithLinkedLecture": [
+      "גבולות",
+      "סדרות"
+    ],
+    "mappingNeedsReview": false,
+    "examRelevanceNotes": [],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "recitation-recitation-5-hebrew",
+        "filename": "Recitation 5-Hebrew.pdf",
+        "text": "תרגול 5 היום: אינטגרל לא אמיתי. • טור גיאומטרי. • תזכורת: .b > a לכל [a, b] אינטגרבילית ב f . נניח ש f : [a, ∞) → R ותהי a ∈ R יהי . lim b→∞ ∫ b a f (x) dx מתכנס, אם קיים הגבול ∫ ∞ a f (x) dx נאמר כי האינטגרל הלא אמיתי במקרה זה נגדיר ∫ ∞ a f (x) dx = lim b→∞ ∫ b a f (x) dx באופן דומה נגדיר ∫ b −∞ f (x) dx = lim a→−∞ ∫ b a f (x) dx ∫ 0 −∞ f (x) dx ו ∫ ∞ 0 f (x) dx מתכנס אם ∫ ∞ −∞ f (x) dx . נאמר כיf : R → R תהי שניהם מתכנסים. במקרה זה נגדיר ∫ ∞ −∞ f (x) dx = ∫ 0 −∞ f (x) dx + ∫ ∞ 0 f (x) dx .(a, b] פונקציה המוגדרת ב f ותהי a < b כך ש a, b ∈ R תהיינה . נאמר שהאינטגרל הלא אמיתי0 < δ < b − a לכל [a + δ, b] אינטגרבילית ב f נניח ש . lim δ→0+ ∫ b a+δ f (x) dx מתכנס, אם קיים הגבול ∫ b a f (x) dx .∫ b a f (x) dx = lim δ→0+ ∫ b a+δ f (x) dx במקרה זה נגדיר .[a, b) פונקציה המוגדרת ב f ותהי a < b כך ש a, b ∈ R תהיינה . נאמר שהאינטגרל הלא אמיתי0 < δ < b − a לכל [a, b − δ] אינטגרבילית ב f נניח ש . lim "
+      },
+      {
+        "sourceFileId": "recitation-recitation-5-hebrew",
+        "filename": "Recitation 5-Hebrew.pdf",
+        "text": "דוגמאות: 1. קבעו האם האינטגרל הלא אמיתי הבא מתכנס, אם כן ־ חשבו את ערכו ∫ ∞ 2 1 x · ln x dx פתרון: נעבוד עם ההגדרה ∫ ∞ 2 1 x · ln x dx = lim b→∞ ∫ b 2 1 x · ln x dx = lim b→∞ [ln | ln x |]b 2 = lim b→∞ (ln | ln b | − ln | ln 2 |) = ∞ )לא מתכנס(. מתבדר לכן האינטגרל מתכנס. ∫ ∞ 0 epxdx האינטגרל הלא אמיתי p ∈ R 2. קבעו עבור אילו ערכי פתרון: .p > 0 ,p = 0 ,p < 0 נפריד למקרים: :p = 0 עבור ∫ ∞ 0 e0·xdx = lim b→∞ ∫ b 0 1 · dx = lim b→∞ (b − 0) = ∞ :p > 0 עבור ∫ ∞ 0 epxdx = lim b→∞ ∫ b 0 epxdx = lim b→∞ [ ept p ]b 0 = lim b→∞ ( epb p − 1 p ) = ∞ :p < 0 עבור ∫ ∞ 0 epxdx = lim b→∞ ∫ b 0 epxdx = lim b→∞ [ ept p ]b 0 = lim b→∞ ( epb p − 1 p ) = 0 − 1 p = − 1 p לסיכום: ∫ ∞ 0 epxdx = {− 1 p p < 0 ∞ p ≥ 0 2"
+      },
+      {
+        "sourceFileId": "recitation-recitation-5-hebrew",
+        "filename": "Recitation 5-Hebrew.pdf",
+        "text": "3. קבעו האם האינטגרל הלא אמיתי הבא מתכנס, אם כן ־ חשבו את ערכו ∫ ∞ −∞ 1 ex + e−x dx פתרון: נעבוד עם ההגדרה ∫ ∞ −∞ 1 ex + e−x dx = ∫ 0 −∞ 1 ex + e−x dx + ∫ ∞ 0 1 ex + e−x dx נחשב את כל אחד מהאינטגרלים בנפרד ∫ 0 −∞ 1 ex + e−x dx = lim a→−∞ ∫ 0 a 1 ex + 1 ex dx = lim a→−∞ ∫ 0 a ex e2x + 1 dx = lim a→−∞ [arctan (ex)]0 a = lim a→−∞ (arctan (1) − arctan (ea)) = lim a→−∞ ( π 4 − arctan (ea) ) = π 4 − 0 = π 4 ∫ ∞ 0 1 ex + e−x dx = lim b→∞ ∫ b 0 1 ex + 1 ex dx = lim b→∞ ∫ b 0 ex e2x + 1 dx = lim b→∞ [arctan (ex)]b 0 = lim b→∞ (arctan (eb) − arctan (1)) = π 2 − π 4 = π 4 שני הגבולות קיימים, לכן האינטגרל שווה לסכומם ∫ ∞ −∞ 1 ex + e−x dx = π 4 + π 4 = π 2 3",
+        "startOffset": 1750,
+        "endOffset": 2403
+      },
+      {
+        "sourceFileId": "recitation-recitation-5-hebrew",
+        "filename": "Recitation 5-Hebrew.pdf",
+        "text": "4. קבעו האם האינטגרל הלא אמיתי הבא מתכנס, אם כן ־ חשבו את ערכו ∫ 1 −1 1 x dx פתרון: נעבוד עם ההגדרה ∫ 1 −1 1 x dx = ∫ 0 −1 1 x dx + ∫ 1 0 1 x dx נחשב את האינטגרל השמאלי ∫ 0 −1 1 t dt = lim δ→0+ ∫ 0−δ −1 1 x dx = lim δ→0+ [ln | x |]−δ −1 = lim δ→0+ (ln | −δ | − ln | −1 |) = lim δ→0+ ln δ = −∞ .האינטגרל מתבדר קיבלנו שהאינטגרל מתבדר באחד מהתחומים ולכן 4",
+        "startOffset": 2419,
+        "endOffset": 2771
+      }
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
     "recitationNumber": 6,
     "weekNumber": 6,
     "practicedLectureNumber": 5,
@@ -1479,240 +2176,6 @@
     "recitationNumber": 8,
     "weekNumber": 8,
     "practicedLectureNumber": 7,
-    "sourceFileId": "recitation-recitation-8-hebrew",
-    "filename": "Recitation 8 Hebrew.pdf",
-    "practicedTopics": [
-      "גבולות",
-      "התכנסות בהחלט",
-      "התכנסות בתנאי",
-      "טורים",
-      "מבחן ההשוואה",
-      "מבחן השורש",
-      "סדרות"
-    ],
-    "questions": [
-      {
-        "id": "recitation-recitation-8-hebrew-question-1",
-        "sourceType": "recitation",
-        "sourceFileId": "recitation-recitation-8-hebrew",
-        "questionNumber": "1",
-        "content": "דוגמאות: קבעו האם הטורים הבאים מתכנסים בהחלט, מתכנסים בתנאי או מתבדרים. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] .1 פתרון: נבדוק תחילה התכנסות בהחלט ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ = ∞ ∑ n=1 [∣ ∣arctan (n) + sin n∣ ∣ · 1 1 + cos2 n · n 3n ] 4 ≤ ∞ ∑ n=1 [(∣ ∣arctan (n)∣ ∣ + ∣ ∣sin n∣ ∣) · 1 1 + cos2 n · n 3n ] ≤ ∞ ∑ n=1 [( π 2 + 1 ) · 1 1 + 0 · n 3n ] = ∞ ∑ n=1 [( π 2 + 1 ) · n 3n ] = ( π 2 + 1 ) ∞ ∑ n=1 n 3n מתכנס. נראה זאת על ידי מבחן השורש ∞ ∑ n=1 n 3n הטור lim n→∞ n √ n 3n = lim n→∞ n 1 n 3 = AOL 1 3 < 1 ולכן ממבחן ההשוואה הטור ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ מתכנס בהחלט. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] מתכנס ולכן הטור 3",
-        "topicIds": [
-          "גבולות",
-          "התכנסות-בהחלט",
-          "התכנסות-בתנאי",
-          "טורים",
-          "מבחן-ההשוואה",
-          "מבחן-השורש",
-          "סדרות"
-        ],
-        "difficulty": "medium",
-        "examRelevance": "medium",
-        "sourceSnippet": {
-          "sourceFileId": "recitation-recitation-8-hebrew",
-          "filename": "Recitation 8-Hebrew.pdf",
-          "text": "דוגמאות: קבעו האם הטורים הבאים מתכנסים בהחלט, מתכנסים בתנאי או מתבדרים. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] .1 פתרון: נבדוק תחילה התכנסות בהחלט ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ = ∞ ∑ n=1 [∣ ∣arctan (n) + sin n∣ ∣ · 1 1 + cos2 n · n 3n ] 4 ≤ ∞ ∑ n=1 [(∣ ∣arctan (n)∣ ∣ + ∣ ∣sin n∣ ∣) · 1 1 + cos2 n · n 3n ] ≤ ∞ ∑ n=1 [( π 2 + 1 ) · 1 1 + 0 · n 3n ] = ∞ ∑ n=1 [( π 2 + 1 ) · n 3n ] = ( π 2 + 1 ) ∞ ∑ n=1 n 3n מתכנס. נראה זאת על ידי מבחן השורש ∞ ∑ n=1 n 3n הטור lim n→∞ n √ n 3n = lim n→∞ n 1 n 3 = AOL 1 3 < 1 ולכן ממבחן ההשוואה הטור ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ מתכנס בהחלט. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] מתכנס ולכן הטור 3"
-        },
-        "confidence": 0.56
-      },
-      {
-        "id": "recitation-recitation-8-hebrew-question-2",
-        "sourceType": "recitation",
-        "sourceFileId": "recitation-recitation-8-hebrew",
-        "questionNumber": "1",
-        "content": "תרגיל: קבעו האם הטור הבא מתכנס או מתבדר 1 − 1 4 + 1 2 − 1 42 + 1 3 − 1 43 + 1 4 − 1 44 + ... פתרון: נשים סוגריים באופן הבא: ( 1 − 1 4 ) + ( 1 2 − 1 42 ) + ( 1 3 − 1 43 ) + ( 1 4 − 1 44 ) + ... קיבלנו את הטור ∞ ∑ n=1 ( 1 n − 1 4n ) זהו טור מתבדר, מכיוון שהוא מורכב מטור מתבדר פחות טור מתכנס, ולכן ממשפט השמת הסוגריים, גם הטור המקורי מתבדר. תרגיל: . ∞ ∑ n=1 1 n2 = π2 6 נניח כי . ∞ ∑ n=1 1 n2 = ∞ ∑ n=1 [ 1 (2n−1)2 + 1 (2n)2 ] 1. הוכיחו כי פתרון: מתכנס, אז ממשפט השמת הסוגריים נקבל כי ∞ ∑ n=1 1 n2 היות שהטור ∞ ∑ n=1 1 n2 = ( 1 + 1 22 ) + ( 1 32 + 1 42 ) + ... = ∞ ∑ n=1 ( 1 (2n − 1)2 + 1 (2n)2 ) 6",
-        "topicIds": [
-          "גבולות",
-          "התכנסות-בהחלט",
-          "התכנסות-בתנאי",
-          "טורים",
-          "מבחן-ההשוואה",
-          "מבחן-השורש",
-          "סדרות"
-        ],
-        "difficulty": "medium",
-        "examRelevance": "medium",
-        "sourceSnippet": {
-          "sourceFileId": "recitation-recitation-8-hebrew",
-          "filename": "Recitation 8-Hebrew.pdf",
-          "text": "תרגיל: קבעו האם הטור הבא מתכנס או מתבדר 1 − 1 4 + 1 2 − 1 42 + 1 3 − 1 43 + 1 4 − 1 44 + ... פתרון: נשים סוגריים באופן הבא: ( 1 − 1 4 ) + ( 1 2 − 1 42 ) + ( 1 3 − 1 43 ) + ( 1 4 − 1 44 ) + ... קיבלנו את הטור ∞ ∑ n=1 ( 1 n − 1 4n ) זהו טור מתבדר, מכיוון שהוא מורכב מטור מתבדר פחות טור מתכנס, ולכן ממשפט השמת הסוגריים, גם הטור המקורי מתבדר. תרגיל: . ∞ ∑ n=1 1 n2 = π2 6 נניח כי . ∞ ∑ n=1 1 n2 = ∞ ∑ n=1 [ 1 (2n−1)2 + 1 (2n)2 ] 1. הוכיחו כי פתרון: מתכנס, אז ממשפט השמת הסוגריים נקבל כי ∞ ∑ n=1 1 n2 היות שהטור ∞ ∑ n=1 1 n2 = ( 1 + 1 22 ) + ( 1 32 + 1 42 ) + ... = ∞ ∑ n=1 ( 1 (2n − 1)2 + 1 (2n)2 ) 6"
-        },
-        "confidence": 0.56
-      },
-      {
-        "id": "recitation-recitation-8-hebrew-question-3",
-        "sourceType": "recitation",
-        "sourceFileId": "recitation-recitation-8-hebrew",
-        "questionNumber": "1",
-        "content": ". ∞ ∑ n=1 1 (2n−1)2 = π2 8 2. הוכיחו כי פתרון: נשים לב כי מתקיים ∞ ∑ n=1 1 (2n)2 = 1 4 ∞ ∑ n=1 1 n2 = 1 4 · π2 6 מתכנס )ניתן להראות זאת ∞ ∑ n=1 1 (2n)2 מתכנס והטור ∞ ∑ n=1 1 (2n−1)2 היות שהטור (, אז ∞ ∑ n=1 1 n2 בקלות על ידי מבחן ההשוואה הגבולי עם הטור ∞ ∑ n=1 ( 1 (2n − 1)2 + 1 (2n)2 ) = AOS ∞ ∑ n=1 1 (2n − 1)2 + ∞ ∑ n=1 1 (2n)2 ולכן מהסעיף הראשון נקבל כי π2 6 = ∞ ∑ n=1 1 (2n − 1)2 + 1 4 · π2 6 ולכן ∞ ∑ n=1 1 (2n − 1)2 = 3 4 · π2 6 = π2 8 . ∞ ∑ n=1 (−1)n+1 1 n2 = π2 12 3. הוכיחו כי פתרון: מתכנס )טור לייבניץ(, אז ממשפט השמת הסוגריים ∞ ∑ n=1 (−1)n+1 1 n2 היות שהטור נקבל כי ∞ ∑ n=1 (−1)n+1 1 n2 = ( 1 − 1 22 ) + ( 1 32 − 1 42 ) +... = ∞ ∑ n=1 ( 1 (2n − 1)2 − 1 (2n)2 ) ולכן ∞ ∑ n=1 (−1)n+1 1 n2 = ∞ ∑ n=1 ( 1 (2n − 1)2 − 1 (2n)2 ) = AOS ∞ ∑ n=1 1 (2n − 1)2 − ∞ ∑ n=1 1 (2n)2 = π2 8 − 1 4 · π2 6 = π2 8 − π2 24 = 3π2 − π2 24 = 2π2 24 = π2 12 7",
-        "topicIds": [
-          "גבולות",
-          "התכנסות-בהחלט",
-          "התכנסות-בתנאי",
-          "טורים",
-          "מבחן-ההשוואה",
-          "מבחן-השורש",
-          "סדרות"
-        ],
-        "difficulty": "medium",
-        "examRelevance": "medium",
-        "sourceSnippet": {
-          "sourceFileId": "recitation-recitation-8-hebrew",
-          "filename": "Recitation 8-Hebrew.pdf",
-          "text": ". ∞ ∑ n=1 1 (2n−1)2 = π2 8 2. הוכיחו כי פתרון: נשים לב כי מתקיים ∞ ∑ n=1 1 (2n)2 = 1 4 ∞ ∑ n=1 1 n2 = 1 4 · π2 6 מתכנס )ניתן להראות זאת ∞ ∑ n=1 1 (2n)2 מתכנס והטור ∞ ∑ n=1 1 (2n−1)2 היות שהטור (, אז ∞ ∑ n=1 1 n2 בקלות על ידי מבחן ההשוואה הגבולי עם הטור ∞ ∑ n=1 ( 1 (2n − 1)2 + 1 (2n)2 ) = AOS ∞ ∑ n=1 1 (2n − 1)2 + ∞ ∑ n=1 1 (2n)2 ולכן מהסעיף הראשון נקבל כי π2 6 = ∞ ∑ n=1 1 (2n − 1)2 + 1 4 · π2 6 ולכן ∞ ∑ n=1 1 (2n − 1)2 = 3 4 · π2 6 = π2 8 . ∞ ∑ n=1 (−1)n+1 1 n2 = π2 12 3. הוכיחו כי פתרון: מתכנס )טור לייבניץ(, אז ממשפט השמת הסוגריים ∞ ∑ n=1 (−1)n+1 1 n2 היות שהטור נקבל כי ∞ ∑ n=1 (−1)n+1 1 n2 = ( 1 − 1 22 ) + ( 1 32 − 1 42 ) +... = ∞ ∑ n=1 ( 1 (2n − 1)2 − 1 (2n)2 ) ולכן ∞ ∑ n=1 (−1)n+1 1 n2 = ∞ ∑ n=1 ( 1 (2n − 1)2 − 1 (2n)2 ) = AOS ∞ ∑ n=1 1 (2n − 1)2 − ∞ ∑ n=1 1 (2n)2 = π2 8 − 1 4 · π2 6 = π2 8 − π2 24 = 3π2 − π2 24 = 2π2 24 = π2 12 7"
-        },
-        "confidence": 0.56
-      },
-      {
-        "id": "recitation-recitation-8-hebrew-question-4",
-        "sourceType": "recitation",
-        "sourceFileId": "recitation-recitation-8-hebrew",
-        "questionNumber": "1",
-        "content": "הוכיחו או הפריכו כל אחת מהטענות הבאות: סדרה של מספרים ממשיים. (an)∞ n=1 תהי מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס, אזי ∞ ∑ n=1 an 1. אם פתרון: הטענה לא נכונה. נגדיר 2 ≤ n ∈ N ולכל a1 = 0 דוגמא נגדית: an = (−1)n+1 ln n נשים לב ש ∞ ∑ n=1 an = ∞ ∑ n=2 (−1)n+1 ln n מקיים את התנאים של המסקנה בתזכורת ולכן מתכנס, אבל ∞ ∑ n=1 ∣ ∣ ∣ an n ∣ ∣ ∣ = ∞ ∑ n=2 ∣ ∣ ∣ ∣ ∣ ∣ [ (−1)n ln n ] n ∣ ∣ ∣ ∣ ∣ ∣ = ∞ ∑ n=2 1 n ln n = ∞ לא מתכנס בהחלט. ∞ ∑ n=1 an n ולכן מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס, אזי ∞ ∑ n=1 a2 n 2. אם פתרון: הטענה נכונה. מתקיים n ∈ N נשים לב שלכל ( | an | − 1 n )2 ≥ 0 ⇒ a2 n − 2 | an | n + 1 n2 ≥ 0 ⇒ | an | n ≤ 1 2 · ( a2 n + 1 n2 ) נשים לב ששני הביטויים הם אי שליליים ולכן נוכל להשתמש במבחן ההשוואה, ∞ ∑ n=1 | an | n ≤ ∞ ∑ n=1 1 2 · ( a2 n + 1 n2 ) < ∞ מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס ולכן ∞ ∑ n=1 |an| n ולכן 8",
-        "topicIds": [
-          "גבולות",
-          "התכנסות-בהחלט",
-          "התכנסות-בתנאי",
-          "טורים",
-          "מבחן-ההשוואה",
-          "מבחן-השורש",
-          "סדרות"
-        ],
-        "difficulty": "medium",
-        "examRelevance": "medium",
-        "sourceSnippet": {
-          "sourceFileId": "recitation-recitation-8-hebrew",
-          "filename": "Recitation 8-Hebrew.pdf",
-          "text": "הוכיחו או הפריכו כל אחת מהטענות הבאות: סדרה של מספרים ממשיים. (an)∞ n=1 תהי מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס, אזי ∞ ∑ n=1 an 1. אם פתרון: הטענה לא נכונה. נגדיר 2 ≤ n ∈ N ולכל a1 = 0 דוגמא נגדית: an = (−1)n+1 ln n נשים לב ש ∞ ∑ n=1 an = ∞ ∑ n=2 (−1)n+1 ln n מקיים את התנאים של המסקנה בתזכורת ולכן מתכנס, אבל ∞ ∑ n=1 ∣ ∣ ∣ an n ∣ ∣ ∣ = ∞ ∑ n=2 ∣ ∣ ∣ ∣ ∣ ∣ [ (−1)n ln n ] n ∣ ∣ ∣ ∣ ∣ ∣ = ∞ ∑ n=2 1 n ln n = ∞ לא מתכנס בהחלט. ∞ ∑ n=1 an n ולכן מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס, אזי ∞ ∑ n=1 a2 n 2. אם פתרון: הטענה נכונה. מתקיים n ∈ N נשים לב שלכל ( | an | − 1 n )2 ≥ 0 ⇒ a2 n − 2 | an | n + 1 n2 ≥ 0 ⇒ | an | n ≤ 1 2 · ( a2 n + 1 n2 ) נשים לב ששני הביטויים הם אי שליליים ולכן נוכל להשתמש במבחן ההשוואה, ∞ ∑ n=1 | an | n ≤ ∞ ∑ n=1 1 2 · ( a2 n + 1 n2 ) < ∞ מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס ולכן ∞ ∑ n=1 |an| n ולכן 8",
-          "startOffset": 4906,
-          "endOffset": 5714
-        },
-        "confidence": 0.56
-      },
-      {
-        "id": "recitation-recitation-8-hebrew-question-5",
-        "sourceType": "recitation",
-        "sourceFileId": "recitation-recitation-8-hebrew",
-        "questionNumber": "1",
-        "content": "∞ ∑ n=1 (−1) n+1an , אזי הטור lim n→∞an = 0 סדרה אי שלילית כך ש (an)∞ n=1 3. נניח כי מתכנס. פתרון: הטענה לא נכונה )חלק מהתנאים של משפט לייבניץ לא רשומים(. .1, 0, 1 2 , 0, 1 3 , ... נבחר את הסדרה כלומר נבחר את הסדרה an = { 1 k n = 2k − 1 0 n = 2k = { 2 n+1 n is odd 0 n is even כי הגבול של האיברים במקומות הזוגיים שווה לגבול של lim n→∞an = 0 נשים לב כי האיברים במקומות האי זוגיים ושניהם שווים לאפס. נראה כי הטור מתבדר ∞ ∑ n=1 (−1) n+1an = 1 + 0 + 1 2 + 0 + 1 3 + 0 + ... נשים סוגריים באופן הבא: (1 + 0) + ( 1 2 + 0 ) + ( 1 3 + 0 ) .. קיבלנו את הטור ∞ ∑ n=1 ( 1 n + 0 ) = ∞ ∑ n=1 1 n זהו טור מתבדר, ולכן ממשפט השמת הסוגריים, גם הטור המקורי מתבדר. 9",
-        "topicIds": [
-          "גבולות",
-          "התכנסות-בהחלט",
-          "התכנסות-בתנאי",
-          "טורים",
-          "מבחן-ההשוואה",
-          "מבחן-השורש",
-          "סדרות"
-        ],
-        "difficulty": "medium",
-        "examRelevance": "medium",
-        "sourceSnippet": {
-          "sourceFileId": "recitation-recitation-8-hebrew",
-          "filename": "Recitation 8-Hebrew.pdf",
-          "text": "∞ ∑ n=1 (−1) n+1an , אזי הטור lim n→∞an = 0 סדרה אי שלילית כך ש (an)∞ n=1 3. נניח כי מתכנס. פתרון: הטענה לא נכונה )חלק מהתנאים של משפט לייבניץ לא רשומים(. .1, 0, 1 2 , 0, 1 3 , ... נבחר את הסדרה כלומר נבחר את הסדרה an = { 1 k n = 2k − 1 0 n = 2k = { 2 n+1 n is odd 0 n is even כי הגבול של האיברים במקומות הזוגיים שווה לגבול של lim n→∞an = 0 נשים לב כי האיברים במקומות האי זוגיים ושניהם שווים לאפס. נראה כי הטור מתבדר ∞ ∑ n=1 (−1) n+1an = 1 + 0 + 1 2 + 0 + 1 3 + 0 + ... נשים סוגריים באופן הבא: (1 + 0) + ( 1 2 + 0 ) + ( 1 3 + 0 ) .. קיבלנו את הטור ∞ ∑ n=1 ( 1 n + 0 ) = ∞ ∑ n=1 1 n זהו טור מתבדר, ולכן ממשפט השמת הסוגריים, גם הטור המקורי מתבדר. 9"
-        },
-        "confidence": 0.56
-      }
-    ],
-    "solutionPatterns": [
-      {
-        "id": "recitation-recitation-8-hebrew-proof-pattern-1",
-        "title": "∞ ∑ n=1 [ (−1)n+1 n · (1 + 1 n )n]",
-        "patternType": "comparison",
-        "steps": [
-          "Identify the relevant assumptions from the source statement.",
-          "Compare to a known convergent/divergent object.",
-          "Reduce the claim to a limit statement.",
-          "Construct or justify the required existence statement.",
-          "Close the argument using the cited theorem or criterion."
-        ],
-        "topicIds": [
-          "גבולות",
-          "התכנסות-בהחלט",
-          "התכנסות-בתנאי",
-          "טורים",
-          "מבחן-ההשוואה",
-          "מבחן-השורש",
-          "סדרות"
-        ],
-        "sourceFileIds": [
-          "recitation-recitation-8-hebrew"
-        ],
-        "relatedQuestionIds": [],
-        "commonMistakes": [],
-        "examImportance": "medium",
-        "confidence": 0.52
-      },
-      {
-        "id": "recitation-recitation-8-hebrew-proof-pattern-2",
-        "title": "∞ ∑ n=1 (−1) n+1an , אזי הטור lim n→∞an = 0 סדרה אי שלילית כך ש (an)∞ n=1 3",
-        "patternType": "limit",
-        "steps": [
-          "Identify the relevant assumptions from the source statement.",
-          "Reduce the claim to a limit statement.",
-          "Close the argument using the cited theorem or criterion."
-        ],
-        "topicIds": [
-          "גבולות",
-          "התכנסות-בהחלט",
-          "התכנסות-בתנאי",
-          "טורים",
-          "מבחן-ההשוואה",
-          "מבחן-השורש",
-          "סדרות"
-        ],
-        "sourceFileIds": [
-          "recitation-recitation-8-hebrew"
-        ],
-        "relatedQuestionIds": [],
-        "commonMistakes": [],
-        "examImportance": "medium",
-        "confidence": 0.52
-      }
-    ],
-    "techniques": [
-      "מבחן השורש",
-      "מבחן ההשוואה",
-      "גבול",
-      "התכנסות בהחלט"
-    ],
-    "commonMistakes": [],
-    "linkedLectureNumber": 7,
-    "topicOverlapWithLinkedLecture": [
-      "גבולות",
-      "טורים",
-      "סדרות"
-    ],
-    "mappingNeedsReview": false,
-    "examRelevanceNotes": [],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "recitation-recitation-8-hebrew",
-        "filename": "Recitation 8-Hebrew.pdf",
-        "text": "תרגול 8 היום: התכנסות בהחלט, התכנסות בתנאי. • טור לייבניץ. • השמת סוגריים. • תזכורת: התכנסות בהחלט: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי . ∞ ∑ n=k | an |< ∞ מתכנס בהחלט אם ∞ ∑ n=k an נאמר שהטור משפט )מבחן התכנסות בהחלט(: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי מתכנס. ∞ ∑ n=k an מתכנס בהחלט. אזי הטור ∞ ∑ n=k an נניח שהטור התכנסות בתנאי: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי מתכנס ∞ ∑ n=k an מתכנס בתנאי אם הטור ∞ ∑ n=k an נאמר שהטור )מתכנס, אבל לא בהחלט(. ∞ ∑ n=k | an |= ∞ אבל , הטור מתכנס )הוכחתם בשיעור( אבל הטור ∞ ∑ n=1 (−1)n+1 n :דוגמא לטור שמתכנס בתנאי מתבדר. ∞ ∑ n=1 ∣ ∣ ∣ (−1)n+1 n ∣ ∣ ∣ = ∞ ∑ n=1 1 n 1"
-      },
-      {
-        "sourceFileId": "recitation-recitation-8-hebrew",
-        "filename": "Recitation 8-Hebrew.pdf",
-        "text": "טור לייבניץ: סדרה של מספרים ממשיים. (an)∞ n=1 תהי הוא טור לייבניץ אם: ∞ ∑ n=1 (−1)n+1 · an נאמר שהטור יורדת. (an)∞ n=1 .1 . lim n→∞an = 0 .2 משפט )מבחן לייבניץ(: סדרה של מספרים ממשיים. (an)∞ n=1 תהי הוא טור לייבניץ, אזי הוא מתכנס ∞ ∑ n=1 (−1)n+1 · an נניח שהטור .a1 − a2 ≤ s ≤ a1 ובנוסף, s ∈ R לערך מסקנה: סדרה של מספרים ממשיים. (an)∞ n=k ותהי k ∈ N יהי נניח כי יורדת. (an)∞ n=k . lim n→∞an = 0 כך ש s ∈ R אזי קיים s = ∞ ∑ n=k (−1)n+1 · an .ak − ak+1 ≤| s |≤ ak ובנוסף משפט השמת הסוגריים: אם טור מתכנס אז גם אם נוסיף סוגריים )כאשר בכל סוגר יש מספר סופי של איברים וללא שינוי סדר סכימה( הטור יתכנס לאותו הסכום. 2"
-      },
-      {
-        "sourceFileId": "recitation-recitation-8-hebrew",
-        "filename": "Recitation 8-Hebrew.pdf",
-        "text": "דוגמאות: קבעו האם הטורים הבאים מתכנסים בהחלט, מתכנסים בתנאי או מתבדרים. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] .1 פתרון: נבדוק תחילה התכנסות בהחלט ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ = ∞ ∑ n=1 [∣ ∣arctan (n) + sin n∣ ∣ · 1 1 + cos2 n · n 3n ] 4 ≤ ∞ ∑ n=1 [(∣ ∣arctan (n)∣ ∣ + ∣ ∣sin n∣ ∣) · 1 1 + cos2 n · n 3n ] ≤ ∞ ∑ n=1 [( π 2 + 1 ) · 1 1 + 0 · n 3n ] = ∞ ∑ n=1 [( π 2 + 1 ) · n 3n ] = ( π 2 + 1 ) ∞ ∑ n=1 n 3n מתכנס. נראה זאת על ידי מבחן השורש ∞ ∑ n=1 n 3n הטור lim n→∞ n √ n 3n = lim n→∞ n 1 n 3 = AOL 1 3 < 1 ולכן ממבחן ההשוואה הטור ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ מתכנס בהחלט. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] מתכנס ולכן הטור 3"
-      },
-      {
-        "sourceFileId": "recitation-recitation-8-hebrew",
-        "filename": "Recitation 8-Hebrew.pdf",
-        "text": "∞ ∑ n=2 (−1)n+1 n·ln n .2 פתרון: נבדוק תחילה התכנסות בהחלט ∞ ∑ n=2 ∣ ∣ ∣ (−1)n+1 n·ln n ∣ ∣ ∣ = ∞ ∑ n=2 1 n · ln n ראינו כי הטור מתבדר, לכן הטור לא מתכנס בהחלט. כעת נבדוק התכנסות בתנאי, נעשה זאת בעזרת המסקנה בתזכורת. an = 1 n·ln n נבדוק אם התנאים של המסקנה בתזכורת מתקיימים, כאשר במקרה שלנו .n ≥ 2 לכל lim n→∞ an = lim n→∞ 1 n · ln n = 0 יורדת )1 חלקי סדרה עולה וחיובית(. ( 1 n ln n ) n=2 הסדרה אבל לא מתכנס התנאים מתקיימים ולכן הטור מתכנס בתנאי )כי הוא מתכנס, בהחלט(. 4"
-      }
-    ],
-    "confidence": 0.8999999999999999
-  },
-  {
-    "recitationNumber": 8,
-    "weekNumber": 8,
-    "practicedLectureNumber": 7,
     "sourceFileId": "recitation-recitation-8-hebrew-2",
     "filename": "Recitation 8-Hebrew-2.pdf",
     "practicedTopics": [
@@ -1944,167 +2407,1292 @@
     "confidence": 0.8999999999999999
   },
   {
-    "recitationNumber": 8,
-    "weekNumber": 8,
-    "practicedLectureNumber": 7,
-    "sourceFileId": "recitation-recitation-8-hebrew",
-    "filename": "Recitation 8-Hebrew.pdf",
+    "recitationNumber": 9,
+    "weekNumber": 9,
+    "practicedLectureNumber": 8,
+    "sourceFileId": "recitation-script-recitation-9-max",
+    "filename": "recitation-9-max.txt",
     "practicedTopics": [
       "גבולות",
       "התכנסות בהחלט",
       "התכנסות בתנאי",
+      "טורי חזקות",
       "טורים",
       "מבחן ההשוואה",
+      "מבחן המנה",
       "מבחן השורש",
-      "סדרות"
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רדיוס התכנסות"
     ],
     "questions": [
       {
-        "id": "recitation-recitation-8-hebrew-question-1",
+        "id": "recitation-script-recitation-9-max-question-1",
         "sourceType": "recitation",
-        "sourceFileId": "recitation-recitation-8-hebrew",
+        "sourceFileId": "recitation-script-recitation-9-max",
         "questionNumber": "1",
-        "content": "דוגמאות: קבעו האם הטורים הבאים מתכנסים בהחלט, מתכנסים בתנאי או מתבדרים. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] .1 פתרון: נבדוק תחילה התכנסות בהחלט ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ = ∞ ∑ n=1 [∣ ∣arctan (n) + sin n∣ ∣ · 1 1 + cos2 n · n 3n ] 4 ≤ ∞ ∑ n=1 [(∣ ∣arctan (n)∣ ∣ + ∣ ∣sin n∣ ∣) · 1 1 + cos2 n · n 3n ] ≤ ∞ ∑ n=1 [( π 2 + 1 ) · 1 1 + 0 · n 3n ] = ∞ ∑ n=1 [( π 2 + 1 ) · n 3n ] = ( π 2 + 1 ) ∞ ∑ n=1 n 3n מתכנס. נראה זאת על ידי מבחן השורש ∞ ∑ n=1 n 3n הטור lim n→∞ n √ n 3n = lim n→∞ n 1 n 3 = AOL 1 3 < 1 ולכן ממבחן ההשוואה הטור ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ מתכנס בהחלט. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] מתכנס ולכן הטור 3",
+        "content": "מינוס 1. מינוס 1, מצוין. בוא נשאל עוד שאלה למשל, מה זה ה'2 פה?",
         "topicIds": [
           "גבולות",
           "התכנסות-בהחלט",
           "התכנסות-בתנאי",
+          "טורי-חזקות",
           "טורים",
           "מבחן-ההשוואה",
+          "מבחן-המנה",
           "מבחן-השורש",
-          "סדרות"
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
         ],
-        "difficulty": "medium",
+        "difficulty": "unknown",
         "examRelevance": "medium",
         "sourceSnippet": {
-          "sourceFileId": "recitation-recitation-8-hebrew",
-          "filename": "Recitation 8-Hebrew.pdf",
-          "text": "דוגמאות: קבעו האם הטורים הבאים מתכנסים בהחלט, מתכנסים בתנאי או מתבדרים. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] .1 פתרון: נבדוק תחילה התכנסות בהחלט ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ = ∞ ∑ n=1 [∣ ∣arctan (n) + sin n∣ ∣ · 1 1 + cos2 n · n 3n ] 4 ≤ ∞ ∑ n=1 [(∣ ∣arctan (n)∣ ∣ + ∣ ∣sin n∣ ∣) · 1 1 + cos2 n · n 3n ] ≤ ∞ ∑ n=1 [( π 2 + 1 ) · 1 1 + 0 · n 3n ] = ∞ ∑ n=1 [( π 2 + 1 ) · n 3n ] = ( π 2 + 1 ) ∞ ∑ n=1 n 3n מתכנס. נראה זאת על ידי מבחן השורש ∞ ∑ n=1 n 3n הטור lim n→∞ n √ n 3n = lim n→∞ n 1 n 3 = AOL 1 3 < 1 ולכן ממבחן ההשוואה הטור ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ מתכנס בהחלט. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] מתכנס ולכן הטור 3"
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "מינוס 1. מינוס 1, מצוין. בוא נשאל עוד שאלה למשל, מה זה ה'2 פה?",
+          "startOffset": 881,
+          "endOffset": 943
         },
         "confidence": 0.56
       },
       {
-        "id": "recitation-recitation-8-hebrew-question-2",
+        "id": "recitation-script-recitation-9-max-question-2",
         "sourceType": "recitation",
-        "sourceFileId": "recitation-recitation-8-hebrew",
+        "sourceFileId": "recitation-script-recitation-9-max",
         "questionNumber": "1",
-        "content": "תרגיל: קבעו האם הטור הבא מתכנס או מתבדר 1 − 1 4 + 1 2 − 1 42 + 1 3 − 1 43 + 1 4 − 1 44 + ... פתרון: נשים סוגריים באופן הבא: ( 1 − 1 4 ) + ( 1 2 − 1 42 ) + ( 1 3 − 1 43 ) + ( 1 4 − 1 44 ) + ... קיבלנו את הטור ∞ ∑ n=1 ( 1 n − 1 4n ) זהו טור מתבדר, מכיוון שהוא מורכב מטור מתבדר פחות טור מתכנס, ולכן ממשפט השמת הסוגריים, גם הטור המקורי מתבדר. תרגיל: . ∞ ∑ n=1 1 n2 = π2 6 נניח כי . ∞ ∑ n=1 1 n2 = ∞ ∑ n=1 [ 1 (2n−1)2 + 1 (2n)2 ] 1. הוכיחו כי פתרון: מתכנס, אז ממשפט השמת הסוגריים נקבל כי ∞ ∑ n=1 1 n2 היות שהטור ∞ ∑ n=1 1 n2 = ( 1 + 1 22 ) + ( 1 32 + 1 42 ) + ... = ∞ ∑ n=1 ( 1 (2n − 1)2 + 1 (2n)2 ) 6",
+        "content": "אם אני מציב אין שווה 1, אני אקבל מינוס 1 בחזקת 1 פחות 1, כפול איקס ועוד 1 בחזקת 3, לחלק ל5 בחזקת 1 פחות 2.",
         "topicIds": [
           "גבולות",
           "התכנסות-בהחלט",
           "התכנסות-בתנאי",
+          "טורי-חזקות",
           "טורים",
           "מבחן-ההשוואה",
+          "מבחן-המנה",
           "מבחן-השורש",
-          "סדרות"
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
         ],
-        "difficulty": "medium",
+        "difficulty": "unknown",
         "examRelevance": "medium",
         "sourceSnippet": {
-          "sourceFileId": "recitation-recitation-8-hebrew",
-          "filename": "Recitation 8-Hebrew.pdf",
-          "text": "תרגיל: קבעו האם הטור הבא מתכנס או מתבדר 1 − 1 4 + 1 2 − 1 42 + 1 3 − 1 43 + 1 4 − 1 44 + ... פתרון: נשים סוגריים באופן הבא: ( 1 − 1 4 ) + ( 1 2 − 1 42 ) + ( 1 3 − 1 43 ) + ( 1 4 − 1 44 ) + ... קיבלנו את הטור ∞ ∑ n=1 ( 1 n − 1 4n ) זהו טור מתבדר, מכיוון שהוא מורכב מטור מתבדר פחות טור מתכנס, ולכן ממשפט השמת הסוגריים, גם הטור המקורי מתבדר. תרגיל: . ∞ ∑ n=1 1 n2 = π2 6 נניח כי . ∞ ∑ n=1 1 n2 = ∞ ∑ n=1 [ 1 (2n−1)2 + 1 (2n)2 ] 1. הוכיחו כי פתרון: מתכנס, אז ממשפט השמת הסוגריים נקבל כי ∞ ∑ n=1 1 n2 היות שהטור ∞ ∑ n=1 1 n2 = ( 1 + 1 22 ) + ( 1 32 + 1 42 ) + ... = ∞ ∑ n=1 ( 1 (2n − 1)2 + 1 (2n)2 ) 6"
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "אם אני מציב אין שווה 1, אני אקבל מינוס 1 בחזקת 1 פחות 1, כפול איקס ועוד 1 בחזקת 3, לחלק ל5 בחזקת 1 פחות 2.",
+          "startOffset": 2047,
+          "endOffset": 2153
         },
         "confidence": 0.56
       },
       {
-        "id": "recitation-recitation-8-hebrew-question-3",
+        "id": "recitation-script-recitation-9-max-question-3",
         "sourceType": "recitation",
-        "sourceFileId": "recitation-recitation-8-hebrew",
-        "questionNumber": "1",
-        "content": ". ∞ ∑ n=1 1 (2n−1)2 = π2 8 2. הוכיחו כי פתרון: נשים לב כי מתקיים ∞ ∑ n=1 1 (2n)2 = 1 4 ∞ ∑ n=1 1 n2 = 1 4 · π2 6 מתכנס )ניתן להראות זאת ∞ ∑ n=1 1 (2n)2 מתכנס והטור ∞ ∑ n=1 1 (2n−1)2 היות שהטור (, אז ∞ ∑ n=1 1 n2 בקלות על ידי מבחן ההשוואה הגבולי עם הטור ∞ ∑ n=1 ( 1 (2n − 1)2 + 1 (2n)2 ) = AOS ∞ ∑ n=1 1 (2n − 1)2 + ∞ ∑ n=1 1 (2n)2 ולכן מהסעיף הראשון נקבל כי π2 6 = ∞ ∑ n=1 1 (2n − 1)2 + 1 4 · π2 6 ולכן ∞ ∑ n=1 1 (2n − 1)2 = 3 4 · π2 6 = π2 8 . ∞ ∑ n=1 (−1)n+1 1 n2 = π2 12 3. הוכיחו כי פתרון: מתכנס )טור לייבניץ(, אז ממשפט השמת הסוגריים ∞ ∑ n=1 (−1)n+1 1 n2 היות שהטור נקבל כי ∞ ∑ n=1 (−1)n+1 1 n2 = ( 1 − 1 22 ) + ( 1 32 − 1 42 ) +... = ∞ ∑ n=1 ( 1 (2n − 1)2 − 1 (2n)2 ) ולכן ∞ ∑ n=1 (−1)n+1 1 n2 = ∞ ∑ n=1 ( 1 (2n − 1)2 − 1 (2n)2 ) = AOS ∞ ∑ n=1 1 (2n − 1)2 − ∞ ∑ n=1 1 (2n)2 = π2 8 − 1 4 · π2 6 = π2 8 − π2 24 = 3π2 − π2 24 = 2π2 24 = π2 12 7",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "2",
+        "content": "איי 2 זה המקדם של איקס בריבוע, או במקרה הזה איקס ועוד אחד בריבוע. אין פה איקס ועוד אחד בריבוע, שזה אומר מיידית שאיי 2 הוא 0. ואם תשאלו אותי מה זה,",
         "topicIds": [
           "גבולות",
           "התכנסות-בהחלט",
           "התכנסות-בתנאי",
+          "טורי-חזקות",
           "טורים",
           "מבחן-ההשוואה",
+          "מבחן-המנה",
           "מבחן-השורש",
-          "סדרות"
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
         ],
-        "difficulty": "medium",
+        "difficulty": "unknown",
         "examRelevance": "medium",
         "sourceSnippet": {
-          "sourceFileId": "recitation-recitation-8-hebrew",
-          "filename": "Recitation 8-Hebrew.pdf",
-          "text": ". ∞ ∑ n=1 1 (2n−1)2 = π2 8 2. הוכיחו כי פתרון: נשים לב כי מתקיים ∞ ∑ n=1 1 (2n)2 = 1 4 ∞ ∑ n=1 1 n2 = 1 4 · π2 6 מתכנס )ניתן להראות זאת ∞ ∑ n=1 1 (2n)2 מתכנס והטור ∞ ∑ n=1 1 (2n−1)2 היות שהטור (, אז ∞ ∑ n=1 1 n2 בקלות על ידי מבחן ההשוואה הגבולי עם הטור ∞ ∑ n=1 ( 1 (2n − 1)2 + 1 (2n)2 ) = AOS ∞ ∑ n=1 1 (2n − 1)2 + ∞ ∑ n=1 1 (2n)2 ולכן מהסעיף הראשון נקבל כי π2 6 = ∞ ∑ n=1 1 (2n − 1)2 + 1 4 · π2 6 ולכן ∞ ∑ n=1 1 (2n − 1)2 = 3 4 · π2 6 = π2 8 . ∞ ∑ n=1 (−1)n+1 1 n2 = π2 12 3. הוכיחו כי פתרון: מתכנס )טור לייבניץ(, אז ממשפט השמת הסוגריים ∞ ∑ n=1 (−1)n+1 1 n2 היות שהטור נקבל כי ∞ ∑ n=1 (−1)n+1 1 n2 = ( 1 − 1 22 ) + ( 1 32 − 1 42 ) +... = ∞ ∑ n=1 ( 1 (2n − 1)2 − 1 (2n)2 ) ולכן ∞ ∑ n=1 (−1)n+1 1 n2 = ∞ ∑ n=1 ( 1 (2n − 1)2 − 1 (2n)2 ) = AOS ∞ ∑ n=1 1 (2n − 1)2 − ∞ ∑ n=1 1 (2n)2 = π2 8 − 1 4 · π2 6 = π2 8 − π2 24 = 3π2 − π2 24 = 2π2 24 = π2 12 7"
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "איי 2 זה המקדם של איקס בריבוע, או במקרה הזה איקס ועוד אחד בריבוע. אין פה איקס ועוד אחד בריבוע, שזה אומר מיידית שאיי 2 הוא 0. ואם תשאלו אותי מה זה,",
+          "startOffset": 2308,
+          "endOffset": 2454
         },
         "confidence": 0.56
       },
       {
-        "id": "recitation-recitation-8-hebrew-question-4",
+        "id": "recitation-script-recitation-9-max-question-4",
         "sourceType": "recitation",
-        "sourceFileId": "recitation-recitation-8-hebrew",
+        "sourceFileId": "recitation-script-recitation-9-max",
         "questionNumber": "1",
-        "content": "הוכיחו או הפריכו כל אחת מהטענות הבאות: סדרה של מספרים ממשיים. (an)∞ n=1 תהי מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס, אזי ∞ ∑ n=1 an 1. אם פתרון: הטענה לא נכונה. נגדיר 2 ≤ n ∈ N ולכל a1 = 0 דוגמא נגדית: an = (−1)n+1 ln n נשים לב ש ∞ ∑ n=1 an = ∞ ∑ n=2 (−1)n+1 ln n מקיים את התנאים של המסקנה בתזכורת ולכן מתכנס, אבל ∞ ∑ n=1 ∣ ∣ ∣ an n ∣ ∣ ∣ = ∞ ∑ n=2 ∣ ∣ ∣ ∣ ∣ ∣ [ (−1)n ln n ] n ∣ ∣ ∣ ∣ ∣ ∣ = ∞ ∑ n=2 1 n ln n = ∞ לא מתכנס בהחלט. ∞ ∑ n=1 an n ולכן מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס, אזי ∞ ∑ n=1 a2 n 2. אם פתרון: הטענה נכונה. מתקיים n ∈ N נשים לב שלכל ( | an | − 1 n )2 ≥ 0 ⇒ a2 n − 2 | an | n + 1 n2 ≥ 0 ⇒ | an | n ≤ 1 2 · ( a2 n + 1 n2 ) נשים לב ששני הביטויים הם אי שליליים ולכן נוכל להשתמש במבחן ההשוואה, ∞ ∑ n=1 | an | n ≤ ∞ ∑ n=1 1 2 · ( a2 n + 1 n2 ) < ∞ מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס ולכן ∞ ∑ n=1 |an| n ולכן 8",
+        "content": "זה איי 1. ואם תשאלו אותי מה זה, זה איי 3. ומה זה איי 4? ברור 0, אין מה לחשוב, אין פה חזקות זוגיות בכלל. אם אין פה חזקות זוגיות, זה אומר שהמקדם הוא פשוט 0.",
         "topicIds": [
           "גבולות",
           "התכנסות-בהחלט",
           "התכנסות-בתנאי",
+          "טורי-חזקות",
           "טורים",
           "מבחן-ההשוואה",
+          "מבחן-המנה",
           "מבחן-השורש",
-          "סדרות"
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
         ],
-        "difficulty": "medium",
+        "difficulty": "unknown",
         "examRelevance": "medium",
         "sourceSnippet": {
-          "sourceFileId": "recitation-recitation-8-hebrew",
-          "filename": "Recitation 8-Hebrew.pdf",
-          "text": "הוכיחו או הפריכו כל אחת מהטענות הבאות: סדרה של מספרים ממשיים. (an)∞ n=1 תהי מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס, אזי ∞ ∑ n=1 an 1. אם פתרון: הטענה לא נכונה. נגדיר 2 ≤ n ∈ N ולכל a1 = 0 דוגמא נגדית: an = (−1)n+1 ln n נשים לב ש ∞ ∑ n=1 an = ∞ ∑ n=2 (−1)n+1 ln n מקיים את התנאים של המסקנה בתזכורת ולכן מתכנס, אבל ∞ ∑ n=1 ∣ ∣ ∣ an n ∣ ∣ ∣ = ∞ ∑ n=2 ∣ ∣ ∣ ∣ ∣ ∣ [ (−1)n ln n ] n ∣ ∣ ∣ ∣ ∣ ∣ = ∞ ∑ n=2 1 n ln n = ∞ לא מתכנס בהחלט. ∞ ∑ n=1 an n ולכן מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס, אזי ∞ ∑ n=1 a2 n 2. אם פתרון: הטענה נכונה. מתקיים n ∈ N נשים לב שלכל ( | an | − 1 n )2 ≥ 0 ⇒ a2 n − 2 | an | n + 1 n2 ≥ 0 ⇒ | an | n ≤ 1 2 · ( a2 n + 1 n2 ) נשים לב ששני הביטויים הם אי שליליים ולכן נוכל להשתמש במבחן ההשוואה, ∞ ∑ n=1 | an | n ≤ ∞ ∑ n=1 1 2 · ( a2 n + 1 n2 ) < ∞ מתכנס בהחלט. ∞ ∑ n=1 an n מתכנס ולכן ∞ ∑ n=1 |an| n ולכן 8",
-          "startOffset": 4906,
-          "endOffset": 5714
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "זה איי 1. ואם תשאלו אותי מה זה, זה איי 3. ומה זה איי 4? ברור 0, אין מה לחשוב, אין פה חזקות זוגיות בכלל. אם אין פה חזקות זוגיות, זה אומר שהמקדם הוא פשוט 0.",
+          "startOffset": 2456,
+          "endOffset": 2610
         },
         "confidence": 0.56
       },
       {
-        "id": "recitation-recitation-8-hebrew-question-5",
+        "id": "recitation-script-recitation-9-max-question-5",
         "sourceType": "recitation",
-        "sourceFileId": "recitation-recitation-8-hebrew",
+        "sourceFileId": "recitation-script-recitation-9-max",
         "questionNumber": "1",
-        "content": "∞ ∑ n=1 (−1) n+1an , אזי הטור lim n→∞an = 0 סדרה אי שלילית כך ש (an)∞ n=1 3. נניח כי מתכנס. פתרון: הטענה לא נכונה )חלק מהתנאים של משפט לייבניץ לא רשומים(. .1, 0, 1 2 , 0, 1 3 , ... נבחר את הסדרה כלומר נבחר את הסדרה an = { 1 k n = 2k − 1 0 n = 2k = { 2 n+1 n is odd 0 n is even כי הגבול של האיברים במקומות הזוגיים שווה לגבול של lim n→∞an = 0 נשים לב כי האיברים במקומות האי זוגיים ושניהם שווים לאפס. נראה כי הטור מתבדר ∞ ∑ n=1 (−1) n+1an = 1 + 0 + 1 2 + 0 + 1 3 + 0 + ... נשים סוגריים באופן הבא: (1 + 0) + ( 1 2 + 0 ) + ( 1 3 + 0 ) .. קיבלנו את הטור ∞ ∑ n=1 ( 1 n + 0 ) = ∞ ∑ n=1 1 n זהו טור מתבדר, ולכן ממשפט השמת הסוגריים, גם הטור המקורי מתבדר. 9",
+        "content": "מינוס 1. מצוין. כל מי שחשב בראש ש1 וטעה, אני אגיד לכם למה טעיתם אם חשבתם 1. כי איי 2 זה לא מה שמתקבל כשאני מציב אין שווה 2.",
         "topicIds": [
           "גבולות",
           "התכנסות-בהחלט",
           "התכנסות-בתנאי",
+          "טורי-חזקות",
           "טורים",
           "מבחן-ההשוואה",
+          "מבחן-המנה",
           "מבחן-השורש",
-          "סדרות"
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
         ],
         "difficulty": "medium",
         "examRelevance": "medium",
         "sourceSnippet": {
-          "sourceFileId": "recitation-recitation-8-hebrew",
-          "filename": "Recitation 8-Hebrew.pdf",
-          "text": "∞ ∑ n=1 (−1) n+1an , אזי הטור lim n→∞an = 0 סדרה אי שלילית כך ש (an)∞ n=1 3. נניח כי מתכנס. פתרון: הטענה לא נכונה )חלק מהתנאים של משפט לייבניץ לא רשומים(. .1, 0, 1 2 , 0, 1 3 , ... נבחר את הסדרה כלומר נבחר את הסדרה an = { 1 k n = 2k − 1 0 n = 2k = { 2 n+1 n is odd 0 n is even כי הגבול של האיברים במקומות הזוגיים שווה לגבול של lim n→∞an = 0 נשים לב כי האיברים במקומות האי זוגיים ושניהם שווים לאפס. נראה כי הטור מתבדר ∞ ∑ n=1 (−1) n+1an = 1 + 0 + 1 2 + 0 + 1 3 + 0 + ... נשים סוגריים באופן הבא: (1 + 0) + ( 1 2 + 0 ) + ( 1 3 + 0 ) .. קיבלנו את הטור ∞ ∑ n=1 ( 1 n + 0 ) = ∞ ∑ n=1 1 n זהו טור מתבדר, ולכן ממשפט השמת הסוגריים, גם הטור המקורי מתבדר. 9"
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "מינוס 1. מצוין. כל מי שחשב בראש ש1 וטעה, אני אגיד לכם למה טעיתם אם חשבתם 1. כי איי 2 זה לא מה שמתקבל כשאני מציב אין שווה 2.",
+          "startOffset": 9144,
+          "endOffset": 9267
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-6",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "2",
+        "content": "אין 2 זה המקדם של איקס בריבוע, איקס בריבוע פה מתקבל כשאני מציב אין שווה 1, כשאני מציב אין שווה 1 זה איקס בריבוע ופה כתוב מינוס 1 בחזקת 1 שזה מינוס 1.",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "אין 2 זה המקדם של איקס בריבוע, איקס בריבוע פה מתקבל כשאני מציב אין שווה 1, כשאני מציב אין שווה 1 זה איקס בריבוע ופה כתוב מינוס 1 בחזקת 1 שזה מינוס 1.",
+          "startOffset": 9269,
+          "endOffset": 9418
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-7",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "7",
+        "content": "אז זה וואלה, זה וואחד משפט באינפי. זה הוכחה מורכבת, זה משפט כבד. האם זה מה שקרה פה? ממש לא. לא, פשוט נתת שם חדש. בדיוק, חבר'ה, זה מי שאמר סימון, אהבתי.",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "אז זה וואלה, זה וואחד משפט באינפי. זה הוכחה מורכבת, זה משפט כבד. האם זה מה שקרה פה? ממש לא. לא, פשוט נתת שם חדש. בדיוק, חבר'ה, זה מי שאמר סימון, אהבתי.",
+          "startOffset": 10874,
+          "endOffset": 11025
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-8",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "8",
+        "content": "יש לי פה פרמטר, אני קורא לו בשם אחר. ואני חושב שדוגמה טובה לזה, אני אראה לכם את זה למשל למטה פה. נגיד מישהו יגיד לכם את השאלה הבאה, קבעו עבור אילו ערכי אלפא הטור הזה מתכנס.",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "יש לי פה פרמטר, אני קורא לו בשם אחר. ואני חושב שדוגמה טובה לזה, אני אראה לכם את זה למשל למטה פה. נגיד מישהו יגיד לכם את השאלה הבאה, קבעו עבור אילו ערכי אלפא הטור הזה מתכנס.",
+          "startOffset": 11242,
+          "endOffset": 11414
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-9",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "1",
+        "content": "שזה אם ורק אם איקס בריבוע קטן מ1, שזה אם ורק אם איקס בין 1 למינוס 1.",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "שזה אם ורק אם איקס בריבוע קטן מ1, שזה אם ורק אם איקס בין 1 למינוס 1.",
+          "startOffset": 12388,
+          "endOffset": 12456
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-10",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "6",
+        "content": "בגדול, מה שאתם אומרים להסתכל כאילו על התרגיל הזה, להגיד שמע, התבלבלת בתרגול, למה לא עשית את זה כבר בתרגול 6? מה זה קשור עכשיו? כאילו, אנחנו ידענו לפתור את זה בתרגול 6. כרגע אני עושה שאלות חימום, שדרכן אני מנסה להבין מה זה אומר ההצבה הזאת.",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "בגדול, מה שאתם אומרים להסתכל כאילו על התרגיל הזה, להגיד שמע, התבלבלת בתרגול, למה לא עשית את זה כבר בתרגול 6? מה זה קשור עכשיו? כאילו, אנחנו ידענו לפתור את זה בתרגול 6. כרגע אני עושה שאלות חימום, שדרכן אני מנסה להבין מה זה אומר ההצבה הזאת.",
+          "startOffset": 12848,
+          "endOffset": 13086
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-11",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "1",
+        "content": "הכול זה אם ורק אם. שני החצים האלה זה אם ורק אם. אז זאת אומרת, מה שאתה תכלס אומר פה על הדף זה, הדבר הזה עובד אם איקס הוא בין 1 למינוס 1.",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "הכול זה אם ורק אם. שני החצים האלה זה אם ורק אם. אז זאת אומרת, מה שאתה תכלס אומר פה על הדף זה, הדבר הזה עובד אם איקס הוא בין 1 למינוס 1.",
+          "startOffset": 14170,
+          "endOffset": 14305
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-12",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "12",
+        "content": "ופה עשיתי הכל הפוך. אני אומר, פה קודם מצאתי את תחום ההתכנסות ואחרי זה בדיעבד גיליתי מה הרדיוס, שזה קצת מוזר, זה לא מה שנעשה בשאלות היותר קשות. אבל למה זה אמור להפריע לך? כאילו, אין עם זה שום בעיה.",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "ופה עשיתי הכל הפוך. אני אומר, פה קודם מצאתי את תחום ההתכנסות ואחרי זה בדיעבד גיליתי מה הרדיוס, שזה קצת מוזר, זה לא מה שנעשה בשאלות היותר קשות. אבל למה זה אמור להפריע לך? כאילו, אין עם זה שום בעיה.",
+          "startOffset": 14721,
+          "endOffset": 14917
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-13",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "1.5",
+        "content": "מינוס 1.5. מינוס 1.5, ואני רוצה, ואם אני אשאל אתכם מה זה איי 3 פה, אז זה יהיה קצת מבלבל, אני אגיד לכם למה. כי אם אתם באמת רוצים לכתוב את זה בצורה של תוך עסקאות, אז אתם צריכים לכתוב את זה ככה.",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "מינוס 1.5. מינוס 1.5, ואני רוצה, ואם אני אשאל אתכם מה זה איי 3 פה, אז זה יהיה קצת מבלבל, אני אגיד לכם למה. כי אם אתם באמת רוצים לכתוב את זה בצורה של תוך עסקאות, אז אתם צריכים לכתוב את זה ככה.",
+          "startOffset": 15969,
+          "endOffset": 16160
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-14",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "2",
+        "content": "צריך להיות 2 בחזקת שניהן, איקס ועוד 1.5 בחזקת שניהן, לחלק ל4 בחזקת שניהן.",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "צריך להיות 2 בחזקת שניהן, איקס ועוד 1.5 בחזקת שניהן, לחלק ל4 בחזקת שניהן.",
+          "startOffset": 16162,
+          "endOffset": 16235
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-15",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "2",
+        "content": "לא הבנתי. חכה, חכה, שנייה, עוד שנייה אני אצור שאלות. אני אומר, יש לי פה איזשהו רדוס שהוא 2, שאני יודע להבין את זה באופן מיידי, כי אני רואה שהמרחק לפה הוא 2 והמרחק לפה הוא 2.",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "לא הבנתי. חכה, חכה, שנייה, עוד שנייה אני אצור שאלות. אני אומר, יש לי פה איזשהו רדוס שהוא 2, שאני יודע להבין את זה באופן מיידי, כי אני רואה שהמרחק לפה הוא 2 והמרחק לפה הוא 2.",
+          "startOffset": 17943,
+          "endOffset": 18116
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-16",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "9",
+        "content": "ומה אני רוצה להגיד לסיכום השאלה הזאת, לפני שאתם שואלים שאלות, אז אני רק אסכם כמה דברים. אחד, הבנתי מה לעשות כשהכל בחזקות אין. זה שאלה אחת, סיימנו עם שאלה אחת בשיעורי הבית 9.",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "ומה אני רוצה להגיד לסיכום השאלה הזאת, לפני שאתם שואלים שאלות, אז אני רק אסכם כמה דברים. אחד, הבנתי מה לעשות כשהכל בחזקות אין. זה שאלה אחת, סיימנו עם שאלה אחת בשיעורי הבית 9.",
+          "startOffset": 18118,
+          "endOffset": 18291
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-17",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "17",
+        "content": "זה שאלות שאני אוהב שאתם שואלים וחושבים עליהן, כי אינטואיציות והבנה עמוקה של המבנה של טורחסקוט, זה מאוד מאוד חשוב כדי לפתור אחרי זה שאלות של הוכח או הפריח וכך הלאה, ואנחנו נתעסק בזה בסוף התרגול.",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "זה שאלות שאני אוהב שאתם שואלים וחושבים עליהן, כי אינטואיציות והבנה עמוקה של המבנה של טורחסקוט, זה מאוד מאוד חשוב כדי לפתור אחרי זה שאלות של הוכח או הפריח וכך הלאה, ואנחנו נתעסק בזה בסוף התרגול.",
+          "startOffset": 21271,
+          "endOffset": 21464
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-18",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "2",
+        "content": "אז לא נגיד דברים כאלה באינפי. אבל אני אניח, לצורך השרטוט טיוטה שלי, אני אניח שהר 2 גדול מהר 1. מותר לי בטיוטה לעשות מה שאני רוצה. בפתרון הפורמלי אני אכתוב המינימום והמקסימום.",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "אז לא נגיד דברים כאלה באינפי. אבל אני אניח, לצורך השרטוט טיוטה שלי, אני אניח שהר 2 גדול מהר 1. מותר לי בטיוטה לעשות מה שאני רוצה. בפתרון הפורמלי אני אכתוב המינימום והמקסימום.",
+          "startOffset": 24121,
+          "endOffset": 24295
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-19",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "3",
+        "content": "זה אזור 3, זה אזור 3. ומה אני יודע לגבי אזור 1? מה אתם אומרים לגבי הטור הזה?",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "זה אזור 3, זה אזור 3. ומה אני יודע לגבי אזור 1? מה אתם אומרים לגבי הטור הזה?",
+          "startOffset": 25142,
+          "endOffset": 25218
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-20",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "2",
+        "content": "אם אזור 2 נמחק, אני לא יכול להעסיק שום דבר לאזור 3 במשפט הבל, והאמת שזה בכלל לא נכון כשער 1 שווה לער 2. אם אתם רוצים להמשיך לחקור את זה, תעשו בבית, אני לא אפתח את זה לדיון, אני רק אומר, זה לא נכון כשער 1 שווה לער 2. למה?",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "אם אזור 2 נמחק, אני לא יכול להעסיק שום דבר לאזור 3 במשפט הבל, והאמת שזה בכלל לא נכון כשער 1 שווה לער 2. אם אתם רוצים להמשיך לחקור את זה, תעשו בבית, אני לא אפתח את זה לדיון, אני רק אומר, זה לא נכון כשער 1 שווה לער 2. למה?",
+          "startOffset": 27942,
+          "endOffset": 28162
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-21",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "21",
+        "content": "טוב, אז אני מקווה שככה הבנו איך אפשר בצורה נחמדה להתמודד פה, ותכלס הוכחנו משפט שימושי להמשך. אתם יכולים להשתמש במשפט הזה כשאתם פותרים שאלות בשיעורי בית. יכול לעזור לכם גם. שאלות סיכום לגבי התרגיל הזה.",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "טוב, אז אני מקווה שככה הבנו איך אפשר בצורה נחמדה להתמודד פה, ותכלס הוכחנו משפט שימושי להמשך. אתם יכולים להשתמש במשפט הזה כשאתם פותרים שאלות בשיעורי בית. יכול לעזור לכם גם. שאלות סיכום לגבי התרגיל הזה.",
+          "startOffset": 29636,
+          "endOffset": 29836
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-22",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "22",
+        "content": "ואז אתה לא יכול להגיד במשפט הבל שבאזור שלו זה מתבדר ואז זה בכלל לא נכון. אפשר לחשוב על זה בבית. הבנתי, סבבה. אם אין לכם מספיק הוכח או הפרש, תרגישו שהתרגיל קצר מדי.",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "ואז אתה לא יכול להגיד במשפט הבל שבאזור שלו זה מתבדר ואז זה בכלל לא נכון. אפשר לחשוב על זה בבית. הבנתי, סבבה. אם אין לכם מספיק הוכח או הפרש, תרגישו שהתרגיל קצר מדי.",
+          "startOffset": 30400,
+          "endOffset": 30563
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-23",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "23",
+        "content": "היה לו עוד אחד. בסדר? הנה, הוכח או הפרח, מה קורה כשער אחד שווה לער שתיים? עוד שאלות?",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "היה לו עוד אחד. בסדר? הנה, הוכח או הפרח, מה קורה כשער אחד שווה לער שתיים? עוד שאלות?",
+          "startOffset": 30565,
+          "endOffset": 30649
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-24",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "1",
+        "content": "כשאתם מציבים אין שווה 1 פה, אתם מקבלים איקס בחזקת 5. זה אומר שכל ה... אין פה איקס בחזקת 4, אין איקס בחזקת 3, אין איקס בחזקת 2, אין איקס בחזקת 1, זה אומר שכולם אפסים שם.",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "כשאתם מציבים אין שווה 1 פה, אתם מקבלים איקס בחזקת 5. זה אומר שכל ה... אין פה איקס בחזקת 4, אין איקס בחזקת 3, אין איקס בחזקת 2, אין איקס בחזקת 1, זה אומר שכולם אפסים שם.",
+          "startOffset": 31569,
+          "endOffset": 31737
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-25",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "8",
+        "content": "זה חשוב לשים לב. מה זה 8? תשובה מהירה. 4 בריבוע חלקי 2. מה זה 8?",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "זה חשוב לשים לב. מה זה 8? תשובה מהירה. 4 בריבוע חלקי 2. מה זה 8?",
+          "startOffset": 31739,
+          "endOffset": 31803
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-26",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "0",
+        "content": "0. למה 0? איזה חזקות יש פה? רק חזקות אי זוגיות, נכון? יש פה איקס בחמישית, איקס בשביעית, איקס בתשיעית, אין חזקות זוגיות. יאללה, שאלה שעכשיו לא 0, מה זה אי 5?",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "0. למה 0? איזה חזקות יש פה? רק חזקות אי זוגיות, נכון? יש פה איקס בחמישית, איקס בשביעית, איקס בתשיעית, אין חזקות זוגיות. יאללה, שאלה שעכשיו לא 0, מה זה אי 5?",
+          "startOffset": 31805,
+          "endOffset": 31961
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-27",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "4",
+        "content": "4. 4. למה? כי איי 5 מתקבל כשאני מציב אין שווה 1. כשאני מציב אין שווה 1 אני מקבל איקס בחזקת 5, 4 בחזקת 1 חלקי 1, אז זה 4 בחזקת 1 חלקי 1. טוב, למה אני עושה את זה בכלל? אנחנו נבין עוד מעט.",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "4. 4. למה? כי איי 5 מתקבל כשאני מציב אין שווה 1. כשאני מציב אין שווה 1 אני מקבל איקס בחזקת 5, 4 בחזקת 1 חלקי 1, אז זה 4 בחזקת 1 חלקי 1. טוב, למה אני עושה את זה בכלל? אנחנו נבין עוד מעט.",
+          "startOffset": 31963,
+          "endOffset": 32148
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-28",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "28",
+        "content": "נכון? אם אני מוצא את הרדיוס, החיים טובים. אז אני חוזר לשיחה שעשינו בהתחלה. בשאלות הראשונות עשינו משהו מאוד מאוד מוזר. קודם מצאנו את תחום ההתכנסות ואחרי זה את הרדיוס, שזה מוזר לעשות את זה, אבל זה היה אקטור גיאומטרי.",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "נכון? אם אני מוצא את הרדיוס, החיים טובים. אז אני חוזר לשיחה שעשינו בהתחלה. בשאלות הראשונות עשינו משהו מאוד מאוד מוזר. קודם מצאנו את תחום ההתכנסות ואחרי זה את הרדיוס, שזה מוזר לעשות את זה, אבל זה היה אקטור גיאומטרי.",
+          "startOffset": 33072,
+          "endOffset": 33286
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-29",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "0",
+        "content": "למה באסה? כי הגבול שלו יהיה 0, אבל הגבול שלו לא יהיה 0. אם הגבול של הזוגי והאי זוגי לא יוצא אותו דבר, זה אומר שהגבול לא קיים במובן הרחב, וזה אומר שאני בכלל לא יכול להשתמש בכל מה שכתוב פה.",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "למה באסה? כי הגבול שלו יהיה 0, אבל הגבול שלו לא יהיה 0. אם הגבול של הזוגי והאי זוגי לא יוצא אותו דבר, זה אומר שהגבול לא קיים במובן הרחב, וזה אומר שאני בכלל לא יכול להשתמש בכל מה שכתוב פה.",
+          "startOffset": 35588,
+          "endOffset": 35775
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-30",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "4",
+        "content": "של 4 בחזקת אין חלקי אין, שזה לימיט של אין שואף לאין סוף של 4 לחלק לאין בחזקת 1 חלקי אין, שכל ילד שהיה כבר בשני התרגולים האחרונים יודע שזה גבול שכל הזמן חוזר על עצמו שהוא 1, שזה 4.",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "של 4 בחזקת אין חלקי אין, שזה לימיט של אין שואף לאין סוף של 4 לחלק לאין בחזקת 1 חלקי אין, שכל ילד שהיה כבר בשני התרגולים האחרונים יודע שזה גבול שכל הזמן חוזר על עצמו שהוא 1, שזה 4.",
+          "startOffset": 39421,
+          "endOffset": 39600
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-31",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "31",
+        "content": "ואז משם כבר נמצא תחום ההתכנסות של הטור. הרי מה מצאנו בטורי חזקות? קיצורי דרך. בגלל שיש את התכונה הסימטרית הנפלאה, אז אם מוצאים זה מתכנס בתנאי, סבבה.",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "ואז משם כבר נמצא תחום ההתכנסות של הטור. הרי מה מצאנו בטורי חזקות? קיצורי דרך. בגלל שיש את התכונה הסימטרית הנפלאה, אז אם מוצאים זה מתכנס בתנאי, סבבה.",
+          "startOffset": 44820,
+          "endOffset": 44968
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-32",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "32",
+        "content": "אני נותן פה המון נקודות קטנות כאלה, אני מקווה שאתם סגורים עליהן, צוברים את ארגז הכלים ותתמודדו יפה בבית. בואו נעשה עוד דוגמה מאותו רעיון, עם איזה אלמנט שהוא טיפה שונה. אז חשבו על תחום ההתכנסות של טור החזקות הבא.",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "אני נותן פה המון נקודות קטנות כאלה, אני מקווה שאתם סגורים עליהן, צוברים את ארגז הכלים ותתמודדו יפה בבית. בואו נעשה עוד דוגמה מאותו רעיון, עם איזה אלמנט שהוא טיפה שונה. אז חשבו על תחום ההתכנסות של טור החזקות הבא.",
+          "startOffset": 45204,
+          "endOffset": 45415
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-33",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "1",
+        "content": "כמה הגבול הזה שווה? 1. אבל האמת שלא הסברתי את זה פה ואתם בעיקרון צריכים להסביר את זה. את זה אתם יכולים לקחת את הלמה של היינה, להציב איקס אין שווה 1 חלקי אין לצד, ואז יהיה סינוס איקס בריבוע חלקי איקס בריבוע. 1. אותו דבר נחזור על זה פה.",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "כמה הגבול הזה שווה? 1. אבל האמת שלא הסברתי את זה פה ואתם בעיקרון צריכים להסביר את זה. את זה אתם יכולים לקחת את הלמה של היינה, להציב איקס אין שווה 1 חלקי אין לצד, ואז יהיה סינוס איקס בריבוע חלקי איקס בריבוע. 1. אותו דבר נחזור על זה פה.",
+          "startOffset": 48096,
+          "endOffset": 48330
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-34",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "4",
+        "content": "את השאר אני כבר יודע. בוא נעשה את זה. אז למשל עבור איקס שווה 4, מה אנחנו מקבלים פה? אם אני מציג פה איקס שווה 4, זה 4 פחות 3 בחזקת 1, זה פשוט 1.",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "את השאר אני כבר יודע. בוא נעשה את זה. אז למשל עבור איקס שווה 4, מה אנחנו מקבלים פה? אם אני מציג פה איקס שווה 4, זה 4 פחות 3 בחזקת 1, זה פשוט 1.",
+          "startOffset": 48968,
+          "endOffset": 49111
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-35",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "6",
+        "content": "אני אגיד לכם מה התשובה, שבעיקרון זאת שאלה משיעורי בית 6. מה הבעיה? אנחנו כבר בשבוע 9, אנחנו לא זוכרים פיקס מה קרה בשבוע 6. אבל אני כן רוצה להעיר פה איזושהי הערה כללית חשובה,",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "אני אגיד לכם מה התשובה, שבעיקרון זאת שאלה משיעורי בית 6. מה הבעיה? אנחנו כבר בשבוע 9, אנחנו לא זוכרים פיקס מה קרה בשבוע 6. אבל אני כן רוצה להעיר פה איזושהי הערה כללית חשובה,",
+          "startOffset": 49316,
+          "endOffset": 49489
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-36",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "1",
+        "content": "אז זה תמיד כזה סינוס של 1, סינוס של 1 חלקי מספר שגדול מ1, או 1. אז ברור שזה מסתדר פה. אז אם סינוס איקס קטן שווה מאיקס, אז גם סינוס בריבוע איקס קטן שווה מאיקס בריבוע, כל עוד זה חיובי כמובן, וזה חיובי.",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "אז זה תמיד כזה סינוס של 1, סינוס של 1 חלקי מספר שגדול מ1, או 1. אז ברור שזה מסתדר פה. אז אם סינוס איקס קטן שווה מאיקס, אז גם סינוס בריבוע איקס קטן שווה מאיקס בריבוע, כל עוד זה חיובי כמובן, וזה חיובי.",
+          "startOffset": 50294,
+          "endOffset": 50493
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-37",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "4",
+        "content": "אז זה מה שקורה פה באיקס שווה 4. מה קורה עבור איקס שווה 2? עבור איקס שווה 2 אנחנו מקבלים, אם אני חוזר לפה, 2 פחות 3 בחזקתנו, שזה מינוס 1 בחזקתנו. אז אני שואל אתכם,",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "אז זה מה שקורה פה באיקס שווה 4. מה קורה עבור איקס שווה 2? עבור איקס שווה 2 אנחנו מקבלים, אם אני חוזר לפה, 2 פחות 3 בחזקתנו, שזה מינוס 1 בחזקתנו. אז אני שואל אתכם,",
+          "startOffset": 50965,
+          "endOffset": 51127
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-38",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "2",
+        "content": "אתם יודעים שאם תשימו ערך מוחלט, תקבלו את מה שכתוב למעלה, ולכן זה מתכנס בהחלט. כי הוכחנו את זה לפני רגע למעלה. ולכן אני מוצא שספציפית בתרגיל הזה, התור מתכנס גם ב2 וגם ב4. ולכן לסיכום אני אכתוב את הדבר הזה.",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "אתם יודעים שאם תשימו ערך מוחלט, תקבלו את מה שכתוב למעלה, ולכן זה מתכנס בהחלט. כי הוכחנו את זה לפני רגע למעלה. ולכן אני מוצא שספציפית בתרגיל הזה, התור מתכנס גם ב2 וגם ב4. ולכן לסיכום אני אכתוב את הדבר הזה.",
+          "startOffset": 52206,
+          "endOffset": 52410
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-39",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "6",
+        "content": "יופי, סיימנו את סעיף א' של שבוע הבא, שזה בעצם התרגיל של היום, שזה כולל לדעת איך נמצאים את הרדיוס, וזה כולל לדעת לבדוק קצוות, שכל בדיקה מהקצוות זה שבועות 6 עד 8.",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "יופי, סיימנו את סעיף א' של שבוע הבא, שזה בעצם התרגיל של היום, שזה כולל לדעת איך נמצאים את הרדיוס, וזה כולל לדעת לבדוק קצוות, שכל בדיקה מהקצוות זה שבועות 6 עד 8.",
+          "startOffset": 52541,
+          "endOffset": 52701
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-script-recitation-9-max-question-40",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "questionNumber": "40",
+        "content": "שאלות סיכום, אולי אני אשים את זה פה, רואים את זה יותר יפה, לגבי התרגיל הזה. לא משנה, אותו דבר. ונעבור לפרק האחרון של התרגול הזה, קצת הוכח או הפרח, לצבור קצת אינטואיציות לקראת שיעורי הבית.",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-script-recitation-9-max",
+          "filename": "recitation-9-max.txt",
+          "text": "שאלות סיכום, אולי אני אשים את זה פה, רואים את זה יותר יפה, לגבי התרגיל הזה. לא משנה, אותו דבר. ונעבור לפרק האחרון של התרגול הזה, קצת הוכח או הפרח, לצבור קצת אינטואיציות לקראת שיעורי הבית.",
+          "startOffset": 52754,
+          "endOffset": 52941
         },
         "confidence": 0.56
       }
     ],
     "solutionPatterns": [
       {
-        "id": "recitation-recitation-8-hebrew-proof-pattern-1",
-        "title": "∞ ∑ n=1 [ (−1)n+1 n · (1 + 1 n )n]",
-        "patternType": "comparison",
+        "id": "recitation-script-recitation-9-max-proof-pattern-1",
+        "title": "אז זה וואלה, זה וואחד משפט באינפי",
+        "patternType": "proof-from-markers",
         "steps": [
           "Identify the relevant assumptions from the source statement.",
-          "Compare to a known convergent/divergent object.",
-          "Reduce the claim to a limit statement.",
-          "Construct or justify the required existence statement.",
           "Close the argument using the cited theorem or criterion."
         ],
         "topicIds": [
           "גבולות",
           "התכנסות-בהחלט",
           "התכנסות-בתנאי",
+          "טורי-חזקות",
           "טורים",
           "מבחן-ההשוואה",
+          "מבחן-המנה",
           "מבחן-השורש",
-          "סדרות"
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
         ],
         "sourceFileIds": [
-          "recitation-recitation-8-hebrew"
+          "recitation-script-recitation-9-max"
         ],
         "relatedQuestionIds": [],
         "commonMistakes": [],
@@ -2112,25 +3700,120 @@
         "confidence": 0.52
       },
       {
-        "id": "recitation-recitation-8-hebrew-proof-pattern-2",
-        "title": "∞ ∑ n=1 (−1) n+1an , אזי הטור lim n→∞an = 0 סדרה אי שלילית כך ש (an)∞ n=1 3",
-        "patternType": "limit",
+        "id": "recitation-script-recitation-9-max-proof-pattern-2",
+        "title": "נכון",
+        "patternType": "proof-from-markers",
         "steps": [
           "Identify the relevant assumptions from the source statement.",
-          "Reduce the claim to a limit statement.",
           "Close the argument using the cited theorem or criterion."
         ],
         "topicIds": [
           "גבולות",
           "התכנסות-בהחלט",
           "התכנסות-בתנאי",
+          "טורי-חזקות",
           "טורים",
           "מבחן-ההשוואה",
+          "מבחן-המנה",
           "מבחן-השורש",
-          "סדרות"
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
         ],
         "sourceFileIds": [
-          "recitation-recitation-8-hebrew"
+          "recitation-script-recitation-9-max"
+        ],
+        "relatedQuestionIds": [],
+        "commonMistakes": [],
+        "examImportance": "medium",
+        "confidence": 0.52
+      },
+      {
+        "id": "recitation-script-recitation-9-max-proof-pattern-3",
+        "title": "זאת שאלה בשיעורי בית, זה שאלה הסעיף הראשון בהוכחה, סעיף חימום כזה",
+        "patternType": "proof-from-markers",
+        "steps": [
+          "Identify the relevant assumptions from the source statement.",
+          "Close the argument using the cited theorem or criterion."
+        ],
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "sourceFileIds": [
+          "recitation-script-recitation-9-max"
+        ],
+        "relatedQuestionIds": [],
+        "commonMistakes": [],
+        "examImportance": "medium",
+        "confidence": 0.52
+      },
+      {
+        "id": "recitation-script-recitation-9-max-proof-pattern-4",
+        "title": "מה קורה בקצוות, לא יודע ולא אכפת לי, כי שאלו אותי רק על הרדיוס",
+        "patternType": "proof-from-markers",
+        "steps": [
+          "Identify the relevant assumptions from the source statement.",
+          "Close the argument using the cited theorem or criterion."
+        ],
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "sourceFileIds": [
+          "recitation-script-recitation-9-max"
+        ],
+        "relatedQuestionIds": [],
+        "commonMistakes": [],
+        "examImportance": "medium",
+        "confidence": 0.52
+      },
+      {
+        "id": "recitation-script-recitation-9-max-proof-pattern-5",
+        "title": "אז מבחן ההשוואה יפתור את זה ברגע",
+        "patternType": "comparison",
+        "steps": [
+          "Identify the relevant assumptions from the source statement.",
+          "Compare to a known convergent/divergent object.",
+          "Close the argument using the cited theorem or criterion."
+        ],
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "מבחן-השורש",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "sourceFileIds": [
+          "recitation-script-recitation-9-max"
         ],
         "relatedQuestionIds": [],
         "commonMistakes": [],
@@ -2139,184 +3822,22 @@
       }
     ],
     "techniques": [
+      "מבחן המנה",
       "מבחן השורש",
       "מבחן ההשוואה",
       "גבול",
       "התכנסות בהחלט"
     ],
-    "commonMistakes": [],
-    "linkedLectureNumber": 7,
-    "topicOverlapWithLinkedLecture": [
-      "גבולות",
-      "טורים",
-      "סדרות"
+    "commonMistakes": [
+      "אז אני בטוח שאם הייתי נותן, הייתי עושה עכשיו איזשהו סקר, לא מעט סטודנטים היו חושבים שאיי 2 בטור הזה, זה מה שמתקבל כשמציבים אין שווה 2, וזה ממש לא נכון.",
+      "אם אזור 2 נמחק, אני לא יכול להעסיק שום דבר לאזור 3 במשפט הבל, והאמת שזה בכלל לא נכון כשער 1 שווה לער 2. אם אתם רוצים להמשיך לחקור את זה, תעשו בבית, אני לא אפתח את זה לדיון, אני רק אומר, זה לא נכון כשער 1 שווה לער 2. למה?",
+      "ואז אתה לא יכול להגיד במשפט הבל שבאזור שלו זה מתבדר ואז זה בכלל לא נכון. אפשר לחשוב על זה בבית. הבנתי, סבבה. אם אין לכם מספיק הוכח או הפרש, תרגישו שהתרגיל קצר מדי.",
+      "כי עשיתי שם הסבר רחב לגבי הסיפור הזה. התשובה היא לא 4 בחזקת אם חלקי אם, זה לא נכון. התשובה היא 4 בחזקת קיי חלקי קיי.",
+      "שתחשבו רגע לבד האם הטענה הזאת נכונה או לא נכונה, ואז ניתן פה את ההסבר המלא. אז קחו דקה, לא להגיד כלום, תחשבו אם זה נכון או לא נכון, תקבלו איזושהי אינטואיציה ראשונית.",
+      "אוקיי, מה אומרים? נכון, לא נכון? אז האמת שזה לא הוגן שאני אתן לכם דקה ולפתור שאלה כזאת, כי...",
+      "זה היה הוגן אם היית נותן לך שאלה כזאת אחרי שהייתי מסביר לכם את כל האינטואיציות שאני אסביר עכשיו. אז אני רוצה רגע להסביר את כל האינטואיציות ואת כל הסרטוטים ואז אתם תענו לי אם זה נכון או לא נכון. כי אני חושב שכרגע איפה שאתם נמצאים, אתם בכלל כאילו מסתכלים על זה,",
+      "אם הגבול של איין לא 0, הרדיוס בהכרח קטן שווה מ1. עכשיו, יש מלא שאלות של נכון, לא נכון, סביב גבול של איין ורדיוסים."
     ],
-    "mappingNeedsReview": false,
-    "examRelevanceNotes": [],
-    "sourceSnippets": [
-      {
-        "sourceFileId": "recitation-recitation-8-hebrew",
-        "filename": "Recitation 8-Hebrew.pdf",
-        "text": "תרגול 8 היום: התכנסות בהחלט, התכנסות בתנאי. • טור לייבניץ. • השמת סוגריים. • תזכורת: התכנסות בהחלט: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי . ∞ ∑ n=k | an |< ∞ מתכנס בהחלט אם ∞ ∑ n=k an נאמר שהטור משפט )מבחן התכנסות בהחלט(: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי מתכנס. ∞ ∑ n=k an מתכנס בהחלט. אזי הטור ∞ ∑ n=k an נניח שהטור התכנסות בתנאי: סדרה של מספרים ממשיים. (an)∞ n=k ותהי 0 ≤ k ∈ Z יהי מתכנס ∞ ∑ n=k an מתכנס בתנאי אם הטור ∞ ∑ n=k an נאמר שהטור )מתכנס, אבל לא בהחלט(. ∞ ∑ n=k | an |= ∞ אבל , הטור מתכנס )הוכחתם בשיעור( אבל הטור ∞ ∑ n=1 (−1)n+1 n :דוגמא לטור שמתכנס בתנאי מתבדר. ∞ ∑ n=1 ∣ ∣ ∣ (−1)n+1 n ∣ ∣ ∣ = ∞ ∑ n=1 1 n 1"
-      },
-      {
-        "sourceFileId": "recitation-recitation-8-hebrew",
-        "filename": "Recitation 8-Hebrew.pdf",
-        "text": "טור לייבניץ: סדרה של מספרים ממשיים. (an)∞ n=1 תהי הוא טור לייבניץ אם: ∞ ∑ n=1 (−1)n+1 · an נאמר שהטור יורדת. (an)∞ n=1 .1 . lim n→∞an = 0 .2 משפט )מבחן לייבניץ(: סדרה של מספרים ממשיים. (an)∞ n=1 תהי הוא טור לייבניץ, אזי הוא מתכנס ∞ ∑ n=1 (−1)n+1 · an נניח שהטור .a1 − a2 ≤ s ≤ a1 ובנוסף, s ∈ R לערך מסקנה: סדרה של מספרים ממשיים. (an)∞ n=k ותהי k ∈ N יהי נניח כי יורדת. (an)∞ n=k . lim n→∞an = 0 כך ש s ∈ R אזי קיים s = ∞ ∑ n=k (−1)n+1 · an .ak − ak+1 ≤| s |≤ ak ובנוסף משפט השמת הסוגריים: אם טור מתכנס אז גם אם נוסיף סוגריים )כאשר בכל סוגר יש מספר סופי של איברים וללא שינוי סדר סכימה( הטור יתכנס לאותו הסכום. 2"
-      },
-      {
-        "sourceFileId": "recitation-recitation-8-hebrew",
-        "filename": "Recitation 8-Hebrew.pdf",
-        "text": "דוגמאות: קבעו האם הטורים הבאים מתכנסים בהחלט, מתכנסים בתנאי או מתבדרים. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] .1 פתרון: נבדוק תחילה התכנסות בהחלט ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ = ∞ ∑ n=1 [∣ ∣arctan (n) + sin n∣ ∣ · 1 1 + cos2 n · n 3n ] 4 ≤ ∞ ∑ n=1 [(∣ ∣arctan (n)∣ ∣ + ∣ ∣sin n∣ ∣) · 1 1 + cos2 n · n 3n ] ≤ ∞ ∑ n=1 [( π 2 + 1 ) · 1 1 + 0 · n 3n ] = ∞ ∑ n=1 [( π 2 + 1 ) · n 3n ] = ( π 2 + 1 ) ∞ ∑ n=1 n 3n מתכנס. נראה זאת על ידי מבחן השורש ∞ ∑ n=1 n 3n הטור lim n→∞ n √ n 3n = lim n→∞ n 1 n 3 = AOL 1 3 < 1 ולכן ממבחן ההשוואה הטור ∞ ∑ n=1 ∣ ∣ ∣ ( arctan(n)+sin n 1+cos2 n ) · n 3n ∣ ∣ ∣ מתכנס בהחלט. ∞ ∑ n=1 [( arctan(n)+sin n 1+cos2 n ) · n 3n ] מתכנס ולכן הטור 3"
-      },
-      {
-        "sourceFileId": "recitation-recitation-8-hebrew",
-        "filename": "Recitation 8-Hebrew.pdf",
-        "text": "∞ ∑ n=2 (−1)n+1 n·ln n .2 פתרון: נבדוק תחילה התכנסות בהחלט ∞ ∑ n=2 ∣ ∣ ∣ (−1)n+1 n·ln n ∣ ∣ ∣ = ∞ ∑ n=2 1 n · ln n ראינו כי הטור מתבדר, לכן הטור לא מתכנס בהחלט. כעת נבדוק התכנסות בתנאי, נעשה זאת בעזרת המסקנה בתזכורת. an = 1 n·ln n נבדוק אם התנאים של המסקנה בתזכורת מתקיימים, כאשר במקרה שלנו .n ≥ 2 לכל lim n→∞ an = lim n→∞ 1 n · ln n = 0 יורדת )1 חלקי סדרה עולה וחיובית(. ( 1 n ln n ) n=2 הסדרה אבל לא מתכנס התנאים מתקיימים ולכן הטור מתכנס בתנאי )כי הוא מתכנס, בהחלט(. 4"
-      }
-    ],
-    "confidence": 0.8999999999999999
-  },
-  {
-    "recitationNumber": 9,
-    "weekNumber": 9,
-    "practicedLectureNumber": 8,
-    "sourceFileId": "recitation-recitation-9-hebrew",
-    "filename": "Recitation_9-Hebrew.pdf",
-    "practicedTopics": [
-      "גבולות",
-      "טורי חזקות",
-      "טורים",
-      "מבחן ההשוואה",
-      "סדרות",
-      "רדיוס התכנסות"
-    ],
-    "questions": [
-      {
-        "id": "recitation-recitation-9-hebrew-question-1",
-        "sourceType": "recitation",
-        "sourceFileId": "recitation-recitation-9-hebrew",
-        "questionNumber": "0",
-        "content": "דוגמאות: , ומצאו את תחוםR עבור כל אחד מהטורים הבאים, חשבו את רדיוס ההתכנסות, ההתכנסות. בתחום ההתכנסות, מצאו ערך מפורש )ללא סימן הסיגמה(. . ∞ ∑ n=0 (−1)n x2n .1 פתרון: מדובר בטור גיאומטרי, נסדר את הטור ∞ ∑ n=0 (−1)n x2n = ∞ ∑ n=0 (−1)n (x2)n = ∞ ∑ n=0 (−x2)n = t=−x2 ∞ ∑ n=0 tn = |t|<1 1 1 − t = 1 1 − (−x2) = 1 1 + x2 , כלומר הטור מתכנס אם\"ם| t |< 1 הטור מתכנס אם\"ם | −x2 |< 1 ⇔| x2 |< 1 ⇔ x2 < 1 ⇔ −1 < x < 1 .R = 1 ולכן רדיוס ההתכנסות של הטור הוא x0 = 0 נשים לב ש . ∞ ∑ n=0 (2x+3)2n 42n .2 פתרון: מדובר בטור גיאומטרי, נסדר את הטור ∞ ∑ n=0 (2x + 3)2n 42n = ∞ ∑ n=0 ( 2x + 3 4 )2n = ∞ ∑ n=0 (( 2x + 3 4 )2)n = t=( 2x+3 4 )2 ∞ ∑ n=0 tn = |t|<1 1 1 − t = 1 1 − ( 2x+3 4 )2 , כלומר הטור מתכנס אם\"ם| t |< 1 הטור מתכנס אם\"ם | ( 2x + 3 4 )2 |< 1 ⇔ ( 2x + 3 4 )2 < 1 ⇔ −1 < 2x + 3 4 < 1 ⇔ −4 < 2x + 3 < 4 ⇔ −7 < 2x < 1 ⇔ −3.5 < x < 0.5 .R = 2 ולכן רדיוס ההתכנסות של הטור הוא x0 = −1.5 נשים לב ש 3",
-        "topicIds": [
-          "גבולות",
-          "טורי-חזקות",
-          "טורים",
-          "מבחן-ההשוואה",
-          "סדרות",
-          "רדיוס-התכנסות"
-        ],
-        "difficulty": "medium",
-        "examRelevance": "medium",
-        "sourceSnippet": {
-          "sourceFileId": "recitation-recitation-9-hebrew",
-          "filename": "Recitation_9-Hebrew.pdf",
-          "text": "דוגמאות: , ומצאו את תחוםR עבור כל אחד מהטורים הבאים, חשבו את רדיוס ההתכנסות, ההתכנסות. בתחום ההתכנסות, מצאו ערך מפורש )ללא סימן הסיגמה(. . ∞ ∑ n=0 (−1)n x2n .1 פתרון: מדובר בטור גיאומטרי, נסדר את הטור ∞ ∑ n=0 (−1)n x2n = ∞ ∑ n=0 (−1)n (x2)n = ∞ ∑ n=0 (−x2)n = t=−x2 ∞ ∑ n=0 tn = |t|<1 1 1 − t = 1 1 − (−x2) = 1 1 + x2 , כלומר הטור מתכנס אם\"ם| t |< 1 הטור מתכנס אם\"ם | −x2 |< 1 ⇔| x2 |< 1 ⇔ x2 < 1 ⇔ −1 < x < 1 .R = 1 ולכן רדיוס ההתכנסות של הטור הוא x0 = 0 נשים לב ש . ∞ ∑ n=0 (2x+3)2n 42n .2 פתרון: מדובר בטור גיאומטרי, נסדר את הטור ∞ ∑ n=0 (2x + 3)2n 42n = ∞ ∑ n=0 ( 2x + 3 4 )2n = ∞ ∑ n=0 (( 2x + 3 4 )2)n = t=( 2x+3 4 )2 ∞ ∑ n=0 tn = |t|<1 1 1 − t = 1 1 − ( 2x+3 4 )2 , כלומר הטור מתכנס אם\"ם| t |< 1 הטור מתכנס אם\"ם | ( 2x + 3 4 )2 |< 1 ⇔ ( 2x + 3 4 )2 < 1 ⇔ −1 < 2x + 3 4 < 1 ⇔ −4 < 2x + 3 < 4 ⇔ −7 < 2x < 1 ⇔ −3.5 < x < 0.5 .R = 2 ולכן רדיוס ההתכנסות של הטור הוא x0 = −1.5 נשים לב ש 3"
-        },
-        "confidence": 0.56
-      },
-      {
-        "id": "recitation-recitation-9-hebrew-question-2",
-        "sourceType": "recitation",
-        "sourceFileId": "recitation-recitation-9-hebrew",
-        "questionNumber": "0",
-        "content": "תרגיל: שתי סדרות של מספרים ממשיים. (bn)∞ n=0 ו (an)∞ n=0 יהיו בהתאמה R2 6 = R1 טורי חזקות עם רדיוסי התכנסות ∞ ∑ n=0 bn · xn , ∞ ∑ n=0 an · xn יהיו .R1, R2 6 = ∞ כך ש . ∞ ∑ n=0 (an ± bn) · xn מצאו את רדיוס ההתכנסות של טור החזקות פתרון: ראשית נשים לב שלא נוכל להשתמש בנוסחת המנה או השורש מכיוון שלא נתון שהגבולות קיימים. נחלק את הפתרון לשלושה חלקים )נראה שרטוט בכיתה(: .x ∈ R יהי , במקרה זה שני הטורים מתכנסים ולכן גם הסכום מתכנס| x |< min {R1, R2} 1. אם מאשט\"מ. , במקרה זה אנחנו יודעים שטור אחדmin {R1, R2} <| x |< max {R1, R2} 2. אם מתבדר שווה מתבדר(. ± מתכנס וטור אחד מתבדר ולכן הטור מתבדר )מתכנס , במקרה זה שני הטורים מתבדרים. נראה שגם הטור של| x |> max {R1, R2} 3. אם הסכום מתבדר. ולכן ממשפט | x |> max {R1, R2} מתכנס עבור ∞ ∑ n=0 (an ± bn)·xn נניח בשלילה ש , סתירה!2 \"אבל\" הטור מתכנס גם באיזור .R = min {R1, R2} לסיכום: מצאנו שרדיוס ההתכנסות של הטור של הסכום הוא .(| x |> min {R1, R2} ומתבדר לכל | x |< min {R1, R2} )הטור מתכנס לכל 4",
-        "topicIds": [
-          "גבולות",
-          "טורי-חזקות",
-          "טורים",
-          "מבחן-ההשוואה",
-          "סדרות",
-          "רדיוס-התכנסות"
-        ],
-        "difficulty": "medium",
-        "examRelevance": "medium",
-        "sourceSnippet": {
-          "sourceFileId": "recitation-recitation-9-hebrew",
-          "filename": "Recitation_9-Hebrew.pdf",
-          "text": "תרגיל: שתי סדרות של מספרים ממשיים. (bn)∞ n=0 ו (an)∞ n=0 יהיו בהתאמה R2 6 = R1 טורי חזקות עם רדיוסי התכנסות ∞ ∑ n=0 bn · xn , ∞ ∑ n=0 an · xn יהיו .R1, R2 6 = ∞ כך ש . ∞ ∑ n=0 (an ± bn) · xn מצאו את רדיוס ההתכנסות של טור החזקות פתרון: ראשית נשים לב שלא נוכל להשתמש בנוסחת המנה או השורש מכיוון שלא נתון שהגבולות קיימים. נחלק את הפתרון לשלושה חלקים )נראה שרטוט בכיתה(: .x ∈ R יהי , במקרה זה שני הטורים מתכנסים ולכן גם הסכום מתכנס| x |< min {R1, R2} 1. אם מאשט\"מ. , במקרה זה אנחנו יודעים שטור אחדmin {R1, R2} <| x |< max {R1, R2} 2. אם מתבדר שווה מתבדר(. ± מתכנס וטור אחד מתבדר ולכן הטור מתבדר )מתכנס , במקרה זה שני הטורים מתבדרים. נראה שגם הטור של| x |> max {R1, R2} 3. אם הסכום מתבדר. ולכן ממשפט | x |> max {R1, R2} מתכנס עבור ∞ ∑ n=0 (an ± bn)·xn נניח בשלילה ש , סתירה!2 \"אבל\" הטור מתכנס גם באיזור .R = min {R1, R2} לסיכום: מצאנו שרדיוס ההתכנסות של הטור של הסכום הוא .(| x |> min {R1, R2} ומתבדר לכל "
-        },
-        "confidence": 0.56
-      },
-      {
-        "id": "recitation-recitation-9-hebrew-question-3",
-        "sourceType": "recitation",
-        "sourceFileId": "recitation-recitation-9-hebrew",
-        "questionNumber": "1",
-        "content": "דוגמא: . ∞ ∑ n=1 4n n · x2n+3 חשבו את תחום ההתכנסות של טור החזקות הבא: פתרון: נסדר את הטור ∞ ∑ n=1 4n n · x2n+3 = x3 ∞ ∑ n=1 4n n · x2n נסתכל על הטור ∞ ∑ n=1 4n n · x2n = t=x2 ∞ ∑ n=1 4n n · tn כעת נמצא את רדיוס ההתכנסות L = lim n→∞ n √ 4n n = lim n→∞ 4 n 1 n = AOL 4 הוא t ולכן רדיוס ההתכנסות של הטור עם R = 1 L = 1 4 ולכן הטור מתכנס לכל t0 = 0 נשים לב ש | t |< 1 4 ⇒| x2 |< 1 4 ⇒ x2 < 1 4 ⇒ − 1 2 < x < 1 2 .x < − 1 2 או x > 1 2 ומתבדר לכל כעת נבדוק את הקצוות בנפרד: , כי מכפלה של מספר קבוע לא תשנה אתx3 נשים לב שאין צורך להציב ב . ∞ ∑ n=1 4n n · x2n ההתכנסות או ההתבדרות של הטור ולכן נציב את הקצוות בביטוי :x = 1 2 עבור ∞ ∑ n=1 4n n · ( 1 2 )2n = ∞ ∑ n=1 1 n = ∞ :x = − 1 2 עבור ∞ ∑ n=1 4n n · ( − 1 2 )2n = ∞ ∑ n=1 1 n = ∞ ,− 1 2 < x < 1 2 לסיכום קיבלנו שתחום ההתכנסות של הטור הוא: .− 1 2 < x < 1 2 כלומר הטור מתכנס אם\"ם 5",
-        "topicIds": [
-          "גבולות",
-          "טורי-חזקות",
-          "טורים",
-          "מבחן-ההשוואה",
-          "סדרות",
-          "רדיוס-התכנסות"
-        ],
-        "difficulty": "medium",
-        "examRelevance": "medium",
-        "sourceSnippet": {
-          "sourceFileId": "recitation-recitation-9-hebrew",
-          "filename": "Recitation_9-Hebrew.pdf",
-          "text": "דוגמא: . ∞ ∑ n=1 4n n · x2n+3 חשבו את תחום ההתכנסות של טור החזקות הבא: פתרון: נסדר את הטור ∞ ∑ n=1 4n n · x2n+3 = x3 ∞ ∑ n=1 4n n · x2n נסתכל על הטור ∞ ∑ n=1 4n n · x2n = t=x2 ∞ ∑ n=1 4n n · tn כעת נמצא את רדיוס ההתכנסות L = lim n→∞ n √ 4n n = lim n→∞ 4 n 1 n = AOL 4 הוא t ולכן רדיוס ההתכנסות של הטור עם R = 1 L = 1 4 ולכן הטור מתכנס לכל t0 = 0 נשים לב ש | t |< 1 4 ⇒| x2 |< 1 4 ⇒ x2 < 1 4 ⇒ − 1 2 < x < 1 2 .x < − 1 2 או x > 1 2 ומתבדר לכל כעת נבדוק את הקצוות בנפרד: , כי מכפלה של מספר קבוע לא תשנה אתx3 נשים לב שאין צורך להציב ב . ∞ ∑ n=1 4n n · x2n ההתכנסות או ההתבדרות של הטור ולכן נציב את הקצוות בביטוי :x = 1 2 עבור ∞ ∑ n=1 4n n · ( 1 2 )2n = ∞ ∑ n=1 1 n = ∞ :x = − 1 2 עבור ∞ ∑ n=1 4n n · ( − 1 2 )2n = ∞ ∑ n=1 1 n = ∞ ,− 1 2 < x < 1 2 לסיכום קיבלנו שתחום ההתכנסות של הטור הוא: .− 1 2 < x < 1 2 כלומר הטור מתכנס אם\"ם 5"
-        },
-        "confidence": 0.56
-      },
-      {
-        "id": "recitation-recitation-9-hebrew-question-4",
-        "sourceType": "recitation",
-        "sourceFileId": "recitation-recitation-9-hebrew",
-        "questionNumber": "1",
-        "content": "דוגמא נוספת: . ∞ ∑ n=1 sin2 ( 1 n ) · (x − 3)n חשבו את תחום ההתכנסות של טור החזקות הבא: פתרון: נמצא תחילה את רדיוס ההתכנסות ∞ ∑ n=1 sin2 ( 1 n ) · (x − 3)n = ∞ ∑ n=1 sin2 ( 1 n ) · tn R = 1 L = lim n→∞ sin2 ( 1 n ) sin2 ( 1 n+1 ) = lim n→∞       [ sin2( 1 n ) [ 1 n2 ] ] [ sin2( 1 n+1 ) [ 1 (n+1)2 ] ] · (n + 1)2 n2       = 1 1 · 1 = 1 לכן הטור מתכנס לכל | t |< 1 ⇒| x − 3 |< 1 ⇒ 2 < x < 4 .x < 2 או x > 4 ומתבדר לכל נבדוק בנפרד את הקצוות: :x = 2 עבור ∞ ∑ n=1 sin2 ( 1 n ) (2 − 3)n = ∞ ∑ n=1 sin2 ( 1 n ) (−1)n הטור מתכנס בהחלט, כי ∞ ∑ n=1 | sin2 ( 1 n ) (−1)n |= ∞ ∑ n=1 sin2 ( 1 n ) ≤ ∞ ∑ n=1 1 n2 < ∞ :x = 4 עבור ∞ ∑ n=1 sin2 ( 1 n ) (4 − 3)n = ∞ ∑ n=1 sin2 ( 1 n ) ≤ ∞ ∑ n=1 1 n2 < ∞ ,2 ≤ x ≤ 4 לסיכום קיבלנו שתחום ההתכנסות של הטור הוא: .2 ≤ x ≤ 4 כלומר הטור מתכנס אם\"ם 6",
-        "topicIds": [
-          "גבולות",
-          "טורי-חזקות",
-          "טורים",
-          "מבחן-ההשוואה",
-          "סדרות",
-          "רדיוס-התכנסות"
-        ],
-        "difficulty": "medium",
-        "examRelevance": "medium",
-        "sourceSnippet": {
-          "sourceFileId": "recitation-recitation-9-hebrew",
-          "filename": "Recitation_9-Hebrew.pdf",
-          "text": "דוגמא נוספת: . ∞ ∑ n=1 sin2 ( 1 n ) · (x − 3)n חשבו את תחום ההתכנסות של טור החזקות הבא: פתרון: נמצא תחילה את רדיוס ההתכנסות ∞ ∑ n=1 sin2 ( 1 n ) · (x − 3)n = ∞ ∑ n=1 sin2 ( 1 n ) · tn R = 1 L = lim n→∞ sin2 ( 1 n ) sin2 ( 1 n+1 ) = lim n→∞       [ sin2( 1 n ) [ 1 n2 ] ] [ sin2( 1 n+1 ) [ 1 (n+1)2 ] ] · (n + 1)2 n2       = 1 1 · 1 = 1 לכן הטור מתכנס לכל | t |< 1 ⇒| x − 3 |< 1 ⇒ 2 < x < 4 .x < 2 או x > 4 ומתבדר לכל נבדוק בנפרד את הקצוות: :x = 2 עבור ∞ ∑ n=1 sin2 ( 1 n ) (2 − 3)n = ∞ ∑ n=1 sin2 ( 1 n ) (−1)n הטור מתכנס בהחלט, כי ∞ ∑ n=1 | sin2 ( 1 n ) (−1)n |= ∞ ∑ n=1 sin2 ( 1 n ) ≤ ∞ ∑ n=1 1 n2 < ∞ :x = 4 עבור ∞ ∑ n=1 sin2 ( 1 n ) (4 − 3)n = ∞ ∑ n=1 sin2 ( 1 n ) ≤ ∞ ∑ n=1 1 n2 < ∞ ,2 ≤ x ≤ 4 לסיכום קיבלנו שתחום ההתכנסות של הטור הוא: .2 ≤ x ≤ 4 כלומר הטור מתכנס אם\"ם 6"
-        },
-        "confidence": 0.56
-      },
-      {
-        "id": "recitation-recitation-9-hebrew-question-5",
-        "sourceType": "recitation",
-        "sourceFileId": "recitation-recitation-9-hebrew",
-        "questionNumber": "0",
-        "content": "הוכיחו או הפריכו כל אחת מהטענות הבאות: שתי סדרות של מספרים ממשיים. (bn)∞ n=0 ו (an)∞ n=0 יהיו .R טור חזקות עם רדיוס התכנסות ∞ ∑ n=0 an · xn 1. יהי מתכנס בהחלט. ∞ ∑ n=0 an , אזיR > 1 אם פתרון: הטענה נכונה. ולכן x = 1 , אזי בפרט הטור מתכנס בהחלט בR > 1 והיות ש x0 = 0 נשים לב ש ∞ ∑ n=0 an · 1n = ∞ ∑ n=0 an מתכנס בהחלט. טורי חזקות עם רדיוסי ∞ ∑ n=0 bn · (x − x0)n , ∞ ∑ n=0 an · (x − x0)n ויהיו x0 ∈ R 2. יהי בהתאמה. R2, R1 התכנסות .R1 ≥ R2 אזי 0 ≤ n ∈ Z לכל | an |≤| bn | אם פתרון: הטענה נכונה. .R1 ≥ 0 = R2 , אזR2 = 0 אם אחרת: מתכנס ∞ ∑ n=0 bn · (x − x0)n . אזי טור החזקות| x1 − x0 |< R2 כך ש x1 ∈ R יהי , כלומרx1 בהחלט ב ∞ ∑ n=0 | bn | · | x1 − x0 |n< ∞ , אזי0 ≤ n ∈ Z לכל | an |≤| bn | היות ש ∞ ∑ n=0 | an | · | x1 − x0 |n≤ ∞ ∑ n=0 | bn | · | x1 − x0 |n< ∞ .x1 מתכנס בהחלט ב ∞ ∑ n=0 an · (x − x0)n ולכן ממבחן ההשוואה טור החזקות | x−x0 |< R2 כך ש x ∈ R מתכנס בהחלט לכל ∞ ∑ n=0 an·(x − x0)n לכן טור החזקות .R1 ≥ R2 ולכן 7",
-        "topicIds": [
-          "גבולות",
-          "טורי-חזקות",
-          "טורים",
-          "מבחן-ההשוואה",
-          "סדרות",
-          "רדיוס-התכנסות"
-        ],
-        "difficulty": "medium",
-        "examRelevance": "medium",
-        "sourceSnippet": {
-          "sourceFileId": "recitation-recitation-9-hebrew",
-          "filename": "Recitation_9-Hebrew.pdf",
-          "text": "הוכיחו או הפריכו כל אחת מהטענות הבאות: שתי סדרות של מספרים ממשיים. (bn)∞ n=0 ו (an)∞ n=0 יהיו .R טור חזקות עם רדיוס התכנסות ∞ ∑ n=0 an · xn 1. יהי מתכנס בהחלט. ∞ ∑ n=0 an , אזיR > 1 אם פתרון: הטענה נכונה. ולכן x = 1 , אזי בפרט הטור מתכנס בהחלט בR > 1 והיות ש x0 = 0 נשים לב ש ∞ ∑ n=0 an · 1n = ∞ ∑ n=0 an מתכנס בהחלט. טורי חזקות עם רדיוסי ∞ ∑ n=0 bn · (x − x0)n , ∞ ∑ n=0 an · (x − x0)n ויהיו x0 ∈ R 2. יהי בהתאמה. R2, R1 התכנסות .R1 ≥ R2 אזי 0 ≤ n ∈ Z לכל | an |≤| bn | אם פתרון: הטענה נכונה. .R1 ≥ 0 = R2 , אזR2 = 0 אם אחרת: מתכנס ∞ ∑ n=0 bn · (x − x0)n . אזי טור החזקות| x1 − x0 |< R2 כך ש x1 ∈ R יהי , כלומרx1 בהחלט ב ∞ ∑ n=0 | bn | · | x1 − x0 |n< ∞ , אזי0 ≤ n ∈ Z לכל | an |≤| bn | היות ש ∞ ∑ n=0 | an | · | x1 − x0 |n≤ ∞ ∑ n=0 | bn | · | x1 − x0 |n< ∞ .x1 מתכנס בהחלט ב ∞ ∑ n=0 an · (x − x0)n ולכן ממבחן ההשוואה טור החזקות | x−x0 |< R2 כך ש x ∈ R מתכנס בהחלט לכל ∞ ∑ n=0 an·(x − x0)n לכן טור ה",
-          "startOffset": 4770,
-          "endOffset": 5691
-        },
-        "confidence": 0.56
-      }
-    ],
-    "solutionPatterns": [],
-    "techniques": [
-      "מבחן ההשוואה",
-      "גבול",
-      "התכנסות בהחלט"
-    ],
-    "commonMistakes": [],
     "linkedLectureNumber": 8,
     "topicOverlapWithLinkedLecture": [
       "גבולות",
@@ -2325,28 +3846,41 @@
     ],
     "mappingNeedsReview": false,
     "examRelevanceNotes": [
-      "תרגול 9 היום: טורי חזקות. • תזכורת: טורי חזקות: סדרה של מספרים ממשיים. (an)∞ n=0 ותהי x0 ∈ R תהי תחום ההתכנסות של טור החזקות ∞ ∑ n=0 an (x − x0)n = a0 + a1 (x − x0) + a2 (x − x0)2 + ... שעבורם הטור מתכנס. x מוגדר להיות קבוצת כל ערכי ה שתי דוגמאות שונות לטורי חזקות: . ∞ ∑ n=0 xn 3n .1 . ∞ ∑ n=0 (−1)n−1 (x+1)2n+1 5n−2 .2 .a0 לערך x = x0 הטור מתכנס תמיד בנקודה שעבורו: 0 ≤ R ≤ ∞ לכל טור חזקות יש רדיוס התכנסות ומתבדר מחוץ (x0 − R, x0 + R) הטור מתכנס בהחלט בקטע • .[x0 − R, x0 + R] לקטע הנקודות היחידות שבהן הטור עשוי להתכנס בתנאי הן בקצוות הקטע. • , נצטרך לבדוק בנפרד בכלx = x0 ± R הטור יכול להתכנס או להתבדר בנקודות • בדיקה זו איננה רלוונטית(. R = 0, ∞ תרגיל )במקרים שבהם , אם הטור מתכנס רקR = 0 ו x ∈ R , אם הטור מתכנס לכלR = ∞ מסמנים • .x = x0 ב 1"
+      "זה חימום לקראת הדברים שנראה שבוע הבא, אבל אנחנו צריכים להפנים פה את כל הנקודות בצורה מלאה. שאלות שלכם לגבי משהו מכל מה שנאמר פה, לפני שנמשיך.",
+      "אם ורק אם. אם ורק אם. זה יותר חזק, נכון? למה? כי אם אני לא אומר אם ורק אם, אז אני אומר פה זה עובד ובנקודות אחרות אני לא יודע. אני אומר לך לא, אני יודע שזה רק פה.",
+      "מה זה היה חייב להיות? גם ירוק. זה מה שהמשפט אומר. עכשיו אני מדבר על משפט הבן של שבוע שעבר, לא של אתמול. אתמול הוא הוסיף כזה עוד משפט שלו של נקודות קצה, של גבולות, זה לא קשור לעכשיו.",
+      "אני מציב את שתי הנקודות בו זמנית. אבל למה מותר לי במקרה הזה? כי החזקה זוגית, אז מה זה משנה אם זה פלוס או מינוס? טוב, מה זה פלוס או מינוס חצי בחזקת שניהם? זה בדיוק מצמצם את זה.",
+      "אני נותן פה המון נקודות קטנות כאלה, אני מקווה שאתם סגורים עליהן, צוברים את ארגז הכלים ותתמודדו יפה בבית. בואו נעשה עוד דוגמה מאותו רעיון, עם איזה אלמנט שהוא טיפה שונה. אז חשבו על תחום ההתכנסות של טור החזקות הבא.",
+      "ואז נצלול רגע פנימה לשאלה עצמה. מה שאתם אמורים לזהות פה, בתרגילים האלה, זה שהבדיקה הזאת של הנקודות בנפרד, זה היה התרגיל בשבוע 6, 7 ו8."
     ],
     "sourceSnippets": [
       {
-        "sourceFileId": "recitation-recitation-9-hebrew",
-        "filename": "Recitation_9-Hebrew.pdf",
-        "text": "תרגול 9 היום: טורי חזקות. • תזכורת: טורי חזקות: סדרה של מספרים ממשיים. (an)∞ n=0 ותהי x0 ∈ R תהי תחום ההתכנסות של טור החזקות ∞ ∑ n=0 an (x − x0)n = a0 + a1 (x − x0) + a2 (x − x0)2 + ... שעבורם הטור מתכנס. x מוגדר להיות קבוצת כל ערכי ה שתי דוגמאות שונות לטורי חזקות: . ∞ ∑ n=0 xn 3n .1 . ∞ ∑ n=0 (−1)n−1 (x+1)2n+1 5n−2 .2 .a0 לערך x = x0 הטור מתכנס תמיד בנקודה שעבורו: 0 ≤ R ≤ ∞ לכל טור חזקות יש רדיוס התכנסות ומתבדר מחוץ (x0 − R, x0 + R) הטור מתכנס בהחלט בקטע • .[x0 − R, x0 + R] לקטע הנקודות היחידות שבהן הטור עשוי להתכנס בתנאי הן בקצוות הקטע. • , נצטרך לבדוק בנפרד בכלx = x0 ± R הטור יכול להתכנס או להתבדר בנקודות • בדיקה זו איננה רלוונטית(. R = 0, ∞ תרגיל )במקרים שבהם , אם הטור מתכנס רקR = 0 ו x ∈ R , אם הטור מתכנס לכלR = ∞ מסמנים • .x = x0 ב 1"
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "filename": "recitation-9-max.txt",
+        "text": "טוב, אנחנו נכנסים לרצף היותר מעניין של הקורס הזה, שזה תורך עסקאות. ראיתם אתמול, אני מניח, את הדברים היפים.",
+        "startOffset": 0,
+        "endOffset": 106
       },
       {
-        "sourceFileId": "recitation-recitation-9-hebrew",
-        "filename": "Recitation_9-Hebrew.pdf",
-        "text": "תזכורת: נוסחת השורש לרדיוס )קושי־הדמר( ונוסחת המנה לרדיוס: סדרה של מספרים ממשיים. (an)∞ n=0 ותהי x0 ∈ R תהי . ∞ ∑ n=0 an (x − x0)n רדיוס ההתכנסות של טור החזקות R יהי .L = lim n→∞ ∣ ∣ ∣ an+1 an ∣ ∣ ∣ או L = lim n→∞ n √|an| נניח שקיים הגבול במובן הרחב אזי .R = ∞ אז L = 0 אם • .R = 0 אז L = ∞ אם • .R = 1 L אז 0 < L < ∞ אם • הערה: לפי כל אחת מהנוסחאות )שורש או מנה( R ישנן דוגמאות שבהן מחשבים את בדרכים אחרות, למשל על ידי מציאת נקודה R וישנן דוגמאות שבהן מחשבים את שבה הטור מתכנס בתנאי. 2"
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "filename": "recitation-9-max.txt",
+        "text": "אבל מצד שני, יש פה כמה סוגיות שאם אנחנו לא מבינים אותן ממש טוב, הכול פשוט יקרוס.",
+        "startOffset": 108,
+        "endOffset": 188
       },
       {
-        "sourceFileId": "recitation-recitation-9-hebrew",
-        "filename": "Recitation_9-Hebrew.pdf",
-        "text": "דוגמאות: , ומצאו את תחוםR עבור כל אחד מהטורים הבאים, חשבו את רדיוס ההתכנסות, ההתכנסות. בתחום ההתכנסות, מצאו ערך מפורש )ללא סימן הסיגמה(. . ∞ ∑ n=0 (−1)n x2n .1 פתרון: מדובר בטור גיאומטרי, נסדר את הטור ∞ ∑ n=0 (−1)n x2n = ∞ ∑ n=0 (−1)n (x2)n = ∞ ∑ n=0 (−x2)n = t=−x2 ∞ ∑ n=0 tn = |t|<1 1 1 − t = 1 1 − (−x2) = 1 1 + x2 , כלומר הטור מתכנס אם\"ם| t |< 1 הטור מתכנס אם\"ם | −x2 |< 1 ⇔| x2 |< 1 ⇔ x2 < 1 ⇔ −1 < x < 1 .R = 1 ולכן רדיוס ההתכנסות של הטור הוא x0 = 0 נשים לב ש . ∞ ∑ n=0 (2x+3)2n 42n .2 פתרון: מדובר בטור גיאומטרי, נסדר את הטור ∞ ∑ n=0 (2x + 3)2n 42n = ∞ ∑ n=0 ( 2x + 3 4 )2n = ∞ ∑ n=0 (( 2x + 3 4 )2)n = t=( 2x+3 4 )2 ∞ ∑ n=0 tn = |t|<1 1 1 − t = 1 1 − ( 2x+3 4 )2 , כלומר הטור מתכנס אם\"ם| t |< 1 הטור מתכנס אם\"ם | ( 2x + 3 4 )2 |< 1 ⇔ ( 2x + 3 4 )2 < 1 ⇔ −1 < 2x + 3 4 < 1 ⇔ −4 < 2x + 3 < 4 ⇔ −7 < 2x < 1 ⇔ −3.5 < x < 0.5 .R = 2 ולכן רדיוס ההתכנסות של הטור הוא x0 = −1.5 נשים לב ש 3"
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "filename": "recitation-9-max.txt",
+        "text": "ובגלל הדבר הזה אני רוצה היום בעשר דקות, רבע שעה ראשונה של התרגול, לוודא איתכם שאתם סגורים על מה זה אומר טורחסקוט, אבל סגורים לחלוטין מה זה אומר טורחסקוט.",
+        "startOffset": 190,
+        "endOffset": 343
       },
       {
-        "sourceFileId": "recitation-recitation-9-hebrew",
-        "filename": "Recitation_9-Hebrew.pdf",
-        "text": "תרגיל: שתי סדרות של מספרים ממשיים. (bn)∞ n=0 ו (an)∞ n=0 יהיו בהתאמה R2 6 = R1 טורי חזקות עם רדיוסי התכנסות ∞ ∑ n=0 bn · xn , ∞ ∑ n=0 an · xn יהיו .R1, R2 6 = ∞ כך ש . ∞ ∑ n=0 (an ± bn) · xn מצאו את רדיוס ההתכנסות של טור החזקות פתרון: ראשית נשים לב שלא נוכל להשתמש בנוסחת המנה או השורש מכיוון שלא נתון שהגבולות קיימים. נחלק את הפתרון לשלושה חלקים )נראה שרטוט בכיתה(: .x ∈ R יהי , במקרה זה שני הטורים מתכנסים ולכן גם הסכום מתכנס| x |< min {R1, R2} 1. אם מאשט\"מ. , במקרה זה אנחנו יודעים שטור אחדmin {R1, R2} <| x |< max {R1, R2} 2. אם מתבדר שווה מתבדר(. ± מתכנס וטור אחד מתבדר ולכן הטור מתבדר )מתכנס , במקרה זה שני הטורים מתבדרים. נראה שגם הטור של| x |> max {R1, R2} 3. אם הסכום מתבדר. ולכן ממשפט | x |> max {R1, R2} מתכנס עבור ∞ ∑ n=0 (an ± bn)·xn נניח בשלילה ש , סתירה!2 \"אבל\" הטור מתכנס גם באיזור .R = min {R1, R2} לסיכום: מצאנו שרדיוס ההתכנסות של הטור של הסכום הוא .(| x |> min {R1, R2} ומתבדר לכל "
+        "sourceFileId": "recitation-script-recitation-9-max",
+        "filename": "recitation-9-max.txt",
+        "text": "וכשאנחנו באמת נהיה סגורים על הדברים האלה במאה אחוז, מה שנקרא, נוכל להתקדם הלאה.",
+        "startOffset": 345,
+        "endOffset": 424
       }
     ],
     "confidence": 0.8999999999999999
