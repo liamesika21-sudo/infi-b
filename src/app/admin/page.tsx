@@ -1,6 +1,6 @@
 import { cookies } from "next/headers";
 import type { ReactNode } from "react";
-import { Monitor, ShieldCheck, Smartphone, UserCheck, UserX } from "lucide-react";
+import { ClipboardList, Monitor, Phone, ShieldCheck, Sparkles, Smartphone, UserCheck, UserX } from "lucide-react";
 import {
   AUTH_COOKIE_NAME,
   getAuthAdminSnapshot,
@@ -8,6 +8,7 @@ import {
   readAuthCookieValue,
   type AdminAuthUser,
   type AuthDeviceRecord,
+  type RegistrationRequest,
 } from "@/lib/simple-auth";
 
 export const runtime = "nodejs";
@@ -84,6 +85,7 @@ export default async function AdminPage() {
   const totalDevices = snapshot.users.reduce((sum, user) => sum + user.deviceCount, 0);
   const riskUsers = countRiskUsers(snapshot.users);
   const multiDeviceUsers = snapshot.users.filter(hasMultiDeviceAttempt);
+  const mentorRegistrations = snapshot.registrationRequests.filter((request) => request.wantsMentor).length;
 
   return (
     <div className="space-y-6" dir="rtl">
@@ -102,13 +104,59 @@ export default async function AdminPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:min-w-[520px]">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-5 lg:min-w-[640px]">
             <Metric label="מיילים מורשים" value={snapshot.allowedEmails.length} />
             <Metric label="כניסות" value={totalLogins} />
             <Metric label="מכשירים" value={totalDevices} />
             <Metric label="ריבוי מכשירים" value={riskUsers} tone="warning" />
+            <Metric label="בקשות הרשמה" value={snapshot.registrationRequests.length} tone="info" />
           </div>
         </div>
+      </section>
+
+      <section className="rounded-lg border bg-white p-5 shadow-sm" style={{ borderColor: "var(--border)" }}>
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+          <div>
+            <div className="flex items-center gap-2">
+              <ClipboardList className="h-5 w-5" style={{ color: "var(--teal)" }} aria-hidden="true" />
+              <h2 className="text-xl font-black">בקשות הרשמה</h2>
+            </div>
+            <p className="mt-2 text-sm" style={{ color: "var(--text-secondary)" }}>
+              פרטים שהושארו מטופס ההרשמה: הרשמה 14₪, ומנטור AI בתוספת 24₪ עם קרדיטים מוגבלים.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-2 text-center sm:min-w-[260px]">
+            <MiniMetric label="סה״כ פניות" value={snapshot.registrationRequests.length} />
+            <MiniMetric label="עם מנטור" value={mentorRegistrations} />
+          </div>
+        </div>
+
+        {snapshot.registrationRequests.length === 0 ? (
+          <div className="mt-4 rounded-lg border border-dashed p-5 text-center text-sm" style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>
+            עדיין אין בקשות הרשמה.
+          </div>
+        ) : (
+          <div className="mt-4 overflow-x-auto">
+            <table className="w-full min-w-[880px] border-separate border-spacing-0 text-sm">
+              <thead>
+                <tr style={{ color: "var(--text-secondary)" }}>
+                  <TableHead>מייל</TableHead>
+                  <TableHead>טלפון</TableHead>
+                  <TableHead>מסלול</TableHead>
+                  <TableHead>סכום</TableHead>
+                  <TableHead>נשלח</TableHead>
+                  <TableHead>IP</TableHead>
+                  <TableHead>User-Agent</TableHead>
+                </tr>
+              </thead>
+              <tbody>
+                {snapshot.registrationRequests.map((request) => (
+                  <RegistrationRow key={`${request.email}-${request.createdAt}`} request={request} />
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
       </section>
 
       {multiDeviceUsers.length > 0 && (
@@ -149,22 +197,69 @@ export default async function AdminPage() {
   );
 }
 
-function Metric({ label, value, tone = "default" }: { label: string; value: number; tone?: "default" | "warning" }) {
+function Metric({ label, value, tone = "default" }: { label: string; value: number; tone?: "default" | "warning" | "info" }) {
+  const background =
+    tone === "warning" ? "var(--amber-light)" : tone === "info" ? "var(--teal-light)" : "var(--navy-light)";
+  const borderColor =
+    tone === "warning" ? "var(--amber-border)" : tone === "info" ? "var(--teal-border)" : "var(--navy-border)";
+  const color = tone === "warning" ? "var(--amber)" : tone === "info" ? "var(--teal)" : "var(--navy-mid)";
+
   return (
     <div
       className="rounded-lg border px-4 py-3"
       style={{
-        background: tone === "warning" ? "var(--amber-light)" : "var(--navy-light)",
-        borderColor: tone === "warning" ? "var(--amber-border)" : "var(--navy-border)",
+        background,
+        borderColor,
       }}
     >
-      <p className="font-mono text-2xl font-black" style={{ color: tone === "warning" ? "var(--amber)" : "var(--navy-mid)" }}>
+      <p className="font-mono text-2xl font-black" style={{ color }}>
         {value}
       </p>
       <p className="text-xs font-bold" style={{ color: "var(--text-secondary)" }}>
         {label}
       </p>
     </div>
+  );
+}
+
+function RegistrationRow({ request }: { request: RegistrationRequest }) {
+  return (
+    <tr className="align-top">
+      <TableCell>
+        <span className="break-all font-bold" dir="ltr">
+          {request.email}
+        </span>
+      </TableCell>
+      <TableCell>
+        <span className="inline-flex items-center gap-2 font-bold" dir="ltr">
+          <Phone className="h-4 w-4" style={{ color: "var(--text-muted)" }} aria-hidden="true" />
+          {request.phone}
+        </span>
+      </TableCell>
+      <TableCell>
+        <div className="flex flex-wrap gap-2">
+          <span className="badge badge-green">הרשמה 14₪</span>
+          {request.wantsMentor && (
+            <span className="badge badge-purple">
+              <Sparkles className="ml-1 h-3 w-3" aria-hidden="true" />
+              מנטור AI 24₪
+            </span>
+          )}
+        </div>
+      </TableCell>
+      <TableCell>
+        <span className="font-mono text-base font-black">{request.totalPriceIls}₪</span>
+      </TableCell>
+      <TableCell>{formatDate(request.createdAt)}</TableCell>
+      <TableCell>
+        <span dir="ltr">{request.ip ?? "-"}</span>
+      </TableCell>
+      <TableCell>
+        <span className="line-clamp-2 block max-w-[260px] text-xs" dir="ltr" title={request.userAgent}>
+          {request.userAgent ?? "-"}
+        </span>
+      </TableCell>
+    </tr>
   );
 }
 

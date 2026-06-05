@@ -31,10 +31,23 @@ type AuthUserRecord = {
   loginCount: number;
 };
 
+export type RegistrationRequest = {
+  email: string;
+  phone: string;
+  wantsMentor: boolean;
+  basePriceIls: number;
+  mentorPriceIls: number;
+  totalPriceIls: number;
+  createdAt: string;
+  ip?: string;
+  userAgent?: string;
+};
+
 type AuthFile = {
   allowedEmails: string[];
   adminEmails?: string[];
   users: Record<string, AuthUserRecord>;
+  registrationRequests?: RegistrationRequest[];
 };
 
 type RedisConfig = {
@@ -66,6 +79,7 @@ export type AuthAdminSnapshot = {
   allowedEmails: string[];
   adminEmails: string[];
   users: AdminAuthUser[];
+  registrationRequests: RegistrationRequest[];
 };
 
 function normalizeEmail(email: string): string {
@@ -104,6 +118,10 @@ function shouldUseRedisStore(): boolean {
 
 function getUserKey(email: string): string {
   return `auth:user:${normalizeEmail(email)}`;
+}
+
+function getRegistrationRequestsKey(): string {
+  return "auth:registration-requests";
 }
 
 function getConfiguredAdminEmails(authFile: AuthFile): string[] {
@@ -198,10 +216,26 @@ async function readAuthFile(): Promise<AuthFile> {
         ? parsed.adminEmails.map(normalizeEmail)
         : undefined,
       users: parsed.users && typeof parsed.users === "object" ? parsed.users : {},
+      registrationRequests: Array.isArray(parsed.registrationRequests)
+        ? parsed.registrationRequests
+            .filter((request): request is RegistrationRequest => {
+              const candidate = request as Partial<RegistrationRequest>;
+              return typeof candidate.email === "string" && typeof candidate.phone === "string";
+            })
+            .map((request) => ({
+              ...request,
+              email: normalizeEmail(request.email),
+              wantsMentor: Boolean(request.wantsMentor),
+              basePriceIls: Number(request.basePriceIls) || 14,
+              mentorPriceIls: Number(request.mentorPriceIls) || (request.wantsMentor ? 24 : 0),
+              totalPriceIls: Number(request.totalPriceIls) || (request.wantsMentor ? 38 : 14),
+              createdAt: request.createdAt || "",
+            }))
+        : [],
     };
   } catch (error) {
     if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;
-    return { allowedEmails: [], users: {} };
+    return { allowedEmails: [], users: {}, registrationRequests: [] };
   }
 }
 
@@ -238,6 +272,54 @@ async function setRedisUser(user: AuthUserRecord): Promise<void> {
   const value = encodeURIComponent(JSON.stringify(user));
   const response = await fetch(
     `${redis.url}/set/${encodeURIComponent(getUserKey(user.email))}/${value}`,
+    {
+      method: "POST",
+      headers: { Authorization: `Bearer ${redis.token}` },
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error(`Redis SET failed with ${response.status}`);
+  }
+}
+
+async function getRedisRegistrationRequests(): Promise<RegistrationRequest[]> {
+  const redis = getRedisConfig();
+  if (!redis) {
+    throw new Error(
+      "Missing Redis env vars. Set UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN on Vercel."
+    );
+  }
+
+  const response = await fetch(
+    `${redis.url}/get/${encodeURIComponent(getRegistrationRequestsKey())}`,
+    {
+      headers: { Authorization: `Bearer ${redis.token}` },
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error(`Redis GET failed with ${response.status}`);
+  }
+
+  const data = (await response.json()) as { result?: string | null };
+  if (!data.result) return [];
+
+  const parsed = JSON.parse(data.result) as unknown;
+  return Array.isArray(parsed) ? (parsed as RegistrationRequest[]) : [];
+}
+
+async function setRedisRegistrationRequests(registrationRequests: RegistrationRequest[]): Promise<void> {
+  const redis = getRedisConfig();
+  if (!redis) {
+    throw new Error(
+      "Missing Redis env vars. Set UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN on Vercel."
+    );
+  }
+
+  const value = encodeURIComponent(JSON.stringify(registrationRequests));
+  const response = await fetch(
+    `${redis.url}/set/${encodeURIComponent(getRegistrationRequestsKey())}/${value}`,
     {
       method: "POST",
       headers: { Authorization: `Bearer ${redis.token}` },
@@ -338,6 +420,69 @@ async function persistUser(authFile: AuthFile, user: AuthUserRecord): Promise<vo
 
   authFile.users[user.email] = user;
   await writeAuthFile(authFile);
+}
+
+async function getRegistrationRequests(authFile: AuthFile): Promise<RegistrationRequest[]> {
+  if (shouldUseRedisStore()) {
+    return getRedisRegistrationRequests();
+  }
+
+  return authFile.registrationRequests ?? [];
+}
+
+async function persistRegistrationRequest(
+  authFile: AuthFile,
+  registrationRequest: RegistrationRequest
+): Promise<void> {
+  const registrationRequests = await getRegistrationRequests(authFile);
+  const nextRegistrationRequests = [
+    registrationRequest,
+    ...registrationRequests.filter(
+      (request) => normalizeEmail(request.email) !== registrationRequest.email
+    ),
+  ];
+
+  if (shouldUseRedisStore()) {
+    await setRedisRegistrationRequests(nextRegistrationRequests);
+    return;
+  }
+
+  authFile.registrationRequests = nextRegistrationRequests;
+  await writeAuthFile(authFile);
+}
+
+export async function submitRegistrationRequest(
+  email: string,
+  phone: string,
+  wantsMentor: boolean,
+  request: Request
+): Promise<RegistrationRequest> {
+  const normalizedEmail = normalizeEmail(email);
+  const normalizedPhone = phone.trim();
+
+  if (!normalizedEmail || !normalizedEmail.includes("@")) {
+    throw new Error("invalid_email");
+  }
+
+  if (normalizedPhone.replace(/\D/g, "").length < 7) {
+    throw new Error("invalid_phone");
+  }
+
+  const registrationRequest: RegistrationRequest = {
+    email: normalizedEmail,
+    phone: normalizedPhone,
+    wantsMentor,
+    basePriceIls: 14,
+    mentorPriceIls: wantsMentor ? 24 : 0,
+    totalPriceIls: wantsMentor ? 38 : 14,
+    createdAt: new Date().toISOString(),
+    ip: getRequestIp(request),
+    userAgent: getRequestUserAgent(request),
+  };
+  const authFile = await readAuthFile();
+  await persistRegistrationRequest(authFile, registrationRequest);
+
+  return registrationRequest;
 }
 
 export async function validateCookieForRequest(request: Request): Promise<AuthCheckResult> {
@@ -484,6 +629,7 @@ export async function loginWithEmail(
 export async function getAuthAdminSnapshot(): Promise<AuthAdminSnapshot> {
   const authFile = await readAuthFile();
   const users: AuthUserRecord[] = [];
+  const registrationRequests = await getRegistrationRequests(authFile);
 
   if (shouldUseRedisStore()) {
     const redisUsers = await Promise.all(
@@ -519,6 +665,7 @@ export async function getAuthAdminSnapshot(): Promise<AuthAdminSnapshot> {
     allowedEmails,
     adminEmails: getConfiguredAdminEmails(authFile),
     users: adminUsers.sort((a, b) => b.lastLoginAt.localeCompare(a.lastLoginAt)),
+    registrationRequests: registrationRequests.sort((a, b) => b.createdAt.localeCompare(a.createdAt)),
   };
 }
 

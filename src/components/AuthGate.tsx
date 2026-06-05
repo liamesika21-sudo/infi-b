@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useEffect, useState } from "react";
-import { Lock, Mail } from "lucide-react";
+import { CheckCircle2, Lock, Mail, Phone, Sparkles, UserPlus } from "lucide-react";
 
 type AuthState =
   | { status: "checking" }
@@ -35,10 +35,16 @@ function getOrCreateDeviceId(): string {
 
 export function AuthGate() {
   const [authState, setAuthState] = useState<AuthState>({ status: "checking" });
+  const [mode, setMode] = useState<"login" | "register">("login");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [wantsMentor, setWantsMentor] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isRegisterSubmitting, setIsRegisterSubmitting] = useState(false);
   const [message, setMessage] = useState("");
+  const [registrationMessage, setRegistrationMessage] = useState("");
   const authMessage = authState.status === "blocked" ? authState.message : undefined;
+  const registrationTotal = wantsMentor ? 38 : 14;
 
   useEffect(() => {
     let isMounted = true;
@@ -101,6 +107,10 @@ export function AuthGate() {
       }
 
       setMessage(data.message ?? "לא ניתן להתחבר כרגע.");
+      if (data.reason === "not_allowed") {
+        setMode("register");
+        setRegistrationMessage("המייל לא ברשימת המורשים. אפשר להשאיר פרטים להרשמה.");
+      }
     } catch {
       setMessage("שגיאת תקשורת. נסה שוב.");
     } finally {
@@ -108,9 +118,38 @@ export function AuthGate() {
     }
   }
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function requestRegistration() {
+    setIsRegisterSubmitting(true);
+    setRegistrationMessage("");
+    setMessage("");
+
+    try {
+      const response = await fetch("/api/auth/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-infi-device-id": getOrCreateDeviceId(),
+        },
+        body: JSON.stringify({ email, phone, wantsMentor }),
+      });
+      const data = (await response.json()) as { ok?: boolean; message?: string };
+
+      setRegistrationMessage(data.message ?? (response.ok ? "הפרטים נקלטו." : "לא ניתן לשמור כרגע."));
+    } catch {
+      setRegistrationMessage("שגיאת תקשורת. נסי שוב.");
+    } finally {
+      setIsRegisterSubmitting(false);
+    }
+  }
+
+  function handleLoginSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     void requestLogin(false);
+  }
+
+  function handleRegistrationSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    void requestRegistration();
   }
 
   if (authState.status === "authenticated") return null;
@@ -124,7 +163,7 @@ export function AuthGate() {
       aria-labelledby="auth-title"
     >
       <form
-        onSubmit={handleSubmit}
+        onSubmit={mode === "login" ? handleLoginSubmit : handleRegistrationSubmit}
         className="w-full max-w-sm rounded-lg border bg-white p-5 shadow-2xl"
         style={{ borderColor: "var(--border)" }}
       >
@@ -133,16 +172,51 @@ export function AuthGate() {
             className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-white"
             style={{ background: "var(--navy)" }}
           >
-            <Lock className="h-5 w-5" aria-hidden="true" />
+            {mode === "login" ? (
+              <Lock className="h-5 w-5" aria-hidden="true" />
+            ) : (
+              <UserPlus className="h-5 w-5" aria-hidden="true" />
+            )}
           </span>
           <div>
             <h2 id="auth-title" className="text-lg font-black">
-              כניסה לאתר
+              {mode === "login" ? "כניסה לאתר" : "הרשמה לאתר"}
             </h2>
             <p className="text-sm leading-6" style={{ color: "var(--text-secondary)" }}>
-              הכניסה זמינה רק דרך המחשב הזה.
+              {mode === "login" ? "הכניסה זמינה רק דרך המחשב הזה." : "השאירי פרטים ונציג את הפנייה באדמין."}
             </p>
           </div>
+        </div>
+
+        <div className="mb-4 grid grid-cols-2 gap-2 rounded-lg border bg-[var(--bg-subtle)] p-1" style={{ borderColor: "var(--border)" }}>
+          <button
+            type="button"
+            onClick={() => {
+              setMode("login");
+              setRegistrationMessage("");
+            }}
+            className="min-h-10 rounded-md text-sm font-black transition"
+            style={{
+              background: mode === "login" ? "white" : "transparent",
+              color: mode === "login" ? "var(--navy)" : "var(--text-secondary)",
+            }}
+          >
+            כניסה
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              setMode("register");
+              setMessage("");
+            }}
+            className="min-h-10 rounded-md text-sm font-black transition"
+            style={{
+              background: mode === "register" ? "white" : "transparent",
+              color: mode === "register" ? "var(--navy)" : "var(--text-secondary)",
+            }}
+          >
+            הירשם עכשיו
+          </button>
         </div>
 
         <label className="mb-2 block text-sm font-bold" htmlFor="auth-email">
@@ -169,7 +243,72 @@ export function AuthGate() {
           />
         </div>
 
-        {(message || authState.status === "checking" || authMessage) && (
+        {mode === "register" && (
+          <>
+            <label className="mb-2 mt-3 block text-sm font-bold" htmlFor="register-phone">
+              טלפון
+            </label>
+            <div
+              className="flex items-center gap-2 rounded-lg border bg-white px-3"
+              style={{ borderColor: "var(--border)" }}
+            >
+              <Phone className="h-4 w-4 shrink-0" style={{ color: "var(--text-muted)" }} aria-hidden="true" />
+              <input
+                id="register-phone"
+                type="tel"
+                required={mode === "register"}
+                autoComplete="tel"
+                value={phone}
+                onChange={(event) => {
+                  setPhone(event.target.value);
+                }}
+                disabled={isRegisterSubmitting}
+                className="min-h-11 w-full bg-transparent text-left outline-none disabled:opacity-60"
+                dir="ltr"
+                placeholder="050-0000000"
+              />
+            </div>
+
+            <div
+              className="mt-4 rounded-lg border p-3 text-sm font-semibold leading-6"
+              style={{ background: "var(--green-light)", borderColor: "var(--green-border)", color: "var(--green)" }}
+            >
+              הרשמה לאתר: <span className="font-mono text-base font-black">14₪</span>
+            </div>
+
+            <label
+              className="mt-3 flex cursor-pointer items-start gap-3 rounded-lg border p-3 text-sm font-semibold leading-6"
+              style={{
+                background: wantsMentor ? "var(--purple-light)" : "white",
+                borderColor: wantsMentor ? "var(--purple-border)" : "var(--border)",
+                color: wantsMentor ? "var(--purple)" : "var(--text-secondary)",
+              }}
+            >
+              <input
+                type="checkbox"
+                checked={wantsMentor}
+                onChange={(event) => {
+                  setWantsMentor(event.target.checked);
+                }}
+                className="mt-1 h-4 w-4"
+              />
+              <span>
+                <span className="flex items-center gap-2 font-black">
+                  <Sparkles className="h-4 w-4" aria-hidden="true" />
+                  מנטור AI צ&apos;אט
+                </span>
+                <span className="block">תוספת 24₪, מוגבל קרדיטים.</span>
+              </span>
+            </label>
+
+            <div className="mt-3 flex items-center justify-between rounded-lg border px-3 py-2 text-sm font-black" style={{ borderColor: "var(--border)" }}>
+              <span>סה&quot;כ לתשלום</span>
+              <span className="font-mono text-lg">{registrationTotal}₪</span>
+            </div>
+          </>
+        )}
+
+        {mode === "login" && (message || authState.status === "checking" || authMessage) && (
           <p
             className="mt-3 min-h-6 text-sm font-semibold leading-6"
             style={{ color: message || authMessage ? "var(--red-mid)" : "var(--text-muted)" }}
@@ -178,14 +317,49 @@ export function AuthGate() {
           </p>
         )}
 
+        {mode === "register" && registrationMessage && (
+          <p
+            className="mt-3 flex min-h-6 items-start gap-2 text-sm font-semibold leading-6"
+            style={{ color: registrationMessage.includes("נקלטו") ? "var(--green)" : "var(--red-mid)" }}
+          >
+            {registrationMessage.includes("נקלטו") && <CheckCircle2 className="mt-1 h-4 w-4 shrink-0" aria-hidden="true" />}
+            <span>{registrationMessage}</span>
+          </p>
+        )}
+
         <button
           type="submit"
-          disabled={authState.status === "checking" || isSubmitting}
+          disabled={
+            mode === "login"
+              ? authState.status === "checking" || isSubmitting
+              : isRegisterSubmitting
+          }
           className="mt-4 flex min-h-11 w-full items-center justify-center rounded-lg px-4 text-sm font-black text-white transition disabled:cursor-not-allowed disabled:opacity-60"
           style={{ background: "var(--navy)" }}
         >
-          {isSubmitting ? "מתחבר..." : "כניסה"}
+          {mode === "login"
+            ? isSubmitting
+              ? "מתחבר..."
+              : "כניסה"
+            : isRegisterSubmitting
+              ? "שומר הרשמה..."
+              : "שליחת פרטים"}
         </button>
+
+        {mode === "login" && (
+          <button
+            type="button"
+            onClick={() => {
+              setMode("register");
+              setMessage("");
+            }}
+            className="mt-3 flex min-h-11 w-full items-center justify-center gap-2 rounded-lg border px-4 text-sm font-black transition hover:bg-[var(--bg-subtle)]"
+            style={{ borderColor: "var(--border)", color: "var(--navy)" }}
+          >
+            <UserPlus className="h-4 w-4" aria-hidden="true" />
+            לא רשומה? הירשם עכשיו
+          </button>
+        )}
 
         <div
           className="mt-4 rounded-lg border px-3 py-2 text-xs font-semibold leading-6"
@@ -195,7 +369,9 @@ export function AuthGate() {
             color: "var(--amber)",
           }}
         >
-          שימי לב: ההתחברות היא בעזרת מייל בלבד. ניסיון התחברות מאותו מייל במכשיר נוסף יחסום את המשתמש ויירשם באדמין.
+          {mode === "login"
+            ? "שימי לב: ההתחברות היא בעזרת מייל בלבד. ניסיון התחברות מאותו מייל במכשיר נוסף יחסום את המשתמש ויירשם באדמין."
+            : "ההרשמה אינה פותחת גישה אוטומטית. לאחר אישור ותשלום המייל יתווסף לרשימת המורשים."}
         </div>
       </form>
     </div>
