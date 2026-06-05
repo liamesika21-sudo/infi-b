@@ -1,33 +1,36 @@
 import { readAnalysisData } from "@/lib/calculus2/analysis-reader";
-import { PageHeader } from "@/components/study/StudyCard";
-import { QuestionBlock } from "@/components/study/QuestionBlock";
+import { PracticePageClient } from "@/components/PracticePageClient";
 
 export default async function PracticePage() {
   const analysis = await readAnalysisData();
   const questions = analysis.questionBank;
 
-  const recitation = questions.filter((q) => q.sourceType === "recitation");
-  const homework = questions.filter((q) => q.sourceType === "homework");
-  const pastExam = questions.filter((q) => q.sourceType === "past_exam");
-  const lecture = questions.filter((q) => q.sourceType === "lecture_example");
+  const counts = {
+    recitation: questions.filter(q => q.sourceType === "recitation").length,
+    homework:   questions.filter(q => q.sourceType === "homework").length,
+    past_exam:  questions.filter(q => q.sourceType === "past_exam").length,
+  };
 
   return (
     <div className="space-y-6">
-      <PageHeader
-        eyebrow="Practice Center"
-        title="מרכז תרגול"
-        description="שאלות מתרגולים, מטלות ומבחני עבר. מסווגות לפי מקור, קושי וחשיבות למבחן."
-      />
+      {/* ── Header ── */}
+      <div className="pb-5 border-b" style={{ borderColor: "var(--border)" }}>
+        <p className="text-[10px] font-black uppercase tracking-widest mb-1" style={{ color: "var(--text-muted)" }}>
+          Practice Center
+        </p>
+        <h1 className="text-3xl font-black tracking-tight" style={{ color: "var(--text-primary)" }}>
+          מרכז תרגול
+        </h1>
+        <p className="mt-1 text-sm" style={{ color: "var(--text-secondary)" }}>
+          {questions.length} שאלות מתרגולים, מטלות ומבחני עבר — מסוננות לפי מקור, קושי וחשיבות.
+        </p>
 
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-        {[
-          { label: "תרגולים", value: recitation.length, color: "cyan" },
-          { label: "מטלות", value: homework.length, color: "gold" },
-          { label: "מבחני עבר", value: pastExam.length, color: "purple" },
-          { label: "דוגמאות הרצאה", value: lecture.length, color: "navy" },
-        ].map(({ label, value, color }) => (
-          <Chip key={label} label={label} value={value} color={color} />
-        ))}
+        {/* Stats row */}
+        <div className="mt-4 flex flex-wrap gap-3">
+          <Stat label="תרגולים" value={counts.recitation} color="var(--cyan)" bg="var(--cyan-light)" border="var(--cyan-border)" />
+          <Stat label="מטלות"   value={counts.homework}   color="var(--gold)" bg="var(--gold-light)" border="var(--gold-border)" />
+          <Stat label="מבחני עבר" value={counts.past_exam} color="var(--purple)" bg="var(--purple-light)" border="var(--purple-border)" />
+        </div>
       </div>
 
       {questions.length === 0 ? (
@@ -37,60 +40,20 @@ export default async function PracticePage() {
           </p>
         </div>
       ) : (
-        <>
-          {recitation.length > 0 && (
-            <Section title="שאלות תרגול" count={recitation.length}>
-              <div className="grid gap-4 lg:grid-cols-2">
-                {recitation.slice(0, 20).map((q) => <QuestionBlock key={q.id} item={q} />)}
-              </div>
-            </Section>
-          )}
-          {homework.length > 0 && (
-            <Section title="שאלות מטלה" count={homework.length}>
-              <div className="grid gap-4 lg:grid-cols-2">
-                {homework.slice(0, 20).map((q) => <QuestionBlock key={q.id} item={q} />)}
-              </div>
-            </Section>
-          )}
-          {pastExam.length > 0 && (
-            <Section title="שאלות מבחן עבר" count={pastExam.length}>
-              <div className="grid gap-4 lg:grid-cols-2">
-                {pastExam.slice(0, 20).map((q) => <QuestionBlock key={q.id} item={q} />)}
-              </div>
-            </Section>
-          )}
-        </>
+        <PracticePageClient questions={questions} />
       )}
     </div>
   );
 }
 
-function Chip({ label, value, color }: { label: string; value: number; color: string }) {
-  const c: Record<string, { bg: string; text: string; border: string }> = {
-    cyan: { bg: "var(--cyan-light)", text: "var(--cyan)", border: "var(--cyan-border)" },
-    gold: { bg: "var(--gold-light)", text: "var(--gold)", border: "var(--gold-border)" },
-    purple: { bg: "var(--purple-light)", text: "var(--purple)", border: "var(--purple-border)" },
-    navy: { bg: "var(--navy-light)", text: "var(--navy-mid)", border: "var(--navy-border)" },
-  };
-  const s = c[color] ?? c.navy;
+function Stat({ label, value, color, bg, border }: { label: string; value: number; color: string; bg: string; border: string }) {
   return (
-    <div className="rounded-xl border p-4 text-center" style={{ background: s.bg, borderColor: s.border }}>
-      <p className="text-2xl font-bold" style={{ color: s.text }}>{value}</p>
-      <p className="mt-0.5 text-xs font-medium" style={{ color: s.text, opacity: 0.8 }}>{label}</p>
+    <div
+      className="flex items-center gap-2 rounded-lg border px-3 py-2"
+      style={{ background: bg, borderColor: border }}
+    >
+      <span className="text-lg font-black" style={{ color }}>{value}</span>
+      <span className="text-xs font-semibold" style={{ color }}>{label}</span>
     </div>
   );
 }
-
-function Section({ title, count, children }: { title: string; count: number; children: React.ReactNode }) {
-  return (
-    <section>
-      <div className="mb-3 flex items-center gap-2">
-        <h2 className="text-lg font-bold" style={{ color: "var(--text-primary)" }}>{title}</h2>
-        <span className="badge badge-muted">{count}</span>
-      </div>
-      {children}
-    </section>
-  );
-}
-
-import type React from "react";

@@ -1,7 +1,8 @@
 import { readAnalysisData } from "@/lib/calculus2/analysis-reader";
 import { getHebrewPastExamHref, hebrewPastExams } from "@/lib/calculus2/past-exams-hebrew";
-import { PageHeader } from "@/components/study/StudyCard";
 import { StudyCallout } from "@/components/study/StudyCallout";
+import { ExternalLink, FileText } from "lucide-react";
+import { PastExamSidebar } from "@/components/PastExamSidebar";
 
 export default async function PastExamsPage() {
   const analysis = await readAnalysisData();
@@ -13,151 +14,159 @@ export default async function PastExamsPage() {
   const groupedQuestions = groupPastExamQuestions(pastExamQuestions, topicTitles);
 
   return (
-    <div className="space-y-6">
-      <PageHeader
-        eyebrow="Past Exams"
-        title="מבחני עבר"
-        description="ניתוח מבחני עבר 2022–2025: נושאים חוזרים, תדירות ודפוסים. מבחני עבר: מועד א׳ ומועד ב׳."
-      />
+    <div className="flex gap-6 items-start">
 
-      {!analysis.pastExamAggregate ? (
-        <div className="rounded-xl border-2 border-dashed p-10 text-center" style={{ borderColor: "var(--border)" }}>
-          <p className="text-sm" style={{ color: "var(--text-muted)" }}>
-            אין עדיין ניתוח מבחנים. הריצי npm run analyze:calculus2.
+      {/* ── Sticky sidebar — desktop only ── */}
+      <PastExamSidebar />
+
+      {/* ── Main content ── */}
+      <div className="min-w-0 flex-1 space-y-6">
+
+        {/* Page header */}
+        <div className="pb-4 border-b" style={{ borderColor: "var(--border)" }}>
+          <p className="text-[10px] font-black uppercase tracking-widest mb-1" style={{ color: "var(--text-muted)" }}>
+            Past Exams
+          </p>
+          <h1 className="text-3xl font-black tracking-tight" style={{ color: "var(--text-primary)" }}>
+            מבחני עבר
+          </h1>
+          <p className="mt-1 text-sm" style={{ color: "var(--text-secondary)" }}>
+            ניתוח מבחני עבר 2022–2025: נושאים חוזרים, תדירות ודפוסים.
           </p>
         </div>
-      ) : (
-        <>
-          <section className="rounded-xl border bg-white p-5 shadow-sm" style={{ borderColor: "var(--border)" }}>
-            <div className="flex flex-wrap items-start justify-between gap-3">
-              <div>
-                <h2 className="text-lg font-bold" style={{ color: "var(--text-primary)" }}>
-                  מבחנים בעברית ללא פתרונות
-                </h2>
-                <p className="mt-1 text-sm leading-7" style={{ color: "var(--text-secondary)" }}>
-                  קישורים ישירים לקבצי הבחינות בעברית בלבד.
-                </p>
-              </div>
-              <span className="badge badge-cyan">{hebrewPastExams.length} קבצים</span>
-            </div>
 
-            <div className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
-              {hebrewPastExams.map((exam) => (
-                <a
-                  key={exam.filename}
-                  href={getHebrewPastExamHref(exam.filename)}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group rounded-lg border px-4 py-3 transition hover:-translate-y-0.5 hover:shadow-sm"
-                  style={{ background: "var(--bg-subtle)", borderColor: "var(--border)" }}
-                >
-                  <span className="block text-sm font-bold" style={{ color: "var(--text-primary)" }}>
-                    {exam.title}
-                  </span>
-                  <span className="mt-1 block text-xs" style={{ color: "var(--text-secondary)" }}>
-                    פתיחת PDF בעברית
-                  </span>
-                </a>
-              ))}
-            </div>
-          </section>
-
-          <div className="grid gap-4 lg:grid-cols-2">
-            {/* Topic frequency */}
-            <section className="rounded-xl border bg-white p-5 shadow-sm" style={{ borderColor: "var(--border)" }}>
-              <h2 className="mb-4 text-lg font-bold" style={{ color: "var(--text-primary)" }}>
-                נושאים בתדירות גבוהה
-              </h2>
-              <div className="space-y-2">
-                {analysis.pastExamAggregate.topicFrequency.slice(0, 10).map((topic) => (
-                  <div
-                    key={topic.topicId}
-                    className="flex items-center justify-between rounded-lg px-4 py-2.5"
-                    style={{ background: "var(--bg-subtle)" }}
-                  >
-                    <span className="text-sm font-semibold" style={{ color: "var(--text-primary)" }}>{topic.title}</span>
-                    <span
-                      className="flex h-6 min-w-6 items-center justify-center rounded-full px-2 text-xs font-bold text-white"
-                      style={{ background: "var(--navy)" }}
-                    >
-                      {topic.count}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* Likely Moed A */}
-            <section className="rounded-xl border bg-white p-5 shadow-sm" style={{ borderColor: "var(--border)" }}>
-              <h2 className="mb-4 text-lg font-bold" style={{ color: "var(--text-primary)" }}>
-                צפוי במועד א׳
-              </h2>
-              <div className="flex flex-wrap gap-2">
-                {analysis.pastExamAggregate.likelyMoedATopics.slice(0, 12).map((topic) => (
-                  <span key={topic} className="badge badge-navy-light">{topic}</span>
-                ))}
-              </div>
-
-              {analysis.pastExamAggregate.dangerZones.length > 0 && (
-                <StudyCallout variant="warning" className="mt-4">
-                  <strong>אזורי סיכון:</strong> {analysis.pastExamAggregate.dangerZones.join(" · ")}
-                </StudyCallout>
-              )}
-            </section>
+        {/* ── Mobile exam links ── */}
+        <section className="lg:hidden">
+          <h2 className="mb-3 text-sm font-bold" style={{ color: "var(--text-primary)" }}>
+            מבחנים — PDF בעברית
+          </h2>
+          <div className="grid gap-2 sm:grid-cols-2">
+            {hebrewPastExams.map((exam) => (
+              <a
+                key={exam.filename}
+                href={getHebrewPastExamHref(exam.filename)}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center justify-between gap-2 rounded-lg border px-4 py-3 text-sm font-semibold transition hover:shadow-sm"
+                style={{ background: "var(--bg-subtle)", borderColor: "var(--border)", color: "var(--text-primary)" }}
+              >
+                <span className="flex items-center gap-2">
+                  <FileText className="h-4 w-4 shrink-0" style={{ color: "var(--navy-mid)" }} />
+                  {exam.title}
+                </span>
+                <ExternalLink className="h-3.5 w-3.5 shrink-0" style={{ color: "var(--text-muted)" }} />
+              </a>
+            ))}
           </div>
+        </section>
 
-          {/* Question references from past exams */}
-          {pastExamQuestions.length > 0 && (
-            <section>
-              <h2 className="mb-3 text-lg font-bold" style={{ color: "var(--text-primary)" }}>
-                שאלות ממבחני עבר לפי נושא
-              </h2>
-              <p className="mb-4 text-sm leading-7" style={{ color: "var(--text-secondary)" }}>
-                מוצגים רק מספרי השאלות והמועד, בלי טקסט השאלה עצמו.
-              </p>
-              <div className="grid gap-4 lg:grid-cols-2">
-                {groupedQuestions.map((group) => (
-                  <article
-                    key={group.topicId}
-                    className="rounded-xl border bg-white p-5 shadow-sm"
-                    style={{ borderColor: "var(--border)" }}
-                  >
-                    <div className="flex items-center justify-between gap-3">
-                      <h3 className="text-base font-bold" style={{ color: "var(--text-primary)" }}>
-                        {group.title}
-                      </h3>
-                      <span className="badge badge-navy-light">{group.questions.length} שאלות</span>
+        {!analysis.pastExamAggregate ? (
+          <div className="rounded-xl border-2 border-dashed p-10 text-center" style={{ borderColor: "var(--border)" }}>
+            <p className="text-sm" style={{ color: "var(--text-muted)" }}>
+              אין עדיין ניתוח מבחנים. הריצי npm run analyze:calculus2.
+            </p>
+          </div>
+        ) : (
+          <>
+            <div className="grid gap-4 lg:grid-cols-2">
+              {/* Topic frequency */}
+              <section className="rounded-xl border bg-white p-5 shadow-sm" style={{ borderColor: "var(--border)" }}>
+                <h2 className="mb-4 text-lg font-bold" style={{ color: "var(--text-primary)" }}>
+                  נושאים בתדירות גבוהה
+                </h2>
+                <div className="space-y-2">
+                  {analysis.pastExamAggregate.topicFrequency.slice(0, 10).map((topic, i) => (
+                    <div
+                      key={topic.topicId}
+                      className="flex items-center justify-between rounded-lg px-4 py-2.5"
+                      style={{ background: i < 3 ? "var(--navy-light)" : "var(--bg-subtle)" }}
+                    >
+                      <span className="text-sm font-semibold" style={{ color: "var(--text-primary)" }}>
+                        {topic.title}
+                      </span>
+                      <span
+                        className="flex h-6 min-w-6 items-center justify-center rounded-full px-2 text-xs font-bold text-white"
+                        style={{ background: i < 3 ? "var(--navy)" : "var(--text-muted)" }}
+                      >
+                        {topic.count}
+                      </span>
                     </div>
+                  ))}
+                </div>
+              </section>
 
-                    <div className="mt-4 grid gap-2 sm:grid-cols-2">
-                      {group.questions.slice(0, 18).map((question) => {
-                        const exam = examBySourceFile.get(question.sourceFileId);
-                        return (
-                          <div
-                            key={question.id}
-                            className="rounded-lg border px-3 py-2.5"
-                            style={{ background: "var(--bg-subtle)", borderColor: "var(--border)" }}
-                          >
-                            <div className="flex items-center justify-between gap-2">
-                              <span className="text-sm font-bold" style={{ color: "var(--text-primary)" }}>
-                                שאלה {question.questionNumber ?? "לא זוהתה"}
-                              </span>
-                              <span className="badge badge-muted">{question.examRelevance}</span>
+              {/* Likely Moed A */}
+              <section className="rounded-xl border bg-white p-5 shadow-sm" style={{ borderColor: "var(--border)" }}>
+                <h2 className="mb-4 text-lg font-bold" style={{ color: "var(--text-primary)" }}>
+                  צפוי במועד א׳
+                </h2>
+                <div className="flex flex-wrap gap-2">
+                  {analysis.pastExamAggregate.likelyMoedATopics.slice(0, 12).map((topic) => (
+                    <span key={topic} className="badge badge-navy-light">{topic}</span>
+                  ))}
+                </div>
+
+                {analysis.pastExamAggregate.dangerZones.length > 0 && (
+                  <StudyCallout variant="warning" className="mt-4">
+                    <strong>אזורי סיכון:</strong> {analysis.pastExamAggregate.dangerZones.join(" · ")}
+                  </StudyCallout>
+                )}
+              </section>
+            </div>
+
+            {/* Question references from past exams */}
+            {pastExamQuestions.length > 0 && (
+              <section>
+                <h2 className="mb-3 text-lg font-bold" style={{ color: "var(--text-primary)" }}>
+                  שאלות ממבחני עבר לפי נושא
+                </h2>
+                <p className="mb-4 text-sm" style={{ color: "var(--text-secondary)" }}>
+                  מוצגים מספרי שאלות, מועד ושנה — ללא טקסט השאלה.
+                </p>
+                <div className="grid gap-4 lg:grid-cols-2">
+                  {groupedQuestions.map((group) => (
+                    <article
+                      key={group.topicId}
+                      className="rounded-xl border bg-white p-5 shadow-sm"
+                      style={{ borderColor: "var(--border)" }}
+                    >
+                      <div className="flex items-center justify-between gap-3 mb-4">
+                        <h3 className="text-base font-bold" style={{ color: "var(--text-primary)" }}>
+                          {group.title}
+                        </h3>
+                        <span className="badge badge-navy-light">{group.questions.length} שאלות</span>
+                      </div>
+
+                      <div className="grid gap-2 sm:grid-cols-2">
+                        {group.questions.slice(0, 18).map((question) => {
+                          const exam = examBySourceFile.get(question.sourceFileId);
+                          return (
+                            <div
+                              key={question.id}
+                              className="rounded-lg border px-3 py-2.5"
+                              style={{ background: "var(--bg-subtle)", borderColor: "var(--border)" }}
+                            >
+                              <div className="flex items-center justify-between gap-2">
+                                <span className="text-sm font-bold" style={{ color: "var(--text-primary)" }}>
+                                  שאלה {question.questionNumber ?? "?"}
+                                </span>
+                                <span className="badge badge-muted">{question.examRelevance}</span>
+                              </div>
+                              <p className="mt-1 text-xs leading-5" style={{ color: "var(--text-secondary)" }}>
+                                {formatExamLabel(exam?.filename ?? question.sourceSnippet.filename, exam?.examYear, exam?.moed)}
+                              </p>
                             </div>
-                            <p className="mt-1 text-xs leading-5" style={{ color: "var(--text-secondary)" }}>
-                              {formatExamLabel(exam?.filename ?? question.sourceSnippet.filename, exam?.examYear, exam?.moed)}
-                            </p>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </section>
-          )}
-        </>
-      )}
+                          );
+                        })}
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            )}
+          </>
+        )}
+      </div>
     </div>
   );
 }
