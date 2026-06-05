@@ -33,23 +33,6 @@ function getDaysUntilExam(): number {
   return Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
 }
 
-const moduleCards = [
-  { href: "/weeks",            label: "שבועות",        desc: "מפת 13 שבועות",      icon: Calendar,      accent: "navy" },
-  { href: "/topics",           label: "נושאים",        desc: "מבנה topic-first",   icon: Layers3,       accent: "navy" },
-  { href: "/definitions",      label: "הגדרות",        desc: "בנק הגדרות",         icon: BookMarked,    accent: "cyan" },
-  { href: "/formulas",         label: "נוסחאות",       desc: "בנק נוסחאות",        icon: Sigma,         accent: "cyan" },
-  { href: "/theorems",         label: "משפטים",        desc: "בנק משפטים",         icon: ScrollText,    accent: "cyan" },
-  { href: "/proof-patterns",   label: "תבניות הוכחה",  desc: "דפוסים חוזרים",     icon: BookOpen,      accent: "purple" },
-  { href: "/practice",         label: "תרגול",         desc: "שאלות לפי נושא",     icon: Target,        accent: "green" },
-  { href: "/simulations",      label: "סימולציות",     desc: "מבחני תרגול",        icon: FlaskConical,  accent: "amber" },
-  { href: "/past-exams",       label: "מבחני עבר",     desc: "תדירות ודפוסים",     icon: FileQuestion,  accent: "amber" },
-  { href: "/homework-review",  label: "חזרת מטלות",    desc: "עדיפות מטלות",       icon: ClipboardList, accent: "gold" },
-  { href: "/quick-review",     label: "חזרה מהירה",    desc: "לפני המבחן",         icon: Zap,           accent: "red" },
-  { href: "/progress",         label: "מעקב שליטה",    desc: "סטטוס נושאים",       icon: Gauge,        accent: "green" },
-  { href: "/mentor",           label: "מנטור",         desc: "עזרה ואינטראקציה",   icon: Brain,         accent: "navy" },
-  { href: "/instructor-notes", label: "הערות מקס",     desc: "הערות והנחיות",      icon: Sparkles,      accent: "purple" },
-] as const;
-
 export function Dashboard({
   inventory,
   generatedData,
@@ -60,19 +43,25 @@ export function Dashboard({
   analysisData: Awaited<ReturnType<typeof readAnalysisData>>;
 }) {
   const daysLeft = getDaysUntilExam();
-  const criticalTopics = analysisData.examPriorityMap?.topics.filter((t) => t.priorityLevel === "critical") ?? [];
-  const highTopics = analysisData.examPriorityMap?.topics.filter((t) => t.priorityLevel === "high") ?? [];
-  const readySimulations = analysisData.simulationExams.filter((s) => !s.needsReview && s.questions.length >= 4);
-  const criticalHw = analysisData.homeworkPriorityMap.flatMap((hw) =>
-    hw.questions.filter((q) => q.importanceLevel === "critical")
-  ).slice(0, 3);
+  const criticalTopics =
+    analysisData.examPriorityMap?.topics.filter((t) => t.priorityLevel === "critical") ?? [];
+  const highTopics =
+    analysisData.examPriorityMap?.topics.filter((t) => t.priorityLevel === "high") ?? [];
+  const readySimulations = analysisData.simulationExams.filter(
+    (s) => !s.needsReview && s.questions.length >= 4,
+  );
+  const criticalHw = analysisData.homeworkPriorityMap
+    .flatMap((hw) => hw.questions.filter((q) => q.importanceLevel === "critical"))
+    .slice(0, 3);
   const fullMaterialWeeks = generatedData.weekMap.filter(
     (week) =>
       week.materialStatus.lecture === "available" &&
       week.materialStatus.recitation !== "missing" &&
       week.materialStatus.homework === "available",
   ).length;
-  const analyzedWeeks = generatedData.weekMap.filter((week) => week.topicCoverage.length > 0).length;
+  const analyzedWeeks = generatedData.weekMap.filter(
+    (week) => week.topicCoverage.length > 0,
+  ).length;
   const analyzedPercent = percentage(analyzedWeeks, calculus2Course.totalWeeks);
   const completeMaterialPercent = percentage(fullMaterialWeeks, calculus2Course.totalWeeks);
   const extractionSuccessPercent = percentage(
@@ -82,66 +71,260 @@ export function Dashboard({
   const topicProgress = buildTopicProgress(analysisData);
   const strongTopics = topicProgress.filter((topic) => topic.status === "strong").slice(0, 4);
   const weakerTopics = topicProgress.filter((topic) => topic.status === "needs_work").slice(0, 4);
-
   const urgency = daysLeft <= 7 ? "red" : daysLeft <= 21 ? "amber" : "navy";
 
+  const heroHeadline =
+    daysLeft <= 7
+      ? "שבוע אחרון — מיקוד מלא"
+      : daysLeft <= 14
+        ? "ספרינט סופי"
+        : daysLeft <= 30
+          ? "בשלב הכוננות"
+          : "בונים לקראת 90+";
+
+  const heroSubline =
+    daysLeft > 30
+      ? "יש זמן לבנות בסיס חזק — כסו שבוע שבוע ותרגלו כל נושא."
+      : daysLeft > 14
+        ? "עכשיו הזמן לסגור פערים ולהתחיל סימולציות מלאות."
+        : "מיקוד על נושאים קריטיים, ביטחון עצמי, ותרגול מבחנים אמיתיים.";
+
+  const statPills = [
+    {
+      label: "נוסחאות",
+      value: analysisData.formulaBank.filter((f) => f.confidence >= 0.5).length,
+      href: "/formulas",
+      rgb: "34,197,94",
+    },
+    {
+      label: "משפטים",
+      value: analysisData.theoremBank.length,
+      href: "/theorems",
+      rgb: "59,130,246",
+    },
+    {
+      label: "שאלות",
+      value: analysisData.questionBank.length,
+      href: "/practice",
+      rgb: "251,146,60",
+    },
+    {
+      label: "סימולציות",
+      value: readySimulations.length,
+      href: "/simulations",
+      rgb: "167,139,250",
+    },
+  ];
+
+  const countdownAccentColor =
+    urgency === "red" ? "#f87171" : urgency === "amber" ? "#fbbf24" : "#ffffff";
+  const countdownBgColor =
+    urgency === "red"
+      ? "rgba(239,68,68,0.12)"
+      : urgency === "amber"
+        ? "rgba(245,158,11,0.12)"
+        : "rgba(255,255,255,0.06)";
+  const countdownBorderColor =
+    urgency === "red"
+      ? "rgba(239,68,68,0.25)"
+      : urgency === "amber"
+        ? "rgba(245,158,11,0.25)"
+        : "rgba(255,255,255,0.1)";
+  const ctaBg =
+    urgency === "red"
+      ? "#ef4444"
+      : urgency === "amber"
+        ? "#f59e0b"
+        : "linear-gradient(135deg,#3b82f6,#6366f1)";
+
   return (
-    <div className="space-y-6">
-      {/* Hero / Exam countdown */}
+    <div className="space-y-8">
+      {/* ══ HERO ══ */}
       <section
-        className="rounded-xl border p-6 shadow-sm"
         style={{
-          background: urgency === "red" ? "var(--red-light)" : urgency === "amber" ? "var(--amber-light)" : "var(--navy)",
-          borderColor: urgency === "red" ? "var(--red-border)" : urgency === "amber" ? "var(--amber-border)" : "var(--navy)",
-          color: urgency === "navy" ? "#fff" : "var(--text-primary)",
+          background: "linear-gradient(135deg,#061424 0%,#0c1f3d 50%,#061424 100%)",
+          borderRadius: "16px",
+          overflow: "hidden",
+          position: "relative",
         }}
       >
-        <div className="flex flex-wrap items-start justify-between gap-4">
-          <div>
-            <p
-              className="text-xs font-bold uppercase tracking-widest opacity-70"
-            >
-              {calculus2Course.nameHe} · מועד א׳ · {calculus2Course.targetScoreLabel}
-            </p>
-            <h1 className="mt-2 text-4xl font-black tracking-tight">
-              {daysLeft} ימים למבחן
-            </h1>
-            <p className="mt-1 text-sm opacity-80">
-              01.07.2026 · יעד: {calculus2Course.targetScoreLabel}
-            </p>
-          </div>
-          <div className="flex flex-col items-end gap-2">
-            <span
-              className="rounded-full px-3 py-1 text-xs font-bold"
-              style={{
-                background: urgency === "navy" ? "rgba(255,255,255,0.15)" : "rgba(0,0,0,0.08)",
-              }}
-            >
-              {daysLeft <= 14 ? "⚠ פחות מ-2 שבועות" : daysLeft <= 30 ? "מצב כוננות" : "זמן ראוי לתכנון"}
-            </span>
-          </div>
-        </div>
+        {/* dot-grid decoration */}
+        <div
+          aria-hidden
+          style={{
+            position: "absolute",
+            inset: 0,
+            backgroundImage: "radial-gradient(rgba(255,255,255,0.035) 1px,transparent 1px)",
+            backgroundSize: "20px 20px",
+            pointerEvents: "none",
+          }}
+        />
+        {/* ambient glow */}
+        <div
+          aria-hidden
+          style={{
+            position: "absolute",
+            top: "-60px",
+            right: "15%",
+            width: "280px",
+            height: "280px",
+            background: "radial-gradient(circle,rgba(59,130,246,0.1) 0%,transparent 65%)",
+            pointerEvents: "none",
+          }}
+        />
 
-        {/* Quick stats */}
-        <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
-          {[
-            { label: "נוסחאות", value: analysisData.formulaBank.filter(f => f.confidence >= 0.5).length, href: "/formulas" },
-            { label: "משפטים", value: analysisData.theoremBank.length, href: "/theorems" },
-            { label: "שאלות", value: analysisData.questionBank.length, href: "/practice" },
-            { label: "סימולציות", value: readySimulations.length, href: "/simulations" },
-          ].map(({ label, value, href }) => (
-            <Link
-              key={href}
-              href={href}
-              className="rounded-lg p-3 text-center transition hover:opacity-80"
+        <div style={{ position: "relative", padding: "clamp(1.5rem,4vw,2rem)" }}>
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              alignItems: "center",
+              justifyContent: "space-between",
+              gap: "2rem",
+            }}
+          >
+            {/* Left: text + stat pills */}
+            <div style={{ flex: 1, minWidth: "220px" }}>
+              <p
+                style={{
+                  color: "rgba(255,255,255,0.4)",
+                  fontSize: "11px",
+                  fontWeight: 700,
+                  textTransform: "uppercase",
+                  letterSpacing: "0.12em",
+                  marginBottom: "10px",
+                }}
+              >
+                {calculus2Course.nameHe} · מועד א׳ · {calculus2Course.targetScoreLabel}
+              </p>
+              <h1
+                style={{
+                  color: "#fff",
+                  fontSize: "clamp(1.75rem,4vw,2.75rem)",
+                  fontWeight: 900,
+                  lineHeight: 1.1,
+                  marginBottom: "10px",
+                  letterSpacing: "-0.025em",
+                }}
+              >
+                {heroHeadline}
+              </h1>
+              <p
+                style={{
+                  color: "rgba(255,255,255,0.5)",
+                  fontSize: "14px",
+                  lineHeight: 1.65,
+                  marginBottom: "1.5rem",
+                  maxWidth: "400px",
+                }}
+              >
+                {heroSubline}
+              </p>
+
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
+                {statPills.map(({ label, value, href, rgb }) => (
+                  <Link
+                    key={href}
+                    href={href}
+                    style={{
+                      background: `rgba(${rgb},0.15)`,
+                      border: `1px solid rgba(${rgb},0.3)`,
+                      borderRadius: "999px",
+                      padding: "6px 14px",
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "7px",
+                      textDecoration: "none",
+                    }}
+                  >
+                    <span
+                      style={{
+                        color: "#fff",
+                        fontWeight: 800,
+                        fontSize: "15px",
+                        fontVariantNumeric: "tabular-nums",
+                      }}
+                    >
+                      {value}
+                    </span>
+                    <span
+                      style={{
+                        color: `rgba(${rgb},0.95)`,
+                        fontSize: "12px",
+                        fontWeight: 600,
+                      }}
+                    >
+                      {label}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Right: countdown box */}
+            <div
               style={{
-                background: urgency === "navy" ? "rgba(255,255,255,0.1)" : "rgba(255,255,255,0.5)",
+                background: countdownBgColor,
+                border: `1px solid ${countdownBorderColor}`,
+                borderRadius: "14px",
+                padding: "1.75rem 2rem",
+                textAlign: "center",
+                flexShrink: 0,
               }}
             >
-              <p className="text-2xl font-bold">{value}</p>
-              <p className="mt-0.5 text-xs opacity-70">{label}</p>
-            </Link>
-          ))}
+              <p
+                style={{
+                  color: "rgba(255,255,255,0.35)",
+                  fontSize: "10px",
+                  fontWeight: 700,
+                  textTransform: "uppercase",
+                  letterSpacing: "0.12em",
+                  marginBottom: "6px",
+                }}
+              >
+                זמן עד מבחן
+              </p>
+              <p
+                dir="ltr"
+                style={{
+                  color: countdownAccentColor,
+                  fontSize: "clamp(3rem,10vw,5.5rem)",
+                  fontWeight: 900,
+                  lineHeight: 1,
+                  letterSpacing: "-0.06em",
+                  fontVariantNumeric: "tabular-nums",
+                }}
+              >
+                {daysLeft}
+              </p>
+              <p
+                style={{
+                  color: "rgba(255,255,255,0.4)",
+                  fontSize: "13px",
+                  fontWeight: 600,
+                  marginTop: "4px",
+                  marginBottom: "16px",
+                }}
+              >
+                ימים
+              </p>
+              <Link
+                href="/practice"
+                style={{
+                  display: "block",
+                  background: ctaBg,
+                  color: "#fff",
+                  borderRadius: "10px",
+                  padding: "9px 20px",
+                  fontSize: "13px",
+                  fontWeight: 700,
+                  textDecoration: "none",
+                }}
+              >
+                תרגל עכשיו ←
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -149,13 +332,18 @@ export function Dashboard({
       {!generatedData.hasGeneratedData && (
         <StudyCallout variant="warning">
           עדיין לא בוצע עיבוד חומרים. הריצי{" "}
-          <code dir="ltr" className="rounded bg-white/60 px-1.5 py-0.5 font-mono text-xs">npm run process:calculus2</code>
-          {" "}ואז{" "}
-          <code dir="ltr" className="rounded bg-white/60 px-1.5 py-0.5 font-mono text-xs">npm run analyze:calculus2</code>
-          {" "}כדי להתחיל.
+          <code dir="ltr" className="rounded bg-white/60 px-1.5 py-0.5 font-mono text-xs">
+            npm run process:calculus2
+          </code>{" "}
+          ואז{" "}
+          <code dir="ltr" className="rounded bg-white/60 px-1.5 py-0.5 font-mono text-xs">
+            npm run analyze:calculus2
+          </code>{" "}
+          כדי להתחיל.
         </StudyCallout>
       )}
 
+      {/* ══ LEARNING PROGRESS ══ */}
       <LearningProgressPanel
         analyzedPercent={analyzedPercent}
         completeMaterialPercent={completeMaterialPercent}
@@ -167,117 +355,259 @@ export function Dashboard({
         hasAnalysis={analysisData.hasAnalysis}
       />
 
-      {/* What to do NOW */}
-      {analysisData.hasAnalysis && (
-        <section
-          className="rounded-xl border bg-white p-6 shadow-sm"
-          style={{ borderColor: "var(--border)" }}
-        >
-          <h2 className="text-xl font-bold" style={{ color: "var(--text-primary)" }}>
-            מה לעשות עכשיו
-          </h2>
+      {/* ══ TODAY'S FOCUS ══ */}
+      {analysisData.hasAnalysis &&
+        (criticalTopics.length > 0 || criticalHw.length > 0 || readySimulations.length > 0) && (
+          <section>
+            <SectionHeader title="מיקוד להיום" accent="#ef4444" />
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {[
+                ...criticalTopics.slice(0, 2).map((topic) => ({
+                  level: "critical" as const,
+                  title: `נושא קריטי: ${topic.title}`,
+                  desc: topic.recommendedAction,
+                  href: "/topics",
+                })),
+                ...criticalHw.slice(0, 1).map((q) => ({
+                  level: "high" as const,
+                  title: `מטלה ${q.homeworkNumber} · שאלה ${q.questionNumber}`,
+                  desc: q.whyItMatters,
+                  href: "/homework-review",
+                })),
+                ...readySimulations.slice(0, 1).map((sim) => ({
+                  level: "medium" as const,
+                  title: `סימולציה: ${sim.title}`,
+                  desc: `${sim.questions.length} שאלות · ${sim.estimatedDurationMinutes} דקות`,
+                  href: `/simulations/${sim.id}`,
+                })),
+              ].map((item, i) => (
+                <ActionItem key={i} {...item} />
+              ))}
+            </div>
+          </section>
+        )}
 
-          <div className="mt-4 space-y-3">
-            {criticalTopics.slice(0, 3).map((topic) => (
-              <ActionItem
-                key={topic.topicId}
-                level="critical"
-                title={`לתרגל: ${topic.title}`}
-                desc={topic.recommendedAction}
-                href="/topics"
-              />
-            ))}
-            {criticalHw.slice(0, 2).map((q) => (
-              <ActionItem
-                key={q.questionId}
-                level="high"
-                title={`מטלה ${q.homeworkNumber} · שאלה ${q.questionNumber} — לחזור`}
-                desc={q.whyItMatters}
-                href="/homework-review"
-              />
-            ))}
-            {readySimulations.slice(0, 1).map((sim) => (
-              <ActionItem
-                key={sim.id}
-                level="medium"
-                title={`פתרי סימולציה: ${sim.title}`}
-                desc={`${sim.questions.length} שאלות · ${sim.estimatedDurationMinutes} דקות`}
-                href={`/simulations/${sim.id}`}
-              />
-            ))}
-            {criticalTopics.length === 0 && criticalHw.length === 0 && (
-              <p className="text-sm" style={{ color: "var(--text-muted)" }}>
-                הריצי ניתוח חומרים כדי לקבל המלצות מדויקות.
-              </p>
-            )}
-          </div>
-        </section>
-      )}
-
-      {/* Materials status + analysis status */}
+      {/* ══ STATUS PANELS ══ */}
       <div className="grid gap-4 lg:grid-cols-2">
+        {/* Materials status */}
         <section
           className="rounded-xl border bg-white p-5 shadow-sm"
           style={{ borderColor: "var(--border)" }}
         >
-          <h2 className="mb-4 text-lg font-bold" style={{ color: "var(--text-primary)" }}>
-            סטטוס חומרים
-          </h2>
-          <div className="space-y-2">
+          <SectionHeader title="סטטוס חומרים" accent="#3b82f6" small />
+          <div className="mt-4 space-y-2">
             {[
-              { label: "הרצאות", value: inventory.countsByType.lecture },
-              { label: "תרגולים", value: inventory.countsByType.recitation },
-              { label: "מטלות", value: inventory.countsByType.homework },
-              { label: "סיכומים", value: inventory.countsByType.summary },
-              { label: "מבחני עבר", value: inventory.countsByType.past_exam },
-            ].map(({ label, value }) => (
-              <div key={label} className="flex items-center justify-between rounded-lg px-4 py-2.5" style={{ background: "var(--bg-subtle)" }}>
-                <span className="text-sm font-medium" style={{ color: "var(--text-secondary)" }}>{label}</span>
-                <span className="font-mono font-bold" style={{ color: "var(--text-primary)" }}>{value}</span>
+              { label: "הרצאות", value: inventory.countsByType.lecture, emoji: "📖" },
+              { label: "תרגולים", value: inventory.countsByType.recitation, emoji: "✏️" },
+              { label: "מטלות", value: inventory.countsByType.homework, emoji: "📝" },
+              { label: "סיכומים", value: inventory.countsByType.summary, emoji: "📋" },
+              { label: "מבחני עבר", value: inventory.countsByType.past_exam, emoji: "📄" },
+            ].map(({ label, value, emoji }) => (
+              <div
+                key={label}
+                className="flex items-center justify-between rounded-lg px-4 py-2.5"
+                style={{ background: "var(--bg-subtle)" }}
+              >
+                <span
+                  className="flex items-center gap-2 text-sm font-medium"
+                  style={{ color: "var(--text-secondary)" }}
+                >
+                  <span>{emoji}</span>
+                  {label}
+                </span>
+                <span
+                  className="rounded-full px-2.5 py-0.5 text-xs font-bold"
+                  style={
+                    value > 0
+                      ? {
+                          background: "var(--navy-light)",
+                          color: "var(--navy-mid)",
+                          border: "1px solid var(--navy-border)",
+                        }
+                      : {
+                          background: "var(--bg-inset)",
+                          color: "var(--text-muted)",
+                        }
+                  }
+                >
+                  {value}
+                </span>
               </div>
             ))}
           </div>
         </section>
 
+        {/* Critical topics */}
         <section
           className="rounded-xl border bg-white p-5 shadow-sm"
           style={{ borderColor: "var(--border)" }}
         >
-          <h2 className="mb-4 text-lg font-bold" style={{ color: "var(--text-primary)" }}>
-            נושאים קריטיים למבחן
-          </h2>
+          <SectionHeader title="נושאים קריטיים למבחן" accent="#ef4444" small />
           {criticalTopics.length > 0 || highTopics.length > 0 ? (
-            <div className="space-y-2">
+            <div className="mt-4 space-y-2">
               {[...criticalTopics, ...highTopics].slice(0, 7).map((topic) => (
-                <div key={topic.topicId} className="flex items-center justify-between rounded-lg px-4 py-2.5" style={{ background: "var(--bg-subtle)" }}>
-                  <span className="text-sm font-medium" style={{ color: "var(--text-primary)" }}>{topic.title}</span>
-                  <span className={`badge ${topic.priorityLevel === "critical" ? "badge-red" : "badge-navy"}`}>
+                <div
+                  key={topic.topicId}
+                  className="flex items-center justify-between rounded-lg px-4 py-2.5"
+                  style={{ background: "var(--bg-subtle)" }}
+                >
+                  <span
+                    className="text-sm font-medium"
+                    style={{ color: "var(--text-primary)" }}
+                  >
+                    {topic.title}
+                  </span>
+                  <span
+                    className="rounded-full px-2.5 py-0.5 text-xs font-bold"
+                    style={
+                      topic.priorityLevel === "critical"
+                        ? { background: "#fee2e2", color: "#dc2626" }
+                        : { background: "#dbeafe", color: "#2563eb" }
+                    }
+                  >
                     {topic.priorityLevel === "critical" ? "קריטי" : "גבוה"}
                   </span>
                 </div>
               ))}
             </div>
           ) : (
-            <p className="text-sm" style={{ color: "var(--text-muted)" }}>
+            <p className="mt-4 text-sm" style={{ color: "var(--text-muted)" }}>
               הריצי ניתוח חומרים לקבלת מפת עדיפות.
             </p>
           )}
         </section>
       </div>
 
-      {/* Lecture overview table */}
+      {/* ══ LECTURE TABLE ══ */}
       {analysisData.lectureSummaries.length > 0 && (
         <LectureOverviewTable lectureSummaries={analysisData.lectureSummaries} />
       )}
 
-      {/* Module grid */}
+      {/* ══ NAVIGATION GRID ══ */}
       <section>
-        <h2 className="mb-4 text-xl font-bold" style={{ color: "var(--text-primary)" }}>
-          עוד כלים
-        </h2>
-        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-          {moduleCards.map(({ href, label, desc, icon: Icon, accent }) => (
-            <ModuleLink key={href} href={href} label={label} desc={desc} icon={Icon} accent={accent} />
+        <SectionHeader title="כלי לימוד" accent="#6366f1" />
+        <div className="space-y-5">
+          {(
+            [
+              {
+                title: "תיאוריה ולמידה",
+                accent: "#3b82f6",
+                items: [
+                  { href: "/weeks", label: "שבועות", desc: "מפת 13 שבועות", icon: Calendar },
+                  { href: "/topics", label: "נושאים", desc: "מבנה topic-first", icon: Layers3 },
+                  { href: "/formulas", label: "נוסחאות", desc: "בנק נוסחאות", icon: Sigma },
+                  { href: "/theorems", label: "משפטים", desc: "בנק משפטים", icon: ScrollText },
+                  { href: "/definitions", label: "הגדרות", desc: "בנק הגדרות", icon: BookMarked },
+                  {
+                    href: "/proof-patterns",
+                    label: "תבניות הוכחה",
+                    desc: "דפוסים חוזרים",
+                    icon: BookOpen,
+                  },
+                ],
+              },
+              {
+                title: "תרגול ובחינה",
+                accent: "#f59e0b",
+                items: [
+                  { href: "/practice", label: "תרגול", desc: "שאלות לפי נושא", icon: Target },
+                  {
+                    href: "/simulations",
+                    label: "סימולציות",
+                    desc: "מבחני תרגול",
+                    icon: FlaskConical,
+                  },
+                  {
+                    href: "/past-exams",
+                    label: "מבחני עבר",
+                    desc: "תדירות ודפוסים",
+                    icon: FileQuestion,
+                  },
+                  {
+                    href: "/homework-review",
+                    label: "חזרת מטלות",
+                    desc: "עדיפות מטלות",
+                    icon: ClipboardList,
+                  },
+                ],
+              },
+              {
+                title: "מעקב וכלים",
+                accent: "#8b5cf6",
+                items: [
+                  { href: "/quick-review", label: "חזרה מהירה", desc: "לפני המבחן", icon: Zap },
+                  {
+                    href: "/progress",
+                    label: "מעקב שליטה",
+                    desc: "סטטוס נושאים",
+                    icon: Gauge,
+                  },
+                  { href: "/mentor", label: "מנטור", desc: "עזרה ואינטראקציה", icon: Brain },
+                  {
+                    href: "/instructor-notes",
+                    label: "הערות מקס",
+                    desc: "הערות והנחיות",
+                    icon: Sparkles,
+                  },
+                ],
+              },
+            ] as Array<{
+              title: string;
+              accent: string;
+              items: Array<{
+                href: string;
+                label: string;
+                desc: string;
+                icon: React.FC<{ className?: string }>;
+              }>;
+            }>
+          ).map((group) => (
+            <div key={group.title}>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "10px",
+                  marginBottom: "10px",
+                }}
+              >
+                <span
+                  style={{
+                    width: "8px",
+                    height: "8px",
+                    borderRadius: "50%",
+                    background: group.accent,
+                    flexShrink: 0,
+                  }}
+                />
+                <h3
+                  style={{
+                    fontSize: "12px",
+                    fontWeight: 700,
+                    textTransform: "uppercase",
+                    letterSpacing: "0.07em",
+                    color: "var(--text-muted)",
+                  }}
+                >
+                  {group.title}
+                </h3>
+                <div
+                  style={{ flex: 1, height: "1px", background: "var(--border)" }}
+                />
+              </div>
+              <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                {group.items.map(({ href, label, desc, icon }) => (
+                  <NavCard
+                    key={href}
+                    href={href}
+                    label={label}
+                    desc={desc}
+                    icon={icon}
+                    accent={group.accent}
+                  />
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </section>
@@ -285,6 +615,49 @@ export function Dashboard({
   );
 }
 
+/* ─── Section header with colored bar ─────────────────────────── */
+function SectionHeader({
+  title,
+  accent,
+  small = false,
+}: {
+  title: string;
+  accent: string;
+  small?: boolean;
+}) {
+  return (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: "10px",
+        marginBottom: small ? 0 : "16px",
+      }}
+    >
+      <span
+        style={{
+          width: "3px",
+          height: small ? "16px" : "22px",
+          borderRadius: "999px",
+          background: accent,
+          flexShrink: 0,
+        }}
+      />
+      <h2
+        style={{
+          fontSize: small ? "16px" : "20px",
+          fontWeight: 800,
+          color: "var(--text-primary)",
+          letterSpacing: "-0.01em",
+        }}
+      >
+        {title}
+      </h2>
+    </div>
+  );
+}
+
+/* ─── Priority action card ─────────────────────────────────────── */
 function ActionItem({
   level,
   title,
@@ -296,34 +669,131 @@ function ActionItem({
   desc: string;
   href: string;
 }) {
-  const styles = {
-    critical: { bg: "var(--red-light)", border: "var(--red-border)", dot: "var(--red)", label: "קריטי" },
-    high: { bg: "var(--navy-light)", border: "var(--navy-border)", dot: "var(--navy-mid)", label: "גבוה" },
-    medium: { bg: "var(--bg-subtle)", border: "var(--border)", dot: "var(--text-muted)", label: "" },
+  const cfg = {
+    critical: {
+      borderColor: "#ef4444",
+      badge: { bg: "#fee2e2", text: "#dc2626", label: "קריטי" },
+    },
+    high: {
+      borderColor: "#f59e0b",
+      badge: { bg: "#fef3c7", text: "#d97706", label: "גבוה" },
+    },
+    medium: {
+      borderColor: "#3b82f6",
+      badge: { bg: "#dbeafe", text: "#2563eb", label: "תרגול" },
+    },
   }[level];
 
   return (
     <Link
       href={href}
-      className="flex items-start gap-3 rounded-lg border p-3 transition hover:opacity-80"
-      style={{ background: styles.bg, borderColor: styles.border }}
+      className="flex flex-col gap-3 rounded-xl border bg-white p-4 shadow-sm transition hover:shadow-md"
+      style={{
+        borderColor: "var(--border)",
+        borderRight: `3px solid ${cfg.borderColor}`,
+        textDecoration: "none",
+      }}
     >
       <span
-        className="mt-1 h-2 w-2 shrink-0 rounded-full"
-        style={{ background: styles.dot }}
-      />
-      <div className="min-w-0 flex-1">
-        <p className="text-sm font-semibold leading-5" style={{ color: "var(--text-primary)" }}>
-          {title}
-        </p>
-        <p className="mt-0.5 text-xs leading-5" style={{ color: "var(--text-secondary)" }}>
-          {desc}
-        </p>
-      </div>
+        style={{
+          display: "inline-block",
+          background: cfg.badge.bg,
+          color: cfg.badge.text,
+          fontSize: "11px",
+          fontWeight: 700,
+          padding: "2px 8px",
+          borderRadius: "999px",
+          width: "fit-content",
+        }}
+      >
+        {cfg.badge.label}
+      </span>
+      <p
+        style={{
+          fontSize: "14px",
+          fontWeight: 700,
+          color: "var(--text-primary)",
+          lineHeight: 1.4,
+        }}
+      >
+        {title}
+      </p>
+      <p
+        style={{
+          fontSize: "12px",
+          color: "var(--text-secondary)",
+          lineHeight: 1.55,
+        }}
+      >
+        {desc}
+      </p>
     </Link>
   );
 }
 
+/* ─── Navigation card for the bottom grid ─────────────────────── */
+function NavCard({
+  href,
+  label,
+  desc,
+  icon: Icon,
+  accent,
+}: {
+  href: string;
+  label: string;
+  desc: string;
+  icon: React.FC<{ className?: string }>;
+  accent: string;
+}) {
+  return (
+    <Link
+      href={href}
+      className="flex items-center gap-3 rounded-xl border bg-white p-4 shadow-sm transition hover:shadow-md"
+      style={{ borderColor: "var(--border)", textDecoration: "none" }}
+    >
+      <span
+        style={{
+          flexShrink: 0,
+          width: "38px",
+          height: "38px",
+          borderRadius: "10px",
+          background: `${accent}18`,
+          border: `1px solid ${accent}30`,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          color: accent,
+        }}
+      >
+        <Icon className="h-4 w-4" />
+      </span>
+      <span style={{ minWidth: 0 }}>
+        <span
+          style={{
+            display: "block",
+            fontSize: "14px",
+            fontWeight: 700,
+            color: "var(--text-primary)",
+          }}
+        >
+          {label}
+        </span>
+        <span
+          style={{
+            display: "block",
+            fontSize: "12px",
+            color: "var(--text-muted)",
+            marginTop: "2px",
+          }}
+        >
+          {desc}
+        </span>
+      </span>
+    </Link>
+  );
+}
+
+/* ─── Learning Progress Panel (dark card + topics) ─────────────── */
 type TopicProgress = {
   topicId: string;
   title: string;
@@ -365,17 +835,19 @@ function LearningProgressPanel({
   return (
     <section className="grid gap-4 xl:grid-cols-[0.9fr_1.1fr]">
       <div className="group relative overflow-hidden rounded-xl bg-slate-950 p-4 shadow-2xl transition-all duration-300 hover:scale-[1.01] hover:shadow-cyan-500/20">
-        <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-500 via-indigo-500 to-amber-400 opacity-20 blur-sm transition-opacity duration-300 group-hover:opacity-30" />
+        <div className="absolute inset-0 rounded-xl bg-linear-to-r from-cyan-500 via-indigo-500 to-amber-400 opacity-20 blur-sm transition-opacity duration-300 group-hover:opacity-30" />
         <div className="absolute inset-px rounded-[11px] bg-slate-950" />
         <div className="relative">
           <div className="mb-4 flex items-center justify-between gap-3">
             <div className="flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-500 to-indigo-500">
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-linear-to-br from-cyan-500 to-indigo-500">
                 <TrendingUp className="h-4 w-4 text-white" />
               </div>
               <div>
                 <h2 className="text-sm font-semibold text-white">מעקב התקדמות בחומר</h2>
-                <p className="text-xs text-slate-400">מבוסס על חומרים שנותחו, לא על סימון אישי ידני</p>
+                <p className="text-xs text-slate-400">
+                  מבוסס על חומרים שנותחו, לא על סימון אישי ידני
+                </p>
               </div>
             </div>
             <span className="flex items-center gap-1 rounded-full bg-emerald-500/10 px-2 py-1 text-xs font-medium text-emerald-400">
@@ -385,10 +857,26 @@ function LearningProgressPanel({
           </div>
 
           <div className="mb-4 grid grid-cols-2 gap-3">
-            <DarkMetric label="שבועות שנותחו" value={`${analyzedWeeks}/13`} trend={`${analyzedPercent}%`} />
-            <DarkMetric label="חומר מלא לשבוע" value={`${fullMaterialWeeks}/13`} trend={`${completeMaterialPercent}%`} />
-            <DarkMetric label="חילוץ תקין" value={`${extractionSuccessPercent}%`} trend="PDF" />
-            <DarkMetric label="נושאים חזקים" value={strongTopics.length} trend="כיסוי גבוה" />
+            <DarkMetric
+              label="שבועות שנותחו"
+              value={`${analyzedWeeks}/13`}
+              trend={`${analyzedPercent}%`}
+            />
+            <DarkMetric
+              label="חומר מלא לשבוע"
+              value={`${fullMaterialWeeks}/13`}
+              trend={`${completeMaterialPercent}%`}
+            />
+            <DarkMetric
+              label="חילוץ תקין"
+              value={`${extractionSuccessPercent}%`}
+              trend="PDF"
+            />
+            <DarkMetric
+              label="נושאים חזקים"
+              value={strongTopics.length}
+              trend="כיסוי גבוה"
+            />
           </div>
 
           <div
@@ -409,9 +897,12 @@ function LearningProgressPanel({
           <div className="mb-4 h-20 w-full overflow-hidden rounded-lg bg-slate-900/60 p-3">
             <div className="flex h-full w-full items-end justify-between gap-1">
               {bars.map((bar, index) => (
-                <div key={`${bar}-${index}`} className="flex h-full w-3 items-end rounded-sm bg-cyan-500/20">
+                <div
+                  key={`${bar}-${index}`}
+                  className="flex h-full w-3 items-end rounded-sm bg-cyan-500/20"
+                >
                   <div
-                    className="w-full rounded-sm bg-gradient-to-t from-cyan-500 to-emerald-300 transition-all duration-300"
+                    className="w-full rounded-sm bg-linear-to-t from-cyan-500 to-emerald-300 transition-all duration-300"
                     style={{ height: `${bar}%` }}
                   />
                 </div>
@@ -420,10 +911,12 @@ function LearningProgressPanel({
           </div>
 
           <div className="flex items-center justify-between gap-3">
-            <span className="text-xs font-medium text-slate-400">עדכון אחרון מתוך JSON מקומי</span>
+            <span className="text-xs font-medium text-slate-400">
+              עדכון אחרון מתוך JSON מקומי
+            </span>
             <Link
               href="/progress"
-              className="flex items-center gap-1 rounded-lg bg-gradient-to-r from-cyan-500 to-indigo-500 px-3 py-1.5 text-xs font-medium text-white transition hover:from-cyan-600 hover:to-indigo-600"
+              className="flex items-center gap-1 rounded-lg bg-linear-to-r from-cyan-500 to-indigo-500 px-3 py-1.5 text-xs font-medium text-white transition hover:from-cyan-600 hover:to-indigo-600"
             >
               פירוט שליטה
               <Gauge className="h-3.5 w-3.5" />
@@ -452,7 +945,15 @@ function LearningProgressPanel({
   );
 }
 
-function DarkMetric({ label, value, trend }: { label: string; value: string | number; trend: string }) {
+function DarkMetric({
+  label,
+  value,
+  trend,
+}: {
+  label: string;
+  value: string | number;
+  trend: string;
+}) {
   return (
     <div className="rounded-lg bg-slate-900/60 p-3">
       <p className="text-xs font-medium text-slate-400">{label}</p>
@@ -481,9 +982,16 @@ function TopicListCard({
       : "bg-amber-50 text-amber-800 border-amber-100";
 
   return (
-    <article className="rounded-xl border bg-white p-5 shadow-sm" style={{ borderColor: "var(--border)" }}>
+    <article
+      className="rounded-xl border bg-white p-5 shadow-sm"
+      style={{ borderColor: "var(--border)" }}
+    >
       <div className="flex items-center gap-2">
-        <span className={`flex h-8 w-8 items-center justify-center rounded-lg border ${toneClass}`}>{icon}</span>
+        <span
+          className={`flex h-8 w-8 items-center justify-center rounded-lg border ${toneClass}`}
+        >
+          {icon}
+        </span>
         <h2 className="text-lg font-bold" style={{ color: "var(--text-primary)" }}>
           {title}
         </h2>
@@ -491,22 +999,39 @@ function TopicListCard({
       {items.length > 0 ? (
         <div className="mt-4 space-y-3">
           {items.map((topic) => (
-            <div key={topic.topicId} className="rounded-lg p-3" style={{ background: "var(--bg-subtle)" }}>
+            <div
+              key={topic.topicId}
+              className="rounded-lg p-3"
+              style={{ background: "var(--bg-subtle)" }}
+            >
               <div className="flex items-center justify-between gap-3">
-                <span className="text-sm font-semibold" style={{ color: "var(--text-primary)" }}>
+                <span
+                  className="text-sm font-semibold"
+                  style={{ color: "var(--text-primary)" }}
+                >
                   {topic.title}
                 </span>
-                <span className="font-mono text-xs font-bold" style={{ color: "var(--text-secondary)" }}>
+                <span
+                  className="font-mono text-xs font-bold"
+                  style={{ color: "var(--text-secondary)" }}
+                >
                   {topic.score}%
                 </span>
               </div>
               <div className="mt-2 h-2 overflow-hidden rounded-full bg-white">
                 <div
-                  className={tone === "green" ? "h-full rounded-full bg-emerald-500" : "h-full rounded-full bg-amber-500"}
+                  className={
+                    tone === "green"
+                      ? "h-full rounded-full bg-emerald-500"
+                      : "h-full rounded-full bg-amber-500"
+                  }
                   style={{ width: `${topic.score}%` }}
                 />
               </div>
-              <p className="mt-2 text-xs leading-5" style={{ color: "var(--text-secondary)" }}>
+              <p
+                className="mt-2 text-xs leading-5"
+                style={{ color: "var(--text-secondary)" }}
+              >
                 {topic.reason}
               </p>
             </div>
@@ -521,7 +1046,10 @@ function TopicListCard({
   );
 }
 
-function buildTopicProgress(analysisData: Awaited<ReturnType<typeof readAnalysisData>>): TopicProgress[] {
+/* ─── Data processing ──────────────────────────────────────────── */
+function buildTopicProgress(
+  analysisData: Awaited<ReturnType<typeof readAnalysisData>>,
+): TopicProgress[] {
   const topics = analysisData.examPriorityMap?.topics ?? [];
   const questionCountByTopic = new Map<string, number>();
   const formulaCountByTopic = new Map<string, number>();
@@ -555,9 +1083,14 @@ function buildTopicProgress(analysisData: Awaited<ReturnType<typeof readAnalysis
         (formulaCountByTopic.get(topic.topicId) ?? 0) +
         (theoremCountByTopic.get(topic.topicId) ?? 0) * 4;
       const score = Math.min(100, Math.round(sourceCoverage + extractedCoverage));
-      const isExamImportant = topic.priorityLevel === "critical" || topic.priorityLevel === "high";
+      const isExamImportant =
+        topic.priorityLevel === "critical" || topic.priorityLevel === "high";
       const status: TopicProgress["status"] =
-        score >= 70 ? "strong" : isExamImportant && score < 55 ? "needs_work" : "developing";
+        score >= 70
+          ? "strong"
+          : isExamImportant && score < 55
+            ? "needs_work"
+            : "developing";
       const reason =
         status === "strong"
           ? "יש כיסוי טוב בהרצאות/תרגולים/מטלות או הרבה פריטים שחולצו."
@@ -582,56 +1115,6 @@ function percentage(value: number, total: number): number {
   return Math.max(0, Math.min(100, Math.round((value / total) * 100)));
 }
 
-function ModuleLink({
-  href,
-  label,
-  desc,
-  icon: Icon,
-  accent,
-}: {
-  href: string;
-  label: string;
-  desc: string;
-  icon: React.FC<{ className?: string }>;
-  accent: string;
-}) {
-  const colors: Record<string, { bg: string; icon: string }> = {
-    navy: { bg: "var(--navy-light)", icon: "var(--navy-mid)" },
-    cyan: { bg: "var(--cyan-light)", icon: "var(--cyan)" },
-    green: { bg: "var(--green-light)", icon: "var(--green)" },
-    amber: { bg: "var(--amber-light)", icon: "var(--amber)" },
-    red: { bg: "var(--red-light)", icon: "var(--red)" },
-    purple: { bg: "var(--purple-light)", icon: "var(--purple)" },
-    gold: { bg: "var(--gold-light)", icon: "var(--gold)" },
-  };
-  const c = colors[accent] ?? colors.navy;
-
-  return (
-    <Link
-      href={href}
-      className="group flex items-start gap-3 rounded-xl border bg-white p-4 shadow-sm transition hover:shadow-md"
-      style={{ borderColor: "var(--border)" }}
-    >
-      <span
-        className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl"
-        style={{ background: c.bg }}
-      >
-        <span style={{ color: c.icon }}>
-          <Icon className="h-4 w-4" />
-        </span>
-      </span>
-      <span>
-        <span className="block text-sm font-semibold" style={{ color: "var(--text-primary)" }}>
-          {label}
-        </span>
-        <span className="mt-0.5 block text-xs" style={{ color: "var(--text-muted)" }}>
-          {desc}
-        </span>
-      </span>
-    </Link>
-  );
-}
-
 /* ─────────────────── Lecture Overview Table ─────────────────── */
 function LectureOverviewTable({ lectureSummaries }: { lectureSummaries: LectureSummary[] }) {
   const sorted = [...lectureSummaries].sort((a, b) => a.lectureNumber - b.lectureNumber);
@@ -639,10 +1122,10 @@ function LectureOverviewTable({ lectureSummaries }: { lectureSummaries: LectureS
   return (
     <section>
       <div className="mb-4 flex items-baseline justify-between">
-        <h2 className="text-xl font-bold" style={{ color: "var(--text-primary)" }}>
-          מה למדנו בכל הרצאה
-        </h2>
-        <p className="text-xs" style={{ color: "var(--text-muted)" }}>הגדרות ומשפטים לפי שבוע</p>
+        <SectionHeader title="מה למדנו בכל הרצאה" accent="#0b7285" />
+        <p className="text-xs" style={{ color: "var(--text-muted)" }}>
+          הגדרות ומשפטים לפי שבוע
+        </p>
       </div>
 
       <div
@@ -660,19 +1143,31 @@ function LectureOverviewTable({ lectureSummaries }: { lectureSummaries: LectureS
               </th>
               <th
                 className="border-b px-4 py-3 text-right text-xs font-black uppercase tracking-wider"
-                style={{ borderColor: "var(--border)", color: "var(--text-muted)", minWidth: "160px" }}
+                style={{
+                  borderColor: "var(--border)",
+                  color: "var(--text-muted)",
+                  minWidth: "160px",
+                }}
               >
                 נושא
               </th>
               <th
                 className="border-b px-4 py-3 text-right text-xs font-black uppercase tracking-wider"
-                style={{ borderColor: "var(--border)", color: "var(--text-muted)", minWidth: "200px" }}
+                style={{
+                  borderColor: "var(--border)",
+                  color: "var(--text-muted)",
+                  minWidth: "200px",
+                }}
               >
                 הגדרות
               </th>
               <th
                 className="border-b px-4 py-3 text-right text-xs font-black uppercase tracking-wider"
-                style={{ borderColor: "var(--border)", color: "var(--text-muted)", minWidth: "200px" }}
+                style={{
+                  borderColor: "var(--border)",
+                  color: "var(--text-muted)",
+                  minWidth: "200px",
+                }}
               >
                 משפטים
               </th>
@@ -684,7 +1179,6 @@ function LectureOverviewTable({ lectureSummaries }: { lectureSummaries: LectureS
                 key={lec.lectureNumber}
                 style={{ background: i % 2 === 1 ? "var(--bg-subtle)" : "#fff" }}
               >
-                {/* Week number — links to /weeks/N */}
                 <td
                   className="border-b px-4 py-3 align-top"
                   style={{ borderColor: "var(--border)" }}
@@ -701,13 +1195,14 @@ function LectureOverviewTable({ lectureSummaries }: { lectureSummaries: LectureS
                     {lec.lectureNumber}
                   </Link>
                 </td>
-
-                {/* Title + main topics */}
                 <td
                   className="border-b px-4 py-3 align-top"
                   style={{ borderColor: "var(--border)" }}
                 >
-                  <p className="font-semibold leading-snug" style={{ color: "var(--text-primary)" }}>
+                  <p
+                    className="font-semibold leading-snug"
+                    style={{ color: "var(--text-primary)" }}
+                  >
                     {lec.title}
                   </p>
                   {lec.mainTopics.length > 0 && (
@@ -719,16 +1214,12 @@ function LectureOverviewTable({ lectureSummaries }: { lectureSummaries: LectureS
                     </p>
                   )}
                 </td>
-
-                {/* Key definitions */}
                 <td
                   className="border-b px-4 py-3 align-top"
                   style={{ borderColor: "var(--border)" }}
                 >
                   <LectureChipList items={lec.keyDefinitions} color="green" />
                 </td>
-
-                {/* Key theorems */}
                 <td
                   className="border-b px-4 py-3 align-top"
                   style={{ borderColor: "var(--border)" }}
@@ -746,11 +1237,23 @@ function LectureOverviewTable({ lectureSummaries }: { lectureSummaries: LectureS
 
 function LectureChipList({ items, color }: { items: string[]; color: "green" | "navy" }) {
   if (items.length === 0) {
-    return <span className="text-xs" style={{ color: "var(--text-muted)" }}>—</span>;
+    return (
+      <span className="text-xs" style={{ color: "var(--text-muted)" }}>
+        —
+      </span>
+    );
   }
   const styles = {
-    green: { bg: "var(--green-light)", text: "var(--green-mid)",  border: "var(--green-border)" },
-    navy:  { bg: "var(--navy-light)",  text: "var(--navy-mid)",   border: "var(--navy-border)" },
+    green: {
+      bg: "var(--green-light)",
+      text: "var(--green-mid)",
+      border: "var(--green-border)",
+    },
+    navy: {
+      bg: "var(--navy-light)",
+      text: "var(--navy-mid)",
+      border: "var(--navy-border)",
+    },
   }[color];
   return (
     <div className="flex flex-wrap gap-1">
@@ -758,7 +1261,11 @@ function LectureChipList({ items, color }: { items: string[]; color: "green" | "
         <span
           key={i}
           className="rounded px-1.5 py-0.5 text-[11px] font-medium leading-snug"
-          style={{ background: styles.bg, color: styles.text, border: `1px solid ${styles.border}` }}
+          style={{
+            background: styles.bg,
+            color: styles.text,
+            border: `1px solid ${styles.border}`,
+          }}
         >
           {item}
         </span>
