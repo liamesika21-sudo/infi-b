@@ -90,30 +90,6 @@ const STARTER_QUESTIONS = [
   "בני לי שאלת בחינה על טורי חזקות",
 ];
 
-// ── Credit bar ─────────────────────────────────────────────────────────────
-
-function CreditBar({ used, limit }: { used: number; limit: number }) {
-  const pct = Math.min((used / limit) * 100, 100);
-  const color = pct >= 90 ? "#dc2626" : pct >= 70 ? "#d97706" : "var(--navy-mid)";
-
-  return (
-    <div className="flex items-center gap-3">
-      <div
-        className="relative h-1.5 flex-1 rounded-full overflow-hidden"
-        style={{ background: "var(--border)" }}
-      >
-        <div
-          className="h-full rounded-full transition-all"
-          style={{ width: `${pct}%`, background: color }}
-        />
-      </div>
-      <span className="shrink-0 text-xs font-mono tabular-nums" style={{ color: "var(--text-muted)" }}>
-        {used}/{limit}
-      </span>
-    </div>
-  );
-}
-
 // ── Pro gate ───────────────────────────────────────────────────────────────
 
 const PRO_FEATURES = [
@@ -268,7 +244,7 @@ function ChatInterface({ status }: { status: MentorStatus }) {
       if (!trimmed || isLoading) return;
 
       if (creditsUsed >= status.limit) {
-        setError(`נגמרו הקרדיטים (${status.limit}/${status.limit})`);
+        setError("הגעת למגבלת השימוש במנטור. לפרטים צור קשר.");
         return;
       }
 
@@ -368,9 +344,6 @@ function ChatInterface({ status }: { status: MentorStatus }) {
               מבוסס על מקס ויוסי
             </p>
           </div>
-        </div>
-        <div className="flex items-center gap-3 min-w-[140px]">
-          <CreditBar used={creditsUsed} limit={status.limit} />
         </div>
       </div>
 
@@ -502,17 +475,6 @@ function ChatInterface({ status }: { status: MentorStatus }) {
         </button>
       </div>
 
-      {/* Limit warning */}
-      {creditsUsed >= status.limit - 10 && creditsUsed < status.limit && (
-        <p className="mt-2 text-center text-xs" style={{ color: "#d97706" }}>
-          נותרו {status.limit - creditsUsed} הודעות בלבד
-        </p>
-      )}
-      {creditsUsed >= status.limit && (
-        <p className="mt-2 text-center text-xs" style={{ color: "#dc2626" }}>
-          הגעת למגבלת ההודעות. לקרדיטים נוספים פנה אלינו.
-        </p>
-      )}
     </div>
   );
 }
