@@ -9,10 +9,12 @@ import { ExamRelevanceBadge } from "@/components/study/Badges";
 import { getStudyGuide } from "@/lib/calculus2/study-guides";
 import { getWeekRichContent } from "@/lib/calculus2/week-rich-content";
 import { WeekRichContentPanel } from "@/components/study/WeekRichContent";
+import { WeekSectionSidebar, type WeekSectionNavItem } from "./WeekSectionSidebar";
 import {
   ArrowRight,
   BookMarked,
   ChevronRight,
+  FileText,
   AlertTriangle,
   Wrench,
   Star,
@@ -73,6 +75,19 @@ export default async function WeekDetailPage({ params }: Props) {
   const allConclusions = recitationSummary?.conclusions ?? [];
   // Collect must-practice items
   const mustPractice = recitationSummary?.mustPractice ?? [];
+  const hasWeeklySummary = allCommonMistakes.length > 0 || allConclusions.length > 0 || mustPractice.length > 0;
+  const hasInferenceDiagram = buildInferenceNodes(lectureSummary, recitationSummary, homeworkPriority).length > 0;
+  const weekSections = [
+    hasWeeklySummary && { id: "week-start", label: "לפני שמתחילים" },
+    studyGuide && { id: "study-guide", label: "איך ללמוד" },
+    richContent && { id: "week-rich-content", label: "חומר והגדרות" },
+    hasInferenceDiagram && { id: "week-diagram", label: "תרשים שבוע" },
+    { id: "lecture-summary", label: "סיכום הרצאה" },
+    { id: "recitation-summary", label: "סיכום תרגול" },
+    { id: "homework-summary", label: "מטלה" },
+    lectureQuotes.length > 0 && { id: "lecture-source", label: "ציטוטי הרצאה" },
+    recitationQuestions.length > 0 && { id: "recitation-questions", label: "שאלות מתרגול" },
+  ].filter(Boolean) as WeekSectionNavItem[];
 
   return (
     <div className="space-y-0">
@@ -91,7 +106,7 @@ export default async function WeekDetailPage({ params }: Props) {
           className="rounded-lg px-3 py-1.5 text-xs font-bold transition hover:opacity-80"
           style={{ background: "var(--navy-light)", color: "var(--navy-mid)", border: "1px solid var(--navy-border)" }}
         >
-          📄 סיכום שבוע
+          סיכום שבוע
         </Link>
       </div>
 
@@ -128,6 +143,18 @@ export default async function WeekDetailPage({ params }: Props) {
           </div>
         )}
 
+        <Link
+          href={`/weeks/${weekNum}/summary`}
+          className="mb-5 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-black text-white transition hover:-translate-y-0.5 hover:shadow-md sm:w-auto"
+          style={{
+            background: "linear-gradient(135deg, var(--navy), var(--navy-mid))",
+            boxShadow: "0 10px 24px rgba(15, 34, 64, 0.18)",
+          }}
+        >
+          <FileText className="h-4 w-4" />
+          פתחי סיכום שבוע {weekNum}
+        </Link>
+
         {/* Course mapping — clean inline row */}
         <div className="flex flex-wrap gap-2">
           <MappingPill icon="📖" label={`הרצאה ${weekNum}`} desc="חומר חדש" />
@@ -151,230 +178,242 @@ export default async function WeekDetailPage({ params }: Props) {
         </div>
       </div>
 
-      {/* ── Weekly Summary Banner — Important notes, conclusions, mistakes ── */}
-      {(allCommonMistakes.length > 0 || allConclusions.length > 0 || mustPractice.length > 0) && (
-        <WeeklySummaryBanner
-          weekNum={weekNum}
-          commonMistakes={allCommonMistakes}
-          conclusions={allConclusions}
-          mustPractice={mustPractice}
-          keyTechniques={recitationSummary?.keyTechniques ?? []}
-        />
-      )}
+      <div className="grid gap-6 lg:grid-cols-[210px_minmax(0,1fr)] lg:items-start">
+        <aside className="lg:sticky lg:top-20 lg:self-start">
+          <WeekSectionSidebar sections={weekSections} />
+        </aside>
 
-      {/* ── How to Study This Week ── */}
-      {studyGuide && (
-        <StudyGuideSection guide={studyGuide} weekNum={weekNum} />
-      )}
-
-      {/* ── Rich pedagogical content (weeks 7–9+) ── */}
-      {richContent && (
-        <section className="mb-8">
-          <div className="mb-5">
-            <p
-              className="text-xs font-bold uppercase tracking-[0.2em] mb-1"
-              style={{ color: "var(--text-muted)" }}
-            >
-              סיכום שבוע {weekNum}
-            </p>
-            <h2
-              className="text-xl font-black"
-              style={{ color: "var(--text-primary)", letterSpacing: "-0.02em" }}
-            >
-              חומר, הגדרות ומבחנים
-            </h2>
-          </div>
-          <WeekRichContentPanel content={richContent} />
-        </section>
-      )}
-
-      <WeekInferenceDiagram
-        weekNumber={weekNum}
-        lectureSummary={lectureSummary}
-        recitationSummary={recitationSummary}
-        homeworkPriority={homeworkPriority}
-      />
-
-      {/* ── 3-column layout ── */}
-      <div className="grid gap-5 lg:grid-cols-3 mb-8">
-
-        {/* ─ Lecture ─ */}
-        <Column title="📖 הרצאה" subtitle={`הרצאה ${weekNum} — חומר חדש`} accentColor="var(--navy-mid)">
-          {lectureSummary ? (
-            <div className="space-y-5">
-              {lectureSummary.ocrWarning && (
-                <StudyCallout variant="warning">{lectureSummary.ocrWarning}</StudyCallout>
-              )}
-
-              {lectureSummary.keyDefinitions.length > 0 && (
-                <BulletGroup label="הגדרות" color="green" items={lectureSummary.keyDefinitions} />
-              )}
-
-              {lectureSummary.keyTheorems.length > 0 && (
-                <BulletGroup label="משפטים" color="navy" items={lectureSummary.keyTheorems} />
-              )}
-
-              {lectureSummary.keyFormulas.length > 0 && (
-                <div>
-                  <SectionLabel label="נוסחאות מפתח" />
-                  <div className="space-y-2 mt-2">
-                    {lectureSummary.keyFormulas.map((f, i) => (
-                      <FormulaDisplay key={i} formula={f} />
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {lectureSummary.examNotes.length > 0 && (
-                <div className="space-y-2">
-                  {lectureSummary.examNotes.map((note, i) => (
-                    <StudyCallout key={i} variant="exam">{note}</StudyCallout>
-                  ))}
-                </div>
-              )}
-
-              {lectureSummary.summarySourceFile && (
-                <p className="text-xs" style={{ color: "var(--text-muted)" }}>
-                  מקור: {lectureSummary.summarySourceFile}
-                </p>
-              )}
-            </div>
-          ) : (
-            <EmptyCol text="אין סיכום הרצאה לשבוע זה" />
+        <div className="min-w-0">
+          {/* ── Weekly Summary Banner — Important notes, conclusions, mistakes ── */}
+          {hasWeeklySummary && (
+            <WeeklySummaryBanner
+              id="week-start"
+              weekNum={weekNum}
+              commonMistakes={allCommonMistakes}
+              conclusions={allConclusions}
+              mustPractice={mustPractice}
+              keyTechniques={recitationSummary?.keyTechniques ?? []}
+            />
           )}
-        </Column>
 
-        {/* ─ Recitation ─ */}
-        <Column
-          title="✏️ תרגול"
-          subtitle={
-            recitationSummary
-              ? `תרגול ${recitationSummary.recitationNumber} · מתרגל הרצאה ${practicedLecture ?? "פתיחה"}`
-              : `תרגול ${weekNum}`
-          }
-          accentColor="var(--teal)"
-        >
-          {recitationSummary ? (
-            <div className="space-y-5">
-              {practicedLecture !== null &&
-                recitationSummary.practicesLecture !== null &&
-                practicedLecture !== recitationSummary.practicesLecture && (
-                  <StudyCallout variant="info">
-                    לפי מבנה הקורס, תרגול {weekNum} מתרגל הרצאה {practicedLecture}. הניתוח הפנימי סימן הרצאה {recitationSummary.practicesLecture ?? "לא ידועה"}.
-                  </StudyCallout>
-                )}
-
-              <p className="text-sm leading-8" style={{ color: "var(--text-secondary)" }}>
-                {recitationSummary.whatWasPracticed}
-              </p>
-
-              {recitationSummary.keyTechniques.length > 0 && (
-                <BulletGroup label="טכניקות" color="teal" items={recitationSummary.keyTechniques} />
-              )}
-
-              {recitationSummary.mustPractice.length > 0 && (
-                <BulletGroup label="חובה לתרגל" color="navy" items={recitationSummary.mustPractice} />
-              )}
-
-              {recitationSummary.commonMistakes.length > 0 && (
-                <BulletGroup label="טעויות נפוצות" color="red" items={recitationSummary.commonMistakes} />
-              )}
-
-              {recitationSummary.conclusions.length > 0 && (
-                <div className="space-y-2 pt-2 border-t" style={{ borderColor: "var(--border)" }}>
-                  <SectionLabel label="מסקנות" />
-                  {recitationSummary.conclusions.map((c, i) => (
-                    <MathContent key={i} text={c} className="text-sm" />
-                  ))}
-                </div>
-              )}
-            </div>
-          ) : (
-            <EmptyCol text="אין סיכום תרגול לשבוע זה" />
+          {/* ── How to Study This Week ── */}
+          {studyGuide && (
+            <StudyGuideSection id="study-guide" guide={studyGuide} weekNum={weekNum} />
           )}
-        </Column>
 
-        {/* ─ Homework — with progressive hints ─ */}
-        <Column
-          title="📋 מטלה"
-          subtitle={
-            homeworkPriority
-              ? `מטלה ${homeworkPriority.homeworkNumber} · מבוסס תרגול ${homeworkPriority.homeworkNumber}${homeworkBasedOnLecture ? ` + הרצאה ${homeworkBasedOnLecture}` : ""}`
-              : ""
-          }
-          accentColor="var(--amber-mid)"
-        >
-          {hwQuestions.length > 0 ? (
-            <WeekHomeworkSection questions={hwQuestions} />
-          ) : (
-            <EmptyCol text="אין ניתוח מטלה לשבוע זה" />
-          )}
-        </Column>
-      </div>
-
-      {/* ── Definitions quick-link ── */}
-      <div
-        className="mb-8 rounded-lg border px-4 py-3 flex items-center justify-between gap-3"
-        style={{ borderColor: "var(--border)" }}
-      >
-        <div className="flex items-center gap-2.5">
-          <BookMarked className="h-4 w-4 shrink-0" style={{ color: "var(--teal)" }} />
-          <p className="text-sm" style={{ color: "var(--text-secondary)" }}>
-            נתקעת בהגדרה? מאגר ההגדרות כולל פורמלי + אינטואיציה + דוגמה לכל מושג.
-          </p>
-        </div>
-        <Link
-          href="/definitions"
-          className="shrink-0 rounded-lg border px-3 py-1.5 text-xs font-bold transition hover:bg-white"
-          style={{ borderColor: "var(--teal-border)", color: "var(--teal)" }}
-        >
-          פתחי מאגר
-        </Link>
-      </div>
-
-      <LectureSourceQuotes quotes={lectureQuotes} />
-
-      {/* ── Recitation questions ── */}
-      {recitationQuestions.length > 0 && (
-        <div className="mb-8">
-          <SectionTitle label="שאלות מהתרגול" />
-          <div
-            className="mt-4 rounded-xl border bg-white overflow-hidden"
-            style={{ borderColor: "var(--border)", boxShadow: "0 1px 3px rgba(0,0,0,0.05)" }}
-          >
-            <div className="divide-y" style={{ borderColor: "var(--border)" }}>
-              {recitationQuestions.map((q, i) => (
-                <div
-                  key={q.id}
-                  className="flex gap-4 p-5"
+          {/* ── Rich pedagogical content (weeks 7–9+) ── */}
+          {richContent && (
+            <section id="week-rich-content" className="mb-8 scroll-mt-24">
+              <div className="mb-5">
+                <p
+                  className="text-xs font-bold uppercase tracking-[0.2em] mb-1"
+                  style={{ color: "var(--text-muted)" }}
                 >
-                  <span
-                    className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-black"
-                    style={{ background: "var(--bg-inset)", color: "var(--text-secondary)" }}
-                  >
-                    {i + 1}
-                  </span>
-                  <div className="flex-1 min-w-0">
-                    <div className="mb-2 flex flex-wrap items-center gap-1.5">
-                      <ExamRelevanceBadge level={q.examRelevance} />
-                      {q.topicIds.slice(0, 3).map((t) => (
-                        <span
-                          key={t}
-                          className="rounded-md px-2 py-0.5 text-xs"
-                          style={{ background: "var(--bg-subtle)", color: "var(--text-muted)", border: "1px solid var(--border)" }}
-                        >
-                          {t}
-                        </span>
+                  סיכום שבוע {weekNum}
+                </p>
+                <h2
+                  className="text-xl font-black"
+                  style={{ color: "var(--text-primary)", letterSpacing: "-0.02em" }}
+                >
+                  חומר, הגדרות ומבחנים
+                </h2>
+              </div>
+              <WeekRichContentPanel content={richContent} />
+            </section>
+          )}
+
+          <WeekInferenceDiagram
+            id="week-diagram"
+            weekNumber={weekNum}
+            lectureSummary={lectureSummary}
+            recitationSummary={recitationSummary}
+            homeworkPriority={homeworkPriority}
+          />
+
+          {/* ── 3-column layout ── */}
+          <div className="grid gap-5 lg:grid-cols-3 mb-8">
+
+            {/* ─ Lecture ─ */}
+            <Column id="lecture-summary" title="📖 הרצאה" subtitle={`הרצאה ${weekNum} — חומר חדש`} accentColor="var(--navy-mid)">
+              {lectureSummary ? (
+                <div className="space-y-5">
+                  {lectureSummary.ocrWarning && (
+                    <StudyCallout variant="warning">{lectureSummary.ocrWarning}</StudyCallout>
+                  )}
+
+                  {lectureSummary.keyDefinitions.length > 0 && (
+                    <BulletGroup label="הגדרות" color="green" items={lectureSummary.keyDefinitions} />
+                  )}
+
+                  {lectureSummary.keyTheorems.length > 0 && (
+                    <BulletGroup label="משפטים" color="navy" items={lectureSummary.keyTheorems} />
+                  )}
+
+                  {lectureSummary.keyFormulas.length > 0 && (
+                    <div>
+                      <SectionLabel label="נוסחאות מפתח" />
+                      <div className="space-y-2 mt-2">
+                        {lectureSummary.keyFormulas.map((f, i) => (
+                          <FormulaDisplay key={i} formula={f} />
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {lectureSummary.examNotes.length > 0 && (
+                    <div className="space-y-2">
+                      {lectureSummary.examNotes.map((note, i) => (
+                        <StudyCallout key={i} variant="exam">{note}</StudyCallout>
                       ))}
                     </div>
-                    <MathContent text={q.content.slice(0, 600)} className="text-sm" />
-                  </div>
+                  )}
+
+                  {lectureSummary.summarySourceFile && (
+                    <p className="text-xs" style={{ color: "var(--text-muted)" }}>
+                      מקור: {lectureSummary.summarySourceFile}
+                    </p>
+                  )}
                 </div>
-              ))}
-            </div>
+              ) : (
+                <EmptyCol text="אין סיכום הרצאה לשבוע זה" />
+              )}
+            </Column>
+
+            {/* ─ Recitation ─ */}
+            <Column
+              id="recitation-summary"
+              title="✏️ תרגול"
+              subtitle={
+                recitationSummary
+                  ? `תרגול ${recitationSummary.recitationNumber} · מתרגל הרצאה ${practicedLecture ?? "פתיחה"}`
+                  : `תרגול ${weekNum}`
+              }
+              accentColor="var(--teal)"
+            >
+              {recitationSummary ? (
+                <div className="space-y-5">
+                  {practicedLecture !== null &&
+                    recitationSummary.practicesLecture !== null &&
+                    practicedLecture !== recitationSummary.practicesLecture && (
+                      <StudyCallout variant="info">
+                        לפי מבנה הקורס, תרגול {weekNum} מתרגל הרצאה {practicedLecture}. הניתוח הפנימי סימן הרצאה {recitationSummary.practicesLecture ?? "לא ידועה"}.
+                      </StudyCallout>
+                    )}
+
+                  <p className="text-sm leading-8" style={{ color: "var(--text-secondary)" }}>
+                    {recitationSummary.whatWasPracticed}
+                  </p>
+
+                  {recitationSummary.keyTechniques.length > 0 && (
+                    <BulletGroup label="טכניקות" color="teal" items={recitationSummary.keyTechniques} />
+                  )}
+
+                  {recitationSummary.mustPractice.length > 0 && (
+                    <BulletGroup label="חובה לתרגל" color="navy" items={recitationSummary.mustPractice} />
+                  )}
+
+                  {recitationSummary.commonMistakes.length > 0 && (
+                    <BulletGroup label="טעויות נפוצות" color="red" items={recitationSummary.commonMistakes} />
+                  )}
+
+                  {recitationSummary.conclusions.length > 0 && (
+                    <div className="space-y-2 pt-2 border-t" style={{ borderColor: "var(--border)" }}>
+                      <SectionLabel label="מסקנות" />
+                      {recitationSummary.conclusions.map((c, i) => (
+                        <MathContent key={i} text={c} className="text-sm" />
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <EmptyCol text="אין סיכום תרגול לשבוע זה" />
+              )}
+            </Column>
+
+            {/* ─ Homework — with progressive hints ─ */}
+            <Column
+              id="homework-summary"
+              title="📋 מטלה"
+              subtitle={
+                homeworkPriority
+                  ? `מטלה ${homeworkPriority.homeworkNumber} · מבוסס תרגול ${homeworkPriority.homeworkNumber}${homeworkBasedOnLecture ? ` + הרצאה ${homeworkBasedOnLecture}` : ""}`
+                  : ""
+              }
+              accentColor="var(--amber-mid)"
+            >
+              {hwQuestions.length > 0 ? (
+                <WeekHomeworkSection questions={hwQuestions} />
+              ) : (
+                <EmptyCol text="אין ניתוח מטלה לשבוע זה" />
+              )}
+            </Column>
           </div>
+
+          {/* ── Definitions quick-link ── */}
+          <div
+            className="mb-8 rounded-lg border px-4 py-3 flex items-center justify-between gap-3"
+            style={{ borderColor: "var(--border)" }}
+          >
+            <div className="flex items-center gap-2.5">
+              <BookMarked className="h-4 w-4 shrink-0" style={{ color: "var(--teal)" }} />
+              <p className="text-sm" style={{ color: "var(--text-secondary)" }}>
+                נתקעת בהגדרה? מאגר ההגדרות כולל פורמלי + אינטואיציה + דוגמה לכל מושג.
+              </p>
+            </div>
+            <Link
+              href="/definitions"
+              className="shrink-0 rounded-lg border px-3 py-1.5 text-xs font-bold transition hover:bg-white"
+              style={{ borderColor: "var(--teal-border)", color: "var(--teal)" }}
+            >
+              פתחי מאגר
+            </Link>
+          </div>
+
+          <LectureSourceQuotes id="lecture-source" quotes={lectureQuotes} />
+
+          {/* ── Recitation questions ── */}
+          {recitationQuestions.length > 0 && (
+            <section id="recitation-questions" className="mb-8 scroll-mt-24">
+              <SectionTitle label="שאלות מהתרגול" />
+              <div
+                className="mt-4 rounded-xl border bg-white overflow-hidden"
+                style={{ borderColor: "var(--border)", boxShadow: "0 1px 3px rgba(0,0,0,0.05)" }}
+              >
+                <div className="divide-y" style={{ borderColor: "var(--border)" }}>
+                  {recitationQuestions.map((q, i) => (
+                    <div
+                      key={q.id}
+                      className="flex gap-4 p-5"
+                    >
+                      <span
+                        className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-black"
+                        style={{ background: "var(--bg-inset)", color: "var(--text-secondary)" }}
+                      >
+                        {i + 1}
+                      </span>
+                      <div className="flex-1 min-w-0">
+                        <div className="mb-2 flex flex-wrap items-center gap-1.5">
+                          <ExamRelevanceBadge level={q.examRelevance} />
+                          {q.topicIds.slice(0, 3).map((t) => (
+                            <span
+                              key={t}
+                              className="rounded-md px-2 py-0.5 text-xs"
+                              style={{ background: "var(--bg-subtle)", color: "var(--text-muted)", border: "1px solid var(--border)" }}
+                            >
+                              {t}
+                            </span>
+                          ))}
+                        </div>
+                        <MathContent text={q.content.slice(0, 600)} className="text-sm" />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+          )}
         </div>
-      )}
+      </div>
 
       {/* ── Week navigation ── */}
       <div className="flex items-center justify-between pt-2">
@@ -441,12 +480,14 @@ function MappingPill({
 
 /* ─────────────────── Weekly Summary Banner ─────────────────── */
 function WeeklySummaryBanner({
+  id,
   weekNum,
   commonMistakes,
   conclusions,
   mustPractice,
   keyTechniques,
 }: {
+  id: string;
   weekNum: number;
   commonMistakes: string[];
   conclusions: string[];
@@ -454,7 +495,7 @@ function WeeklySummaryBanner({
   keyTechniques: string[];
 }) {
   return (
-    <section className="mb-8">
+    <section id={id} className="mb-8 scroll-mt-24">
       <SectionTitle label="לפני שמתחילים" sub={`סיכום שבוע ${weekNum}`} />
       <div className="mt-4 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {conclusions.length > 0 && (
@@ -535,16 +576,18 @@ function SummaryCard({
 
 /* ─────────────────── Study Guide Section ─────────────────── */
 function StudyGuideSection({
+  id,
   guide,
   weekNum,
 }: {
+  id: string;
   guide: ReturnType<typeof getStudyGuide>;
   weekNum: number;
 }) {
   if (!guide) return null;
 
   return (
-    <section className="mb-8">
+    <section id={id} className="mb-8 scroll-mt-24">
       <SectionTitle label={`איך ללמוד שבוע ${weekNum}`} sub="מדריך לימוד" />
 
       {guide.quickTip && (
@@ -634,11 +677,13 @@ function SectionTitle({ label, sub }: { label: string; sub?: string }) {
 
 /* ─────────────────── Column ─────────────────── */
 function Column({
+  id,
   title,
   subtitle,
   accentColor,
   children,
 }: {
+  id: string;
   title: string;
   subtitle: string;
   accentColor: string;
@@ -646,7 +691,8 @@ function Column({
 }) {
   return (
     <div
-      className="rounded-xl border bg-white overflow-hidden"
+      id={id}
+      className="scroll-mt-24 rounded-xl border bg-white overflow-hidden"
       style={{
         borderColor: "var(--border)",
         boxShadow: "0 1px 3px rgba(0,0,0,0.05), 0 4px 12px rgba(0,0,0,0.03)",
@@ -735,18 +781,19 @@ function EmptyCol({ text }: { text: string }) {
 
 /* ─────────────────── Week Inference Diagram ─────────────────── */
 type WeekInferenceProps = {
+  id: string;
   weekNumber: number;
   lectureSummary: { mainTopics: string[]; keyDefinitions: string[]; keyTheorems: string[]; keyFormulas: string[]; examNotes: string[] } | undefined;
   recitationSummary: { keyTechniques: string[]; conclusions: string[]; mustPractice: string[] } | undefined;
   homeworkPriority: { questions: Array<{ topicIds: string[]; whyItMatters: string; importanceLevel: string }> } | undefined;
 };
 
-function WeekInferenceDiagram({ weekNumber, lectureSummary, recitationSummary, homeworkPriority }: WeekInferenceProps) {
+function WeekInferenceDiagram({ id, weekNumber, lectureSummary, recitationSummary, homeworkPriority }: WeekInferenceProps) {
   const nodes = buildInferenceNodes(lectureSummary, recitationSummary, homeworkPriority);
   if (nodes.length === 0) return null;
 
   return (
-    <section className="mb-8">
+    <section id={id} className="mb-8 scroll-mt-24">
       <SectionTitle label="מה ההגדרות מאפשרות להסיק" sub={`תרשים שבוע ${weekNumber}`} />
       <div className="mt-4 grid gap-3 md:grid-cols-4">
         {nodes.map((node, index) => (
@@ -832,11 +879,11 @@ function firstMeaningful(items: string[] | undefined): string | undefined {
 /* ─────────────────── Lecture Source Quotes ─────────────────── */
 type QuoteBlock = { kind: string; source: string; text: string };
 
-function LectureSourceQuotes({ quotes }: { quotes: QuoteBlock[] }) {
+function LectureSourceQuotes({ id, quotes }: { id: string; quotes: QuoteBlock[] }) {
   if (quotes.length === 0) return null;
 
   return (
-    <section className="mb-8">
+    <section id={id} className="mb-8 scroll-mt-24">
       <SectionTitle label="הגדרות ומשפטים מהרצאה" sub="ציטוט מקור" />
       <p className="mt-1 mb-4 text-xs" style={{ color: "var(--text-muted)" }}>
         טקסט שחולץ בפועל מהקבצים — אם OCR לא קריא, מוצג סיכום מקושר.

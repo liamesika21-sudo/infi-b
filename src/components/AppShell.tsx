@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import {
@@ -28,19 +29,26 @@ function getDaysUntilExam(): number {
   return Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
 }
 
+// show: breakpoint from which the item becomes visible ("always" | "sm" | "md" | "lg")
 const NAV_ITEMS = [
-  { href: "/dashboard",   label: "דשבורד",    icon: LayoutDashboard, tourId: "nav-dashboard" },
-  { href: "/weeks",       label: "שבועות",    icon: Calendar, tourId: "nav-weeks" },
-  { href: "/intuition-map", label: "אינטואיציה", icon: Lightbulb, tourId: "nav-intuition" },
-  { href: "/formulas",    label: "נוסחאות",   icon: Sigma, tourId: "nav-formulas" },
-  { href: "/practice",    label: "תרגול",     icon: Target, tourId: "nav-practice" },
-  { href: "/simulations", label: "סימולציות", icon: FlaskConical, tourId: "nav-simulations" },
-  { href: "/past-exams",  label: "מבחני עבר", icon: FileQuestion, tourId: "nav-past-exams" },
-  { href: "/quick-review",     label: "חזרה",        icon: Zap, tourId: "nav-quick-review" },
-  { href: "/mentor",           label: "מנטור",       icon: Brain, tourId: "nav-mentor" },
-  { href: "/instructor-notes", label: "הערות מקס",   icon: Sparkles, tourId: "nav-instructor-notes" },
-  { href: "/admin",            label: "אדמין",       icon: ShieldCheck, tourId: "nav-admin" },
-];
+  { href: "/dashboard",     label: "דשבורד",    icon: LayoutDashboard, tourId: "nav-dashboard",    show: "always" },
+  { href: "/weeks",         label: "שבועות",    icon: Calendar,        tourId: "nav-weeks",        show: "always" },
+  { href: "/formulas",      label: "נוסחאות",   icon: Sigma,           tourId: "nav-formulas",     show: "sm"     },
+  { href: "/practice",      label: "תרגול",     icon: Target,          tourId: "nav-practice",     show: "always" },
+  { href: "/past-exams",    label: "מבחני עבר", icon: FileQuestion,    tourId: "nav-past-exams",   show: "sm"     },
+  { href: "/simulations",   label: "סימולציות", icon: FlaskConical,    tourId: "nav-simulations",  show: "md"     },
+  { href: "/intuition-map", label: "אינטואיציה", icon: Lightbulb,      tourId: "nav-intuition",    show: "md"     },
+  { href: "/quick-review",  label: "חזרה",       icon: Zap,            tourId: "nav-quick-review", show: "md"     },
+  { href: "/mentor",        label: "מנטור",      icon: Brain,          tourId: "nav-mentor",       show: "always" },
+  { href: "/admin",         label: "אדמין",      icon: ShieldCheck,    tourId: "nav-admin",        show: "lg"     },
+] as const;
+
+const SHOW_CLASS: Record<string, string> = {
+  always: "",
+  sm: "hidden sm:flex",
+  md: "hidden md:flex",
+  lg: "hidden lg:flex",
+};
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -90,19 +98,23 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         <div className="mx-auto flex max-w-7xl items-center gap-3 px-4 py-2.5 lg:px-6">
 
           {/* Logo */}
-          <Link href="/dashboard" className="flex shrink-0 items-center gap-2.5">
-            <span
-              className="flex h-8 w-8 items-center justify-center rounded-lg text-sm font-black"
-              style={{ background: "#fff", color: "#07162a" }}
-            >
-              ∑
+          <Link href="/dashboard" className="flex shrink-0 items-center gap-2.5" aria-label="Mentora dashboard">
+            <span className="relative h-9 w-9 shrink-0 overflow-hidden rounded-xl bg-white/5">
+              <Image
+                src="/brand/mentora-logo.png"
+                alt="Mentora"
+                fill
+                className="object-contain"
+                sizes="36px"
+                priority
+              />
             </span>
             <span className="hidden md:block leading-none">
               <span className="block text-sm font-bold text-white" style={{ letterSpacing: "-0.02em" }}>
-                אינפי ב׳
+                Mentora
               </span>
               <span className="block text-[10px]" style={{ color: "rgba(255,255,255,0.45)" }}>
-                מועד א׳ · 90+
+                אינפי ב׳ · מועד א׳
               </span>
             </span>
           </Link>
@@ -110,13 +122,11 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           {/* Divider */}
           <div className="shrink-0 w-px h-5" style={{ background: "rgba(255,255,255,0.15)" }} />
 
-          {/* Single nav — one row, scrollable */}
-          <nav
-            className="flex min-w-0 flex-1 items-center gap-0.5 overflow-x-auto"
-            style={{ scrollbarWidth: "none" }}
-          >
-            {NAV_ITEMS.filter(({ href }) => href !== "/admin" || isAdmin).map(({ href, label, icon: Icon, tourId }) => {
+          {/* Nav */}
+          <nav className="flex min-w-0 flex-1 items-center gap-0.5">
+            {NAV_ITEMS.filter(({ href }) => href !== "/admin" || isAdmin).map(({ href, label, icon: Icon, tourId, show }) => {
               const active = pathname === href || pathname.startsWith(href + "/");
+              const showCls = SHOW_CLASS[show] ?? "";
               if (href === "/weeks") {
                 return (
                   <NavDropdown
@@ -126,14 +136,15 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                     icon={<Icon className="h-3.5 w-3.5 shrink-0" />}
                     active={active}
                     tourId={tourId}
+                    className={showCls}
                     items={[
-                      { href: "/instructor-notes", label: "מסקנות מתרגולים", icon: <Sparkles className="h-3 w-3" /> },
+                      { href: "/instructor-notes", label: "הערות מקס", icon: <Sparkles className="h-3 w-3" /> },
                     ]}
                   />
                 );
               }
               return (
-                <NavLink key={href} href={href} label={label} icon={<Icon className="h-3.5 w-3.5 shrink-0" />} active={active} tourId={tourId} />
+                <NavLink key={href} href={href} label={label} icon={<Icon className="h-3.5 w-3.5 shrink-0" />} active={active} tourId={tourId} className={showCls} />
               );
             })}
           </nav>
@@ -160,7 +171,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         className="mx-auto max-w-7xl border-t px-4 py-4 text-center text-xs lg:px-6"
         style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}
       >
-        מועד א׳ · 01.07.2026 · יעד 90+ · Calculus 2 Exam Prep
+        Mentora · אינפי ב׳ · מועד א׳ · 01.07.2026 · יעד 90+
       </footer>
     </div>
   );
@@ -172,22 +183,24 @@ function NavLink({
   icon,
   active,
   tourId,
+  className = "",
 }: {
   href: string;
   label: string;
   icon: React.ReactNode;
   active: boolean;
   tourId?: string;
+  className?: string;
 }) {
   return (
     <Link
       href={href}
       data-tour={tourId}
-      className="nav-link flex shrink-0 items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-semibold transition-all"
+      className={`nav-link flex shrink-0 items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-semibold transition-all ${className}`}
       data-active={active ? "true" : undefined}
     >
       {icon}
-      <span className="hidden lg:block whitespace-nowrap">{label}</span>
+      <span className="hidden xl:block whitespace-nowrap">{label}</span>
     </Link>
   );
 }
@@ -199,6 +212,7 @@ function NavDropdown({
   active,
   tourId,
   items,
+  className = "",
 }: {
   href: string;
   label: string;
@@ -206,9 +220,10 @@ function NavDropdown({
   active: boolean;
   tourId?: string;
   items: { href: string; label: string; icon: React.ReactNode }[];
+  className?: string;
 }) {
   return (
-    <div className="group relative shrink-0">
+    <div className={`group relative shrink-0 ${className}`}>
       {/* Trigger */}
       <Link
         href={href}
@@ -217,8 +232,8 @@ function NavDropdown({
         data-active={active ? "true" : undefined}
       >
         {icon}
-        <span className="hidden lg:block whitespace-nowrap">{label}</span>
-        <ChevronDown className="h-2.5 w-2.5 opacity-50 hidden lg:block" />
+        <span className="hidden xl:block whitespace-nowrap">{label}</span>
+        <ChevronDown className="h-2.5 w-2.5 opacity-50 hidden xl:block" />
       </Link>
 
       {/* Dropdown panel — appears on hover */}

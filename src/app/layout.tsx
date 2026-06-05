@@ -21,8 +21,21 @@ const heebo = Heebo({
 });
 
 export const metadata: Metadata = {
-  title: "אינפי ב׳ | Calculus 2 Exam Prep",
-  description: "מערכת הכנה ייעודית לאינפי ב׳ למועד א׳ וליעד 90+.",
+  metadataBase: new URL("https://infi.mentora-edu.com"),
+  title: "Mentora | אינפי ב׳",
+  description: "Mentora — מערכת הכנה ייעודית לאינפי ב׳ למועד א׳ וליעד 90+.",
+  icons: {
+    icon: [
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+      { url: "/brand/mentora-icon-64.png", type: "image/png", sizes: "64x64" },
+    ],
+    apple: [{ url: "/apple-icon.png", type: "image/png", sizes: "180x180" }],
+  },
+  openGraph: {
+    title: "Mentora | אינפי ב׳",
+    description: "מערכת הכנה ייעודית לאינפי ב׳ למועד א׳ וליעד 90+.",
+    images: [{ url: "/brand/mentora-social-preview.png", width: 1228, height: 570, alt: "Mentora" }],
+  },
 };
 
 export default function RootLayout({

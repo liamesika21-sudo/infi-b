@@ -1,4 +1,5 @@
 import { readAnalysisData } from "@/lib/calculus2/analysis-reader";
+import { getHebrewPastExamHref, hebrewPastExams } from "@/lib/calculus2/past-exams-hebrew";
 import { PageHeader } from "@/components/study/StudyCard";
 import { StudyCallout } from "@/components/study/StudyCallout";
 
@@ -27,6 +28,40 @@ export default async function PastExamsPage() {
         </div>
       ) : (
         <>
+          <section className="rounded-xl border bg-white p-5 shadow-sm" style={{ borderColor: "var(--border)" }}>
+            <div className="flex flex-wrap items-start justify-between gap-3">
+              <div>
+                <h2 className="text-lg font-bold" style={{ color: "var(--text-primary)" }}>
+                  מבחנים בעברית ללא פתרונות
+                </h2>
+                <p className="mt-1 text-sm leading-7" style={{ color: "var(--text-secondary)" }}>
+                  קישורים ישירים לקבצי הבחינות בעברית בלבד.
+                </p>
+              </div>
+              <span className="badge badge-cyan">{hebrewPastExams.length} קבצים</span>
+            </div>
+
+            <div className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+              {hebrewPastExams.map((exam) => (
+                <a
+                  key={exam.filename}
+                  href={getHebrewPastExamHref(exam.filename)}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group rounded-lg border px-4 py-3 transition hover:-translate-y-0.5 hover:shadow-sm"
+                  style={{ background: "var(--bg-subtle)", borderColor: "var(--border)" }}
+                >
+                  <span className="block text-sm font-bold" style={{ color: "var(--text-primary)" }}>
+                    {exam.title}
+                  </span>
+                  <span className="mt-1 block text-xs" style={{ color: "var(--text-secondary)" }}>
+                    פתיחת PDF בעברית
+                  </span>
+                </a>
+              ))}
+            </div>
+          </section>
+
           <div className="grid gap-4 lg:grid-cols-2">
             {/* Topic frequency */}
             <section className="rounded-xl border bg-white p-5 shadow-sm" style={{ borderColor: "var(--border)" }}>
