@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-05T11:08:02.525Z",
+  "generatedAt": "2026-06-05T11:18:00.242Z",
   "totalFilesScanned": 57,
   "lecturesFound": 10,
   "recitationsFound": 10,
@@ -10,5 +10,5 @@
   "extractionFailures": 0,
   "needsOcr": 2,
   "detectedTopicsCount": 16,
-  "durationMs": 4497
+  "durationMs": 4808
 }

@@ -417,20 +417,24 @@
     },
     "sourceFileIds": [
       "lecture-lecture-10-group-2-calculus-2-2026",
-      "recitation-recitation-10-hebrew"
+      "recitation-script-תרגול-10-תמלול-נקי"
     ],
     "lectureFileIds": [
       "lecture-lecture-10-group-2-calculus-2-2026"
     ],
     "recitationFileIds": [
-      "recitation-recitation-10-hebrew"
+      "recitation-script-תרגול-10-תמלול-נקי"
     ],
     "homeworkFileIds": [],
     "summaryFileIds": [],
     "topicCoverage": [
       "גבולות",
+      "טורי חזקות",
       "טורים",
-      "סדרות"
+      "מבחן המנה",
+      "נגזרות",
+      "סדרות",
+      "פונקציות"
     ],
     "examRelevance": "unknown",
     "masteryStatus": "not_started"

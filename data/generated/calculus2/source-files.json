@@ -522,24 +522,6 @@
     "practicedLectureNumber": null
   },
   {
-    "id": "recitation-recitation-10-hebrew",
-    "filename": "Recitation 10-Hebrew.pdf",
-    "relativePath": "docs/recitation/Recitation 10-Hebrew.pdf",
-    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/recitation/Recitation 10-Hebrew.pdf",
-    "extension": ".pdf",
-    "sourceType": "recitation",
-    "status": "classified",
-    "detectedLabels": [
-      "recitation",
-      "offset-practice"
-    ],
-    "classificationConfidence": 0.85,
-    "warnings": [],
-    "recitationNumber": 10,
-    "weekNumber": 10,
-    "practicedLectureNumber": 9
-  },
-  {
     "id": "recitation-recitation-2-hebrew",
     "filename": "Recitation 2-Hebrew.pdf",
     "relativePath": "docs/recitation/Recitation 2-Hebrew.pdf",
@@ -682,6 +664,24 @@
     "recitationNumber": 9,
     "weekNumber": 9,
     "practicedLectureNumber": 8
+  },
+  {
+    "id": "recitation-script-תרגול-10-תמלול-נקי",
+    "filename": "תרגול_10_תמלול_נקי.md",
+    "relativePath": "docs/recitation/script/תרגול_10_תמלול_נקי.md",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/recitation/script/תרגול_10_תמלול_נקי.md",
+    "extension": ".md",
+    "sourceType": "recitation",
+    "status": "classified",
+    "detectedLabels": [
+      "recitation",
+      "offset-practice"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "recitationNumber": 10,
+    "weekNumber": 10,
+    "practicedLectureNumber": 9
   },
   {
     "id": "summerize-note-25-may-2026",

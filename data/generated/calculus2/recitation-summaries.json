@@ -51,73 +51,6 @@
     "confidence": 0.8999999999999999
   },
   {
-    "recitationNumber": 10,
-    "weekNumber": 10,
-    "sourceFileId": "recitation-recitation-10-hebrew",
-    "filename": "Recitation 10-Hebrew.pdf",
-    "practicesLecture": 9,
-    "mainThemes": [
-      "טורי טיילור",
-      "סכומי טורים",
-      "התכנסות של טורי פונקציות"
-    ],
-    "whatWasPracticed": "המשך עבודה עם טורי חזקות וטיילור: זיהוי מבנה, חישוב תחומי התכנסות, שימוש בגזירה/אינטגרציה של טור, והכנה למעבר לסדרות וטורי פונקציות.",
-    "keyTechniques": [
-      "זיהוי טור חזקות",
-      "בדיקת קצוות",
-      "גזירה ואינטגרציה איבר-איבר",
-      "שימוש בטורי מקלורן ידועים"
-    ],
-    "examRelevance": "critical",
-    "questionCount": 22,
-    "questionIds": [
-      "recitation-recitation-10-hebrew-question-1",
-      "recitation-recitation-10-hebrew-question-2",
-      "recitation-recitation-10-hebrew-question-3",
-      "recitation-recitation-10-hebrew-question-4",
-      "recitation-recitation-10-hebrew-question-5",
-      "recitation-recitation-10-hebrew-question-6",
-      "recitation-recitation-10-hebrew-question-7",
-      "recitation-recitation-10-hebrew-question-8",
-      "recitation-recitation-10-hebrew-question-9",
-      "recitation-recitation-10-hebrew-question-10",
-      "recitation-recitation-10-hebrew-question-11",
-      "recitation-recitation-10-hebrew-question-12",
-      "recitation-recitation-10-hebrew-question-13",
-      "recitation-recitation-10-hebrew-question-14",
-      "recitation-recitation-10-hebrew-question-15",
-      "recitation-recitation-10-hebrew-question-16",
-      "recitation-recitation-10-hebrew-question-17",
-      "recitation-recitation-10-hebrew-question-18",
-      "recitation-recitation-10-hebrew-question-19",
-      "recitation-recitation-10-hebrew-question-20",
-      "recitation-recitation-10-hebrew-question-21",
-      "recitation-recitation-10-hebrew-question-22"
-    ],
-    "solutionPatternCount": 0,
-    "mustPractice": [
-      "לזהות אם ביטוי הוא טור חזקות או לא",
-      "למצוא $x_0$, מקדמים ורדיוס התכנסות",
-      "לבדוק קצוות אחרי כל פעולה על טור",
-      "לחשב סכומים באמצעות טורי מקלורן מוכרים"
-    ],
-    "commonMistakes": [
-      "בלבול בין המקדם $a_n$ לבין הצבה של $n$ בביטוי",
-      "התייחסות לביטויים עם חזקות שליליות או $\\sin x$ כטורי חזקות",
-      "שכחה שהרדיוס נשמר בגזירה/אינטגרציה אבל הקצוות לא בהכרח"
-    ],
-    "conclusions": [
-      "טור חזקות הוא פולינום אינסופי סביב מרכז $x_0$ — קודם מזהים את הצורה",
-      "בתוך הרדיוס יש התכנסות בהחלט; בקצוות חייבים בדיקה נפרדת",
-      "טורי מקלורן בסיסיים הם כלי חישוב, לא רק נוסחאות לשינון"
-    ],
-    "topicCoverage": [
-      "גבולות",
-      "סדרות"
-    ],
-    "confidence": 0.8999999999999999
-  },
-  {
     "recitationNumber": 2,
     "weekNumber": 2,
     "sourceFileId": "recitation-recitation-2-hebrew",
@@ -578,6 +511,63 @@
       "סדרות",
       "פונקציות",
       "רדיוס התכנסות"
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
+    "recitationNumber": 10,
+    "weekNumber": 10,
+    "sourceFileId": "recitation-script-תרגול-10-תמלול-נקי",
+    "filename": "תרגול_10_תמלול_נקי.md",
+    "practicesLecture": 9,
+    "mainThemes": [
+      "טורי טיילור",
+      "סכומי טורים",
+      "התכנסות של טורי פונקציות"
+    ],
+    "whatWasPracticed": "המשך עבודה עם טורי חזקות וטיילור: זיהוי מבנה, חישוב תחומי התכנסות, שימוש בגזירה/אינטגרציה של טור, והכנה למעבר לסדרות וטורי פונקציות.",
+    "keyTechniques": [
+      "זיהוי טור חזקות",
+      "בדיקת קצוות",
+      "גזירה ואינטגרציה איבר-איבר",
+      "שימוש בטורי מקלורן ידועים"
+    ],
+    "examRelevance": "critical",
+    "questionCount": 6,
+    "questionIds": [
+      "recitation-script-תרגול-10-תמלול-נקי-question-1",
+      "recitation-script-תרגול-10-תמלול-נקי-question-2",
+      "recitation-script-תרגול-10-תמלול-נקי-question-3",
+      "recitation-script-תרגול-10-תמלול-נקי-question-4",
+      "recitation-script-תרגול-10-תמלול-נקי-question-5",
+      "recitation-script-תרגול-10-תמלול-נקי-question-6"
+    ],
+    "solutionPatternCount": 0,
+    "mustPractice": [
+      "לזהות אם ביטוי הוא טור חזקות או לא",
+      "למצוא $x_0$, מקדמים ורדיוס התכנסות",
+      "לבדוק קצוות אחרי כל פעולה על טור",
+      "לחשב סכומים באמצעות טורי מקלורן מוכרים"
+    ],
+    "commonMistakes": [
+      "בלבול בין המקדם $a_n$ לבין הצבה של $n$ בביטוי",
+      "התייחסות לביטויים עם חזקות שליליות או $\\sin x$ כטורי חזקות",
+      "שכחה שהרדיוס נשמר בגזירה/אינטגרציה אבל הקצוות לא בהכרח",
+      "גזירה איבר־איבר ואינטגרציה איבר־איבר אינן תמימות. טור הוא גבול, נגזרת היא גבול, ובפועל מחליפים סדר של גבולות. זה משהו שלא נכון תמיד, אבל בטורי חזקות עם רדיוס חיובי יש משפט שמאפשר את זה."
+    ],
+    "conclusions": [
+      "טור חזקות הוא פולינום אינסופי סביב מרכז $x_0$ — קודם מזהים את הצורה",
+      "בתוך הרדיוס יש התכנסות בהחלט; בקצוות חייבים בדיקה נפרדת",
+      "טורי מקלורן בסיסיים הם כלי חישוב, לא רק נוסחאות לשינון"
+    ],
+    "topicCoverage": [
+      "גבולות",
+      "טורי חזקות",
+      "טורים",
+      "מבחן המנה",
+      "נגזרות",
+      "סדרות",
+      "פונקציות"
     ],
     "confidence": 0.8999999999999999
   }

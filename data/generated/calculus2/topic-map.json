@@ -72,7 +72,6 @@
       "past-exams-moedb-calculus2-2025-solutions",
       "past-exams-simulation-calculus2-2025-solutions",
       "recitation-recitation-1-hebrew-1",
-      "recitation-recitation-10-hebrew",
       "recitation-recitation-2-hebrew",
       "recitation-recitation-4-hebrew",
       "recitation-recitation-5-hebrew",
@@ -80,6 +79,7 @@
       "recitation-recitation-7-hebrew",
       "recitation-recitation-8-hebrew-2",
       "recitation-script-recitation-9-max",
+      "recitation-script-תרגול-10-תמלול-נקי",
       "summerize-recitation-8-hebrew",
       "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
       "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
@@ -216,10 +216,12 @@
       "past-exams-moedb-2023-eng-sol",
       "past-exams-moedb-calculus2-2024-solutions",
       "past-exams-moedb-calculus2-2025-solutions",
-      "recitation-script-recitation-9-max"
+      "recitation-script-recitation-9-max",
+      "recitation-script-תרגול-10-תמלול-נקי"
     ],
     "detectedInWeeks": [
-      9
+      9,
+      10
     ],
     "confidence": 0.95,
     "sourceSnippets": [
@@ -269,6 +271,7 @@
       "recitation-recitation-7-hebrew",
       "recitation-recitation-8-hebrew-2",
       "recitation-script-recitation-9-max",
+      "recitation-script-תרגול-10-תמלול-נקי",
       "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
       "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
       "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-4",
@@ -362,13 +365,15 @@
       "past-exams-moedb-calculus2-2025-solutions",
       "recitation-recitation-7-hebrew",
       "recitation-script-recitation-9-max",
+      "recitation-script-תרגול-10-תמלול-נקי",
       "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-6",
       "summerize-שבוע-7-סיכום"
     ],
     "detectedInWeeks": [
       6,
       7,
-      9
+      9,
+      10
     ],
     "confidence": 0.95,
     "sourceSnippets": [
@@ -442,6 +447,7 @@
       "recitation-recitation-3-hebrew",
       "recitation-recitation-7-hebrew",
       "recitation-script-recitation-9-max",
+      "recitation-script-תרגול-10-תמלול-נקי",
       "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
       "summerize-שבוע-2-אינפי-2",
       "summerize-שבוע-4-אינפי-2"
@@ -453,7 +459,8 @@
       4,
       5,
       7,
-      9
+      9,
+      10
     ],
     "confidence": 0.95,
     "sourceSnippets": [
@@ -506,7 +513,6 @@
       "past-exams-moedb-calculus2-2025-solutions",
       "past-exams-simulation-calculus2-2025-solutions",
       "recitation-recitation-1-hebrew-1",
-      "recitation-recitation-10-hebrew",
       "recitation-recitation-2-hebrew",
       "recitation-recitation-3-hebrew",
       "recitation-recitation-4-hebrew",
@@ -515,6 +521,7 @@
       "recitation-recitation-7-hebrew",
       "recitation-recitation-8-hebrew-2",
       "recitation-script-recitation-9-max",
+      "recitation-script-תרגול-10-תמלול-נקי",
       "summerize-note-27-may-2026-2",
       "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
       "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
@@ -582,6 +589,7 @@
       "recitation-recitation-5-hebrew",
       "recitation-recitation-7-hebrew",
       "recitation-script-recitation-9-max",
+      "recitation-script-תרגול-10-תמלול-נקי",
       "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-1",
       "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-2",
       "summerize-sum-lecture-סיכום-אינפי-2-הרצאה-3",
@@ -601,7 +609,8 @@
       5,
       6,
       7,
-      9
+      9,
+      10
     ],
     "confidence": 0.95,
     "sourceSnippets": [

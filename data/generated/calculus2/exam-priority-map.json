@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-05T11:08:07.008Z",
+  "generatedAt": "2026-06-05T11:18:05.446Z",
   "topics": [
     {
       "topicId": "גבולות",
@@ -25,11 +25,11 @@
       "priorityLevel": "critical",
       "reasons": [
         "הופיע בקבצי מבחן 9 פעמים",
-        "מודגש בתרגולים 1 פעמים"
+        "מודגש בתרגולים 2 פעמים"
       ],
       "appearedInPastExams": 9,
       "appearedInHomework": 0,
-      "appearedInRecitations": 1,
+      "appearedInRecitations": 2,
       "appearedInLectures": 0,
       "recommendedAction": "לפתור שאלות מבחן ומטלות בנושא לפני כל נושא אחר."
     },
@@ -41,12 +41,12 @@
       "reasons": [
         "הופיע בקבצי מבחן 10 פעמים",
         "מופיע במטלות 7 פעמים",
-        "מודגש בתרגולים 5 פעמים",
+        "מודגש בתרגולים 6 פעמים",
         "נלמד בהרצאות 6 פעמים"
       ],
       "appearedInPastExams": 10,
       "appearedInHomework": 7,
-      "appearedInRecitations": 5,
+      "appearedInRecitations": 6,
       "appearedInLectures": 6,
       "recommendedAction": "לפתור שאלות מבחן ומטלות בנושא לפני כל נושא אחר."
     },
@@ -74,11 +74,11 @@
       "reasons": [
         "הופיע בקבצי מבחן 12 פעמים",
         "מופיע במטלות 4 פעמים",
-        "מודגש בתרגולים 3 פעמים"
+        "מודגש בתרגולים 4 פעמים"
       ],
       "appearedInPastExams": 12,
       "appearedInHomework": 4,
-      "appearedInRecitations": 3,
+      "appearedInRecitations": 4,
       "appearedInLectures": 0,
       "recommendedAction": "לפתור שאלות מבחן ומטלות בנושא לפני כל נושא אחר."
     },
@@ -107,11 +107,11 @@
       "reasons": [
         "הופיע בקבצי מבחן 11 פעמים",
         "מופיע במטלות 7 פעמים",
-        "מודגש בתרגולים 6 פעמים"
+        "מודגש בתרגולים 7 פעמים"
       ],
       "appearedInPastExams": 11,
       "appearedInHomework": 7,
-      "appearedInRecitations": 6,
+      "appearedInRecitations": 7,
       "appearedInLectures": 0,
       "recommendedAction": "לפתור שאלות מבחן ומטלות בנושא לפני כל נושא אחר."
     },
@@ -177,8 +177,8 @@
       "recommendedAction": "לחזור על משפטים ונוסחאות ואז לתרגל."
     },
     {
-      "topicId": "מבחן-השורש",
-      "title": "מבחן השורש",
+      "topicId": "מבחן-המנה",
+      "title": "מבחן המנה",
       "priorityScore": 60,
       "priorityLevel": "high",
       "reasons": [
@@ -193,18 +193,18 @@
       "recommendedAction": "לחזור על משפטים ונוסחאות ואז לתרגל."
     },
     {
-      "topicId": "מבחן-המנה",
-      "title": "מבחן המנה",
-      "priorityScore": 55,
+      "topicId": "מבחן-השורש",
+      "title": "מבחן השורש",
+      "priorityScore": 60,
       "priorityLevel": "high",
       "reasons": [
         "הופיע בקבצי מבחן 2 פעמים",
         "מופיע במטלות 1 פעמים",
-        "מודגש בתרגולים 2 פעמים"
+        "מודגש בתרגולים 3 פעמים"
       ],
       "appearedInPastExams": 2,
       "appearedInHomework": 1,
-      "appearedInRecitations": 2,
+      "appearedInRecitations": 3,
       "appearedInLectures": 0,
       "recommendedAction": "לחזור על משפטים ונוסחאות ואז לתרגל."
     },
