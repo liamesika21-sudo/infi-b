@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>חדו״א 2 — מטלה 5: אינטגרלים לא אמיתיים, השוואה ונוסחת ואליס</title>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$','$$']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800&display=swap');
+    :root{
+      --bg:#f6f8ff; --panel:#ffffff; --ink:#172033; --muted:#5f6b85; --line:#dfe6f7;
+      --blue:#3563ff; --purple:#8057ff; --soft:#eef2ff; --soft2:#f6f2ff; --danger:#b42318;
+      --good:#077e58; --warn:#946200; --shadow:0 10px 25px rgba(26,42,88,.08);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:'Assistant',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:linear-gradient(135deg,#f8faff,#f3f0ff);color:var(--ink);font-size:15px;line-height:1.55}
+    a{color:inherit;text-decoration:none}
+    .layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:18px;max-width:1320px;margin:auto;padding:18px}
+    aside{position:sticky;top:14px;height:calc(100vh - 28px);overflow:auto;background:rgba(255,255,255,.9);border:1px solid var(--line);border-radius:20px;padding:14px;box-shadow:var(--shadow)}
+    .brand{padding:10px 10px 14px;border-bottom:1px solid var(--line);margin-bottom:10px}
+    .brand .tag{font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.3px}
+    .brand h2{font-size:18px;margin:2px 0 0;color:var(--blue)}
+    nav a{display:block;padding:8px 10px;margin:4px 0;border-radius:12px;color:#26324a;font-size:14px;font-weight:700}
+    nav a:hover{background:var(--soft);color:var(--blue)}
+    main{min-width:0}
+    .hero{background:radial-gradient(circle at top left,#e8e9ff,transparent 34%),linear-gradient(135deg,#ffffff,#f7f8ff);border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:var(--shadow);margin-bottom:16px}
+    .hero h1{font-size:28px;line-height:1.15;margin:0 0 8px;color:#111a31}
+    .hero p{margin:0;color:var(--muted);font-size:16px;max-width:880px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+    .chip{background:var(--soft);border:1px solid #d8ddff;color:#3247b7;border-radius:999px;padding:5px 10px;font-size:13px;font-weight:700}
+    section{background:rgba(255,255,255,.92);border:1px solid var(--line);border-radius:22px;padding:18px;margin-bottom:16px;box-shadow:var(--shadow)}
+    section h2{font-size:22px;margin:0 0 12px;color:#101933}
+    h3{font-size:17px;margin:0 0 8px;color:#16213d}
+    h4{font-size:15px;margin:10px 0 4px;color:#26324a}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:14px;break-inside:avoid}
+    .card.accent{background:linear-gradient(135deg,#fff,#f4f6ff)}
+    .mini-title{font-weight:800;color:var(--blue);font-size:13px;margin-top:8px}
+    .meta{color:var(--muted);font-size:13px;margin:3px 0 8px}
+    ul,ol{margin:6px 0 0;padding-right:20px}
+    li{margin:4px 0}
+    .formula{direction:ltr;text-align:center;background:#fbfcff;border:1px dashed #cbd6ff;border-radius:14px;padding:9px;margin:8px 0;overflow:auto}
+    .warning{background:#fff8e8;border:1px solid #ffe0a6;color:#6b4700;border-radius:14px;padding:9px;margin-top:8px;font-size:14px}
+    .mistake{background:#fff1f1;border:1px solid #ffd0d0;color:#8a1f17;border-radius:14px;padding:9px;margin-top:8px;font-size:14px}
+    .ok{background:#ecfbf5;border:1px solid #bfeedd;color:#075c43;border-radius:14px;padding:9px;margin-top:8px;font-size:14px}
+    .tasks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;counter-reset:item}
+    .task{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px;position:relative;min-height:86px}
+    .task:before{counter-increment:item;content:counter(item);position:absolute;left:12px;top:10px;background:linear-gradient(135deg,var(--blue),var(--purple));color:white;width:25px;height:25px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px}
+    .task b{display:block;margin-left:30px;color:#142044}
+    .task span{display:block;color:var(--muted);font-size:13px;margin-top:4px}
+    details{border:1px solid var(--line);background:#fff;border-radius:16px;margin:10px 0;overflow:hidden;break-inside:avoid}
+    summary{cursor:pointer;padding:12px 14px;font-weight:800;color:#1c2b52;background:linear-gradient(135deg,#fbfcff,#f5f3ff)}
+    .solution{padding:13px 16px;border-top:1px solid var(--line)}
+    .solution p{margin:6px 0}
+    .solution .label{display:inline-block;background:var(--soft);color:#3146b6;border-radius:999px;padding:2px 8px;font-size:12px;font-weight:800;margin-bottom:4px}
+    .table-wrap{overflow:auto;border-radius:14px;border:1px solid var(--line)}
+    table{width:100%;border-collapse:collapse;background:#fff;font-size:14px}
+    th,td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+    th{background:#f2f5ff;color:#20305c;text-align:right;font-weight:800}
+    tr:last-child td{border-bottom:0}
+    .ltr{direction:ltr;text-align:left}
+    footer{color:var(--muted);font-size:12px;text-align:center;padding:16px}
+    @media (max-width:900px){.layout{grid-template-columns:1fr;padding:10px}aside{position:relative;height:auto}.grid,.tasks{grid-template-columns:1fr}.hero h1{font-size:24px}}
+    @media print{body{background:#fff;font-size:12px}.layout{display:block;padding:0}aside{display:none}section,.hero{box-shadow:none;border-color:#ccd3e8;page-break-inside:avoid}.card,.task,details{page-break-inside:avoid}.hero{padding:14px}section{padding:12px;margin-bottom:10px}summary{background:#fff}.chips{display:none}}
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside>
+      <div class="brand">
+        <div class="tag">דף למידה לפני מבחן</div>
+        <h2>מטלה 5 · חדו״א 2</h2>
+      </div>
+      <nav>
+        <a href="#intro">פתיחה</a>
+        <a href="#map">מפת שאלות</a>
+        <a href="#patterns">תבניות ואינטואיציות</a>
+        <a href="#tasks">משימות חזרה</a>
+        <a href="#official">פתרונות רשמיים</a>
+        <a href="#tools">ארגז כלים</a>
+      </nav>
+    </aside>
+
+    <main>
+      <header class="hero" id="intro">
+        <h1>חדו״א 2 — מטלה 5: אינטגרלים לא אמיתיים, משפטי ערך ביניים ונוסחת ואליס</h1>
+        <p>זה דף תבניות, אינטואיציות ופתרונות רשמיים לפי מטלה 5. המטרה היא לזהות מהר מה סוג השאלה, לבחור כלי מתאים, ולדעת לכתוב פתרון מסודר למבחן.</p>
+        <div class="chips">
+          <span class="chip">אינטגרלים לא אמיתיים</span><span class="chip">מבחן השוואה</span><span class="chip">התכנסות/התבדרות</span><span class="chip">ערך ביניים</span><span class="chip">המשפט היסודי</span><span class="chip">אינדוקציה + ואליס</span>
+        </div>
+      </header>
+
+      <section id="map">
+        <h2>מפת שאלות מהירה</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>שאלה</th><th>מה מזהים?</th><th>כלי מרכזי</th><th>תוצאה</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>אינטגרלים לא אמיתיים עם גבולות אינסופיים</td><td>פיצול תחום, קדומה, גבול, לופיטל</td><td>חישוב ערך או התבדרות</td></tr>
+              <tr><td>2</td><td>קביעת התכנסות בלי לחשב בדיוק</td><td>מבחן השוואה לאינטגרלים אי־שליליים</td><td>מתכנס / מתבדר</td></tr>
+              <tr><td>3</td><td>להוכיח שקיים $c$ כך שאינטגרל שווה לערך פונקציה</td><td>ויירשטראס + מונוטוניות האינטגרל + ערך ביניים</td><td>קיום $c \in [0,2]$</td></tr>
+              <tr><td>4</td><td>אינטגרל של $f'/f$</td><td>$\int \frac{f'}{f}=\ln(f)$</td><td>קיום $\lim f(x)$</td></tr>
+              <tr><td>5</td><td>טענות אמת/שקר על פונקציות אינטגרל</td><td>דוגמה נגדית, IVT, משפט יסודי</td><td>אמת/שקר עם נימוק</td></tr>
+              <tr><td>6</td><td>סדרת אינטגרלים $I_n=\int_0^{\pi/2}\sin^n x\,dx$</td><td>אינטגרציה בחלקים, אינדוקציה, סנדוויץ׳</td><td>נוסחת נסיגה ונוסחת ואליס</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="patterns">
+        <h2>חלק ראשון — תבניות ואינטואיציות לפי נושאים</h2>
+        <div class="grid">
+          <div class="card accent" id="p1">
+            <h3>1. אינטגרל לא אמיתי על $(-\infty,\infty)$</h3>
+            <div class="mini-title">איך מזהים?</div>
+            <p>רואים גבול אינסופי בשני הצדדים, למשל $\int_{-\infty}^{\infty} f(x)dx$.</p>
+            <div class="mini-title">האינטואיציה</div>
+            <p>לא “קופצים” לשני הצדדים יחד. צריך לבדוק בנפרד את הזנב השמאלי ואת הזנב הימני.</p>
+            <div class="mini-title">תבנית פתרון</div>
+            <ol>
+              <li>פצלי: $\int_{-\infty}^{\infty}f=\int_{-\infty}^{0}f+\int_{0}^{\infty}f$.</li>
+              <li>אם יש $|x|$, החליפי ביטוי בכל תחום.</li>
+              <li>חשבי כל צד לפי הגדרת אינטגרל לא אמיתי.</li>
+              <li>אם אחד הצדדים מתבדר — כל האינטגרל מתבדר.</li>
+            </ol>
+            <div class="formula">$$\int_{-\infty}^{\infty}f(x)dx \text{ מתכנס } \Longleftrightarrow \int_{-\infty}^{0}f,\ \int_{0}^{\infty}f \text{ מתכנסים}$$</div>
+            <div class="mistake">טעות נפוצה: לחשוב שפונקציה אי־זוגית על תחום סימטרי נותנת אוטומטית $0$. באינטגרל לא אמיתי זה לא מספיק; קודם צריך שכל צד יתכנס.</div>
+          </div>
+
+          <div class="card" id="p2">
+            <h3>2. מבחן השוואה לאינטגרלים לא אמיתיים</h3>
+            <div class="mini-title">איך מזהים?</div>
+            <p>שואלים רק אם האינטגרל מתכנס/מתבדר, והפונקציה אי־שלילית.</p>
+            <div class="mini-title">האינטואיציה</div>
+            <p>כדי להוכיח התכנסות — חוסמים מלמעלה במשהו מתכנס. כדי להוכיח התבדרות — חוסמים מלמטה במשהו מתבדר.</p>
+            <div class="mini-title">תבנית פתרון</div>
+            <ol>
+              <li>כתבי שהפונקציה אי־שלילית בתחום.</li>
+              <li>בחרי אינטגרל מוכר להשוואה: $e^{-x}$, $1/x^p$, או $1/(x-a)$ ליד נקודת בעיה.</li>
+              <li>התכנסות: $0\le f\le g$ ו־$\int g<\infty$.</li>
+              <li>התבדרות: $f\ge g\ge0$ ו־$\int g=\infty$.</li>
+            </ol>
+            <div class="formula">$$\int_1^\infty \frac{dx}{x^p}\begin{cases}<\infty,&p>1\\=\infty,&p\le1\end{cases}$$</div>
+            <div class="warning">במטלה: $\sin x\le x$ עוזר לחסום מונה; $\ln x\le x-1$ עוזר להבין התנהגות ליד $x=1$.</div>
+          </div>
+
+          <div class="card" id="p3">
+            <h3>3. אינטגרל עם פונקציה רציפה ומשקל חיובי</h3>
+            <div class="mini-title">איך מזהים?</div>
+            <p>מבקשים להוכיח שקיים $c$ כך ש־$\int w(x)f(x)dx=f(c)\cdot\int w(x)dx$.</p>
+            <div class="mini-title">האינטואיציה</div>
+            <p>האינטגרל הוא “ממוצע משוקלל” של ערכי $f$. ממוצע של פונקציה רציפה חייב להיות בין המינימום למקסימום שלה.</p>
+            <div class="mini-title">תבנית פתרון</div>
+            <ol>
+              <li>מרציפות בקטע סגור: לפי ויירשטראס יש $m\le f(x)\le M$.</li>
+              <li>מכפילים במשקל אי־שלילי, כאן $x^2\ge0$.</li>
+              <li>מבצעים אינטגרל ומגדירים $r=\frac{\int w f}{\int w}$.</li>
+              <li>מקבלים $m\le r\le M$.</li>
+              <li>לפי ערך הביניים יש $c$ כך ש־$f(c)=r$.</li>
+            </ol>
+            <div class="formula">$$r=\frac{\int_0^2 x^2f(x)dx}{\int_0^2x^2dx}=\frac{3}{8}\int_0^2x^2f(x)dx$$</div>
+            <div class="mistake">טעות נפוצה: לשכוח להסביר למה מותר להכפיל באי־שוויון. כאן מותר כי $x^2\ge0$.</div>
+          </div>
+
+          <div class="card" id="p4">
+            <h3>4. אינטגרל מהצורה $\frac{f'}{f}$</h3>
+            <div class="mini-title">איך מזהים?</div>
+            <p>בתוך האינטגרל מופיע נגזרת של פונקציה חלקי הפונקציה עצמה.</p>
+            <div class="mini-title">האינטואיציה</div>
+            <p>זה מודד שינוי לוגריתמי. אם השינוי הלוגריתמי הכולל עד אינסוף סופי, אז $\ln(f(x))$ מתכנס ולכן גם $f(x)$ מתכנסת.</p>
+            <div class="mini-title">תבנית פתרון</div>
+            <ol>
+              <li>משתמשים בכך ש־$f>0$, לכן $\ln(f)$ מוגדר.</li>
+              <li>כותבים $\int_1^b \frac{f'}{f}=\ln f(b)-\ln f(1)$.</li>
+              <li>התכנסות האינטגרל אומרת שלגבול של הביטוי הזה יש ערך ממשי.</li>
+              <li>מכאן $\ln(f(x))\to L$, ואז $f(x)=e^{\ln f(x)}\to e^L$.</li>
+            </ol>
+            <div class="ok">שימי לב: הנתון $f>0$ קריטי. בלעדיו $\ln(f)$ לא בהכרח מוגדר.</div>
+          </div>
+
+          <div class="card" id="p5">
+            <h3>5. שאלות אמת/שקר על פונקציות אינטגרל</h3>
+            <div class="mini-title">איך מזהים?</div>
+            <p>מבקשים להוכיח או להפריך טענות על $F(x)=\int f$.</p>
+            <div class="mini-title">האינטואיציה</div>
+            <p>אם הטענה נשמעת כללית מדי — מחפשים נקודת כשל: אי־רציפות בנקודה אחת, בעיה ליד $0$, או חלוקה לא נכונה של אינטגרל.</p>
+            <div class="mini-title">תבנית פתרון</div>
+            <ol>
+              <li>לטענה אמיתית: הגדירי פונקציה עזר והפעילי IVT/FTC.</li>
+              <li>לטענה שקרית: בחרי דוגמה פשוטה שמקיימת את הנתונים אבל שוברת את המסקנה.</li>
+              <li>בדקי מה קורה בקצוות: $0$, $1$, $\infty$.</li>
+            </ol>
+            <div class="formula">$$F(x)=\int_x^1 f(t)dt=\int_0^1f(t)dt-\int_0^xf(t)dt$$</div>
+            <div class="mistake">טעות נפוצה: להשתמש ב־$F'(0)=f(0)$ בלי רציפות של $f$ ב־$0$.</div>
+          </div>
+
+          <div class="card" id="p6">
+            <h3>6. נוסחת נסיגה לאינטגרלים $I_n=\int_0^{\pi/2}\sin^n x\,dx$</h3>
+            <div class="mini-title">איך מזהים?</div>
+            <p>יש סדרת אינטגרלים עם חזקה $n$, ורוצים נוסחה ל־$I_n$ ביחס ל־$I_{n-2}$.</p>
+            <div class="mini-title">האינטואיציה</div>
+            <p>מפרקים $\sin^n x$ ל־$\sin x\cdot\sin^{n-1}x$, עושים חלקים, ואז מחליפים $\cos^2x$ ב־$1-\sin^2x$ כדי לחזור ל־$I_{n-2}$ ו־$I_n$.</p>
+            <div class="mini-title">תבנית פתרון</div>
+            <ol>
+              <li>חשבי בסיס: $I_0=\pi/2$, $I_1=1$.</li>
+              <li>IBP עם $u'=\sin x$, $v=\sin^{n-1}x$.</li>
+              <li>קבלי $I_n=(n-1)I_{n-2}-(n-1)I_n$.</li>
+              <li>סדרי: $I_n=\frac{n-1}{n}I_{n-2}$.</li>
+              <li>לאיברים זוגיים/אי־זוגיים — מפעילים אינדוקציה.</li>
+            </ol>
+            <div class="formula">$$I_n=\frac{n-1}{n}I_{n-2},\quad I_0=\frac{\pi}{2},\quad I_1=1$$</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tasks">
+        <h2>חלק שני — משימות חזרה קצרות</h2>
+        <div class="tasks">
+          <div class="task"><b>כתבי את ההגדרה של אינטגרל לא אמיתי על $[a,\infty)$.</b><span>איך זה נראה: גבול $\lim_{b\to\infty}\int_a^b f(x)dx$ וקיום הגבול.</span></div>
+          <div class="task"><b>כתבי את התנאי להתכנסות של $\int_{-\infty}^{\infty}f$.</b><span>איך זה נראה: שני אינטגרלים נפרדים, אחד עד $0$ ואחד מ־$0$.</span></div>
+          <div class="task"><b>פתרי מחדש את $\int_{-\infty}^{\infty}e^{-|x|}dx$ בלי להסתכל.</b><span>איך זה נראה: פיצול ב־$0$, החלפת $|x|$, חישוב שני זנבות.</span></div>
+          <div class="task"><b>הסבירי למה סעיף 1(b) מתבדר למרות שהפונקציה “סימטרית”.</b><span>איך זה נראה: מספיק להראות שהאינטגרל מ־$0$ עד $\infty$ מתבדר.</span></div>
+          <div class="task"><b>כתבי כלל: מתי חוסמים מלמעלה ומתי מלמטה?</b><span>איך זה נראה: התכנסות ← מלמעלה במתכנס; התבדרות ← מלמטה במתבדר.</span></div>
+          <div class="task"><b>כתבי את שתי ההשוואות המרכזיות מהמטלה.</b><span>איך זה נראה: $\ln x\le x-1\le x$ עבור $x\ge1$, וגם $\sin x\le x$ כשצריך חסם למעלה.</span></div>
+          <div class="task"><b>זהי בכל סעיף בשאלה 2 מה האינטגרל המוכר להשוואה.</b><span>איך זה נראה: $xe^{-x}$, $1/x^2$, או $1/(x-1)$.</span></div>
+          <div class="task"><b>כתבי את תבנית ההוכחה לשאלה עם “קיים $c$”.</b><span>איך זה נראה: ויירשטראס → $m,M$ → ממוצע $r$ → ערך הביניים.</span></div>
+          <div class="task"><b>כתבי למה $x^2f(x)$ נשאר בין $mx^2$ ל־$Mx^2$.</b><span>איך זה נראה: כי $x^2\ge0$ ולכן כיוון האי־שוויון נשמר.</span></div>
+          <div class="task"><b>תרגלי זיהוי של $\frac{f'}{f}$.</b><span>איך זה נראה: אם המונה הוא נגזרת המכנה, הקדומה היא $\ln|f|$; כאן $f>0$ ולכן $\ln f$.</span></div>
+          <div class="task"><b>בני דוגמה נגדית לטענה $F'(0)=f(0)$ בלי רציפות.</b><span>איך זה נראה: פונקציה ששונה רק בנקודה אחת; האינטגרל לא מרגיש נקודה בודדת.</span></div>
+          <div class="task"><b>כתבי את נוסחת הנסיגה של $I_n$ והוכיחי אותה בשלוש שורות.</b><span>איך זה נראה: IBP → הצבת $\cos^2=1-\sin^2$ → סידור אלגברי.</span></div>
+          <div class="task"><b>חשבי את $I_0,I_1,I_2,I_3$ לפי הנסיגה.</b><span>איך זה נראה: להתחיל מבסיסים, ואז $I_2=\frac12I_0$, $I_3=\frac23I_1$.</span></div>
+          <div class="task"><b>כתבי את רעיון הסנדוויץ׳ בסעיף 6(d).</b><span>איך זה נראה: $I_{2n+1}\le I_{2n}$ וגם חסם תחתון שמתכנס ל־$1$ אחרי חלוקה.</span></div>
+          <div class="task"><b>כתבי פתרון מלא אחד מהמטלה מחדש בפורמט מבחן.</b><span>איך זה נראה: משפט פתיחה, כלי, חישוב נקי, מסקנה מפורשת.</span></div>
+        </div>
+      </section>
+
+      <section id="official">
+        <h2>חלק שלישי — פתרונות רשמיים לפי סדר השאלות</h2>
+
+        <details open>
+          <summary>שאלה 1 — חישוב אינטגרלים לא אמיתיים או הוכחת התבדרות</summary>
+          <div class="solution">
+            <p><span class="label">1(a)</span> לחשב:</p>
+            <div class="formula">$$\int_{-\infty}^{\infty}e^{-|x|}dx$$</div>
+            <p>מפצלים ב־$0$:</p>
+            <div class="formula">$$\int_{-\infty}^{\infty}e^{-|x|}dx=\int_{-\infty}^{0}e^x dx+\int_{0}^{\infty}e^{-x}dx$$</div>
+            <div class="formula">$$=[e^x]_{-\infty}^{0}+[-e^{-x}]_{0}^{\infty}=1+1=2$$</div>
+            <p><b>תשובה:</b> $2$.</p>
+
+            <p><span class="label">1(b)</span> לחשב/להראות התבדרות:</p>
+            <div class="formula">$$\int_{-\infty}^{\infty}\frac{x}{\pi(1+x^2)}dx$$</div>
+            <p>מספיק לבדוק את הזנב החיובי:</p>
+            <div class="formula">$$\int_0^\infty \frac{x}{\pi(1+x^2)}dx=\lim_{b\to\infty}\left[\frac{1}{2\pi}\ln(1+x^2)\right]_0^b=\infty$$</div>
+            <p><b>מסקנה:</b> האינטגרל מתבדר.</p>
+
+            <p><span class="label">1(c)</span> לחשב עבור $\lambda>0$:</p>
+            <div class="formula">$$\int_0^\infty x^2\lambda e^{-\lambda x}dx$$</div>
+            <p>לפי הקדומה ממטלה קודמת:</p>
+            <div class="formula">$$\int x^2\lambda e^{-\lambda x}dx=-\frac{e^{-\lambda x}(\lambda^2x^2+2\lambda x+2)}{\lambda^2}+C$$</div>
+            <p>לכן:</p>
+            <div class="formula">$$\int_0^\infty x^2\lambda e^{-\lambda x}dx=\lim_{x\to\infty}\left(-\frac{\lambda^2x^2+2\lambda x+2}{\lambda^2e^{\lambda x}}+\frac{2}{\lambda^2}\right)=\frac{2}{\lambda^2}$$</div>
+            <p>הגבול של המנה הפולינומית חלקי האקספוננטה הוא $0$ בעזרת לופיטל.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>שאלה 2 — קביעת התכנסות/התבדרות באמצעות השוואה</summary>
+          <div class="solution">
+            <p><span class="label">2(a)</span></p>
+            <div class="formula">$$\int_1^\infty e^{-x}\ln(x)dx$$</div>
+            <p>הפונקציה אי־שלילית עבור $x\ge1$, ולכן אפשר להשתמש במבחן ההשוואה. עבור $x\ge1$ מתקיים $\ln x\le x-1\le x$, ולכן:</p>
+            <div class="formula">$$0\le e^{-x}\ln x\le xe^{-x}$$</div>
+            <p>ובנוסף:</p>
+            <div class="formula">$$\int_1^\infty xe^{-x}dx=[-xe^{-x}]_1^\infty+\int_1^\infty e^{-x}dx=\frac{2}{e}<\infty$$</div>
+            <p><b>מסקנה:</b> האינטגרל מתכנס.</p>
+
+            <p><span class="label">2(b)</span></p>
+            <div class="formula">$$\int_1^\infty\frac{7x+\sin x}{2x^3+x+1}dx$$</div>
+            <p>הפונקציה אי־שלילית עבור $x\ge1$. משתמשים בחסם:</p>
+            <div class="formula">$$\frac{7x+\sin x}{2x^3+x+1}\le \frac{7x+x}{2x^3}=\frac{4}{x^2}$$</div>
+            <p>מכיוון ש־$\int_1^\infty \frac{4}{x^2}dx<\infty$, לפי מבחן ההשוואה האינטגרל מתכנס.</p>
+
+            <p><span class="label">2(c)</span></p>
+            <div class="formula">$$\int_1^3\frac{x}{\ln x}dx$$</div>
+            <p>יש בעיה ליד $x=1$. עבור $x>1$ מתקיים $\ln x\le x-1$, ולכן:</p>
+            <div class="formula">$$\frac{1}{\ln x}\ge\frac{1}{x-1}$$</div>
+            <p>ומכאן:</p>
+            <div class="formula">$$\int_1^3\frac{x}{\ln x}dx\ge\int_1^3\frac{x}{x-1}dx\ge\int_1^3\frac{dx}{x-1}=\infty$$</div>
+            <p><b>מסקנה:</b> האינטגרל מתבדר.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>שאלה 3 — קיום נקודה $c$ בעזרת ויירשטראס וערך הביניים</summary>
+          <div class="solution">
+            <p>נתון ש־$f$ רציפה על $[0,2]$. לכן היא אינטגרבילית, והאינטגרל $\int_0^2x^2f(x)dx$ מוגדר היטב.</p>
+            <p>לפי משפט ויירשטראס קיימות נקודות $x_1,x_2\in[0,2]$ כך ש:</p>
+            <div class="formula">$$f(x_2)\le f(x)\le f(x_1)\quad \forall x\in[0,2]$$</div>
+            <p>נסמן $M=f(x_1)$ ו־$m=f(x_2)$, ולכן:</p>
+            <div class="formula">$$m\le f(x)\le M$$</div>
+            <p>מאחר ש־$x^2\ge0$:</p>
+            <div class="formula">$$mx^2\le x^2f(x)\le Mx^2$$</div>
+            <p>נגדיר:</p>
+            <div class="formula">$$r=\frac{3}{8}\int_0^2x^2f(x)dx$$</div>
+            <p>ממונוטוניות האינטגרל מקבלים:</p>
+            <div class="formula">$$m\le r\le M$$</div>
+            <p>אם $x_1=x_2$, אז $f$ קבועה וכל $c\in[0,2]$ מתאים. אחרת, לפי משפט ערך הביניים המוכלל קיימת נקודה $c$ בין $x_1$ ל־$x_2$ כך ש־$f(c)=r$.</p>
+            <p>לכן:</p>
+            <div class="formula">$$f(c)=\frac{3}{8}\int_0^2x^2f(x)dx\quad\Longrightarrow\quad\int_0^2x^2f(x)dx=\frac{8f(c)}{3}$$</div>
+          </div>
+        </details>
+
+        <details>
+          <summary>שאלה 4 — אם $\int_1^\infty \frac{f'}{f}$ מתכנס אז $\lim f$ קיים</summary>
+          <div class="solution">
+            <p>נתון $f:[1,\infty)\to\mathbb{R}$ גזירה וחיובית, ולכן $\ln(f(x))$ מוגדר.</p>
+            <div class="formula">$$\int_1^\infty\frac{f'(x)}{f(x)}dx=[\ln(f(x))]_1^\infty=\lim_{x\to\infty}(\ln f(x)-\ln f(1))$$</div>
+            <p>מאחר שהאינטגרל מתכנס, הגבול הזה קיים. לכן גם $\lim_{x\to\infty}\ln f(x)$ קיים, נסמן אותו $L$.</p>
+            <div class="formula">$$\lim_{x\to\infty}f(x)=\lim_{x\to\infty}e^{\ln f(x)}=e^L$$</div>
+            <p><b>מסקנה:</b> הגבול של $f(x)$ באינסוף קיים.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>שאלה 5 — הוכח/הפרך טענות על פונקציות אינטגרל</summary>
+          <div class="solution">
+            <p><span class="label">5(a) שקר</span> הטענה: אם $F(x)=\int_0^x f(t)dt$ גזירה ב־$0$, אז $F'(0)=f(0)$.</p>
+            <p>דוגמה נגדית:</p>
+            <div class="formula">$$f(x)=\begin{cases}1,&x=0\\0,&x\ne0\end{cases}$$</div>
+            <p>הפונקציה אינטגרבילית כי היא שונה מפונקציה רציפה רק בנקודה אחת, אבל $F(x)=0$ לכל $x$, ולכן $F'(0)=0\ne f(0)=1$.</p>
+
+            <p><span class="label">5(b) אמת</span> אם $\int_0^1f(x)dx=2.3$, אז קיים $0<c<1$ כך ש־$\int_0^c f(x)dx=c+1$.</p>
+            <p>מגדירים:</p>
+            <div class="formula">$$F(x)=\int_0^x f(t)dt-x-1$$</div>
+            <p>$F$ רציפה. מתקיים $F(0)=-1$ ו־$F(1)=2.3-2=0.3$. לכן לפי ערך הביניים קיימת נקודה $0<c<1$ כך ש־$F(c)=0$, כלומר:</p>
+            <div class="formula">$$\int_0^c f(t)dt=c+1$$</div>
+
+            <p><span class="label">5(c) אמת</span> אם $F(x)=\int_x^1 f(t)dt$ ו־$f$ רציפה ב־$0$, אז $F'(0)=-f(0)$.</p>
+            <p>נגדיר $G(x)=\int_0^x f(t)dt$. לפי המשפט היסודי, $G'(0)=f(0)$. כעת:</p>
+            <div class="formula">$$F(x)=\int_0^1f(t)dt-G(x)$$</div>
+            <p>ולכן $F'(0)=-G'(0)=-f(0)$.</p>
+
+            <p><span class="label">5(d) שקר</span> אם $\int_0^\infty f$ מתכנס בהחלט, לא בהכרח $\int_0^\infty \frac{f(x)}{x}dx$ מתכנס.</p>
+            <p>דוגמה נגדית:</p>
+            <div class="formula">$$f(x)=\frac{1}{1+x^2}$$</div>
+            <p>אז $\int_0^\infty |f(x)|dx=\int_0^\infty\frac{dx}{1+x^2}=\frac{\pi}{2}$, כלומר מתכנס בהחלט. אבל ליד $0$:</p>
+            <div class="formula">$$\int_0^1\frac{f(x)}{x}dx=\int_0^1\frac{dx}{x(1+x^2)}\ge\int_0^1\frac{dx}{2x}=\infty$$</div>
+            <p>לכן האינטגרל $\int_0^\infty \frac{f(x)}{x}dx$ מתבדר.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>שאלה 6 — סדרת האינטגרלים $I_n$ ונוסחת ואליס</summary>
+          <div class="solution">
+            <p>מגדירים:</p>
+            <div class="formula">$$I_n=\int_0^{\pi/2}\sin^n(x)dx$$</div>
+
+            <p><span class="label">6(a)</span> הסדרה מוגדרת היטב: עבור $n\in\mathbb{N}$ הפונקציה $\sin^n(x)$ רציפה על $[0,\pi/2]$, ולכן אינטגרבילית. עבור $n=0$, מתקבלת פונקציה ששווה $1$ כמעט בכל מקום, ולכן גם $I_0$ מוגדר היטב.</p>
+
+            <p><span class="label">6(b)</span> ראשית:</p>
+            <div class="formula">$$I_0=\int_0^{\pi/2}1dx=\frac{\pi}{2},\qquad I_1=\int_0^{\pi/2}\sin x dx=1$$</div>
+            <p>עבור $n\ge2$, מבצעים אינטגרציה בחלקים עם $u'=\sin x$ ו־$v=\sin^{n-1}x$:</p>
+            <div class="formula">$$I_n=(n-1)\int_0^{\pi/2}\cos^2x\sin^{n-2}x\,dx$$</div>
+            <p>משתמשים ב־$\cos^2x=1-\sin^2x$:</p>
+            <div class="formula">$$I_n=(n-1)I_{n-2}-(n-1)I_n$$</div>
+            <p>ולכן:</p>
+            <div class="formula">$$I_n=\frac{n-1}{n}I_{n-2}$$</div>
+
+            <p><span class="label">6(c)</span> בעזרת אינדוקציה מקבלים:</p>
+            <div class="formula">$$I_{2n}=\frac{2n-1}{2n}\cdot\frac{2n-3}{2n-2}\cdots\frac{3}{4}\cdot\frac{1}{2}\cdot\frac{\pi}{2}$$</div>
+            <div class="formula">$$I_{2n+1}=\frac{2n}{2n+1}\cdot\frac{2n-2}{2n-1}\cdots\frac{4}{5}\cdot\frac{2}{3}\cdot1$$</div>
+
+            <p><span class="label">6(d)</span> מאחר ש־$0\le\sin x\le1$ בקטע, מתקיים $I_{n+1}\le I_n$. לכן:</p>
+            <div class="formula">$$\frac{I_{2n+1}}{I_{2n}}\le1$$</div>
+            <p>ומצד שני, לפי הנוסחה מהסעיף הקודם:</p>
+            <div class="formula">$$I_{2n+1}=\frac{2n}{2n+1}I_{2n-1}\ge\frac{2n}{2n+1}I_{2n}$$</div>
+            <p>כלומר:</p>
+            <div class="formula">$$\frac{1}{1+\frac{1}{2n}}\le\frac{I_{2n+1}}{I_{2n}}\le1$$</div>
+            <p>לפי כלל הסנדוויץ׳:</p>
+            <div class="formula">$$\lim_{n\to\infty}\frac{I_{2n+1}}{I_{2n}}=1$$</div>
+
+            <p><span class="label">6(e)</span> נוסחת ואליס:</p>
+            <div class="formula">$$\frac{2}{1}\cdot\frac{2}{3}\cdot\frac{4}{3}\cdot\frac{4}{5}\cdot\frac{6}{5}\cdot\frac{6}{7}\cdots=\frac{\pi}{2}$$</div>
+            <p>האגף השמאלי מוגדר כגבול המכפלות החלקיות:</p>
+            <div class="formula">$$\lim_{n\to\infty}\left[\frac{2}{1}\cdot\frac{2}{3}\cdot\frac{4}{3}\cdot\frac{4}{5}\cdots\frac{2n}{2n-1}\cdot\frac{2n}{2n+1}\right]$$</div>
+            <p>באמצעות הביטויים של $I_{2n}$ ו־$I_{2n+1}$ מקבלים:</p>
+            <div class="formula">$$\lim_{n\to\infty}\left(\frac{I_{2n+1}}{I_{2n}}\cdot\frac{\pi}{2}\right)=\frac{\pi}{2}$$</div>
+          </div>
+        </details>
+      </section>
+
+      <section id="tools">
+        <h2>ארגז כלים לשינון</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>אינטגרלים מוכרים</h3>
+            <ul>
+              <li>$\int_1^\infty \frac{dx}{x^p}$ מתכנס רק אם $p>1$.</li>
+              <li>$\int_0^1\frac{dx}{x}$ מתבדר.</li>
+              <li>$\int_0^\infty e^{-\lambda x}dx$ מתכנס אם $\lambda>0$.</li>
+              <li>פולינום חלקי אקספוננטה שואף ל־$0$ כש־$x\to\infty$.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>משפטים שצריך לדעת להשתמש בהם</h3>
+            <ul>
+              <li>מבחן השוואה לאינטגרלים אי־שליליים.</li>
+              <li>משפט ויירשטראס: רציפה על קטע סגור מקבלת מינימום ומקסימום.</li>
+              <li>משפט ערך הביניים.</li>
+              <li>המשפט היסודי של החדו״א.</li>
+              <li>אינטגרציה בחלקים.</li>
+              <li>כלל הסנדוויץ׳.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <footer>נבנה כדף למידה קומפקטי לפי מטלה 5 — מומלץ לפתוח בדפדפן, לסמן שאלות קשות ולהדפיס ל־PDF.</footer>
+    </main>
+  </div>
+</body>
+</html>

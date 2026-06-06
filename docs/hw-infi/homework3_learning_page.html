@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>אינפי 2 — מטלה 3 | דף תבניות ואינטואיציות</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$','$$'], ['\\[','\\]']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <style>
+    :root{
+      --bg:#f6f7fb;
+      --card:#ffffff;
+      --ink:#182033;
+      --muted:#667085;
+      --line:#e4e8f2;
+      --soft:#eef3ff;
+      --soft2:#f4efff;
+      --blue:#315bff;
+      --purple:#7b3ff2;
+      --danger:#c2410c;
+      --ok:#067647;
+      --shadow:0 12px 32px rgba(32,45,80,.08);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:linear-gradient(135deg,#f8faff 0%,#f6f2ff 42%,#f7f8fb 100%);
+      color:var(--ink);
+      font-family:'Assistant', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size:14px;
+      line-height:1.55;
+    }
+    a{color:inherit;text-decoration:none}
+    .layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:18px;max-width:1320px;margin:0 auto;padding:18px}
+    aside{
+      position:sticky;top:14px;height:calc(100vh - 28px);overflow:auto;
+      background:rgba(255,255,255,.86);backdrop-filter:blur(14px);
+      border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:14px;
+    }
+    .brand{padding:10px 10px 12px;border-radius:14px;background:linear-gradient(135deg,var(--soft),var(--soft2));margin-bottom:10px}
+    .brand h2{margin:0;font-size:17px;line-height:1.2;color:#111827}
+    .brand p{margin:5px 0 0;color:var(--muted);font-size:12px}
+    nav h3{font-size:12px;color:#475467;margin:14px 8px 6px}
+    nav a{display:block;padding:7px 10px;border-radius:10px;color:#344054;font-size:13px;margin:2px 0}
+    nav a:hover{background:#eef3ff;color:#2443b8}
+    main{min-width:0}
+    .hero{
+      border:1px solid var(--line);border-radius:24px;background:rgba(255,255,255,.9);box-shadow:var(--shadow);
+      padding:20px 22px;margin-bottom:14px;position:relative;overflow:hidden;
+    }
+    .hero:before{content:"";position:absolute;inset:-80px auto auto -80px;width:220px;height:220px;background:radial-gradient(circle,rgba(49,91,255,.16),transparent 70%)}
+    .pill{display:inline-flex;align-items:center;gap:6px;background:#edf2ff;color:#2842bd;border:1px solid #dbe5ff;border-radius:999px;padding:4px 10px;font-size:12px;font-weight:700;margin-bottom:8px}
+    h1{margin:0 0 6px;font-size:26px;line-height:1.15;letter-spacing:-.02em}
+    .hero p{margin:0;color:var(--muted);max-width:850px}
+    .section{margin:14px 0;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.92);box-shadow:var(--shadow);padding:16px}
+    .section h2{margin:0 0 10px;font-size:20px;color:#111827}
+    .section-intro{margin:-4px 0 12px;color:var(--muted);font-size:13px}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    .card{border:1px solid var(--line);border-radius:16px;background:#fff;padding:12px}
+    .card h3{margin:0 0 8px;font-size:16px;color:#101828}
+    .tag{display:inline-block;background:#f2f4f7;color:#475467;border-radius:999px;padding:2px 8px;font-size:11px;font-weight:700;margin:0 0 7px 5px}
+    .mini-title{font-weight:800;color:#253858;margin-top:7px}
+    ul,ol{margin:5px 0 0;padding-right:18px}
+    li{margin:2px 0}
+    .formula{background:#f8faff;border:1px solid #e7edff;border-radius:12px;padding:7px 9px;margin:7px 0;overflow:auto;direction:ltr;text-align:left}
+    .warn{border-right:4px solid #fb923c;background:#fff7ed;padding:7px 9px;border-radius:10px;color:#7c2d12;margin-top:8px}
+    .ok{border-right:4px solid #34d399;background:#ecfdf5;padding:7px 9px;border-radius:10px;color:#064e3b;margin-top:8px}
+    .tasks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+    .task{background:#fff;border:1px solid var(--line);border-radius:15px;padding:10px}
+    .task b{display:block;font-size:14px;margin-bottom:3px}
+    .task span{font-size:12.5px;color:var(--muted)}
+    details{border:1px solid var(--line);border-radius:15px;background:#fff;margin:8px 0;overflow:hidden}
+    summary{cursor:pointer;list-style:none;padding:10px 12px;font-weight:800;background:linear-gradient(90deg,#f4f7ff,#fbf9ff);display:flex;justify-content:space-between;gap:10px}
+    summary::-webkit-details-marker{display:none}
+    summary:after{content:"+";font-weight:900;color:var(--blue)}
+    details[open] summary:after{content:"–"}
+    .solution{padding:12px;border-top:1px solid var(--line)}
+    .compact-list li{margin-bottom:4px}
+    .two-col{columns:2;column-gap:18px}
+    .note{font-size:12.5px;color:var(--muted);background:#f8fafc;border:1px dashed #d0d5dd;border-radius:12px;padding:8px 10px;margin-top:8px}
+    .print-tip{font-size:12px;color:#475467;margin-top:8px}
+    @media(max-width:980px){.layout{grid-template-columns:1fr}.grid,.tasks{grid-template-columns:1fr}aside{position:relative;height:auto}.two-col{columns:1}}
+    @media print{
+      body{background:#fff;font-size:12px}.layout{display:block;padding:0}aside{display:none}.hero,.section,.card,details{box-shadow:none;background:#fff}.section{page-break-inside:avoid}details{break-inside:avoid}details:not([open]) .solution{display:block}summary:after{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside>
+      <div class="brand">
+        <h2>מטלה 3 — אינפי 2</h2>
+        <p>דף למידה חכם: תבניות, אינטואיציות ופתרונות רשמיים.</p>
+      </div>
+      <nav>
+        <h3>פתיחה</h3>
+        <a href="#top">ראש הדף</a>
+        <a href="#map">מפת הנושאים</a>
+        <h3>תבניות מרכזיות</h3>
+        <a href="#patterns">כל התבניות</a>
+        <a href="#substitution">הצבה חכמה</a>
+        <a href="#ibp">אינטגרציה בחלקים</a>
+        <a href="#trig">טריגונומטריה ופירוק לשברים</a>
+        <a href="#antiderivative">שוויון אנטי־נגזרות</a>
+        <a href="#integrability">אינטגרביליות וסכומי דרבו</a>
+        <h3>חזרה</h3>
+        <a href="#tasks">משימות חזרה</a>
+        <a href="#mistakes">טעויות שחייבים לזהות</a>
+        <h3>פתרונות</h3>
+        <a href="#official">פתרונות רשמיים מתורגמים</a>
+      </nav>
+    </aside>
+
+    <main id="top">
+      <section class="hero">
+        <div class="pill">Calculus II · Homework 3 · Spring 2025–26</div>
+        <h1>דף תבניות ואינטואיציות לפני מבחן — מטלה 3</h1>
+        <p>הדף הזה הופך את פתרונות המטלה לכלי עבודה למבחן: איך לזהות את סוג השאלה, איזו תבנית פתרון מפעילים, מה האינטואיציה, איפה נופלים, ומה לתרגל בפועל.</p>
+        <div class="print-tip">טיפ: אפשר לפתוח בדפדפן, להשתמש בתפריט הצד, ואז להדפיס או לשמור כ־PDF.</div>
+      </section>
+
+      <section class="section" id="map">
+        <h2>מפת הנושאים במטלה</h2>
+        <p class="section-intro">המטלה מחולקת לשני עולמות: חישוב אינטגרלים מצד אחד, והבנת טענות/הוכחות על אנטי־נגזרות ואינטגרביליות מצד שני.</p>
+        <div class="grid">
+          <div class="card"><h3>1. אינטגרלים לא מסוימים</h3><p>הצבות, זהויות טריגונומטריות, אינטגרציה בחלקים, וחלוקה פולינומית.</p></div>
+          <div class="card"><h3>2. אינטגרלים עם פונקציות מורכבות</h3><p>$\sin(\ln x)$, $\arctan(\sqrt{x})$ — מזהים מתי לבחור $u$ ומתי להציב.</p></div>
+          <div class="card"><h3>3. אותו אינטגרל בשתי דרכים</h3><p>משווים אנטי־נגזרות כדי להסיק זהות טריגונומטרית.</p></div>
+          <div class="card"><h3>4. הוכחות אינטגרביליות</h3><p>סכומים עליונים/תחתונים, משפט הסנדוויץ׳, ליפשיץ, וגודל חלוקה $\Delta(P)$.</p></div>
+        </div>
+      </section>
+
+      <section class="section" id="patterns">
+        <h2>חלק ראשון — תבניות ואינטואיציות לפי נושאים</h2>
+        <p class="section-intro">כל כרטיס הוא תבנית מבחן: זיהוי מהיר, כלי מתאים, שלבים, וטעות נפוצה.</p>
+
+        <div class="grid">
+          <article class="card" id="substitution">
+            <span class="tag">שאלות 1(a), 1(d), 1(e), 2(b)</span>
+            <h3>הצבה שמנקה שורשים או ביטוי פנימי</h3>
+            <div class="mini-title">איך מזהים?</div>
+            <p>יש שורש/חזקה שברית או ביטוי פנימי שחוזר, למשל $\sqrt{x}$, $\sqrt[6]{x}$ או $\arctan(\sqrt{x})$.</p>
+            <div class="mini-title">האינטואיציה</div>
+            <p>המטרה היא להפוך ביטוי “מלוכלך” למשתנה פשוט $t$, ואז לקבל אינטגרל מוכר יותר.</p>
+            <div class="mini-title">תבנית פתרון</div>
+            <ol>
+              <li>בחרי $t$ לפי הביטוי שמפריע: לרוב $t=\sqrt{x}$ או $t=x^{1/6}$.</li>
+              <li>חשבי $dx$ במונחי $dt$.</li>
+              <li>החליפי את כל האינטגרל ל־$t$ בלבד.</li>
+              <li>פשטי: חלוקה פולינומית / זהות / פירוק.</li>
+              <li>בסוף החזירי ל־$x$ והוסיפי $+C$.</li>
+            </ol>
+            <div class="formula">$$t=\sqrt{x}\quad\Rightarrow\quad x=t^2,\; dx=2t\,dt$$</div>
+            <div class="warn"><b>טעות נפוצה:</b> להציב $t$ אבל לשכוח להחליף גם את $dx$ או להשאיר $x$ בתוך האינטגרל.</div>
+          </article>
+
+          <article class="card" id="ibp">
+            <span class="tag">שאלות 1(a), 1(c), 2(a), 2(b)</span>
+            <h3>אינטגרציה בחלקים</h3>
+            <div class="mini-title">איך מזהים?</div>
+            <p>יש מכפלה של פונקציות, או פונקציה כמו $\arctan$, $\ln$, $\sin(\ln x)$ שאין לה אינטגרל ישיר נוח.</p>
+            <div class="mini-title">האינטואיציה</div>
+            <p>מעבירים קושי מפונקציה אחת לאחרת: נגזור את החלק שמשתפר בגזירה, ונשאיר את החלק שקל לאינטגרל.</p>
+            <div class="mini-title">תבנית פתרון</div>
+            <ol>
+              <li>בחרי $u$ להיות החלק שמשתפר בגזירה.</li>
+              <li>בחרי $dv$ להיות החלק שקל לעשות לו אינטגרל.</li>
+              <li>הציבי בנוסחה.</li>
+              <li>אם חוזר אותו אינטגרל — העבירי אגף ופתרי אלגברית.</li>
+            </ol>
+            <div class="formula">$$\int u\,dv=uv-\int v\,du$$</div>
+            <div class="warn"><b>טעות נפוצה:</b> בשאלה כמו $\int \sin(\ln x)dx$ האינטגרל המקורי חוזר. לא נבהלים — מעבירים אגף ומחלקים ב־2.</div>
+          </article>
+
+          <article class="card" id="trig">
+            <span class="tag">שאלות 1(b), 3(a), 3(b)</span>
+            <h3>זהויות טריגונומטריות ופירוק לשברים</h3>
+            <div class="mini-title">איך מזהים?</div>
+            <p>המכנה מכיל $\sin^2 x$, $\cos^2 x$, או $\cos x$ בצורה לא נוחה.</p>
+            <div class="mini-title">האינטואיציה</div>
+            <p>לא תמיד מחשבים ישירות. לפעמים מוסיפים “1 חכם” כמו $\sin^2x+\cos^2x$ כדי לפרק לשני אינטגרלים מוכרים.</p>
+            <div class="mini-title">תבנית פתרון</div>
+            <ol>
+              <li>חפשי זהות בסיסית שמחברת בין הביטויים.</li>
+              <li>כתבי את השבר כסכום של שברים פשוטים.</li>
+              <li>זהי אינטגרלים מוכרים: $\sec^2x$, $\csc^2x$, או $\frac{u'}{u}$.</li>
+            </ol>
+            <div class="formula">$$\sin^2x+\cos^2x=1$$</div>
+            <div class="formula">$$\int \sec^2x\,dx=\tan x+C,\qquad \int \csc^2x\,dx=-\cot x+C$$</div>
+            <div class="warn"><b>טעות נפוצה:</b> לשכוח סימן מינוס באינטגרל של $\csc^2x$ או בפירוק עם $1-\sin x$.</div>
+          </article>
+
+          <article class="card">
+            <span class="tag">שאלה 3(b)</span>
+            <h3>הצבת חצי זווית</h3>
+            <div class="mini-title">איך מזהים?</div>
+            <p>מבקשים במפורש להציב $t=\tan(\frac{x}{2})$ או שיש אינטגרל טריגונומטרי שהופך רציונלי.</p>
+            <div class="mini-title">האינטואיציה</div>
+            <p>הצבת חצי זווית הופכת טריגונומטריה לשברים רגילים ב־$t$.</p>
+            <div class="mini-title">תבנית פתרון</div>
+            <ol>
+              <li>מציבים $t=\tan(\frac{x}{2})$.</li>
+              <li>מבטאים $dx$ ו־$\cos x$ בעזרת $t$.</li>
+              <li>מצמצמים עד אינטגרל רציונלי.</li>
+              <li>מפרקים לשברים פשוטים.</li>
+            </ol>
+            <div class="formula">$$dx=\frac{2}{1+t^2}dt,\qquad \cos x=\frac{1-t^2}{1+t^2}$$</div>
+            <div class="warn"><b>טעות נפוצה:</b> להתבלבל בין $\tan(x/2)$ לבין $\tan x$.</div>
+          </article>
+
+          <article class="card" id="antiderivative">
+            <span class="tag">שאלות 3(c), 4, 5(a)</span>
+            <h3>אנטי־נגזרות: שוויון עד קבוע</h3>
+            <div class="mini-title">איך מזהים?</div>
+            <p>יש שתי דרכים לחשב אותו אינטגרל, או נתון שאינטגרל לא מסוים שווה לביטוי מסוים.</p>
+            <div class="mini-title">האינטואיציה</div>
+            <p>אינטגרל לא מסוים הוא לא מספר אחד אלא משפחה של פונקציות שנבדלות בקבוע.</p>
+            <div class="mini-title">תבנית פתרון</div>
+            <ol>
+              <li>אם שני ביטויים הם אנטי־נגזרות של אותה פונקציה — הם שונים בקבוע.</li>
+              <li>כדי למצוא את הקבוע, מציבים נקודה נוחה כמו $x=0$.</li>
+              <li>אם נתון ש־$F$ היא אנטי־נגזרת של $h$, גוזרים את $F$ ומשווים ל־$h$.</li>
+            </ol>
+            <div class="formula">$$F'(x)=G'(x)\text{ על קטע }I\quad\Rightarrow\quad F(x)=G(x)+C$$</div>
+            <div class="warn"><b>טעות נפוצה:</b> “לצמצם” אינטגרלים לא מסוימים משני אגפים כאילו הם מספרים. אסור — יש קבועי אינטגרציה.</div>
+          </article>
+
+          <article class="card" id="integrability">
+            <span class="tag">שאלות 5(b), 6</span>
+            <h3>אינטגרביליות דרך סכומים עליונים ותחתונים</h3>
+            <div class="mini-title">איך מזהים?</div>
+            <p>מופיעים $S(f,P)$, $s(f,P)$, סופרימום/אינפימום, חלוקות, או טענה שצריך להוכיח אינטגרביליות.</p>
+            <div class="mini-title">האינטואיציה</div>
+            <p>פונקציה אינטגרבילית אם אפשר לגרום לפער בין הסכום העליון לתחתון להיות קטן כרצוננו.</p>
+            <div class="mini-title">תבנית פתרון</div>
+            <ol>
+              <li>התחילי מהאי־שוויון: $s(f,P)\le I_*(f)\le I^*(f)\le S(f,P)$.</li>
+              <li>הראי שהפער $S(f,P_n)-s(f,P_n)$ שואף ל־0.</li>
+              <li>השתמשי בסנדוויץ׳ כדי להסיק $I_*=I^*$.</li>
+              <li>לליפשיץ: חסמי כל תנודה בתת־קטע על ידי $M\Delta(P_n)$.</li>
+            </ol>
+            <div class="formula">$$0\le S(f,P_n)-s(f,P_n)\le M\Delta(P_n)(b-a)\to 0$$</div>
+            <div class="warn"><b>טעות נפוצה:</b> להניח שקיימת חלוקה עם תנאי בלתי אפשרי על כל תת־קטע, בלי לבדוק שסכום האורכים עדיין שווה $b-a$.</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="tasks">
+        <h2>חלק שני — משימות חזרה קצרות</h2>
+        <p class="section-intro">אלו משימות ביצוע. המטרה היא לא לקרוא — אלא לכתוב ביד ולהכריח את עצמך לזהות תבנית.</p>
+        <div class="tasks">
+          <div class="task"><b>1. כתבי את נוסחת אינטגרציה בחלקים.</b><span>איך זה אמור להיראות: שורה אחת עם $\int u\,dv=uv-\int v\,du$, ואז דוגמה קטנה של בחירת $u,dv$.</span></div>
+          <div class="task"><b>2. קחי אינטגרל עם $\sqrt{x}$ וכתבי רק את ההצבה.</b><span>איך זה אמור להיראות: $t=\sqrt{x}$, $x=t^2$, $dx=2t dt$ — בלי לפתור עד הסוף.</span></div>
+          <div class="task"><b>3. הסבירי מתי משתמשים בחלוקה פולינומית.</b><span>איך זה אמור להיראות: “אחרי הצבה קיבלתי שבר פולינומי שבו המונה בדרגה גבוהה מהמכנה”.</span></div>
+          <div class="task"><b>4. כתבי את הזהות $\sin^2x+\cos^2x=1$ והראי איך היא מפרקת שבר.</b><span>איך זה אמור להיראות: להפוך $\frac{1}{\sin^2x\cos^2x}$ לסכום שני שברים פשוטים.</span></div>
+          <div class="task"><b>5. פתרי בשלבים בלבד את $\int \sin(\ln x)dx$.</b><span>איך זה אמור להיראות: IBP ראשון, IBP שני, “האינטגרל המקורי חזר”, העברת אגף.</span></div>
+          <div class="task"><b>6. כתבי מה אסור לעשות באינטגרל לא מסוים.</b><span>איך זה אמור להיראות: “אי אפשר לבטל אינטגרל משני אגפים כאילו הוא מספר, כי יש קבוע אינטגרציה”.</span></div>
+          <div class="task"><b>7. כתבי את המשפט על אנטי־נגזרות שנבדלות בקבוע.</b><span>איך זה אמור להיראות: אם שתי פונקציות גזירות באותו קטע ויש להן אותה נגזרת, אז ההפרש ביניהן קבוע.</span></div>
+          <div class="task"><b>8. הסבירי מה הנתון בשאלה 4 אומר.</b><span>איך זה אמור להיראות: “הביטוי $(\ln x-1)f(x)$ הוא אנטי־נגזרת של $\ln(x)f'(x)$”.</span></div>
+          <div class="task"><b>9. כתבי את מבנה הוכחת אינטגרביליות דרך דרבו.</b><span>איך זה אמור להיראות: חסם תחתון/עליון → פער שואף ל־0 → סנדוויץ׳ → $I_*=I^*$.</span></div>
+          <div class="task"><b>10. כתבי למה ליפשיץ עוזר באינטגרביליות.</b><span>איך זה אמור להיראות: “בתת־קטע קצר, ערכי הפונקציה לא יכולים להשתנות יותר מדי”.</span></div>
+          <div class="task"><b>11. סמני איפה משתמשים ב־$\Delta(P)$.</b><span>איך זה אמור להיראות: בכל תת־קטע $x_k-x_{k-1}\le\Delta(P)$ ולכן התנודה חסומה באותו גודל.</span></div>
+          <div class="task"><b>12. כתבי פתרון אחד מחדש בצורה נקייה למבחן.</b><span>איך זה אמור להיראות: בלי הערות צד, רק שורות מתמטיות מסודרות ונימוק קצר ליד כל מעבר חשוב.</span></div>
+        </div>
+      </section>
+
+      <section class="section" id="mistakes">
+        <h2>טעויות נפוצות שחייבים לזהות</h2>
+        <div class="grid">
+          <div class="card"><h3>קבוע אינטגרציה</h3><p>באינטגרל לא מסוים כל שוויון הוא עד כדי קבוע. לכן ביטול אגפים יכול להיות לא חוקי.</p></div>
+          <div class="card"><h3>הצבה חלקית</h3><p>הצבה טובה מחליפה גם את הביטוי, גם את $x$, וגם את $dx$.</p></div>
+          <div class="card"><h3>חלוקה לא קיימת</h3><p>אי אפשר להניח שיש חלוקה עם תתי־קטעים קטנים מדי אם סכום האורכים כבר לא יכול לכסות את כל הקטע.</p></div>
+          <div class="card"><h3>סימני מינוס</h3><p>במיוחד ב־$\cot$, ב־$\ln|1-u|$, ובאינטגרציה בחלקים.</p></div>
+        </div>
+      </section>
+
+      <section class="section" id="official">
+        <h2>חלק שלישי — פתרונות רשמיים מתורגמים ומסודרים</h2>
+        <p class="section-intro">הפתרונות כאן שומרים על מבנה הפתרון הרשמי, עם תרגום לעברית וניסוח נקי. לחצי לפתיחה.</p>
+
+        <details open>
+          <summary>שאלה 1 — חישוב אינטגרלים לא מסוימים</summary>
+          <div class="solution">
+            <h3>1(a) חשבי $\int e^{\sqrt{x}}dx$</h3>
+            <p>נכתוב $t=\sqrt{x}$, ולכן $dx=2\sqrt{x}\,dt=2t\,dt$.</p>
+            <div class="formula">$$\int e^{\sqrt{x}}dx=\int e^t\cdot 2t\,dt=2\int te^t\,dt$$</div>
+            <p>באינטגרציה בחלקים:</p>
+            <div class="formula">$$2\int te^t dt=2te^t-2e^t+C$$</div>
+            <p>מחזירים $t=\sqrt{x}$:</p>
+            <div class="formula">$$\int e^{\sqrt{x}}dx=2\sqrt{x}e^{\sqrt{x}}-2e^{\sqrt{x}}+C$$</div>
+
+            <h3>1(b) חשבי $\int \frac{dx}{\sin^2(x)\cos^2(x)}$</h3>
+            <p>נשתמש בזהות $\sin^2x+\cos^2x=1$:</p>
+            <div class="formula">$$\int\frac{dx}{\sin^2x\cos^2x}=\int\frac{\sin^2x+\cos^2x}{\sin^2x\cos^2x}dx$$</div>
+            <div class="formula">$$=\int\frac{dx}{\cos^2x}+\int\frac{dx}{\sin^2x}=\tan x-\cot x+C$$</div>
+
+            <h3>1(c) חשבי $\int x^2\lambda e^{-\lambda x}dx$, כאשר $\lambda\ne0$</h3>
+            <p>נשתמש באינטגרציה בחלקים פעמיים:</p>
+            <div class="formula">$$\int x^2\lambda e^{-\lambda x}dx=\lambda\left(-\frac{x^2e^{-\lambda x}}{\lambda}+\frac{2}{\lambda}\int xe^{-\lambda x}dx\right)$$</div>
+            <div class="formula">$$\int xe^{-\lambda x}dx=-\frac{xe^{-\lambda x}}{\lambda}-\frac{e^{-\lambda x}}{\lambda^2}$$</div>
+            <p>ולכן:</p>
+            <div class="formula">$$\int x^2\lambda e^{-\lambda x}dx=-\frac{e^{-\lambda x}}{\lambda^2}(\lambda^2x^2+2\lambda x+2)+C$$</div>
+
+            <h3>1(d) חשבי $\int \frac{\sqrt{x}}{x+1}dx$</h3>
+            <p>נכתוב $t=\sqrt{x}$, ולכן $dx=2t\,dt$:</p>
+            <div class="formula">$$\int\frac{\sqrt{x}}{x+1}dx=\int\frac{t}{t^2+1}2t\,dt=2\int\frac{t^2}{t^2+1}dt$$</div>
+            <div class="formula">$$=2\int\left(1-\frac{1}{t^2+1}\right)dt=2(t-\arctan t)+C$$</div>
+            <p>מחזירים $t=\sqrt{x}$:</p>
+            <div class="formula">$$\int\frac{\sqrt{x}}{x+1}dx=2\sqrt{x}-2\arctan(\sqrt{x})+C$$</div>
+
+            <h3>1(e) חשבי $\int\frac{dx}{\sqrt{x}+\sqrt[3]{x}}$</h3>
+            <p>מציבים $t=\sqrt[6]{x}=x^{1/6}$, ולכן $dx=6t^5dt$.</p>
+            <div class="formula">$$\int\frac{dx}{\sqrt{x}+\sqrt[3]{x}}=\int\frac{6t^5}{t^3+t^2}dt=\int\frac{6t^3}{t+1}dt$$</div>
+            <p>מבצעים חלוקה פולינומית:</p>
+            <div class="formula">$$\frac{t^3}{t+1}=t^2-t+1-\frac{1}{t+1}$$</div>
+            <div class="formula">$$6\int\left(t^2-t+1-\frac{1}{t+1}\right)dt=2t^3-3t^2+6t-6\ln|t+1|+C$$</div>
+            <p>מחזירים $t=\sqrt[6]{x}$:</p>
+            <div class="formula">$$\int\frac{dx}{\sqrt{x}+\sqrt[3]{x}}=2\sqrt{x}-3\sqrt[3]{x}+6\sqrt[6]{x}-6\ln|\sqrt[6]{x}+1|+C$$</div>
+          </div>
+        </details>
+
+        <details>
+          <summary>שאלה 2 — אינטגרלים עם $\ln$ ו־$\arctan$</summary>
+          <div class="solution">
+            <h3>2(a) חשבי $\int \sin(\ln x)dx$</h3>
+            <p>באינטגרציה בחלקים:</p>
+            <div class="formula">$$\int\sin(\ln x)dx=x\sin(\ln x)-\int x\cos(\ln x)\frac1x dx$$</div>
+            <div class="formula">$$=x\sin(\ln x)-\int\cos(\ln x)dx$$</div>
+            <p>שוב אינטגרציה בחלקים לאינטגרל השני:</p>
+            <div class="formula">$$\int\cos(\ln x)dx=x\cos(\ln x)+\int\sin(\ln x)dx$$</div>
+            <p>נציב ונקבל:</p>
+            <div class="formula">$$2\int\sin(\ln x)dx=x\sin(\ln x)-x\cos(\ln x)+C$$</div>
+            <div class="formula">$$\int\sin(\ln x)dx=\frac{x\sin(\ln x)-x\cos(\ln x)}{2}+C$$</div>
+
+            <h3>2(b) חשבי $\int\arctan(\sqrt{x})dx$</h3>
+            <p>נבצע אינטגרציה בחלקים:</p>
+            <div class="formula">$$\int\arctan(\sqrt{x})dx=x\arctan(\sqrt{x})-\int x\cdot\frac{1}{2\sqrt{x}(1+x)}dx$$</div>
+            <div class="formula">$$=x\arctan(\sqrt{x})-\int\frac{\sqrt{x}}{2(1+x)}dx$$</div>
+            <p>מציבים $t=\sqrt{x}$:</p>
+            <div class="formula">$$\int\frac{\sqrt{x}}{2(1+x)}dx=\int\frac{t^2}{1+t^2}dt=\int\left(1-\frac1{1+t^2}\right)dt$$</div>
+            <p>לכן:</p>
+            <div class="formula">$$\int\arctan(\sqrt{x})dx=x\arctan(\sqrt{x})-(\sqrt{x}-\arctan(\sqrt{x}))+C$$</div>
+            <div class="formula">$$=(x+1)\arctan(\sqrt{x})-\sqrt{x}+C$$</div>
+          </div>
+        </details>
+
+        <details>
+          <summary>שאלה 3 — חישוב $\int\frac{dx}{\cos x}$ והשוואת שתי דרכים</summary>
+          <div class="solution">
+            <h3>3(a) חישוב באמצעות $\sin x$</h3>
+            <p>נכתוב:</p>
+            <div class="formula">$$\frac1{\cos x}=\frac{\cos x}{\cos^2x}=\frac{\cos x}{1-\sin^2x}=\frac{\cos x}{(1-\sin x)(1+\sin x)}$$</div>
+            <p>ולכן:</p>
+            <div class="formula">$$\frac1{\cos x}=\frac12\cdot\frac{\cos x}{1+\sin x}+\frac12\cdot\frac{\cos x}{1-\sin x}$$</div>
+            <div class="formula">$$\int\frac{dx}{\cos x}=\frac12\ln|1+\,\sin x|-\frac12\ln|1-\sin x|+C$$</div>
+            <div class="formula">$$=\frac12\ln\left|\frac{1+\sin x}{1-\sin x}\right|+C$$</div>
+
+            <h3>3(b) חישוב באמצעות $t=\tan(x/2)$</h3>
+            <p>מציבים $t=\tan(x/2)$, ואז:</p>
+            <div class="formula">$$dx=\frac{2}{1+t^2}dt,\qquad \cos x=\frac{1-t^2}{1+t^2}$$</div>
+            <div class="formula">$$\int\frac{dx}{\cos x}=\int\frac{1+t^2}{1-t^2}\cdot\frac{2}{1+t^2}dt=\int\frac{2}{1-t^2}dt$$</div>
+            <p>לפי הפירוק הנתון:</p>
+            <div class="formula">$$\frac{2}{1-t^2}=\frac1{1+t}+\frac1{1-t}$$</div>
+            <div class="formula">$$\int\frac{2}{1-t^2}dt=\ln|1+t|-\ln|1-t|+C$$</div>
+            <p>מחזירים $t=\tan(x/2)$:</p>
+            <div class="formula">$$\int\frac{dx}{\cos x}=\ln\left|\frac{1+\tan(x/2)}{1-\tan(x/2)}\right|+C$$</div>
+
+            <h3>3(c) הסקת הזהות</h3>
+            <p>שתי התשובות הן אנטי־נגזרות של אותה פונקציה, לכן הן נבדלות בקבוע:</p>
+            <div class="formula">$$\frac12\ln\left|\frac{1+\sin x}{1-\sin x}\right|=\ln\left|\frac{1+\tan(x/2)}{1-\tan(x/2)}\right|+C$$</div>
+            <p>מציבים $x=0$ ומקבלים $C=0$.</p>
+            <div class="formula">$$\ln\sqrt{\left|\frac{1+\sin x}{1-\sin x}\right|}=\ln\left|\frac{1+\tan(x/2)}{1-\tan(x/2)}\right|$$</div>
+            <p>ולכן עבור $-\frac{\pi}{2}<x<\frac{\pi}{2}$:</p>
+            <div class="formula">$$\frac{1+\sin x}{1-\sin x}=\left(\frac{1+\tan(x/2)}{1-\tan(x/2)}\right)^2$$</div>
+          </div>
+        </details>
+
+        <details>
+          <summary>שאלה 4 — הוכחה ש־$f(x)=\alpha x$</summary>
+          <div class="solution">
+            <p>נתונה פונקציה גזירה $f:(0,\infty)\to\mathbb{R}$, ומתקיים:</p>
+            <div class="formula">$$\int \ln(x)f'(x)dx=(\ln(x)-1)f(x)+C$$</div>
+            <p>נגדיר:</p>
+            <div class="formula">$$g(x)=\frac{f(x)}{x}$$</div>
+            <p>הפונקציה $g$ גזירה, ולפי כלל המנה:</p>
+            <div class="formula">$$g'(x)=\frac{xf'(x)-f(x)}{x^2}$$</div>
+            <p>מהנתון, הביטוי $(\ln(x)-1)f(x)$ הוא אנטי־נגזרת של $\ln(x)f'(x)$, ולכן:</p>
+            <div class="formula">$$[(\ln(x)-1)f(x)]'=\ln(x)f'(x)$$</div>
+            <p>מצד שני, לפי כלל המכפלה:</p>
+            <div class="formula">$$[(\ln(x)-1)f(x)]'=\frac{f(x)}{x}+(\ln(x)-1)f'(x)$$</div>
+            <p>משווים:</p>
+            <div class="formula">$$\ln(x)f'(x)=\frac{f(x)}{x}+(\ln(x)-1)f'(x)$$</div>
+            <div class="formula">$$xf'(x)-f(x)=0$$</div>
+            <p>ולכן:</p>
+            <div class="formula">$$g'(x)=\frac{xf'(x)-f(x)}{x^2}=0$$</div>
+            <p>מכאן $g$ קבועה, כלומר קיים $\alpha\in\mathbb{R}$ כך ש:</p>
+            <div class="formula">$$g(x)=\alpha\quad\Rightarrow\quad \frac{f(x)}{x}=\alpha\quad\Rightarrow\quad f(x)=\alpha x$$</div>
+          </div>
+        </details>
+
+        <details>
+          <summary>שאלה 5 — זיהוי טעויות של סטודנט</summary>
+          <div class="solution">
+            <h3>5(a) הטעות בהוכחה ש־$0=1$</h3>
+            <p>הטעות היא שאינטגרל לא מסוים אינו ערך מספרי מסוים, אלא משפחת פונקציות שנבדלות בקבוע.</p>
+            <div class="ok"><b>מה נכון לומר?</b> השוויון שהסטודנט כתב הוא שוויון עד כדי קבוע. לכן אי אפשר פשוט לחסר את אותו אינטגרל משני האגפים ולהסיק $0=1$.</div>
+
+            <h3>5(b) הטעות בהוכחה שכל פונקציה חסומה אינטגרבילית</h3>
+            <p>הסטודנט מניח שקיימת חלוקה $P_n$ שבה לכל תת־קטע מתקיים:</p>
+            <div class="formula">$$x_{k+1}-x_k<\frac1{K n^2}$$</div>
+            <p>אבל חלוקה כזו לא בהכרח קיימת. למשל, בקטע $[0,1]$ עבור $n=3$, אם כל אחד משלושת תתי־הקטעים קטן מ־$\frac19$, סכום האורכים קטן מ־$\frac13$, ולכן אי אפשר לכסות את כל $[0,1]$.</p>
+            <div class="warn"><b>השורה לזכור:</b> הבעיה היא לא בחסם $M_k-m_k\le 2K$, אלא בעצם ההנחה שקיימת חלוקה עם תתי־קטעים כל כך קטנים.</div>
+          </div>
+        </details>
+
+        <details>
+          <summary>שאלה 6 — אינטגרביליות, ליפשיץ וסכומי דרבו</summary>
+          <div class="solution">
+            <h3>6(a) אם הפער בין סכומים עליונים ותחתונים שואף ל־0</h3>
+            <p>ידוע שלכל $n$:</p>
+            <div class="formula">$$s(f,P_n)\le I_*(f)\le I^*(f)\le S(f,P_n)$$</div>
+            <p>נתון:</p>
+            <div class="formula">$$\lim_{n\to\infty}\left[S(f,P_n)-s(f,P_n)\right]=0$$</div>
+            <p>לפי משפט הסנדוויץ׳, הגבולות של הסכום התחתון והסכום העליון מתכנסים לאותו ערך. לכן:</p>
+            <div class="formula">$$I_*(f)=I^*(f)$$</div>
+            <p>ומכאן $f$ אינטגרבילית, וגם:</p>
+            <div class="formula">$$\lim_{n\to\infty}s(f,P_n)=\lim_{n\to\infty}S(f,P_n)=\int_a^b f(x)dx$$</div>
+
+            <h3>6(b)(i) חסימת התנודה על תת־קטע בעזרת ליפשיץ</h3>
+            <p>נתון ש־$f$ ליפשיץ, כלומר קיים $M>0$ כך שלכל $x,y\in[a,b]$:</p>
+            <div class="formula">$$|f(x)-f(y)|\le M|x-y|$$</div>
+            <p>לכן לכל $x,y\in[x_1,x_2]$:</p>
+            <div class="formula">$$f(x)-f(y)\le |f(x)-f(y)|\le M|x-y|\le M(x_2-x_1)$$</div>
+            <p>ולכן:</p>
+            <div class="formula">$$\sup_{x\in[x_1,x_2]}f(x)-\inf_{x\in[x_1,x_2]}f(x)\le M(x_2-x_1)$$</div>
+
+            <h3>6(b)(ii) הוכחת אינטגרביליות בעזרת $\Delta(P_n)$</h3>
+            <p>לכל תת־קטע בחלוקה:</p>
+            <div class="formula">$$M_k-m_k\le M(x_k-x_{k-1})\le M\Delta(P_n)$$</div>
+            <p>לכן:</p>
+            <div class="formula">$$0\le S(f,P_n)-s(f,P_n)=\sum_{k=1}^{n}(M_k-m_k)(x_k-x_{k-1})$$</div>
+            <div class="formula">$$\le M\Delta(P_n)\sum_{k=1}^{n}(x_k-x_{k-1})=M\Delta(P_n)(b-a)$$</div>
+            <p>מאחר ש־$\Delta(P_n)\to0$, מקבלים:</p>
+            <div class="formula">$$\lim_{n\to\infty}[S(f,P_n)-s(f,P_n)]=0$$</div>
+            <p>ולפי סעיף 6(a), $f$ אינטגרבילית ו:</p>
+            <div class="formula">$$\lim_{n\to\infty}s(f,P_n)=\lim_{n\to\infty}S(f,P_n)=\int_a^b f(x)dx$$</div>
+          </div>
+        </details>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculus II — Homework 2 | דף תבניות למבחן</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$','$$']] }, svg: { fontCache: 'global' } };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <style>
+    :root{
+      --bg:#f6f8ff; --panel:#ffffff; --ink:#172033; --muted:#667085; --line:#dce3f3;
+      --blue:#3d6cff; --purple:#8d5cf6; --soft:#eef3ff; --soft2:#f4efff; --warn:#fff7e6;
+      --ok:#eefaf3; --shadow:0 10px 28px rgba(31,45,82,.08); --radius:18px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:linear-gradient(135deg,#f8fbff 0%,#f2f0ff 100%);font-family:'Assistant',Arial,sans-serif;color:var(--ink);font-size:14px;line-height:1.55}
+    a{color:inherit;text-decoration:none}.wrap{display:grid;grid-template-columns:245px minmax(0,1fr);gap:18px;max-width:1280px;margin:0 auto;padding:18px}
+    aside{position:sticky;top:14px;height:calc(100vh - 28px);overflow:auto;background:rgba(255,255,255,.78);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:14px}
+    .brand{display:flex;align-items:center;gap:9px;margin-bottom:12px}.logo{width:34px;height:34px;border-radius:11px;background:linear-gradient(135deg,var(--blue),var(--purple));display:grid;place-items:center;color:white;font-weight:800}.brand h2{font-size:15px;margin:0;line-height:1.1}.brand small{color:var(--muted);font-size:11px}
+    nav a{display:block;padding:8px 10px;margin:4px 0;border-radius:11px;color:#344054;font-size:13px}nav a:hover{background:var(--soft);color:var(--blue)}.nav-title{margin:13px 8px 5px;color:var(--muted);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
+    main{min-width:0}.hero{background:linear-gradient(135deg,#ffffff 0%,#f5f1ff 100%);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);padding:22px;margin-bottom:16px;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;inset:auto -70px -90px auto;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(61,108,255,.18),transparent 65%)}
+    h1{font-size:27px;line-height:1.12;margin:0 0 8px;font-weight:800}.subtitle{color:#475467;max-width:760px;margin:0;font-size:15px}.chips{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}.chip{background:white;border:1px solid var(--line);border-radius:999px;padding:5px 10px;font-size:12px;color:#344054}.chip.hot{background:linear-gradient(135deg,var(--blue),var(--purple));color:white;border:0}
+    section{margin:16px 0}.section-title{display:flex;align-items:center;gap:10px;margin:0 0 10px}.section-title .num{width:26px;height:26px;border-radius:9px;background:var(--ink);color:white;display:grid;place-items:center;font-weight:800;font-size:13px}.section-title h2{font-size:20px;margin:0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:14px}.card h3{margin:0 0 8px;font-size:16px;color:#101828}.card h4{font-size:13px;margin:10px 0 4px;color:#344054}.tag{display:inline-flex;align-items:center;border-radius:999px;background:var(--soft);color:#2b55d6;font-size:11px;font-weight:700;padding:3px 8px;margin-bottom:7px}.formula{direction:ltr;text-align:center;background:#fbfcff;border:1px solid #e9eefb;border-radius:13px;padding:9px;margin:8px 0;overflow:auto}.steps{margin:6px 0 0;padding:0 18px 0 0}.steps li{margin:3px 0}.mistake{background:var(--warn);border:1px solid #ffe2a8;border-radius:12px;padding:8px;margin-top:8px;color:#6f4b00}.intuition{background:var(--soft2);border:1px solid #e7ddff;border-radius:12px;padding:8px;color:#3a2b6d}.mini{font-size:12.5px;color:#475467}.tools{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.tool{background:white;border:1px solid var(--line);border-radius:14px;padding:10px}.tool b{display:block;font-size:13px;margin-bottom:4px}.tasks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.task{background:white;border:1px solid var(--line);border-radius:14px;padding:10px}.task strong{display:block;color:#1d2939}.task span{display:block;color:#667085;font-size:12.5px;margin-top:3px}
+    details{background:white;border:1px solid var(--line);border-radius:15px;margin:9px 0;box-shadow:0 5px 16px rgba(31,45,82,.045);overflow:hidden}summary{cursor:pointer;padding:11px 13px;font-weight:800;color:#1d2939;background:#fbfcff}details[open] summary{border-bottom:1px solid var(--line)}.solution{padding:12px 14px}.solution h4{margin:12px 0 5px;font-size:14px;color:#344054}.qbox{background:#f8faff;border:1px solid #e7edfb;border-radius:12px;padding:9px;margin:7px 0}.ltr{direction:ltr;text-align:left}.callout{background:linear-gradient(135deg,#eef3ff,#f8f4ff);border:1px solid #dfe6fb;border-radius:16px;padding:12px;margin:10px 0}.divider{height:1px;background:var(--line);margin:12px 0}.footer{color:#667085;font-size:12px;text-align:center;margin:20px 0 6px}.print-only{display:none}
+    table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:white}th,td{padding:8px 9px;border-bottom:1px solid var(--line);vertical-align:top}tr:last-child td{border-bottom:0}th{background:#f2f5ff;text-align:right;font-size:12px;color:#344054}
+    @media (max-width:900px){.wrap{grid-template-columns:1fr;padding:10px}aside{position:relative;height:auto;top:auto}.grid,.tasks,.tools{grid-template-columns:1fr}h1{font-size:23px}}
+    @media print{body{background:white;font-size:12px}.wrap{display:block;padding:0}aside{display:none}.hero,.card,details{box-shadow:none;break-inside:avoid}details{page-break-inside:avoid}details:not([open]) .solution{display:block}.print-only{display:block}.chip{border-color:#ccc}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <aside>
+      <div class="brand"><div class="logo">∞</div><div><h2>Homework 2</h2><small>Calculus II · דף למבחן</small></div></div>
+      <nav>
+        <div class="nav-title">פתיחה</div>
+        <a href="#top">סקירה מהירה</a>
+        <a href="#map">מפת הכלים</a>
+        <div class="nav-title">תבניות</div>
+        <a href="#t-def">הגדרות עם כמתים</a>
+        <a href="#t-eps">הוכחת גבול לפי הגדרה</a>
+        <a href="#t-tail">הזזת אינדקס / זנב</a>
+        <a href="#t-mono">סדרה מונוטונית</a>
+        <a href="#t-inf">אינפימום של זנבות</a>
+        <a href="#t-heine">היינה והצבה $x_n$</a>
+        <a href="#t-rec">סדרות רקורסיביות</a>
+        <a href="#t-amhm">ממוצע חשבוני־הרמוני</a>
+        <div class="nav-title">חזרה</div>
+        <a href="#tasks">משימות חזרה קצרות</a>
+        <div class="nav-title">רשמי</div>
+        <a href="#official">פתרונות רשמיים מתורגמים</a>
+      </nav>
+    </aside>
+
+    <main id="top">
+      <header class="hero">
+        <h1>Calculus II — Homework 2<br>דף תבניות, אינטואיציות ופתרונות רשמיים</h1>
+        <p class="subtitle">הקובץ עוסק בסדרות: הגדרות פורמליות, גבולות, מונוטוניות, חסימות, סופרימום/אינפימום, הלמה של היינה וסדרות רקורסיביות. המטרה כאן היא לא רק לדעת את הפתרון — אלא לזהות במבחן מה הנתון אומר, איזה כלי לשלוף, ואיך לכתוב פתרון מסודר.</p>
+        <div class="chips">
+          <span class="chip hot">סדרות</span><span class="chip">כמתים</span><span class="chip">\(\varepsilon\)-הוכחות</span><span class="chip">מונוטונית + חסומה</span><span class="chip">רקורסיה</span><span class="chip">היינה</span>
+        </div>
+      </header>
+
+      <section id="map">
+        <div class="section-title"><span class="num">0</span><h2>מפת הכלים של המטלה</h2></div>
+        <div class="tools">
+          <div class="tool"><b>אם מבקשים “הגדירי”</b><span class="mini">כותבים כמתים מדויקים: לכל/קיים, ומפרקים מילים כמו חסומה, גבול, מונוטונית.</span></div>
+          <div class="tool"><b>אם מבקשים “הוכיחי לפי הגדרה”</b><span class="mini">מתחילים מ-$\varepsilon>0$ או $K>0$, משתמשים בנתון כדי לקבל $N$, ואז מראים שהמטרה מתקיימת.</span></div>
+          <div class="tool"><b>אם יש הזזת אינדקס</b><span class="mini">מבינים: שינוי מספר סופי של איברים לא משנה גבול/התכנסות. פורמלית מתאימים את $N$.</span></div>
+          <div class="tool"><b>אם סדרה עולה</b><span class="mini">בודקים אם היא חסומה מלעיל. אם כן — מתכנסת ל-$\sup$. אם לא — שואפת ל-$\infty$.</span></div>
+          <div class="tool"><b>אם מופיע $\inf\{a_n:n\ge k\}$</b><span class="mini">זה “הערך הנמוך ביותר האפשרי בזנב”. ככל שחותכים יותר איברים, האינפימום רק עולה.</span></div>
+          <div class="tool"><b>אם יש רקורסיה</b><span class="mini">קודם מוכיחים מוגדר היטב, אחר כך מונוטוניות וחסימות, ואז לוקחים גבול במשוואה.</span></div>
+        </div>
+      </section>
+
+      <section id="templates">
+        <div class="section-title"><span class="num">1</span><h2>תבניות ואינטואיציות לפי נושאים</h2></div>
+        <div class="grid">
+          <article class="card" id="t-def">
+            <span class="tag">שאלה 1</span>
+            <h3>הגדרות עם כמתים — בלי להסתבך</h3>
+            <h4>איך מזהים?</h4><p>מבקשים “Define the term” או “ללא מילת שלילה”.</p>
+            <h4>האינטואיציה</h4><div class="intuition">הגדרה במתמטיקה היא תרגום מדויק של משפט מילולי לשפה של “לכל” ו“קיים”. כשאומרים “לא חסומה” — לא כותבים “לא”, אלא כותבים שתמיד אפשר לברוח מעבר לכל חסם.</div>
+            <h4>תבנית פתרון</h4>
+            <ol class="steps"><li>זהי את המושג המרכזי: חסימות / גבול / מונוטוניות.</li><li>תרגמי “לכל רף” או “לכל $\varepsilon$” לכמתים.</li><li>הקפידי על סדר הכמתים: בדרך כלל קודם “לכל”, ואז “קיים”.</li><li>אם אסור להשתמש בשלילה — כתבי את המשמעות החיובית.</li></ol>
+            <div class="formula">$$\lim_{n\to\infty}a_n=-1 \iff \forall\varepsilon>0\ \exists N\in\mathbb N\ \forall n\ge N:\ |a_n+1|<\varepsilon$$</div>
+            <div class="mistake"><b>טעות נפוצה:</b> להחליף בין “לכל $N$ קיים $n$” לבין “קיים $N$ כך שלכל $n$”. זה משנה לגמרי את המשמעות.</div>
+          </article>
+
+          <article class="card" id="t-eps">
+            <span class="tag">שאלות 2א, 3א</span>
+            <h3>הוכחה לפי הגדרה — מה צריך להראות?</h3>
+            <h4>איך מזהים?</h4><p>כתוב במפורש “prove using only the definitions” או שיש גבול ל-$\infty$ / גבול סדרה.</p>
+            <h4>האינטואיציה</h4><div class="intuition">את לא ממציאה פתרון — את הולכת לפי ההגדרה. הנתון נותן לך שליטה אחרי מקום מסוים, ואת צריכה להעביר את השליטה הזו לביטוי החדש.</div>
+            <h4>תבנית פתרון</h4>
+            <ol class="steps"><li>פותחים: יהי $\varepsilon>0$ או יהי $K>0$.</li><li>מהנתון מקבלים $N_1$ או $M_1$.</li><li>בוחרים $N$ שמתאים לבעיה.</li><li>לוקחים $n\ge N$ ומראים את האי־שוויון הרצוי.</li></ol>
+            <div class="formula">$$\lim_{x\to\infty}f(x)=\infty \Rightarrow \forall K>0\ \exists M>0\ \forall x>M:\ f(x)>K$$</div>
+            <div class="mistake"><b>טעות נפוצה:</b> להתחיל מהביטוי שרוצים להוכיח בלי להשתמש בהגדרה של הנתון.</div>
+          </article>
+
+          <article class="card" id="t-tail">
+            <span class="tag">שאלה 2א</span>
+            <h3>הזזת אינדקס — למה זנב לא משנה התכנסות?</h3>
+            <h4>איך מזהים?</h4><p>רואים סדרה מהצורה $(a_{n+k})$ או טענה על מחיקת/הזזת מספר סופי של איברים.</p>
+            <h4>האינטואיציה</h4><div class="intuition">גבול מסתכל על מה שקורה “בסוף”. אם מחקנו $k$ איברים ראשונים, ההתנהגות באינסוף לא השתנתה.</div>
+            <h4>תבנית פתרון</h4>
+            <ol class="steps"><li>מגדירים $b_n=a_{n+k}$.</li><li>כיוון ראשון: אם $a_n\to L$, אז גם $a_{n+k}\to L$ כי $n+k$ גדול יחד עם $n$.</li><li>כיוון שני: אם $b_n\to L$, בוחרים $N=N_1+k$ כדי ש-$n-k\ge N_1$.</li><li>מסיימים עם אותו $L$.</li></ol>
+            <div class="formula">$$|b_n-L|=|a_{n+k}-L|$$</div>
+            <div class="mistake"><b>טעות נפוצה:</b> לבחור אותו $N$ בשני הכיוונים בלי להתאים את ההזזה.</div>
+          </article>
+
+          <article class="card" id="t-mono">
+            <span class="tag">שאלה 2ב</span>
+            <h3>סדרה עולה — מתכנסת ל־$\sup$ או בורחת ל־$\infty$</h3>
+            <h4>איך מזהים?</h4><p>נתון שהסדרה increasing / עולה, ומבקשים התכנסות במובן הרחב.</p>
+            <h4>האינטואיציה</h4><div class="intuition">סדרה עולה יכולה לעשות רק שני דברים: או שהיא מתקרבת לתקרה שלה, או שאין לה תקרה ואז היא עולה בלי סוף.</div>
+            <h4>תבנית פתרון</h4>
+            <ol class="steps"><li>מפצלים לשני מקרים: חסומה מלעיל / לא חסומה מלעיל.</li><li>אם חסומה: מגדירים $s=\sup\{a_n:n\in\mathbb N\}$.</li><li>לפי תכונת $\sup$: יש איבר $a_{n_1}$ קרוב ל-$s$ מלמטה.</li><li>מונוטוניות גוררת שכל הזנב אחריו גם קרוב ל-$s$.</li><li>אם לא חסומה: לכל $K$ יש איבר מעל $K$, ומכאן כל הזנב מעל $K$.</li></ol>
+            <div class="formula">$$a_n\uparrow,\ a_n\le s \Rightarrow \lim a_n=s=\sup\{a_n:n\in\mathbb N\}$$</div>
+            <div class="mistake"><b>טעות נפוצה:</b> להגיד “עולה ולכן מתכנסת” בלי לבדוק חסומה מלעיל.</div>
+          </article>
+
+          <article class="card" id="t-inf">
+            <span class="tag">שאלה 2ג</span>
+            <h3>אינפימום של זנבות — $b_k=\inf\{a_n:n\ge k\}$</h3>
+            <h4>איך מזהים?</h4><p>מגדירים סדרה חדשה לפי $\inf$ או $\sup$ של קבוצת איברים מהזנב.</p>
+            <h4>האינטואיציה</h4><div class="intuition">כש-$k$ גדל, אנחנו זורקים איברים מהתחלה. אם זורקים אפשרויות, המינימום האפשרי של הזנב לא יכול לרדת — הוא יכול רק לעלות.</div>
+            <h4>תבנית פתרון</h4>
+            <ol class="steps"><li>מראים ש-$b_k$ מוגדר היטב: הזנב לא ריק וחסום מלמטה.</li><li>מראים חסימות: בגלל ש-$a_n$ חסומה, גם $b_k$ חסומה.</li><li>מראים מונוטוניות בעזרת הכלה: $\{a_n:n\ge k+1\}\subseteq\{a_n:n\ge k\}$.</li><li>מסיקים: עולה וחסומה מלעיל ⇒ מתכנסת.</li></ol>
+            <div class="formula">$$\{a_n:n\ge k+1\}\subseteq\{a_n:n\ge k\}\Rightarrow b_{k+1}\ge b_k$$</div>
+            <div class="mistake"><b>טעות נפוצה:</b> לחשוב שהכלה קטנה גורמת ל־$\inf$ קטן יותר. בפועל כשיש פחות איברים, האינפימום יכול לעלות.</div>
+          </article>
+
+          <article class="card" id="t-heine">
+            <span class="tag">שאלות 3ב, 4</span>
+            <h3>מעבר מגבול סדרה לגבול פונקציה בעזרת היינה</h3>
+            <h4>איך מזהים?</h4><p>בפתרון מחליפים $n$ ב-$x$ או מציבים $x_n=\frac1n$ / $x_n=n$.</p>
+            <h4>האינטואיציה</h4><div class="intuition">כשביטוי סדרתי נראה כמו גבול מוכר של פונקציה, מותר לחשב את הגבול הפונקציונלי ולהחזיר לסדרה דרך הלמה של היינה.</div>
+            <h4>תבנית פתרון</h4>
+            <ol class="steps"><li>מזהים הצבה טבעית: $x_n=1/n$ אם הביטוי מתקרב ל־0; $x_n=n$ אם לאינסוף.</li><li>כותבים את הביטוי כפונקציה $f(x_n)$.</li><li>מחשבים $\lim f(x)$ עם לופיטל/אלגברה.</li><li>מסיקים את גבול הסדרה.</li></ol>
+            <div class="formula">$$x_n=\frac1n \to 0,\quad \frac{\frac1n-\ln(1+\frac1n)}{\frac1{n^2}}\to \lim_{x\to0}\frac{x-\ln(1+x)}{x^2}$$</div>
+            <div class="mistake"><b>טעות נפוצה:</b> להציב בלי לכתוב מהו $x_n$ ומהו הגבול שאליו הוא שואף.</div>
+          </article>
+
+          <article class="card" id="t-rec">
+            <span class="tag">שאלה 5</span>
+            <h3>סדרה רקורסיבית — דרך קבועה לפתרון</h3>
+            <h4>איך מזהים?</h4><p>נתון $a_{n+1}$ כתלות ב-$a_n$ ומבקשים גבול/התכנסות/התבדרות.</p>
+            <h4>האינטואיציה</h4><div class="intuition">ברקורסיה קודם צריך לוודא שהסדרה בכלל חוקית, אחר כך להבין אם היא עולה/יורדת וחסומה, ורק בסוף “לנחש” את הגבול דרך המשוואה.</div>
+            <h4>תבנית פתרון</h4>
+            <ol class="steps"><li>מוכיחים באינדוקציה שהביטוי מוגדר היטב: למשל $a_n>0$.</li><li>בודקים מונוטוניות: משווים $a_{n+1}$ ל-$a_n$.</li><li>בודקים חסימות.</li><li>אם יש גבול $L$, מציבים במשוואת הרקורסיה.</li><li>פוסלים פתרונות לא אפשריים לפי סימן/חסם.</li></ol>
+            <div class="formula">$$a_{n+1}=\sqrt{2a_n},\quad L=\sqrt{2L}\Rightarrow L=0\text{ או }L=2$$</div>
+            <div class="mistake"><b>טעות נפוצה:</b> לקחת גבול במשוואה לפני שהוכחנו שהגבול קיים.</div>
+          </article>
+
+          <article class="card" id="t-amhm">
+            <span class="tag">שאלה 6</span>
+            <h3>ממוצע חשבוני והרמוני — שתי סדרות שמתכנסות יחד</h3>
+            <h4>איך מזהים?</h4><p>רקורסיה עם $a_{n+1}=\frac{a_n+b_n}{2}$ ו-$b_{n+1}=\frac{2a_nb_n}{a_n+b_n}$.</p>
+            <h4>האינטואיציה</h4><div class="intuition">הממוצע החשבוני נמצא למעלה, ההרמוני למטה. בכל צעד הם מתקרבים אחד לשני, והמכפלה נשמרת.</div>
+            <h4>תבנית פתרון</h4>
+            <ol class="steps"><li>מוכיחים חיוביות באינדוקציה.</li><li>מראים $a_{n+1}\ge b_{n+1}$ מתוך $(a_n-b_n)^2\ge0$.</li><li>מראים $a_n$ יורדת ו-$b_n$ עולה.</li><li>מראים שתיהן חסומות ולכן מתכנסות.</li><li>מראים שהגבולות שווים, ואז משתמשים בשימור מכפלה.</li></ol>
+            <div class="formula">$$a_{n+1}b_{n+1}=a_nb_n=\alpha\beta\Rightarrow L^2=\alpha\beta\Rightarrow L=\sqrt{\alpha\beta}$$</div>
+            <div class="mistake"><b>טעות נפוצה:</b> לשכוח שצריך להוכיח $a_n,b_n>0$ כדי שמותר לחלק ב-$a_n+b_n$.</div>
+          </article>
+        </div>
+      </section>
+
+      <section id="tasks">
+        <div class="section-title"><span class="num">2</span><h2>משימות חזרה קצרות — מה לעשות בפועל</h2></div>
+        <div class="tasks">
+          <div class="task"><strong>1. כתבי 4 הגדרות מהמטלה בלי להסתכל.</strong><span>איך זה אמור להיראות: שורה עם כמתים, למשל $\forall\varepsilon>0\ \exists N\ \forall n\ge N$.</span></div>
+          <div class="task"><strong>2. תרגמי “לא חסומה מלעיל” בלי מילת שלילה.</strong><span>אמור להיראות: “לכל $K\in\mathbb R$ קיים $n$ כך ש-$a_n>K$”.</span></div>
+          <div class="task"><strong>3. הסבירי במילים למה זנב לא משנה גבול.</strong><span>אמור להיראות: משפט אחד — “גבול תלוי רק בהתנהגות אחרי מקום מסוים”.</span></div>
+          <div class="task"><strong>4. כתבי את שלבי הוכחת שאלה 2א בלי חישובים.</strong><span>אמור להיראות: להגדיר $b_n$, להוכיח שני כיוונים, לבחור $N$ מתאים בכל כיוון.</span></div>
+          <div class="task"><strong>5. כתבי את משפט סדרה מונוטונית במילים ובנוסחה.</strong><span>אמור להיראות: עולה וחסומה מלעיל ⇒ מתכנסת ל-$\sup$; עולה ולא חסומה ⇒ $\infty$.</span></div>
+          <div class="task"><strong>6. ציירי בראש מה קורה ל-$\inf$ של זנבות.</strong><span>אמור להיראות: ככל ש-$k$ גדל, הקבוצה קטנה, ולכן האינפימום לא יורד.</span></div>
+          <div class="task"><strong>7. פתרי מחדש רק את מבנה שאלה 2ג.</strong><span>אמור להיראות: מוגדר היטב → חסומה מלעיל → עולה → מתכנסת.</span></div>
+          <div class="task"><strong>8. כתבי דוגמת פתיחה להוכחת גבול ל-$\infty$.</strong><span>אמור להיראות: “יהי $K>0$. מהנתון קיים $M_1$ כך שלכל $x>M_1$...”</span></div>
+          <div class="task"><strong>9. בכל גבול עם $n$, בדקי אם מתאים להציב $x_n=1/n$ או $x_n=n$.</strong><span>אמור להיראות: ליד התרגיל כתוב “מתקרב ל־0” או “מתקרב לאינסוף”.</span></div>
+          <div class="task"><strong>10. ברקורסיה: כתבי תמיד 3 שורות חובה לפני גבול.</strong><span>אמור להיראות: מוגדר היטב; מונוטוניות; חסימות/התבדרות.</span></div>
+          <div class="task"><strong>11. סמני איפה משתמשים באינדוקציה.</strong><span>אמור להיראות: חיוביות, חסם $2$, שמירת מכפלה — אלה מקומות קלאסיים לאינדוקציה.</span></div>
+          <div class="task"><strong>12. כתבי טעות נפוצה אחת לכל נושא.</strong><span>אמור להיראות: למשל “לא לקחת גבול ברקורסיה לפני שהוכח שהגבול קיים”.</span></div>
+        </div>
+      </section>
+
+      <section id="official">
+        <div class="section-title"><span class="num">3</span><h2>פתרונות רשמיים — מתורגמים ומסודרים</h2></div>
+        <p class="mini">החלק הזה שומר על הסדר הרשמי של המטלה. האינטואיציה נמצאת למעלה; כאן המטרה היא לראות כתיבה נקייה למבחן.</p>
+
+        <details open>
+          <summary>שאלה 1 — הגדרות</summary>
+          <div class="solution">
+            <div class="qbox"><b>נתון:</b> $(a_n)_{n=1}^{\infty}$ סדרה של מספרים ממשיים.</div>
+            <h4>1א. לא חסומה מלמטה ולא חסומה מלמעלה — בלי שלילה</h4>
+            <p>נאמר שהסדרה אינה חסומה מלמטה ואינה חסומה מלמעלה אם לכל $K_1\in\mathbb R$ קיים $n_1\in\mathbb N$ כך ש-$a_{n_1}<K_1$, ולכל $K_2\in\mathbb R$ קיים $n_2\in\mathbb N$ כך ש-$a_{n_2}>K_2$.</p>
+            <h4>1ב. $\lim_{n\to\infty}a_n\ne\infty$ — בלי שלילה</h4>
+            <p>נאמר ש-$\lim_{n\to\infty}a_n\ne\infty$ אם קיים $K>0$ כך שלכל $N\in\mathbb N$ קיים $n\ge N$ שעבורו $a_n\le K$.</p>
+            <h4>1ג. $\lim_{n\to\infty}a_n=-1$</h4>
+            <p>נאמר ש-$\lim_{n\to\infty}a_n=-1$ אם לכל $\varepsilon>0$ קיים $N\in\mathbb N$ כך שלכל $n\ge N$ מתקיים $|a_n+1|<\varepsilon$.</p>
+            <h4>1ד. סדרה מונוטונית ממש</h4>
+            <p>נאמר שהסדרה $(a_n)$ מונוטונית ממש אם לכל $n\in\mathbb N$ מתקיים $a_n>a_{n+1}$, או שלכל $n\in\mathbb N$ מתקיים $a_n<a_{n+1}$.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>שאלה 2א — הזזת אינדקס לא משנה התכנסות</summary>
+          <div class="solution">
+            <div class="qbox">להוכיח שלכל $k\in\mathbb N$, הסדרה $(a_{n+k})$ מתכנסת אם ורק אם $(a_n)$ מתכנסת, ובמקרה זה הגבולות שווים.</div>
+            <p>יהי $k\in\mathbb N$. נגדיר $b_n=a_{n+k}$.</p>
+            <h4>כיוון ראשון: אם $(a_n)$ מתכנסת</h4>
+            <p>נניח ש-$a_n\to L$. יהי $\varepsilon>0$. לפי הגדרת הגבול קיים $N_1\in\mathbb N$ כך שלכל $n\ge N_1$ מתקיים $|a_n-L|<\varepsilon$.</p>
+            <p>נבחר $N=N_1$. אם $n\ge N$, אז $n+k\ge N_1$, ולכן</p>
+            <div class="formula">$$|b_n-L|=|a_{n+k}-L|<\varepsilon.$$</div>
+            <p>לכן $(b_n)$ מתכנסת ל-$L$.</p>
+            <h4>כיוון שני: אם $(b_n)$ מתכנסת</h4>
+            <p>נניח ש-$b_n\to L$. יהי $\varepsilon>0$. קיים $N_1$ כך שלכל $n\ge N_1$ מתקיים $|b_n-L|<\varepsilon$.</p>
+            <p>נבחר $N=N_1+k$. אם $n\ge N$, אז $n-k\ge N_1$, ולכן</p>
+            <div class="formula">$$|a_n-L|=|b_{n-k}-L|<\varepsilon.$$</div>
+            <p>לכן $(a_n)$ מתכנסת ל-$L$, והגבולות שווים.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>שאלה 2ב — סדרה עולה מתכנסת במובן הרחב ל־$\sup$</summary>
+          <div class="solution">
+            <div class="qbox">אם $(a_n)$ עולה, אז היא מתכנסת במובן הרחב ו-$\lim a_n=\sup\{a_n:n\in\mathbb N\}$.</div>
+            <h4>מקרה 1: הסדרה חסומה מלעיל</h4>
+            <p>לפי משפט החסם העליון הקטן ביותר, קיים $s\in\mathbb R$ כך ש-$s=\sup\{a_n:n\in\mathbb N\}$.</p>
+            <p>יהי $\varepsilon>0$. לפי תכונת הסופרימום קיים $n_1$ כך ש-$s-\varepsilon<a_{n_1}\le s$. נבחר $N>n_1$. אם $n\ge N$, אז מכיוון שהסדרה עולה:</p>
+            <div class="formula">$$s-\varepsilon<a_{n_1}\le a_n\le s<s+\varepsilon.$$</div>
+            <p>לכן $|a_n-s|<\varepsilon$, כלומר $a_n\to s$.</p>
+            <h4>מקרה 2: הסדרה אינה חסומה מלעיל</h4>
+            <p>יהי $K>0$. מאי־חסימות מלעיל קיים $n_1$ כך ש-$a_{n_1}>K$. נבחר $N>n_1$. אם $n\ge N$, אז בגלל שהסדרה עולה $a_n\ge a_{n_1}>K$.</p>
+            <p>לכן $a_n\to\infty$, ובמובן הרחב $\sup\{a_n:n\in\mathbb N\}=\infty$.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>שאלה 2ג — $b_k=\inf\{a_n:n\ge k\}$ מתכנסת</summary>
+          <div class="solution">
+            <div class="qbox">נתון ש-$(a_n)$ חסומה. מגדירים $b_k=\inf\{a_n:n\ge k\}$. להוכיח ש-$(b_k)$ מתכנסת.</div>
+            <p>מכיוון ש-$(a_n)$ חסומה, לכל $k$ הקבוצה $\{a_n:n\ge k\}$ חסומה מלמטה ואינה ריקה, ולכן לפי משפט החסם התחתון הגדול ביותר $b_k$ מוגדר היטב.</p>
+            <p>בנוסף, מכיוון ש-$(a_n)$ חסומה מלעיל, קיים $M\in\mathbb R$ כך שלכל $n$, $a_n\le M$. לכן לכל $k$, מתקיים $b_k\le M$, ולכן $(b_k)$ חסומה מלעיל.</p>
+            <p>נראה ש-$(b_k)$ עולה. לכל $k$ מתקיים:</p>
+            <div class="formula">$$\{a_n:n\ge k+1\}\subseteq\{a_n:n\ge k\}.$$</div>
+            <p>לכן</p>
+            <div class="formula">$$b_{k+1}=\inf\{a_n:n\ge k+1\}\ge\inf\{a_n:n\ge k\}=b_k.$$</div>
+            <p>קיבלנו ש-$(b_k)$ עולה וחסומה מלעיל, ולכן היא מתכנסת.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>שאלה 3 — היינה ל־$\infty$ וחישוב גבול</summary>
+          <div class="solution">
+            <h4>3א. אם $f(x)\to\infty$ וכל $x_n\to\infty$, אז $f(x_n)\to\infty$</h4>
+            <p>תהי $(x_n)$ סדרה כך ש-$x_n\to\infty$. יהי $K>0$. מכיוון ש-$f(x)\to\infty$, קיים $M_1>0$ כך שלכל $x>M_1$ מתקיים $f(x)>K$.</p>
+            <p>מכיוון ש-$x_n\to\infty$, קיים $N_1$ כך שלכל $n\ge N_1$ מתקיים $x_n>M_1$. נבחר $N=N_1$. אז לכל $n\ge N$ מתקיים $f(x_n)>K$, ולכן $f(x_n)\to\infty$.</p>
+            <h4>3ב. חישוב הגבול</h4>
+            <div class="formula">$$\lim_{n\to\infty}\left[n+n^2\ln n-n^2\ln(n+1)\right]$$</div>
+            <p>נכתוב:</p>
+            <div class="formula">$$n+n^2\ln n-n^2\ln(n+1)=n^2\left[\frac1n-\ln\left(1+\frac1n\right)\right].$$</div>
+            <p>נשתמש בהצבה $x_n=1/n$:</p>
+            <div class="formula">$$\lim_{n\to\infty}\frac{\frac1n-\ln(1+\frac1n)}{\frac1{n^2}}=\lim_{x\to0}\frac{x-\ln(1+x)}{x^2}.$$</div>
+            <p>בעזרת לופיטל פעמיים:</p>
+            <div class="formula">$$\lim_{x\to0}\frac{x-\ln(1+x)}{x^2}=\lim_{x\to0}\frac{1-\frac1{1+x}}{2x}=\lim_{x\to0}\frac{\frac1{(1+x)^2}}{2}=\frac12.$$</div>
+          </div>
+        </details>
+
+        <details>
+          <summary>שאלה 4 — גבול כתלות בפרמטר $\alpha$</summary>
+          <div class="solution">
+            <div class="qbox">לחשב עבור $0<\alpha<1$ את $\lim_{n\to\infty}\left[(n+1)^{2\alpha}-(n^2+1)^\alpha\right]$.</div>
+            <p>בעזרת הלמה של היינה עוברים לגבול פונקציה:</p>
+            <div class="formula">$$\lim_{x\to\infty}\left[(x+1)^{2\alpha}-(x^2+1)^\alpha\right].$$</div>
+            <p>מוציאים גורם $x^{2\alpha}$:</p>
+            <div class="formula">$$x^{2\alpha}\left[\left(1+\frac1x\right)^{2\alpha}-\left(1+\frac1{x^2}\right)^\alpha\right].$$</div>
+            <p>לאחר לופיטל מתקבל הביטוי המכריע:</p>
+            <div class="formula">$$\lim_{x\to\infty}\left[x^{2\alpha-1}\left(1+\frac1x\right)^{2\alpha-1}-x^{2\alpha-2}\left(1+\frac1{x^2}\right)^{\alpha-1}\right].$$</div>
+            <p>מחלקים לשלושה מקרים:</p>
+            <table><thead><tr><th>תחום של $\alpha$</th><th>הגבול</th><th>רעיון</th></tr></thead><tbody>
+              <tr><td>$0<\alpha<\frac12$</td><td>$0$</td><td>$x^{2\alpha-1}\to0$</td></tr>
+              <tr><td>$\alpha=\frac12$</td><td>$1$</td><td>$x^{0}=1$ והאיבר השני מתאפס</td></tr>
+              <tr><td>$\frac12<\alpha<1$</td><td>$\infty$</td><td>$x^{2\alpha-1}\to\infty$</td></tr>
+            </tbody></table>
+            <div class="formula">$$\boxed{\lim_{n\to\infty}\left[(n+1)^{2\alpha}-(n^2+1)^\alpha\right]=\begin{cases}0,&0<\alpha<\frac12\\1,&\alpha=\frac12\\\infty,&\frac12<\alpha<1\end{cases}}$$</div>
+          </div>
+        </details>
+
+        <details>
+          <summary>שאלה 5 — סדרות רקורסיביות</summary>
+          <div class="solution">
+            <h4>5א. $a_{n+1}=a_n+\frac1{a_n},\ a_1=1$ — להוכיח $a_n\to\infty$</h4>
+            <p>תחילה מוכיחים באינדוקציה ש-$a_n>0$, ולכן הסדרה מוגדרת היטב. בסיס: $a_1=1>0$. צעד: אם $a_n>0$, אז $a_{n+1}=a_n+\frac1{a_n}>0$.</p>
+            <p>נראה שהסדרה עולה:</p>
+            <div class="formula">$$a_{n+1}=a_n+\frac1{a_n}>a_n.$$</div>
+            <p>נניח בשלילה ש-$a_n\not\to\infty$. מכיוון שהסדרה עולה, היא מתכנסת לגבול ממשי $L=\sup\{a_n\}$. בנוסף $L\ge a_1=1$, ולכן $L\ne0$.</p>
+            <p>לוקחים גבול ברקורסיה:</p>
+            <div class="formula">$$L=\lim a_{n+1}=\lim\left(a_n+\frac1{a_n}\right)=L+\frac1L.$$</div>
+            <p>מכאן $\frac1L=0$, סתירה. לכן $a_n\to\infty$.</p>
+
+            <h4>5ב(i). להוכיח שאם $0\le\alpha\le2$, אז $\alpha\le\sqrt{2\alpha}\le2$</h4>
+            <p>ימין: מ-$\alpha\le2$ נקבל $\sqrt\alpha\le\sqrt2$, ולכן $\sqrt{2\alpha}\le2$.</p>
+            <p>שמאל: מ-$0\le\alpha\le2$ נקבל $\alpha^2\le2\alpha$, ולכן אחרי שורש: $\alpha\le\sqrt{2\alpha}$.</p>
+
+            <h4>5ב(ii). $a_{n+1}=\sqrt{2a_n},\ a_1=\sqrt2$ — להוכיח התכנסות</h4>
+            <p>מוכיחים באינדוקציה $a_n\ge0$, ולכן הסדרה מוגדרת היטב. אחר כך מוכיחים באינדוקציה:</p>
+            <div class="formula">$$a_n\le a_{n+1}\le2.$$</div>
+            <p>בסיס: $a_1=\sqrt2\le\sqrt{2\sqrt2}=a_2$. צעד: אם $a_n\le a_{n+1}\le2$, אז לפי סעיף (i) עם $\alpha=a_{n+1}$:</p>
+            <div class="formula">$$a_{n+1}\le\sqrt{2a_{n+1}}=a_{n+2}\le2.$$</div>
+            <p>לכן הסדרה עולה וחסומה מלעיל, ולכן מתכנסת.</p>
+
+            <h4>5ב(iii). להוכיח שהשורש האינסופי שווה $2$</h4>
+            <p>נסמן $L=\lim a_n$. מכיוון שהסדרה מתכנסת ו-$L\ge a_1=\sqrt2$, אז $L\ne0$. לוקחים גבול:</p>
+            <div class="formula">$$L=\sqrt{2L}\Rightarrow L^2=2L\Rightarrow L=0\text{ או }L=2.$$</div>
+            <p>מאחר ש-$L\ne0$, נקבל $L=2$.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>שאלה 6 — שתי סדרות רקורסיביות והממוצע הגיאומטרי</summary>
+          <div class="solution">
+            <div class="qbox">נתון $0<\beta<\alpha$, $a_1=\alpha$, $b_1=\beta$, ו-$$a_{n+1}=\frac{a_n+b_n}{2},\qquad b_{n+1}=\frac{2a_nb_n}{a_n+b_n}.$$</div>
+            <h4>6א. מוגדרות היטב ו-$a_{n+1}\ge b_{n+1}$</h4>
+            <p>מוכיחים באינדוקציה ש-$a_n,b_n>0$ לכל $n$. לכן $a_n+b_n>0$ ומותר לחלק בו.</p>
+            <p>כדי להראות $a_{n+1}\ge b_{n+1}$ משתמשים ב-$(a_n-b_n)^2\ge0$:</p>
+            <div class="formula">$$(a_n+b_n)^2\ge4a_nb_n.$$</div>
+            <p>מחלקים ב-$2(a_n+b_n)>0$ ומקבלים:</p>
+            <div class="formula">$$\frac{a_n+b_n}{2}\ge\frac{2a_nb_n}{a_n+b_n}.$$</div>
+
+            <h4>6ב. קיום גבול משותף</h4>
+            <p>נראה ש-$(a_n)$ יורדת:</p>
+            <div class="formula">$$a_{n+1}=\frac{a_n+b_n}{2}\le\frac{a_n+a_n}{2}=a_n.$$</div>
+            <p>נראה ש-$(b_n)$ עולה:</p>
+            <div class="formula">$$b_{n+1}=\frac{2a_nb_n}{a_n+b_n}\ge\frac{2a_nb_n}{a_n+a_n}=b_n.$$</div>
+            <p>בנוסף לכל $n$ מתקיים $b_1\le b_n\le a_n\le a_1$. לכן $a_n$ יורדת וחסומה מלמטה, ו-$b_n$ עולה וחסומה מלמעלה, ולכן יש גבולות $L_1,L_2$.</p>
+            <p>לוקחים גבול במשוואה של $a_{n+1}$:</p>
+            <div class="formula">$$L_1=\frac{L_1+L_2}{2}\Rightarrow L_1=L_2.$$</div>
+            <p>נסמן את הגבול המשותף ב-$L$.</p>
+
+            <h4>6ג. שמירת מכפלה וחישוב $L$</h4>
+            <p>מוכיחים באינדוקציה:</p>
+            <div class="formula">$$a_nb_n=a_1b_1\quad\forall n\in\mathbb N.$$</div>
+            <p>צעד האינדוקציה:</p>
+            <div class="formula">$$a_{n+1}b_{n+1}=\frac{a_n+b_n}{2}\cdot\frac{2a_nb_n}{a_n+b_n}=a_nb_n.$$</div>
+            <p>לוקחים גבול:</p>
+            <div class="formula">$$L^2=a_1b_1=\alpha\beta.$$</div>
+            <p>מכיוון שהסדרות חיוביות, $L\ge0$, ולכן:</p>
+            <div class="formula">$$\boxed{L=\sqrt{\alpha\beta}}.$$</div>
+          </div>
+        </details>
+      </section>
+
+      <div class="footer">נבנה כקובץ HTML אחד · מתאים לפתיחה בדפדפן, הדפסה ושמירה כ־PDF · MathJax לנוסחאות</div>
+    </main>
+  </div>
+</body>
+</html>

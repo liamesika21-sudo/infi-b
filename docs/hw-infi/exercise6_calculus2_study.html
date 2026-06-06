@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>דף למידה למבחן — אינפי ב׳ | מטלה 6: טורים</title>
+  <script>
+    window.MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$','$$']]},
+      svg: {fontCache: 'global'}
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&display=swap');
+    :root{
+      --bg:#f6f7ff; --card:#ffffff; --ink:#172033; --muted:#677089; --line:#dde2f3;
+      --blue:#3157ff; --violet:#7d4dff; --soft:#eef1ff; --soft2:#f7f3ff;
+      --good:#0f8a5f; --bad:#c04444; --warn:#ad6b00; --shadow:0 10px 28px rgba(31,43,90,.08);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:'Assistant',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:linear-gradient(135deg,#f8f9ff 0%,#f3f0ff 100%);color:var(--ink);font-size:14px;line-height:1.55}
+    a{color:inherit;text-decoration:none}
+    .layout{display:grid;grid-template-columns:245px minmax(0,1fr);gap:18px;max-width:1280px;margin:0 auto;padding:18px}
+    aside{position:sticky;top:14px;height:calc(100vh - 28px);overflow:auto;background:rgba(255,255,255,.88);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:14px}
+    .brand{display:flex;align-items:center;gap:10px;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+    .logo{width:34px;height:34px;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--violet));display:grid;place-items:center;color:white;font-weight:800}
+    .brand h1{font-size:15px;line-height:1.25;margin:0}.brand p{font-size:12px;color:var(--muted);margin:2px 0 0}
+    nav h3{font-size:12px;color:var(--muted);margin:14px 2px 7px;font-weight:800;letter-spacing:.2px}
+    nav a{display:block;padding:7px 9px;margin:3px 0;border-radius:10px;color:#2d3550;font-size:13px}
+    nav a:hover{background:var(--soft);color:var(--blue)}
+    main{min-width:0}.hero{background:linear-gradient(135deg,#ffffff 0%,#f0f3ff 60%,#f6efff 100%);border:1px solid var(--line);border-radius:24px;padding:22px 24px;box-shadow:var(--shadow);margin-bottom:16px}
+    .kicker{display:inline-flex;gap:7px;align-items:center;background:white;border:1px solid var(--line);color:var(--blue);border-radius:999px;padding:4px 10px;font-size:12px;font-weight:800;margin-bottom:10px}
+    h1{font-size:25px;margin:0 0 8px;letter-spacing:-.3px}h2{font-size:19px;margin:22px 0 10px}h3{font-size:16px;margin:0 0 8px}h4{font-size:14px;margin:10px 0 5px;color:#25304a}
+    .hero p{margin:0;color:var(--muted);max-width:900px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .card{background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:0 6px 18px rgba(31,43,90,.055);margin-bottom:12px}
+    .topic{border-right:4px solid var(--blue)}.tag{display:inline-block;background:var(--soft);color:var(--blue);font-weight:800;font-size:11px;border-radius:999px;padding:3px 8px;margin:0 0 8px 5px}.tag.v{background:var(--soft2);color:var(--violet)}.tag.g{background:#ecfff8;color:var(--good)}.tag.r{background:#fff1f1;color:var(--bad)}
+    .mini{color:var(--muted);font-size:12.5px}.formula{direction:ltr;text-align:center;background:#fbfcff;border:1px solid #e8ecfb;border-radius:12px;padding:8px;margin:8px 0;overflow:auto}.ltr{direction:ltr;text-align:left}.steps{margin:6px 0 0;padding:0 18px 0 0}.steps li{margin:3px 0}.note{background:#fffaf0;border:1px solid #ffe1a6;border-right:4px solid #e59a00;border-radius:12px;padding:8px 10px;margin-top:8px;color:#503a09}.mistake{background:#fff5f5;border:1px solid #ffd5d5;border-right:4px solid var(--bad);border-radius:12px;padding:8px 10px;margin-top:8px}.task{display:grid;grid-template-columns:24px 1fr;gap:8px;align-items:start;border:1px solid var(--line);border-radius:14px;padding:10px;background:white}.num{width:24px;height:24px;border-radius:8px;background:linear-gradient(135deg,var(--blue),var(--violet));color:white;display:grid;place-items:center;font-size:12px;font-weight:800}.task b{display:block;margin-bottom:2px}.task span{font-size:12.5px;color:var(--muted)}
+    details{background:white;border:1px solid var(--line);border-radius:15px;margin-bottom:9px;overflow:hidden}summary{cursor:pointer;padding:10px 13px;font-weight:800;background:#f8f9ff;color:#25304a}details[open] summary{border-bottom:1px solid var(--line)}.solution{padding:12px 14px}.solution p{margin:6px 0}.solution .ans{font-weight:800;color:var(--blue)}
+    table{width:100%;border-collapse:collapse;background:white;border-radius:14px;overflow:hidden;border:1px solid var(--line);font-size:13px}th,td{border-bottom:1px solid var(--line);padding:8px 9px;text-align:right;vertical-align:top}th{background:#f1f4ff;color:#2a3761}tr:last-child td{border-bottom:0}.print-note{font-size:12px;color:var(--muted);margin-top:10px}
+    @media (max-width:900px){.layout{grid-template-columns:1fr;padding:12px}aside{position:relative;height:auto;top:0}.grid,.grid3{grid-template-columns:1fr}h1{font-size:22px}}
+    @media print{body{background:white}.layout{display:block;padding:0}aside{display:none}.hero,.card,details{box-shadow:none;break-inside:avoid}details{page-break-inside:avoid}summary{background:white}.hero{border:0}.card{border-color:#ddd}a[href]:after{content:""}}
+  </style>
+</head>
+<body>
+<div class="layout">
+  <aside>
+    <div class="brand"><div class="logo">6</div><div><h1>מטלה 6 — טורים</h1><p>תבניות, אינטואיציות ופתרונות</p></div></div>
+    <nav>
+      <h3>פתיחה</h3>
+      <a href="#intro">מה יש בדף</a>
+      <a href="#map">מפת זיהוי מהירה</a>
+      <h3>תבניות מרכזיות</h3>
+      <a href="#geo">טור גיאומטרי</a>
+      <a href="#necessary">תנאי הכרחי</a>
+      <a href="#comparison">השוואה והשוואה גבולית</a>
+      <a href="#telescopic">טור טלסקופי</a>
+      <a href="#tail">זנבות והתחלה לא משנה</a>
+      <a href="#integralseries">טור שמוגדר בעזרת אינטגרל</a>
+      <a href="#mistakes">זיהוי טעויות סטודנט</a>
+      <a href="#proofs">הוכחות כלליות בטורים</a>
+      <h3>חזרה</h3>
+      <a href="#tasks">משימות חזרה קצרות</a>
+      <a href="#official">פתרונות רשמיים</a>
+    </nav>
+  </aside>
+  <main>
+    <section class="hero" id="intro">
+      <div class="kicker">Calculus II · Homework 6</div>
+      <h1>דף למידה למבחן — מטלה 6: טורים, התכנסות, טלסקופיות והשוואות</h1>
+      <p>זה לא רק סיכום פתרונות. זה דף תבניות שיעזור לך לזהות מהר מה סוג השאלה, באיזה כלי להשתמש, מה האינטואיציה, איפה הטעות הנפוצה, ואיך לתרגל כדי לפתור לבד במבחן.</p>
+      <p class="print-note">מותאם לפתיחה בדפדפן, הדפסה ושמירה כ־PDF. הנוסחאות מוצגות בעזרת MathJax.</p>
+    </section>
+
+    <section id="map" class="card">
+      <h2>מפת זיהוי מהירה</h2>
+      <table>
+        <thead><tr><th>מה רואים בשאלה?</th><th>מה זה אומר?</th><th>כלי ראשון לחשוב עליו</th></tr></thead>
+        <tbody>
+          <tr><td>$\sum q^n$ או פירוק לסכום של חזקות</td><td>טור גיאומטרי</td><td>$\sum_{n=0}^{\infty}q^n=\frac{1}{1-q}$ רק אם $|q|<1$</td></tr>
+          <tr><td>$a_n$ לא שואף ל־$0$</td><td>אין סיכוי לטור להתכנס</td><td>תנאי הכרחי</td></tr>
+          <tr><td>איבר דומה ל־$\frac1n$ או $\frac1{n^p}$</td><td>רוצים להשוות לטור מוכר</td><td>השוואה גבולית / השוואה רגילה</td></tr>
+          <tr><td>איברים מתבטלים זה עם זה בסכום חלקי</td><td>טלסקופי</td><td>כותבים $S_N$ ואז משאירים רק קצוות</td></tr>
+          <tr><td>טור של אינטגרלים $\sum \int_0^{1/n} f(t)dt$</td><td>צריך לחסום את האינטגרל</td><td>מונוטוניות/אי־שוויון ואז השוואה ל־$\sum 1/n^p$</td></tr>
+          <tr><td>שאלה על “מצא את הטעות”</td><td>בודקים שימוש לא חוקי באינסוף</td><td>הגדרת סכום אינסופי כגבול של סכומים סופיים</td></tr>
+          <tr><td>טענה כללית “הוכח/הפרך”</td><td>או הוכחה עם משפט, או דוגמה נגדית</td><td>תנאי הכרחי, השוואה, זנבות, סכומים חלקיים</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="templates">
+      <h2>חלק ראשון — תבניות ואינטואיציות לפי נושאים</h2>
+
+      <article class="card topic" id="geo">
+        <span class="tag">שאלה 1(א)</span><span class="tag v">גיאומטרי</span>
+        <h3>פירוק טור לטורים גיאומטריים</h3>
+        <p><b>איך מזהים?</b> מופיעים ביטויים מהצורה “משהו בחזקת $n$”, או שאפשר להפוך את האיבר ל־$q^n$.</p>
+        <p><b>האינטואיציה:</b> אם כל איבר הוא כפולה קבועה של חזקה, אין צורך במבחנים — מחשבים ישירות לפי נוסחת גיאומטרי.</p>
+        <div class="formula">$$\sum_{n=0}^{\infty}q^n=\frac{1}{1-q}\quad \text{רק אם } |q|<1$$</div>
+        <ol class="steps">
+          <li>פצלי את הטור לסכום של טורים פשוטים.</li>
+          <li>הוציאי קבועים מחוץ לסכום.</li>
+          <li>כתבי כל חלק כ־$\sum q^n$.</li>
+          <li>בדקי $|q|<1$ ואז הציבי בנוסחה.</li>
+        </ol>
+        <div class="mistake"><b>טעות נפוצה:</b> להשתמש בנוסחה גם כש־$|q|\ge 1$. קודם בודקים התכנסות.</div>
+      </article>
+
+      <article class="card topic" id="necessary">
+        <span class="tag">שאלה 1(ב)</span><span class="tag v">תנאי הכרחי</span>
+        <h3>אם האיבר הכללי לא שואף לאפס — הטור מתבדר</h3>
+        <p><b>איך מזהים?</b> מבקשים התכנסות/התבדרות, והאיבר הכללי נראה שיש לו גבול לא אפס.</p>
+        <p><b>האינטואיציה:</b> כדי שסכום אינסופי יוכל “להירגע”, האיברים חייבים לפחות להיעלם. אם הם לא נעלמים — ממשיכים להוסיף כמות משמעותית.</p>
+        <div class="formula">$$\sum a_n \text{ מתכנס } \Rightarrow \lim_{n\to\infty}a_n=0$$</div>
+        <ol class="steps">
+          <li>חשבי $\lim a_n$.</li>
+          <li>אם הגבול שונה מ־$0$ או לא קיים — הטור מתבדר.</li>
+          <li>אם הגבול $0$ — לא מסיקים התכנסות, רק ממשיכים למבחן אחר.</li>
+        </ol>
+        <div class="mistake"><b>טעות נפוצה:</b> לחשוב ש־$a_n\to0$ אומר שהטור מתכנס. זה רק תנאי הכרחי, לא מספיק.</div>
+      </article>
+
+      <article class="card topic" id="comparison">
+        <span class="tag">שאלות 1(ג), 2(א)-(ד)</span><span class="tag v">השוואות</span>
+        <h3>השוואה לטור מוכר: הרמוני, $p$-הרמוני וגיאומטרי</h3>
+        <p><b>איך מזהים?</b> יש איברים חיוביים שדומים ל־$\frac1n$, $\frac1{n^p}$ או $q^n$.</p>
+        <p><b>האינטואיציה:</b> לא חייבים לחשב את הסכום. מספיק להבין “לאיזה טור מוכר הוא מתנהג באינסוף”.</p>
+        <div class="formula">$$\sum_{n=1}^{\infty}\frac1{n^p}\begin{cases}\text{מתכנס},&p>1\\\text{מתבדר},&p\le1\end{cases}$$</div>
+        <ol class="steps">
+          <li>בדקי שהטור אי־שלילי מהזנב והלאה.</li>
+          <li>בחרי $b_n$ מוכר לפי האיבר הדומיננטי.</li>
+          <li>להשוואה גבולית: חשבי $L=\lim\frac{a_n}{b_n}$.</li>
+          <li>אם $0<L<\infty$ — שני הטורים מתנהגים אותו דבר.</li>
+          <li>להשוואה רגילה: חסמי מלמעלה כדי להוכיח התכנסות, ומלמטה כדי להוכיח התבדרות.</li>
+        </ol>
+        <div class="note"><b>כלל אצבע:</b> כדי להראות התכנסות — צריך $0\le a_n\le b_n$ ו־$\sum b_n$ מתכנס. כדי להראות התבדרות — צריך $a_n\ge b_n\ge0$ ו־$\sum b_n$ מתבדר.</div>
+      </article>
+
+      <article class="card topic" id="telescopic">
+        <span class="tag">שאלות 1(ד), 1(ה), 5</span><span class="tag v">טלסקופי</span>
+        <h3>טור טלסקופי: כשכמעט הכל מצטמצם</h3>
+        <p><b>איך מזהים?</b> יש הפרש בין ביטוי עם $n+1$ לביטוי עם $n$, למשל לוגים או ארקסינוסים.</p>
+        <p><b>האינטואיציה:</b> לא מחשבים אינסוף איברים. מחשבים סכום עד $N$, רואים מה נשאר בקצוות, ואז לוקחים גבול.</p>
+        <ol class="steps">
+          <li>כתבי $S_N=\sum_{n=1}^{N}a_n$.</li>
+          <li>פתחי את כמה האיברים הראשונים ואת האיברים האחרונים.</li>
+          <li>סמני מה מצטמצם.</li>
+          <li>השאירי רק את הקצוות.</li>
+          <li>חשבי $\lim_{N\to\infty}S_N$.</li>
+        </ol>
+        <div class="mistake"><b>טעות נפוצה:</b> לעשות “ביטולים אינסופיים” בלי לכתוב סכום חלקי. במבחן תמיד כותבים $S_N$ ואז גבול.</div>
+      </article>
+
+      <article class="card topic" id="tail">
+        <span class="tag">שאלה 2(א), 2(ג)</span><span class="tag v">זנבות</span>
+        <h3>התחלה סופית של טור לא משנה התכנסות</h3>
+        <p><b>איך מזהים?</b> נוח להתחיל מ־$n=3$ במקום $n=1$ או $n=2$, כי משם הביטוי חיובי/ברור.</p>
+        <p><b>האינטואיציה:</b> מספר סופי של איברים לא משנה אם סכום אינסופי מתפוצץ או מתכנס.</p>
+        <ol class="steps">
+          <li>הסבירי למה מותר להסתכל על הזנב.</li>
+          <li>פתרי את הטור מהאינדקס הנוח.</li>
+          <li>סיימי: לכן גם הטור המקורי מתכנס/מתבדר.</li>
+        </ol>
+      </article>
+
+      <article class="card topic" id="integralseries">
+        <span class="tag">שאלה 2(ה)</span><span class="tag v">טור של אינטגרלים</span>
+        <h3>טור שאיבריו הם אינטגרלים</h3>
+        <p><b>איך מזהים?</b> האיבר הכללי הוא $\int_0^{1/n} f(t)dt$.</p>
+        <p><b>האינטואיציה:</b> הופכים כל אינטגרל קטן לחסם פשוט. כאן משתמשים ב־$\sin t\le t$ כדי לקבל סדר גודל של $1/n^2$.</p>
+        <ol class="steps">
+          <li>בדקי שהאינטגרל מוגדר, גם אם יש בעיה בנקודה $0$.</li>
+          <li>מצאי אי־שוויון פשוט לפונקציה בתוך האינטגרל.</li>
+          <li>השתמשי במונוטוניות האינטגרל.</li>
+          <li>השווי לטור $p$-הרמוני מתכנס.</li>
+        </ol>
+        <div class="formula">$$0\le\frac{\sin^2 t}{t}\le t \quad\Rightarrow\quad 0\le \int_0^{1/n}\frac{\sin^2 t}{t}dt\le\frac1{2n^2}$$</div>
+      </article>
+
+      <article class="card topic" id="mistakes">
+        <span class="tag">שאלה 3</span><span class="tag v">טעויות אינסוף</span>
+        <h3>שאלות “מצא את הטעות”: אסור להתייחס לאינסוף כמו סכום סופי</h3>
+        <p><b>איך מזהים?</b> סטודנט מבצע ביטולים אינסופיים או מניח שסכום קיים בלי להוכיח.</p>
+        <p><b>האינטואיציה:</b> כל טור מוגדר דרך גבול של סכומים חלקיים. לפני שמזיזים, מכפילים או מצמצמים אינסוף איברים — צריך שהתהליך חוקי.</p>
+        <ol class="steps">
+          <li>בדקי אם הטור בכלל מתכנס.</li>
+          <li>בדקי אם נעשה מעבר לא חוקי מסכום אינסופי לביטול אינסופי.</li>
+          <li>כתבי את הסכום החלקי $S_N$ כדי לחשוף את הטעות.</li>
+        </ol>
+      </article>
+
+      <article class="card topic" id="proofs">
+        <span class="tag">שאלות 4–6</span><span class="tag v">הוכחות כלליות</span>
+        <h3>הוכחות בטורים: סכומים חלקיים, זנבות ודוגמאות נגדיות</h3>
+        <p><b>איך מזהים?</b> השאלה לא נותנת טור מספרי, אלא טענה כללית על סדרות וטורים.</p>
+        <p><b>האינטואיציה:</b> עוברים להגדרת הטור: $S_N=\sum_{n=1}^{N}a_n$. אם צריך להפריך — מחפשים טור שמתנהג “בדיוק הפוך” מהטענה.</p>
+        <ol class="steps">
+          <li>להוכחה: הגדירי סכומים חלקיים וחשבי גבול.</li>
+          <li>להפרכה: בחרי דוגמה נגדית קלאסית, כמו זוגות $\frac1k,-\frac1k$.</li>
+          <li>אם יש תנאי על $a+b+c=0$, נסי להפוך אותו להפרשים שיצטמצמו.</li>
+          <li>אם יש $a_{2n}$ או $a_{2n-1}+a_{2n}$, חשבי סכומים חלקיים זוגיים.</li>
+        </ol>
+      </article>
+    </section>
+
+    <section id="tasks">
+      <h2>חלק שני — משימות חזרה קצרות</h2>
+      <div class="grid">
+        <div class="task"><div class="num">1</div><div><b>כתבי את התנאי ההכרחי להתכנסות טור.</b><span>זה אמור להיראות כמו משפט קצר: אם $\sum a_n$ מתכנס אז $a_n\to0$, אבל ההפך לא נכון.</span></div></div>
+        <div class="task"><div class="num">2</div><div><b>כתבי את נוסחת הטור הגיאומטרי ואת תנאי השימוש.</b><span>לא רק הנוסחה — גם $|q|<1$. בלי התנאי זה חסר.</span></div></div>
+        <div class="task"><div class="num">3</div><div><b>קחי טור וכתבי “מה האיבר הכללי שלו?”</b><span>למשל בשאלה 1(ב): $a_n=\cosh(1/n)$. רק אחרי זה בודקים גבול/מבחן.</span></div></div>
+        <div class="task"><div class="num">4</div><div><b>כתבי תבנית מלאה לטור טלסקופי.</b><span>זה אמור להתחיל ב־$S_N=\sum_{n=1}^{N}$, פתיחת איברים, ביטולים, ואז גבול.</span></div></div>
+        <div class="task"><div class="num">5</div><div><b>תרגלי בחירת טור להשוואה גבולית.</b><span>כתבי ליד כל טור למה בחרת $1/n$, $1/n^p$ או טור גיאומטרי.</span></div></div>
+        <div class="task"><div class="num">6</div><div><b>סמני בתרגיל איפה משתמשים ב“זנב”.</b><span>זה אמור להיראות כמו: “נבדוק מ־$n=3$; מספר סופי של איברים לא משנה”.</span></div></div>
+        <div class="task"><div class="num">7</div><div><b>כתבי את מבחן ההשוואה בשני כיוונים.</b><span>התכנסות: קטן מטור מתכנס. התבדרות: גדול מטור מתבדר.</span></div></div>
+        <div class="task"><div class="num">8</div><div><b>פתרי מחדש את שאלה 2(ה) רק בשלבי פתרון, בלי חישוב מלא.</b><span>בדיקת מוגדרות, חסם $\sin t\le t$, אינטגרל, השוואה ל־$1/n^2$.</span></div></div>
+        <div class="task"><div class="num">9</div><div><b>כתבי שתי טעויות אסורות עם סכומים אינסופיים.</b><span>למשל: ביטול אינסופי בלי סכום חלקי; הנחת התכנסות לפני שהוכחה.</span></div></div>
+        <div class="task"><div class="num">10</div><div><b>כתבי דוגמה נגדית לטענה “אם $\sum a_n$ מתכנס אז $\sum a_{2n}$ מתכנס”.</b><span>זה אמור להיות זוגות: $a_{2k-1}=1/k$, $a_{2k}=-1/k$.</span></div></div>
+        <div class="task"><div class="num">11</div><div><b>הסבירי במילים למה $\sum 1/\ln n$ מתבדר.</b><span>כי עבור $n\ge3$, מתקיים $\ln n\le n$, ולכן $1/\ln n\ge1/n$.</span></div></div>
+        <div class="task"><div class="num">12</div><div><b>כתבי פתרון אחד מחדש בצורה מסודרת למבחן.</b><span>בחרי תרגיל, כתבי נתון → כלי → חישוב → מסקנה. בלי קפיצות.</span></div></div>
+      </div>
+    </section>
+
+    <section id="official">
+      <h2>חלק שלישי — פתרונות רשמיים מתורגמים ומסודרים</h2>
+
+      <details open>
+        <summary>שאלה 1 — חישוב ערך טור או הוכחת התבדרות</summary>
+        <div class="solution">
+          <h4>1(א)</h4>
+          <p>נפרק את הטור:</p>
+          <div class="formula">$$\sum_{n=0}^{\infty}\left((-1)^n\cdot\frac{2^{2n+1}}{5^n}+\frac{(-1)^n}{5^n}\right)=2\sum_{n=0}^{\infty}\left(-\frac45\right)^n+\sum_{n=0}^{\infty}\left(\frac15\right)^n$$</div>
+          <p>לכן:</p>
+          <div class="formula">$$2\cdot\frac{1}{1+\frac45}+\frac{1}{1-\frac15}=\frac{10}{9}+\frac54=\frac{85}{36}$$</div>
+          <p class="ans">תשובה: הטור מתכנס ושווה $\frac{85}{36}$.</p>
+          <h4>1(ב)</h4>
+          <p>נחשב את גבול האיבר הכללי:</p>
+          <div class="formula">$$\lim_{n\to\infty}\cosh\left(\frac1n\right)=\lim_{x\to0}\cosh(x)=\lim_{x\to0}\frac{e^x+e^{-x}}2=1$$</div>
+          <p class="ans">הגבול אינו $0$, לכן הטור מתבדר לפי התנאי ההכרחי.</p>
+          <h4>1(ג)</h4>
+          <p>הטור אי־שלילי. נשווה לטור ההרמוני:</p>
+          <div class="formula">$$L=\lim_{n\to\infty}\frac{\frac{n^2-1}{n^3}}{\frac1n}=\lim_{n\to\infty}\left(1-\frac1{n^2}\right)=1$$</div>
+          <p class="ans">לכן הטור מתבדר יחד עם הטור ההרמוני.</p>
+          <p>דרך נוספת: $\frac{n^2-1}{n^3}=\frac1n-\frac1{n^3}$, כלומר טור הרמוני מתבדר פחות טור מתכנס — ולכן מתבדר.</p>
+          <h4>1(ד)</h4>
+          <p>נשתמש בזהות $\ln(x/y)=\ln x-\ln y$:</p>
+          <div class="formula">$$\sum_{n=1}^{N}\ln\left(\frac{2n+3}{2n+1}\right)=\sum_{n=1}^{N}\left[\ln(2n+3)-\ln(2n+1)\right]$$</div>
+          <p>זהו טור טלסקופי, ולכן:</p>
+          <div class="formula">$$\lim_{N\to\infty}\left[\ln(2N+3)-\ln3\right]=\infty$$</div>
+          <p class="ans">הטור מתבדר.</p>
+          <h4>1(ה)</h4>
+          <p>נכתוב סכום חלקי:</p>
+          <div class="formula">$$\sum_{n=1}^{N}\left[\arcsin\left(\frac1{\sqrt{n+1}}\right)-\arcsin\left(\frac1{\sqrt n}\right)\right]$$</div>
+          <p>כל האיברים האמצעיים מצטמצמים, ונשאר:</p>
+          <div class="formula">$$\lim_{N\to\infty}\left[\arcsin\left(\frac1{\sqrt{N+1}}\right)-\arcsin(1)\right]=0-\frac\pi2=-\frac\pi2$$</div>
+          <p class="ans">תשובה: $-\frac\pi2$.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>שאלה 2 — קביעת התכנסות/התבדרות של טורים</summary>
+        <div class="solution">
+          <h4>2(א)</h4>
+          <p>עבור $n\ge3$ מתקיים $\ln n\le n$, ולכן:</p>
+          <div class="formula">$$\sum_{n=3}^{\infty}\frac1{\ln n}\ge\sum_{n=3}^{\infty}\frac1n=\infty$$</div>
+          <p class="ans">לכן הטור מתבדר, וגם הטור המקורי מ־$n=2$ מתבדר כי יש לו זנב מתבדר.</p>
+          <h4>2(ב)</h4>
+          <p>נרציונליזציה:</p>
+          <div class="formula">$$\left(\sqrt{n+2}-\sqrt n\right)^3=\left(\frac{2}{\sqrt{n+2}+\sqrt n}\right)^3=\frac8{(\sqrt{n+2}+\sqrt n)^3}$$</div>
+          <p>השוואה גבולית עם $\frac1{n^{3/2}}$:</p>
+          <div class="formula">$$\lim_{n\to\infty}\frac{\frac8{(\sqrt{n+2}+\sqrt n)^3}}{\frac1{n^{3/2}}}=\lim_{n\to\infty}\frac8{(\sqrt{1+2/n}+1)^3}=1$$</div>
+          <p class="ans">הטור מתכנס יחד עם הטור $p$-הרמוני עבור $p=\frac32$.</p>
+          <h4>2(ג)</h4>
+          <p>לפי מבחן ההשוואה, עבור הזנב $n\ge3$:</p>
+          <div class="formula">$$\frac1{(n+e)^n-e^n}\le\frac1{(2e)^n-e^n}\le\frac1{e^n}$$</div>
+          <p class="ans">הטור מתכנס כי הזנב חסום על ידי טור גיאומטרי מתכנס.</p>
+          <h4>2(ד)</h4>
+          <p>קודם מראים שהטור חיובי ומוגדר: עבור $n\ge2$, מתקיים $\frac\pi2-\frac1n>\frac\pi4$, ולכן $\tan(\frac\pi2-\frac1n)>1$, ומכאן הלוג חיובי.</p>
+          <p>השוואה גבולית עם $\frac1{\ln n}$:</p>
+          <div class="formula">$$\lim_{n\to\infty}\frac{\frac1{\ln(\tan(\frac\pi2-\frac1n))}}{\frac1{\ln n}}=1$$</div>
+          <p class="ans">לכן הטור מתבדר יחד עם $\sum\frac1{\ln n}$.</p>
+          <p>דרך חלופית: משתמשים ב־$\tan(\frac\pi2-\frac1n)=\cot(1/n)\le n$, ולכן $\ln(\tan(\frac\pi2-\frac1n))\le\ln n$, ומקבלים איבר גדול מ־$1/\ln n$.</p>
+          <h4>2(ה)</h4>
+          <p>קודם מוכיחים שהאיבר מוגדר: לפונקציה $\frac{\sin^2 t}{t}$ יש אי־רציפות סליקה ב־$0$, כי הגבול שם הוא $0$.</p>
+          <p>כיוון ש־$\sin t\le t$ עבור $t>0$:</p>
+          <div class="formula">$$0\le\int_0^{1/n}\frac{\sin^2 t}{t}dt\le\int_0^{1/n}t\,dt=\frac1{2n^2}$$</div>
+          <p class="ans">לכן הטור מתכנס לפי השוואה ל־$\frac12\sum\frac1{n^2}$.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>שאלה 3 — מציאת טעויות בפתרונות של סטודנט</summary>
+        <div class="solution">
+          <h4>3(א)</h4>
+          <p>הסטודנט טען ש־$\int_1^{\infty}\frac{dx}{x}=0$ על ידי ביטולים אינסופיים. הטעויות:</p>
+          <ol class="steps">
+            <li>הוא לא הסביר למה מותר לפרק את האינטגרל הלא־אמיתי לסכום אינסופי. זה מניח מראש התכנסות ולכן מעגלי.</li>
+            <li>צריך לשים סוגריים על כל אינטגרל: $(\ln2-\ln1)+(\ln3-\ln2)+\cdots$.</li>
+            <li>סכום אינסופי מוגדר כגבול של סכומים חלקיים:</li>
+          </ol>
+          <div class="formula">$$\sum_{n=1}^{\infty}[\ln(n+1)-\ln n]=\lim_{N\to\infty}[\ln(N+1)-\ln1]=\infty$$</div>
+          <p class="ans">המסקנה הנכונה: האינטגרל מתבדר.</p>
+          <h4>3(ב)</h4>
+          <p>בטור $\sum (1/2)^n$ השיטה חוקית כי הטור מתכנס. אבל בטור $\sum 2^n$ הסטודנט מניח שקיים סכום $s$, למרות שהטור מתבדר.</p>
+          <p class="ans">הטעות: להפעיל אלגברה על סכום אינסופי לפני שהוכחה התכנסות.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>שאלה 4 — סדרה בזוגות $a_k,-a_k$</summary>
+        <div class="solution">
+          <p>נתונה סדרה $b_n$ כך ש־$b_{2k-1}=a_k$ ו־$b_{2k}=-a_k$.</p>
+          <p><b>כיוון ראשון:</b> אם $\sum b_n$ מתכנס, אז לפי התנאי ההכרחי $b_n\to0$.</p>
+          <p><b>כיוון שני:</b> אם $b_n\to0$, אז גם $a_k\to0$. נגדיר סכומים חלקיים:</p>
+          <div class="formula">$$S_N=\sum_{n=1}^{N}b_n$$</div>
+          <p>עבור סכומים זוגיים:</p>
+          <div class="formula">$$S_{2N}=a_1-a_1+\cdots+a_N-a_N=0$$</div>
+          <p>ועבור סכומים אי־זוגיים:</p>
+          <div class="formula">$$S_{2N-1}=S_{2N}+a_N\to0$$</div>
+          <p class="ans">לכן $S_N\to0$, והטור מתכנס ושווה $0$.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>שאלה 5 — טור שנבנה משלושה איברים עוקבים</summary>
+        <div class="solution">
+          <p>נתון $a+b+c=0$, ולכן $c=-a-b$. לכן:</p>
+          <div class="formula">$$b_n=a a_n+b a_{n+1}+c a_{n+2}=a(a_n-a_{n+2})+b(a_{n+1}-a_{n+2})$$</div>
+          <p>כעת מסכמים עד $N$ ומקבלים טלסקופיות:</p>
+          <div class="formula">$$\sum_{n=1}^{N}b_n=a(a_1+a_2-a_{N+1}-a_{N+2})+b(a_2-a_{N+2})$$</div>
+          <p>כיוון ש־$a_n\to0$, גם $a_{N+1},a_{N+2}\to0$.</p>
+          <p class="ans">לכן הטור מתכנס ושווה $$a(a_1+a_2)+b a_2.$$</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>שאלה 6 — הוכח או הפרך</summary>
+        <div class="solution">
+          <h4>6(א)</h4>
+          <p>הטענה נכונה. אם $0\le a_n<b_n$ לכל $n$ ו־$\sum b_n<\infty$, אז מהשוואה $\sum_{n=2}^{\infty}a_n\le\sum_{n=2}^{\infty}b_n$. בנוסף $a_1<b_1$, ולכן:</p>
+          <div class="formula">$$\sum_{n=1}^{\infty}a_n<\sum_{n=1}^{\infty}b_n$$</div>
+          <h4>6(ב)</h4>
+          <p>הטענה נכונה. נניח בשלילה ש־$\sum a_n$ מתכנס, ולכן $S_n\to s$. אם $\sum b_n$ מתכנס, אז $b_n\to0$. אבל:</p>
+          <div class="formula">$$0=\lim b_n=\lim(S_n^2-2S_{n-1}+3)=s^2-2s+3$$</div>
+          <p>למשוואה $s^2-2s+3=0$ אין פתרונות ממשיים, סתירה.</p>
+          <h4>6(ג)</h4>
+          <p>הטענה שקרית. נגדיר:</p>
+          <div class="formula">$$a_{2k-1}=\frac1k,\qquad a_{2k}=-\frac1k$$</div>
+          <p>לפי שאלה 4, $\sum a_n$ מתכנס, אבל:</p>
+          <div class="formula">$$\sum_{n=1}^{\infty}a_{2n}=\sum_{n=1}^{\infty}\left(-\frac1n\right)$$</div>
+          <p class="ans">וזה מתבדר.</p>
+          <h4>6(ד)</h4>
+          <p>הטענה נכונה. אם $\sum a_n=s$, אז $S_N\to s$, ובפרט $S_{2N}\to s$.</p>
+          <div class="formula">$$\sum_{n=1}^{\infty}\frac{a_{2n-1}+a_{2n}}2=\lim_{N\to\infty}\frac12S_{2N}=\frac12s$$</div>
+          <p class="ans">לכן הטור מתכנס ושווה חצי מסכום הטור המקורי.</p>
+        </div>
+      </details>
+    </section>
+  </main>
+</div>
+</body>
+</html>

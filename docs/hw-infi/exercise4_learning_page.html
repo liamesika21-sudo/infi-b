@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>חדו״א 2 — מטלה 4 | דף למידה חכם</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(','\\)'], ['$', '$']], displayMath: [['\\[','\\]']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <style>
+    :root{
+      --bg:#f6f8ff;
+      --card:#ffffff;
+      --ink:#182033;
+      --muted:#657089;
+      --line:#e3e8f6;
+      --blue:#3157d8;
+      --violet:#7457e8;
+      --soft:#eef2ff;
+      --soft2:#f4f0ff;
+      --danger:#c03957;
+      --ok:#20805f;
+      --shadow:0 12px 30px rgba(31,45,90,.08);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:'Assistant',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+      background:radial-gradient(circle at top right,#eef2ff 0,#f6f8ff 42%,#fbfcff 100%);
+      color:var(--ink);
+      font-size:14px;
+      line-height:1.48;
+    }
+    a{color:inherit;text-decoration:none}
+    .layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:18px;max-width:1260px;margin:0 auto;padding:18px}
+    aside{position:sticky;top:14px;height:calc(100vh - 28px);overflow:auto;background:rgba(255,255,255,.82);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:14px}
+    .brand{display:flex;align-items:center;gap:9px;margin-bottom:12px}
+    .logo{width:34px;height:34px;border-radius:11px;background:linear-gradient(135deg,var(--blue),var(--violet));color:white;display:grid;place-items:center;font-weight:800}
+    .brand h2{margin:0;font-size:15px;line-height:1.15}
+    .brand p{margin:1px 0 0;color:var(--muted);font-size:11px}
+    nav .nav-title{font-size:11px;color:var(--muted);font-weight:800;margin:14px 2px 6px;text-transform:uppercase;letter-spacing:.03em}
+    nav a{display:block;padding:7px 9px;border-radius:11px;color:#303a56;font-size:12.5px;margin:2px 0;border:1px solid transparent}
+    nav a:hover{background:var(--soft);border-color:#dbe3ff;color:var(--blue)}
+    main{min-width:0}
+    .hero{background:linear-gradient(135deg,#ffffff,#f4f6ff);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);padding:22px 24px;margin-bottom:16px;position:relative;overflow:hidden}
+    .hero:before{content:"";position:absolute;inset:auto -70px -80px auto;width:240px;height:240px;background:radial-gradient(circle,rgba(116,87,232,.18),transparent 65%)}
+    .tag{display:inline-flex;gap:7px;align-items:center;background:var(--soft);border:1px solid #dfe5ff;color:var(--blue);font-weight:800;border-radius:999px;padding:5px 10px;font-size:12px;margin-bottom:10px}
+    h1{font-size:24px;margin:0 0 6px;letter-spacing:-.02em}
+    .hero p{margin:0;color:var(--muted);max-width:820px}
+    .quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
+    .quick{background:white;border:1px solid var(--line);border-radius:14px;padding:10px}
+    .quick b{display:block;font-size:13px;color:#29344f}.quick span{font-size:12px;color:var(--muted)}
+    section{margin:14px 0}
+    .section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;margin:0 0 9px}
+    .section-title h2{font-size:18px;margin:0}.section-title p{margin:0;color:var(--muted);font-size:12px}
+    .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 8px 22px rgba(31,45,90,.055);padding:14px}
+    .card h3{font-size:15.5px;margin:0 0 8px;color:#1d2944}
+    .mini{display:grid;gap:7px}
+    .row{border-radius:13px;background:#fbfcff;border:1px solid #edf1fb;padding:8px 9px}
+    .row b{color:var(--blue);font-size:12.5px;margin-left:4px}.row p{display:inline;margin:0;color:#35405b}
+    .steps{margin:6px 0 0;padding:0 20px 0 0}.steps li{margin:3px 0}
+    .formula{direction:ltr;text-align:center;background:linear-gradient(135deg,#f8faff,#f2f0ff);border:1px solid #e5e8ff;border-radius:13px;padding:8px;margin:8px 0;font-size:13px;overflow-x:auto}
+    .warn{border-color:#ffe2e8;background:#fff8fa}.warn b{color:var(--danger)}
+    .ok{border-color:#d8f0e8;background:#f7fffc}.ok b{color:var(--ok)}
+    .tasks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    .task{background:white;border:1px solid var(--line);border-radius:15px;padding:10px 12px}
+    .task h3{margin:0 0 6px;font-size:14px;color:#233052}.task ul{margin:0;padding:0 20px 0 0}.task li{margin:4px 0}.task small{display:block;color:var(--muted);font-size:11.5px;margin-top:1px}
+    details{background:white;border:1px solid var(--line);border-radius:15px;margin:8px 0;box-shadow:0 5px 16px rgba(31,45,90,.045);overflow:hidden}
+    summary{cursor:pointer;list-style:none;padding:11px 13px;font-weight:800;color:#233052;background:linear-gradient(90deg,#fff,#f6f8ff)}
+    summary::-webkit-details-marker{display:none}
+    summary:before{content:"+";display:inline-grid;place-items:center;width:20px;height:20px;margin-left:8px;border-radius:7px;background:var(--soft);color:var(--blue);font-weight:900}
+    details[open] summary:before{content:"−"}
+    .solution-body{padding:12px 14px;border-top:1px solid var(--line);color:#2f3a56}
+    .solution-body h4{margin:8px 0 5px;font-size:13.5px;color:var(--violet)}
+    .solution-body p{margin:6px 0}.solution-body ul{margin:6px 0;padding:0 19px 0 0}.solution-body li{margin:3px 0}
+    .note-box{background:#fbfcff;border:1px solid #e7ebf7;border-radius:15px;padding:11px;margin-top:9px}
+    .print-tip{font-size:11.5px;color:var(--muted);margin-top:10px}
+    code{direction:ltr;background:#f0f3ff;border:1px solid #dfe5ff;border-radius:7px;padding:1px 5px}
+    @media (max-width:900px){.layout{display:block;padding:12px}aside{position:relative;height:auto;margin-bottom:12px}.quick-grid,.cards,.tasks{grid-template-columns:1fr}.hero{padding:18px}}
+    @media print{body{background:white}.layout{display:block;padding:0}aside{display:none}.hero,.card,.task,details{box-shadow:none;break-inside:avoid}details{page-break-inside:avoid}summary{background:white}.solution-body{display:block}details:not([open]) .solution-body{display:block}.hero{border:none;padding:0;margin-bottom:10px}.cards,.tasks{grid-template-columns:1fr 1fr}a[href]::after{content:""}}
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside>
+      <div class="brand">
+        <div class="logo">∫</div>
+        <div><h2>מטלה 4 — חדו״א 2</h2><p>דף למידה למבחן</p></div>
+      </div>
+      <nav>
+        <div class="nav-title">פתיחה</div>
+        <a href="#top">סקירה קצרה</a>
+        <div class="nav-title">תבניות מרכזיות</div>
+        <a href="#patterns">כל התבניות</a>
+        <a href="#p1">פיצול אינטגרל לפי תחומים</a>
+        <a href="#p2">זוגיות וסימטריה</a>
+        <a href="#p3">אינטגרציה בחלקים</a>
+        <a href="#p4">הצבה עם גבולות</a>
+        <a href="#p5">חסימת אינטגרל בעזרת אי־שוויון</a>
+        <a href="#p6">פונקציית אינטגרל + כלל השרשרת</a>
+        <a href="#p7">גבול של סכומי רימן</a>
+        <div class="nav-title">תרגול פעיל</div>
+        <a href="#tasks">משימות חזרה קצרות</a>
+        <div class="nav-title">פתרונות רשמיים</div>
+        <a href="#solutions">כל הפתרונות</a>
+        <a href="#s1">שאלה 1</a>
+        <a href="#s2">שאלה 2</a>
+        <a href="#s3">שאלה 3</a>
+        <a href="#s4">שאלה 4</a>
+      </nav>
+      <div class="print-tip">טיפ: להדפסה נקייה — פתחי בדפדפן ולחצי Cmd/Ctrl + P.</div>
+    </aside>
+
+    <main id="top">
+      <header class="hero">
+        <span class="tag">Calculus II · Homework 4 · Definite Integrals</span>
+        <h1>דף תבניות, אינטואיציות ופתרונות רשמיים — מטלה 4</h1>
+        <p>העמוד הזה הופך את פתרונות מטלה 4 לדף למידה חכם: איך לזהות את סוג השאלה, מה הכלי המתאים, מה התבנית לפתרון, איפה משתמשים במשפטים, ומה לתרגל בפועל לפני מבחן.</p>
+        <div class="quick-grid">
+          <div class="quick"><b>הנושא המרכזי</b><span>אינטגרלים מסוימים, חסמים, פונקציית שטח, סכומי רימן</span></div>
+          <div class="quick"><b>כלים שחוזרים</b><span>הדבקה, זוגיות, הצבה, חלקים, ניוטון־לייבניץ</span></div>
+          <div class="quick"><b>מה לזהות מהר</b><span>מתי לפצל, מתי לחסום, מתי להפוך לסכום רימן</span></div>
+          <div class="quick"><b>טעות מסוכנת</b><span>לשנות משתנה בלי לשנות גבולות או לשכוח סימן</span></div>
+        </div>
+      </header>
+
+      <section id="patterns">
+        <div class="section-title">
+          <h2>חלק ראשון — תבניות ואינטואיציות לפי נושאים</h2>
+          <p>קצר, פרקטי, למבחן.</p>
+        </div>
+        <div class="cards">
+          <article class="card" id="p1">
+            <h3>1. פיצול אינטגרל לפי תחומים / למת ההדבקה</h3>
+            <div class="mini">
+              <div class="row"><b>איך מזהים?</b><p>יש פונקציה שמוגדרת על ידי מינימום/מקסימום/ערך מוחלט/סימן, ולכן הביטוי משתנה בין תחומים.</p></div>
+              <div class="row"><b>האינטואיציה:</b><p>האינטגרל מחשב שטח; אם הפונקציה מתנהגת אחרת בכל קטע — מחשבים כל קטע בנפרד ומחברים.</p></div>
+              <div class="formula">\[\int_a^b f(x)dx=\int_a^c f(x)dx+\int_c^b f(x)dx\]</div>
+              <div class="row"><b>תבנית פתרון:</b><ol class="steps"><li>מצאי נקודות שבהן הביטוי משתנה.</li><li>כתבי את הפונקציה בכל קטע.</li><li>פצלי את האינטגרל לפי הקטעים.</li><li>חשבי כל אינטגרל בעזרת קדומה.</li></ol></div>
+              <div class="row warn"><b>טעות נפוצה:</b><p>לא לבדוק מי באמת המינימום/מקסימום בכל תחום.</p></div>
+            </div>
+          </article>
+
+          <article class="card" id="p2">
+            <h3>2. שימוש בזוגיות וסימטריה</h3>
+            <div class="mini">
+              <div class="row"><b>איך מזהים?</b><p>גבולות סימטריים כמו \([-a,a]\), ויש סיכוי שהפונקציה זוגית או אי־זוגית.</p></div>
+              <div class="row"><b>האינטואיציה:</b><p>אם שני הצדדים של הגרף זהים — מספיק לחשב חצי ולהכפיל. אם הצדדים הפוכים — השטחים מתבטלים.</p></div>
+              <div class="formula">\[f(-x)=f(x)\Rightarrow \int_{-a}^{a}f(x)dx=2\int_0^a f(x)dx\]</div>
+              <div class="formula">\[f(-x)=-f(x)\Rightarrow \int_{-a}^{a}f(x)dx=0\]</div>
+              <div class="row"><b>תבנית פתרון:</b><ol class="steps"><li>בדקי את \(f(-x)\).</li><li>קבעי זוגית / אי־זוגית / לא זה ולא זה.</li><li>החליפי את האינטגרל לפי הכלל.</li></ol></div>
+              <div class="row warn"><b>טעות נפוצה:</b><p>להשתמש בזוגיות רק בגלל שהגבולות סימטריים, בלי לבדוק את הפונקציה.</p></div>
+            </div>
+          </article>
+
+          <article class="card" id="p3">
+            <h3>3. אינטגרציה בחלקים באינטגרל מסוים</h3>
+            <div class="mini">
+              <div class="row"><b>איך מזהים?</b><p>יש פונקציה כמו \(\ln\), \(\arccos\), \(\arctan\), או מכפלה שבה נגזרת של חלק אחד נעשית פשוטה יותר.</p></div>
+              <div class="row"><b>האינטואיציה:</b><p>מעבירים את הנגזרת מהחלק “הקשה” לחלק שיותר נוח לגזור.</p></div>
+              <div class="formula">\[\int_a^b u'(x)v(x)dx=[u(x)v(x)]_a^b-\int_a^b u(x)v'(x)dx\]</div>
+              <div class="row"><b>תבנית פתרון:</b><ol class="steps"><li>בחרי מי יהיה \(v\) — בדרך כלל \(\ln\), \(\arccos\), \(\arctan\).</li><li>בחרי \(u'=1\) אם אין מכפלה ברורה.</li><li>הציבי בנוסחת חלקים.</li><li>פתרי את האינטגרל החדש.</li></ol></div>
+              <div class="row warn"><b>טעות נפוצה:</b><p>לשכוח את איבר הגבול \([uv]_a^b\).</p></div>
+            </div>
+          </article>
+
+          <article class="card" id="p4">
+            <h3>4. הצבה באינטגרל מסוים</h3>
+            <div class="mini">
+              <div class="row"><b>איך מזהים?</b><p>יש ביטוי פנימי ונגזרת שלו לידו, למשל \(t=\cos x\), או הצבה טריגונומטרית כמו \(t=\arccos x\).</p></div>
+              <div class="row"><b>האינטואיציה:</b><p>מחליפים “שפה” כדי שהאינטגרל יהיה מוכר יותר.</p></div>
+              <div class="formula">\[t=g(x),\quad dt=g'(x)dx\]</div>
+              <div class="row"><b>תבנית פתרון:</b><ol class="steps"><li>בחרי \(t\).</li><li>חשבי \(dt\).</li><li>שני גם את גבולות האינטגרל.</li><li>חשבי ב־\(t\), בלי לחזור ל־\(x\).</li></ol></div>
+              <div class="row warn"><b>טעות נפוצה:</b><p>לעשות הצבה ולשכוח להחליף את הגבולות.</p></div>
+            </div>
+          </article>
+
+          <article class="card" id="p5">
+            <h3>5. חסימת אינטגרל בעזרת אי־שוויון</h3>
+            <div class="mini">
+              <div class="row"><b>איך מזהים?</b><p>מבקשים להוכיח ש־אינטגרל נמצא בין שני ביטויים, לא לחשב אותו בדיוק.</p></div>
+              <div class="row"><b>האינטואיציה:</b><p>אם הפונקציה בתוך האינטגרל נמצאת בין שתי פונקציות, גם השטח שלה נמצא בין השטחים שלהן.</p></div>
+              <div class="formula">\[g(x)\le f(x)\le h(x)\Rightarrow \int_a^b g\le \int_a^b f\le \int_a^b h\]</div>
+              <div class="row"><b>תבנית פתרון:</b><ol class="steps"><li>מצאי חסם על גורם אחד בביטוי.</li><li>ודאי שהגורם שמכפילים בו אי־שלילי.</li><li>כפלי באי־שוויון.</li><li>בצעי אינטגרציה לכל הצדדים.</li></ol></div>
+              <div class="row warn"><b>טעות נפוצה:</b><p>לכפול באיבר בלי לבדוק שהוא לא שלילי; אם הוא שלילי כיוון האי־שוויון מתהפך.</p></div>
+            </div>
+          </article>
+
+          <article class="card" id="p6">
+            <h3>6. פונקציית אינטגרל + כלל השרשרת</h3>
+            <div class="mini">
+              <div class="row"><b>איך מזהים?</b><p>האינטגרל הוא מהצורה \(G(x)=\int_a^{\phi(x)} f(s)ds\), או מופיע גבול עם אינטגרל שתלוי ב־\(x\).</p></div>
+              <div class="row"><b>האינטואיציה:</b><p>אינטגרל עם גבול משתנה הוא פונקציה שצוברת שטח; הנגזרת מחזירה את הפונקציה בקצה כפול נגזרת הקצה.</p></div>
+              <div class="formula">\[G(x)=\int_a^{\phi(x)}f(s)ds\quad\Rightarrow\quad G'(x)=f(\phi(x))\phi'(x)\]</div>
+              <div class="row"><b>תבנית פתרון:</b><ol class="steps"><li>הגדירי \(h(y)=\int_a^y f(s)ds\).</li><li>כתבי \(G(x)=h(\phi(x))\).</li><li>השתמשי במשפט היסודי של החדו״א.</li><li>הפעילי כלל השרשרת.</li></ol></div>
+              <div class="row warn"><b>טעות נפוצה:</b><p>לכתוב רק \(f(\phi(x))\) ולשכוח את \(\phi'(x)\).</p></div>
+            </div>
+          </article>
+
+          <article class="card" id="p7">
+            <h3>7. זיהוי גבול כסכום רימן</h3>
+            <div class="mini">
+              <div class="row"><b>איך מזהים?</b><p>רואים ביטוי מהצורה \(\frac{1}{n}\sum_{k=1}^n f(\frac{k}{n})\).</p></div>
+              <div class="row"><b>האינטואיציה:</b><p>הסכום מחלק את הקטע \([0,1]\) למלבנים דקים; כשה־\(n\) גדל, הסכום נהיה האינטגרל.</p></div>
+              <div class="formula">\[\lim_{n\to\infty}\frac1n\sum_{k=1}^n f\left(\frac{k}{n}\right)=\int_0^1 f(x)dx\]</div>
+              <div class="row"><b>תבנית פתרון:</b><ol class="steps"><li>זהי את הפונקציה \(f(x)\).</li><li>זהי את הקטע — לרוב \([0,1]\).</li><li>כתבי חלוקה אחידה \(x_k=\frac{k}{n}\).</li><li>הסיקי שהגבול הוא אינטגרל.</li><li>חשבי את האינטגרל.</li></ol></div>
+              <div class="row warn"><b>טעות נפוצה:</b><p>לראות סכום ולהתחיל לפשט אלגברית במקום לזהות שזה סכום רימן.</p></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="tasks">
+        <div class="section-title">
+          <h2>חלק שני — משימות חזרה קצרות</h2>
+          <p>לא “לחזור על החומר” — לבצע פעולות מדויקות.</p>
+        </div>
+        <div class="tasks">
+          <div class="task"><h3>משימה 1 — הדבקה ופונקציות חלקיות</h3><ul><li>כתבי את למת ההדבקה בנוסחה.<small>אמור להיראות כמו פיצול \(\int_a^b\) לשני אינטגרלים סביב נקודה \(c\).</small></li><li>קחי ביטוי עם \(\min\) או \(\max\) וכתבי מי נבחר בכל קטע.<small>טבלה קטנה: תחום → הפונקציה בפועל.</small></li><li>כתבי טעות אחת שיכולה לקרות בפיצול.<small>לדוגמה: לבחור את המינימום הלא נכון.</small></li></ul></div>
+          <div class="task"><h3>משימה 2 — זוגיות</h3><ul><li>כתבי את שני הכללים: זוגית ואי־זוגית.<small>שורה אחת לכל כלל עם \(f(-x)\).</small></li><li>בדקי פונקציה אחת על ידי חישוב \(f(-x)\).<small>לא לנחש מהגרף — להציב.</small></li><li>כתבי מתי אסור להשתמש בסימטריה.<small>כשהגבולות לא סימטריים או כשהפונקציה לא זוגית/אי־זוגית.</small></li></ul></div>
+          <div class="task"><h3>משימה 3 — אינטגרציה בחלקים</h3><ul><li>כתבי את נוסחת החלקים לאינטגרל מסוים.<small>כולל האיבר \([uv]_a^b\).</small></li><li>פתרי שלד בלבד עבור \(\int_0^1\ln(1+x^2)dx\).<small>רק בחירת \(u',u,v,v'\), בלי חישוב מלא.</small></li><li>סמני איפה מופיע מינוס בנוסחה.<small>כדי לא לאבד סימן.</small></li></ul></div>
+          <div class="task"><h3>משימה 4 — הצבה עם גבולות</h3><ul><li>כתבי שלבי הצבה מסודרים.<small>\(t=\dots\), \(dt=\dots\), גבולות חדשים, אינטגרל חדש.</small></li><li>בתרגיל \(\int_0^{\pi/4}\tan xdx\), כתבי את הגבולות החדשים עבור \(t=\cos x\).<small>אמור להופיע מעבר מ־\(x\) ל־\(t\).</small></li><li>כתבי את הסימן שנוצר מהנגזרת.<small>כאן \(dt=-\sin xdx\), אז צריך מינוס.</small></li></ul></div>
+          <div class="task"><h3>משימה 5 — חסימת אינטגרלים</h3><ul><li>כתבי את משפט המונוטוניות של האינטגרל.<small>אם \(g\le f\le h\), אז גם האינטגרלים באותו סדר.</small></li><li>הסבירי למה מותר להכפיל ב־\(\tan x\) בשאלה 2.<small>כי בקטע הנתון \(\tan x\ge0\).</small></li><li>כתבי איפה משתמשים בנתון \(\pi<4\).<small>כדי להחליף \(e^{\pi/4}\) בחסם פשוט יותר.</small></li></ul></div>
+          <div class="task"><h3>משימה 6 — פונקציית אינטגרל</h3><ul><li>כתבי את הנוסחה \(G'(x)\).<small>חייב להופיע \(f(\phi(x))\phi'(x)\).</small></li><li>כתבי מה צריך להניח כדי להשתמש במשפט.<small>רציפות של \(f\) בנקודת הקצה וגזירות של \(\phi\).</small></li><li>פתרי שלד לגבול עם \(\int_0^{x^2}\ln(1+\sqrt t)dt\).<small>לזהות שזה \(0/0\), ואז לופיטל עם הנגזרת של המונה.</small></li></ul></div>
+          <div class="task"><h3>משימה 7 — סכומי רימן</h3><ul><li>כתבי את הצורה הכללית של סכום רימן על \([0,1]\).<small>\(\sum f(k/n)\cdot 1/n\).</small></li><li>זהי את \(f(x)\) בשאלה 4.<small>כאן \(f(x)=\frac{1}{1+x^2}\).</small></li><li>חשבי את האינטגרל הסופי.<small>אמור להסתיים ב־\([\arctan x]_0^1=\pi/4\).</small></li></ul></div>
+          <div class="task"><h3>משימה 8 — כתיבה למבחן</h3><ul><li>בחרי שאלה אחת וכתבי מחדש פתרון מלא ומסודר.<small>שורה לכל כלי: זיהוי, משפט, חישוב, מסקנה.</small></li><li>סמני בצבע איפה השתמשת במשפט ולא רק בחישוב.<small>למשל: הדבקה, מונוטוניות אינטגרל, משפט יסודי.</small></li><li>כתבי בסוף “לכן...” עם תשובה סופית ברורה.<small>לא להשאיר חישוב תלוי באוויר.</small></li></ul></div>
+        </div>
+      </section>
+
+      <section id="solutions">
+        <div class="section-title">
+          <h2>חלק שלישי — פתרונות רשמיים מתורגמים ומסודרים</h2>
+          <p>הפתרונות מתקפלים כדי שהעמוד יישאר קומפקטי.</p>
+        </div>
+
+        <details id="s1" open>
+          <summary>שאלה 1 — חישוב אינטגרלים מסוימים</summary>
+          <div class="solution-body">
+            <h4>1(א) חשבו \(\int_{-1}^{1}\min\{e^x,e^{-x},|\operatorname{sign}(x)|\}\,dx\)</h4>
+            <p>לפי למת ההדבקה:</p>
+            <div class="formula">\[\int_{-1}^{1}\min\{e^x,e^{-x},|\operatorname{sign}(x)|\}\,dx=\int_{-1}^{0}e^x\,dx+\int_0^1e^{-x}\,dx\]</div>
+            <div class="formula">\[=[e^x]_{-1}^{0}-[e^{-x}]_0^1=1-\frac1e-\left(\frac1e-1\right)=2-\frac{2}{e}\]</div>
+            <h4>פתרון חלופי — זוגיות</h4>
+            <p>נגדיר \(f(x)=\min\{e^x,e^{-x},|\operatorname{sign}(x)|\}\). מתקיים:</p>
+            <div class="formula">\[f(-x)=\min\{e^{-x},e^x,|\operatorname{sign}(-x)|\}=f(x)\]</div>
+            <p>לכן \(f\) זוגית, ולכן:</p>
+            <div class="formula">\[\int_{-1}^{1}f(x)dx=2\int_0^1e^{-x}dx=2[-e^{-x}]_0^1=2-\frac2e\]</div>
+
+            <h4>1(ב) חשבו \(\int_0^1\ln(1+x^2)dx\)</h4>
+            <p>נשתמש באינטגרציה בחלקים:</p>
+            <div class="formula">\[\int_0^1\ln(1+x^2)dx=[x\ln(1+x^2)]_0^1-\int_0^1\frac{2x^2}{1+x^2}dx\]</div>
+            <p>נפרק:</p>
+            <div class="formula">\[\frac{2x^2}{1+x^2}=\frac{2(1+x^2)}{1+x^2}-\frac{2}{1+x^2}=2-\frac{2}{1+x^2}\]</div>
+            <div class="formula">\[=\ln2-2\int_0^1dx+2\int_0^1\frac{dx}{1+x^2}=\ln2-2+\frac{\pi}{2}\]</div>
+
+            <h4>1(ג) חשבו \(\int_0^{1/2}\arccos(x)dx\)</h4>
+            <p>נשתמש בחלקים עם \(u'=1\), \(v=\arccos x\):</p>
+            <div class="formula">\[\int_0^{1/2}\arccos(x)dx=[x\arccos x]_0^{1/2}+\int_0^{1/2}\frac{x}{\sqrt{1-x^2}}dx\]</div>
+            <p>באינטגרל השני נציב \(t=1-x^2\), ולכן \(dt=-2x\,dx\):</p>
+            <div class="formula">\[=\frac12\arccos\left(\frac12\right)-\frac12\int_1^{3/4}\frac{dt}{\sqrt t}=\frac{\pi}{6}+\int_{3/4}^{1}\frac{dt}{2\sqrt t}\]</div>
+            <div class="formula">\[=\frac{\pi}{6}+[\sqrt t]_{3/4}^{1}=\frac{\pi}{6}+1-\frac{\sqrt3}{2}\]</div>
+            <h4>פתרון חלופי — הצבה טריגונומטרית</h4>
+            <p>מציבים \(t=\arccos x\), ואז \(x=\cos t\), ובתחום המתאים \(\sqrt{1-\cos^2 t}=\sin t\):</p>
+            <div class="formula">\[\int_0^{1/2}\arccos(x)dx=\int_{\pi/3}^{\pi/2}t\sin(t)dt\]</div>
+            <div class="formula">\[=[-t\cos t]_{\pi/3}^{\pi/2}+\int_{\pi/3}^{\pi/2}\cos tdt=\frac\pi6+[\sin t]_{\pi/3}^{\pi/2}=\frac\pi6+1-\frac{\sqrt3}{2}\]</div>
+          </div>
+        </details>
+
+        <details id="s2">
+          <summary>שאלה 2 — חישוב \(\tan\) וחסימת אינטגרל</summary>
+          <div class="solution-body">
+            <h4>2(א) חשבו \(\int_0^{\pi/4}\tan(x)dx\)</h4>
+            <p>כותבים \(\tan x=\frac{\sin x}{\cos x}\), ומציבים \(t=\cos x\), \(dt=-\sin xdx\):</p>
+            <div class="formula">\[\int_0^{\pi/4}\tan(x)dx=\int_0^{\pi/4}\frac{\sin x}{\cos x}dx=-\int_1^{\sqrt2/2}\frac{dt}{t}\]</div>
+            <div class="formula">\[=-[\ln|t|]_1^{\sqrt2/2}=-\ln\left(\frac{\sqrt2}{2}\right)=\frac12\ln2\]</div>
+
+            <h4>2(ב) הסיקו כי \(\frac{\ln2}{2e}\le\int_0^{\pi/4}e^{-x}\tan(x)dx\le\frac{\ln2}{2}\)</h4>
+            <p>הפונקציה \(e^{-x}\tan x\) רציפה בקטע, ולכן האינטגרל קיים. נגדיר \(f(x)=e^{-x}\), שהיא יורדת ב־\([0,\pi/4]\). לכן:</p>
+            <div class="formula">\[e^{-\pi/4}\le e^{-x}\le1\]</div>
+            <p>מכיוון ש־\(\tan x\ge0\) בקטע, אפשר להכפיל בלי להפוך כיוון:</p>
+            <div class="formula">\[\frac{\tan x}{e^{\pi/4}}\le e^{-x}\tan x\le \tan x\]</div>
+            <p>נבצע אינטגרציה ונשתמש בסעיף (א):</p>
+            <div class="formula">\[\frac{1}{e^{\pi/4}}\int_0^{\pi/4}\tan xdx\le\int_0^{\pi/4}e^{-x}\tan xdx\le\int_0^{\pi/4}\tan xdx\]</div>
+            <div class="formula">\[\frac{\ln2}{2e}\le\frac{\ln2}{2e^{\pi/4}}\le\int_0^{\pi/4}e^{-x}\tan xdx\le\frac{\ln2}{2}\]</div>
+            <p>המעבר השמאלי משתמש בנתון \(\pi<4\), ולכן \(\pi/4<1\).</p>
+          </div>
+        </details>
+
+        <details id="s3">
+          <summary>שאלה 3 — פונקציית אינטגרל, כלל השרשרת ולופיטל</summary>
+          <div class="solution-body">
+            <h4>3(א) הוכיחו ש־\(G(x)=\int_a^{\phi(x)}f(s)ds\) מוגדרת היטב</h4>
+            <p>נתון \(\phi:\mathbb R\to[a,b]\), ולכן לכל \(x\in\mathbb R\) מתקיים \(\phi(x)\in[a,b]\). מכיוון ש־\(f\) אינטגרבילית על \([a,b]\), היא אינטגרבילית גם על \([a,\phi(x)]\). לכן \(G\) מוגדרת היטב לכל \(x\in\mathbb R\).</p>
+
+            <h4>3(ב) הוכיחו את נוסחת הנגזרת</h4>
+            <p>נגדיר:</p>
+            <div class="formula">\[h(y)=\int_a^y f(s)ds\]</div>
+            <p>מאחר ש־\(f\) רציפה ב־\(\phi(x_0)\), לפי המשפט היסודי של החדו״א:</p>
+            <div class="formula">\[h'(\phi(x_0))=f(\phi(x_0))\]</div>
+            <p>בנוסף \(G(x)=h(\phi(x))\). לכן לפי כלל השרשרת:</p>
+            <div class="formula">\[G'(x_0)=h'(\phi(x_0))\phi'(x_0)=f(\phi(x_0))\phi'(x_0)\]</div>
+
+            <h4>3(ג) חשבו את הגבול</h4>
+            <div class="formula">\[\lim_{x\to0^+}\frac{\int_0^{x^2}\ln(1+\sqrt t)dt}{x^3}\]</div>
+            <p>נגדיר \(G(x)=\int_0^{x^2}\ln(1+\sqrt t)dt\). לפי סעיף (ב), \(G\) גזירה ורציפה ב־0, ולכן \(G(0)=0\), והגבול הוא מסוג \(0/0\). נשתמש בלופיטל:</p>
+            <div class="formula">\[\lim_{x\to0^+}\frac{G(x)}{x^3}=\lim_{x\to0^+}\frac{\ln(1+\sqrt{x^2})\cdot2x}{3x^2}\]</div>
+            <p>כאשר \(x>0\), מתקיים \(\sqrt{x^2}=x\), ולכן:</p>
+            <div class="formula">\[=\lim_{x\to0^+}\frac{2}{3}\cdot\frac{\ln(1+x)}{x}=\lim_{x\to0^+}\frac{2}{3(1+x)}=\frac23\]</div>
+          </div>
+        </details>
+
+        <details id="s4">
+          <summary>שאלה 4 — הוכחת גבול כסכום רימן</summary>
+          <div class="solution-body">
+            <h4>הוכיחו:</h4>
+            <div class="formula">\[\lim_{n\to\infty}\left[\frac1n\sum_{k=1}^n\frac{1}{1+\left(\frac{k}{n}\right)^2}\right]=\frac\pi4\]</div>
+            <p>נגדיר פונקציה:</p>
+            <div class="formula">\[f(x)=\frac{1}{1+x^2}\quad x\in[0,1]\]</div>
+            <p>לכל \(n\), נבחר חלוקה אחידה של \([0,1]\):</p>
+            <div class="formula">\[P_n=(x_0,\dots,x_n),\qquad x_k=\frac{k}{n}\]</div>
+            <p>רוחב כל קטע הוא:</p>
+            <div class="formula">\[\Delta(P_n)=\frac1n\to0\]</div>
+            <p>הפונקציה ליפשיץ על \([0,1]\), כי לכל \(x,y\in[0,1]\):</p>
+            <div class="formula">\[\left|\frac{1}{1+x^2}-\frac{1}{1+y^2}\right|=\left|\frac{y^2-x^2}{(1+x^2)(1+y^2)}\right|\le |y^2-x^2|\le2|x-y|\]</div>
+            <p>בנוסף \(f\) יורדת על \([0,1]\), כי:</p>
+            <div class="formula">\[f'(x)=\frac{-2x}{(1+x^2)^2}\le0\]</div>
+            <p>לכן בכל קטע \([x_{k-1},x_k]\), האינפימום הוא בקצה הימני:</p>
+            <div class="formula">\[m_k=f(x_k)=\frac{1}{1+(k/n)^2}\]</div>
+            <p>מכאן הביטוי הוא סכום רימן תחתון שמתכנס לאינטגרל:</p>
+            <div class="formula">\[\lim_{n\to\infty}\frac1n\sum_{k=1}^n\frac{1}{1+(k/n)^2}=\int_0^1\frac{dx}{1+x^2}\]</div>
+            <div class="formula">\[= [\arctan x]_0^1=\frac\pi4\]</div>
+          </div>
+        </details>
+      </section>
+
+      <section>
+        <div class="note-box">
+          <b>שורת סיכום למבחן:</b>
+          במטלה הזו רוב השאלות הן לא “חישוב טכני בלבד”, אלא זיהוי כלי: פיצול לפי תחומים, סימטריה, חלקים, הצבה, חסימה, פונקציית אינטגרל או סכום רימן. ברגע שמזהים את הכלי — הפתרון נהיה קצר ומסודר.
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

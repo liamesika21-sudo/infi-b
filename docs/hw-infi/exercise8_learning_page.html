@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homework 8 — דף למידה חכם | Calculus II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    window.MathJax = {
+      tex: {inlineMath: [['\\(','\\)'], ['$', '$']], displayMath: [['\\[','\\]']]},
+      svg: {fontCache: 'global'}
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <style>
+    :root{
+      --bg:#f7f8ff; --paper:#ffffff; --ink:#172033; --muted:#64708a; --line:#e5e8f4;
+      --blue:#3267ff; --violet:#7c3aed; --soft:#eef2ff; --soft2:#f5f3ff; --ok:#0f766e; --bad:#b42318;
+      --shadow:0 10px 30px rgba(31,41,80,.08); --radius:16px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:linear-gradient(135deg,#f8fbff,#f7f3ff);font-family:'Assistant',Arial,sans-serif;color:var(--ink);font-size:14px;line-height:1.48}
+    a{color:inherit;text-decoration:none}.page{display:grid;grid-template-columns:245px minmax(0,1fr);gap:18px;max-width:1260px;margin:0 auto;padding:18px}
+    aside{position:sticky;top:14px;height:calc(100vh - 28px);overflow:auto;background:rgba(255,255,255,.86);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:14px}
+    .brand{padding:12px;border-radius:14px;background:linear-gradient(135deg,var(--blue),var(--violet));color:#fff;margin-bottom:12px}.brand h1{font-size:18px;line-height:1.1;margin:0 0 5px;font-weight:800}.brand p{font-size:12px;margin:0;opacity:.9}
+    nav h3{font-size:12px;color:var(--muted);margin:14px 5px 6px;font-weight:800;text-transform:uppercase;letter-spacing:.03em}nav a{display:block;padding:7px 9px;border-radius:10px;font-weight:700;font-size:13px;color:#25304a}nav a:hover{background:var(--soft);color:var(--blue)}
+    main{min-width:0}.hero{background:var(--paper);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);padding:20px 22px;margin-bottom:14px;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;inset:-90px auto auto -90px;width:230px;height:230px;background:radial-gradient(circle,rgba(124,58,237,.18),transparent 70%)}
+    .kicker{display:inline-flex;gap:6px;align-items:center;background:var(--soft);color:var(--blue);border:1px solid #dbe3ff;border-radius:999px;padding:4px 10px;font-size:12px;font-weight:800}.hero h2{font-size:26px;line-height:1.12;margin:10px 0 7px}.hero p{margin:0;color:var(--muted);max-width:850px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.section{margin:14px 0}.section-title{display:flex;align-items:center;gap:8px;margin:0 0 10px}.section-title .dot{width:10px;height:10px;border-radius:99px;background:linear-gradient(135deg,var(--blue),var(--violet))}.section-title h2{font-size:20px;margin:0}.card{background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 7px 22px rgba(31,41,80,.055);padding:13px 14px}.card h3{font-size:16px;margin:0 0 8px;color:#111827}.tag{display:inline-block;font-size:11px;font-weight:800;color:var(--violet);background:var(--soft2);border:1px solid #ede9fe;border-radius:999px;padding:2px 8px;margin:0 0 7px}.mini{display:grid;gap:6px}.row{display:grid;grid-template-columns:92px 1fr;gap:8px;border-top:1px dashed var(--line);padding-top:6px}.row:first-child{border-top:0;padding-top:0}.label{font-weight:800;color:#334155}.text{color:#344057}.formula{direction:ltr;text-align:center;background:#fbfcff;border:1px solid var(--line);border-radius:12px;padding:8px;margin:8px 0;overflow:auto}.warn{border-right:4px solid var(--bad);background:#fff7f7}.ok{border-right:4px solid var(--ok);background:#f6fffd}.tasks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.task{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:10px 12px}.task b{display:block;margin-bottom:3px}.task span{color:var(--muted);font-size:13px}.table{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}.table th,.table td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}.table th{background:var(--soft);font-weight:800}.table tr:last-child td{border-bottom:0}.pill{font-size:12px;border-radius:999px;padding:2px 8px;font-weight:800}.pill.okp{background:#dcfce7;color:#166534}.pill.mid{background:#fef9c3;color:#854d0e}.pill.no{background:#fee2e2;color:#991b1b}
+    details{background:var(--paper);border:1px solid var(--line);border-radius:15px;margin:9px 0;box-shadow:0 6px 16px rgba(31,41,80,.045);overflow:hidden}summary{cursor:pointer;padding:11px 14px;font-weight:800;background:linear-gradient(90deg,#f8faff,#fff)}details[open] summary{border-bottom:1px solid var(--line)}.solution{padding:12px 14px;color:#26324a}.solution h4{font-size:15px;margin:12px 0 6px}.solution p{margin:7px 0}.compact-list{margin:6px 0;padding-right:18px}.compact-list li{margin:4px 0}.note{font-size:12px;color:var(--muted);background:#fbfcff;border:1px dashed var(--line);border-radius:12px;padding:8px 10px;margin-top:8px}.print-tip{font-size:12px;color:var(--muted);margin-top:10px}
+    @media(max-width:980px){.page{grid-template-columns:1fr;padding:10px}aside{position:relative;height:auto}.grid,.tasks{grid-template-columns:1fr}.hero h2{font-size:22px}.row{grid-template-columns:82px 1fr}}
+    @media print{body{background:#fff;font-size:12px}.page{display:block;padding:0}aside{display:none}.hero,.card,details,.task{box-shadow:none;break-inside:avoid}.hero{padding:12px;border-radius:12px}.grid,.tasks{grid-template-columns:1fr 1fr}details{page-break-inside:avoid}summary{background:#fff}.no-print{display:none}}
+  </style>
+</head>
+<body>
+<div class="page">
+  <aside>
+    <div class="brand"><h1>Homework 8</h1><p>טורים: בהחלט / בתנאי / לייבניץ / סוגריים</p></div>
+    <nav>
+      <h3>ניווט מהיר</h3>
+      <a href="#intro">פתיחה</a>
+      <a href="#map">מפת החלטה</a>
+      <a href="#templates">תבניות ואינטואיציות</a>
+      <a href="#tasks">משימות חזרה</a>
+      <a href="#official">פתרונות רשמיים</a>
+      <h3>תבניות מרכזיות</h3>
+      <a href="#t-abs">בדיקה בהחלט</a>
+      <a href="#t-leibniz">לייבניץ</a>
+      <a href="#t-algebra">אלגברה של טורים</a>
+      <a href="#t-parentheses">סוגריים וסדר סכימה</a>
+      <a href="#t-alpha">פרמטר בעזרת תנאי הכרחי</a>
+      <a href="#t-seq">סדרה מתחלפת</a>
+    </nav>
+  </aside>
+
+  <main>
+    <section class="hero" id="intro">
+      <span class="kicker">Calculus II · Spring 2025–26 · Homework 8</span>
+      <h2>דף למידה חכם — טורים מתחלפים, התכנסות בהחלט/בתנאי, לייבניץ וסוגריים</h2>
+      <p>זה לא רק סיכום פתרונות. זה דף תבניות: איך לזהות את סוג השאלה, איזה כלי לבחור, איפה הטעות הנפוצה, ומה לתרגל כדי להגיע לבד לפתרון במבחן.</p>
+      <div class="print-tip no-print">טיפ: לפתיחה בדפדפן, שמירה כ־PDF או הדפסה — Ctrl/Cmd + P.</div>
+    </section>
+
+    <section class="section" id="map">
+      <div class="section-title"><span class="dot"></span><h2>מפת החלטה מהירה לטורי Homework 8</h2></div>
+      <table class="table">
+        <thead><tr><th>מה רואים בשאלה?</th><th>מה בודקים קודם?</th><th>כלי מתאים</th><th>מסקנה אפשרית</th></tr></thead>
+        <tbody>
+          <tr><td>טור עם סימנים משתנים / \\((-1)^n\\)</td><td>קודם \\(\\sum |a_n|\\), אחר כך לייבניץ</td><td>התכנסות בהחלט + מבחן לייבניץ</td><td>בהחלט / בתנאי / מתבדר</td></tr>
+          <tr><td>מונה עם \\(n\\), \\(2^n\\), \\(\\sin\\), חזקה</td><td>האם אפשר לחסום את החלק הבעייתי?</td><td>השוואה + שורש</td><td>לרוב בהחלט אם האקספוננט מנצח</td></tr>
+          <tr><td>שורשים כמו \\(\\sqrt{n+1}-\\sqrt n\\)</td><td>לרציונל: להכפיל בצמוד</td><td>השוואה גבולית ל־p הרמוני</td><td>זיהוי סדר גודל</td></tr>
+          <tr><td>הזזה/שינוי סוגריים/שינוי סדר</td><td>האם הטור כבר ידוע כמתכנס?</td><td>משפט הסוגריים בלבד, לא שינוי סדר חופשי</td><td>מניעת הוכחה מעגלית</td></tr>
+          <tr><td>פרמטר \\(\\alpha\\) בטור</td><td>תנאי הכרחי: האיבר הכללי חייב לשאוף ל־0</td><td>לופיטל / פיתוח אסימפטוטי / השוואה גבולית</td><td>מוצאים ערך יחיד ואז מוכיחים התכנסות</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section" id="templates">
+      <div class="section-title"><span class="dot"></span><h2>חלק ראשון — תבניות ואינטואיציות לפי נושאים</h2></div>
+      <div class="grid">
+
+        <article class="card" id="t-abs">
+          <span class="tag">שאלה 1 + 4</span>
+          <h3>בדיקה: בהחלט / בתנאי / מתבדר</h3>
+          <div class="mini">
+            <div class="row"><div class="label">איך מזהים?</div><div class="text">השאלה מבקשת לסווג טור, במיוחד כשיש \\((-1)^n\\), \\(\\sin\\), \\(\\cos\\), או ביטוי לא חיובי קבוע.</div></div>
+            <div class="row"><div class="label">האינטואיציה</div><div class="text">קודם בודקים אם הטור “חזק מספיק” גם בלי סימנים. אם כן — סיימנו: בהחלט. אם לא — בודקים האם הסימנים מצילים אותו.</div></div>
+            <div class="row"><div class="label">תבנית</div><div class="text">1. סמני \\(a_n\\). 2. בדקי \\(\\sum |a_n|\\). 3. אם מתכנס — בהחלט. 4. אם מתבדר ויש \\((-1)^n\\), בדקי לייבניץ. 5. אם גם זה לא עובד — מתבדר.</div></div>
+            <div class="row"><div class="label">טעות נפוצה</div><div class="text">להגיד “לא בהחלט” ואז מיד “מתבדר”. לא: אולי הוא מתכנס בתנאי.</div></div>
+          </div>
+          <div class="formula">\\[\\sum |a_n|<\\infty \Rightarrow \\sum a_n \\text{ מתכנס בהחלט } \\Rightarrow \\sum a_n \\text{ מתכנס}\\]</div>
+        </article>
+
+        <article class="card" id="t-leibniz">
+          <span class="tag">שאלה 1ב, 2ד, 6ג</span>
+          <h3>מבחן לייבניץ — כשהסימן המתחלף עושה את העבודה</h3>
+          <div class="mini">
+            <div class="row"><div class="label">איך מזהים?</div><div class="text">יש צורה \\(\\sum (-1)^{n+1}b_n\\) או אפשר להפוך אליה, כאשר \\(b_n\\ge0\\).</div></div>
+            <div class="row"><div class="label">האינטואיציה</div><div class="text">האיברים החיוביים והשליליים מבטלים אחד את השני, אבל זה עובד רק אם הגדלים קטנים באופן מסודר עד 0.</div></div>
+            <div class="row"><div class="label">תבנית</div><div class="text">1. כתבי \\(b_n\\). 2. הראי \\(b_n\\to0\\). 3. הראי \\(b_n\\) יורדת. 4. הסיקי שהטור מתכנס. 5. אם \\(\\sum |a_n|\\) מתבדר — זה בתנאי.</div></div>
+            <div class="row"><div class="label">טעות נפוצה</div><div class="text">לבדוק רק \\(b_n\\to0\\). זה תנאי הכרחי, אבל בלייבניץ צריך גם ירידה.</div></div>
+          </div>
+          <div class="formula">\\[b_n\\downarrow,\\quad b_n\\to0 \quad\\Longrightarrow\\quad \\sum_{n=1}^{\\infty}(-1)^{n+1}b_n \\text{ מתכנס}\\]</div>
+        </article>
+
+        <article class="card">
+          <span class="tag">שאלה 1א</span>
+          <h3>חסימה לפני מבחן שורש</h3>
+          <div class="mini">
+            <div class="row"><div class="label">איך מזהים?</div><div class="text">יש פונקציה חסומה כמו \\(\\sin\\) או \\(\\cos\\), ולידها ביטוי עם \\(2^n\\), \\(3^n\\), או חזקה מעריכית.</div></div>
+            <div class="row"><div class="label">האינטואיציה</div><div class="text">החלק הטריגונומטרי לא באמת קובע — הוא חסום. מה שקובע זה קצב הדעיכה של \\(n/2^n\\).</div></div>
+            <div class="row"><div class="label">תבנית</div><div class="text">1. קחי ערך מוחלט. 2. חסמי \\(|\\sin|\\le1\\). 3. השווי לטור פשוט. 4. השתמשי בשורש.</div></div>
+            <div class="row"><div class="label">טעות נפוצה</div><div class="text">להסתבך עם \\(\\sin(n/2)\\). כאן לא צריך לדעת את הגבול שלו.</div></div>
+          </div>
+          <div class="formula">\\[\\left|\\frac{n\\sin(n/2)}{2^n+n}\\right|\\le\\frac{n}{2^n+n}\\le\\frac{n}{2^n},\\qquad \\sqrt[n]{\\frac n{2^n}}\\to\\frac12\\]</div>
+        </article>
+
+        <article class="card">
+          <span class="tag">שאלה 1ב</span>
+          <h3>שורש הפרש שורשים — קודם צמוד</h3>
+          <div class="mini">
+            <div class="row"><div class="label">איך מזהים?</div><div class="text">מופיע \\(\\sqrt{n+1}-\\sqrt n\\), במיוחד בתוך שורש או מנה.</div></div>
+            <div class="row"><div class="label">האינטואיציה</div><div class="text">ההפרש בין שורשים סמוכים קטן מאוד. הצמוד מגלה את סדר הגודל האמיתי.</div></div>
+            <div class="row"><div class="label">תבנית</div><div class="text">1. השתמשי ב־\\(\\sqrt{n+1}-\\sqrt n=\\frac1{\\sqrt{n+1}+\\sqrt n}\\). 2. כתבי סדר גודל. 3. השווי ל־\\(1/n^{3/4}\\).</div></div>
+            <div class="row"><div class="label">טעות נפוצה</div><div class="text">לחשוב שזה כמו \\(1/n\\). אחרי השורש החיצוני מתקבל בערך \\(1/n^{3/4}\\).</div></div>
+          </div>
+          <div class="formula">\\[\\sqrt{\\frac{\\sqrt{n+1}-\\sqrt n}{n+1}}=\\sqrt{\\frac{1}{(n+1)(\\sqrt{n+1}+\\sqrt n)}}\\sim\\frac{1}{\\sqrt2\\,n^{3/4}}\\]</div>
+        </article>
+
+        <article class="card" id="t-algebra">
+          <span class="tag">שאלה 2</span>
+          <h3>אלגברה של טורים: בהחלט מול בתנאי</h3>
+          <div class="mini">
+            <div class="row"><div class="label">איך מזהים?</div><div class="text">מבקשים להוכיח משפט כללי על \\(a_n,b_n\\), או להסיק על סכום/הפרש של טורים.</div></div>
+            <div class="row"><div class="label">האינטואיציה</div><div class="text">התכנסות בהחלט יציבה תחת חיבור וחיסור. התכנסות בתנאי עדינה יותר — אפשר להשתמש בשלילה וסתירה.</div></div>
+            <div class="row"><div class="label">תבנית</div><div class="text">להוכחת בהחלט: השתמשי באי־שוויון משולש. להוכחת בתנאי: הראי שהתכנסות רגילה קיימת, ואז שללי בהחלט בעזרת סתירה.</div></div>
+            <div class="row"><div class="label">טעות נפוצה</div><div class="text">לחשוב שסכום של “בתנאי + בהחלט” יכול להיות בהחלט. אם היה בהחלט, היינו מקבלים שגם הטור המקורי בתנאי הוא בהחלט — סתירה.</div></div>
+          </div>
+          <div class="formula">\\[|a_n-b_n|\\le |a_n|+|b_n|\\qquad ; \\qquad (a_n+b_n)-b_n=a_n\\]</div>
+        </article>
+
+        <article class="card" id="t-parentheses">
+          <span class="tag">שאלה 3 + 4ב + 4ה</span>
+          <h3>סוגריים ושינוי סדר — מקום מסוכן</h3>
+          <div class="mini">
+            <div class="row"><div class="label">איך מזהים?</div><div class="text">פתרון שמחבר איברים לזוגות, משנה סדר, או “מדלג” בין איברים חיוביים ושליליים.</div></div>
+            <div class="row"><div class="label">האינטואיציה</div><div class="text">בטורים אינסופיים אי אפשר להתנהג כמו בסכום סופי. סוגריים מותרים רק אחרי שיודעים שהטור מתכנס, ושינוי סדר מסוכן במיוחד בטור בתנאי.</div></div>
+            <div class="row"><div class="label">תבנית</div><div class="text">1. שאלי: האם כבר הוכח שהטור מתכנס? 2. אם כן — אפשר להוסיף סוגריים בלי לשנות סדר. 3. שינוי סדר אינו מותר סתם. 4. אם ההוכחה משתמשת בזה כדי להוכיח התכנסות — זו הוכחה מעגלית.</div></div>
+            <div class="row"><div class="label">טעות נפוצה</div><div class="text">להוכיח התכנסות של טור מתחלף על ידי קיבוץ זוגות — זה כבר מניח את מה שרוצים להוכיח.</div></div>
+          </div>
+          <div class="formula">\\[\\text{אם }\\sum a_n\\text{ מתכנס, אז הוספת סוגריים סופיים ללא שינוי סדר שומרת על הסכום.}\\]</div>
+        </article>
+
+        <article class="card">
+          <span class="tag">שאלה 4ד</span>
+          <h3>צמוד לביטוי שורש: ביטול מוביל</h3>
+          <div class="mini">
+            <div class="row"><div class="label">איך מזהים?</div><div class="text">ביטוי מהצורה \\(\\sqrt{n^3+(-1)^{n+1}}-n^{1.5}\\).</div></div>
+            <div class="row"><div class="label">האינטואיציה</div><div class="text">שני האיברים כמעט שווים, אז צריך לחשוף את ההפרש הקטן. הצמוד הופך את זה למנה.</div></div>
+            <div class="row"><div class="label">תבנית</div><div class="text">1. קחי ערך מוחלט. 2. כפלי בצמוד. 3. השווי ל־\\(1/n^{1.5}\\). 4. השתמשי בהשוואה גבולית.</div></div>
+            <div class="row"><div class="label">טעות נפוצה</div><div class="text">להסתכל על \\(\\sqrt{n^3}-n^{1.5}=0\\) ולהגיד שאין מידע. דווקא הביטול הוא הרמז להשתמש בצמוד.</div></div>
+          </div>
+          <div class="formula">\\[\\left|\\sqrt{n^3+(-1)^{n+1}}-n^{3/2}\\right|=\\frac{1}{\\sqrt{n^3+(-1)^{n+1}}+n^{3/2}}\\sim\\frac1{2n^{3/2}}\\]</div>
+        </article>
+
+        <article class="card" id="t-alpha">
+          <span class="tag">שאלה 5</span>
+          <h3>מציאת פרמטר בעזרת תנאי הכרחי</h3>
+          <div class="mini">
+            <div class="row"><div class="label">איך מזהים?</div><div class="text">שואלים “מצא את כל \\(\\alpha\\)” כך שטור יתכנס.</div></div>
+            <div class="row"><div class="label">האינטואיציה</div><div class="text">לפני כל מבחן מתוחכם, האיבר הכללי חייב לשאוף ל־0. זה לרוב נותן את הערך היחיד של הפרמטר.</div></div>
+            <div class="row"><div class="label">תבנית</div><div class="text">1. הניחי שהטור מתכנס. 2. כתבי \\(a_n\\to0\\). 3. חשבי את הגבול כתלות ב־\\(\\alpha\\). 4. קבלי ערך. 5. עבור הערך שמצאת — הוכיחי התכנסות באמת.</div></div>
+            <div class="row"><div class="label">טעות נפוצה</div><div class="text">למצוא \\(\\alpha\\) מהתנאי ההכרחי ולסיים. צריך גם להוכיח שעבורו הטור מתכנס.</div></div>
+          </div>
+          <div class="formula">\\[a_n=n^3\\sin\\frac1n-n^2+\\alpha,\\qquad a_n\\to \\alpha-\\frac16\\]</div>
+        </article>
+
+        <article class="card" id="t-seq">
+          <span class="tag">שאלה 6</span>
+          <h3>סדרה \\(b_n=(-1)^n a_n\\) ויצירת טור לייבניץ</h3>
+          <div class="mini">
+            <div class="row"><div class="label">איך מזהים?</div><div class="text">נתון \\(a_n\\to L\\), מגדירים \\(b_n=(-1)^n a_n\\), ואז מוסיפים תנאי מונוטוניות על \\(b_n\\).</div></div>
+            <div class="row"><div class="label">האינטואיציה</div><div class="text">אם הסדרה המתחלפת עצמה מתכנסת, אז הזוגיים והאי־זוגיים מכריחים את הגבול להיות 0. אחר כך משתמשים בלייבניץ על \\(-b_n\\).</div></div>
+            <div class="row"><div class="label">תבנית</div><div class="text">1. חסמי את \\(b_n\\). 2. אם \\(b_n\\) מתכנסת, בדקי תתי־סדרות זוגיות ואי־זוגיות. 3. קבלי גבול 0. 4. אם \\(b_n\\) עולה, אז \\(-b_n\\) יורדת. 5. לייבניץ.</div></div>
+            <div class="row"><div class="label">טעות נפוצה</div><div class="text">לשכוח שהסימן \\((-1)^n\\) הופך זוגיים ואי־זוגיים לשתי התנהגויות שונות.</div></div>
+          </div>
+          <div class="formula">\\[b_{2n}=a_{2n}\\to L,\\qquad b_{2n-1}=-a_{2n-1}\\to -L\\]</div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section" id="tasks">
+      <div class="section-title"><span class="dot"></span><h2>חלק שני — משימות חזרה קצרות</h2></div>
+      <div class="tasks">
+        <div class="task"><b>1. כתבי את ההבדל בין בהחלט ובתנאי.</b><span>איך זה אמור להיראות: שתי שורות — \\(\\sum|a_n|\\) מול \\(\\sum a_n\\), ומה קורה כשהראשון מתבדר והשני מתכנס.</span></div>
+        <div class="task"><b>2. בחרי טור מתחלף וכתבי את \\(b_n\\).</b><span>איך זה אמור להיראות: להפוך \\(a_n=(-1)^{n+1}b_n\\), עם \\(b_n\\ge0\\).</span></div>
+        <div class="task"><b>3. בדקי לייבניץ בשלושה סימונים קבועים.</b><span>איך זה אמור להיראות: “חיובית”, “יורדת”, “שואפת ל־0”. בלי חישובים ארוכים.</span></div>
+        <div class="task"><b>4. פתרי מחדש את שאלה 1ב בלי להציץ.</b><span>איך זה אמור להיראות: צמוד → השוואה ל־\\(1/n^{3/4}\\) → לא בהחלט → לייבניץ.</span></div>
+        <div class="task"><b>5. כתבי דוגמה לטור שמתכנס בתנאי.</b><span>איך זה אמור להיראות: \\(\\sum (-1)^{n+1}/n\\), ואז משפט אחד למה לא בהחלט.</span></div>
+        <div class="task"><b>6. סמני איפה משתמשים באי־שוויון משולש בשאלה 2א.</b><span>איך זה אמור להיראות: \\(|a_n-b_n|\\le |a_n|+|b_n|\\) ואז השוואה.</span></div>
+        <div class="task"><b>7. כתבי למה הוכחת הסטודנט בשאלה 3א מעגלית.</b><span>איך זה אמור להיראות: “כדי לקבץ צריך לדעת מראש שהטור מתכנס”.</span></div>
+        <div class="task"><b>8. בני הפרכה קצרה לטענה שקרית.</b><span>איך זה אמור להיראות: לבחור \\(b_n=1/n\\), ואז \\(a_n\\) שמאפס את הזוגיים ומשאיר את האי־זוגיים.</span></div>
+        <div class="task"><b>9. לשאלה עם \\(\\alpha\\): כתבי רק את שלבי הפתרון.</b><span>איך זה אמור להיראות: תנאי הכרחי → גבול → \\(\\alpha=1/6\\) → השוואה ל־\\(1/n^2\\).</span></div>
+        <div class="task"><b>10. כתבי פתרון מבחן מסודר לשאלה אחת.</b><span>איך זה אמור להיראות: פתיחה “נבדוק בהחלט”, כלי, גבול/השוואה, מסקנה חד־משמעית.</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="official">
+      <div class="section-title"><span class="dot"></span><h2>חלק שלישי — פתרונות רשמיים מתורגמים ומסודרים</h2></div>
+
+      <details open>
+        <summary>שאלה 1 — קבעי אם הטורים מתכנסים בהחלט, בתנאי או מתבדרים</summary>
+        <div class="solution">
+          <h4>1(א)</h4>
+          <p>נבדוק התכנסות בהחלט:</p>
+          <div class="formula">\\[\\sum_{n=1}^{\\infty}|a_n|=\\sum_{n=1}^{\\infty}\\frac{n|\\sin(n/2)|}{2^n+n}\\le\\sum_{n=1}^{\\infty}\\frac{n}{2^n+n}\\le\\sum_{n=1}^{\\infty}\\frac{n}{2^n}\\]</div>
+          <p>נפעיל מבחן שורש:</p>
+          <div class="formula">\\[L=\\lim_{n\\to\\infty}\\sqrt[n]{\\frac n{2^n}}=\\lim_{n\\to\\infty}\\frac{\\sqrt[n]n}{2}=\\frac12<1\\]</div>
+          <p>לכן \\(\\sum n/2^n\\) מתכנס, וממבחן ההשוואה \\(\\sum |a_n|\\) מתכנס. לכן הטור מתכנס בהחלט.</p>
+          <table class="table"><tr><th>בהחלט</th><th>בתנאי</th><th>מתבדר</th></tr><tr><td><span class="pill okp">כן</span></td><td><span class="pill no">לא</span></td><td><span class="pill no">לא</span></td></tr></table>
+
+          <h4>1(ב)</h4>
+          <p>קודם נבדוק התכנסות בהחלט:</p>
+          <div class="formula">\\[\\sum |a_n|=\\sum_{n=1}^{\\infty}\\sqrt{\\frac{\\sqrt{n+1}-\\sqrt n}{n+1}}=\\sum_{n=1}^{\\infty}\\sqrt{\\frac{1}{(n+1)(\\sqrt{n+1}+\\sqrt n)}}\\]</div>
+          <p>נבחר \\(b_n=1/n^{3/4}\\) ונשתמש במבחן ההשוואה הגבולי:</p>
+          <div class="formula">\\[L=\\lim_{n\\to\\infty}\\frac{a_n}{b_n}=\\lim_{n\\to\\infty}\\sqrt{\\frac{n^{3/2}}{(n+1)(\\sqrt{n+1}+\\sqrt n)}}=\\frac1{\\sqrt2}\\]</div>
+          <p>הטור \\(\\sum 1/n^{3/4}\\) מתבדר, ולכן \\(\\sum |a_n|\\) מתבדר. כלומר אין התכנסות בהחלט.</p>
+          <p>כעת נבדוק לייבניץ. נגדיר:</p>
+          <div class="formula">\\[b_n=\\sqrt{\\frac{\\sqrt{n+1}-\\sqrt n}{n+1}}\\]</div>
+          <p>מתקיים \\(b_n\\to0\\), וגם \\(b_n\\) יורדת כי המכנה חיובי וגדל. לכן הטור הוא טור לייבניץ ומתכנס. מאחר שאינו מתכנס בהחלט — הוא מתכנס בתנאי.</p>
+          <table class="table"><tr><th>בהחלט</th><th>בתנאי</th><th>מתבדר</th></tr><tr><td><span class="pill no">לא</span></td><td><span class="pill okp">כן</span></td><td><span class="pill no">לא</span></td></tr></table>
+        </div>
+      </details>
+
+      <details>
+        <summary>שאלה 2 — תכונות של טורים מתכנסים בהחלט/בתנאי</summary>
+        <div class="solution">
+          <h4>2(א)</h4>
+          <p>אם \\(\\sum a_n\\) ו־\\(\\sum b_n\\) מתכנסים בהחלט, אז:</p>
+          <div class="formula">\\[\\sum_{n=1}^{\\infty}|a_n-b_n|\\le\\sum_{n=1}^{\\infty}(|a_n|+|b_n|)=\\sum_{n=1}^{\\infty}|a_n|+\\sum_{n=1}^{\\infty}|b_n|<\\infty\\]</div>
+          <p>לכן ממבחן ההשוואה \\(\\sum |a_n-b_n|\\) מתכנס, כלומר \\(\\sum(a_n-b_n)\\) מתכנס בהחלט.</p>
+
+          <h4>2(ב)</h4>
+          <p>דוגמה: נבחר</p>
+          <div class="formula">\\[a_n=\\frac{(-1)^{n+1}}n,\\qquad b_n=\\frac{(-1)^n}{n}\\]</div>
+          <p>שני הטורים מתכנסים בתנאי. בנוסף:</p>
+          <div class="formula">\\[\\sum(a_n-b_n)=\\sum\\frac{(-1)^{n+1}-(-1)^n}{n}=2\\sum\\frac{(-1)^{n+1}}n\\]</div>
+          <p>ולכן גם טור ההפרש מתכנס בתנאי.</p>
+
+          <h4>2(ג)</h4>
+          <p>נניח \\(\\sum a_n\\) מתכנס בתנאי ו־\\(\\sum b_n\\) מתכנס בהחלט. הטור \\(\\sum(a_n+b_n)\\) מתכנס כסכום של טורים מתכנסים.</p>
+          <p>נניח בשלילה שהוא אינו מתכנס בתנאי. מאחר שהוא מתכנס, אז הוא חייב להתכנס בהחלט. לפי סעיף (א), נקבל:</p>
+          <div class="formula">\\[\\sum a_n=\\sum((a_n+b_n)-b_n)\\]</div>
+          <p>מתכנס בהחלט — סתירה לכך ש־\\(\\sum a_n\\) מתכנס בתנאי. לכן \\(\\sum(a_n+b_n)\\) מתכנס בתנאי.</p>
+
+          <h4>2(ד)</h4>
+          <p>נגדיר:</p>
+          <div class="formula">\\[a_n=\\frac{(-1)^{n+1}}{\\ln^2(n+1)},\\qquad b_n=\\frac{\\cos n}{(n+1)\\ln^2(n+1)}\\]</div>
+          <p>ראשית, \\(\\sum a_n\\) אינו מתכנס בהחלט, כי \\(\\sum 1/\\ln^2(n+1)\\) מתבדר. זאת משום ש־\\(\\ln^2(n+1)\\le n\\) החל ממקום מסוים, ולכן הזנב גדול מזנב הרמוני.</p>
+          <p>מצד שני, \\(a_n\\) הוא טור לייבניץ ולכן מתכנס בתנאי. עבור \\(b_n\\):</p>
+          <div class="formula">\\[\\sum |b_n|\\le\\sum_{n=1}^{\\infty}\\frac1{(n+1)\\ln^2(n+1)}=\\sum_{n=2}^{\\infty}\\frac1{n\\ln^2 n}<\\infty\\]</div>
+          <p>לכן \\(\\sum b_n\\) מתכנס בהחלט, ומסעיף (ג) הטור הנתון מתכנס בתנאי.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>שאלה 3 — טעויות של סטודנט בטור ההרמוני המתחלף</summary>
+        <div class="solution">
+          <h4>3(א)</h4>
+          <p>הסטודנט כתב:</p>
+          <div class="formula">\\[\\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}}n=\\sum_{n=1}^{\\infty}\\left(\\frac1{2n-1}-\\frac1{2n}\\right)\\]</div>
+          <p>הטעות: השוויון הזה כבר משתמש בהשמת סוגריים. לפי משפט הסוגריים, מותר לעשות זאת רק אם כבר יודעים שהטור המקורי מתכנס. לכן ההוכחה מעגלית: הוא מניח את מה שהוא צריך להוכיח.</p>
+
+          <h4>3(ב)</h4>
+          <p>הסטודנט קיבל כביכול \\(s=\\frac12s\\) ולכן \\(s=0\\). הטעות היא שהוא שינה את סדר הסכימה של הטור. בטור שמתכנס בתנאי אסור לשנות סדר איברים באופן חופשי, כי זה עלול לשנות את הסכום.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>שאלה 4 — הוכח או הפרך</summary>
+        <div class="solution">
+          <h4>4(א)</h4>
+          <p>הטענה: \\(\\sum (-1)^{n+1}\\frac{\\ln n}{\\sqrt{n+1}}\\) מתכנס בהחלט. הטענה שקרית.</p>
+          <div class="formula">\\[\\sum\\left|(-1)^{n+1}\\frac{\\ln n}{\\sqrt{n+1}}\\right|=\\sum\\frac{\\ln n}{\\sqrt{n+1}}\\ge\\sum_{n=3}^{\\infty}\\frac1{\\sqrt{n+1}}\\ge\\frac12\\sum_{n=3}^{\\infty}\\frac1{\\sqrt n}=\\infty\\]</div>
+          <p>לכן הטור אינו מתכנס בהחלט.</p>
+
+          <h4>4(ב)</h4>
+          <p>הטענה: הטור \\(1-\\frac12+\\frac23-\\frac13+\\frac24-\\frac14+\\cdots\\) מתבדר. הטענה נכונה.</p>
+          <p>נניח בשלילה שהוא מתכנס לסכום \\(s\\). לפי משפט הסוגריים:</p>
+          <div class="formula">\\[s=\\left(1-\\frac12\\right)+\\left(\\frac23-\\frac13\\right)+\\left(\\frac24-\\frac14\\right)+\\cdots=\\frac12+\\frac13+\\frac14+\\cdots=\\infty\\]</div>
+          <p>סתירה לכך ש־\\(s\\) ממשי. לכן הטור מתבדר.</p>
+
+          <h4>4(ג)</h4>
+          <p>הטענה שקרית. נבחר:</p>
+          <div class="formula">\\[b_n=\\frac1n,\\qquad a_n=\\begin{cases}0,&n=2k\\\\ \\frac1n,&n=2k-1\\end{cases}\\]</div>
+          <p>אז \\(0\\le a_n\\le b_n\\), \\(b_n\\to0\\), ו־\\(b_n\\) יורדת. אבל:</p>
+          <div class="formula">\\[\\sum_{n=1}^{\\infty}(-1)^{n+1}a_n=\\sum_{k=1}^{\\infty}\\frac1{2k-1}\\ge\\sum_{k=1}^{\\infty}\\frac1{2k}=\\frac12\\sum_{k=1}^{\\infty}\\frac1k=\\infty\\]</div>
+          <p>לכן הטור מתבדר.</p>
+
+          <h4>4(ד)</h4>
+          <p>נוכיח שהטור מתכנס בהחלט בעזרת השוואה גבולית עם \\(b_n=1/n^{1.5}\\):</p>
+          <div class="formula">\\[L=\\lim_{n\\to\\infty}\\frac{|\\sqrt{n^3+(-1)^{n+1}}-n^{1.5}|}{1/n^{1.5}}\\]</div>
+          <p>נכפול בצמוד:</p>
+          <div class="formula">\\[L=\\lim_{n\\to\\infty}\\frac{n^{1.5}}{\\sqrt{n^3+(-1)^{n+1}}+n^{1.5}}=\\lim_{n\\to\\infty}\\frac1{\\sqrt{1+\\frac{(-1)^{n+1}}{n^3}}+1}=\\frac12\\]</div>
+          <p>לכן הטור מתכנס בהחלט יחד עם הטור \\(p=1.5\\), ולכן מתכנס.</p>
+
+          <h4>4(ה)</h4>
+          <p>הטענה נכונה:</p>
+          <div class="formula">\\[\\sum_{n=1}^{\\infty}\\frac1{n(2n+1)}=2-\\ln4\\]</div>
+          <p>ראשית הטור מתכנס כי:</p>
+          <div class="formula">\\[\\frac1{n(2n+1)}\\le\\frac1{n^2}\\]</div>
+          <p>נסמן את סכום הטור ב־\\(s\\). אז:</p>
+          <div class="formula">\\[\\frac12s=\\sum_{n=1}^{\\infty}\\frac1{2n(2n+1)}=\\sum_{n=1}^{\\infty}\\left(\\frac1{2n}-\\frac1{2n+1}\\right)\\]</div>
+          <p>ולכן:</p>
+          <div class="formula">\\[\\frac12s=\\frac12-\\frac13+\\frac14-\\frac15+\\cdots\\]</div>
+          <p>מאחר ש־\\(\\sum (-1)^{n+1}/n=\\ln2\\), נקבל:</p>
+          <div class="formula">\\[1-\\frac12s=1-\\frac12+\\frac13-\\frac14+\\cdots=\\ln2\\]</div>
+          <p>ולכן \\(\\frac12s=1-\\ln2\\), כלומר \\(s=2-2\\ln2=2-\\ln4\\).</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>שאלה 5 — מציאת כל ערכי \\(\\alpha\\)</summary>
+        <div class="solution">
+          <p>נחפש עבור אילו \\(\\alpha\\in\\mathbb R\\) הטור</p>
+          <div class="formula">\\[\\sum_{n=1}^{\\infty}\\left(n^3\\sin\\frac1n-n^2+\\alpha\\right)\\]</div>
+          <p>מתכנס.</p>
+          <p>אם הטור מתכנס, אז לפי התנאי ההכרחי האיבר הכללי שואף ל־0:</p>
+          <div class="formula">\\[\\lim_{n\\to\\infty}\\left(n^3\\sin\\frac1n-n^2+\\alpha\\right)=0\\]</div>
+          <p>נחשב את הגבול בעזרת \\(t=1/x\\):</p>
+          <div class="formula">\\[\\lim_{t\\to0^+}\\frac{\\sin t-t+\\alpha t^3}{t^3}\\]</div>
+          <p>בעזרת לופיטל שלוש פעמים:</p>
+          <div class="formula">\\[\\lim_{t\\to0^+}\\frac{\\sin t-t+\\alpha t^3}{t^3}=\\alpha-\\frac16\\]</div>
+          <p>כדי שהגבול יהיה 0 חייבים:</p>
+          <div class="formula">\\[\\alpha=\\frac16\\]</div>
+          <p>עכשיו מוכיחים שעבור \\(\\alpha=1/6\\) הטור באמת מתכנס. נשתמש בהשוואה גבולית ל־\\(1/n^2\\):</p>
+          <div class="formula">\\[\\lim_{n\\to\\infty}\\frac{\\left|n^3\\sin\\frac1n-n^2+\\frac16\\right|}{1/n^2}=\\frac1{120}>0\\]</div>
+          <p>לכן הטור מתכנס בהחלט יחד עם הטור \\(\\sum1/n^2\\). מסקנה:</p>
+          <div class="formula">\\[\\boxed{\\text{הטור מתכנס אם ורק אם }\\alpha=\\frac16}\\]</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>שאלה 6 — סדרה \\(a_n\\), סדרה \\(b_n=(-1)^n a_n\\), וטור לייבניץ</summary>
+        <div class="solution">
+          <h4>6(א)</h4>
+          <p>נתון \\(a_n\\to L\\). לכן קיים \\(N_1\\) כך שלכל \\(n\\ge N_1\\):</p>
+          <div class="formula">\\[|a_n-L|<1\\]</div>
+          <p>ולכן:</p>
+          <div class="formula">\\[b_n\\le |b_n|=|(-1)^n a_n|=|a_n|\\le |a_n-L|+|L|<1+|L|\\]</div>
+          <p>כלומר הזנב של \\(b_n\\) חסום מלמעלה.</p>
+
+          <h4>6(ב)</h4>
+          <p>נניח ש־\\(b_n\\) מתכנסת לגבול \\(L_1\\). אז גם תתי־הסדרות שלה מתכנסות לאותו גבול:</p>
+          <div class="formula">\\[b_{2n}\\to L_1,\\qquad b_{2n-1}\\to L_1\\]</div>
+          <p>אבל מצד ההגדרה:</p>
+          <div class="formula">\\[b_{2n}=a_{2n}\\to L,\\qquad b_{2n-1}=-a_{2n-1}\\to -L\\]</div>
+          <p>לכן:</p>
+          <div class="formula">\\[L_1=L=-L_1\\]</div>
+          <p>ומכאן \\(L_1=0\\). לכן אם \\(b_n\\) מתכנסת, אז \\(b_n\\to0\\).</p>
+
+          <h4>6(ג)</h4>
+          <p>נניח ש־\\(b_n\\) עולה. נסתכל על \\((-b_n)\\). היא יורדת.</p>
+          <p>מסעיף (א), הזנב של \\(b_n\\) חסום מלמעלה. מאחר שהוא גם עולה, הוא מתכנס. לפי סעיף (ב), גבולו 0. לכן:</p>
+          <div class="formula">\\[-b_n\\downarrow,\\qquad -b_n\\to0\\]</div>
+          <p>כעת:</p>
+          <div class="formula">\\[\\sum_{n=1}^{\\infty}a_n=\\sum_{n=1}^{\\infty}(-1)^n b_n=\\sum_{n=1}^{\\infty}(-1)^{n+1}(-b_n)\\]</div>
+          <p>זה טור לייבניץ, ולכן הוא מתכנס.</p>
+        </div>
+      </details>
+
+      <div class="note">סיכום לזכירה: ב־Homework 8 רוב השאלות נפתרות לפי זרימה קבועה — קודם בהחלט, אחר כך לייבניץ, ובשאלות כלליות לשים לב מתי מותר להשתמש בסוגריים ומתי זה כבר מניח התכנסות.</div>
+    </section>
+  </main>
+</div>
+</body>
+</html>

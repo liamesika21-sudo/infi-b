@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import {
   Brain,
+  BookOpenCheck,
   Calendar,
   ChevronDown,
   FileQuestion,
@@ -36,6 +37,7 @@ const NAV_ITEMS = [
   { href: "/weeks",         label: "שבועות",    icon: Calendar,        tourId: "nav-weeks",        show: "always" },
   { href: "/formulas",      label: "נוסחאות",   icon: Sigma,           tourId: "nav-formulas",     show: "sm"     },
   { href: "/practice",      label: "תרגול",     icon: Target,          tourId: "nav-practice",     show: "always" },
+  { href: "/homework-solutions", label: "מטלות", icon: BookOpenCheck, tourId: "nav-homework-solutions", show: "sm" },
   { href: "/past-exams",    label: "מבחני עבר", icon: FileQuestion,    tourId: "nav-past-exams",   show: "sm"     },
   { href: "/simulations",   label: "סימולציות", icon: FlaskConical,    tourId: "nav-simulations",  show: "md"     },
   { href: "/intuition-map", label: "אינטואיציה", icon: Lightbulb,      tourId: "nav-intuition",    show: "md"     },
