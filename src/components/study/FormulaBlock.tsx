@@ -1,4 +1,5 @@
 import type { FormulaItem } from "@/lib/calculus2/analysis-types";
+import { convertAtomsOnly } from "@/lib/math-text";
 import { ConfidenceBadge, ExamRelevanceBadge } from "./Badges";
 import { DisplayMath, MathContent } from "./MathContent";
 
@@ -138,7 +139,7 @@ function toKatexFromPlainMath(text: string): string | null {
   }
   if (!/[=<>≤≥≠→∞∑∫π√∈ℝ₀₁₂₃₄₅₆₇₈₉ₙₖ⁰¹²³⁴ⁿ]/.test(text)) return null;
 
-  const normalized = text
+  const normalized = convertAtomsOnly(text)
     .replace(/lim\s*\(\s*n\s*→\s*∞\s*\)/gi, "\\lim_{n\\to\\infty}")
     .replace(/lim\s*n\s*→\s*∞/gi, "\\lim_{n\\to\\infty}")
     .replace(/Σ\s*\(\s*n\s*=\s*0\s*→\s*∞\s*\)/g, "\\sum_{n=0}^{\\infty}")
@@ -146,8 +147,8 @@ function toKatexFromPlainMath(text: string): string | null {
     .replace(/∞/g, "\\infty")
     .replace(/Σ/g, "\\sum")
     .replace(/∫/g, "\\int")
-    .replace(/π/g, "\\pi")
-    .replace(/√/g, "\\sqrt")
+    .replace(/π|⇡/g, "\\pi")
+    .replace(/√\s*\(?\s*([A-Za-z0-9_{}^.'+-]+)\s*\)?/g, "\\sqrt{$1}")
     .replace(/≤/g, "\\le")
     .replace(/≥/g, "\\ge")
     .replace(/≠/g, "\\ne")

@@ -135,10 +135,22 @@ p { margin: 0; }
 .math-content {
   direction: rtl;
   font-size: 0.9375rem;
+  font-family: var(--font-heebo), "Heebo", "Arial Hebrew", Arial, sans-serif;
+  text-align: start;
 }
 .math-content p {
   margin: 0.3rem 0;
   line-height: 2.1;
+  unicode-bidi: plaintext;
+}
+
+/* Inside task lists, tighter line spacing */
+.task-item .math-content p {
+  margin: 0;
+  line-height: 1.7;
+}
+.task-item .math-content {
+  font-size: inherit;
 }
 
 .math-ltr {
@@ -168,6 +180,20 @@ p { margin: 0; }
 .math-display .katex,
 .math-display .katex-html {
   color: var(--text-primary);
+}
+
+.practice-question-text {
+  font-size: 1rem;
+  line-height: 2.15;
+  color: var(--text-primary);
+}
+
+.practice-question-text p {
+  margin: 0.35rem 0;
+}
+
+.practice-question-text .math-ltr {
+  margin-inline: 0.08rem;
 }
 
 /* ═══════════════════════════════════════════════════════

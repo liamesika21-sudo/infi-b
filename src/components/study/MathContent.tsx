@@ -10,7 +10,7 @@ const DISPLAY_ONLY_RE = /^\s*(\\\[[\s\S]*?\\\]|\$\$[\s\S]*?\$\$)\s*$/;
 
 function renderKatexSafely(latex: string, displayMode: boolean): string | null {
   try {
-    return katex.renderToString(latex.trim(), { displayMode, throwOnError: false });
+    return katex.renderToString(latex.trim(), { displayMode, throwOnError: false, strict: false });
   } catch {
     return null;
   }
@@ -22,8 +22,16 @@ function parseMathDelim(raw: string): { html: string; displayMode: boolean } | n
   if (raw.startsWith("\\[") || raw.startsWith("\\(")) inner = raw.slice(2, -2);
   else if (raw.startsWith("$$")) inner = raw.slice(2, -2);
   else inner = raw.slice(1, -1);
+  if (/[\u0590-\u05ff]/.test(inner)) return null;
   const html = renderKatexSafely(inner, displayMode);
   return html ? { html, displayMode } : null;
+}
+
+function unwrapMathDelim(raw: string): string {
+  if (raw.startsWith("\\[") || raw.startsWith("\\(")) return raw.slice(2, -2);
+  if (raw.startsWith("$$")) return raw.slice(2, -2);
+  if (raw.startsWith("$")) return raw.slice(1, -1);
+  return raw;
 }
 
 function renderBoldText(text: string): ReactNode {
@@ -57,6 +65,11 @@ function renderInlineLine(rawLine: string) {
           />
         );
       }
+      return (
+        <span key={i} dir="auto" style={{ unicodeBidi: "plaintext" }}>
+          {renderBoldText(unwrapMathDelim(part))}
+        </span>
+      );
     }
     return (
       <span key={i} dir="auto" style={{ unicodeBidi: "plaintext" }}>

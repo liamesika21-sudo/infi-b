@@ -1,6 +1,7 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { AUTH_COOKIE_NAME, isAdminEmail, readAuthCookieValue } from "@/lib/simple-auth";
+import { MathContent } from "@/components/study/MathContent";
 
 export const runtime = "nodejs";
 
@@ -819,14 +820,16 @@ function TaskSection({ icon, title, items, color }: { icon: string; title: strin
       <p className="mb-1.5 flex items-center gap-1.5 text-xs font-black uppercase tracking-wide" style={{ color }}>
         <span>{icon}</span>{title}
       </p>
-      <ul className="space-y-1">
+      <div className="space-y-1.5">
         {filtered.map((item, i) => (
-          <li key={i} className="flex gap-2 text-sm" style={{ color: "var(--text-primary)" }}>
-            <span className="mt-0.5 shrink-0 text-[10px] font-black" style={{ color }}>•</span>
-            <span dangerouslySetInnerHTML={{ __html: item }} />
-          </li>
+          <div key={i} className="task-item flex gap-2">
+            <span className="mt-1 shrink-0 text-[10px] font-black leading-none" style={{ color }}>•</span>
+            <div className="min-w-0 flex-1">
+              <MathContent text={item} className="text-sm" />
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
