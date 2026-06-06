@@ -114,7 +114,7 @@ export function SimulationQuestionBlock({
 
       {/* ── Question content ── */}
       <div className="px-5 pt-5 pb-4">
-        <SimContent text={question.content} />
+        <MathContent text={question.content} className="text-sm" />
       </div>
 
       {/* ── Hint ── */}
@@ -174,72 +174,3 @@ export function SimulationQuestionBlock({
   );
 }
 
-/* ─────────────────────────────────────────────────────────────────
-   SimContent — renders OCR-extracted math text readably.
-   Content may lack $...$ delimiters; we display it as clean
-   pre-wrapped text with good typography.
-   ───────────────────────────────────────────────────────────────── */
-function SimContent({ text }: { text: string }) {
-  // Split into numbered sub-questions if the content has ".\d" pattern (common in recitation PDFs)
-  const blocks = splitIntoBlocks(text);
-
-  if (blocks.length <= 1) {
-    return <PlainMathBlock text={text} />;
-  }
-
-  return (
-    <div className="space-y-4">
-      {blocks.map((block, i) => (
-        <div
-          key={i}
-          className="rounded-xl border-r-4 pr-4 py-3"
-          style={{ borderColor: "var(--navy-mid)", background: "var(--bg-subtle)" }}
-        >
-          <PlainMathBlock text={block} />
-        </div>
-      ))}
-    </div>
-  );
-}
-
-function PlainMathBlock({ text }: { text: string }) {
-  // Try MathContent first (handles $...$ if present)
-  const hasDollar = text.includes("$") || text.includes("\\(") || text.includes("\\[");
-
-  if (hasDollar) {
-    return <MathContent text={text} className="text-sm leading-9" />;
-  }
-
-  // No delimiters — render as readable pre-wrapped text
-  // Split into paragraphs by blank lines or numbered items
-  const paras = text
-    .split(/\n{2,}/)
-    .map((p) => p.trim())
-    .filter(Boolean);
-
-  return (
-    <div className="space-y-3">
-      {paras.map((para, i) => (
-        <p
-          key={i}
-          className="text-sm leading-9"
-          style={{
-            color: "var(--text-primary)",
-            fontFamily: "'SFMono-Regular', Menlo, monospace",
-            direction: "rtl",
-            whiteSpace: "pre-wrap",
-            wordBreak: "break-word",
-          }}
-        >
-          {para}
-        </p>
-      ))}
-    </div>
-  );
-}
-
-function splitIntoBlocks(text: string): string[] {
-  // Split on numbered items like ".1", ".2" (RTL numbering from PDF OCR)
-  const parts = text.split(/(?=\s\.\d+\s)/);
-  return parts.map((p) => p.trim()).filter((p) => p.length > 20);
-}

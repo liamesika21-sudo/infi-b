@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ChevronDown, FlaskConical, BookOpen, FileQuestion } from "lucide-react";
 import type { QuestionItem } from "@/lib/calculus2/analysis-types";
+import { MathContent } from "@/components/study/MathContent";
 
 // ── Group metadata ─────────────────────────────────────────────────────────
 
@@ -188,26 +189,23 @@ const REL_COLOR: Record<string, { bg: string; text: string }> = {
   high:     { bg: "var(--amber-light)",  text: "var(--amber-mid)" },
 };
 
+const PREVIEW_LINES = 7;
+
 function QuestionRow({ q, index }: { q: QuestionItem; index: number }) {
   const [open, setOpen] = useState(false);
   const dc = DIFF_COLOR[q.difficulty];
   const rc = REL_COLOR[q.examRelevance];
 
-  // Detect language direction
-  const heChars = (q.content.match(/[֐-׿]/g) || []).length;
-  const enChars = (q.content.match(/[a-zA-Z]/g) || []).length;
-  const dir = heChars >= enChars ? "rtl" : "ltr";
-
-  const preview = q.content.slice(0, 300).trim();
-  const hasMore = q.content.length > 300;
-  const displayText = open ? q.content : preview;
+  const lines = q.content.split("\n");
+  const hasMore = lines.length > PREVIEW_LINES;
+  const displayText = open ? q.content : lines.slice(0, PREVIEW_LINES).join("\n");
 
   return (
     <div
       className="rounded-xl border overflow-hidden"
       style={{ borderColor: "var(--border)", background: "#fff" }}
     >
-      {/* mini header */}
+      {/* header strip */}
       <div
         className="flex items-center gap-2 px-4 py-2 border-b text-xs"
         style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}
@@ -247,36 +245,21 @@ function QuestionRow({ q, index }: { q: QuestionItem; index: number }) {
         ))}
       </div>
 
-      {/* content */}
+      {/* question content — same rendering as intuition-map */}
       <div className="px-4 py-3">
-        <pre
-          className="text-sm font-sans"
-          style={{
-            direction: dir,
-            textAlign: dir === "rtl" ? "right" : "left",
-            lineHeight: "1.85",
-            color: "var(--text-primary)",
-            whiteSpace: "pre-wrap",
-            wordBreak: "break-word",
-            margin: 0,
-            fontFamily: "inherit",
-          }}
-        >
-          {displayText}
-          {!open && hasMore && "…"}
-        </pre>
+        <MathContent text={displayText} className="text-sm" />
 
         {hasMore && (
           <button
             onClick={() => setOpen(v => !v)}
-            className="mt-2 flex items-center gap-1 text-xs font-semibold"
+            className="mt-1 flex items-center gap-1 text-xs font-semibold"
             style={{ color: "var(--navy-mid)" }}
           >
             <ChevronDown
               className="h-3.5 w-3.5 transition-transform"
               style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
             />
-            {open ? "פחות" : "הצג הכל"}
+            {open ? "פחות" : `הצג הכל`}
           </button>
         )}
       </div>

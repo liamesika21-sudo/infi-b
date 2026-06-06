@@ -147,6 +147,7 @@ p { margin: 0; }
   display: inline-block;
   vertical-align: middle;
   padding: 0 2px;
+  color: inherit;
 }
 
 .math-display {
@@ -160,6 +161,13 @@ p { margin: 0; }
   background: var(--bg-subtle);
   border-radius: 8px;
   border: 1px solid var(--border);
+  color: var(--text-primary);
+}
+
+/* KaTeX always renders with the correct text color regardless of parent */
+.math-display .katex,
+.math-display .katex-html {
+  color: var(--text-primary);
 }
 
 /* ═══════════════════════════════════════════════════════
