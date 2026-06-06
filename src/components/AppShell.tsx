@@ -12,6 +12,7 @@ import {
   FlaskConical,
   Lightbulb,
   LayoutDashboard,
+  MapPin,
   ShieldCheck,
   Sigma,
   Sparkles,
@@ -40,6 +41,7 @@ const NAV_ITEMS = [
   { href: "/intuition-map", label: "אינטואיציה", icon: Lightbulb,      tourId: "nav-intuition",    show: "md"     },
   { href: "/quick-review",  label: "חזרה",       icon: Zap,            tourId: "nav-quick-review", show: "md"     },
   { href: "/mentor",        label: "מנטור",      icon: Brain,          tourId: "nav-mentor",       show: "always" },
+  { href: "/study-plan",   label: "תכנון",      icon: MapPin,         tourId: "nav-study-plan",   show: "md"     },
   { href: "/admin",         label: "אדמין",      icon: ShieldCheck,    tourId: "nav-admin",        show: "lg"     },
 ] as const;
 
