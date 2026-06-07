@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async rewrites() {
+    return [
+      { source: "/guide", destination: "/mentora-student-guide.html" },
+    ];
+  },
 };
 
 export default nextConfig;
