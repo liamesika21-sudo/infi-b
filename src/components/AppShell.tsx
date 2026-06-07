@@ -61,7 +61,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   const [onboardingEmail, setOnboardingEmail] = useState<string | null>(null);
   const [currentEmail, setCurrentEmail] = useState<string | null>(null);
   const [isAdmin, setIsAdmin] = useState(false);
-  const sessionStartedAt = useRef(Date.now());
+  const sessionStartedAt = useRef<number | null>(null);
   const daysLeft = getDaysUntilExam();
 
   useEffect(() => {
@@ -88,13 +88,14 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
     const sessionId = getOrCreateSessionId();
     const deviceId = getOrCreateDeviceId();
+    sessionStartedAt.current ??= Date.now();
 
     function sendActivity(event: "page_view" | "heartbeat" | "session_end") {
       const payload = JSON.stringify({
         event,
         sessionId,
         path: pathname,
-        durationMs: Date.now() - sessionStartedAt.current,
+        durationMs: Date.now() - (sessionStartedAt.current ?? Date.now()),
       });
 
       if (event === "session_end" && "sendBeacon" in navigator) {
