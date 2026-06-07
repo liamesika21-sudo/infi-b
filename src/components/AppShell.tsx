@@ -14,6 +14,7 @@ import {
   Lightbulb,
   LayoutDashboard,
   MapPin,
+  Route,
   ShieldCheck,
   Sigma,
   Sparkles,
@@ -34,6 +35,7 @@ function getDaysUntilExam(): number {
 // show: breakpoint from which the item becomes visible ("always" | "sm" | "md" | "lg")
 const NAV_ITEMS = [
   { href: "/dashboard",     label: "דשבורד",    icon: LayoutDashboard, tourId: "nav-dashboard",    show: "always" },
+  { href: "/student-guide", label: "מדריך",      icon: Route,           tourId: "nav-student-guide", show: "always" },
   { href: "/weeks",         label: "שבועות",    icon: Calendar,        tourId: "nav-weeks",        show: "always" },
   { href: "/formulas",      label: "נוסחאות",   icon: Sigma,           tourId: "nav-formulas",     show: "sm"     },
   { href: "/practice",      label: "תרגול",     icon: Target,          tourId: "nav-practice",     show: "always" },
