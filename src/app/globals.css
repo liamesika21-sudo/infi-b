@@ -257,15 +257,15 @@ p { margin: 0; }
   min-width: 0;
 }
 
-/* ── Desktop: sticky sidebar inside the grid column ── */
+/* ── Desktop: sticky sidebar alongside full page content ── */
 .week-section-nav {
   --week-section-main: var(--teal);
   --week-section-main-soft: rgba(11, 114, 133, 0.10);
   position: sticky;
-  top: 5.5rem;
+  top: 4rem;
   display: flex;
   flex-direction: column;
-  max-height: calc(100dvh - 6.5rem);
+  max-height: calc(100dvh - 5rem);
   border: 1px solid var(--border);
   border-radius: 12px;
   background: var(--bg-card);
@@ -358,7 +358,7 @@ p { margin: 0; }
 
   .week-section-nav {
     position: sticky;
-    top: 3.75rem;
+    top: 3.25rem;
     z-index: 30;
     border-radius: 0;
     border-inline: none;

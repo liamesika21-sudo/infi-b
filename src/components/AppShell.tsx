@@ -9,12 +9,12 @@ import {
   BookOpenCheck,
   Calendar,
   ChevronDown,
+  CircleHelp,
   FileQuestion,
   FlaskConical,
   Lightbulb,
   LayoutDashboard,
   MapPin,
-  Route,
   ShieldCheck,
   Sigma,
   Sparkles,
@@ -35,7 +35,6 @@ function getDaysUntilExam(): number {
 // show: breakpoint from which the item becomes visible ("always" | "sm" | "md" | "lg")
 const NAV_ITEMS = [
   { href: "/dashboard",     label: "דשבורד",    icon: LayoutDashboard, tourId: "nav-dashboard",    show: "always" },
-  { href: "/student-guide", label: "מדריך",      icon: Route,           tourId: "nav-student-guide", show: "always" },
   { href: "/weeks",         label: "שבועות",    icon: Calendar,        tourId: "nav-weeks",        show: "always" },
   { href: "/formulas",      label: "נוסחאות",   icon: Sigma,           tourId: "nav-formulas",     show: "sm"     },
   { href: "/practice",      label: "תרגול",     icon: Target,          tourId: "nav-practice",     show: "always" },
@@ -155,14 +154,26 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             })}
           </nav>
 
-          {/* Exam countdown */}
-          <div
-            data-tour="exam-countdown"
-            className="shrink-0 flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-bold"
-            style={countdownStyle}
-          >
-            <span className="font-mono font-black tabular-nums" dir="ltr">{daysLeft}</span>
-            <span className="hidden sm:block opacity-80">ימים</span>
+          {/* Exam countdown + guide */}
+          <div className="flex shrink-0 items-center gap-2" dir="ltr">
+            <Link
+              href="/student-guide"
+              aria-label="מדריך שימוש לסטודנט"
+              title="מדריך שימוש"
+              className="flex h-8 w-8 items-center justify-center rounded-lg border transition hover:bg-white/10"
+              style={{ borderColor: "rgba(255,255,255,0.16)", color: "rgba(255,255,255,0.82)" }}
+            >
+              <CircleHelp className="h-4 w-4" aria-hidden="true" />
+            </Link>
+            <div
+              data-tour="exam-countdown"
+              className="flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-bold"
+              style={countdownStyle}
+              dir="rtl"
+            >
+              <span className="font-mono font-black tabular-nums" dir="ltr">{daysLeft}</span>
+              <span className="hidden sm:block opacity-80">ימים</span>
+            </div>
           </div>
         </div>
       </header>

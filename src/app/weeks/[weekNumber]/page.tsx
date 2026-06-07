@@ -22,6 +22,7 @@ import {
   CheckSquare,
 } from "lucide-react";
 import { WeekHomeworkSection } from "./WeekHomeworkSection";
+import { WeekProgressTracker, type ProgSection, type ProgQuestion } from "@/components/progress/WeekProgressTracker";
 
 interface Props {
   params: Promise<{ weekNumber: string }>;
@@ -69,6 +70,19 @@ export default async function WeekDetailPage({ params }: Props) {
   const studyGuide = getStudyGuide(weekNum);
   const richContent = getWeekRichContent(weekNum);
 
+  // Build progress tracker data
+  const TRACKABLE_TAGS = ["הגדרה", "משפט", "כלל", "מסקנה"];
+  const trackerSections: ProgSection[] = (richContent?.sections ?? [])
+    .map((s, idx) => ({ idx, tag: s.tag, title: s.title }))
+    .filter(s => TRACKABLE_TAGS.includes(s.tag));
+  const trackerQuestions: ProgQuestion[] = hwQuestions.slice(0, 8).map(q => ({
+    questionId: q.questionId,
+    questionNumber: q.questionNumber,
+    homeworkNumber: q.homeworkNumber,
+    preview: q.contentPreview.split(/\bSolution\s*:|\bSolution\b|פתרון\s*:/i)[0].trim().slice(0, 140),
+  }));
+  const hasTracker = trackerSections.length > 0 || trackerQuestions.length > 0;
+
   // Collect all common mistakes from recitation summary
   const allCommonMistakes = recitationSummary?.commonMistakes ?? [];
   // Collect conclusions / key takeaways
@@ -78,6 +92,7 @@ export default async function WeekDetailPage({ params }: Props) {
   const hasWeeklySummary = allCommonMistakes.length > 0 || allConclusions.length > 0 || mustPractice.length > 0;
   const hasInferenceDiagram = buildInferenceNodes(lectureSummary, recitationSummary, homeworkPriority).length > 0;
   const weekSections = [
+    hasTracker && { id: "week-tracker", label: "מעקב" },
     hasWeeklySummary && { id: "week-start", label: "לפני שמתחילים" },
     studyGuide && { id: "study-guide", label: "איך ללמוד" },
     richContent && { id: "week-rich-content", label: "חומר והגדרות" },
@@ -90,102 +105,119 @@ export default async function WeekDetailPage({ params }: Props) {
   ].filter(Boolean) as WeekSectionNavItem[];
 
   return (
-    <div className="space-y-0">
+    /* Full-page flex: sidebar right (RTL first = right), content left */
+    <div className="lg:flex lg:gap-6 lg:items-start">
 
-      {/* ── Nav breadcrumb ── */}
-      <div className="flex items-center justify-between py-4">
-        <div className="flex items-center gap-1.5 text-sm" style={{ color: "var(--text-muted)" }}>
-          <Link href="/weeks" className="hover:underline" style={{ color: "var(--text-secondary)" }}>
-            שבועות
-          </Link>
-          <ChevronRight className="h-3.5 w-3.5" />
-          <span>שבוע {weekNum}</span>
+      {/* ── Desktop sticky sidebar ── */}
+      <aside className="hidden lg:block shrink-0 w-55 xl:w-60">
+        <WeekSectionSidebar sections={weekSections} />
+      </aside>
+
+      {/* ── Main content ── */}
+      <div className="flex-1 min-w-0 space-y-0">
+
+        {/* Mobile sidebar — horizontal pill strip */}
+        <div className="lg:hidden -mx-4 mb-2">
+          <WeekSectionSidebar sections={weekSections} />
         </div>
-        <Link
-          href={`/weeks/${weekNum}/summary`}
-          className="rounded-lg px-3 py-1.5 text-xs font-bold transition hover:opacity-80"
-          style={{ background: "var(--navy-light)", color: "var(--navy-mid)", border: "1px solid var(--navy-border)" }}
-        >
-          סיכום שבוע
-        </Link>
-      </div>
 
-      {/* ── Hero ── */}
-      <div className="mb-8 pb-7 border-b" style={{ borderColor: "var(--border)" }}>
-        <p
-          className="text-xs font-bold uppercase tracking-[0.2em] mb-2"
-          style={{ color: "var(--text-muted)" }}
-        >
-          שבוע {weekNum}
-        </p>
-        <h1
-          className="text-4xl font-black mb-4"
-          style={{ color: "var(--text-primary)", letterSpacing: "-0.03em", lineHeight: "1.15" }}
-        >
-          {lectureSummary?.title ?? `שבוע ${weekNum} — אינפי ב׳`}
-        </h1>
-
-        {lectureSummary && lectureSummary.mainTopics.length > 0 && (
-          <div className="flex flex-wrap gap-1.5 mb-5">
-            {lectureSummary.mainTopics.map((t) => (
-              <span
-                key={t}
-                className="rounded-md px-2.5 py-1 text-xs font-semibold"
-                style={{
-                  background: "var(--bg-subtle)",
-                  color: "var(--text-secondary)",
-                  border: "1px solid var(--border)",
-                }}
-              >
-                {t}
-              </span>
-            ))}
+        {/* ── Nav breadcrumb ── */}
+        <div className="flex items-center justify-between py-4">
+          <div className="flex items-center gap-1.5 text-sm" style={{ color: "var(--text-muted)" }}>
+            <Link href="/weeks" className="hover:underline" style={{ color: "var(--text-secondary)" }}>
+              שבועות
+            </Link>
+            <ChevronRight className="h-3.5 w-3.5" />
+            <span>שבוע {weekNum}</span>
           </div>
+          <Link
+            href={`/weeks/${weekNum}/summary`}
+            className="rounded-lg px-3 py-1.5 text-xs font-bold transition hover:opacity-80"
+            style={{ background: "var(--navy-light)", color: "var(--navy-mid)", border: "1px solid var(--navy-border)" }}
+          >
+            סיכום שבוע
+          </Link>
+        </div>
+
+        {/* ── Hero ── */}
+        <div className="mb-8 pb-7 border-b" style={{ borderColor: "var(--border)" }}>
+          <p
+            className="text-xs font-bold uppercase tracking-[0.2em] mb-2"
+            style={{ color: "var(--text-muted)" }}
+          >
+            שבוע {weekNum}
+          </p>
+          <h1
+            className="text-4xl font-black mb-4"
+            style={{ color: "var(--text-primary)", letterSpacing: "-0.03em", lineHeight: "1.15" }}
+          >
+            {lectureSummary?.title ?? `שבוע ${weekNum} — אינפי ב׳`}
+          </h1>
+
+          {lectureSummary && lectureSummary.mainTopics.length > 0 && (
+            <div className="flex flex-wrap gap-1.5 mb-5">
+              {lectureSummary.mainTopics.map((t) => (
+                <span
+                  key={t}
+                  className="rounded-md px-2.5 py-1 text-xs font-semibold"
+                  style={{
+                    background: "var(--bg-subtle)",
+                    color: "var(--text-secondary)",
+                    border: "1px solid var(--border)",
+                  }}
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+          )}
+
+          <Link
+            href={`/weeks/${weekNum}/summary`}
+            className="mb-5 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-black text-white transition hover:-translate-y-0.5 hover:shadow-md sm:w-auto"
+            style={{
+              background: "linear-gradient(135deg, var(--navy), var(--navy-mid))",
+              boxShadow: "0 10px 24px rgba(15, 34, 64, 0.18)",
+            }}
+          >
+            <FileText className="h-4 w-4" />
+            פתחי סיכום שבוע {weekNum}
+          </Link>
+
+          {/* Course mapping */}
+          <div className="flex flex-wrap gap-2">
+            <MappingPill icon="📖" label={`הרצאה ${weekNum}`} desc="חומר חדש" />
+            <span className="self-center text-sm" style={{ color: "var(--border-strong)" }}>→</span>
+            <MappingPill
+              icon="✏️"
+              label={`תרגול ${weekNum}`}
+              desc={practicedLecture ? `מתרגל הרצאה ${practicedLecture}` : "פתיחת קורס"}
+              highlight
+            />
+            <span className="self-center text-sm" style={{ color: "var(--border-strong)" }}>→</span>
+            <MappingPill
+              icon="📋"
+              label={`מטלה ${weekNum}`}
+              desc={
+                homeworkBasedOnLecture
+                  ? `תרגול ${weekNum} + הרצאה ${homeworkBasedOnLecture}`
+                  : "חומר ראשון"
+              }
+            />
+          </div>
+        </div>
+
+        {/* ── Progress tracker ── */}
+        {hasTracker && (
+          <WeekProgressTracker
+            weekNum={weekNum}
+            sections={trackerSections}
+            questions={trackerQuestions}
+          />
         )}
 
-        <Link
-          href={`/weeks/${weekNum}/summary`}
-          className="mb-5 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-black text-white transition hover:-translate-y-0.5 hover:shadow-md sm:w-auto"
-          style={{
-            background: "linear-gradient(135deg, var(--navy), var(--navy-mid))",
-            boxShadow: "0 10px 24px rgba(15, 34, 64, 0.18)",
-          }}
-        >
-          <FileText className="h-4 w-4" />
-          פתחי סיכום שבוע {weekNum}
-        </Link>
-
-        {/* Course mapping — clean inline row */}
-        <div className="flex flex-wrap gap-2">
-          <MappingPill icon="📖" label={`הרצאה ${weekNum}`} desc="חומר חדש" />
-          <span className="self-center text-sm" style={{ color: "var(--border-strong)" }}>→</span>
-          <MappingPill
-            icon="✏️"
-            label={`תרגול ${weekNum}`}
-            desc={practicedLecture ? `מתרגל הרצאה ${practicedLecture}` : "פתיחת קורס"}
-            highlight
-          />
-          <span className="self-center text-sm" style={{ color: "var(--border-strong)" }}>→</span>
-          <MappingPill
-            icon="📋"
-            label={`מטלה ${weekNum}`}
-            desc={
-              homeworkBasedOnLecture
-                ? `תרגול ${weekNum} + הרצאה ${homeworkBasedOnLecture}`
-                : "חומר ראשון"
-            }
-          />
-        </div>
-      </div>
-
-      <div className="grid gap-6 lg:grid-cols-[230px_minmax(0,1fr)] lg:items-start xl:grid-cols-[250px_minmax(0,1fr)]">
-        <aside className="week-section-nav-shell">
-          <WeekSectionSidebar sections={weekSections} />
-        </aside>
-
-        <div className="min-w-0">
-          {/* ── Weekly Summary Banner — Important notes, conclusions, mistakes ── */}
-          {hasWeeklySummary && (
+        {/* ── Weekly Summary Banner — Important notes, conclusions, mistakes ── */}
+        {hasWeeklySummary && (
             <WeeklySummaryBanner
               id="week-start"
               weekNum={weekNum}
@@ -412,33 +444,33 @@ export default async function WeekDetailPage({ params }: Props) {
               </div>
             </section>
           )}
+
+          {/* ── Week navigation ── */}
+          <div className="flex items-center justify-between pt-2 pb-4">
+            {weekNum > 1 ? (
+              <Link
+                href={`/weeks/${weekNum - 1}`}
+                className="flex items-center gap-2 rounded-xl border px-4 py-2.5 text-sm font-semibold transition hover:bg-white"
+                style={{ borderColor: "var(--border)", color: "var(--text-secondary)" }}
+              >
+                <ArrowRight className="h-4 w-4" />
+                שבוע {weekNum - 1}
+              </Link>
+            ) : <div />}
+            {weekNum < 13 && (
+              <Link
+                href={`/weeks/${weekNum + 1}`}
+                className="flex items-center gap-2 rounded-xl border px-4 py-2.5 text-sm font-semibold transition hover:bg-white"
+                style={{ borderColor: "var(--border)", color: "var(--text-secondary)" }}
+              >
+                שבוע {weekNum + 1}
+                <ArrowRight className="h-4 w-4 rotate-180" />
+              </Link>
+            )}
+          </div>
+
         </div>
       </div>
-
-      {/* ── Week navigation ── */}
-      <div className="flex items-center justify-between pt-2">
-        {weekNum > 1 ? (
-          <Link
-            href={`/weeks/${weekNum - 1}`}
-            className="flex items-center gap-2 rounded-xl border px-4 py-2.5 text-sm font-semibold transition hover:bg-white"
-            style={{ borderColor: "var(--border)", color: "var(--text-secondary)" }}
-          >
-            <ArrowRight className="h-4 w-4" />
-            שבוע {weekNum - 1}
-          </Link>
-        ) : <div />}
-        {weekNum < 13 && (
-          <Link
-            href={`/weeks/${weekNum + 1}`}
-            className="flex items-center gap-2 rounded-xl border px-4 py-2.5 text-sm font-semibold transition hover:bg-white"
-            style={{ borderColor: "var(--border)", color: "var(--text-secondary)" }}
-          >
-            שבוע {weekNum + 1}
-            <ArrowRight className="h-4 w-4 rotate-180" />
-          </Link>
-        )}
-      </div>
-    </div>
   );
 }
 

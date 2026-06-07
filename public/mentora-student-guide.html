@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mentora אינפי ב׳ - מדריך מהיר לסטודנטים</title>
+  <meta name="description" content="מדריך קצר וברור לשימוש במערכת Mentora להכנה לאינפי ב׳: מסלול למידה, תרגול, מטלות, הערות מקס, מבחני עבר ומעקב אישי." />
+  <style>
+    :root {
+      --ink: #102033;
+      --muted: #637083;
+      --soft: #f5f7fb;
+      --card: #ffffff;
+      --line: #dfe5ee;
+      --navy: #0f2240;
+      --blue: #2563eb;
+      --teal: #0f766e;
+      --green: #16803b;
+      --amber: #b45309;
+      --purple: #6d28d9;
+      --red: #dc2626;
+      --shadow: 0 16px 45px rgba(15, 34, 64, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 8% 0%, rgba(37, 99, 235, 0.10), transparent 30rem),
+        linear-gradient(180deg, #f8fafc 0%, #eef3f8 100%);
+      color: var(--ink);
+      font-family: "Heebo", "Arial Hebrew", Arial, sans-serif;
+      line-height: 1.75;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 44px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: var(--navy);
+      color: white;
+      font-weight: 900;
+      box-shadow: var(--shadow);
+    }
+
+    .top-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      border-radius: 999px;
+      padding: 0 16px;
+      font-size: 14px;
+      font-weight: 800;
+      border: 1px solid var(--line);
+      background: white;
+      color: var(--ink);
+    }
+
+    .button.primary {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: white;
+    }
+
+    .hero {
+      overflow: hidden;
+      border: 1px solid rgba(15, 34, 64, 0.12);
+      border-radius: 24px;
+      background:
+        linear-gradient(135deg, rgba(15, 34, 64, 0.98), rgba(15, 118, 110, 0.94)),
+        var(--navy);
+      color: white;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+      gap: 24px;
+      padding: clamp(28px, 5vw, 48px);
+      align-items: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      max-width: 760px;
+      font-size: clamp(32px, 5vw, 58px);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-text {
+      max-width: 680px;
+      margin-top: 18px;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: clamp(16px, 2.2vw, 19px);
+    }
+
+    .hero-card {
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.09);
+      padding: 20px;
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-card strong {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .hero-card ol {
+      margin: 0;
+      padding: 0 20px 0 0;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 14px;
+    }
+
+    .quick-route {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .route-chip {
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 10px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .section {
+      margin-top: 30px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .section-subtitle {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .stages {
+      display: grid;
+      gap: 12px;
+    }
+
+    .stage {
+      display: grid;
+      grid-template-columns: 72px minmax(0, 1fr) minmax(220px, 0.5fr);
+      gap: 16px;
+      align-items: center;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--card);
+      box-shadow: 0 8px 24px rgba(15, 34, 64, 0.05);
+    }
+
+    .stage-num {
+      display: grid;
+      place-items: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      color: white;
+      font-weight: 900;
+      font-size: 20px;
+    }
+
+    .stage h3 {
+      margin-bottom: 4px;
+      font-size: 21px;
+    }
+
+    .stage p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: flex-start;
+    }
+
+    .tag {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--soft);
+      padding: 4px 10px;
+      color: #475569;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .categories {
+      display: grid;
+      gap: 18px;
+    }
+
+    .category {
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.72);
+      padding: 18px;
+      box-shadow: 0 10px 30px rgba(15, 34, 64, 0.05);
+    }
+
+    .category-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--blue);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .card {
+      min-height: 170px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: white;
+      padding: 16px;
+      transition: transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(15, 34, 64, 0.08);
+    }
+
+    .card h3 {
+      margin-bottom: 7px;
+      font-size: 19px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .card .use {
+      display: inline-flex;
+      margin-top: 12px;
+      border-radius: 999px;
+      background: var(--soft);
+      padding: 5px 10px;
+      color: var(--teal);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .share-box {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 14px;
+      align-items: center;
+      margin-top: 28px;
+      padding: 18px;
+      border-radius: 20px;
+      border: 1px solid rgba(15, 34, 64, 0.12);
+      background: white;
+      box-shadow: var(--shadow);
+    }
+
+    .share-box p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer {
+      margin-top: 28px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .blue { background: var(--blue); }
+    .teal { background: var(--teal); }
+    .purple { background: var(--purple); }
+    .amber { background: var(--amber); }
+    .green { background: var(--green); }
+
+    @media (max-width: 860px) {
+      .hero-inner,
+      .stage,
+      .share-box {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-route,
+      .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .stage {
+        align-items: start;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .page {
+        width: min(100% - 20px, 1120px);
+        padding-top: 16px;
+      }
+
+      .topbar {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .top-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .button {
+        padding-inline: 10px;
+      }
+
+      .hero-inner {
+        padding: 24px 18px;
+      }
+
+      .quick-route,
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        align-items: start;
+        flex-direction: column;
+      }
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+
+      .top-actions,
+      .share-box {
+        display: none;
+      }
+
+      .hero,
+      .card,
+      .category,
+      .stage {
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="topbar" aria-label="כותרת">
+      <div class="brand">
+        <span class="brand-mark">M</span>
+        <span>Mentora · אינפי ב׳</span>
+      </div>
+      <nav class="top-actions" aria-label="קישורים מהירים">
+        <a class="button" href="#route">מסלול למידה</a>
+        <a class="button" href="#pages">מה יש בכל עמוד</a>
+        <a class="button primary" href="https://infi.mentora-edu.com" target="_blank" rel="noreferrer">כניסה למערכת</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <p class="eyebrow">מדריך קצר לסטודנטים</p>
+          <h1>איך להשתמש ב-Mentora בלי ללכת לאיבוד</h1>
+          <p class="hero-text">
+            המערכת נועדה להכנה לאינפי ב׳: קודם מבינים את החומר, אחר כך מתרגלים,
+            ואז עוברים למטלות, הערות מקס, מבחני עבר וסימולציות.
+          </p>
+          <div class="quick-route" aria-label="מסלול קצר">
+            <span class="route-chip">חומר</span>
+            <span class="route-chip">תרגול</span>
+            <span class="route-chip">הערות מקס</span>
+            <span class="route-chip">מטלות</span>
+            <span class="route-chip">מעקב</span>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="כלל שימוש">
+          <strong>הכלל הפשוט</strong>
+          <ol>
+            <li>לא פותחים את כל העמודים בבת אחת.</li>
+            <li>לומדים שבוע או נושא אחד.</li>
+            <li>פותרים שאלות לבד.</li>
+            <li>חוזרים להסברים רק איפה שנתקעים.</li>
+          </ol>
+        </aside>
+      </div>
+    </section>
+
+    <section id="route" class="section" aria-labelledby="route-title">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow" style="color: var(--muted)">One pager</p>
+          <h2 id="route-title" class="section-title">מסלול מומלץ ללמידה</h2>
+        </div>
+        <p class="section-subtitle">
+          זה הסדר המומלץ לרוב הסטודנטים. אפשר לחזור אחורה בכל שלב, אבל לא כדאי להתחיל מסימולציות לפני שיש בסיס.
+        </p>
+      </div>
+
+      <div class="stages">
+        <article class="stage">
+          <div class="stage-num blue">1</div>
+          <div>
+            <h3>מעבר על החומר</h3>
+            <p>מבינים את מבנה השבוע, ההרצאה, התרגול, ההגדרות והמשפטים. כאן בונים בסיס לפני פתרון.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">דשבורד</span>
+            <span class="tag">שבועות</span>
+            <span class="tag">נושאים</span>
+            <span class="tag">נוסחאות</span>
+            <span class="tag">משפטים</span>
+          </div>
+        </article>
+
+        <article class="stage">
+          <div class="stage-num teal">2</div>
+          <div>
+            <h3>תרגול ראשון</h3>
+            <p>פותרים שאלות מתרגולים וממטלות. אם נתקעים, חוזרים לנוסחה, משפט או מדריך הוכחות.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">תרגול</span>
+            <span class="tag">מטלות</span>
+            <span class="tag">חזרת מטלות</span>
+            <span class="tag">מדריך הוכחות</span>
+          </div>
+        </article>
+
+        <article class="stage">
+          <div class="stage-num purple">3</div>
+          <div>
+            <h3>הערות מקס וחידוד טעויות</h3>
+            <p>אחרי ניסיון עצמאי פותחים את הדגשים: מה חוזר, מה קריטי למבחן, ואילו טעויות לא לעשות.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">הערות מקס</span>
+            <span class="tag">אינטואיציה</span>
+            <span class="tag">חזרה</span>
+          </div>
+        </article>
+
+        <article class="stage">
+          <div class="stage-num amber">4</div>
+          <div>
+            <h3>שיעורי בית, מבחני עבר וסימולציות</h3>
+            <p>עוברים לשאלות עם ערך בחינתי גבוה, מזהים דפוסים ומתרגלים תחת זמן.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">מטלות</span>
+            <span class="tag">מבחני עבר</span>
+            <span class="tag">סימולציות</span>
+            <span class="tag">חזרה</span>
+          </div>
+        </article>
+
+        <article class="stage">
+          <div class="stage-num green">5</div>
+          <div>
+            <h3>מעקב אישי וסגירת פערים</h3>
+            <p>בסוף כל סשן מסמנים מה בשליטה ומה דורש חזרה, כדי לדעת בדיוק מה ללמוד מחר.</p>
+          </div>
+          <div class="tags">
+            <span class="tag">מעקב שליטה</span>
+            <span class="tag">דשבורד</span>
+            <span class="tag">מנטור</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="pages" class="section" aria-labelledby="pages-title">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow" style="color: var(--muted)">Page map</p>
+          <h2 id="pages-title" class="section-title">מה יש בכל עמוד</h2>
+        </div>
+        <p class="section-subtitle">
+          כל כרטיס הוא שם של עמוד כפי שהוא מופיע במערכת, עם הסבר קצר מתי משתמשים בו.
+        </p>
+      </div>
+
+      <div class="categories">
+        <section class="category">
+          <div class="category-title">
+            <span class="dot"></span>
+            <h2>התחלה והתמצאות</h2>
+          </div>
+          <div class="cards">
+            <article class="card">
+              <h3>דשבורד</h3>
+              <p>עמוד הבית: מיקוד להיום, מצב חומרים, נושאים קריטיים וספירה לאחור למבחן.</p>
+              <span class="use">פותחים בתחילת יום לימוד</span>
+            </article>
+            <article class="card">
+              <h3>שבועות</h3>
+              <p>מפת 13 השבועות עם הרצאה, תרגול, מטלה וסיכום. זה המקום ללמוד לפי סדר הקורס.</p>
+              <span class="use">לימוד לפי שבוע</span>
+            </article>
+            <article class="card">
+              <h3>נושאים</h3>
+              <p>מפת נושאים לפי החומר: איפה כל נושא מופיע ומה החשיבות שלו למבחן.</p>
+              <span class="use">סגירת נושא מסוים</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="category">
+          <div class="category-title">
+            <span class="dot" style="background: var(--teal)"></span>
+            <h2>למידת חומר</h2>
+          </div>
+          <div class="cards">
+            <article class="card">
+              <h3>נוסחאות</h3>
+              <p>נוסחאות ליבה עם שימוש, תנאים ואזהרות. טוב לפתיחה בזמן פתרון.</p>
+              <span class="use">כשצריך כלי חישובי</span>
+            </article>
+            <article class="card">
+              <h3>משפטים</h3>
+              <p>משפטים וגרירות לפי שבוע, כולל תנאים, מסקנות ודוגמאות נגדיות.</p>
+              <span class="use">לפני הוכחות</span>
+            </article>
+            <article class="card">
+              <h3>הגדרות</h3>
+              <p>הגדרה פורמלית, אינטואיציה, דוגמה וטעות נפוצה לכל מושג מרכזי.</p>
+              <span class="use">כשרוצים לדייק</span>
+            </article>
+            <article class="card">
+              <h3>אינטואיציה</h3>
+              <p>הסבר רעיוני לפי שבועות. מתאים כשמבינים טכנית אבל חסר למה.</p>
+              <span class="use">להבנה עמוקה יותר</span>
+            </article>
+            <article class="card">
+              <h3>תבניות הוכחה</h3>
+              <p>דפוסי הוכחה שחוזרים בקורס, עם צעדים כלליים וזיהוי סוג שאלה.</p>
+              <span class="use">לשיפור כתיבה</span>
+            </article>
+            <article class="card">
+              <h3>מדריך הוכחות</h3>
+              <p>לפי איזה משפט מנמקים, אילו תנאים בודקים ואיך כותבים פורמלית.</p>
+              <span class="use">כשפתרון חסר נימוק</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="category">
+          <div class="category-title">
+            <span class="dot" style="background: var(--purple)"></span>
+            <h2>תרגול ושיעורי בית</h2>
+          </div>
+          <div class="cards">
+            <article class="card">
+              <h3>תרגול</h3>
+              <p>מרכז השאלות: תרגולים, מטלות ומבחני עבר, מסודרים לפי מקור ונושא.</p>
+              <span class="use">עבודה יומית</span>
+            </article>
+            <article class="card">
+              <h3>מטלות</h3>
+              <p>דפי ניתוח ופתרונות מלאים למטלות, עם תבניות ואינטואיציות.</p>
+              <span class="use">אחרי ניסיון עצמאי</span>
+            </article>
+            <article class="card">
+              <h3>חזרת מטלות</h3>
+              <p>שאלות מטלה לפי חשיבות למבחן, כולל רמזים מדורגים.</p>
+              <span class="use">כשאין זמן להכל</span>
+            </article>
+            <article class="card">
+              <h3>הערות מקס</h3>
+              <p>דגשים מהתרגולים: טעויות נפוצות, דוגמאות נגדיות ומה חשוב למבחן.</p>
+              <span class="use">אחרי פתרון שאלות</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="category">
+          <div class="category-title">
+            <span class="dot" style="background: var(--amber)"></span>
+            <h2>מבחן וחזרה</h2>
+          </div>
+          <div class="cards">
+            <article class="card">
+              <h3>מבחני עבר</h3>
+              <p>ניתוח מבחנים קודמים: נושאים חוזרים, תדירויות, שאלות וקישורי PDF.</p>
+              <span class="use">אחרי שיש בסיס</span>
+            </article>
+            <article class="card">
+              <h3>סימולציות</h3>
+              <p>מבחני תרגול קצרים תחת זמן, כדי לבדוק מוכנות אמיתית.</p>
+              <span class="use">לפני המבחן</span>
+            </article>
+            <article class="card">
+              <h3>חזרה</h3>
+              <p>צ׳קליסט נושאים קריטיים, משפטים, טעויות נפוצות ותוכנית חזרה.</p>
+              <span class="use">בימים האחרונים</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="category">
+          <div class="category-title">
+            <span class="dot" style="background: var(--green)"></span>
+            <h2>עזרה ומעקב</h2>
+          </div>
+          <div class="cards">
+            <article class="card">
+              <h3>מעקב שליטה</h3>
+              <p>סימון אישי לכל נושא: לא התחלתי, בלמידה, צריך חזרה, שליטה טובה או מלאה.</p>
+              <span class="use">בסוף כל סשן</span>
+            </article>
+            <article class="card">
+              <h3>מנטור</h3>
+              <p>צ׳אט עזרה לשאלות הבנה, כיווני פתרון, ניסוח פורמלי ושאלות בסגנון מבחן.</p>
+              <span class="use">כשנתקעים</span>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="share-box" aria-label="כניסה למערכת">
+      <div>
+        <h2>רוצים להתחיל?</h2>
+        <p>נכנסים למערכת, מתחילים בדשבורד, ובוחרים את השלב המתאים לפי המסלול למעלה.</p>
+      </div>
+      <a class="button primary" href="https://infi.mentora-edu.com" target="_blank" rel="noreferrer">פתיחת Mentora</a>
+    </section>
+
+    <footer class="footer">
+      Mentora · אינפי ב׳ · מדריך שימוש קצר לסטודנטים
+    </footer>
+  </main>
+</body>
+</html>
