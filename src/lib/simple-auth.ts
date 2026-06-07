@@ -1,4 +1,4 @@
-import { createHmac, timingSafeEqual } from "crypto";
+import { createHmac, randomUUID, timingSafeEqual } from "crypto";
 import { mkdir, readFile, rename, writeFile } from "fs/promises";
 import path from "path";
 
@@ -43,6 +43,44 @@ export type RegistrationRequest = {
   planPriceIls: number;
   totalPriceIls: number;
   createdAt: string;
+  paymentStatus?: PaymentStatus;
+  paymentMethod?: PaymentMethod;
+  paymentPageUrl?: string;
+  lastPaymentActionAt?: string;
+  ip?: string;
+  userAgent?: string;
+};
+
+export type PaymentMethod = "bit" | "paybox" | "credit";
+export type PaymentActionType = "manual_instructions_shown" | "payment_link_opened";
+export type PaymentStatus = "pending" | "manual_pending" | "payment_link_opened";
+
+export type PaymentActionRecord = {
+  id: string;
+  email: string;
+  phone?: string;
+  plan: RegistrationPlan;
+  amountIls: number;
+  method: PaymentMethod;
+  action: PaymentActionType;
+  createdAt: string;
+  ip?: string;
+  userAgent?: string;
+};
+
+export type StudentActivityEventType = "page_view" | "heartbeat" | "session_end";
+
+export type StudentSessionRecord = {
+  email: string;
+  sessionId: string;
+  deviceId?: string;
+  firstSeenAt: string;
+  lastSeenAt: string;
+  durationMs: number;
+  pageViews: number;
+  heartbeatCount: number;
+  lastPath?: string;
+  status: "active" | "ended";
   ip?: string;
   userAgent?: string;
 };
@@ -53,6 +91,8 @@ type AuthFile = {
   adminEmails?: string[];
   users: Record<string, AuthUserRecord>;
   registrationRequests?: RegistrationRequest[];
+  paymentActions?: PaymentActionRecord[];
+  activitySessions?: StudentSessionRecord[];
 };
 
 type RedisConfig = {
@@ -85,7 +125,17 @@ export type AuthAdminSnapshot = {
   adminEmails: string[];
   users: AdminAuthUser[];
   registrationRequests: RegistrationRequest[];
+  paymentActions: PaymentActionRecord[];
+  activitySessions: StudentSessionRecord[];
 };
+
+const PAYMENT_LINKS: Record<RegistrationPlan, string> = {
+  basic: "https://payments.payplus.co.il/c0bc3ed9-b833-4c7e-9dc4-685e77964f52",
+  pro: "https://payments.payplus.co.il/65dccafb-d217-4755-9a5c-fe38aefe243c",
+};
+
+const MAX_PAYMENT_ACTIONS = 1000;
+const MAX_ACTIVITY_SESSIONS = 1000;
 
 function normalizeEmail(email: string): string {
   return email.trim().toLowerCase();
@@ -127,6 +177,18 @@ function getUserKey(email: string): string {
 
 function getRegistrationRequestsKey(): string {
   return "auth:registration-requests";
+}
+
+function getPaymentActionsKey(): string {
+  return "auth:payment-actions";
+}
+
+function getActivitySessionsKey(): string {
+  return "auth:activity-sessions";
+}
+
+export function getPaymentLinkForPlan(plan: RegistrationPlan): string {
+  return PAYMENT_LINKS[plan === "pro" ? "pro" : "basic"];
 }
 
 function getConfiguredAdminEmails(authFile: AuthFile): string[] {
@@ -249,13 +311,56 @@ async function readAuthFile(): Promise<AuthFile> {
                 planPriceIls,
                 totalPriceIls: Number(request.totalPriceIls) || planPriceIls,
                 createdAt: request.createdAt || "",
+                paymentStatus:
+                  request.paymentStatus === "manual_pending" ||
+                  request.paymentStatus === "payment_link_opened"
+                    ? request.paymentStatus
+                    : "pending",
+                paymentMethod:
+                  request.paymentMethod === "bit" ||
+                  request.paymentMethod === "paybox" ||
+                  request.paymentMethod === "credit"
+                    ? request.paymentMethod
+                    : undefined,
+                paymentPageUrl:
+                  typeof request.paymentPageUrl === "string"
+                    ? request.paymentPageUrl
+                    : getPaymentLinkForPlan(plan),
+                lastPaymentActionAt:
+                  typeof request.lastPaymentActionAt === "string"
+                    ? request.lastPaymentActionAt
+                    : undefined,
               };
             })
+        : [],
+      paymentActions: Array.isArray(parsed.paymentActions)
+        ? parsed.paymentActions.filter((action): action is PaymentActionRecord => {
+            const candidate = action as Partial<PaymentActionRecord>;
+            return (
+              typeof candidate.id === "string" &&
+              typeof candidate.email === "string" &&
+              (candidate.plan === "basic" || candidate.plan === "pro") &&
+              (candidate.method === "bit" || candidate.method === "paybox" || candidate.method === "credit") &&
+              (candidate.action === "manual_instructions_shown" || candidate.action === "payment_link_opened") &&
+              typeof candidate.createdAt === "string"
+            );
+          })
+        : [],
+      activitySessions: Array.isArray(parsed.activitySessions)
+        ? parsed.activitySessions.filter((session): session is StudentSessionRecord => {
+            const candidate = session as Partial<StudentSessionRecord>;
+            return (
+              typeof candidate.email === "string" &&
+              typeof candidate.sessionId === "string" &&
+              typeof candidate.firstSeenAt === "string" &&
+              typeof candidate.lastSeenAt === "string"
+            );
+          })
         : [],
     };
   } catch (error) {
     if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;
-    return { allowedEmails: [], users: {}, registrationRequests: [] };
+    return { allowedEmails: [], users: {}, registrationRequests: [], paymentActions: [], activitySessions: [] };
   }
 }
 
@@ -340,6 +445,96 @@ async function setRedisRegistrationRequests(registrationRequests: RegistrationRe
   const value = encodeURIComponent(JSON.stringify(registrationRequests));
   const response = await fetch(
     `${redis.url}/set/${encodeURIComponent(getRegistrationRequestsKey())}/${value}`,
+    {
+      method: "POST",
+      headers: { Authorization: `Bearer ${redis.token}` },
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error(`Redis SET failed with ${response.status}`);
+  }
+}
+
+async function getRedisPaymentActions(): Promise<PaymentActionRecord[]> {
+  const redis = getRedisConfig();
+  if (!redis) {
+    throw new Error(
+      "Missing Redis env vars. Set UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN on Vercel."
+    );
+  }
+
+  const response = await fetch(`${redis.url}/get/${encodeURIComponent(getPaymentActionsKey())}`, {
+    headers: { Authorization: `Bearer ${redis.token}` },
+  });
+
+  if (!response.ok) {
+    throw new Error(`Redis GET failed with ${response.status}`);
+  }
+
+  const data = (await response.json()) as { result?: string | null };
+  if (!data.result) return [];
+
+  const parsed = JSON.parse(data.result) as unknown;
+  return Array.isArray(parsed) ? (parsed as PaymentActionRecord[]) : [];
+}
+
+async function setRedisPaymentActions(paymentActions: PaymentActionRecord[]): Promise<void> {
+  const redis = getRedisConfig();
+  if (!redis) {
+    throw new Error(
+      "Missing Redis env vars. Set UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN on Vercel."
+    );
+  }
+
+  const value = encodeURIComponent(JSON.stringify(paymentActions));
+  const response = await fetch(
+    `${redis.url}/set/${encodeURIComponent(getPaymentActionsKey())}/${value}`,
+    {
+      method: "POST",
+      headers: { Authorization: `Bearer ${redis.token}` },
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error(`Redis SET failed with ${response.status}`);
+  }
+}
+
+async function getRedisActivitySessions(): Promise<StudentSessionRecord[]> {
+  const redis = getRedisConfig();
+  if (!redis) {
+    throw new Error(
+      "Missing Redis env vars. Set UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN on Vercel."
+    );
+  }
+
+  const response = await fetch(`${redis.url}/get/${encodeURIComponent(getActivitySessionsKey())}`, {
+    headers: { Authorization: `Bearer ${redis.token}` },
+  });
+
+  if (!response.ok) {
+    throw new Error(`Redis GET failed with ${response.status}`);
+  }
+
+  const data = (await response.json()) as { result?: string | null };
+  if (!data.result) return [];
+
+  const parsed = JSON.parse(data.result) as unknown;
+  return Array.isArray(parsed) ? (parsed as StudentSessionRecord[]) : [];
+}
+
+async function setRedisActivitySessions(activitySessions: StudentSessionRecord[]): Promise<void> {
+  const redis = getRedisConfig();
+  if (!redis) {
+    throw new Error(
+      "Missing Redis env vars. Set UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN on Vercel."
+    );
+  }
+
+  const value = encodeURIComponent(JSON.stringify(activitySessions));
+  const response = await fetch(
+    `${redis.url}/set/${encodeURIComponent(getActivitySessionsKey())}/${value}`,
     {
       method: "POST",
       headers: { Authorization: `Bearer ${redis.token}` },
@@ -450,6 +645,19 @@ async function getRegistrationRequests(authFile: AuthFile): Promise<Registration
   return authFile.registrationRequests ?? [];
 }
 
+async function persistRegistrationRequests(
+  authFile: AuthFile,
+  registrationRequests: RegistrationRequest[]
+): Promise<void> {
+  if (shouldUseRedisStore()) {
+    await setRedisRegistrationRequests(registrationRequests);
+    return;
+  }
+
+  authFile.registrationRequests = registrationRequests;
+  await writeAuthFile(authFile);
+}
+
 async function persistRegistrationRequest(
   authFile: AuthFile,
   registrationRequest: RegistrationRequest
@@ -462,12 +670,58 @@ async function persistRegistrationRequest(
     ),
   ];
 
+  await persistRegistrationRequests(authFile, nextRegistrationRequests);
+}
+
+async function getPaymentActions(authFile: AuthFile): Promise<PaymentActionRecord[]> {
   if (shouldUseRedisStore()) {
-    await setRedisRegistrationRequests(nextRegistrationRequests);
+    return getRedisPaymentActions();
+  }
+
+  return authFile.paymentActions ?? [];
+}
+
+async function persistPaymentActions(
+  authFile: AuthFile,
+  paymentActions: PaymentActionRecord[]
+): Promise<void> {
+  const cappedActions = paymentActions
+    .slice()
+    .sort((a, b) => b.createdAt.localeCompare(a.createdAt))
+    .slice(0, MAX_PAYMENT_ACTIONS);
+
+  if (shouldUseRedisStore()) {
+    await setRedisPaymentActions(cappedActions);
     return;
   }
 
-  authFile.registrationRequests = nextRegistrationRequests;
+  authFile.paymentActions = cappedActions;
+  await writeAuthFile(authFile);
+}
+
+async function getActivitySessions(authFile: AuthFile): Promise<StudentSessionRecord[]> {
+  if (shouldUseRedisStore()) {
+    return getRedisActivitySessions();
+  }
+
+  return authFile.activitySessions ?? [];
+}
+
+async function persistActivitySessions(
+  authFile: AuthFile,
+  activitySessions: StudentSessionRecord[]
+): Promise<void> {
+  const cappedSessions = activitySessions
+    .slice()
+    .sort((a, b) => b.lastSeenAt.localeCompare(a.lastSeenAt))
+    .slice(0, MAX_ACTIVITY_SESSIONS);
+
+  if (shouldUseRedisStore()) {
+    await setRedisActivitySessions(cappedSessions);
+    return;
+  }
+
+  authFile.activitySessions = cappedSessions;
   await writeAuthFile(authFile);
 }
 
@@ -497,6 +751,8 @@ export async function submitRegistrationRequest(
     planPriceIls: selectedPlan === "pro" ? 49 : 19,
     totalPriceIls: selectedPlan === "pro" ? 49 : 19,
     createdAt: new Date().toISOString(),
+    paymentStatus: "pending",
+    paymentPageUrl: getPaymentLinkForPlan(selectedPlan),
     ip: getRequestIp(request),
     userAgent: getRequestUserAgent(request),
   };
@@ -504,6 +760,134 @@ export async function submitRegistrationRequest(
   await persistRegistrationRequest(authFile, registrationRequest);
 
   return registrationRequest;
+}
+
+export async function recordPaymentAction(
+  email: string,
+  plan: RegistrationPlan,
+  method: PaymentMethod,
+  action: PaymentActionType,
+  request: Request,
+  phone?: string
+): Promise<PaymentActionRecord> {
+  const normalizedEmail = normalizeEmail(email);
+  const selectedPlan: RegistrationPlan = plan === "pro" ? "pro" : "basic";
+  const amountIls = selectedPlan === "pro" ? 49 : 19;
+  const now = new Date().toISOString();
+
+  if (!normalizedEmail || !normalizedEmail.includes("@")) {
+    throw new Error("invalid_email");
+  }
+
+  const authFile = await readAuthFile();
+  const paymentAction: PaymentActionRecord = {
+    id: randomUUID(),
+    email: normalizedEmail,
+    phone: phone?.trim() || undefined,
+    plan: selectedPlan,
+    amountIls,
+    method,
+    action,
+    createdAt: now,
+    ip: getRequestIp(request),
+    userAgent: getRequestUserAgent(request),
+  };
+
+  const paymentActions = await getPaymentActions(authFile);
+  await persistPaymentActions(authFile, [paymentAction, ...paymentActions]);
+
+  const registrationRequests = await getRegistrationRequests(authFile);
+  const hasRegistration = registrationRequests.some(
+    (registrationRequest) => normalizeEmail(registrationRequest.email) === normalizedEmail
+  );
+  const paymentStatus: PaymentStatus =
+    action === "payment_link_opened" ? "payment_link_opened" : "manual_pending";
+  const updatedRegistrationRequests = hasRegistration
+    ? registrationRequests.map((registrationRequest) =>
+        normalizeEmail(registrationRequest.email) === normalizedEmail
+          ? {
+              ...registrationRequest,
+              plan: selectedPlan,
+              wantsMentor: selectedPlan === "pro",
+              phone: phone?.trim() || registrationRequest.phone,
+              planPriceIls: amountIls,
+              totalPriceIls: amountIls,
+              paymentStatus,
+              paymentMethod: method,
+              paymentPageUrl: getPaymentLinkForPlan(selectedPlan),
+              lastPaymentActionAt: now,
+            }
+          : registrationRequest
+      )
+    : [
+        {
+          email: normalizedEmail,
+          phone: phone?.trim() || "",
+          plan: selectedPlan,
+          wantsMentor: selectedPlan === "pro",
+          planPriceIls: amountIls,
+          totalPriceIls: amountIls,
+          createdAt: now,
+          paymentStatus,
+          paymentMethod: method,
+          paymentPageUrl: getPaymentLinkForPlan(selectedPlan),
+          lastPaymentActionAt: now,
+          ip: getRequestIp(request),
+          userAgent: getRequestUserAgent(request),
+        },
+        ...registrationRequests,
+      ];
+
+  await persistRegistrationRequests(authFile, updatedRegistrationRequests);
+
+  return paymentAction;
+}
+
+export async function recordStudentActivity(
+  email: string,
+  event: StudentActivityEventType,
+  sessionId: string,
+  request: Request,
+  options: { path?: string; durationMs?: number; deviceId?: string } = {}
+): Promise<StudentSessionRecord> {
+  const normalizedEmail = normalizeEmail(email);
+  const normalizedSessionId = sessionId.trim();
+
+  if (!normalizedEmail || !normalizedEmail.includes("@") || !normalizedSessionId) {
+    throw new Error("invalid_activity");
+  }
+
+  const authFile = await readAuthFile();
+  const sessions = await getActivitySessions(authFile);
+  const now = new Date().toISOString();
+  const existingSession = sessions.find(
+    (session) => session.email === normalizedEmail && session.sessionId === normalizedSessionId
+  );
+  const firstSeenAt = existingSession?.firstSeenAt ?? now;
+  const inferredDuration = Math.max(0, new Date(now).getTime() - new Date(firstSeenAt).getTime());
+  const nextSession: StudentSessionRecord = {
+    email: normalizedEmail,
+    sessionId: normalizedSessionId,
+    deviceId: options.deviceId || existingSession?.deviceId,
+    firstSeenAt,
+    lastSeenAt: now,
+    durationMs: Math.max(existingSession?.durationMs ?? 0, options.durationMs ?? inferredDuration),
+    pageViews: (existingSession?.pageViews ?? 0) + (event === "page_view" ? 1 : 0),
+    heartbeatCount: (existingSession?.heartbeatCount ?? 0) + (event === "heartbeat" ? 1 : 0),
+    lastPath: options.path || existingSession?.lastPath,
+    status: event === "session_end" ? "ended" : "active",
+    ip: getRequestIp(request) ?? existingSession?.ip,
+    userAgent: getRequestUserAgent(request) ?? existingSession?.userAgent,
+  };
+
+  await persistActivitySessions(authFile, [
+    nextSession,
+    ...sessions.filter(
+      (session) => !(session.email === normalizedEmail && session.sessionId === normalizedSessionId)
+    ),
+  ]);
+
+  return nextSession;
 }
 
 export async function validateCookieForRequest(request: Request): Promise<AuthCheckResult> {
@@ -588,7 +972,11 @@ export async function loginWithEmail(
 export async function getAuthAdminSnapshot(): Promise<AuthAdminSnapshot> {
   const authFile = await readAuthFile();
   const users: AuthUserRecord[] = [];
-  const registrationRequests = await getRegistrationRequests(authFile);
+  const [registrationRequests, paymentActions, activitySessions] = await Promise.all([
+    getRegistrationRequests(authFile),
+    getPaymentActions(authFile),
+    getActivitySessions(authFile),
+  ]);
 
   if (shouldUseRedisStore()) {
     const redisUsers = await Promise.all(
@@ -625,6 +1013,8 @@ export async function getAuthAdminSnapshot(): Promise<AuthAdminSnapshot> {
     adminEmails: getConfiguredAdminEmails(authFile),
     users: adminUsers.sort((a, b) => b.lastLoginAt.localeCompare(a.lastLoginAt)),
     registrationRequests: registrationRequests.sort((a, b) => b.createdAt.localeCompare(a.createdAt)),
+    paymentActions: paymentActions.sort((a, b) => b.createdAt.localeCompare(a.createdAt)),
+    activitySessions: activitySessions.sort((a, b) => b.lastSeenAt.localeCompare(a.lastSeenAt)),
   };
 }
 

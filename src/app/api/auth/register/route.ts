@@ -27,7 +27,11 @@ export async function POST(request: Request) {
     return NextResponse.json({
       ok: true,
       email: registrationRequest.email,
-      message: "הפרטים נקלטו. נחזור אלייך להשלמת הרשמה ותשלום.",
+      phone: registrationRequest.phone,
+      plan: registrationRequest.plan,
+      totalPriceIls: registrationRequest.totalPriceIls,
+      paymentPageUrl: registrationRequest.paymentPageUrl,
+      message: "הפרטים נקלטו. אפשר לבחור עכשיו אמצעי תשלום.",
     });
   } catch (error) {
     if ((error as Error).message === "invalid_email") {

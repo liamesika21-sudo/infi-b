@@ -1,37 +1,25 @@
 "use client";
 
 import { FormEvent, type ReactNode, useEffect, useState } from "react";
-import { CheckCircle2, Lock, Mail, Phone, Sparkles, UserPlus } from "lucide-react";
+import { CheckCircle2, Copy, CreditCard, ExternalLink, Lock, Mail, Phone, Sparkles, UserPlus, WalletCards } from "lucide-react";
+import { getOrCreateDeviceId } from "@/lib/client-device";
 
 type AuthState =
   | { status: "checking" }
   | { status: "authenticated"; email: string }
   | { status: "blocked"; message?: string };
 
-const DEVICE_ID_STORAGE_KEY = "infi_device_id";
-let fallbackDeviceId = "";
+const TRANSFER_PHONE = "0587878676";
 
-function createDeviceId(): string {
-  if (typeof crypto !== "undefined" && "randomUUID" in crypto) {
-    return crypto.randomUUID();
-  }
+type RegistrationComplete = {
+  email: string;
+  phone: string;
+  plan: "basic" | "pro";
+  totalPriceIls: number;
+  paymentPageUrl: string;
+};
 
-  return `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
-}
-
-function getOrCreateDeviceId(): string {
-  try {
-    const existingDeviceId = localStorage.getItem(DEVICE_ID_STORAGE_KEY);
-    if (existingDeviceId) return existingDeviceId;
-
-    const deviceId = createDeviceId();
-    localStorage.setItem(DEVICE_ID_STORAGE_KEY, deviceId);
-    return deviceId;
-  } catch {
-    fallbackDeviceId ||= createDeviceId();
-    return fallbackDeviceId;
-  }
-}
+type PaymentMethod = "bit" | "paybox" | "credit";
 
 export function AuthGate({
   onAuthenticated,
@@ -48,6 +36,8 @@ export function AuthGate({
   const [isRegisterSubmitting, setIsRegisterSubmitting] = useState(false);
   const [message, setMessage] = useState("");
   const [registrationMessage, setRegistrationMessage] = useState("");
+  const [registrationComplete, setRegistrationComplete] = useState<RegistrationComplete | null>(null);
+  const [activePaymentMethod, setActivePaymentMethod] = useState<PaymentMethod | null>(null);
   const authMessage = authState.status === "blocked" ? authState.message : undefined;
   const registrationTotal = selectedPlan === "pro" ? 49 : 19;
 
@@ -135,6 +125,8 @@ export function AuthGate({
     setIsRegisterSubmitting(true);
     setRegistrationMessage("");
     setMessage("");
+    setRegistrationComplete(null);
+    setActivePaymentMethod(null);
 
     try {
       const response = await fetch("/api/auth/register", {
@@ -145,14 +137,57 @@ export function AuthGate({
         },
         body: JSON.stringify({ email, phone, plan: selectedPlan }),
       });
-      const data = (await response.json()) as { ok?: boolean; message?: string };
+      const data = (await response.json()) as {
+        ok?: boolean;
+        email?: string;
+        phone?: string;
+        plan?: "basic" | "pro";
+        totalPriceIls?: number;
+        paymentPageUrl?: string;
+        message?: string;
+      };
 
       setRegistrationMessage(data.message ?? (response.ok ? "הפרטים נקלטו." : "לא ניתן לשמור כרגע."));
+      if (response.ok && data.ok && data.email && data.plan && data.paymentPageUrl) {
+        setRegistrationComplete({
+          email: data.email,
+          phone: data.phone ?? phone,
+          plan: data.plan,
+          totalPriceIls: data.totalPriceIls ?? registrationTotal,
+          paymentPageUrl: data.paymentPageUrl,
+        });
+      }
     } catch {
       setRegistrationMessage("שגיאת תקשורת. נסי שוב.");
     } finally {
       setIsRegisterSubmitting(false);
     }
+  }
+
+  function recordPaymentAction(method: PaymentMethod, action: "manual_instructions_shown" | "payment_link_opened") {
+    if (!registrationComplete) return;
+
+    const payload = JSON.stringify({
+      email: registrationComplete.email,
+      phone: registrationComplete.phone,
+      plan: registrationComplete.plan,
+      method,
+      action,
+    });
+
+    try {
+      if ("sendBeacon" in navigator) {
+        navigator.sendBeacon("/api/payment-action", new Blob([payload], { type: "application/json" }));
+        return;
+      }
+    } catch {}
+
+    void fetch("/api/payment-action", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: payload,
+      keepalive: true,
+    }).catch(() => {});
   }
 
   function handleLoginSubmit(event: FormEvent<HTMLFormElement>) {
@@ -221,6 +256,8 @@ export function AuthGate({
             onClick={() => {
               setMode("login");
               setRegistrationMessage("");
+              setRegistrationComplete(null);
+              setActivePaymentMethod(null);
             }}
             className="min-h-10 rounded-md text-sm font-black transition"
             style={{
@@ -235,6 +272,8 @@ export function AuthGate({
             onClick={() => {
               setMode("register");
               setMessage("");
+              setRegistrationComplete(null);
+              setActivePaymentMethod(null);
             }}
             className="min-h-10 rounded-md text-sm font-black transition"
             style={{
@@ -246,84 +285,100 @@ export function AuthGate({
           </button>
         </div>
 
-        <label className="mb-2 block text-sm font-bold" htmlFor="auth-email">
-          מייל
-        </label>
-        <div
-          className="flex items-center gap-2 rounded-lg border bg-white px-3"
-          style={{ borderColor: "var(--border)" }}
-        >
-          <Mail className="h-4 w-4 shrink-0" style={{ color: "var(--text-muted)" }} aria-hidden="true" />
-          <input
-            id="auth-email"
-            type="email"
-            required
-            autoComplete="email"
-            value={email}
-            onChange={(event) => {
-              setEmail(event.target.value);
+        {mode === "register" && registrationComplete ? (
+          <PaymentCompletion
+            registration={registrationComplete}
+            activePaymentMethod={activePaymentMethod}
+            onShowManualInstructions={(method) => {
+              setActivePaymentMethod(method);
+              recordPaymentAction(method, "manual_instructions_shown");
             }}
-            disabled={authState.status === "checking" || isSubmitting}
-            className="min-h-11 w-full bg-transparent text-left outline-none disabled:opacity-60"
-            dir="ltr"
-            placeholder="name@example.com"
+            onOpenPaymentLink={(method) => {
+              recordPaymentAction(method, "payment_link_opened");
+            }}
           />
-        </div>
-
-        {mode === "register" && (
+        ) : (
           <>
-            <label className="mb-2 mt-3 block text-sm font-bold" htmlFor="register-phone">
-              טלפון
+            <label className="mb-2 block text-sm font-bold" htmlFor="auth-email">
+              מייל
             </label>
             <div
               className="flex items-center gap-2 rounded-lg border bg-white px-3"
               style={{ borderColor: "var(--border)" }}
             >
-              <Phone className="h-4 w-4 shrink-0" style={{ color: "var(--text-muted)" }} aria-hidden="true" />
+              <Mail className="h-4 w-4 shrink-0" style={{ color: "var(--text-muted)" }} aria-hidden="true" />
               <input
-                id="register-phone"
-                type="tel"
-                required={mode === "register"}
-                autoComplete="tel"
-                value={phone}
+                id="auth-email"
+                type="email"
+                required
+                autoComplete="email"
+                value={email}
                 onChange={(event) => {
-                  setPhone(event.target.value);
+                  setEmail(event.target.value);
                 }}
-                disabled={isRegisterSubmitting}
+                disabled={authState.status === "checking" || isSubmitting}
                 className="min-h-11 w-full bg-transparent text-left outline-none disabled:opacity-60"
                 dir="ltr"
-                placeholder="050-0000000"
+                placeholder="name@example.com"
               />
             </div>
 
-            <fieldset className="mt-4 grid gap-2">
-              <legend className="mb-2 text-sm font-bold">מסלול</legend>
+            {mode === "register" && (
+              <>
+                <label className="mb-2 mt-3 block text-sm font-bold" htmlFor="register-phone">
+                  טלפון
+                </label>
+                <div
+                  className="flex items-center gap-2 rounded-lg border bg-white px-3"
+                  style={{ borderColor: "var(--border)" }}
+                >
+                  <Phone className="h-4 w-4 shrink-0" style={{ color: "var(--text-muted)" }} aria-hidden="true" />
+                  <input
+                    id="register-phone"
+                    type="tel"
+                    required={mode === "register"}
+                    autoComplete="tel"
+                    value={phone}
+                    onChange={(event) => {
+                      setPhone(event.target.value);
+                    }}
+                    disabled={isRegisterSubmitting}
+                    className="min-h-11 w-full bg-transparent text-left outline-none disabled:opacity-60"
+                    dir="ltr"
+                    placeholder="050-0000000"
+                  />
+                </div>
 
-              <PlanOption
-                checked={selectedPlan === "basic"}
-                title="Basic"
-                price="19₪"
-                description="גישה מלאה למסך אחד."
-                onSelect={() => {
-                  setSelectedPlan("basic");
-                }}
-              />
-              <PlanOption
-                checked={selectedPlan === "pro"}
-                title="Pro"
-                price="49₪"
-                description="כולל מנטור צ'אט שמכיר הרצאות, תרגולים, תמלולים וסיכומים."
-                icon={<Sparkles className="h-4 w-4" aria-hidden="true" />}
-                onSelect={() => {
-                  setSelectedPlan("pro");
-                }}
-              />
-            </fieldset>
+                <fieldset className="mt-4 grid gap-2">
+                  <legend className="mb-2 text-sm font-bold">מסלול</legend>
 
-            <div className="mt-3 flex items-center justify-between rounded-lg border px-3 py-2 text-sm font-black" style={{ borderColor: "var(--border)" }}>
-              <span>סה&quot;כ לתשלום</span>
-              <span className="font-mono text-lg">{registrationTotal}₪</span>
-            </div>
+                  <PlanOption
+                    checked={selectedPlan === "basic"}
+                    title="Basic"
+                    price="19₪"
+                    description="גישה מלאה למסך אחד."
+                    onSelect={() => {
+                      setSelectedPlan("basic");
+                    }}
+                  />
+                  <PlanOption
+                    checked={selectedPlan === "pro"}
+                    title="Pro"
+                    price="49₪"
+                    description="כולל מנטור צ'אט שמכיר הרצאות, תרגולים, תמלולים וסיכומים."
+                    icon={<Sparkles className="h-4 w-4" aria-hidden="true" />}
+                    onSelect={() => {
+                      setSelectedPlan("pro");
+                    }}
+                  />
+                </fieldset>
+
+                <div className="mt-3 flex items-center justify-between rounded-lg border px-3 py-2 text-sm font-black" style={{ borderColor: "var(--border)" }}>
+                  <span>סה&quot;כ לתשלום</span>
+                  <span className="font-mono text-lg">{registrationTotal}₪</span>
+                </div>
+              </>
+            )}
           </>
         )}
 
@@ -362,7 +417,7 @@ export function AuthGate({
           </label>
         )}
 
-        {mode === "register" && registrationMessage && (
+        {mode === "register" && registrationMessage && !registrationComplete && (
           <p
             className="mt-3 flex min-h-6 items-start gap-2 text-sm font-semibold leading-6"
             style={{ color: registrationMessage.includes("נקלטו") ? "var(--green)" : "var(--red-mid)" }}
@@ -377,9 +432,9 @@ export function AuthGate({
           disabled={
             mode === "login"
               ? authState.status === "checking" || isSubmitting || !acceptedSingleDeviceNotice
-              : isRegisterSubmitting
+              : isRegisterSubmitting || Boolean(registrationComplete)
           }
-          className="mt-4 flex min-h-11 w-full items-center justify-center rounded-full px-4 text-sm font-black text-white transition disabled:cursor-not-allowed disabled:opacity-55"
+          className={`${registrationComplete ? "hidden" : "flex"} mt-4 min-h-11 w-full items-center justify-center rounded-full px-4 text-sm font-black text-white transition disabled:cursor-not-allowed disabled:opacity-55`}
           style={{ background: "linear-gradient(135deg, var(--navy), var(--navy-mid))" }}
         >
           {mode === "login"
@@ -397,6 +452,8 @@ export function AuthGate({
             onClick={() => {
               setMode("register");
               setMessage("");
+              setRegistrationComplete(null);
+              setActivePaymentMethod(null);
             }}
             className="mt-3 flex min-h-11 w-full items-center justify-center gap-2 rounded-lg border px-4 text-sm font-black transition hover:bg-[var(--bg-subtle)]"
             style={{ borderColor: "var(--border)", color: "var(--navy)" }}
@@ -420,6 +477,147 @@ export function AuthGate({
         </div>
       </form>
     </div>
+  );
+}
+
+function PaymentCompletion({
+  registration,
+  activePaymentMethod,
+  onShowManualInstructions,
+  onOpenPaymentLink,
+}: {
+  registration: RegistrationComplete;
+  activePaymentMethod: PaymentMethod | null;
+  onShowManualInstructions: (method: PaymentMethod) => void;
+  onOpenPaymentLink: (method: PaymentMethod) => void;
+}) {
+  const manualMethodLabel = activePaymentMethod === "paybox" ? "PayBox" : "Bit";
+
+  return (
+    <div className="space-y-3">
+      <div
+        className="rounded-lg border px-4 py-3 text-sm font-semibold leading-6"
+        style={{ background: "var(--green-light)", borderColor: "var(--green-border)", color: "var(--green)" }}
+      >
+        <div className="flex items-start gap-2">
+          <CheckCircle2 className="mt-1 h-4 w-4 shrink-0" aria-hidden="true" />
+          <span>
+            הפרטים נקלטו עבור <span dir="ltr">{registration.email}</span>. בחרו אמצעי תשלום להשלמת הרכישה.
+          </span>
+        </div>
+      </div>
+
+      <div className="grid gap-2">
+        <PaymentChoiceButton
+          icon={<WalletCards className="h-4 w-4" aria-hidden="true" />}
+          title="Bit"
+          description="הצגת מספר להעברה ידנית."
+          onClick={() => {
+            onShowManualInstructions("bit");
+          }}
+        />
+        <PaymentChoiceButton
+          icon={<WalletCards className="h-4 w-4" aria-hidden="true" />}
+          title="PayBox"
+          description="הצגת מספר להעברה ידנית."
+          onClick={() => {
+            onShowManualInstructions("paybox");
+          }}
+        />
+        <a
+          href={registration.paymentPageUrl}
+          target="_blank"
+          rel="noreferrer"
+          onClick={() => {
+            onOpenPaymentLink("credit");
+          }}
+          className="flex min-h-14 items-center gap-3 rounded-lg border bg-white px-3 py-2 text-sm font-bold transition hover:bg-[var(--bg-subtle)]"
+          style={{ borderColor: "var(--border)", color: "var(--text-primary)" }}
+        >
+          <CreditCard className="h-4 w-4 shrink-0" style={{ color: "var(--navy-mid)" }} aria-hidden="true" />
+          <span className="min-w-0 flex-1">
+            <span className="block">אשראי ידני</span>
+            <span className="block text-xs font-semibold" style={{ color: "var(--text-secondary)" }}>
+              מעבר לדף תשלום מאובטח ב-{registration.totalPriceIls}₪.
+            </span>
+          </span>
+          <ExternalLink className="h-4 w-4 shrink-0" aria-hidden="true" />
+        </a>
+      </div>
+
+      {activePaymentMethod && (
+        <div
+          className="rounded-lg border px-4 py-3 text-sm font-semibold leading-7"
+          style={{ background: "var(--amber-light)", borderColor: "var(--amber-border)", color: "var(--amber)" }}
+        >
+          <p className="font-black">העברה ב-{manualMethodLabel}</p>
+          <p>
+            יש להעביר {registration.totalPriceIls}₪ למספר{" "}
+            <span className="font-mono text-base font-black" dir="ltr">
+              {TRANSFER_PHONE}
+            </span>
+            . עד שעה תישלח חשבונית ויוזר למייל/טלפון שהשארתם.
+          </p>
+          <div className="mt-3 flex flex-col gap-2 sm:flex-row">
+            <button
+              type="button"
+              onClick={() => {
+                void navigator.clipboard?.writeText(TRANSFER_PHONE).catch(() => {});
+              }}
+              className="inline-flex min-h-10 items-center justify-center gap-2 rounded-lg border bg-white px-3 text-xs font-black transition hover:bg-[var(--bg-subtle)]"
+              style={{ borderColor: "var(--amber-border)", color: "var(--amber)" }}
+            >
+              <Copy className="h-3.5 w-3.5" aria-hidden="true" />
+              העתקת מספר
+            </button>
+            <a
+              href={registration.paymentPageUrl}
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => {
+                onOpenPaymentLink("credit");
+              }}
+              className="inline-flex min-h-10 items-center justify-center gap-2 rounded-lg border bg-white px-3 text-xs font-black transition hover:bg-[var(--bg-subtle)]"
+              style={{ borderColor: "var(--amber-border)", color: "var(--amber)" }}
+            >
+              <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+              או תשלום בדף המאובטח
+            </a>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function PaymentChoiceButton({
+  icon,
+  title,
+  description,
+  onClick,
+}: {
+  icon: ReactNode;
+  title: string;
+  description: string;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className="flex min-h-14 items-center gap-3 rounded-lg border bg-white px-3 py-2 text-right text-sm font-bold transition hover:bg-[var(--bg-subtle)]"
+      style={{ borderColor: "var(--border)", color: "var(--text-primary)" }}
+    >
+      <span className="shrink-0" style={{ color: "var(--navy-mid)" }}>
+        {icon}
+      </span>
+      <span className="min-w-0 flex-1">
+        <span className="block">{title}</span>
+        <span className="block text-xs font-semibold" style={{ color: "var(--text-secondary)" }}>
+          {description}
+        </span>
+      </span>
+    </button>
   );
 }
 

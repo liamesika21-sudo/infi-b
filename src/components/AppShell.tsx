@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {
   Brain,
   BookOpenCheck,
@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import { AuthGate } from "@/components/AuthGate";
 import { OnboardingTour } from "@/components/OnboardingTour";
+import { getOrCreateDeviceId, getOrCreateSessionId } from "@/lib/client-device";
 
 const EXAM_DATE = new Date("2026-07-01T09:00:00");
 
@@ -58,21 +59,86 @@ const SHOW_CLASS: Record<string, string> = {
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const [onboardingEmail, setOnboardingEmail] = useState<string | null>(null);
+  const [currentEmail, setCurrentEmail] = useState<string | null>(null);
   const [isAdmin, setIsAdmin] = useState(false);
+  const sessionStartedAt = useRef(Date.now());
   const daysLeft = getDaysUntilExam();
 
   useEffect(() => {
-    fetch("/api/auth/status")
+    fetch("/api/auth/status", {
+      headers: { "x-infi-device-id": getOrCreateDeviceId() },
+    })
       .then((r) => r.json())
-      .then((d: { isAdmin?: boolean }) => { if (d.isAdmin) setIsAdmin(true); })
+      .then((d: { ok?: boolean; email?: string; isAdmin?: boolean }) => {
+        if (d.ok && d.email) setCurrentEmail(d.email);
+        if (d.isAdmin) setIsAdmin(true);
+      })
       .catch(() => {});
   }, []);
 
   const handleAuthenticated = useCallback((email: string, options?: { showOnboarding?: boolean }) => {
+    setCurrentEmail(email);
     if (options?.showOnboarding) {
       setOnboardingEmail(email);
     }
   }, []);
+
+  useEffect(() => {
+    if (!currentEmail) return;
+
+    const sessionId = getOrCreateSessionId();
+    const deviceId = getOrCreateDeviceId();
+
+    function sendActivity(event: "page_view" | "heartbeat" | "session_end") {
+      const payload = JSON.stringify({
+        event,
+        sessionId,
+        path: pathname,
+        durationMs: Date.now() - sessionStartedAt.current,
+      });
+
+      if (event === "session_end" && "sendBeacon" in navigator) {
+        try {
+          navigator.sendBeacon("/api/activity", new Blob([payload], { type: "application/json" }));
+          return;
+        } catch {}
+      }
+
+      void fetch("/api/activity", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-infi-device-id": deviceId,
+        },
+        body: payload,
+        keepalive: true,
+      }).catch(() => {});
+    }
+
+    sendActivity("page_view");
+    const interval = window.setInterval(() => {
+      sendActivity("heartbeat");
+    }, 30_000);
+
+    function handleVisibilityChange() {
+      if (document.visibilityState === "hidden") {
+        sendActivity("heartbeat");
+      }
+    }
+
+    function handlePageHide() {
+      sendActivity("session_end");
+    }
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    window.addEventListener("pagehide", handlePageHide);
+
+    return () => {
+      window.clearInterval(interval);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      window.removeEventListener("pagehide", handlePageHide);
+    };
+  }, [currentEmail, pathname]);
 
   const countdownStyle =
     daysLeft <= 7
