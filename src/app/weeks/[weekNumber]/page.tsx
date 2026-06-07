@@ -218,7 +218,7 @@ export default async function WeekDetailPage({ params }: Props) {
                   חומר, הגדרות ומבחנים
                 </h2>
               </div>
-              <WeekRichContentPanel content={richContent} />
+              <WeekRichContentPanel content={richContent} weekNum={weekNum} />
             </section>
           )}
 

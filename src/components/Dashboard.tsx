@@ -24,6 +24,7 @@ import type { GeneratedDataSnapshot, MaterialInventory } from "@/lib/calculus2";
 import type { readAnalysisData } from "@/lib/calculus2/analysis-reader";
 import type { LectureSummary } from "@/lib/calculus2/analysis-types";
 import { StudyCallout } from "@/components/study/StudyCallout";
+import { DashboardProgress } from "@/components/progress/DashboardProgress";
 
 const EXAM_DATE = new Date("2026-07-01T09:00:00");
 
@@ -342,6 +343,9 @@ export function Dashboard({
           כדי להתחיל.
         </StudyCallout>
       )}
+
+      {/* ══ PERSONAL PROGRESS ══ */}
+      <DashboardProgress />
 
       {/* ══ LEARNING PROGRESS ══ */}
       <LearningProgressPanel

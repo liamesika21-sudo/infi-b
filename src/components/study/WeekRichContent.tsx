@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { DisplayMath, MathContent } from "./MathContent";
 import { DecisionTree } from "./DecisionTree";
+import { TheoremStatusButton } from "@/components/progress/TheoremStatusButton";
 import type { WeekRichContent, RichSection, SectionTag } from "@/lib/calculus2/week-rich-content";
 
 const TAG_STYLES: Record<SectionTag, { bg: string; text: string; border: string }> = {
@@ -28,7 +29,7 @@ const ACCENT_BORDER: Record<SectionTag, string> = {
   "אזהרה":  "var(--red-mid)",
 };
 
-export function WeekRichContentPanel({ content }: { content: WeekRichContent }) {
+export function WeekRichContentPanel({ content, weekNum = 0 }: { content: WeekRichContent; weekNum?: number }) {
   return (
     <div className="space-y-8">
       {/* Goal + principle */}
@@ -92,7 +93,7 @@ export function WeekRichContentPanel({ content }: { content: WeekRichContent }) 
       {/* Sections */}
       <div className="space-y-4">
         {content.sections.map((section, i) => (
-          <RichSectionCard key={i} section={section} />
+          <RichSectionCard key={i} section={section} sectionIdx={i} weekNum={weekNum} />
         ))}
       </div>
     </div>
@@ -333,10 +334,13 @@ function SummaryTable({ rows }: { rows: string[][] }) {
   );
 }
 
-function RichSectionCard({ section }: { section: RichSection }) {
+const TRACKABLE_TAGS: SectionTag[] = ["הגדרה", "משפט", "כלל", "מסקנה"];
+
+function RichSectionCard({ section, sectionIdx, weekNum }: { section: RichSection; sectionIdx: number; weekNum: number }) {
   const [open, setOpen] = useState(true);
   const tagStyle = TAG_STYLES[section.tag];
   const accentBorder = ACCENT_BORDER[section.tag];
+  const isTrackable = TRACKABLE_TAGS.includes(section.tag);
 
   return (
     <article
@@ -368,9 +372,14 @@ function RichSectionCard({ section }: { section: RichSection }) {
             {section.title}
           </h3>
         </div>
-        <span className="shrink-0" style={{ color: "var(--text-muted)" }}>
-          {open ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
-        </span>
+        <div className="flex items-center gap-2 shrink-0">
+          {isTrackable && weekNum > 0 && (
+            <TheoremStatusButton week={weekNum} sectionIdx={sectionIdx} />
+          )}
+          <span style={{ color: "var(--text-muted)" }}>
+            {open ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
+          </span>
+        </div>
       </button>
 
       {/* Body */}
