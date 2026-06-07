@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, type CSSProperties } from "react";
 import { Check, RotateCcw } from "lucide-react";
 import {
   loadProgress, saveProgress,
@@ -96,6 +96,11 @@ export function WeekProgressTracker({ weekNum, sections, questions }: Props) {
   const knownCount = sections.filter(s => data.theorems[theoremKey(weekNum, s.idx)] === "known").length;
   const reviewCount = sections.filter(s => data.theorems[theoremKey(weekNum, s.idx)] === "review").length;
   const doneCount = questions.filter(q => data.questions[hwQuestionKey(q.homeworkNumber, q.questionId)]?.done).length;
+  const totalTrackable = sections.length + questions.length;
+  const completedCount = knownCount + doneCount;
+  const progressPercent = totalTrackable > 0
+    ? Math.round((completedCount / totalTrackable) * 100)
+    : 0;
 
   return (
     <section
@@ -105,19 +110,19 @@ export function WeekProgressTracker({ weekNum, sections, questions }: Props) {
     >
       {/* Header */}
       <div
-        className="flex items-center justify-between px-5 py-3.5 border-b"
+        className="flex flex-wrap items-start justify-between gap-2 px-4 py-3 border-b"
         style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}
       >
-        <div>
+        <div className="min-w-0">
           <p className="text-[10px] font-black uppercase tracking-widest" style={{ color: "var(--text-muted)" }}>
             מעקב אישי
           </p>
-          <h2 className="text-sm font-black mt-0.5" style={{ color: "var(--text-primary)" }}>
+          <h2 className="text-sm font-black mt-0.5 leading-tight" style={{ color: "var(--text-primary)" }}>
             שבוע {weekNum} — הגדרות, משפטים ושאלות
           </h2>
         </div>
         {/* Summary chips */}
-        <div className="flex items-center gap-2 flex-wrap justify-end">
+        <div className="flex items-center gap-1.5 flex-wrap">
           {sections.length > 0 && (
             <>
               <Chip label={`${knownCount}/${sections.length} ידוע`} color="var(--green)" bg="var(--green-light)" border="var(--green-border)" />
@@ -134,7 +139,7 @@ export function WeekProgressTracker({ weekNum, sections, questions }: Props) {
 
       {/* Body */}
       <div className={`grid divide-y sm:divide-y-0 ${sections.length > 0 && questions.length > 0 ? "sm:grid-cols-2 sm:divide-x" : ""}`}
-        style={{ "--tw-divide-opacity": 1, borderColor: "var(--border)" } as React.CSSProperties}
+        style={{ "--tw-divide-opacity": 1, borderColor: "var(--border)" } as CSSProperties}
       >
         {/* Theorems / Definitions */}
         {sections.length > 0 && (
@@ -148,42 +153,43 @@ export function WeekProgressTracker({ weekNum, sections, questions }: Props) {
                 const status = data.theorems[key];
                 const tagStyle = TAG_COLOR[sec.tag] ?? TAG_COLOR["הגדרה"];
                 return (
-                  <div key={sec.idx} className="flex items-center gap-2 min-w-0">
-                    {/* Tag */}
-                    <span
-                      className="shrink-0 rounded px-1.5 py-0.5 text-[10px] font-black"
-                      style={{ background: tagStyle.bg, color: tagStyle.text, border: `1px solid ${tagStyle.border}` }}
-                    >
-                      {sec.tag}
-                    </span>
-                    {/* Title */}
-                    <span className="flex-1 min-w-0 text-xs font-semibold truncate" style={{ color: "var(--text-secondary)" }}>
-                      {sec.title}
-                    </span>
-                    {/* Status buttons */}
-                    <div className="flex items-center gap-1 shrink-0">
+                  <div key={sec.idx} className="flex flex-col gap-1 py-0.5">
+                    {/* Row 1: Tag + Title */}
+                    <div className="flex items-center gap-1.5 min-w-0">
+                      <span
+                        className="shrink-0 rounded px-1.5 py-0.5 text-[10px] font-black"
+                        style={{ background: tagStyle.bg, color: tagStyle.text, border: `1px solid ${tagStyle.border}` }}
+                      >
+                        {sec.tag}
+                      </span>
+                      <span className="flex-1 min-w-0 text-xs font-semibold leading-tight" style={{ color: "var(--text-secondary)", wordBreak: "break-word" }}>
+                        {sec.title}
+                      </span>
+                    </div>
+                    {/* Row 2: Status buttons */}
+                    <div className="flex items-center gap-1">
                       <button
                         onClick={() => setTheoremStatus(sec.idx, "known")}
-                        className="flex items-center gap-0.5 rounded-full px-2 py-0.5 text-[10px] font-black transition-all"
+                        className="flex items-center gap-0.5 rounded-full px-2.5 py-1 text-[11px] font-black transition-all"
                         style={{
                           background: status === "known" ? "var(--green-mid)" : "transparent",
                           color: status === "known" ? "#fff" : "var(--text-muted)",
                           border: `1px solid ${status === "known" ? "var(--green-mid)" : "var(--border)"}`,
                         }}
                       >
-                        <Check className="h-2.5 w-2.5" />
+                        <Check className="h-3 w-3" />
                         יודעת
                       </button>
                       <button
                         onClick={() => setTheoremStatus(sec.idx, "review")}
-                        className="flex items-center gap-0.5 rounded-full px-2 py-0.5 text-[10px] font-black transition-all"
+                        className="flex items-center gap-0.5 rounded-full px-2.5 py-1 text-[11px] font-black transition-all"
                         style={{
                           background: status === "review" ? "var(--amber-mid)" : "transparent",
                           color: status === "review" ? "#fff" : "var(--text-muted)",
                           border: `1px solid ${status === "review" ? "var(--amber-mid)" : "var(--border)"}`,
                         }}
                       >
-                        <RotateCcw className="h-2.5 w-2.5" />
+                        <RotateCcw className="h-3 w-3" />
                         לחזור
                       </button>
                     </div>
@@ -251,6 +257,46 @@ export function WeekProgressTracker({ weekNum, sections, questions }: Props) {
             </div>
           </div>
         )}
+      </div>
+
+      <div
+        className="border-t px-5 py-4"
+        style={{ borderColor: "var(--border)", background: "linear-gradient(135deg, var(--bg-card), var(--bg-subtle))" }}
+      >
+        <div className="mb-3 flex flex-wrap items-end justify-between gap-2">
+          <div>
+            <p className="text-[10px] font-black uppercase tracking-widest" style={{ color: "var(--text-muted)" }}>
+              מד התקדמות שבועי
+            </p>
+            <p className="mt-1 text-xs font-bold" style={{ color: "var(--text-secondary)" }}>
+              {completedCount}/{totalTrackable} סימונים הושלמו
+              {reviewCount > 0 ? ` · ${reviewCount} לחזרה` : ""}
+            </p>
+          </div>
+          <span className="rounded-full px-3 py-1 text-xs font-black" style={{ background: "var(--navy-light)", color: "var(--navy-mid)", border: "1px solid var(--navy-border)" }}>
+            {progressPercent}%
+          </span>
+        </div>
+
+        <div
+          className="week-glow-progress"
+          style={{ "--week-progress": `${progressPercent}%` } as CSSProperties}
+          aria-label={`התקדמות שבועית ${progressPercent}%`}
+          role="progressbar"
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-valuenow={progressPercent}
+        >
+          <div className="week-glow-particles" aria-hidden="true">
+            <span className="week-glow-particle" />
+            <span className="week-glow-particle" />
+            <span className="week-glow-particle" />
+            <span className="week-glow-particle" />
+            <span className="week-glow-particle" />
+          </div>
+          <div className="week-glow-progress-bar" />
+          <div className="week-glow-progress-text">{progressPercent}%</div>
+        </div>
       </div>
     </section>
   );

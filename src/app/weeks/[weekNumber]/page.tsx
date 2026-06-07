@@ -109,7 +109,7 @@ export default async function WeekDetailPage({ params }: Props) {
     <div className="lg:flex lg:gap-6 lg:items-start">
 
       {/* ── Desktop sticky sidebar ── */}
-      <aside className="hidden lg:block shrink-0 w-55 xl:w-60">
+      <aside className="hidden lg:sticky lg:top-20 lg:block lg:self-start shrink-0 w-55 xl:w-60">
         <WeekSectionSidebar sections={weekSections} />
       </aside>
 

@@ -261,8 +261,7 @@ p { margin: 0; }
 .week-section-nav {
   --week-section-main: var(--teal);
   --week-section-main-soft: rgba(11, 114, 133, 0.10);
-  position: sticky;
-  top: 4rem;
+  position: relative;
   display: flex;
   flex-direction: column;
   max-height: calc(100dvh - 5rem);
@@ -270,7 +269,7 @@ p { margin: 0; }
   border-radius: 12px;
   background: var(--bg-card);
   padding: 0.75rem 0.5rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  box-shadow: 0 14px 34px rgba(15, 34, 64, 0.08), 0 1px 3px rgba(0,0,0,0.04);
   overflow: hidden;
 }
 
@@ -545,6 +544,96 @@ p { margin: 0; }
 @keyframes learningProgressGrow {
   from { width: 0; }
   to   { width: var(--progress-value, 0%); }
+}
+
+/* ─── Week tracker glow progress ─── */
+.week-glow-progress {
+  position: relative;
+  width: 100%;
+  height: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(49, 49, 49, 0.85);
+  border-radius: 999px;
+  background: radial-gradient(circle at 50% 50%, #1b2735 0%, #090a0f 74%);
+  box-shadow: 0 10px 22px rgba(15, 34, 64, 0.20), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+.week-glow-progress-bar {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  width: var(--week-progress, 0%);
+  border-radius: inherit;
+  background: linear-gradient(90deg, #00f260, #0575e6);
+  box-shadow: 0 0 15px rgba(0, 242, 96, 0.75), 0 0 30px rgba(5, 117, 230, 0.55);
+  animation: weekGlowGrow 950ms ease-out both;
+}
+
+.week-glow-progress-bar::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.18), transparent 58%);
+  opacity: 0.6;
+  animation: weekGlowRipple 3s infinite;
+}
+
+.week-glow-progress-text {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+}
+
+.week-glow-particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.week-glow-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.85);
+  opacity: 0.58;
+  animation: weekGlowFloat 5s infinite ease-in-out;
+}
+
+.week-glow-particle:nth-child(1) { inset-block-start: 10%; inset-inline-start: 20%; animation-delay: 0s; }
+.week-glow-particle:nth-child(2) { inset-block-start: 30%; inset-inline-start: 70%; animation-delay: 1s; }
+.week-glow-particle:nth-child(3) { inset-block-start: 50%; inset-inline-start: 50%; animation-delay: 2s; }
+.week-glow-particle:nth-child(4) { inset-block-start: 80%; inset-inline-start: 40%; animation-delay: 1.5s; }
+.week-glow-particle:nth-child(5) { inset-block-start: 90%; inset-inline-start: 60%; animation-delay: 2.5s; }
+
+@keyframes weekGlowGrow {
+  from { width: 0; }
+  to   { width: var(--week-progress, 0%); }
+}
+
+@keyframes weekGlowRipple {
+  from { transform: scale(0.5); opacity: 0.7; }
+  to   { transform: scale(1.5); opacity: 0; }
+}
+
+@keyframes weekGlowFloat {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50%      { transform: translateY(-20px) translateX(10px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .week-glow-progress-bar,
+  .week-glow-progress-bar::before,
+  .week-glow-particle {
+    animation: none;
+  }
 }
 
 /* ─── Source snippet ─── */

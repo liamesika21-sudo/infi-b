@@ -3,60 +3,61 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mentora אינפי ב׳ - מדריך מהיר לסטודנטים</title>
-  <meta name="description" content="מדריך קצר וברור לשימוש במערכת Mentora להכנה לאינפי ב׳: מסלול למידה, תרגול, מטלות, הערות מקס, מבחני עבר ומעקב אישי." />
+  <title>אינפי ב׳ — מדריך ללמידה</title>
+  <meta name="description" content="מדריך ללמידה לאינפי חדו״א ב׳: מסלול צעד אחר צעד, מה יש בכל עמוד, ואיך לגשת לחומר נכון." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
   <style>
+    /* ── Variables ───────────────────────────────────────── */
     :root {
-      --ink: #102033;
-      --muted: #637083;
-      --soft: #f5f7fb;
-      --card: #ffffff;
-      --line: #dfe5ee;
-      --navy: #0f2240;
-      --blue: #2563eb;
-      --teal: #0f766e;
-      --green: #16803b;
-      --amber: #b45309;
-      --purple: #6d28d9;
-      --red: #dc2626;
-      --shadow: 0 16px 45px rgba(15, 34, 64, 0.10);
+      --navy:   #0d1f38;
+      --navy-2: #162f52;
+      --ink:    #0f172a;
+      --ink-2:  #334155;
+      --muted:  #64748b;
+      --bg:     #f2f5fa;
+      --card:   #ffffff;
+      --border: rgba(15,34,64,0.09);
+
+      --blue:   #2563eb;
+      --teal:   #0d9488;
+      --purple: #7c3aed;
+      --amber:  #d97706;
+      --green:  #16a34a;
+
+      --sh-sm: 0 2px 8px rgba(15,34,64,0.06);
+      --sh-md: 0 8px 24px rgba(15,34,64,0.10);
+      --sh-lg: 0 20px 48px rgba(15,34,64,0.15);
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    /* ── Reset ───────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
     body {
-      margin: 0;
-      background:
-        radial-gradient(circle at 8% 0%, rgba(37, 99, 235, 0.10), transparent 30rem),
-        linear-gradient(180deg, #f8fafc 0%, #eef3f8 100%);
+      background: var(--bg);
       color: var(--ink);
       font-family: "Heebo", "Arial Hebrew", Arial, sans-serif;
-      line-height: 1.75;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
     }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
+    /* ── Page shell ──────────────────────────────────────── */
     .page {
-      width: min(1120px, calc(100% - 32px));
+      width: min(1180px, 100% - 32px);
       margin: 0 auto;
-      padding: 28px 0 44px;
+      padding-bottom: 100px;
     }
 
+    /* ── Topbar ──────────────────────────────────────────── */
     .topbar {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 18px;
+      gap: 12px;
+      padding: 18px 0 16px;
     }
 
     .brand {
@@ -64,670 +65,1012 @@
       align-items: center;
       gap: 10px;
       font-weight: 900;
+      font-size: 16px;
+      color: var(--navy);
     }
 
-    .brand-mark {
-      display: grid;
-      place-items: center;
-      width: 40px;
-      height: 40px;
+    .brand-logo {
+      width: 40px; height: 40px;
       border-radius: 12px;
       background: var(--navy);
-      color: white;
-      font-weight: 900;
-      box-shadow: var(--shadow);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      box-shadow: var(--sh-md);
     }
 
-    .top-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
+    .brand-logo img { width: 28px; height: 28px; object-fit: contain; }
 
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 40px;
+    .top-nav { display: flex; align-items: center; gap: 8px; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      min-height: 40px; padding: 0 18px;
       border-radius: 999px;
-      padding: 0 16px;
-      font-size: 14px;
-      font-weight: 800;
-      border: 1px solid var(--line);
-      background: white;
-      color: var(--ink);
+      font-size: 14px; font-weight: 800;
+      border: 1.5px solid rgba(15,34,64,0.15);
+      background: white; color: var(--ink-2);
+      cursor: pointer;
+      transition: transform 140ms ease, box-shadow 140ms ease;
+      white-space: nowrap;
     }
+    .btn:hover { transform: translateY(-1px); box-shadow: var(--sh-md); }
+    .btn-primary { background: var(--navy); border-color: var(--navy); color: white; }
+    .btn-primary:hover { background: var(--navy-2); }
 
-    .button.primary {
-      background: var(--navy);
-      border-color: var(--navy);
-      color: white;
-    }
-
+    /* ── HERO ────────────────────────────────────────────── */
     .hero {
-      overflow: hidden;
-      border: 1px solid rgba(15, 34, 64, 0.12);
+      position: relative;
       border-radius: 24px;
-      background:
-        linear-gradient(135deg, rgba(15, 34, 64, 0.98), rgba(15, 118, 110, 0.94)),
-        var(--navy);
+      overflow: hidden;
+      background: linear-gradient(140deg, #09182e 0%, var(--navy) 42%, #0a3835 100%);
       color: white;
-      box-shadow: var(--shadow);
+      box-shadow: var(--sh-lg);
+      margin-bottom: 28px;
+    }
+
+    /* dot-grid texture */
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.055) 1px, transparent 1px);
+      background-size: 22px 22px;
+      pointer-events: none;
+    }
+
+    /* ambient glow */
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -100px; left: 15%;
+      width: 480px; height: 480px;
+      background: radial-gradient(circle, rgba(13,148,136,0.22) 0%, transparent 65%);
+      pointer-events: none;
     }
 
     .hero-inner {
+      position: relative; z-index: 1;
       display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+      grid-template-columns: minmax(0, 1.5fr) minmax(210px, 0.5fr);
       gap: 24px;
-      padding: clamp(28px, 5vw, 48px);
+      padding: clamp(28px, 5vw, 52px);
       align-items: center;
     }
 
-    .eyebrow {
-      margin: 0 0 10px;
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.65);
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      margin-bottom: 18px;
+      padding: 6px 14px 6px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.09);
+      font-size: 12px; font-weight: 900;
+      color: rgba(255,255,255,0.82);
+      backdrop-filter: blur(8px);
     }
 
-    h1,
-    h2,
-    h3,
-    p {
-      margin: 0;
+    .hero-badge img {
+      width: 24px; height: 24px;
+      border-radius: 7px;
+      object-fit: contain;
+      background: rgba(255,255,255,0.08);
     }
 
-    h1 {
-      max-width: 760px;
-      font-size: clamp(32px, 5vw, 58px);
+    .hero h1 {
+      font-size: clamp(30px, 4.8vw, 52px);
       line-height: 1.08;
       letter-spacing: -0.03em;
+      font-weight: 900;
     }
 
-    .hero-text {
-      max-width: 680px;
-      margin-top: 18px;
-      color: rgba(255, 255, 255, 0.78);
-      font-size: clamp(16px, 2.2vw, 19px);
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(90deg, #34d399, #5eead4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
+    .hero-sub {
+      margin-top: 14px;
+      color: rgba(255,255,255,0.70);
+      font-size: clamp(14px, 2vw, 16px);
+      line-height: 1.75;
+      max-width: 540px;
+    }
+
+    .hero-stats {
+      display: flex; flex-wrap: wrap; gap: 10px;
+      margin-top: 24px;
+    }
+
+    .hero-stat {
+      display: flex; align-items: center; gap: 8px;
+      padding: 8px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.07);
+      font-size: 13px; font-weight: 800;
+    }
+
+    .hero-stat strong {
+      font-size: 20px; font-weight: 900;
+      color: #34d399;
+    }
+
+    .hero-actions {
+      display: flex; flex-wrap: wrap; gap: 12px;
+      margin-top: 26px;
+    }
+
+    .btn-hero {
+      display: inline-flex; align-items: center; gap: 8px;
+      min-height: 50px; padding: 0 26px;
+      border-radius: 999px;
+      font-size: 15px; font-weight: 900;
+      border: none; cursor: pointer;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .btn-hero:hover { transform: translateY(-2px); }
+
+    .btn-hero-primary {
+      background: linear-gradient(135deg, #34d399, #0d9488);
+      color: #052018;
+      box-shadow: 0 8px 24px rgba(13,148,136,0.38);
+    }
+
+    .btn-hero-primary:hover { box-shadow: 0 14px 32px rgba(13,148,136,0.50); }
+
+    .btn-hero-secondary {
+      background: rgba(255,255,255,0.11);
+      color: rgba(255,255,255,0.9);
+      border: 1.5px solid rgba(255,255,255,0.22);
+    }
+
+    .btn-hero-secondary:hover { background: rgba(255,255,255,0.17); }
+
+    /* Hero right: rule card */
     .hero-card {
-      border: 1px solid rgba(255, 255, 255, 0.16);
       border-radius: 18px;
-      background: rgba(255, 255, 255, 0.09);
-      padding: 20px;
-      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.09);
+      padding: 22px 20px;
+      backdrop-filter: blur(16px);
     }
 
     .hero-card strong {
       display: block;
-      margin-bottom: 10px;
-      font-size: 18px;
-    }
-
-    .hero-card ol {
-      margin: 0;
-      padding: 0 20px 0 0;
-      color: rgba(255, 255, 255, 0.82);
-      font-size: 14px;
-    }
-
-    .quick-route {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 10px;
-      margin-top: 16px;
-    }
-
-    .route-chip {
-      border-radius: 14px;
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      padding: 10px;
-      text-align: center;
-      font-size: 13px;
-      font-weight: 800;
-    }
-
-    .section {
-      margin-top: 30px;
-    }
-
-    .section-head {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 16px;
+      font-size: 14px; font-weight: 900;
       margin-bottom: 14px;
+      color: rgba(255,255,255,0.92);
+      letter-spacing: -0.01em;
+    }
+
+    .rule-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+    .rule-list li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 13px; color: rgba(255,255,255,0.74); line-height: 1.5;
+    }
+
+    .rule-n {
+      display: flex; align-items: center; justify-content: center;
+      width: 22px; height: 22px; flex-shrink: 0; margin-top: 1px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.16);
+      font-size: 11px; font-weight: 900;
+    }
+
+    /* ── CONTENT LAYOUT ──────────────────────────────────── */
+    .content-layout {
+      display: grid;
+      grid-template-columns: 210px minmax(0, 1fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    /* ── SIDE MENU ───────────────────────────────────────── */
+    .side-menu {
+      position: sticky;
+      top: 16px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: white;
+      padding: 8px;
+      box-shadow: var(--sh-sm);
+    }
+
+    .side-menu-title {
+      padding: 6px 10px 8px;
+      font-size: 10.5px; font-weight: 900;
+      letter-spacing: 0.10em; text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .side-menu a {
+      display: flex; align-items: center; justify-content: space-between; gap: 8px;
+      min-height: 40px; padding: 7px 10px;
+      border-radius: 10px; margin-bottom: 2px;
+      font-size: 13px; font-weight: 800;
+      color: var(--ink-2);
+      border: 1px solid transparent;
+      transition: background 130ms ease, color 130ms ease, transform 130ms ease, border-color 130ms ease;
+    }
+
+    .side-menu a:last-child { margin-bottom: 0; }
+
+    .side-menu a .num {
+      width: 22px; height: 22px; border-radius: 7px;
+      background: var(--bg);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; font-weight: 900; color: var(--teal); flex-shrink: 0;
+    }
+
+    .side-menu a:hover {
+      background: #f0fdf9;
+      border-color: rgba(13,148,136,0.18);
+      color: #0d7a72;
+      transform: translateX(-2px);
+    }
+
+    /* ── GUIDE CONTENT ───────────────────────────────────── */
+    .guide-content { min-width: 0; }
+    .section { margin-top: 0; }
+    .section + .section { margin-top: 40px; }
+
+    .section-head { margin-bottom: 22px; }
+    .eyebrow {
+      font-size: 11px; font-weight: 900;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 5px;
     }
 
     .section-title {
       font-size: clamp(24px, 3vw, 34px);
-      line-height: 1.2;
-      letter-spacing: -0.02em;
+      line-height: 1.15; letter-spacing: -0.025em; font-weight: 900;
     }
 
-    .section-subtitle {
-      max-width: 720px;
-      color: var(--muted);
-      font-size: 15px;
+    .section-sub {
+      margin-top: 7px; font-size: 14px; color: var(--muted); max-width: 580px;
     }
 
-    .stages {
+    /* ── STEP BAR (horizontal indicator) ─────────────────── */
+    .step-bar {
+      display: flex; align-items: center;
+      gap: 0;
+      margin-bottom: 28px;
+      overflow-x: auto; scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+      padding: 4px 2px;
+    }
+
+    .step-bar::-webkit-scrollbar { display: none; }
+
+    .step-pill {
+      display: flex; align-items: center; gap: 7px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 12.5px; font-weight: 900;
+      white-space: nowrap; color: white; flex-shrink: 0;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+      cursor: pointer;
+      transition: transform 140ms ease;
+    }
+
+    .step-pill:hover { transform: translateY(-2px); }
+
+    .step-n {
+      width: 22px; height: 22px; border-radius: 50%;
+      background: rgba(255,255,255,0.25);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; font-weight: 900;
+    }
+
+    .step-join {
+      height: 2px; flex-shrink: 0; width: 18px;
+      border-radius: 1px; opacity: 0.4;
+    }
+
+    /* ── TIMELINE ────────────────────────────────────────── */
+    .timeline { display: flex; flex-direction: column; }
+
+    .stage-entry {
       display: grid;
-      gap: 12px;
+      grid-template-columns: 52px 1fr;
+      gap: 18px;
+      align-items: stretch;
     }
 
-    .stage {
-      display: grid;
-      grid-template-columns: 72px minmax(0, 1fr) minmax(220px, 0.5fr);
-      gap: 16px;
-      align-items: center;
-      padding: 18px;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: var(--card);
-      box-shadow: 0 8px 24px rgba(15, 34, 64, 0.05);
+    .stage-track {
+      display: flex; flex-direction: column; align-items: center;
+      padding-top: 22px;
     }
 
-    .stage-num {
-      display: grid;
-      place-items: center;
-      width: 56px;
-      height: 56px;
+    .stage-dot {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      color: white; font-weight: 900; font-size: 20px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; position: relative; z-index: 1;
+      transition: transform 200ms ease, box-shadow 200ms ease;
+    }
+
+    .stage-entry:hover .stage-dot { transform: scale(1.12); }
+
+    .stage-connector {
+      width: 3px; flex: 1; min-height: 28px;
+      border-radius: 2px; margin: 7px 0;
+    }
+
+    .stage-card {
+      margin-bottom: 14px;
+      padding: 20px 22px;
       border-radius: 16px;
-      color: white;
-      font-weight: 900;
-      font-size: 20px;
+      border: 1px solid var(--border);
+      border-right-width: 3px; /* RTL: right = start */
+      background: white;
+      box-shadow: var(--sh-sm);
+      transition: transform 200ms ease, box-shadow 200ms ease;
     }
 
-    .stage h3 {
-      margin-bottom: 4px;
-      font-size: 21px;
+    .stage-entry:hover .stage-card {
+      transform: translateY(-3px);
+      box-shadow: var(--sh-md);
     }
 
-    .stage p {
-      color: var(--muted);
-      font-size: 14px;
+    .stage-card h3 {
+      font-size: 17px; font-weight: 900; margin-bottom: 6px; line-height: 1.3;
     }
 
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      justify-content: flex-start;
-    }
+    .stage-card p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
 
     .tag {
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: var(--soft);
-      padding: 4px 10px;
-      color: #475569;
-      font-size: 12px;
-      font-weight: 800;
-      white-space: nowrap;
+      padding: 3px 10px; border-radius: 999px;
+      border: 1px solid var(--border); background: var(--bg);
+      font-size: 12px; font-weight: 800; color: var(--ink-2);
     }
 
-    .categories {
-      display: grid;
-      gap: 18px;
-    }
+    /* ── CATEGORIES (page map) ───────────────────────────── */
+    .categories { display: flex; flex-direction: column; gap: 20px; }
 
     .category {
-      border: 1px solid var(--line);
       border-radius: 22px;
-      background: rgba(255, 255, 255, 0.72);
-      padding: 18px;
-      box-shadow: 0 10px 30px rgba(15, 34, 64, 0.05);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: var(--sh-sm);
     }
 
-    .category-title {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 12px;
+    .cat-header {
+      display: flex; align-items: center; gap: 14px;
+      padding: 14px 20px;
+      color: white;
     }
 
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 999px;
-      background: var(--blue);
-    }
+    .cat-title { font-size: 16px; font-weight: 900; }
+    .cat-desc { font-size: 12px; font-weight: 600; opacity: 0.75; margin-top: 2px; }
 
-    .cards {
+    .cards-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
+      background: var(--border);
+      gap: 1px;
     }
 
     .card {
-      min-height: 170px;
-      border: 1px solid var(--line);
-      border-radius: 16px;
       background: white;
-      padding: 16px;
-      transition: transform 160ms ease, box-shadow 160ms ease;
-    }
-
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 14px 28px rgba(15, 34, 64, 0.08);
-    }
-
-    .card h3 {
-      margin-bottom: 7px;
-      font-size: 19px;
-    }
-
-    .card p {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .card .use {
-      display: inline-flex;
-      margin-top: 12px;
-      border-radius: 999px;
-      background: var(--soft);
-      padding: 5px 10px;
-      color: var(--teal);
-      font-size: 12px;
-      font-weight: 900;
-    }
-
-    .share-box {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 14px;
-      align-items: center;
-      margin-top: 28px;
       padding: 18px;
-      border-radius: 20px;
-      border: 1px solid rgba(15, 34, 64, 0.12);
-      background: white;
-      box-shadow: var(--shadow);
+      position: relative;
+      transition: background 160ms ease;
     }
 
-    .share-box p {
-      color: var(--muted);
-      font-size: 14px;
+    .card:hover { background: var(--card-hover); }
+
+    .card h3 { font-size: 15px; font-weight: 900; margin-bottom: 6px; }
+    .card p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+    .card-use {
+      display: inline-flex; align-items: center; gap: 4px;
+      margin-top: 12px; padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 11px; font-weight: 900;
     }
 
+    /* ── BOTTOM CTA ──────────────────────────────────────── */
+    .bottom-cta {
+      margin-top: 36px;
+      border-radius: 22px;
+      background: linear-gradient(140deg, #09182e 0%, var(--navy) 50%, #0a3835 100%);
+      color: white;
+      padding: clamp(24px, 4vw, 40px);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 24px;
+      box-shadow: var(--sh-lg);
+      position: relative; overflow: hidden;
+    }
+
+    .bottom-cta::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.045) 1px, transparent 1px);
+      background-size: 20px 20px;
+      pointer-events: none;
+    }
+
+    .bottom-cta h2 {
+      font-size: clamp(20px, 3vw, 28px); font-weight: 900; position: relative;
+      letter-spacing: -0.02em;
+    }
+
+    .bottom-cta p {
+      margin-top: 6px; color: rgba(255,255,255,0.65); font-size: 15px; position: relative;
+    }
+
+    /* ── STICKY CTA ──────────────────────────────────────── */
+    #sticky-cta {
+      position: fixed; bottom: 0; right: 0; left: 0; z-index: 300;
+      padding: 12px 20px;
+      background: rgba(255,255,255,0.97);
+      border-top: 1px solid rgba(15,34,64,0.10);
+      box-shadow: 0 -8px 30px rgba(15,34,64,0.12);
+      backdrop-filter: blur(12px);
+      display: flex; align-items: center; gap: 12px;
+      transform: translateY(100%);
+      transition: transform 380ms cubic-bezier(0.34,1.56,0.64,1);
+    }
+
+    #sticky-cta.up { transform: translateY(0); }
+
+    .cta-text { flex: 1; font-size: 14px; font-weight: 800; color: var(--ink); }
+    .cta-sub { font-size: 12px; color: var(--muted); font-weight: 600; }
+
+    /* ── FOOTER ──────────────────────────────────────────── */
     .footer {
-      margin-top: 28px;
-      color: var(--muted);
+      margin-top: 32px;
       text-align: center;
       font-size: 13px;
+      color: var(--muted);
     }
 
-    .blue { background: var(--blue); }
-    .teal { background: var(--teal); }
-    .purple { background: var(--purple); }
-    .amber { background: var(--amber); }
-    .green { background: var(--green); }
+    /* ── ANIMATIONS ──────────────────────────────────────── */
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: none; }
+    }
 
-    @media (max-width: 860px) {
-      .hero-inner,
-      .stage,
-      .share-box {
+    .hero  { animation: fade-up 600ms ease both; }
+    .topbar { animation: fade-up 600ms ease 60ms both; }
+
+    .ani {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 480ms ease, transform 480ms ease;
+    }
+    .ani.show { opacity: 1; transform: none; }
+    .ani.delay-1 { transition-delay: 80ms; }
+    .ani.delay-2 { transition-delay: 160ms; }
+    .ani.delay-3 { transition-delay: 240ms; }
+    .ani.delay-4 { transition-delay: 320ms; }
+
+    /* ── RESPONSIVE ──────────────────────────────────────── */
+    @media (max-width: 900px) {
+      body { overflow-x: hidden; }
+      .content-layout { grid-template-columns: 1fr; }
+
+      .side-menu {
+        position: sticky; top: 0; z-index: 50;
+        border-radius: 0;
+        border-inline: none; border-top: none;
+        margin-inline: calc(-1 * (100vw - 100%) / 2);
+        padding: 6px 12px;
+        background: rgba(255,255,255,0.96);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 4px 16px rgba(15,34,64,0.10);
+      }
+
+      .side-menu-title { display: none; }
+
+      .side-menu nav {
+        display: flex; gap: 6px;
+        overflow-x: auto; scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .side-menu nav::-webkit-scrollbar { display: none; }
+
+      .side-menu a {
+        flex: 0 0 auto; white-space: nowrap;
+        min-height: 36px; margin-bottom: 0;
+        padding: 6px 12px; border-radius: 999px;
+        border: 1px solid var(--border);
+      }
+
+      .side-menu a:hover { transform: none; }
+
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-card { display: none; }
+
+      .cards-grid { grid-template-columns: repeat(2, 1fr); }
+      .card { padding: 14px; }
+
+      .bottom-cta {
         grid-template-columns: 1fr;
-      }
-
-      .quick-route,
-      .cards {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .stage {
-        align-items: start;
+        text-align: center;
       }
     }
 
     @media (max-width: 560px) {
-      .page {
-        width: min(100% - 20px, 1120px);
-        padding-top: 16px;
+      .page { width: calc(100% - 24px); }
+
+      .top-nav .btn:not(.btn-primary) { display: none; }
+      .hero-actions .btn-hero-secondary { display: none; }
+
+      .cards-grid { grid-template-columns: 1fr; }
+      .card { padding: 14px 16px; }
+      .category { border-radius: 14px; }
+
+      .stage-entry {
+        grid-template-columns: 38px 1fr;
+        gap: 12px;
       }
 
-      .topbar {
-        align-items: stretch;
-        flex-direction: column;
-      }
+      .stage-dot { width: 36px; height: 36px; font-size: 15px; }
+      .stage-card { padding: 16px; }
 
-      .top-actions {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-      }
+      .step-bar { margin-inline: -2px; }
 
-      .button {
-        padding-inline: 10px;
-      }
-
-      .hero-inner {
-        padding: 24px 18px;
-      }
-
-      .quick-route,
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-      .section-head {
-        align-items: start;
-        flex-direction: column;
-      }
+      .bottom-cta { padding: 22px 20px; }
     }
 
-    @media print {
-      body {
-        background: white;
-      }
-
-      .top-actions,
-      .share-box {
-        display: none;
-      }
-
-      .hero,
-      .card,
-      .category,
-      .stage {
-        box-shadow: none;
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 1ms !important;
+        transition-duration: 1ms !important;
       }
     }
   </style>
 </head>
 <body>
+
+  <!-- ── STICKY MOBILE CTA ──────────────────────────────── -->
+  <div id="sticky-cta" aria-label="חזרה למערכת">
+    <div class="cta-text">
+      אינפי ב׳ — מנטורה
+      <div class="cta-sub">לוח שבועות · תרגול · מנטור AI · מעקב אישי</div>
+    </div>
+    <a href="https://infi.mentora-edu.com" target="_blank" rel="noreferrer"
+       class="btn btn-primary" style="min-height:44px;font-size:14px;">
+      חזרה למערכת ›
+    </a>
+  </div>
+
   <main class="page">
-    <header class="topbar" aria-label="כותרת">
+
+    <!-- ── TOPBAR ─────────────────────────────────────────── -->
+    <header class="topbar">
       <div class="brand">
-        <span class="brand-mark">M</span>
+        <div class="brand-logo">
+          <img src="brand/mentora-logo.png" alt="Mentora" />
+        </div>
         <span>Mentora · אינפי ב׳</span>
       </div>
-      <nav class="top-actions" aria-label="קישורים מהירים">
-        <a class="button" href="#route">מסלול למידה</a>
-        <a class="button" href="#pages">מה יש בכל עמוד</a>
-        <a class="button primary" href="https://infi.mentora-edu.com" target="_blank" rel="noreferrer">כניסה למערכת</a>
+      <nav class="top-nav">
+        <a class="btn" href="#route">מסלול למידה</a>
+        <a class="btn" href="#pages">מה בכל עמוד</a>
+        <a class="btn btn-primary" href="https://infi.mentora-edu.com" target="_blank" rel="noreferrer">
+          חזרה למערכת ›
+        </a>
       </nav>
     </header>
 
-    <section class="hero">
+    <!-- ── HERO ──────────────────────────────────────────── -->
+    <section class="hero" aria-label="כותרת ראשית">
       <div class="hero-inner">
         <div>
-          <p class="eyebrow">מדריך קצר לסטודנטים</p>
-          <h1>איך להשתמש ב-Mentora בלי ללכת לאיבוד</h1>
-          <p class="hero-text">
-            המערכת נועדה להכנה לאינפי ב׳: קודם מבינים את החומר, אחר כך מתרגלים,
-            ואז עוברים למטלות, הערות מקס, מבחני עבר וסימולציות.
+          <div class="hero-badge">
+            מדריך ללמידה — חדו״א אינפי ב׳
+          </div>
+
+          <h1>איך ללמוד נכון<br />לאינפי ב׳ — <em>ולהצליח</em></h1>
+
+          <p class="hero-sub">
+            לא פותחים את הכל בבת אחת. בונים בסיס שלב אחר שלב, מתרגלים, לומדים מהטעויות,
+            ועוברים למבחני עבר וסימולציות רק כשיש בסיס.
           </p>
-          <div class="quick-route" aria-label="מסלול קצר">
-            <span class="route-chip">חומר</span>
-            <span class="route-chip">תרגול</span>
-            <span class="route-chip">הערות מקס</span>
-            <span class="route-chip">מטלות</span>
-            <span class="route-chip">מעקב</span>
+
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <strong>13</strong> שבועות מלאים
+            </div>
+            <div class="hero-stat">
+              <strong>500+</strong> שאלות ותרגולים
+            </div>
+            <div class="hero-stat">
+              <strong>AI</strong> מנטור זמין תמיד
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="https://infi.mentora-edu.com" target="_blank" rel="noreferrer" class="btn-hero btn-hero-primary">
+              חזרה למערכת ›
+            </a>
+            <a href="#route" class="btn-hero btn-hero-secondary">
+              ראי את המסלול ↓
+            </a>
           </div>
         </div>
 
-        <aside class="hero-card" aria-label="כלל שימוש">
-          <strong>הכלל הפשוט</strong>
-          <ol>
-            <li>לא פותחים את כל העמודים בבת אחת.</li>
-            <li>לומדים שבוע או נושא אחד.</li>
-            <li>פותרים שאלות לבד.</li>
-            <li>חוזרים להסברים רק איפה שנתקעים.</li>
-          </ol>
+        <aside class="hero-card">
+          <strong>4 כללי הזהב של מנטורה</strong>
+          <ul class="rule-list">
+            <li><span class="rule-n">1</span> לא פותחים את כל העמודים בבת אחת.</li>
+            <li><span class="rule-n">2</span> לומדים שבוע או נושא אחד, אחר כך ממשיכים.</li>
+            <li><span class="rule-n">3</span> פותרים שאלות לבד לפני שמסתכלים על הפתרון.</li>
+            <li><span class="rule-n">4</span> חוזרים להסברים רק איפה שנתקעים.</li>
+          </ul>
         </aside>
       </div>
     </section>
 
-    <section id="route" class="section" aria-labelledby="route-title">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow" style="color: var(--muted)">One pager</p>
-          <h2 id="route-title" class="section-title">מסלול מומלץ ללמידה</h2>
+    <!-- ── CONTENT LAYOUT ─────────────────────────────────── -->
+    <div class="content-layout">
+
+      <!-- Side nav -->
+      <aside class="side-menu" aria-label="ניווט במדריך">
+        <div class="side-menu-title">במדריך</div>
+        <nav>
+          <a href="#route">מסלול למידה <span class="num">1</span></a>
+          <a href="#start">התחלה <span class="num">2</span></a>
+          <a href="#learn">למידת חומר <span class="num">3</span></a>
+          <a href="#practice">תרגול ומטלות <span class="num">4</span></a>
+          <a href="#exam">מבחן וחזרה <span class="num">5</span></a>
+          <a href="#track">מעקב ועזרה <span class="num">6</span></a>
+        </nav>
+      </aside>
+
+      <!-- Main -->
+      <div class="guide-content">
+
+        <!-- ── ROUTE ── -->
+        <section id="route" class="section" aria-labelledby="route-title">
+          <div class="section-head ani">
+            <p class="eyebrow">One pager</p>
+            <h2 id="route-title" class="section-title">מסלול מומלץ ללמידה</h2>
+            <p class="section-sub">
+              זה הסדר המומלץ לרוב הסטודנטים. אפשר לחזור אחורה, אבל לא כדאי לקפוץ לסימולציות בלי בסיס.
+            </p>
+          </div>
+
+          <!-- Horizontal step bar -->
+          <div class="step-bar ani delay-1">
+            <a href="#step-1" class="step-pill" style="background: var(--blue);">
+              <span class="step-n">1</span>מעבר על החומר
+            </a>
+            <div class="step-join" style="background: linear-gradient(to left, var(--blue), var(--teal));"></div>
+            <a href="#step-2" class="step-pill" style="background: var(--teal);">
+              <span class="step-n">2</span>תרגול ראשון
+            </a>
+            <div class="step-join" style="background: linear-gradient(to left, var(--teal), var(--purple));"></div>
+            <a href="#step-3" class="step-pill" style="background: var(--purple);">
+              <span class="step-n">3</span>הערות מקס
+            </a>
+            <div class="step-join" style="background: linear-gradient(to left, var(--purple), var(--amber));"></div>
+            <a href="#step-4" class="step-pill" style="background: var(--amber);">
+              <span class="step-n">4</span>מבחנים
+            </a>
+            <div class="step-join" style="background: linear-gradient(to left, var(--amber), var(--green));"></div>
+            <a href="#step-5" class="step-pill" style="background: var(--green);">
+              <span class="step-n">5</span>מעקב
+            </a>
+          </div>
+
+          <!-- Timeline -->
+          <div class="timeline">
+
+            <div class="stage-entry ani delay-1" id="step-1">
+              <div class="stage-track">
+                <div class="stage-dot" style="background: var(--blue); box-shadow: 0 0 0 4px white, 0 0 0 6px rgba(37,99,235,0.30);">1</div>
+                <div class="stage-connector" style="background: linear-gradient(var(--blue), var(--teal)); opacity:0.45;"></div>
+              </div>
+              <article class="stage-card" style="border-right-color: var(--blue);">
+                <h3>מעבר על החומר</h3>
+                <p>מבינים את מבנה השבוע, ההרצאה, התרגול, ההגדרות והמשפטים. כאן בונים בסיס לפני כל פתרון.</p>
+                <div class="tags">
+                  <span class="tag">דשבורד</span>
+                  <span class="tag">שבועות</span>
+                  <span class="tag">נוסחאות</span>
+                  <span class="tag">משפטים</span>
+                </div>
+              </article>
+            </div>
+
+            <div class="stage-entry ani delay-2" id="step-2">
+              <div class="stage-track">
+                <div class="stage-dot" style="background: var(--teal); box-shadow: 0 0 0 4px white, 0 0 0 6px rgba(13,148,136,0.30);">2</div>
+                <div class="stage-connector" style="background: linear-gradient(var(--teal), var(--purple)); opacity:0.45;"></div>
+              </div>
+              <article class="stage-card" style="border-right-color: var(--teal);">
+                <h3>תרגול ראשון</h3>
+                <p>פותרים שאלות מתרגולים וממטלות. אם נתקעים, חוזרים לנוסחה, משפט או מדריך הוכחות.</p>
+                <div class="tags">
+                  <span class="tag">תרגול</span>
+                  <span class="tag">מטלות</span>
+                  <span class="tag">חזרת מטלות</span>
+                  <span class="tag">מדריך הוכחות</span>
+                </div>
+              </article>
+            </div>
+
+            <div class="stage-entry ani delay-3" id="step-3">
+              <div class="stage-track">
+                <div class="stage-dot" style="background: var(--purple); box-shadow: 0 0 0 4px white, 0 0 0 6px rgba(124,58,237,0.30);">3</div>
+                <div class="stage-connector" style="background: linear-gradient(var(--purple), var(--amber)); opacity:0.45;"></div>
+              </div>
+              <article class="stage-card" style="border-right-color: var(--purple);">
+                <h3>הערות מקס וחידוד טעויות</h3>
+                <p>אחרי ניסיון עצמאי — פותחים את הדגשים: מה חוזר, מה קריטי למבחן, ואילו טעויות לא לעשות.</p>
+                <div class="tags">
+                  <span class="tag">הערות מקס</span>
+                  <span class="tag">אינטואיציה</span>
+                  <span class="tag">חזרה</span>
+                </div>
+              </article>
+            </div>
+
+            <div class="stage-entry ani delay-4" id="step-4">
+              <div class="stage-track">
+                <div class="stage-dot" style="background: var(--amber); box-shadow: 0 0 0 4px white, 0 0 0 6px rgba(217,119,6,0.30);">4</div>
+                <div class="stage-connector" style="background: linear-gradient(var(--amber), var(--green)); opacity:0.45;"></div>
+              </div>
+              <article class="stage-card" style="border-right-color: var(--amber);">
+                <h3>שיעורי בית, מבחני עבר וסימולציות</h3>
+                <p>עוברים לשאלות עם ערך בחינתי גבוה, מזהים דפוסים חוזרים ומתרגלים תחת לחץ זמן.</p>
+                <div class="tags">
+                  <span class="tag">מטלות</span>
+                  <span class="tag">מבחני עבר</span>
+                  <span class="tag">סימולציות</span>
+                </div>
+              </article>
+            </div>
+
+            <div class="stage-entry ani" id="step-5">
+              <div class="stage-track">
+                <div class="stage-dot" style="background: var(--green); box-shadow: 0 0 0 4px white, 0 0 0 6px rgba(22,163,74,0.30);">5</div>
+                <!-- No connector — last step -->
+              </div>
+              <article class="stage-card" style="border-right-color: var(--green);">
+                <h3>מעקב אישי וסגירת פערים</h3>
+                <p>בסוף כל סשן מסמנים מה בשליטה ומה דורש חזרה — כדי לדעת בדיוק מה ללמוד מחר.</p>
+                <div class="tags">
+                  <span class="tag">מעקב שליטה</span>
+                  <span class="tag">דשבורד</span>
+                  <span class="tag">מנטור</span>
+                </div>
+              </article>
+            </div>
+
+          </div><!-- /timeline -->
+        </section>
+
+        <!-- ── PAGE MAP ── -->
+        <section id="pages" class="section" aria-labelledby="pages-title">
+          <div class="section-head ani">
+            <p class="eyebrow">Page map</p>
+            <h2 id="pages-title" class="section-title">מה יש בכל עמוד</h2>
+            <p class="section-sub">
+              כל כרטיס הוא שם עמוד במערכת — עם הסבר קצר מתי ולמה להשתמש בו.
+            </p>
+          </div>
+
+          <div class="categories">
+
+            <!-- 1. התחלה -->
+            <section id="start" class="category ani">
+              <div class="cat-header" style="background: linear-gradient(135deg, #1d4ed8, #3b82f6);">
+                <div>
+                  <div class="cat-title">התחלה והתמצאות</div>
+                  <div class="cat-desc">נקודת הפתיחה לכל יום לימוד</div>
+                </div>
+              </div>
+              <div class="cards-grid">
+                <article class="card" style="--card-hover:#eff6ff;">
+                  <h3>דשבורד</h3>
+                  <p>עמוד הבית: מיקוד להיום, מצב חומרים, נושאים קריטיים וספירה לאחור למבחן.</p>
+                  <span class="card-use" style="background:#dbeafe;color:#1d4ed8;">פותחים בתחילת יום לימוד</span>
+                </article>
+                <article class="card" style="--card-hover:#eff6ff;">
+                  <h3>שבועות</h3>
+                  <p>מפת 13 השבועות עם הרצאה, תרגול, מטלה וסיכום. ללמוד לפי סדר הקורס.</p>
+                  <span class="card-use" style="background:#dbeafe;color:#1d4ed8;">לימוד לפי שבוע</span>
+                </article>
+                <article class="card" style="--card-hover:#eff6ff;">
+                  <h3>נושאים</h3>
+                  <p>מפת נושאים לפי החומר: איפה כל נושא מופיע ומה חשיבותו למבחן.</p>
+                  <span class="card-use" style="background:#dbeafe;color:#1d4ed8;">סגירת נושא מסוים</span>
+                </article>
+              </div>
+            </section>
+
+            <!-- 2. למידת חומר -->
+            <section id="learn" class="category ani delay-1">
+              <div class="cat-header" style="background: linear-gradient(135deg, #0d9488, #14b8a6);">
+                <div>
+                  <div class="cat-title">למידת חומר</div>
+                  <div class="cat-desc">הגדרות, משפטים, נוסחאות ואינטואיציה</div>
+                </div>
+              </div>
+              <div class="cards-grid">
+                <article class="card" style="--card-hover:#f0fdfa;">
+                  <h3>נוסחאות</h3>
+                  <p>נוסחאות ליבה עם שימוש, תנאים ואזהרות. טוב לפתיחה בזמן פתרון.</p>
+                  <span class="card-use" style="background:#ccfbf1;color:#0d7a72;">כשצריך כלי חישובי</span>
+                </article>
+                <article class="card" style="--card-hover:#f0fdfa;">
+                  <h3>משפטים</h3>
+                  <p>משפטים וגרירות לפי שבוע, כולל תנאים, מסקנות ודוגמאות נגדיות.</p>
+                  <span class="card-use" style="background:#ccfbf1;color:#0d7a72;">לפני הוכחות</span>
+                </article>
+                <article class="card" style="--card-hover:#f0fdfa;">
+                  <h3>הגדרות</h3>
+                  <p>הגדרה פורמלית, אינטואיציה, דוגמה וטעות נפוצה לכל מושג מרכזי.</p>
+                  <span class="card-use" style="background:#ccfbf1;color:#0d7a72;">כשרוצים לדייק</span>
+                </article>
+                <article class="card" style="--card-hover:#f0fdfa;">
+                  <h3>אינטואיציה</h3>
+                  <p>הסבר רעיוני לפי שבועות. מתאים כשמבינים טכנית אבל חסר הלמה.</p>
+                  <span class="card-use" style="background:#ccfbf1;color:#0d7a72;">להבנה עמוקה יותר</span>
+                </article>
+                <article class="card" style="--card-hover:#f0fdfa;">
+                  <h3>תבניות הוכחה</h3>
+                  <p>דפוסי הוכחה שחוזרים בקורס, עם צעדים כלליים וזיהוי סוג שאלה.</p>
+                  <span class="card-use" style="background:#ccfbf1;color:#0d7a72;">לשיפור כתיבה</span>
+                </article>
+                <article class="card" style="--card-hover:#f0fdfa;">
+                  <h3>מדריך הוכחות</h3>
+                  <p>לפי איזה משפט מנמקים, אילו תנאים בודקים ואיך כותבים פורמלית.</p>
+                  <span class="card-use" style="background:#ccfbf1;color:#0d7a72;">כשפתרון חסר נימוק</span>
+                </article>
+              </div>
+            </section>
+
+            <!-- 3. תרגול -->
+            <section id="practice" class="category ani delay-2">
+              <div class="cat-header" style="background: linear-gradient(135deg, #6d28d9, #8b5cf6);">
+                <div>
+                  <div class="cat-title">תרגול ושיעורי בית</div>
+                  <div class="cat-desc">שאלות, מטלות ופתרונות מלאים</div>
+                </div>
+              </div>
+              <div class="cards-grid">
+                <article class="card" style="--card-hover:#faf5ff;">
+                  <h3>תרגול</h3>
+                  <p>מרכז השאלות: תרגולים, מטלות ומבחני עבר, מסודרים לפי מקור ונושא.</p>
+                  <span class="card-use" style="background:#ede9fe;color:#6d28d9;">עבודה יומית</span>
+                </article>
+                <article class="card" style="--card-hover:#faf5ff;">
+                  <h3>מטלות</h3>
+                  <p>דפי ניתוח ופתרונות מלאים למטלות, עם תבניות ואינטואיציות.</p>
+                  <span class="card-use" style="background:#ede9fe;color:#6d28d9;">אחרי ניסיון עצמאי</span>
+                </article>
+                <article class="card" style="--card-hover:#faf5ff;">
+                  <h3>חזרת מטלות</h3>
+                  <p>שאלות מטלה לפי חשיבות למבחן, כולל רמזים מדורגים.</p>
+                  <span class="card-use" style="background:#ede9fe;color:#6d28d9;">כשאין זמן להכל</span>
+                </article>
+                <article class="card" style="--card-hover:#faf5ff;">
+                  <h3>הערות מקס</h3>
+                  <p>דגשים מהתרגולים: טעויות נפוצות, דוגמאות נגדיות ומה חשוב למבחן.</p>
+                  <span class="card-use" style="background:#ede9fe;color:#6d28d9;">אחרי פתרון שאלות</span>
+                </article>
+              </div>
+            </section>
+
+            <!-- 4. מבחן וחזרה -->
+            <section id="exam" class="category ani delay-3">
+              <div class="cat-header" style="background: linear-gradient(135deg, #b45309, #f59e0b);">
+                <div>
+                  <div class="cat-title">מבחן וחזרה</div>
+                  <div class="cat-desc">מבחני עבר, סימולציות ותכנון אחרון</div>
+                </div>
+              </div>
+              <div class="cards-grid">
+                <article class="card" style="--card-hover:#fffbeb;">
+                  <h3>מבחני עבר</h3>
+                  <p>ניתוח מבחנים קודמים: נושאים חוזרים, תדירויות, שאלות וקישורי PDF.</p>
+                  <span class="card-use" style="background:#fef3c7;color:#b45309;">אחרי שיש בסיס</span>
+                </article>
+                <article class="card" style="--card-hover:#fffbeb;">
+                  <h3>סימולציות</h3>
+                  <p>מבחני תרגול קצרים תחת זמן, לבדיקת מוכנות אמיתית לפני המבחן.</p>
+                  <span class="card-use" style="background:#fef3c7;color:#b45309;">לפני המבחן</span>
+                </article>
+                <article class="card" style="--card-hover:#fffbeb;">
+                  <h3>חזרה</h3>
+                  <p>צ׳קליסט נושאים קריטיים, משפטים, טעויות נפוצות ותוכנית חזרה.</p>
+                  <span class="card-use" style="background:#fef3c7;color:#b45309;">בימים האחרונים</span>
+                </article>
+              </div>
+            </section>
+
+            <!-- 5. עזרה ומעקב -->
+            <section id="track" class="category ani delay-4">
+              <div class="cat-header" style="background: linear-gradient(135deg, #15803d, #22c55e);">
+                <div>
+                  <div class="cat-title">עזרה ומעקב</div>
+                  <div class="cat-desc">מנטור AI ומעקב אישי על ההתקדמות</div>
+                </div>
+              </div>
+              <div class="cards-grid">
+                <article class="card" style="--card-hover:#f0fdf4;">
+                  <h3>מעקב שליטה</h3>
+                  <p>סימון אישי לכל נושא: לא התחלתי, בלמידה, צריך חזרה, שליטה טובה.</p>
+                  <span class="card-use" style="background:#dcfce7;color:#15803d;">בסוף כל סשן</span>
+                </article>
+                <article class="card" style="--card-hover:#f0fdf4;">
+                  <h3>מנטור</h3>
+                  <p>צ׳אט עזרה לשאלות הבנה, כיווני פתרון, ניסוח פורמלי ושאלות כמו במבחן.</p>
+                  <span class="card-use" style="background:#dcfce7;color:#15803d;">כשנתקעים</span>
+                </article>
+              </div>
+            </section>
+
+          </div><!-- /categories -->
+        </section>
+
+        <!-- ── BOTTOM CTA ── -->
+        <div class="bottom-cta ani">
+          <div>
+            <h2>מוכנה להתחיל?</h2>
+            <p>נכנסים לדשבורד, בוחרים את השבוע, ומתחילים. זה הכל.</p>
+          </div>
+          <a href="https://infi.mentora-edu.com" target="_blank" rel="noreferrer"
+             class="btn-hero btn-hero-primary" style="white-space:nowrap;position:relative;">
+            חזרה למערכת ›
+          </a>
         </div>
-        <p class="section-subtitle">
-          זה הסדר המומלץ לרוב הסטודנטים. אפשר לחזור אחורה בכל שלב, אבל לא כדאי להתחיל מסימולציות לפני שיש בסיס.
-        </p>
-      </div>
 
-      <div class="stages">
-        <article class="stage">
-          <div class="stage-num blue">1</div>
-          <div>
-            <h3>מעבר על החומר</h3>
-            <p>מבינים את מבנה השבוע, ההרצאה, התרגול, ההגדרות והמשפטים. כאן בונים בסיס לפני פתרון.</p>
-          </div>
-          <div class="tags">
-            <span class="tag">דשבורד</span>
-            <span class="tag">שבועות</span>
-            <span class="tag">נושאים</span>
-            <span class="tag">נוסחאות</span>
-            <span class="tag">משפטים</span>
-          </div>
-        </article>
-
-        <article class="stage">
-          <div class="stage-num teal">2</div>
-          <div>
-            <h3>תרגול ראשון</h3>
-            <p>פותרים שאלות מתרגולים וממטלות. אם נתקעים, חוזרים לנוסחה, משפט או מדריך הוכחות.</p>
-          </div>
-          <div class="tags">
-            <span class="tag">תרגול</span>
-            <span class="tag">מטלות</span>
-            <span class="tag">חזרת מטלות</span>
-            <span class="tag">מדריך הוכחות</span>
-          </div>
-        </article>
-
-        <article class="stage">
-          <div class="stage-num purple">3</div>
-          <div>
-            <h3>הערות מקס וחידוד טעויות</h3>
-            <p>אחרי ניסיון עצמאי פותחים את הדגשים: מה חוזר, מה קריטי למבחן, ואילו טעויות לא לעשות.</p>
-          </div>
-          <div class="tags">
-            <span class="tag">הערות מקס</span>
-            <span class="tag">אינטואיציה</span>
-            <span class="tag">חזרה</span>
-          </div>
-        </article>
-
-        <article class="stage">
-          <div class="stage-num amber">4</div>
-          <div>
-            <h3>שיעורי בית, מבחני עבר וסימולציות</h3>
-            <p>עוברים לשאלות עם ערך בחינתי גבוה, מזהים דפוסים ומתרגלים תחת זמן.</p>
-          </div>
-          <div class="tags">
-            <span class="tag">מטלות</span>
-            <span class="tag">מבחני עבר</span>
-            <span class="tag">סימולציות</span>
-            <span class="tag">חזרה</span>
-          </div>
-        </article>
-
-        <article class="stage">
-          <div class="stage-num green">5</div>
-          <div>
-            <h3>מעקב אישי וסגירת פערים</h3>
-            <p>בסוף כל סשן מסמנים מה בשליטה ומה דורש חזרה, כדי לדעת בדיוק מה ללמוד מחר.</p>
-          </div>
-          <div class="tags">
-            <span class="tag">מעקב שליטה</span>
-            <span class="tag">דשבורד</span>
-            <span class="tag">מנטור</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="pages" class="section" aria-labelledby="pages-title">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow" style="color: var(--muted)">Page map</p>
-          <h2 id="pages-title" class="section-title">מה יש בכל עמוד</h2>
-        </div>
-        <p class="section-subtitle">
-          כל כרטיס הוא שם של עמוד כפי שהוא מופיע במערכת, עם הסבר קצר מתי משתמשים בו.
-        </p>
-      </div>
-
-      <div class="categories">
-        <section class="category">
-          <div class="category-title">
-            <span class="dot"></span>
-            <h2>התחלה והתמצאות</h2>
-          </div>
-          <div class="cards">
-            <article class="card">
-              <h3>דשבורד</h3>
-              <p>עמוד הבית: מיקוד להיום, מצב חומרים, נושאים קריטיים וספירה לאחור למבחן.</p>
-              <span class="use">פותחים בתחילת יום לימוד</span>
-            </article>
-            <article class="card">
-              <h3>שבועות</h3>
-              <p>מפת 13 השבועות עם הרצאה, תרגול, מטלה וסיכום. זה המקום ללמוד לפי סדר הקורס.</p>
-              <span class="use">לימוד לפי שבוע</span>
-            </article>
-            <article class="card">
-              <h3>נושאים</h3>
-              <p>מפת נושאים לפי החומר: איפה כל נושא מופיע ומה החשיבות שלו למבחן.</p>
-              <span class="use">סגירת נושא מסוים</span>
-            </article>
-          </div>
-        </section>
-
-        <section class="category">
-          <div class="category-title">
-            <span class="dot" style="background: var(--teal)"></span>
-            <h2>למידת חומר</h2>
-          </div>
-          <div class="cards">
-            <article class="card">
-              <h3>נוסחאות</h3>
-              <p>נוסחאות ליבה עם שימוש, תנאים ואזהרות. טוב לפתיחה בזמן פתרון.</p>
-              <span class="use">כשצריך כלי חישובי</span>
-            </article>
-            <article class="card">
-              <h3>משפטים</h3>
-              <p>משפטים וגרירות לפי שבוע, כולל תנאים, מסקנות ודוגמאות נגדיות.</p>
-              <span class="use">לפני הוכחות</span>
-            </article>
-            <article class="card">
-              <h3>הגדרות</h3>
-              <p>הגדרה פורמלית, אינטואיציה, דוגמה וטעות נפוצה לכל מושג מרכזי.</p>
-              <span class="use">כשרוצים לדייק</span>
-            </article>
-            <article class="card">
-              <h3>אינטואיציה</h3>
-              <p>הסבר רעיוני לפי שבועות. מתאים כשמבינים טכנית אבל חסר למה.</p>
-              <span class="use">להבנה עמוקה יותר</span>
-            </article>
-            <article class="card">
-              <h3>תבניות הוכחה</h3>
-              <p>דפוסי הוכחה שחוזרים בקורס, עם צעדים כלליים וזיהוי סוג שאלה.</p>
-              <span class="use">לשיפור כתיבה</span>
-            </article>
-            <article class="card">
-              <h3>מדריך הוכחות</h3>
-              <p>לפי איזה משפט מנמקים, אילו תנאים בודקים ואיך כותבים פורמלית.</p>
-              <span class="use">כשפתרון חסר נימוק</span>
-            </article>
-          </div>
-        </section>
-
-        <section class="category">
-          <div class="category-title">
-            <span class="dot" style="background: var(--purple)"></span>
-            <h2>תרגול ושיעורי בית</h2>
-          </div>
-          <div class="cards">
-            <article class="card">
-              <h3>תרגול</h3>
-              <p>מרכז השאלות: תרגולים, מטלות ומבחני עבר, מסודרים לפי מקור ונושא.</p>
-              <span class="use">עבודה יומית</span>
-            </article>
-            <article class="card">
-              <h3>מטלות</h3>
-              <p>דפי ניתוח ופתרונות מלאים למטלות, עם תבניות ואינטואיציות.</p>
-              <span class="use">אחרי ניסיון עצמאי</span>
-            </article>
-            <article class="card">
-              <h3>חזרת מטלות</h3>
-              <p>שאלות מטלה לפי חשיבות למבחן, כולל רמזים מדורגים.</p>
-              <span class="use">כשאין זמן להכל</span>
-            </article>
-            <article class="card">
-              <h3>הערות מקס</h3>
-              <p>דגשים מהתרגולים: טעויות נפוצות, דוגמאות נגדיות ומה חשוב למבחן.</p>
-              <span class="use">אחרי פתרון שאלות</span>
-            </article>
-          </div>
-        </section>
-
-        <section class="category">
-          <div class="category-title">
-            <span class="dot" style="background: var(--amber)"></span>
-            <h2>מבחן וחזרה</h2>
-          </div>
-          <div class="cards">
-            <article class="card">
-              <h3>מבחני עבר</h3>
-              <p>ניתוח מבחנים קודמים: נושאים חוזרים, תדירויות, שאלות וקישורי PDF.</p>
-              <span class="use">אחרי שיש בסיס</span>
-            </article>
-            <article class="card">
-              <h3>סימולציות</h3>
-              <p>מבחני תרגול קצרים תחת זמן, כדי לבדוק מוכנות אמיתית.</p>
-              <span class="use">לפני המבחן</span>
-            </article>
-            <article class="card">
-              <h3>חזרה</h3>
-              <p>צ׳קליסט נושאים קריטיים, משפטים, טעויות נפוצות ותוכנית חזרה.</p>
-              <span class="use">בימים האחרונים</span>
-            </article>
-          </div>
-        </section>
-
-        <section class="category">
-          <div class="category-title">
-            <span class="dot" style="background: var(--green)"></span>
-            <h2>עזרה ומעקב</h2>
-          </div>
-          <div class="cards">
-            <article class="card">
-              <h3>מעקב שליטה</h3>
-              <p>סימון אישי לכל נושא: לא התחלתי, בלמידה, צריך חזרה, שליטה טובה או מלאה.</p>
-              <span class="use">בסוף כל סשן</span>
-            </article>
-            <article class="card">
-              <h3>מנטור</h3>
-              <p>צ׳אט עזרה לשאלות הבנה, כיווני פתרון, ניסוח פורמלי ושאלות בסגנון מבחן.</p>
-              <span class="use">כשנתקעים</span>
-            </article>
-          </div>
-        </section>
-      </div>
-    </section>
-
-    <section class="share-box" aria-label="כניסה למערכת">
-      <div>
-        <h2>רוצים להתחיל?</h2>
-        <p>נכנסים למערכת, מתחילים בדשבורד, ובוחרים את השלב המתאים לפי המסלול למעלה.</p>
-      </div>
-      <a class="button primary" href="https://infi.mentora-edu.com" target="_blank" rel="noreferrer">פתיחת Mentora</a>
-    </section>
+      </div><!-- /guide-content -->
+    </div><!-- /content-layout -->
 
     <footer class="footer">
-      Mentora · אינפי ב׳ · מדריך שימוש קצר לסטודנטים
+      Mentora · אינפי ב׳ · מדריך שימוש לסטודנטים · <a href="https://infi.mentora-edu.com" target="_blank" rel="noreferrer" style="font-weight:800;color:var(--teal);">infi.mentora-edu.com</a>
     </footer>
+
   </main>
+
+  <script>
+    // ── Scroll animations ──────────────────────────────────
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); }),
+      { threshold: 0.12 }
+    );
+    document.querySelectorAll('.ani').forEach(el => observer.observe(el));
+
+    // ── Sticky CTA ─────────────────────────────────────────
+    const cta = document.getElementById('sticky-cta');
+    let shown = false;
+
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      const heroBottom = document.querySelector('.hero')?.getBoundingClientRect().bottom ?? 0;
+      const nearEnd = (window.innerHeight + y) >= (document.body.scrollHeight - 120);
+
+      if (!shown && heroBottom < 0) {
+        cta.classList.add('up');
+        shown = true;
+      } else if (shown && heroBottom > 40) {
+        cta.classList.remove('up');
+        shown = false;
+      }
+
+      // Hide near footer
+      if (nearEnd) cta.style.opacity = '0';
+      else cta.style.opacity = '1';
+    }, { passive: true });
+  </script>
 </body>
 </html>
