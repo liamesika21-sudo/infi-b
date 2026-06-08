@@ -556,8 +556,24 @@
 
       .side-menu a:hover { transform: none; }
 
-      .hero-inner { grid-template-columns: 1fr; }
-      .hero-image { display: none; }
+      .hero-inner {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        padding-bottom: 0;
+      }
+      .hero-text { order: 1; }
+      .hero-image {
+        order: 2;
+        display: flex;
+        justify-content: center;
+        padding-right: 0;
+        padding-top: 8px;
+        margin-bottom: -4px;
+      }
+      .hero-image img {
+        max-width: 72vw;
+        border-radius: 18px 18px 0 0;
+      }
 
       .cards-grid { grid-template-columns: repeat(2, 1fr); }
       .card { padding: 14px; }
