@@ -7,6 +7,8 @@ import { SimulationQuestionBlock } from "@/components/study/QuestionBlock";
 import { DifficultyBadge } from "@/components/study/Badges";
 import { ArrowRight, Clock } from "lucide-react";
 
+export const dynamic = "force-dynamic";
+
 interface Props {
   params: Promise<{ id: string }>;
 }

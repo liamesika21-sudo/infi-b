@@ -1,6 +1,8 @@
 import { EmptyState } from "@/components/Cards";
 import { readGeneratedData } from "@/lib/calculus2/generated-data";
 
+export const dynamic = "force-dynamic";
+
 export default async function ExtractionPreviewPage() {
   const generatedData = await readGeneratedData();
   const fileById = new Map(generatedData.sourceFiles.map((file) => [file.id, file]));

@@ -4,6 +4,8 @@ import { SimulationCard } from "@/components/study/SimulationCard";
 import { StudyCallout } from "@/components/study/StudyCallout";
 import { FlaskConical } from "lucide-react";
 
+export const dynamic = "force-dynamic";
+
 export default async function SimulationsPage() {
   const analysis = await readAnalysisData();
   const simulations = analysis.simulationExams;

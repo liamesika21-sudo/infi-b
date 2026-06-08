@@ -24,6 +24,8 @@ import {
 import { WeekHomeworkSection } from "./WeekHomeworkSection";
 import { WeekProgressTracker, type ProgSection, type ProgQuestion } from "@/components/progress/WeekProgressTracker";
 
+export const dynamic = "force-dynamic";
+
 interface Props {
   params: Promise<{ weekNumber: string }>;
 }

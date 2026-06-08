@@ -4,6 +4,8 @@ import { StudyCallout } from "@/components/study/StudyCallout";
 import { ExternalLink, FileText } from "lucide-react";
 import { PastExamSidebar } from "@/components/PastExamSidebar";
 
+export const dynamic = "force-dynamic";
+
 export default async function PastExamsPage() {
   const analysis = await readAnalysisData();
   const pastExamQuestions = analysis.questionBank.filter((question) => question.sourceType === "past_exam");

@@ -3,6 +3,8 @@ import { readGeneratedData } from "@/lib/calculus2/generated-data";
 import { PageHeader } from "@/components/study/StudyCard";
 import { ExamRelevanceBadge, ConfidenceBadge } from "@/components/study/Badges";
 
+export const dynamic = "force-dynamic";
+
 export default async function TopicsPage() {
   const [generatedData, analysis] = await Promise.all([readGeneratedData(), readAnalysisData()]);
   const priorityByTopic = new Map(analysis.examPriorityMap?.topics.map((topic) => [topic.topicId, topic]) ?? []);

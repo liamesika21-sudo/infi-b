@@ -1,6 +1,8 @@
 import { readAnalysisData } from "@/lib/calculus2/analysis-reader";
 import { PracticePageClient } from "@/components/PracticePageClient";
 
+export const dynamic = "force-dynamic";
+
 export default async function PracticePage() {
   const analysis = await readAnalysisData();
   const questions = analysis.questionBank;

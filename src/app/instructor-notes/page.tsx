@@ -4,6 +4,8 @@ import { MathContent } from "@/components/study/MathContent";
 import type { MaxInsightsData, MaxInsight, MaxCounterExample } from "@/lib/calculus2/analysis-types";
 import type React from "react";
 
+export const dynamic = "force-dynamic";
+
 type WeeklyInsight = MaxInsightsData["weeklyInsights"][number];
 type CommonMistake = MaxInsightsData["commonMistakesFromMax"][number];
 

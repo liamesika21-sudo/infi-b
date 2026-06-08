@@ -3,6 +3,8 @@ import { PageHeader } from "@/components/study/StudyCard";
 import { StudyCallout } from "@/components/study/StudyCallout";
 import { ExamRelevanceBadge, PriorityBadge } from "@/components/study/Badges";
 
+export const dynamic = "force-dynamic";
+
 export default async function QuickReviewPage() {
   const analysis = await readAnalysisData();
   const plan = analysis.examPlan;

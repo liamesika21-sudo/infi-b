@@ -1,6 +1,8 @@
 import { HomeworkReviewClient } from "@/components/HomeworkReviewClient";
 import { readAnalysisData } from "@/lib/calculus2/analysis-reader";
 
+export const dynamic = "force-dynamic";
+
 export default async function HomeworkReviewPage() {
   const analysis = await readAnalysisData();
 

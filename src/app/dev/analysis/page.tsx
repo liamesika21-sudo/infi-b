@@ -2,6 +2,8 @@ import { PageHeader } from "@/components/AnalysisCards";
 import { EmptyState } from "@/components/Cards";
 import { readAnalysisData } from "@/lib/calculus2/analysis-reader";
 
+export const dynamic = "force-dynamic";
+
 export default async function AnalysisPreviewPage() {
   const analysis = await readAnalysisData();
 

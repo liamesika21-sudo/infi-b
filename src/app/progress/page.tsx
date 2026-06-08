@@ -2,6 +2,8 @@ import { readAnalysisData } from "@/lib/calculus2/analysis-reader";
 import { PageHeader } from "@/components/study/StudyCard";
 import { PersonalProgressClient } from "@/components/PersonalProgressClient";
 
+export const dynamic = "force-dynamic";
+
 export default async function ProgressPage() {
   const analysis = await readAnalysisData();
   const topics = analysis.examPriorityMap?.topics ?? [];

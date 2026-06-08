@@ -2,6 +2,8 @@ import { readAnalysisData } from "@/lib/calculus2/analysis-reader";
 import { PageHeader } from "@/components/study/StudyCard";
 import { ConfidenceBadge, ExamRelevanceBadge } from "@/components/study/Badges";
 
+export const dynamic = "force-dynamic";
+
 export default async function ProofPatternsPage() {
   const analysis = await readAnalysisData();
 

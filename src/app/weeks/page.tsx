@@ -5,6 +5,8 @@ import { PageHeader } from "@/components/study/StudyCard";
 import { StudyCallout } from "@/components/study/StudyCallout";
 import { WeekCard } from "@/components/study/WeekCard";
 
+export const dynamic = "force-dynamic";
+
 export default async function WeeksPage() {
   const [generatedData, inventory, analysis] = await Promise.all([
     readGeneratedData(),

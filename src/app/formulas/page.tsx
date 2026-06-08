@@ -2,6 +2,8 @@ import { readAnalysisData } from "@/lib/calculus2/analysis-reader";
 import { StudyCallout } from "@/components/study/StudyCallout";
 import { FormulaCenterClient } from "@/components/FormulaCenterClient";
 
+export const dynamic = "force-dynamic";
+
 export default async function FormulasPage() {
   const analysis = await readAnalysisData();
 

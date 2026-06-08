@@ -130,10 +130,16 @@
     .hero-inner {
       position: relative; z-index: 1;
       display: grid;
-      grid-template-columns: minmax(0, 1.5fr) minmax(210px, 0.5fr);
-      gap: 24px;
-      padding: clamp(28px, 5vw, 52px);
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      padding: clamp(32px, 5vw, 60px) clamp(28px, 5vw, 52px);
       align-items: center;
+    }
+
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .hero-badge {
@@ -156,50 +162,25 @@
     }
 
     .hero h1 {
-      font-size: clamp(30px, 4.8vw, 52px);
-      line-height: 1.08;
-      letter-spacing: -0.03em;
+      font-size: clamp(38px, 6vw, 72px);
+      line-height: 1.1;
+      letter-spacing: -0.035em;
       font-weight: 900;
+      margin: 0;
     }
 
     .hero h1 em {
       font-style: normal;
+      display: block;
       background: linear-gradient(90deg, #34d399, #5eead4);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
-    .hero-sub {
-      margin-top: 14px;
-      color: rgba(255,255,255,0.70);
-      font-size: clamp(14px, 2vw, 16px);
-      line-height: 1.75;
-      max-width: 540px;
-    }
-
-    .hero-stats {
-      display: flex; flex-wrap: wrap; gap: 10px;
-      margin-top: 24px;
-    }
-
-    .hero-stat {
-      display: flex; align-items: center; gap: 8px;
-      padding: 8px 14px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.07);
-      font-size: 13px; font-weight: 800;
-    }
-
-    .hero-stat strong {
-      font-size: 20px; font-weight: 900;
-      color: #34d399;
-    }
-
     .hero-actions {
       display: flex; flex-wrap: wrap; gap: 12px;
-      margin-top: 26px;
+      margin-top: 32px;
     }
 
     .btn-hero {
@@ -229,36 +210,21 @@
 
     .btn-hero-secondary:hover { background: rgba(255,255,255,0.17); }
 
-    /* Hero right: rule card */
-    .hero-card {
+    /* Hero right: phone mockup image */
+    .hero-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-right: 16px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 340px;
+      height: auto;
       border-radius: 18px;
-      border: 1px solid rgba(255,255,255,0.15);
-      background: rgba(255,255,255,0.09);
-      padding: 22px 20px;
-      backdrop-filter: blur(16px);
-    }
-
-    .hero-card strong {
-      display: block;
-      font-size: 14px; font-weight: 900;
-      margin-bottom: 14px;
-      color: rgba(255,255,255,0.92);
-      letter-spacing: -0.01em;
-    }
-
-    .rule-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-
-    .rule-list li {
-      display: flex; align-items: flex-start; gap: 10px;
-      font-size: 13px; color: rgba(255,255,255,0.74); line-height: 1.5;
-    }
-
-    .rule-n {
-      display: flex; align-items: center; justify-content: center;
-      width: 22px; height: 22px; flex-shrink: 0; margin-top: 1px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.16);
-      font-size: 11px; font-weight: 900;
+      object-fit: contain;
+      filter: drop-shadow(0 24px 48px rgba(0,0,0,0.45));
     }
 
     /* ── CONTENT LAYOUT ──────────────────────────────────── */
@@ -591,7 +557,7 @@
       .side-menu a:hover { transform: none; }
 
       .hero-inner { grid-template-columns: 1fr; }
-      .hero-card { display: none; }
+      .hero-image { display: none; }
 
       .cards-grid { grid-template-columns: repeat(2, 1fr); }
       .card { padding: 14px; }
@@ -670,29 +636,8 @@
     <!-- ── HERO ──────────────────────────────────────────── -->
     <section class="hero" aria-label="כותרת ראשית">
       <div class="hero-inner">
-        <div>
-          <div class="hero-badge">
-            מדריך ללמידה — חדו״א אינפי ב׳
-          </div>
-
-          <h1>איך ללמוד נכון<br />לאינפי ב׳ — <em>ולהצליח</em></h1>
-
-          <p class="hero-sub">
-            לא פותחים את הכל בבת אחת. בונים בסיס שלב אחר שלב, מתרגלים, לומדים מהטעויות,
-            ועוברים למבחני עבר וסימולציות רק כשיש בסיס.
-          </p>
-
-          <div class="hero-stats">
-            <div class="hero-stat">
-              <strong>13</strong> שבועות מלאים
-            </div>
-            <div class="hero-stat">
-              <strong>500+</strong> שאלות ותרגולים
-            </div>
-            <div class="hero-stat">
-              <strong>AI</strong> מנטור זמין תמיד
-            </div>
-          </div>
+        <div class="hero-text">
+          <h1>ללמוד נכון<br /><em>לאינפי ב׳</em></h1>
 
           <div class="hero-actions">
             <a href="https://infi.mentora-edu.com" target="_blank" rel="noreferrer" class="btn-hero btn-hero-primary">
@@ -704,14 +649,8 @@
           </div>
         </div>
 
-        <aside class="hero-card">
-          <strong>4 כללי הזהב של מנטורה</strong>
-          <ul class="rule-list">
-            <li><span class="rule-n">1</span> לא פותחים את כל העמודים בבת אחת.</li>
-            <li><span class="rule-n">2</span> לומדים שבוע או נושא אחד, אחר כך ממשיכים.</li>
-            <li><span class="rule-n">3</span> פותרים שאלות לבד לפני שמסתכלים על הפתרון.</li>
-            <li><span class="rule-n">4</span> חוזרים להסברים רק איפה שנתקעים.</li>
-          </ul>
+        <aside class="hero-image">
+          <img src="/guide-hero.png" alt="Mentora app" />
         </aside>
       </div>
     </section>
