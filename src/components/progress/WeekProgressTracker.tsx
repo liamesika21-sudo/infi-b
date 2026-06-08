@@ -18,7 +18,6 @@ export interface ProgQuestion {
   questionId: string;
   questionNumber: number;
   homeworkNumber: number;
-  preview: string;
 }
 
 interface Props {
@@ -213,11 +212,11 @@ export function WeekProgressTracker({ weekNum, sections, questions }: Props) {
                 const isDone = qprog?.done ?? false;
                 return (
                   <div key={q.questionId}>
-                    <div className="flex items-start gap-2">
+                    <div className="flex items-center gap-2">
                       {/* Done toggle */}
                       <button
                         onClick={() => toggleQuestionDone(q.questionId, q.homeworkNumber)}
-                        className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[10px] font-black text-white transition-all"
+                        className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[10px] font-black transition-all"
                         style={{
                           background: isDone ? "var(--green-mid)" : "var(--bg-subtle)",
                           border: `1.5px solid ${isDone ? "var(--green-mid)" : "var(--border)"}`,
@@ -226,27 +225,23 @@ export function WeekProgressTracker({ weekNum, sections, questions }: Props) {
                       >
                         {isDone ? "✓" : q.questionNumber}
                       </button>
-                      {/* Preview */}
-                      <p className="flex-1 min-w-0 text-xs leading-5 line-clamp-2" style={{ color: "var(--text-secondary)" }}>
-                        {q.preview}
-                      </p>
-                    </div>
-                    {/* Difficulty */}
-                    <div className="flex items-center gap-1 mt-1 pr-8">
-                      {DIFF.map(({ value, label, color, bg, border }) => (
-                        <button
-                          key={value}
-                          onClick={() => setDifficulty(q.questionId, q.homeworkNumber, value)}
-                          className="rounded-full px-2 py-0.5 text-[10px] font-black transition-all"
-                          style={{
-                            background: qprog?.difficulty === value ? bg : "transparent",
-                            color: qprog?.difficulty === value ? color : "var(--text-muted)",
-                            border: `1px solid ${qprog?.difficulty === value ? border : "var(--border)"}`,
-                          }}
-                        >
-                          {label}
-                        </button>
-                      ))}
+                      {/* Difficulty */}
+                      <div className="flex items-center gap-1">
+                        {DIFF.map(({ value, label, color, bg, border }) => (
+                          <button
+                            key={value}
+                            onClick={() => setDifficulty(q.questionId, q.homeworkNumber, value)}
+                            className="rounded-full px-2 py-0.5 text-[10px] font-black transition-all"
+                            style={{
+                              background: qprog?.difficulty === value ? bg : "transparent",
+                              color: qprog?.difficulty === value ? color : "var(--text-muted)",
+                              border: `1px solid ${qprog?.difficulty === value ? border : "var(--border)"}`,
+                            }}
+                          >
+                            {label}
+                          </button>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 );

@@ -81,7 +81,6 @@ export default async function WeekDetailPage({ params }: Props) {
     questionId: q.questionId,
     questionNumber: q.questionNumber,
     homeworkNumber: q.homeworkNumber,
-    preview: q.contentPreview.split(/\bSolution\s*:|\bSolution\b|פתרון\s*:/i)[0].trim().slice(0, 140),
   }));
   const hasTracker = trackerSections.length > 0 || trackerQuestions.length > 0;
 
