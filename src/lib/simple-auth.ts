@@ -187,6 +187,96 @@ function getActivitySessionsKey(): string {
   return "auth:activity-sessions";
 }
 
+function getAllowedExtraKey(): string {
+  return "auth:allowed-extra";
+}
+
+function getAllowedRemovedKey(): string {
+  return "auth:allowed-removed";
+}
+
+async function getRedisStringArray(key: string): Promise<string[]> {
+  const redis = getRedisConfig();
+  if (!redis) return [];
+  const response = await fetch(`${redis.url}/get/${encodeURIComponent(key)}`, {
+    headers: { Authorization: `Bearer ${redis.token}` },
+  });
+  if (!response.ok) return [];
+  const data = (await response.json()) as { result?: string | null };
+  if (!data.result) return [];
+  const parsed = JSON.parse(data.result) as unknown;
+  return Array.isArray(parsed) ? (parsed as string[]) : [];
+}
+
+async function setRedisStringArray(key: string, arr: string[]): Promise<void> {
+  const redis = getRedisConfig();
+  if (!redis) return;
+  const value = encodeURIComponent(JSON.stringify(arr));
+  await fetch(`${redis.url}/set/${encodeURIComponent(key)}/${value}`, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${redis.token}` },
+  });
+}
+
+async function getEffectiveAllowedEmails(authFile: AuthFile): Promise<string[]> {
+  if (!shouldUseRedisStore()) return authFile.allowedEmails;
+  const [extra, removed] = await Promise.all([
+    getRedisStringArray(getAllowedExtraKey()),
+    getRedisStringArray(getAllowedRemovedKey()),
+  ]);
+  const base = new Set([...authFile.allowedEmails, ...extra.map(normalizeEmail)]);
+  removed.map(normalizeEmail).forEach((e) => base.delete(e));
+  return [...base];
+}
+
+export async function addAllowedEmail(email: string): Promise<void> {
+  const normalized = normalizeEmail(email);
+  if (shouldUseRedisStore()) {
+    const [extra, removed] = await Promise.all([
+      getRedisStringArray(getAllowedExtraKey()),
+      getRedisStringArray(getAllowedRemovedKey()),
+    ]);
+    const promises: Promise<void>[] = [];
+    if (!extra.map(normalizeEmail).includes(normalized)) {
+      promises.push(setRedisStringArray(getAllowedExtraKey(), [...extra, normalized]));
+    }
+    const newRemoved = removed.filter((e) => normalizeEmail(e) !== normalized);
+    if (newRemoved.length !== removed.length) {
+      promises.push(setRedisStringArray(getAllowedRemovedKey(), newRemoved));
+    }
+    await Promise.all(promises);
+  } else {
+    const authFile = await readAuthFile();
+    if (!authFile.allowedEmails.includes(normalized)) {
+      authFile.allowedEmails.push(normalized);
+      await writeAuthFile(authFile);
+    }
+  }
+}
+
+export async function removeAllowedEmail(email: string): Promise<void> {
+  const normalized = normalizeEmail(email);
+  if (shouldUseRedisStore()) {
+    const [extra, removed] = await Promise.all([
+      getRedisStringArray(getAllowedExtraKey()),
+      getRedisStringArray(getAllowedRemovedKey()),
+    ]);
+    const promises: Promise<void>[] = [];
+    const newExtra = extra.filter((e) => normalizeEmail(e) !== normalized);
+    if (newExtra.length !== extra.length) {
+      promises.push(setRedisStringArray(getAllowedExtraKey(), newExtra));
+    }
+    if (!removed.map(normalizeEmail).includes(normalized)) {
+      promises.push(setRedisStringArray(getAllowedRemovedKey(), [...removed, normalized]));
+    }
+    await Promise.all(promises);
+  } else {
+    const authFile = await readAuthFile();
+    authFile.allowedEmails = authFile.allowedEmails.filter((e) => e !== normalized);
+    await writeAuthFile(authFile);
+  }
+}
+
 export function getPaymentLinkForPlan(plan: RegistrationPlan): string {
   return PAYMENT_LINKS[plan === "pro" ? "pro" : "basic"];
 }
@@ -902,7 +992,8 @@ export async function validateCookieForRequest(request: Request): Promise<AuthCh
   if (!authCookie.ok) return authCookie;
 
   const authFile = await readAuthFile();
-  if (!authFile.allowedEmails.includes(authCookie.email)) {
+  const effectiveAllowed = await getEffectiveAllowedEmails(authFile);
+  if (!effectiveAllowed.includes(authCookie.email)) {
     return { ok: false, reason: "not_allowed" };
   }
 
@@ -920,7 +1011,8 @@ export async function loginWithEmail(
     return { ok: false as const, status: 400, message: "צריך להזין כתובת מייל תקינה." };
   }
 
-  if (!authFile.allowedEmails.includes(normalizedEmail)) {
+  const effectiveAllowed = await getEffectiveAllowedEmails(authFile);
+  if (!effectiveAllowed.includes(normalizedEmail)) {
     return {
       ok: false as const,
       status: 403,
@@ -987,7 +1079,7 @@ export async function getAuthAdminSnapshot(): Promise<AuthAdminSnapshot> {
     users.push(...Object.values(authFile.users));
   }
 
-  const allowedEmails = authFile.allowedEmails.map(normalizeEmail);
+  const allowedEmails = await getEffectiveAllowedEmails(authFile);
   const mergedEmails = new Set([...allowedEmails, ...users.map((user) => normalizeEmail(user.email))]);
   const adminUsers = [...mergedEmails].map((email) => {
     const user = users.find((entry) => normalizeEmail(entry.email) === email);

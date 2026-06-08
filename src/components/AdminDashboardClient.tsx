@@ -1,6 +1,7 @@
 "use client";
 
-import { useMemo, useState, type ReactNode, type TdHTMLAttributes } from "react";
+import { useMemo, useState, useCallback, type ReactNode, type TdHTMLAttributes } from "react";
+import { useRouter } from "next/navigation";
 import {
   Activity,
   AlertTriangle,
@@ -10,6 +11,8 @@ import {
   Search,
   ShieldCheck,
   UserCheck,
+  UserPlus,
+  UserMinus,
 } from "lucide-react";
 import type {
   AdminAuthUser,
@@ -114,6 +117,28 @@ export function AdminDashboardClient({
   const [planFilter, setPlanFilter] = useState<PlanFilter>("all");
   const [paymentFilter, setPaymentFilter] = useState<PaymentFilter>("all");
   const [userFilter, setUserFilter] = useState<UserFilter>("all");
+  const [loadingKey, setLoadingKey] = useState<string | null>(null);
+  const router = useRouter();
+
+  const adminAction = useCallback(async (action: "add" | "remove", email: string) => {
+    const key = `${action}:${email}`;
+    setLoadingKey(key);
+    try {
+      const res = await fetch("/api/admin/users", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action, email }),
+      });
+      if (!res.ok) {
+        const err = await res.json() as { error?: string };
+        alert(err.error ?? "שגיאה");
+        return;
+      }
+      router.refresh();
+    } finally {
+      setLoadingKey(null);
+    }
+  }, [router]);
 
   const latestPaymentByEmail = useMemo(() => {
     const map = new Map<string, PaymentActionRecord>();
@@ -250,6 +275,7 @@ export function AdminDashboardClient({
         <ResponsiveTable minWidth="1120px">
           <thead>
             <tr>
+              <TableHead>פעולות</TableHead>
               <TableHead>סטודנט</TableHead>
               <TableHead>מסלול</TableHead>
               <TableHead>סטטוס רכישה</TableHead>
@@ -263,8 +289,35 @@ export function AdminDashboardClient({
           <tbody>
             {filteredRegistrations.map((request) => {
               const latestPayment = latestPaymentByEmail.get(request.email);
+              const isAllowed = snapshot.allowedEmails.includes(request.email);
+              const addKey = `add:${request.email}`;
+              const removeKey = `remove:${request.email}`;
               return (
                 <tr key={`${request.email}-${request.createdAt}`} className="align-top">
+                  <TableCell>
+                    <div className="flex flex-col gap-1">
+                      {isAllowed ? (
+                        <span className="badge badge-green">מורשה ✓</span>
+                      ) : (
+                        <ActionButton
+                          icon={<UserPlus className="h-3 w-3" />}
+                          label="אשר"
+                          tone="green"
+                          loading={loadingKey === addKey}
+                          onClick={() => adminAction("add", request.email)}
+                        />
+                      )}
+                      {isAllowed && (
+                        <ActionButton
+                          icon={<UserMinus className="h-3 w-3" />}
+                          label="הסר"
+                          tone="red"
+                          loading={loadingKey === removeKey}
+                          onClick={() => adminAction("remove", request.email)}
+                        />
+                      )}
+                    </div>
+                  </TableCell>
                   <TableCell>
                     <div className="font-bold" dir="ltr">{request.email}</div>
                     <div className="text-xs" style={{ color: "var(--text-secondary)" }} dir="ltr">{request.phone}</div>
@@ -322,6 +375,7 @@ export function AdminDashboardClient({
         <ResponsiveTable minWidth="1180px">
           <thead>
             <tr>
+              <TableHead>פעולות</TableHead>
               <TableHead>מייל</TableHead>
               <TableHead>הרשאה</TableHead>
               <TableHead>כניסות</TableHead>
@@ -338,8 +392,31 @@ export function AdminDashboardClient({
             {filteredUsers.map((user) => {
               const latestDevice = user.devices.slice().sort((a, b) => b.lastSeenAt.localeCompare(a.lastSeenAt))[0];
               const sessionStats = sessionsByEmail.get(user.email);
+              const addKey = `add:${user.email}`;
+              const removeKey = `remove:${user.email}`;
               return (
                 <tr key={user.email} className="align-top">
+                  <TableCell>
+                    <div className="flex flex-col gap-1">
+                      {!user.isAllowed ? (
+                        <ActionButton
+                          icon={<UserPlus className="h-3 w-3" />}
+                          label="אשר"
+                          tone="green"
+                          loading={loadingKey === addKey}
+                          onClick={() => adminAction("add", user.email)}
+                        />
+                      ) : (
+                        <ActionButton
+                          icon={<UserMinus className="h-3 w-3" />}
+                          label="הסר"
+                          tone="red"
+                          loading={loadingKey === removeKey}
+                          onClick={() => adminAction("remove", user.email)}
+                        />
+                      )}
+                    </div>
+                  </TableCell>
                   <TableCell>
                     <div className="break-all font-bold" dir="ltr">{user.email}</div>
                     {hasMultiDeviceAttempt(user) && (
@@ -636,6 +713,37 @@ function EmptyState({ children }: { children: ReactNode }) {
     <div className="mt-4 rounded-lg border border-dashed p-5 text-center text-sm" style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>
       {children}
     </div>
+  );
+}
+
+function ActionButton({
+  icon,
+  label,
+  tone,
+  loading,
+  onClick,
+}: {
+  icon: ReactNode;
+  label: string;
+  tone: "green" | "red";
+  loading: boolean;
+  onClick: () => void;
+}) {
+  const styles =
+    tone === "green"
+      ? { bg: "var(--green-light)", color: "var(--green)", border: "var(--green-border)" }
+      : { bg: "var(--red-light)", color: "var(--red-mid)", border: "var(--red-border)" };
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      disabled={loading}
+      className="inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[11px] font-black transition hover:opacity-80 disabled:opacity-50"
+      style={{ background: styles.bg, color: styles.color, border: `1px solid ${styles.border}` }}
+    >
+      {loading ? "..." : icon}
+      {label}
+    </button>
   );
 }
 
