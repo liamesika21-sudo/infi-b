@@ -81,17 +81,18 @@ function renderInlineLine(rawLine: string) {
 
 /**
  * Full block renderer. Lines that are ONLY $$...$$ are rendered as centred
- * display equations (LTR, full width). All other lines are rendered RTL with
- * inline math support.
+ * display equations. Full-bold lines become sub-headings. Bullet and
+ * numbered-list lines get dedicated structure. Everything else is a paragraph.
  */
 export function MathContent({ text, className = "" }: { text: string; className?: string }) {
   const lines = text.split("\n");
   return (
     <div className={`math-content ${className}`} dir="rtl">
       {lines.map((line, li) => {
-        if (!line.trim()) return <div key={li} className="h-1.5" />;
+        // Empty line → visible paragraph break
+        if (!line.trim()) return <div key={li} className="h-6" />;
 
-        // Full-line display math → centred block, outside RTL flow
+        // Full-line display math → centred block
         const displayMatch = line.match(DISPLAY_ONLY_RE);
         if (displayMatch) {
           const result = parseMathDelim(displayMatch[1].trim());
@@ -100,16 +101,47 @@ export function MathContent({ text, className = "" }: { text: string; className?
               <div
                 key={li}
                 dir="ltr"
-                className="math-display my-3"
+                className="math-display my-5"
                 dangerouslySetInnerHTML={{ __html: result.html }}
               />
             );
           }
         }
 
-        // Mixed Hebrew + inline math
+        const trimmed = line.trim();
+
+        // Full-bold line (e.g. **תזכורת: משפט דרבו:**) → sub-heading
+        if (/^\*\*[^*\n]+\*\*$/.test(trimmed)) {
+          return (
+            <p key={li} className="mc-head" dir="rtl">
+              {renderInlineLine(trimmed.slice(2, -2))}
+            </p>
+          );
+        }
+
+        // Bullet point (• text)
+        if (trimmed.startsWith("• ") || trimmed.startsWith("• ")) {
+          return (
+            <p key={li} className="mc-bullet" dir="rtl">
+              {renderInlineLine(trimmed.slice(2))}
+            </p>
+          );
+        }
+
+        // Numbered condition: "1. text"
+        const numMatch = trimmed.match(/^(\d+)\.\s+(.+)/s);
+        if (numMatch) {
+          return (
+            <div key={li} className="mc-num">
+              <span className="mc-num-marker">{numMatch[1]}.</span>
+              <span className="mc-num-body">{renderInlineLine(numMatch[2])}</span>
+            </div>
+          );
+        }
+
+        // Regular paragraph
         return (
-          <p key={li} className="my-1 leading-9" dir="rtl">
+          <p key={li} dir="rtl">
             {renderInlineLine(line)}
           </p>
         );

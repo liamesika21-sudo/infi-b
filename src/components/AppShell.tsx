@@ -43,7 +43,7 @@ const NAV_ITEMS = [
   { href: "/past-exams",    label: "מבחני עבר", icon: FileQuestion,    tourId: "nav-past-exams",   show: "sm"     },
   { href: "/simulations",   label: "סימולציות", icon: FlaskConical,    tourId: "nav-simulations",  show: "md"     },
   { href: "/intuition-map", label: "אינטואיציה", icon: Lightbulb,      tourId: "nav-intuition",    show: "md"     },
-  { href: "/quick-review",  label: "חזרה",       icon: Zap,            tourId: "nav-quick-review", show: "md"     },
+  { href: "/instructor-notes", label: "הערות מקס", icon: Zap,            tourId: "nav-quick-review", show: "md"     },
   { href: "/mentor",        label: "מנטור",      icon: Brain,          tourId: "nav-mentor",       show: "always" },
   { href: "/study-plan",   label: "תכנון",      icon: MapPin,         tourId: "nav-study-plan",   show: "md"     },
   { href: "/admin",         label: "אדמין",      icon: ShieldCheck,    tourId: "nav-admin",        show: "lg"     },

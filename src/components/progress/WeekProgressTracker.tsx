@@ -231,20 +231,17 @@ export function WeekProgressTracker({ weekNum, sections, questions }: Props) {
                         {q.preview}
                       </p>
                     </div>
-                    {/* Difficulty — shown always, enabled after done */}
+                    {/* Difficulty */}
                     <div className="flex items-center gap-1 mt-1 pr-8">
                       {DIFF.map(({ value, label, color, bg, border }) => (
                         <button
                           key={value}
                           onClick={() => setDifficulty(q.questionId, q.homeworkNumber, value)}
-                          disabled={!isDone}
                           className="rounded-full px-2 py-0.5 text-[10px] font-black transition-all"
                           style={{
                             background: qprog?.difficulty === value ? bg : "transparent",
-                            color: qprog?.difficulty === value ? color : isDone ? "var(--text-muted)" : "var(--border)",
+                            color: qprog?.difficulty === value ? color : "var(--text-muted)",
                             border: `1px solid ${qprog?.difficulty === value ? border : "var(--border)"}`,
-                            opacity: isDone ? 1 : 0.4,
-                            cursor: isDone ? "pointer" : "default",
                           }}
                         >
                           {label}
