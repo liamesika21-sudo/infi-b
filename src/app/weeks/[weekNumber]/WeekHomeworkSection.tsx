@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { Check, Circle, Flame, Target } from "lucide-react";
 import type { HomeworkQuestionPriority } from "@/lib/calculus2/analysis-types";
 import { HomeworkHintSystem } from "@/components/study/HomeworkHintSystem";
-import { MathContent } from "@/components/study/MathContent";
 import {
   loadProgress, saveProgress, hwQuestionKey,
   type DifficultyRating, type QuestionProgress,
@@ -75,8 +74,6 @@ function HomeworkQuestionRow({ q }: { q: HomeworkQuestionPriority }) {
   const [progress, setProgress] = useState<QuestionProgress | undefined>(() => loadProgress().questions[key]);
   const isDone = progress?.done ?? false;
   const isHot = q.importanceLevel === "critical" || q.importanceLevel === "high";
-  const questionText = translateHomeworkText(getQuestionText(q.contentPreview));
-  const whyItMatters = translateHomeworkText(q.whyItMatters);
 
   useEffect(() => {
     const refresh = () => setProgress(loadProgress().questions[key]);
@@ -162,17 +159,6 @@ function HomeworkQuestionRow({ q }: { q: HomeworkQuestionPriority }) {
           </span>
         </div>
 
-        <div className="rounded-xl border px-3 py-3" style={{ borderColor: isDone ? "var(--green-border)" : "var(--border)", background: "rgba(255,255,255,0.74)" }}>
-          <p className="mb-1 text-[11px] font-black uppercase tracking-widest" style={{ color: isDone ? "var(--green)" : "var(--text-muted)" }}>
-            נוסח השאלה בעברית
-          </p>
-          <MathContent text={questionText} className="text-sm leading-7" />
-        </div>
-
-        <p className="mt-2 text-xs leading-6" style={{ color: "var(--text-muted)" }}>
-          {whyItMatters}
-        </p>
-
         {q.requiredKnowledge.length > 0 && (
           <div className="mt-2 flex flex-wrap gap-1.5">
             {q.requiredKnowledge.slice(0, 3).map((item) => (
@@ -241,19 +227,6 @@ function SummaryBadge({ label, tone = "default" }: { label: string; tone?: "defa
       {label}
     </span>
   );
-}
-
-function getQuestionText(contentPreview: string) {
-  const withoutHeader = contentPreview
-    .replace(/Calculus\s+II\s*[–-]\s*Spring\s*2025-26\s*Homework\s*\d+\s*/i, "")
-    .replace(/Homework\s*\d+\s*/i, "")
-    .replace(/\bSolution\s*\d*\.?\s*/i, "");
-
-  const withoutSolution = withoutHeader
-    .split(/\bSolution\s*:|\bSolution\b|פתרון\s*:/i)[0]
-    .trim();
-
-  return withoutSolution || contentPreview.trim() || "לא נמצא נוסח שאלה בקובץ המטלה.";
 }
 
 function translateHomeworkText(text: string) {
