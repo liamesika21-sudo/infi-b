@@ -139,7 +139,7 @@ p { margin: 0; }
   text-align: start;
 }
 .math-content p {
-  margin: 0.3rem 0;
+  margin: 0.6rem 0;
   line-height: 2.1;
   unicode-bidi: plaintext;
 }
@@ -189,11 +189,65 @@ p { margin: 0; }
 }
 
 .practice-question-text p {
-  margin: 0.35rem 0;
+  margin: 0.6rem 0;
 }
 
 .practice-question-text .math-ltr {
   margin-inline: 0.08rem;
+}
+
+/* Section sub-heading (full-bold line like **תזכורת: משפט דרבו:**) */
+.mc-head {
+  font-weight: 800;
+  font-size: 0.9375rem;
+  color: var(--navy);
+  margin: 1.2rem 0 0.5rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--border);
+  unicode-bidi: plaintext;
+  line-height: 1.7;
+}
+.practice-question-text .mc-head {
+  color: var(--text-primary);
+}
+
+/* Bullet item (• text) */
+.mc-bullet {
+  position: relative;
+  padding-right: 1.3rem;
+  margin: 0.45rem 0;
+  line-height: 2.0;
+  unicode-bidi: plaintext;
+}
+.mc-bullet::before {
+  content: "•";
+  position: absolute;
+  right: 0;
+  color: var(--teal);
+  font-weight: 900;
+}
+
+/* Numbered condition row (1. text, 2. text …) */
+.mc-num {
+  display: flex;
+  gap: 0.55rem;
+  align-items: flex-start;
+  margin: 0.5rem 0;
+  direction: rtl;
+}
+.mc-num-marker {
+  font-weight: 900;
+  color: var(--teal);
+  flex-shrink: 0;
+  min-width: 1.4rem;
+  line-height: 2.0;
+  text-align: right;
+}
+.mc-num-body {
+  flex: 1;
+  min-width: 0;
+  line-height: 2.0;
+  unicode-bidi: plaintext;
 }
 
 /* ═══════════════════════════════════════════════════════

@@ -129,7 +129,7 @@ export function MathContent({ text, className = "" }: { text: string; className?
         }
 
         // Numbered condition: "1. text"
-        const numMatch = trimmed.match(/^(\d+)\.\s+(.+)/s);
+        const numMatch = trimmed.match(/^(\d+)\.\s+(.+)/);
         if (numMatch) {
           return (
             <div key={li} className="mc-num">
