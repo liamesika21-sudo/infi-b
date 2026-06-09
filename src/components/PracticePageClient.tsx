@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { BookOpen, ChevronDown, FileQuestion, FlaskConical } from "lucide-react";
 import type { QuestionItem } from "@/lib/calculus2/analysis-types";
-import { MathContent } from "@/components/study/MathContent";
+import { QuestionBlockClient } from "@/components/QuestionBlockClient";
 
 interface SourceGroup {
   id: string;
@@ -52,13 +52,6 @@ const TYPE_TONE: Record<SourceGroup["type"], { color: string; bg: string; border
   recitation: { color: "var(--teal)", bg: "var(--teal-light)", border: "var(--teal-border)" },
   homework: { color: "var(--gold)", bg: "var(--gold-light)", border: "var(--gold-border)" },
   past_exam: { color: "var(--purple)", bg: "var(--purple-light)", border: "var(--purple-border)" },
-};
-
-const DIFFICULTY_LABEL: Record<QuestionItem["difficulty"], string> = {
-  easy: "קל",
-  medium: "בינוני",
-  hard: "קשה",
-  unknown: "לא סווג",
 };
 
 function parseSourceGroup(fileId: string): Omit<SourceGroup, "id" | "anchorId" | "questions"> | null {
@@ -265,40 +258,9 @@ function PracticeGroup({ group, defaultOpen }: { group: SourceGroup; defaultOpen
 
       <div className="divide-y border-t" style={{ borderColor: "var(--border)" }}>
         {group.questions.map((question, index) => (
-          <QuestionBlock key={question.id} question={question} index={index} />
+          <QuestionBlockClient key={question.id} question={question} index={index} />
         ))}
       </div>
     </details>
-  );
-}
-
-function QuestionBlock({ question, index }: { question: QuestionItem; index: number }) {
-  return (
-    <article className="grid gap-3 p-4 md:grid-cols-[2.5rem_minmax(0,1fr)] md:p-5">
-      <div
-        className="flex h-8 w-8 items-center justify-center rounded-full text-xs font-black md:mt-1"
-        style={{ background: "var(--bg-inset)", color: "var(--text-secondary)" }}
-      >
-        {index + 1}
-      </div>
-
-      <div className="min-w-0">
-        <div className="mb-3 flex flex-wrap items-center gap-1.5">
-          {question.questionNumber && (
-            <span className="badge badge-navy-light">שאלה {question.questionNumber}</span>
-          )}
-          <span className="badge badge-muted">{DIFFICULTY_LABEL[question.difficulty]}</span>
-          {question.examRelevance === "critical" && <span className="badge badge-red">קריטי למבחן</span>}
-          {question.examRelevance === "high" && <span className="badge badge-amber">חשוב למבחן</span>}
-          {question.topicIds.slice(0, 4).map((topic) => (
-            <span key={topic} className="badge badge-muted">
-              {topic}
-            </span>
-          ))}
-        </div>
-
-        <MathContent text={question.content} className="practice-question-text" />
-      </div>
-    </article>
   );
 }

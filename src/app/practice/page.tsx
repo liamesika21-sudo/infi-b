@@ -1,11 +1,17 @@
-import { readAnalysisData } from "@/lib/calculus2/analysis-reader";
+import fs from "node:fs/promises";
+import path from "node:path";
+import { GENERATED_DIR } from "@/lib/calculus2/generated-data";
 import { PracticePageClient } from "@/components/PracticePageClient";
+import type { QuestionItem } from "@/lib/calculus2/analysis-types";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 3600; // re-generate at most once per hour
 
 export default async function PracticePage() {
-  const analysis = await readAnalysisData();
-  const questions = analysis.questionBank;
+  let questions: QuestionItem[] = [];
+  try {
+    const raw = await fs.readFile(path.join(GENERATED_DIR, "question-bank.json"), "utf8");
+    questions = JSON.parse(raw) as QuestionItem[];
+  } catch {};
 
   const counts = {
     recitation: questions.filter(q => q.sourceType === "recitation").length,
