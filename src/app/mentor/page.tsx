@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
-import { Send, Sparkles, Lock } from "lucide-react";
+import { Send, Sparkles, Lock, BookOpenCheck } from "lucide-react";
 import katex from "katex";
 import "katex/dist/katex.min.css";
+import weekSummariesRaw from "@/../data/generated/calculus2/week-chat-summaries.json";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 interface Message {
@@ -17,6 +18,14 @@ interface MentorStatus {
   limit: number;
   email?: string;
 }
+
+interface WeekSummary {
+  week: number;
+  title: string;
+  message: string;
+}
+
+const WEEK_SUMMARIES = weekSummariesRaw as WeekSummary[];
 
 // ── Math rendering ─────────────────────────────────────────────────────────
 
@@ -188,7 +197,7 @@ function MessageBubble({ msg, isStreaming }: { msg: Message; isStreaming?: boole
 
       {/* Bubble */}
       <div
-        className="max-w-[80%] rounded-2xl px-4 py-3 text-sm leading-relaxed"
+        className={`rounded-2xl px-4 py-3 text-sm leading-relaxed ${isUser ? "max-w-[80%]" : "max-w-[92%]"}`}
         style={
           isUser
             ? { background: "var(--navy-mid)", color: "#fff" }
@@ -218,10 +227,33 @@ function MessageBubble({ msg, isStreaming }: { msg: Message; isStreaming?: boole
   );
 }
 
+// ── Chat persistence ───────────────────────────────────────────────────────
+
+const CHAT_STORAGE_KEY = "infi-mentor-chat-v1";
+
+function loadStoredMessages(): Message[] {
+  if (typeof window === "undefined") return [];
+  try {
+    const raw = localStorage.getItem(CHAT_STORAGE_KEY);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw) as unknown;
+    if (!Array.isArray(parsed)) return [];
+    return parsed as Message[];
+  } catch {
+    return [];
+  }
+}
+
+function saveMessages(msgs: Message[]) {
+  try {
+    localStorage.setItem(CHAT_STORAGE_KEY, JSON.stringify(msgs));
+  } catch {}
+}
+
 // ── Main chat UI ───────────────────────────────────────────────────────────
 
 function ChatInterface({ status }: { status: MentorStatus }) {
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [messages, setMessages] = useState<Message[]>(() => loadStoredMessages());
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [streamingContent, setStreamingContent] = useState("");
@@ -237,6 +269,11 @@ function ChatInterface({ status }: { status: MentorStatus }) {
   useEffect(() => {
     scrollToBottom();
   }, [messages, streamingContent, scrollToBottom]);
+
+  // Persist messages on every change
+  useEffect(() => {
+    saveMessages(messages);
+  }, [messages]);
 
   const sendMessage = useCallback(
     async (text: string) => {
@@ -345,6 +382,19 @@ function ChatInterface({ status }: { status: MentorStatus }) {
             </p>
           </div>
         </div>
+        {messages.length > 0 && (
+          <button
+            type="button"
+            onClick={() => {
+              setMessages([]);
+              saveMessages([]);
+            }}
+            className="text-[11px] font-bold transition hover:opacity-70"
+            style={{ color: "var(--text-muted)" }}
+          >
+            נקה שיחה
+          </button>
+        )}
       </div>
 
       {/* Messages area */}
@@ -354,28 +404,67 @@ function ChatInterface({ status }: { status: MentorStatus }) {
       >
         {/* Starter questions */}
         {showStarters && (
-          <div className="py-4">
-            <p
-              className="text-sm font-semibold mb-3 text-center"
-              style={{ color: "var(--text-secondary)" }}
-            >
-              שאל אותי כל דבר על חומר הקורס
-            </p>
-            <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-              {STARTER_QUESTIONS.map((q) => (
-                <button
-                  key={q}
-                  onClick={() => void sendMessage(q)}
-                  className="rounded-xl border px-3 py-2.5 text-right text-sm transition hover:opacity-80 cursor-pointer"
-                  style={{
-                    borderColor: "var(--border)",
-                    background: "var(--bg-subtle)",
-                    color: "var(--text-secondary)",
-                  }}
-                >
-                  {q}
-                </button>
-              ))}
+          <div className="py-4 space-y-5">
+            {/* Week summaries */}
+            <div>
+              <div className="flex items-center gap-2 mb-2.5">
+                <BookOpenCheck className="h-4 w-4 shrink-0" style={{ color: "var(--teal)" }} />
+                <p className="text-sm font-bold" style={{ color: "var(--text-primary)" }}>
+                  סיכום שבועי — מה חזרתי, מה חשוב, מה לשיעורי בית
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {WEEK_SUMMARIES.map((w) => (
+                  <button
+                    key={w.week}
+                    type="button"
+                    onClick={() => void sendMessage(w.message)}
+                    className="rounded-xl border px-3 py-2 text-right text-xs font-bold transition hover:opacity-80"
+                    style={{
+                      borderColor: "var(--teal-border)",
+                      background: "var(--teal-light)",
+                      color: "var(--teal)",
+                    }}
+                  >
+                    שבוע {w.week}
+                    <span
+                      className="block text-[10px] font-normal mt-0.5"
+                      style={{ color: "var(--text-secondary)" }}
+                    >
+                      {w.title.length > 22 ? w.title.slice(0, 22) + "…" : w.title}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Divider */}
+            <div className="border-t" style={{ borderColor: "var(--border)" }} />
+
+            {/* Quick question starters */}
+            <div>
+              <p
+                className="text-sm font-semibold mb-3 text-center"
+                style={{ color: "var(--text-secondary)" }}
+              >
+                שאל אותי כל דבר על חומר הקורס
+              </p>
+              <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                {STARTER_QUESTIONS.map((q) => (
+                  <button
+                    key={q}
+                    onClick={() => void sendMessage(q)}
+                    className="rounded-xl border px-3 py-2.5 text-right text-sm transition hover:opacity-80 cursor-pointer"
+                    style={{
+                      borderColor: "var(--border)",
+                      background: "var(--bg-subtle)",
+                      color: "var(--text-secondary)",
+                    }}
+                  >
+                    {q}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         )}

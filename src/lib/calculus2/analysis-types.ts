@@ -78,6 +78,7 @@ export interface QuestionItem {
   sourceFileId: string;
   questionNumber?: string;
   content: string;
+  contentHe?: string;
   topicIds: string[];
   requiredTheoremIds?: string[];
   requiredFormulaIds?: string[];

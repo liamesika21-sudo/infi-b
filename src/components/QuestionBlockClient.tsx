@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Languages, Loader2 } from "lucide-react";
+import { Languages } from "lucide-react";
 import type { QuestionItem } from "@/lib/calculus2/analysis-types";
 import { MathContent } from "@/components/study/MathContent";
 
@@ -13,35 +13,10 @@ const DIFFICULTY_LABEL: Record<QuestionItem["difficulty"], string> = {
 };
 
 export function QuestionBlockClient({ question, index }: { question: QuestionItem; index: number }) {
-  const [translated, setTranslated] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [showTranslated, setShowTranslated] = useState(false);
+  const [showHe, setShowHe] = useState(false);
 
-  async function handleTranslate() {
-    if (translated) {
-      setShowTranslated((v) => !v);
-      return;
-    }
-    setLoading(true);
-    try {
-      const res = await fetch("/api/translate", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({ text: question.content }),
-      });
-      const data = (await res.json()) as { translated?: string; error?: string };
-      if (data.translated) {
-        setTranslated(data.translated);
-        setShowTranslated(true);
-      }
-    } catch {
-      // silently fail — user stays on original
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  const displayText = showTranslated && translated ? translated : question.content;
+  const hasTranslation = Boolean(question.contentHe);
+  const displayText = showHe && question.contentHe ? question.contentHe : question.content;
 
   return (
     <article className="grid gap-3 p-4 md:grid-cols-[2.5rem_minmax(0,1fr)] md:p-5">
@@ -66,24 +41,21 @@ export function QuestionBlockClient({ question, index }: { question: QuestionIte
             </span>
           ))}
 
-          <button
-            type="button"
-            onClick={handleTranslate}
-            disabled={loading}
-            className="flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-semibold transition hover:bg-[var(--navy-light)] disabled:opacity-50"
-            style={{
-              borderColor: showTranslated && translated ? "var(--teal-border)" : "var(--border)",
-              color: showTranslated && translated ? "var(--teal)" : "var(--text-secondary)",
-              background: showTranslated && translated ? "var(--teal-light)" : undefined,
-            }}
-          >
-            {loading ? (
-              <Loader2 className="h-3 w-3 animate-spin" />
-            ) : (
+          {hasTranslation && (
+            <button
+              type="button"
+              onClick={() => setShowHe((v) => !v)}
+              className="flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-semibold transition hover:bg-(--navy-light)"
+              style={{
+                borderColor: showHe ? "var(--teal-border)" : "var(--border)",
+                color: showHe ? "var(--teal)" : "var(--text-secondary)",
+                background: showHe ? "var(--teal-light)" : undefined,
+              }}
+            >
               <Languages className="h-3 w-3" />
-            )}
-            {showTranslated && translated ? "מקור" : "תרגום"}
-          </button>
+              {showHe ? "מקור" : "תרגום"}
+            </button>
+          )}
         </div>
 
         <MathContent text={displayText} className="practice-question-text" />

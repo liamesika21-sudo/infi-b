@@ -25,6 +25,7 @@ import type { readAnalysisData } from "@/lib/calculus2/analysis-reader";
 import type { LectureSummary } from "@/lib/calculus2/analysis-types";
 import { StudyCallout } from "@/components/study/StudyCallout";
 import { DashboardProgress } from "@/components/progress/DashboardProgress";
+import { HomeworkMasteryAxis } from "@/components/progress/HomeworkMasteryAxis";
 
 const EXAM_DATE = new Date("2026-07-01T09:00:00");
 
@@ -347,6 +348,138 @@ export function Dashboard({
       {/* ══ PERSONAL PROGRESS ══ */}
       <DashboardProgress />
 
+      {/* ══ HOMEWORK MASTERY AXIS ══ */}
+      <HomeworkMasteryAxis />
+
+      {/* ══ NAVIGATION GRID ══ */}
+      <section>
+        <SectionHeader title="כלי לימוד" accent="#6366f1" />
+        <div className="space-y-5">
+          {(
+            [
+              {
+                title: "תיאוריה ולמידה",
+                accent: "#3b82f6",
+                items: [
+                  { href: "/weeks", label: "שבועות", desc: "מפת 13 שבועות", icon: Calendar },
+                  { href: "/topics", label: "נושאים", desc: "מבנה topic-first", icon: Layers3 },
+                  { href: "/formulas", label: "נוסחאות", desc: "בנק נוסחאות", icon: Sigma },
+                  { href: "/theorems", label: "משפטים", desc: "בנק משפטים", icon: ScrollText },
+                  { href: "/definitions", label: "הגדרות", desc: "בנק הגדרות", icon: BookMarked },
+                  {
+                    href: "/proof-patterns",
+                    label: "תבניות הוכחה",
+                    desc: "דפוסים חוזרים",
+                    icon: BookOpen,
+                  },
+                ],
+              },
+              {
+                title: "תרגול ובחינה",
+                accent: "#f59e0b",
+                items: [
+                  { href: "/practice", label: "תרגול", desc: "שאלות לפי נושא", icon: Target },
+                  {
+                    href: "/simulations",
+                    label: "סימולציות",
+                    desc: "מבחני תרגול",
+                    icon: FlaskConical,
+                  },
+                  {
+                    href: "/past-exams",
+                    label: "מבחני עבר",
+                    desc: "תדירות ודפוסים",
+                    icon: FileQuestion,
+                  },
+                  {
+                    href: "/homework-review",
+                    label: "חזרת מטלות",
+                    desc: "עדיפות מטלות",
+                    icon: ClipboardList,
+                  },
+                ],
+              },
+              {
+                title: "מעקב וכלים",
+                accent: "#8b5cf6",
+                items: [
+                  { href: "/quick-review", label: "חזרה מהירה", desc: "לפני המבחן", icon: Zap },
+                  {
+                    href: "/progress",
+                    label: "מעקב שליטה",
+                    desc: "סטטוס נושאים",
+                    icon: Gauge,
+                  },
+                  { href: "/mentor", label: "מנטור", desc: "עזרה ואינטראקציה", icon: Brain },
+                  {
+                    href: "/instructor-notes",
+                    label: "הערות מקס",
+                    desc: "הערות והנחיות",
+                    icon: Sparkles,
+                  },
+                ],
+              },
+            ] as Array<{
+              title: string;
+              accent: string;
+              items: Array<{
+                href: string;
+                label: string;
+                desc: string;
+                icon: React.FC<{ className?: string }>;
+              }>;
+            }>
+          ).map((group) => (
+            <div key={group.title}>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "10px",
+                  marginBottom: "10px",
+                }}
+              >
+                <span
+                  style={{
+                    width: "8px",
+                    height: "8px",
+                    borderRadius: "50%",
+                    background: group.accent,
+                    flexShrink: 0,
+                  }}
+                />
+                <h3
+                  style={{
+                    fontSize: "12px",
+                    fontWeight: 700,
+                    textTransform: "uppercase",
+                    letterSpacing: "0.07em",
+                    color: "var(--text-muted)",
+                  }}
+                >
+                  {group.title}
+                </h3>
+                <div
+                  style={{ flex: 1, height: "1px", background: "var(--border)" }}
+                />
+              </div>
+              <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                {group.items.map(({ href, label, desc, icon }) => (
+                  <NavCard
+                    key={href}
+                    href={href}
+                    label={label}
+                    desc={desc}
+                    icon={icon}
+                    accent={group.accent}
+                  />
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* ══ LEARNING PROGRESS ══ */}
       <LearningProgressPanel
         analyzedPercent={analyzedPercent}
@@ -486,135 +619,6 @@ export function Dashboard({
       {analysisData.lectureSummaries.length > 0 && (
         <LectureOverviewTable lectureSummaries={analysisData.lectureSummaries} />
       )}
-
-      {/* ══ NAVIGATION GRID ══ */}
-      <section>
-        <SectionHeader title="כלי לימוד" accent="#6366f1" />
-        <div className="space-y-5">
-          {(
-            [
-              {
-                title: "תיאוריה ולמידה",
-                accent: "#3b82f6",
-                items: [
-                  { href: "/weeks", label: "שבועות", desc: "מפת 13 שבועות", icon: Calendar },
-                  { href: "/topics", label: "נושאים", desc: "מבנה topic-first", icon: Layers3 },
-                  { href: "/formulas", label: "נוסחאות", desc: "בנק נוסחאות", icon: Sigma },
-                  { href: "/theorems", label: "משפטים", desc: "בנק משפטים", icon: ScrollText },
-                  { href: "/definitions", label: "הגדרות", desc: "בנק הגדרות", icon: BookMarked },
-                  {
-                    href: "/proof-patterns",
-                    label: "תבניות הוכחה",
-                    desc: "דפוסים חוזרים",
-                    icon: BookOpen,
-                  },
-                ],
-              },
-              {
-                title: "תרגול ובחינה",
-                accent: "#f59e0b",
-                items: [
-                  { href: "/practice", label: "תרגול", desc: "שאלות לפי נושא", icon: Target },
-                  {
-                    href: "/simulations",
-                    label: "סימולציות",
-                    desc: "מבחני תרגול",
-                    icon: FlaskConical,
-                  },
-                  {
-                    href: "/past-exams",
-                    label: "מבחני עבר",
-                    desc: "תדירות ודפוסים",
-                    icon: FileQuestion,
-                  },
-                  {
-                    href: "/homework-review",
-                    label: "חזרת מטלות",
-                    desc: "עדיפות מטלות",
-                    icon: ClipboardList,
-                  },
-                ],
-              },
-              {
-                title: "מעקב וכלים",
-                accent: "#8b5cf6",
-                items: [
-                  { href: "/quick-review", label: "חזרה מהירה", desc: "לפני המבחן", icon: Zap },
-                  {
-                    href: "/progress",
-                    label: "מעקב שליטה",
-                    desc: "סטטוס נושאים",
-                    icon: Gauge,
-                  },
-                  { href: "/mentor", label: "מנטור", desc: "עזרה ואינטראקציה", icon: Brain },
-                  {
-                    href: "/instructor-notes",
-                    label: "הערות מקס",
-                    desc: "הערות והנחיות",
-                    icon: Sparkles,
-                  },
-                ],
-              },
-            ] as Array<{
-              title: string;
-              accent: string;
-              items: Array<{
-                href: string;
-                label: string;
-                desc: string;
-                icon: React.FC<{ className?: string }>;
-              }>;
-            }>
-          ).map((group) => (
-            <div key={group.title}>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "10px",
-                  marginBottom: "10px",
-                }}
-              >
-                <span
-                  style={{
-                    width: "8px",
-                    height: "8px",
-                    borderRadius: "50%",
-                    background: group.accent,
-                    flexShrink: 0,
-                  }}
-                />
-                <h3
-                  style={{
-                    fontSize: "12px",
-                    fontWeight: 700,
-                    textTransform: "uppercase",
-                    letterSpacing: "0.07em",
-                    color: "var(--text-muted)",
-                  }}
-                >
-                  {group.title}
-                </h3>
-                <div
-                  style={{ flex: 1, height: "1px", background: "var(--border)" }}
-                />
-              </div>
-              <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                {group.items.map(({ href, label, desc, icon }) => (
-                  <NavCard
-                    key={href}
-                    href={href}
-                    label={label}
-                    desc={desc}
-                    icon={icon}
-                    accent={group.accent}
-                  />
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
     </div>
   );
 }
