@@ -15,6 +15,14 @@ interface MaxInsightsData {
   }>;
 }
 
+interface LectureSummary {
+  lectureNumber: number;
+  mainTopics?: string[];
+  keyTheorems?: string[];
+  keyDefinitions?: string[];
+  keyFormulas?: string[];
+}
+
 async function readMaxInsights(): Promise<MaxInsightsData> {
   try {
     const raw = await readFile(
@@ -27,10 +35,35 @@ async function readMaxInsights(): Promise<MaxInsightsData> {
   }
 }
 
+async function readLectureSummaries(): Promise<LectureSummary[]> {
+  try {
+    const raw = await readFile(
+      path.join(process.cwd(), "data/generated/calculus2/lecture-summaries.json"),
+      "utf8"
+    );
+    return JSON.parse(raw) as LectureSummary[];
+  } catch {
+    return [];
+  }
+}
+
+function buildLectureBlock(lectures: LectureSummary[]): string {
+  if (!lectures.length) return "(לא נטענו סיכומי הרצאות)";
+  return lectures
+    .map((lec) => {
+      const lines: string[] = [`### הרצאה ${lec.lectureNumber}${lec.mainTopics?.length ? ` — ${lec.mainTopics.join(", ")}` : ""}`];
+      if (lec.keyTheorems?.length) lines.push(`  משפטים: ${lec.keyTheorems.join(" | ")}`);
+      if (lec.keyDefinitions?.length) lines.push(`  הגדרות: ${lec.keyDefinitions.join(" | ")}`);
+      if (lec.keyFormulas?.length) lines.push(`  נוסחאות: ${lec.keyFormulas.join(" | ")}`);
+      return lines.join("\n");
+    })
+    .join("\n\n");
+}
+
 export async function buildMentorSystemPrompt(): Promise<string> {
   if (cachedPrompt) return cachedPrompt;
 
-  const insights = await readMaxInsights();
+  const [insights, lectures] = await Promise.all([readMaxInsights(), readLectureSummaries()]);
 
   const intuitionLines = (insights.intuitions ?? [])
     .map((i) => `- [${i.topic}] ${i.title}: ${i.text}${i.maxQuote ? `\n  דגש מהתרגול: "${i.maxQuote}"` : ""}`)
@@ -53,6 +86,8 @@ export async function buildMentorSystemPrompt(): Promise<string> {
     })
     .join("\n");
 
+  const lectureBlock = buildLectureBlock(lectures);
+
   const prompt = `אתה "מנטור אינפי ב׳" — עוזר לימוד לקורס חדוון 2 של אוניברסיטת רייכמן, מועד א׳ 2026.
 
 ## האישיות שלך
@@ -66,10 +101,25 @@ export async function buildMentorSystemPrompt(): Promise<string> {
 2. **עברית** — ענה תמיד בעברית.
 3. **LaTeX** — כתוב מתמטיקה תמיד כ-LaTeX: $...$ לביטוי בשורה, $$...$$ לתצוגה מרכזית.
 4. **קצר וממוקד** — ברירת המחדל היא 4-8 שורות או עד 3 צעדים. אל תכתוב מגילות, אל תיתן פתרון מלא אם המשתמש ביקש רק כיוון, ובסוף אפשר לשאול שאלה קצרה להמשך.
-5. **הוכחות ומשפטים** — השתמש בניסוח המדויק כפי שמופיע בחומרי הקורס.
+5. **הוכחות ומשפטים — כלל חמור**:
+   - ניסוחי משפטים ושלבי הוכחות מבוססים **אך ורק** על חומרי ההרצאה המופיעים בסעיף "חומרי ההרצאה" למטה.
+   - אם נשאל על הוכחה שאינה מופיעה שם במפורש — **חובה** להשיב: "ההוכחה המלאה של [שם המשפט] לא נמצאת בחומר שיש לי. עיין בסיכומי הרצאה [N] בפלטפורמה."
+   - **אסור** לייצר הוכחה מהזיכרון, גם אם אתה "יודע" אותה מהאימון — גם אם נראית נכונה, יתכן שהניסוח בהרצאה שונה.
+   - **אסור** לומר "לא בטוח אם זה הניסוח של יוסי" ואז לתת הוכחה בכל זאת — זה סותר.
+   - כלל זה **לא חל** על חישובים, שיטות פתרון, תרגול וטריקים — שם אפשר ורצוי לעזור בחופשיות כמו מורה פרטי.
 6. **שאלות תרגול** — כשמבקשים שאלה, בנה שאלה בסגנון בחינה אמיתית.
 7. **בלי תוויות דוברים** — אסור לכתוב ביטויים כמו "יוסי מדבר", "מקס מדבר", "לפי יוסי", "מקס אומר", או כותרות דומות. אם צריך פורמליות ואינטואיציה, שלב אותן טבעית באותה תשובה.
 8. **בונים יחד** — אם השאלה גדולה, התחל בצעד הראשון, בדוק שהמשתמש איתך, ורק אז המשך. אל תזרוק את כל הפתרון בבת אחת אלא אם ביקשו "פתרון מלא".
+
+---
+
+## חומרי ההרצאה — מה נלמד בכל הרצאה
+
+זהו התוכן הרשמי של הקורס. הוכחות ומשפטים **חייבים** להתבסס על רשימות אלו בלבד.
+
+${lectureBlock}
+
+---
 
 ## תובנות אינטואיטיביות מהתרגולים (זכור תמיד)
 
@@ -83,15 +133,17 @@ ${counterLines}
 
 ${weeklyLines}
 
-## ניסוחים פורמליים — עקרונות מפתח
+---
+
+## ניסוחים פורמליים — ממשפטי מפתח בלבד (ניסוח קצר)
+
+ניסוחים אלו לשימוש בתשובות מהירות. עבור הוכחה מלאה — ראה כלל 5.
 
 **לופיטל**: אם $f(a)=g(a)=0$ (או $\\pm\\infty$) ו-$g'(x) \\neq 0$ סביב $a$, אז $\\lim_{x\\to a}\\frac{f(x)}{g(x)} = \\lim_{x\\to a}\\frac{f'(x)}{g'(x)}$ אם הגבול הימני קיים.
 
 **משפט דרבו**: אם $f$ גזירה על $[a,b]$ ו-$f'(a) < c < f'(b)$ (או הפוך), אז קיים $\\xi \\in (a,b)$ כך ש-$f'(\\xi)=c$.
 
 **סדרה מונוטונית חסומה מתכנסת**: כל סדרה מונוטונית עולה וחסומה מלמעלה מתכנסת.
-
-**היינה**: $\\lim_{x\\to a} f(x) = L$ אמ"מ לכל סדרה $x_n \\to a$ (עם $x_n \\neq a$), $f(x_n) \\to L$.
 
 **FTC (משפט היסודי)**: אם $f$ רציפה על $[a,b]$ ו-$F(x)=\\int_a^x f(t)dt$, אז $F'(x)=f(x)$.
 
@@ -101,7 +153,7 @@ ${weeklyLines}
 
 **מבחן $p$**: $\\sum_{n=1}^\\infty \\frac{1}{n^p}$ מתכנס אמ"מ $p>1$.
 
-**מבחן LCT (השוואה גבולי)**: אם $a_n, b_n > 0$ ו-$\\lim \\frac{a_n}{b_n} = L \\in (0,\\infty)$, אז הטורים מתכנסים יחד או מתבדרים יחד.
+**מבחן LCT**: אם $a_n, b_n > 0$ ו-$\\lim \\frac{a_n}{b_n} = L \\in (0,\\infty)$, אז הטורים מתכנסים יחד או מתבדרים יחד.
 
 **מבחן ד'אלמבר (מנה)**: $L = \\lim\\left|\\frac{a_{n+1}}{a_n}\\right|$ — מתכנס אם $L<1$, מתבדר אם $L>1$, לא קובע אם $L=1$.
 
