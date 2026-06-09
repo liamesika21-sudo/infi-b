@@ -209,79 +209,44 @@ export function AuthGate({
   return (
     <div
       className="fixed inset-0 z-[100] flex items-center justify-center px-5 py-8"
-      style={{
-        background: "linear-gradient(135deg, rgba(240,244,249,0.88), rgba(255,255,255,0.72))",
-        backdropFilter: "blur(10px)",
-      }}
+      style={{ background: "rgba(245,240,255,0.72)", backdropFilter: "blur(12px)" }}
       role="dialog"
       aria-modal="true"
       aria-labelledby="auth-title"
     >
       <form
         onSubmit={mode === "login" ? handleLoginSubmit : handleRegistrationSubmit}
-        className="relative w-full max-w-sm overflow-hidden rounded-3xl border bg-white p-6 shadow-2xl"
-        style={{
-          borderColor: "var(--navy-border)",
-          boxShadow: "0 18px 50px rgba(15, 34, 64, 0.18), inset 0 1px 0 rgba(255,255,255,0.9)",
-        }}
+        className="w-full max-w-[320px] overflow-y-auto rounded-[30px] bg-white px-8 py-8"
+        style={{ boxShadow: "0px 0px 40px rgba(128,0,255,0.12)" }}
       >
-        <div
-          className="pointer-events-none absolute inset-x-0 top-0 h-1.5"
-          style={{ background: "linear-gradient(90deg, var(--navy), var(--teal), var(--navy-mid))" }}
-          aria-hidden="true"
-        />
+        {/* Heading */}
+        <p
+          id="auth-title"
+          className="mb-7 text-center text-[2rem] font-bold leading-none"
+          style={{ color: "#2e2e2e" }}
+        >
+          {mode === "login" ? "כניסה" : "הרשמה"}
+        </p>
 
-        <div className="mb-5 flex flex-col items-center text-center">
-          <span
-            className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border text-white shadow-sm"
-            style={{ background: "var(--navy)", borderColor: "var(--navy-border)" }}
-          >
-            {mode === "login" ? (
-              <Lock className="h-6 w-6" aria-hidden="true" />
-            ) : (
-              <UserPlus className="h-6 w-6" aria-hidden="true" />
-            )}
-          </span>
-          <h2 id="auth-title" className="mt-3 text-2xl font-black">
-            {mode === "login" ? "כניסה לאתר" : "הרשמה לאתר"}
-          </h2>
-          <p className="mt-1 text-sm leading-6" style={{ color: "var(--text-secondary)" }}>
-            {mode === "login" ? "התחברות עם מייל מורשה בלבד." : "השאירי פרטים ונציג את הפנייה באדמין."}
-          </p>
-        </div>
-
-        <div className="mb-4 grid grid-cols-2 gap-2 rounded-lg border bg-[var(--bg-subtle)] p-1" style={{ borderColor: "var(--border)" }}>
+        {/* Mode toggle */}
+        <div className="mb-6 flex justify-center gap-5 text-sm font-semibold">
           <button
             type="button"
-            onClick={() => {
-              setMode("login");
-              setRegistrationMessage("");
-              setRegistrationComplete(null);
-              setActivePaymentMethod(null);
-            }}
-            className="min-h-10 rounded-md text-sm font-black transition"
-            style={{
-              background: mode === "login" ? "white" : "transparent",
-              color: mode === "login" ? "var(--navy)" : "var(--text-secondary)",
-            }}
+            onClick={() => { setMode("login"); setRegistrationMessage(""); setRegistrationComplete(null); setActivePaymentMethod(null); }}
+            className="relative pb-1 transition"
+            style={{ color: mode === "login" ? "#8000ff" : "rgb(150,150,150)" }}
           >
             כניסה
+            {mode === "login" && <span className="absolute inset-x-0 bottom-0 h-0.5 rounded-full" style={{ background: "#8000ff" }} />}
           </button>
           <button
             type="button"
-            onClick={() => {
-              setMode("register");
-              setMessage("");
-              setRegistrationComplete(null);
-              setActivePaymentMethod(null);
-            }}
-            className="min-h-10 rounded-md text-sm font-black transition"
-            style={{
-              background: mode === "register" ? "white" : "transparent",
-              color: mode === "register" ? "var(--navy)" : "var(--text-secondary)",
-            }}
+            onClick={() => { setMode("register"); setMessage(""); setRegistrationComplete(null); setActivePaymentMethod(null); }}
+            className="relative pb-1 transition"
+            style={{ color: mode === "register" ? "#8000ff" : "rgb(150,150,150)" }}
           >
-            הירשם עכשיו
+            הרשמה
+            {mode === "register" && <span className="absolute inset-x-0 bottom-0 h-0.5 rounded-full" style={{ background: "#8000ff" }} />}
           </button>
         </div>
 
@@ -289,35 +254,23 @@ export function AuthGate({
           <PaymentCompletion
             registration={registrationComplete}
             activePaymentMethod={activePaymentMethod}
-            onShowManualInstructions={(method) => {
-              setActivePaymentMethod(method);
-              recordPaymentAction(method, "manual_instructions_shown");
-            }}
-            onOpenPaymentLink={(method) => {
-              recordPaymentAction(method, "payment_link_opened");
-            }}
+            onShowManualInstructions={(method) => { setActivePaymentMethod(method); recordPaymentAction(method, "manual_instructions_shown"); }}
+            onOpenPaymentLink={(method) => { recordPaymentAction(method, "payment_link_opened"); }}
           />
         ) : (
           <>
-            <label className="mb-2 block text-sm font-bold" htmlFor="auth-email">
-              מייל
-            </label>
-            <div
-              className="flex items-center gap-2 rounded-lg border bg-white px-3"
-              style={{ borderColor: "var(--border)" }}
-            >
-              <Mail className="h-4 w-4 shrink-0" style={{ color: "var(--text-muted)" }} aria-hidden="true" />
+            {/* Email */}
+            <div className="relative mb-1 flex items-center">
+              <Mail className="absolute right-2 h-4 w-4" style={{ color: "#8000ff" }} aria-hidden="true" />
               <input
                 id="auth-email"
                 type="email"
                 required
                 autoComplete="email"
                 value={email}
-                onChange={(event) => {
-                  setEmail(event.target.value);
-                }}
+                onChange={(e) => setEmail(e.target.value)}
                 disabled={authState.status === "checking" || isSubmitting}
-                className="min-h-11 w-full bg-transparent text-left outline-none disabled:opacity-60"
+                className="auth-underline-input w-full py-2 pr-8 pl-2 text-sm disabled:opacity-50"
                 dir="ltr"
                 placeholder="name@example.com"
               />
@@ -325,156 +278,88 @@ export function AuthGate({
 
             {mode === "register" && (
               <>
-                <label className="mb-2 mt-3 block text-sm font-bold" htmlFor="register-phone">
-                  טלפון
-                </label>
-                <div
-                  className="flex items-center gap-2 rounded-lg border bg-white px-3"
-                  style={{ borderColor: "var(--border)" }}
-                >
-                  <Phone className="h-4 w-4 shrink-0" style={{ color: "var(--text-muted)" }} aria-hidden="true" />
+                {/* Phone */}
+                <div className="relative mb-1 mt-3 flex items-center">
+                  <Phone className="absolute right-2 h-4 w-4" style={{ color: "#8000ff" }} aria-hidden="true" />
                   <input
                     id="register-phone"
                     type="tel"
-                    required={mode === "register"}
+                    required
                     autoComplete="tel"
                     value={phone}
-                    onChange={(event) => {
-                      setPhone(event.target.value);
-                    }}
+                    onChange={(e) => setPhone(e.target.value)}
                     disabled={isRegisterSubmitting}
-                    className="min-h-11 w-full bg-transparent text-left outline-none disabled:opacity-60"
+                    className="auth-underline-input w-full py-2 pr-8 pl-2 text-sm disabled:opacity-50"
                     dir="ltr"
                     placeholder="050-0000000"
                   />
                 </div>
 
-                <fieldset className="mt-4 grid gap-2">
-                  <legend className="mb-2 text-sm font-bold">מסלול</legend>
-
-                  <PlanOption
-                    checked={selectedPlan === "basic"}
-                    title="Basic"
-                    price="19₪"
-                    description="גישה מלאה למסך אחד."
-                    onSelect={() => {
-                      setSelectedPlan("basic");
-                    }}
-                  />
-                  <PlanOption
-                    checked={selectedPlan === "pro"}
-                    title="Pro"
-                    price="49₪"
-                    description="כולל מנטור צ'אט שמכיר הרצאות, תרגולים, תמלולים וסיכומים."
-                    icon={<Sparkles className="h-4 w-4" aria-hidden="true" />}
-                    onSelect={() => {
-                      setSelectedPlan("pro");
-                    }}
-                  />
+                {/* Plan */}
+                <fieldset className="mt-5 space-y-2">
+                  <legend className="mb-2 text-xs font-bold" style={{ color: "#2e2e2e" }}>מסלול</legend>
+                  <PlanOption checked={selectedPlan === "basic"} title="Basic" price="19₪" description="גישה מלאה למסך אחד." onSelect={() => setSelectedPlan("basic")} />
+                  <PlanOption checked={selectedPlan === "pro"} title="Pro" price="49₪" description="כולל מנטור AI מבוסס חומר הקורס." icon={<Sparkles className="h-3.5 w-3.5" aria-hidden="true" />} onSelect={() => setSelectedPlan("pro")} />
                 </fieldset>
 
-                <div className="mt-3 flex items-center justify-between rounded-lg border px-3 py-2 text-sm font-black" style={{ borderColor: "var(--border)" }}>
-                  <span>סה&quot;כ לתשלום</span>
-                  <span className="font-mono text-lg">{registrationTotal}₪</span>
+                <div className="mt-3 flex items-center justify-between text-sm font-black" style={{ color: "#2e2e2e" }}>
+                  <span>סה״כ</span>
+                  <span className="font-mono text-base" style={{ color: "#8000ff" }}>{registrationTotal}₪</span>
                 </div>
               </>
             )}
           </>
         )}
 
+        {/* Error / status */}
         {mode === "login" && (message || authState.status === "checking" || authMessage) && (
-          <p
-            className="mt-3 min-h-6 text-sm font-semibold leading-6"
-            style={{ color: message || authMessage ? "var(--red-mid)" : "var(--text-muted)" }}
-          >
+          <p className="mt-3 min-h-5 text-xs font-semibold" style={{ color: message || authMessage ? "#dc2626" : "rgb(150,150,150)" }}>
             {authState.status === "checking" ? "בודק חיבור..." : message || authMessage}
           </p>
         )}
-
-        {mode === "login" && (
-          <label
-            className="mt-4 flex cursor-pointer items-start gap-3 rounded-lg border p-3 text-sm font-semibold leading-6"
-            style={{
-              background: acceptedSingleDeviceNotice ? "var(--navy-light)" : "var(--amber-light)",
-              borderColor: acceptedSingleDeviceNotice ? "var(--navy-border)" : "var(--amber-border)",
-              color: acceptedSingleDeviceNotice ? "var(--navy-mid)" : "var(--amber)",
-            }}
-          >
-            <input
-              type="checkbox"
-              checked={acceptedSingleDeviceNotice}
-              onChange={(event) => {
-                setAcceptedSingleDeviceNotice(event.target.checked);
-                if (event.target.checked && message === "צריך לאשר את תנאי החיבור ממסך אחד לפני הכניסה.") {
-                  setMessage("");
-                }
-              }}
-              className="mt-1 h-4 w-4"
-            />
-            <span>
-              אני מבין/ה שהגישה מוגבלת למסך אחד. המכשיר שממנו אתחבר אמור להיות המכשיר העיקרי לשימוש ביוזר הזה, וחיבור ממסך נוסף עלול לגרום לחסימת המשתמש.
-            </span>
-          </label>
-        )}
-
         {mode === "register" && registrationMessage && !registrationComplete && (
-          <p
-            className="mt-3 flex min-h-6 items-start gap-2 text-sm font-semibold leading-6"
-            style={{ color: registrationMessage.includes("נקלטו") ? "var(--green)" : "var(--red-mid)" }}
-          >
-            {registrationMessage.includes("נקלטו") && <CheckCircle2 className="mt-1 h-4 w-4 shrink-0" aria-hidden="true" />}
-            <span>{registrationMessage}</span>
+          <p className="mt-3 flex items-start gap-1.5 text-xs font-semibold" style={{ color: registrationMessage.includes("נקלטו") ? "#16a34a" : "#dc2626" }}>
+            {registrationMessage.includes("נקלטו") && <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0" />}
+            {registrationMessage}
           </p>
         )}
 
-        <button
-          type="submit"
-          disabled={
-            mode === "login"
-              ? authState.status === "checking" || isSubmitting || !acceptedSingleDeviceNotice
-              : isRegisterSubmitting || Boolean(registrationComplete)
-          }
-          className={`${registrationComplete ? "hidden" : "flex"} mt-4 min-h-11 w-full items-center justify-center rounded-full px-4 text-sm font-black text-white transition disabled:cursor-not-allowed disabled:opacity-55`}
-          style={{ background: "linear-gradient(135deg, var(--navy), var(--navy-mid))" }}
-        >
-          {mode === "login"
-            ? isSubmitting
-              ? "מתחבר..."
-              : "כניסה"
-            : isRegisterSubmitting
-              ? "שומר הרשמה..."
-              : "שליחת פרטים"}
-        </button>
-
+        {/* Single-device checkbox */}
         {mode === "login" && (
+          <label className="mt-4 flex cursor-pointer items-start gap-2.5 text-xs font-medium leading-5" style={{ color: acceptedSingleDeviceNotice ? "#8000ff" : "rgb(120,120,120)" }}>
+            <input
+              type="checkbox"
+              checked={acceptedSingleDeviceNotice}
+              onChange={(e) => {
+                setAcceptedSingleDeviceNotice(e.target.checked);
+                if (e.target.checked && message === "צריך לאשר את תנאי החיבור ממסך אחד לפני הכניסה.") setMessage("");
+              }}
+              className="mt-0.5 h-3.5 w-3.5 accent-[#8000ff]"
+            />
+            <span>אני מבין/ה שהגישה מוגבלת למסך אחד בלבד.</span>
+          </label>
+        )}
+
+        {/* Submit */}
+        {!registrationComplete && (
           <button
-            type="button"
-            onClick={() => {
-              setMode("register");
-              setMessage("");
-              setRegistrationComplete(null);
-              setActivePaymentMethod(null);
-            }}
-            className="mt-3 flex min-h-11 w-full items-center justify-center gap-2 rounded-lg border px-4 text-sm font-black transition hover:bg-[var(--bg-subtle)]"
-            style={{ borderColor: "var(--border)", color: "var(--navy)" }}
+            type="submit"
+            disabled={mode === "login" ? authState.status === "checking" || isSubmitting || !acceptedSingleDeviceNotice : isRegisterSubmitting}
+            className="auth-shimmer-btn relative mt-6 h-10 w-full overflow-hidden rounded-full text-sm font-semibold tracking-wide text-white transition disabled:cursor-not-allowed disabled:opacity-50"
+            style={{ background: "#8000ff", border: "2px solid #8000ff" }}
           >
-            <UserPlus className="h-4 w-4" aria-hidden="true" />
-            לא רשומה? הירשם עכשיו
+            {mode === "login"
+              ? isSubmitting ? "מתחבר..." : "כניסה"
+              : isRegisterSubmitting ? "שומר..." : "שליחת פרטים"}
           </button>
         )}
 
-        <div
-          className="mt-4 rounded-lg border px-3 py-2 text-xs font-semibold leading-6"
-          style={{
-            background: mode === "login" ? "var(--navy-light)" : "var(--amber-light)",
-            borderColor: mode === "login" ? "var(--navy-border)" : "var(--amber-border)",
-            color: mode === "login" ? "var(--navy-mid)" : "var(--amber)",
-          }}
-        >
+        {/* Footer note */}
+        <p className="mt-5 text-center text-[11px] leading-5" style={{ color: "rgb(150,150,150)" }}>
           {mode === "login"
-            ? "המערכת לא תחסום בפועל בשלב הכניסה, אבל חשוב להשתמש ביוזר ממסך אחד בלבד בהתאם לתנאי הגישה."
-            : "ההרשמה אינה פותחת גישה אוטומטית. לאחר אישור ותשלום המייל יתווסף לרשימת המורשים."}
-        </div>
+            ? "כניסה עם מייל מורשה בלבד."
+            : "לאחר אישור ותשלום המייל יתווסף."}
+        </p>
       </form>
     </div>
   );

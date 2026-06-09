@@ -777,3 +777,39 @@ p { margin: 0; }
   font-weight: 700;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 }
+
+/* ── Auth shimmer button ─────────────────────────────────────────────────── */
+.auth-shimmer-btn::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.25);
+  height: 100%;
+  width: 150px;
+  top: 0;
+  left: -200px;
+  border-bottom-right-radius: 100px;
+  border-top-left-radius: 100px;
+  filter: blur(10px);
+  transition: transform 0.5s ease;
+}
+.auth-shimmer-btn:hover::after {
+  transform: translateX(600px);
+}
+
+/* ── Auth underline input ────────────────────────────────────────────────── */
+.auth-underline-input {
+  border: none;
+  border-bottom: 2px solid rgb(173, 173, 173);
+  border-radius: 30px;
+  background: transparent;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.auth-underline-input:focus {
+  border-bottom-color: #8000ff;
+}
+.auth-underline-input::placeholder {
+  color: rgb(100, 100, 100);
+  font-size: 0.85em;
+  font-weight: 500;
+}
