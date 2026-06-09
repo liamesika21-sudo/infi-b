@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { Search, BookOpen, ChevronDown, ChevronUp, X } from "lucide-react";
+import { SaveToNotebook } from "@/components/SaveToNotebook";
 import { MathContent } from "@/components/study/MathContent";
 import {
   DEFINITIONS,
@@ -284,6 +285,16 @@ function DefinitionCard({
               מופיע בתרגולים: {def.recitationNumbers.map((r) => `תרגול ${r}`).join(", ")}
             </p>
           )}
+
+          {/* Save to notebook */}
+          <div className="pt-2 border-t flex justify-end" style={{ borderColor: "var(--border)" }}>
+            <SaveToNotebook
+              title={def.termHe}
+              content={`${def.termHe} (${def.term})\n\n${def.intuitive}\n\nהגדרה פורמלית: ${def.formal}`}
+              source="הגדרות"
+              weekNumber={def.weekNumbers[0]}
+            />
+          </div>
         </div>
       )}
     </article>

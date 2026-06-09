@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
+  BookOpen,
   Brain,
   BookOpenCheck,
   Calendar,
@@ -23,6 +24,7 @@ import {
 } from "lucide-react";
 import { AuthGate } from "@/components/AuthGate";
 import { OnboardingTour } from "@/components/OnboardingTour";
+import { FloatingNoteButton } from "@/components/FloatingNoteButton";
 import { getOrCreateDeviceId, getOrCreateSessionId } from "@/lib/client-device";
 
 const EXAM_DATE = new Date("2026-07-01T09:00:00");
@@ -46,6 +48,7 @@ const NAV_ITEMS = [
   { href: "/instructor-notes", label: "הערות מקס", icon: Zap,            tourId: "nav-quick-review", show: "md"     },
   { href: "/mentor",        label: "מנטור",      icon: Brain,          tourId: "nav-mentor",       show: "always" },
   { href: "/study-plan",   label: "תכנון",      icon: MapPin,         tourId: "nav-study-plan",   show: "md"     },
+  { href: "/notebook",      label: "מחברת",      icon: BookOpen,       tourId: "nav-notebook",     show: "sm"     },
   { href: "/admin",         label: "אדמין",      icon: ShieldCheck,    tourId: "nav-admin",        show: "lg"     },
 ] as const;
 
@@ -249,6 +252,9 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       <main className="mx-auto w-full max-w-7xl px-4 py-6 lg:px-6 lg:py-8">
         {children}
       </main>
+
+      {/* ── Floating notebook button ── */}
+      {currentEmail && <FloatingNoteButton />}
 
       {/* ── Footer ── */}
       <footer
