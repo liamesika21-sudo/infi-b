@@ -23,6 +23,23 @@ interface LectureSummary {
   keyFormulas?: string[];
 }
 
+interface KnowledgeItem {
+  name: string;
+  content: string;
+}
+
+interface WeekData {
+  week: number;
+  title: string;
+  definitions: KnowledgeItem[];
+  theorems: KnowledgeItem[];
+}
+
+interface BattlePlanBlock {
+  title: string;
+  weekData: WeekData[];
+}
+
 async function readMaxInsights(): Promise<MaxInsightsData> {
   try {
     const raw = await readFile(
@@ -47,6 +64,18 @@ async function readLectureSummaries(): Promise<LectureSummary[]> {
   }
 }
 
+async function readBattlePlanData(): Promise<BattlePlanBlock[]> {
+  try {
+    const raw = await readFile(
+      path.join(process.cwd(), "data/generated/calculus2/battle-plan-data.json"),
+      "utf8"
+    );
+    return JSON.parse(raw) as BattlePlanBlock[];
+  } catch {
+    return [];
+  }
+}
+
 function buildLectureBlock(lectures: LectureSummary[]): string {
   if (!lectures.length) return "(לא נטענו סיכומי הרצאות)";
   return lectures
@@ -60,10 +89,45 @@ function buildLectureBlock(lectures: LectureSummary[]): string {
     .join("\n\n");
 }
 
+function buildKnowledgeBase(blocks: BattlePlanBlock[]): string {
+  if (!blocks.length) return "";
+  const lines: string[] = [];
+  for (const block of blocks) {
+    lines.push(`### ${block.title}`);
+    for (const wd of block.weekData) {
+      lines.push(`\n**שבוע ${wd.week} — ${wd.title}**`);
+
+      if (wd.definitions.length) {
+        lines.push("\n**הגדרות:**");
+        for (const def of wd.definitions) {
+          if (def.content) {
+            lines.push(`\n📌 **${def.name}**\n${def.content}`);
+          }
+        }
+      }
+
+      if (wd.theorems.length) {
+        lines.push("\n**משפטים:**");
+        for (const thm of wd.theorems) {
+          if (thm.content) {
+            lines.push(`\n📐 **${thm.name}**\n${thm.content}`);
+          }
+        }
+      }
+    }
+    lines.push("\n---");
+  }
+  return lines.join("\n");
+}
+
 export async function buildMentorSystemPrompt(): Promise<string> {
   if (cachedPrompt) return cachedPrompt;
 
-  const [insights, lectures] = await Promise.all([readMaxInsights(), readLectureSummaries()]);
+  const [insights, lectures, battlePlan] = await Promise.all([
+    readMaxInsights(),
+    readLectureSummaries(),
+    readBattlePlanData(),
+  ]);
 
   const intuitionLines = (insights.intuitions ?? [])
     .map((i) => `- [${i.topic}] ${i.title}: ${i.text}${i.maxQuote ? `\n  דגש מהתרגול: "${i.maxQuote}"` : ""}`)
@@ -87,6 +151,7 @@ export async function buildMentorSystemPrompt(): Promise<string> {
     .join("\n");
 
   const lectureBlock = buildLectureBlock(lectures);
+  const knowledgeBase = buildKnowledgeBase(battlePlan);
 
   const prompt = `אתה "מנטור אינפי ב׳" — עוזר לימוד לקורס חדוון 2 של אוניברסיטת רייכמן, מועד א׳ 2026.
 
@@ -101,21 +166,25 @@ export async function buildMentorSystemPrompt(): Promise<string> {
 2. **עברית** — ענה תמיד בעברית.
 3. **LaTeX** — כתוב מתמטיקה תמיד כ-LaTeX: $...$ לביטוי בשורה, $$...$$ לתצוגה מרכזית.
 4. **קצר וממוקד** — ברירת המחדל היא 4-8 שורות או עד 3 צעדים. אל תכתוב מגילות, אל תיתן פתרון מלא אם המשתמש ביקש רק כיוון, ובסוף אפשר לשאול שאלה קצרה להמשך.
-5. **הוכחות ומשפטים — כלל חמור**:
-   - ניסוחי משפטים ושלבי הוכחות מבוססים **אך ורק** על חומרי ההרצאה המופיעים בסעיף "חומרי ההרצאה" למטה.
-   - אם נשאל על הוכחה שאינה מופיעה שם במפורש — **חובה** להשיב: "ההוכחה המלאה של [שם המשפט] לא נמצאת בחומר שיש לי. עיין בסיכומי הרצאה [N] בפלטפורמה."
-   - **אסור** לייצר הוכחה מהזיכרון, גם אם אתה "יודע" אותה מהאימון — גם אם נראית נכונה, יתכן שהניסוח בהרצאה שונה.
-   - **אסור** לומר "לא בטוח אם זה הניסוח של יוסי" ואז לתת הוכחה בכל זאת — זה סותר.
-   - כלל זה **לא חל** על חישובים, שיטות פתרון, תרגול וטריקים — שם אפשר ורצוי לעזור בחופשיות כמו מורה פרטי.
+5. **הוכחות ומשפטים**:
+   - **עדיפות ראשונה**: השתמש בניסוחים שמופיעים במפורש בסעיף "בסיס הידע — הגדרות ומשפטים מלאים" למטה — אלו הניסוחים הרשמיים של הקורס.
+   - **מותר ומצופה**: אם שואלים על הוכחה של משפט שמופיע שם — תן אותה במלואה ובניסוח המדויק.
+   - **עבור הוכחות שאינן בבסיס הידע**: תן את ההוכחה הסטנדרטית מהמתמטיקה — זה חומר אקדמי מוכר. אל תגיד "לא יודע" על הוכחות סטנדרטיות בחדו"א.
 6. **שאלות תרגול** — כשמבקשים שאלה, בנה שאלה בסגנון בחינה אמיתית.
 7. **בלי תוויות דוברים** — אסור לכתוב ביטויים כמו "יוסי מדבר", "מקס מדבר", "לפי יוסי", "מקס אומר", או כותרות דומות. אם צריך פורמליות ואינטואיציה, שלב אותן טבעית באותה תשובה.
 8. **בונים יחד** — אם השאלה גדולה, התחל בצעד הראשון, בדוק שהמשתמש איתך, ורק אז המשך. אל תזרוק את כל הפתרון בבת אחת אלא אם ביקשו "פתרון מלא".
 
 ---
 
-## חומרי ההרצאה — מה נלמד בכל הרצאה
+## בסיס הידע — הגדרות ומשפטים מלאים
 
-זהו התוכן הרשמי של הקורס. הוכחות ומשפטים **חייבים** להתבסס על רשימות אלו בלבד.
+אלו הניסוחים הרשמיים של הקורס. **כאשר נשאלת על אחד מהמשפטים הבאים — השתמש בניסוח המדויק הזה.**
+
+${knowledgeBase}
+
+---
+
+## חומרי ההרצאה — מה נלמד בכל הרצאה
 
 ${lectureBlock}
 
@@ -135,9 +204,7 @@ ${weeklyLines}
 
 ---
 
-## ניסוחים פורמליים — ממשפטי מפתח בלבד (ניסוח קצר)
-
-ניסוחים אלו לשימוש בתשובות מהירות. עבור הוכחה מלאה — ראה כלל 5.
+## ניסוחים פורמליים — משפטי מפתח (ניסוח קצר לשימוש מהיר)
 
 **לופיטל**: אם $f(a)=g(a)=0$ (או $\\pm\\infty$) ו-$g'(x) \\neq 0$ סביב $a$, אז $\\lim_{x\\to a}\\frac{f(x)}{g(x)} = \\lim_{x\\to a}\\frac{f'(x)}{g'(x)}$ אם הגבול הימני קיים.
 
@@ -148,6 +215,9 @@ ${weeklyLines}
 **FTC (משפט היסודי)**: אם $f$ רציפה על $[a,b]$ ו-$F(x)=\\int_a^x f(t)dt$, אז $F'(x)=f(x)$.
 
 **ניוטון-לייבניץ**: $\\int_a^b f(x)dx = F(b) - F(a)$ כאשר $F'=f$.
+
+**מבחן האינטגרל**: אם $f:[1,\\infty)\\to\\mathbb{R}$ חיובית, רציפה ויורדת ו-$f(n)=a_n$, אז $\\sum_{n=1}^\\infty a_n$ מתכנס אמ"מ $\\int_1^\\infty f(x)dx$ מתכנס.
+הוכחה: מאחר ש-$f$ יורדת, לכל $k\\geq 1$: $f(k+1) \\leq \\int_k^{k+1}f(x)dx \\leq f(k)$. סכום מ-$k=1$ עד $N-1$ נותן: $\\sum_{k=2}^N a_k \\leq \\int_1^N f(x)dx \\leq \\sum_{k=1}^{N-1} a_k$. לכן הטור והאינטגרל חסומים זה על ידי זה, ומתכנסות/מתבדרות ביחד.
 
 **טור גאומטרי**: $\\sum_{n=0}^\\infty q^n = \\frac{1}{1-q}$ עבור $|q|<1$.
 

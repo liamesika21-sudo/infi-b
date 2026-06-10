@@ -1,6 +1,7 @@
 import katex from "katex";
 import "katex/dist/katex.min.css";
 import Link from "next/link";
+import QuizPrepSidebar from "@/components/QuizPrepSidebar";
 
 export const metadata = { title: "הכנה לבוחן 3 — טורים | Mentora" };
 
@@ -57,11 +58,11 @@ function SectionTitle({ children, color = C.navy }: { children: React.ReactNode;
   );
 }
 
-function TheoremCard({ title, accent = C.navy, children }: {
-  title: React.ReactNode; accent?: string; children: React.ReactNode;
+function TheoremCard({ title, accent = C.navy, id, children }: {
+  title: React.ReactNode; accent?: string; id?: string; children: React.ReactNode;
 }) {
   return (
-    <div style={{
+    <div id={id} style={{
       background: C.card, borderRadius: 12, border: `1px solid ${C.border}`,
       borderRight: `5px solid ${accent}`, boxShadow: C.shadow,
       marginBottom: "1.25rem", overflow: "hidden",
@@ -197,15 +198,18 @@ export default function QuizPrepPage() {
         </div>
       </div>
 
-      <div style={{ maxWidth: 860, margin: "0 auto", padding: "0 1rem" }}>
+      <div style={{ maxWidth: 1120, margin: "0 auto", padding: "0 1rem", display: "flex", flexDirection: "row", gap: "1.5rem", alignItems: "flex-start" }}>
+        <QuizPrepSidebar />
+        <div style={{ flex: 1, minWidth: 0 }}>
 
         {/* ══════════════════════════════════════════════════════
             PART A — THEOREMS
         ══════════════════════════════════════════════════════ */}
+        <div id="part-a">
         <SectionTitle color={C.navy}>חלק א׳ — כל המשפטים עם הוכחות מילה במילה</SectionTitle>
 
         {/* 1. תנאי הכרחי */}
-        <TheoremCard title="משפט 5 — תנאי הכרחי" accent={C.navy}>
+        <TheoremCard id="thm-necessary" title="משפט 5 — תנאי הכרחי" accent={C.navy}>
           <strong>משפט:</strong> יהי <K m="(a_n)_{n=k}^\infty" /> סדרה. אם{" "}
           <K m="\sum_{n=k}^\infty a_n < \infty" /> אזי <K m="\lim_{n\to\infty} a_n = 0" />.
           <Proof>
@@ -214,7 +218,7 @@ export default function QuizPrepPage() {
         </TheoremCard>
 
         {/* 2. השוואה ישיר */}
-        <TheoremCard title="משפט 6 — השוואה ישיר" accent={C.blue}>
+        <TheoremCard id="thm-compare-direct" title="משפט 6 — השוואה ישיר" accent={C.blue}>
           <strong>משפט:</strong> יהיו <K m="(a_n),(b_n)" /> סדרות כך ש{" "}
           <K m="0 \le a_n \le b_n" /> לכל <K m="n \ge k" />.
           אם <K m="\sum b_n < \infty" /> אזי <K m="\sum a_n < \infty" />.
@@ -226,7 +230,7 @@ export default function QuizPrepPage() {
         </TheoremCard>
 
         {/* 3. השוואה גבולי */}
-        <TheoremCard title="משפט 6′ — השוואה גבולי" accent={C.blue}>
+        <TheoremCard id="thm-compare-limit" title="משפט 6′ — השוואה גבולי" accent={C.blue}>
           <strong>משפט:</strong> יהיו <K m="(a_n),(b_n)" /> חיוביות, <K m="L = \lim \frac{a_n}{b_n} \in (0,\infty)" />.
           אזי <K m="\sum a_n < \infty" /> אמ"מ <K m="\sum b_n < \infty" />.
           <Proof>
@@ -244,7 +248,7 @@ export default function QuizPrepPage() {
         </TheoremCard>
 
         {/* 4. שורש גרסה 1 */}
-        <TheoremCard title="נוסחת צבר 1, גרסה 1 — שורש ישיר" accent={C.green}>
+        <TheoremCard id="thm-root-1a" title="נוסחת צבר 1, גרסה 1 — שורש ישיר" accent={C.green}>
           <strong>משפט:</strong> יהי <K m="(a_n)" /> עם <K m="a_n \ge 0" />. נניח שקיים <K m="0 \le q < 1" /> ו{" "}
           <K m="N \in \mathbb{N}" /> כך שלכל <K m="n \ge N" />: <K m="\sqrt[n]{a_n} \le q" />.
           אזי <K m="\sum a_n < \infty" />.
@@ -255,7 +259,7 @@ export default function QuizPrepPage() {
         </TheoremCard>
 
         {/* 5. מבחן השורש */}
-        <TheoremCard title="נוסחת צבר 1, גרסה 2 — מבחן השורש" accent={C.green}>
+        <TheoremCard id="thm-root-1b" title="נוסחת צבר 1, גרסה 2 — מבחן השורש" accent={C.green}>
           <strong>משפט:</strong> יהי <K m="L = \lim_{n\to\infty} \sqrt[n]{a_n}" /> קיים עם <K m="0 \le L < 1" />.
           אזי <K m="\sum a_n < \infty" />.
           <Proof>
