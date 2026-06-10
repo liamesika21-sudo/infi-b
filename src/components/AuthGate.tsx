@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, type ReactNode, useEffect, useState } from "react";
-import { CheckCircle2, Copy, CreditCard, ExternalLink, Lock, Mail, Phone, Sparkles, UserPlus, WalletCards } from "lucide-react";
+import { CheckCircle2, Copy, CreditCard, Lock, Mail, Phone, ShieldCheck, Sparkles, UserPlus, WalletCards } from "lucide-react";
 import { getOrCreateDeviceId } from "@/lib/client-device";
 
 type AuthState =
@@ -27,7 +27,7 @@ export function AuthGate({
   onAuthenticated?: (email: string, options?: { showOnboarding?: boolean }) => void;
 }) {
   const [authState, setAuthState] = useState<AuthState>({ status: "checking" });
-  const [mode, setMode] = useState<"login" | "register">("login");
+  const [mode, setMode] = useState<"login" | "register">("register");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [selectedPlan, setSelectedPlan] = useState<"basic" | "pro">("basic");
@@ -190,6 +190,25 @@ export function AuthGate({
     }).catch(() => {});
   }
 
+  async function initCreditPayment() {
+    if (!registrationComplete) return;
+    try {
+      const res = await fetch("/api/payment/init", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: registrationComplete.email, plan: registrationComplete.plan }),
+      });
+      const data = (await res.json()) as { ok?: boolean; token?: string };
+      if (res.ok && data.token) {
+        localStorage.setItem(
+          "infi_pending_payment",
+          JSON.stringify({ email: registrationComplete.email, plan: registrationComplete.plan, token: data.token })
+        );
+      }
+    } catch { /* proceed anyway — success page will show error */ }
+    window.location.href = registrationComplete.paymentPageUrl;
+  }
+
   function handleLoginSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (!acceptedSingleDeviceNotice) {
@@ -206,161 +225,186 @@ export function AuthGate({
 
   if (authState.status === "authenticated") return null;
 
+  function switchToLogin() { setMode("login"); setRegistrationMessage(""); setRegistrationComplete(null); setActivePaymentMethod(null); }
+  function switchToRegister() { setMode("register"); setMessage(""); setRegistrationComplete(null); setActivePaymentMethod(null); }
+
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-center justify-center px-5 py-8"
-      style={{ background: "rgba(240,244,249,0.72)", backdropFilter: "blur(12px)" }}
+      className="fixed inset-0 z-[100] flex items-center justify-center px-4 py-6"
+      style={{ background: "rgba(8,20,45,0.82)", backdropFilter: "blur(14px)" }}
       role="dialog"
       aria-modal="true"
       aria-labelledby="auth-title"
     >
-      <form
-        onSubmit={mode === "login" ? handleLoginSubmit : handleRegistrationSubmit}
-        className="w-full max-w-[320px] overflow-y-auto rounded-[30px] bg-white px-8 py-8"
-        style={{ boxShadow: "0px 0px 40px rgba(15,34,64,0.14)" }}
+      <div
+        className="w-full max-w-90 overflow-hidden rounded-[28px]"
+        style={{ boxShadow: "0 24px 64px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.08)" }}
       >
-        {/* Heading */}
-        <p
-          id="auth-title"
-          className="mb-7 text-center text-[2rem] font-bold leading-none"
-          style={{ color: "#2e2e2e" }}
+        {/* ── Card header ── */}
+        <div
+          className="relative px-8 pb-6 pt-8 text-center"
+          style={{ background: "linear-gradient(135deg, #0f2240 0%, #0d5c6e 100%)" }}
         >
-          {mode === "login" ? "כניסה" : "הרשמה"}
-        </p>
+          {/* Decorative circles */}
+          <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full opacity-20" style={{ background: "radial-gradient(circle, #3be0f0, transparent)" }} />
+          <div className="pointer-events-none absolute -bottom-6 -left-8 h-24 w-24 rounded-full opacity-15" style={{ background: "radial-gradient(circle, #38bdf8, transparent)" }} />
 
-        {/* Mode toggle */}
-        <div className="mb-6 flex justify-center gap-5 text-sm font-semibold">
-          <button
-            type="button"
-            onClick={() => { setMode("login"); setRegistrationMessage(""); setRegistrationComplete(null); setActivePaymentMethod(null); }}
-            className="relative pb-1 transition"
-            style={{ color: mode === "login" ? "#1e3a5f" : "rgb(150,150,150)" }}
-          >
-            כניסה
-            {mode === "login" && <span className="absolute inset-x-0 bottom-0 h-0.5 rounded-full" style={{ background: "#1e3a5f" }} />}
-          </button>
-          <button
-            type="button"
-            onClick={() => { setMode("register"); setMessage(""); setRegistrationComplete(null); setActivePaymentMethod(null); }}
-            className="relative pb-1 transition"
-            style={{ color: mode === "register" ? "#1e3a5f" : "rgb(150,150,150)" }}
-          >
-            הרשמה
-            {mode === "register" && <span className="absolute inset-x-0 bottom-0 h-0.5 rounded-full" style={{ background: "#1e3a5f" }} />}
-          </button>
-        </div>
-
-        {mode === "register" && registrationComplete ? (
-          <PaymentCompletion
-            registration={registrationComplete}
-            activePaymentMethod={activePaymentMethod}
-            onShowManualInstructions={(method) => { setActivePaymentMethod(method); recordPaymentAction(method, "manual_instructions_shown"); }}
-            onOpenPaymentLink={(method) => { recordPaymentAction(method, "payment_link_opened"); }}
-          />
-        ) : (
-          <>
-            {/* Email */}
-            <div className="relative mb-1 flex items-center">
-              <Mail className="absolute right-2 h-4 w-4" style={{ color: "#1e3a5f" }} aria-hidden="true" />
-              <input
-                id="auth-email"
-                type="email"
-                required
-                autoComplete="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                disabled={authState.status === "checking" || isSubmitting}
-                className="auth-underline-input w-full py-2 pr-8 pl-2 text-sm disabled:opacity-50"
-                dir="ltr"
-                placeholder="name@example.com"
-              />
-            </div>
-
-            {mode === "register" && (
-              <>
-                {/* Phone */}
-                <div className="relative mb-1 mt-3 flex items-center">
-                  <Phone className="absolute right-2 h-4 w-4" style={{ color: "#1e3a5f" }} aria-hidden="true" />
-                  <input
-                    id="register-phone"
-                    type="tel"
-                    required
-                    autoComplete="tel"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    disabled={isRegisterSubmitting}
-                    className="auth-underline-input w-full py-2 pr-8 pl-2 text-sm disabled:opacity-50"
-                    dir="ltr"
-                    placeholder="050-0000000"
-                  />
-                </div>
-
-                {/* Plan */}
-                <fieldset className="mt-5 space-y-2">
-                  <legend className="mb-2 text-xs font-bold" style={{ color: "#2e2e2e" }}>מסלול</legend>
-                  <PlanOption checked={selectedPlan === "basic"} title="Basic" price="19₪" description="גישה מלאה למסך אחד." onSelect={() => setSelectedPlan("basic")} />
-                  <PlanOption checked={selectedPlan === "pro"} title="Pro" price="49₪" description="כולל מנטור AI מבוסס חומר הקורס." icon={<Sparkles className="h-3.5 w-3.5" aria-hidden="true" />} onSelect={() => setSelectedPlan("pro")} />
-                </fieldset>
-
-                <div className="mt-3 flex items-center justify-between text-sm font-black" style={{ color: "#2e2e2e" }}>
-                  <span>סה״כ</span>
-                  <span className="font-mono text-base" style={{ color: "#1e3a5f" }}>{registrationTotal}₪</span>
-                </div>
-              </>
-            )}
-          </>
-        )}
-
-        {/* Error / status */}
-        {mode === "login" && (message || authState.status === "checking" || authMessage) && (
-          <p className="mt-3 min-h-5 text-xs font-semibold" style={{ color: message || authMessage ? "#dc2626" : "rgb(150,150,150)" }}>
-            {authState.status === "checking" ? "בודק חיבור..." : message || authMessage}
-          </p>
-        )}
-        {mode === "register" && registrationMessage && !registrationComplete && (
-          <p className="mt-3 flex items-start gap-1.5 text-xs font-semibold" style={{ color: registrationMessage.includes("נקלטו") ? "#16a34a" : "#dc2626" }}>
-            {registrationMessage.includes("נקלטו") && <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0" />}
-            {registrationMessage}
-          </p>
-        )}
-
-        {/* Single-device checkbox */}
-        {mode === "login" && (
-          <label className="mt-4 flex cursor-pointer items-start gap-2.5 text-xs font-medium leading-5" style={{ color: acceptedSingleDeviceNotice ? "#1e3a5f" : "rgb(120,120,120)" }}>
-            <input
-              type="checkbox"
-              checked={acceptedSingleDeviceNotice}
-              onChange={(e) => {
-                setAcceptedSingleDeviceNotice(e.target.checked);
-                if (e.target.checked && message === "צריך לאשר את תנאי החיבור ממסך אחד לפני הכניסה.") setMessage("");
-              }}
-              className="mt-0.5 h-3.5 w-3.5 accent-[#1e3a5f]"
-            />
-            <span>אני מבין/ה שהגישה מוגבלת למסך אחד בלבד.</span>
-          </label>
-        )}
-
-        {/* Submit */}
-        {!registrationComplete && (
-          <button
-            type="submit"
-            disabled={mode === "login" ? authState.status === "checking" || isSubmitting || !acceptedSingleDeviceNotice : isRegisterSubmitting}
-            className="auth-shimmer-btn relative mt-6 h-10 w-full overflow-hidden rounded-full text-sm font-semibold tracking-wide text-white transition disabled:cursor-not-allowed disabled:opacity-50"
-            style={{ background: "linear-gradient(135deg, #0f2240, #1e3a5f)", border: "none" }}
+          <div
+            className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-2xl"
+            style={{ background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.2)" }}
           >
             {mode === "login"
-              ? isSubmitting ? "מתחבר..." : "כניסה"
-              : isRegisterSubmitting ? "שומר..." : "שליחת פרטים"}
-          </button>
-        )}
+              ? <Lock className="h-5 w-5 text-white" />
+              : <UserPlus className="h-5 w-5 text-white" />}
+          </div>
 
-        {/* Footer note */}
-        <p className="mt-5 text-center text-[11px] leading-5" style={{ color: "rgb(150,150,150)" }}>
-          {mode === "login"
-            ? "כניסה עם מייל מורשה בלבד."
-            : "לאחר אישור ותשלום המייל יתווסף."}
-        </p>
-      </form>
+          <h2 id="auth-title" className="text-xl font-black text-white">
+            {mode === "login" ? "כניסה למערכת" : "הרשמה לאינפי ב׳"}
+          </h2>
+          <p className="mt-1 text-xs font-medium" style={{ color: "rgba(255,255,255,0.6)" }}>
+            {mode === "login" ? "התחברי עם המייל שלך" : "גישה לכל חומרי הקורס"}
+          </p>
+        </div>
+
+        {/* ── Card body ── */}
+        <form
+          onSubmit={mode === "login" ? handleLoginSubmit : handleRegistrationSubmit}
+          className="bg-white px-7 pb-7 pt-6"
+        >
+          {mode === "register" && registrationComplete ? (
+            <PaymentCompletion
+              registration={registrationComplete}
+              activePaymentMethod={activePaymentMethod}
+              onShowManualInstructions={(method) => { setActivePaymentMethod(method); recordPaymentAction(method, "manual_instructions_shown"); }}
+              onCreditCardPay={() => void initCreditPayment()}
+            />
+          ) : (
+            <>
+              {/* Email */}
+              <div className="relative mb-1 flex items-center">
+                <Mail className="absolute right-2.5 h-4 w-4" style={{ color: "#0d5c6e" }} aria-hidden="true" />
+                <input
+                  id="auth-email"
+                  type="email"
+                  required
+                  autoComplete="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  disabled={authState.status === "checking" || isSubmitting}
+                  className="auth-underline-input w-full py-2.5 pr-9 pl-2 text-sm disabled:opacity-50"
+                  dir="ltr"
+                  placeholder="name@example.com"
+                />
+              </div>
+
+              {mode === "register" && (
+                <>
+                  {/* Phone */}
+                  <div className="relative mb-1 mt-4 flex items-center">
+                    <Phone className="absolute right-2.5 h-4 w-4" style={{ color: "#0d5c6e" }} aria-hidden="true" />
+                    <input
+                      id="register-phone"
+                      type="tel"
+                      required
+                      autoComplete="tel"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      disabled={isRegisterSubmitting}
+                      className="auth-underline-input w-full py-2.5 pr-9 pl-2 text-sm disabled:opacity-50"
+                      dir="ltr"
+                      placeholder="050-0000000"
+                    />
+                  </div>
+
+                  {/* Plan */}
+                  <fieldset className="mt-5 space-y-2">
+                    <legend className="mb-2.5 text-xs font-black" style={{ color: "var(--text-secondary)" }}>בחרי מסלול</legend>
+                    <PlanOption checked={selectedPlan === "basic"} title="Basic" price="19₪" description="גישה מלאה לכל החומר." onSelect={() => setSelectedPlan("basic")} />
+                    <PlanOption checked={selectedPlan === "pro"} title="Pro" price="49₪" description="כולל מנטור AI מבוסס חומר הקורס." icon={<Sparkles className="h-3.5 w-3.5" aria-hidden="true" />} onSelect={() => setSelectedPlan("pro")} />
+                  </fieldset>
+
+                  <div className="mt-3 flex items-center justify-between rounded-lg px-1 text-sm font-black" style={{ color: "var(--text-primary)" }}>
+                    <span>סה״כ לתשלום</span>
+                    <span className="font-mono text-base" style={{ color: "#0f2240" }}>{registrationTotal}₪</span>
+                  </div>
+                </>
+              )}
+            </>
+          )}
+
+          {/* Messages */}
+          {mode === "login" && (message || authState.status === "checking" || authMessage) && (
+            <p className="mt-3 min-h-5 text-xs font-semibold" style={{ color: message || authMessage ? "#dc2626" : "rgb(150,150,150)" }}>
+              {authState.status === "checking" ? "בודק חיבור..." : message || authMessage}
+            </p>
+          )}
+          {mode === "register" && registrationMessage && !registrationComplete && (
+            <p className="mt-3 flex items-start gap-1.5 text-xs font-semibold" style={{ color: registrationMessage.includes("נקלטו") ? "#16a34a" : "#dc2626" }}>
+              {registrationMessage.includes("נקלטו") && <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0" />}
+              {registrationMessage}
+            </p>
+          )}
+
+          {/* Single-device notice */}
+          {mode === "login" && (
+            <label className="mt-4 flex cursor-pointer items-start gap-2.5 text-xs font-medium leading-5" style={{ color: acceptedSingleDeviceNotice ? "#0f2240" : "rgb(140,140,140)" }}>
+              <input
+                type="checkbox"
+                checked={acceptedSingleDeviceNotice}
+                onChange={(e) => {
+                  setAcceptedSingleDeviceNotice(e.target.checked);
+                  if (e.target.checked && message === "צריך לאשר את תנאי החיבור ממסך אחד לפני הכניסה.") setMessage("");
+                }}
+                className="mt-0.5 h-3.5 w-3.5 accent-[#0f2240]"
+              />
+              <span>אני מבין/ה שהגישה מוגבלת למסך אחד בלבד.</span>
+            </label>
+          )}
+
+          {/* Secure badge */}
+          {mode === "register" && !registrationComplete && (
+            <div className="mt-4 flex items-center justify-center gap-1.5 text-[10px] font-semibold" style={{ color: "rgb(150,150,150)" }}>
+              <ShieldCheck className="h-3 w-3 shrink-0" style={{ color: "#16a34a" }} />
+              <span>תשלום מאובטח · PayPlus · SSL</span>
+            </div>
+          )}
+
+          {/* Submit */}
+          {!registrationComplete && (
+            <button
+              type="submit"
+              disabled={mode === "login" ? authState.status === "checking" || isSubmitting || !acceptedSingleDeviceNotice : isRegisterSubmitting}
+              className="auth-shimmer-btn relative mt-4 h-11 w-full overflow-hidden rounded-full text-sm font-bold tracking-wide text-white transition disabled:cursor-not-allowed disabled:opacity-50"
+              style={{ background: "linear-gradient(135deg, #0f2240 0%, #0d5c6e 100%)" }}
+            >
+              {mode === "login"
+                ? isSubmitting ? "מתחבר..." : "כניסה"
+                : isRegisterSubmitting ? "שומר..." : "המשך לתשלום"}
+            </button>
+          )}
+
+          {/* Mode switch link */}
+          {!registrationComplete && (
+            <p className="mt-5 text-center text-xs" style={{ color: "rgb(150,150,150)" }}>
+              {mode === "register" ? (
+                <>
+                  כבר יש לך חשבון?{" "}
+                  <button type="button" onClick={switchToLogin} className="font-bold underline-offset-2 hover:underline" style={{ color: "#0f2240" }}>
+                    כניסה
+                  </button>
+                </>
+              ) : (
+                <>
+                  אין לך חשבון עדיין?{" "}
+                  <button type="button" onClick={switchToRegister} className="font-bold underline-offset-2 hover:underline" style={{ color: "#0f2240" }}>
+                    הרשמה
+                  </button>
+                </>
+              )}
+            </p>
+          )}
+        </form>
+      </div>
     </div>
   );
 }
@@ -369,65 +413,61 @@ function PaymentCompletion({
   registration,
   activePaymentMethod,
   onShowManualInstructions,
-  onOpenPaymentLink,
+  onCreditCardPay,
 }: {
   registration: RegistrationComplete;
   activePaymentMethod: PaymentMethod | null;
   onShowManualInstructions: (method: PaymentMethod) => void;
-  onOpenPaymentLink: (method: PaymentMethod) => void;
+  onCreditCardPay: () => void;
 }) {
   const manualMethodLabel = activePaymentMethod === "paybox" ? "PayBox" : "Bit";
 
   return (
     <div className="space-y-3">
       <div
-        className="rounded-lg border px-4 py-3 text-sm font-semibold leading-6"
+        className="rounded-lg border px-3 py-2.5 text-xs font-semibold leading-5"
         style={{ background: "var(--green-light)", borderColor: "var(--green-border)", color: "var(--green)" }}
       >
         <div className="flex items-start gap-2">
-          <CheckCircle2 className="mt-1 h-4 w-4 shrink-0" aria-hidden="true" />
-          <span>
-            הפרטים נקלטו עבור <span dir="ltr">{registration.email}</span>. בחרו אמצעי תשלום להשלמת הרכישה.
-          </span>
+          <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0" aria-hidden="true" />
+          <span>הפרטים נקלטו! בחרו אמצעי תשלום להשלמת הרכישה.</span>
         </div>
       </div>
 
-      <div className="grid gap-2">
+      {/* Credit card — primary */}
+      <button
+        type="button"
+        onClick={onCreditCardPay}
+        className="auth-shimmer-btn relative flex w-full items-center gap-3 overflow-hidden rounded-xl px-4 py-3.5 text-right text-sm font-bold text-white transition"
+        style={{ background: "linear-gradient(135deg, #0f2240, #1e3a5f)" }}
+      >
+        <CreditCard className="h-5 w-5 shrink-0" aria-hidden="true" />
+        <span className="min-w-0 flex-1">
+          <span className="block font-black">תשלום באשראי</span>
+          <span className="block text-xs font-semibold opacity-80">
+            {registration.totalPriceIls}₪ · PayPlus · מאובטח
+          </span>
+        </span>
+        <ShieldCheck className="h-4 w-4 shrink-0 opacity-70" aria-hidden="true" />
+      </button>
+
+      <div className="flex items-center gap-2 text-[11px]" style={{ color: "var(--text-muted)" }}>
+        <div className="h-px flex-1" style={{ background: "var(--border)" }} />
+        <span>או העברה ידנית</span>
+        <div className="h-px flex-1" style={{ background: "var(--border)" }} />
+      </div>
+
+      <div className="grid grid-cols-2 gap-2">
         <PaymentChoiceButton
           icon={<WalletCards className="h-4 w-4" aria-hidden="true" />}
           title="Bit"
-          description="הצגת מספר להעברה ידנית."
-          onClick={() => {
-            onShowManualInstructions("bit");
-          }}
+          onClick={() => onShowManualInstructions("bit")}
         />
         <PaymentChoiceButton
           icon={<WalletCards className="h-4 w-4" aria-hidden="true" />}
           title="PayBox"
-          description="הצגת מספר להעברה ידנית."
-          onClick={() => {
-            onShowManualInstructions("paybox");
-          }}
+          onClick={() => onShowManualInstructions("paybox")}
         />
-        <a
-          href={registration.paymentPageUrl}
-          target="_blank"
-          rel="noreferrer"
-          onClick={() => {
-            onOpenPaymentLink("credit");
-          }}
-          className="flex min-h-14 items-center gap-3 rounded-lg border bg-white px-3 py-2 text-sm font-bold transition hover:bg-[var(--bg-subtle)]"
-          style={{ borderColor: "var(--border)", color: "var(--text-primary)" }}
-        >
-          <CreditCard className="h-4 w-4 shrink-0" style={{ color: "var(--navy-mid)" }} aria-hidden="true" />
-          <span className="min-w-0 flex-1">
-            <span className="block">אשראי ידני</span>
-            <span className="block text-xs font-semibold" style={{ color: "var(--text-secondary)" }}>
-              מעבר לדף תשלום מאובטח ב-{registration.totalPriceIls}₪.
-            </span>
-          </span>
-          <ExternalLink className="h-4 w-4 shrink-0" aria-hidden="true" />
-        </a>
       </div>
 
       {activePaymentMethod && (
@@ -443,65 +483,31 @@ function PaymentCompletion({
             </span>
             . עד שעה תישלח חשבונית ויוזר למייל/טלפון שהשארתם.
           </p>
-          <div className="mt-3 flex flex-col gap-2 sm:flex-row">
-            <button
-              type="button"
-              onClick={() => {
-                void navigator.clipboard?.writeText(TRANSFER_PHONE).catch(() => {});
-              }}
-              className="inline-flex min-h-10 items-center justify-center gap-2 rounded-lg border bg-white px-3 text-xs font-black transition hover:bg-[var(--bg-subtle)]"
-              style={{ borderColor: "var(--amber-border)", color: "var(--amber)" }}
-            >
-              <Copy className="h-3.5 w-3.5" aria-hidden="true" />
-              העתקת מספר
-            </button>
-            <a
-              href={registration.paymentPageUrl}
-              target="_blank"
-              rel="noreferrer"
-              onClick={() => {
-                onOpenPaymentLink("credit");
-              }}
-              className="inline-flex min-h-10 items-center justify-center gap-2 rounded-lg border bg-white px-3 text-xs font-black transition hover:bg-[var(--bg-subtle)]"
-              style={{ borderColor: "var(--amber-border)", color: "var(--amber)" }}
-            >
-              <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
-              או תשלום בדף המאובטח
-            </a>
-          </div>
+          <button
+            type="button"
+            onClick={() => void navigator.clipboard?.writeText(TRANSFER_PHONE).catch(() => {})}
+            className="mt-3 inline-flex min-h-9 items-center gap-2 rounded-lg border bg-white px-3 text-xs font-black transition hover:bg-[var(--bg-subtle)]"
+            style={{ borderColor: "var(--amber-border)", color: "var(--amber)" }}
+          >
+            <Copy className="h-3.5 w-3.5" aria-hidden="true" />
+            העתקת מספר
+          </button>
         </div>
       )}
     </div>
   );
 }
 
-function PaymentChoiceButton({
-  icon,
-  title,
-  description,
-  onClick,
-}: {
-  icon: ReactNode;
-  title: string;
-  description: string;
-  onClick: () => void;
-}) {
+function PaymentChoiceButton({ icon, title, onClick }: { icon: ReactNode; title: string; onClick: () => void }) {
   return (
     <button
       type="button"
       onClick={onClick}
-      className="flex min-h-14 items-center gap-3 rounded-lg border bg-white px-3 py-2 text-right text-sm font-bold transition hover:bg-[var(--bg-subtle)]"
+      className="flex min-h-11 items-center justify-center gap-2 rounded-lg border bg-white px-3 py-2 text-sm font-bold transition hover:bg-(--bg-subtle)"
       style={{ borderColor: "var(--border)", color: "var(--text-primary)" }}
     >
-      <span className="shrink-0" style={{ color: "var(--navy-mid)" }}>
-        {icon}
-      </span>
-      <span className="min-w-0 flex-1">
-        <span className="block">{title}</span>
-        <span className="block text-xs font-semibold" style={{ color: "var(--text-secondary)" }}>
-          {description}
-        </span>
-      </span>
+      <span className="shrink-0" style={{ color: "var(--navy-mid)" }}>{icon}</span>
+      {title}
     </button>
   );
 }

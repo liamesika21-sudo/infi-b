@@ -130,8 +130,8 @@ export type AuthAdminSnapshot = {
 };
 
 const PAYMENT_LINKS: Record<RegistrationPlan, string> = {
-  basic: "https://payments.payplus.co.il/c0bc3ed9-b833-4c7e-9dc4-685e77964f52",
-  pro: "https://payments.payplus.co.il/65dccafb-d217-4755-9a5c-fe38aefe243c",
+  basic: "https://payments.payplus.co.il/l/e1616aeb-e251-400b-b3d9-faffab14e769",
+  pro: "https://payments.payplus.co.il/l/8d987218-3909-4cb7-8c87-15454024521d",
 };
 
 const MAX_PAYMENT_ACTIONS = 1000;
@@ -193,6 +193,14 @@ function getAllowedExtraKey(): string {
 
 function getAllowedRemovedKey(): string {
   return "auth:allowed-removed";
+}
+
+function getProExtraKey(): string {
+  return "auth:pro-extra";
+}
+
+function getPendingPaymentKey(token: string): string {
+  return `payment:pending:${token}`;
 }
 
 async function getRedisStringArray(key: string): Promise<string[]> {
@@ -275,6 +283,64 @@ export async function removeAllowedEmail(email: string): Promise<void> {
     authFile.allowedEmails = authFile.allowedEmails.filter((e) => e !== normalized);
     await writeAuthFile(authFile);
   }
+}
+
+export async function addProEmail(email: string): Promise<void> {
+  const normalized = normalizeEmail(email);
+  if (shouldUseRedisStore()) {
+    const existing = await getRedisStringArray(getProExtraKey());
+    if (!existing.map(normalizeEmail).includes(normalized)) {
+      await setRedisStringArray(getProExtraKey(), [...existing, normalized]);
+    }
+  } else {
+    const authFile = await readAuthFile();
+    if (!(authFile.proEmails ?? []).includes(normalized)) {
+      authFile.proEmails = [...(authFile.proEmails ?? []), normalized];
+      await writeAuthFile(authFile);
+    }
+  }
+}
+
+export async function storePendingPayment(email: string, plan: RegistrationPlan): Promise<string> {
+  const token = randomUUID();
+  const redis = getRedisConfig();
+  if (redis) {
+    const payload = encodeURIComponent(JSON.stringify({ email: normalizeEmail(email), plan }));
+    await fetch(`${redis.url}/set/${encodeURIComponent(getPendingPaymentKey(token))}/${payload}/ex/1800`, {
+      method: "POST",
+      headers: { Authorization: `Bearer ${redis.token}` },
+    });
+  }
+  return token;
+}
+
+export async function consumePendingPayment(token: string): Promise<{ email: string; plan: RegistrationPlan } | null> {
+  const redis = getRedisConfig();
+  if (!redis) return null;
+  const key = encodeURIComponent(getPendingPaymentKey(token));
+  const response = await fetch(`${redis.url}/getdel/${key}`, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${redis.token}` },
+  });
+  if (!response.ok) return null;
+  const data = (await response.json()) as { result?: string | null };
+  if (!data.result) return null;
+  try {
+    const parsed = JSON.parse(data.result) as { email?: string; plan?: string };
+    const plan = parsed.plan === "pro" || parsed.plan === "basic" ? parsed.plan : null;
+    if (typeof parsed.email !== "string" || !plan) return null;
+    return { email: parsed.email, plan };
+  } catch { return null; }
+}
+
+export async function activatePaymentUser(email: string, plan: RegistrationPlan, request: Request): Promise<{
+  ok: true; email: string; cookieValue: string; isFirstLogin: boolean;
+} | { ok: false; message: string }> {
+  await addAllowedEmail(email);
+  if (plan === "pro") await addProEmail(email);
+  const result = await loginWithEmail(email, request);
+  if (!result.ok) return { ok: false, message: result.message ?? "שגיאה בכניסה." };
+  return { ok: true, email: result.email, cookieValue: result.cookieValue, isFirstLogin: result.isFirstLogin };
 }
 
 export function getPaymentLinkForPlan(plan: RegistrationPlan): string {
@@ -1116,12 +1182,18 @@ export async function isAdminEmail(email: string): Promise<boolean> {
 }
 
 export async function isProEmail(email: string): Promise<boolean> {
+  const normalized = normalizeEmail(email);
   const envPro = (process.env.PRO_EMAILS ?? "")
     .split(",")
     .map(normalizeEmail)
     .filter(Boolean);
-  if (envPro.length > 0) return envPro.includes(normalizeEmail(email));
+  if (envPro.length > 0) return envPro.includes(normalized);
+
+  if (shouldUseRedisStore()) {
+    const proExtra = await getRedisStringArray(getProExtraKey());
+    if (proExtra.map(normalizeEmail).includes(normalized)) return true;
+  }
 
   const authFile = await readAuthFile();
-  return (authFile.proEmails ?? []).includes(normalizeEmail(email));
+  return (authFile.proEmails ?? []).includes(normalized);
 }
