@@ -325,6 +325,23 @@ export function Dashboard({
               >
                 תרגל עכשיו ←
               </Link>
+              <Link
+                href="/quiz-prep"
+                style={{
+                  display: "block",
+                  background: "rgba(255,255,255,0.12)",
+                  color: "#fff",
+                  borderRadius: "10px",
+                  padding: "9px 20px",
+                  fontSize: "13px",
+                  fontWeight: 700,
+                  textDecoration: "none",
+                  marginTop: "8px",
+                  border: "1px solid rgba(255,255,255,0.2)",
+                }}
+              >
+                📋 הכנה לבוחן
+              </Link>
             </div>
           </div>
         </div>
