@@ -38,6 +38,7 @@ export function AuthGate({
   const [registrationMessage, setRegistrationMessage] = useState("");
   const [registrationComplete, setRegistrationComplete] = useState<RegistrationComplete | null>(null);
   const [activePaymentMethod, setActivePaymentMethod] = useState<PaymentMethod | null>(null);
+  const [isRedirectingToPayment, setIsRedirectingToPayment] = useState(false);
   const authMessage = authState.status === "blocked" ? authState.message : undefined;
   const registrationTotal = selectedPlan === "pro" ? 49 : 19;
 
@@ -125,41 +126,27 @@ export function AuthGate({
     setIsRegisterSubmitting(true);
     setRegistrationMessage("");
     setMessage("");
-    setRegistrationComplete(null);
-    setActivePaymentMethod(null);
 
     try {
       const response = await fetch("/api/auth/register", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "x-infi-device-id": getOrCreateDeviceId(),
-        },
+        headers: { "Content-Type": "application/json", "x-infi-device-id": getOrCreateDeviceId() },
         body: JSON.stringify({ email, phone, plan: selectedPlan }),
       });
       const data = (await response.json()) as {
-        ok?: boolean;
-        email?: string;
-        phone?: string;
-        plan?: "basic" | "pro";
-        totalPriceIls?: number;
-        paymentPageUrl?: string;
-        message?: string;
+        ok?: boolean; email?: string; phone?: string; plan?: "basic" | "pro";
+        totalPriceIls?: number; paymentPageUrl?: string; message?: string;
       };
 
-      setRegistrationMessage(data.message ?? (response.ok ? "הפרטים נקלטו." : "לא ניתן לשמור כרגע."));
       if (response.ok && data.ok && data.email && data.plan && data.paymentPageUrl) {
-        setRegistrationComplete({
-          email: data.email,
-          phone: data.phone ?? phone,
-          plan: data.plan,
-          totalPriceIls: data.totalPriceIls ?? registrationTotal,
-          paymentPageUrl: data.paymentPageUrl,
-        });
+        // Go straight to PayPlus — no intermediate screen
+        await initCreditPayment(data.paymentPageUrl, data.email, data.plan);
+      } else {
+        setRegistrationMessage(data.message ?? "לא ניתן לשמור כרגע.");
+        setIsRegisterSubmitting(false);
       }
     } catch {
       setRegistrationMessage("שגיאת תקשורת. נסי שוב.");
-    } finally {
       setIsRegisterSubmitting(false);
     }
   }
@@ -190,23 +177,20 @@ export function AuthGate({
     }).catch(() => {});
   }
 
-  async function initCreditPayment() {
-    if (!registrationComplete) return;
+  async function initCreditPayment(paymentUrl: string, emailAddr: string, planName: string) {
+    setIsRedirectingToPayment(true);
     try {
       const res = await fetch("/api/payment/init", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: registrationComplete.email, plan: registrationComplete.plan }),
+        body: JSON.stringify({ email: emailAddr, plan: planName }),
       });
       const data = (await res.json()) as { ok?: boolean; token?: string };
       if (res.ok && data.token) {
-        localStorage.setItem(
-          "infi_pending_payment",
-          JSON.stringify({ email: registrationComplete.email, plan: registrationComplete.plan, token: data.token })
-        );
+        localStorage.setItem("infi_pending_payment", JSON.stringify({ email: emailAddr, plan: planName, token: data.token }));
       }
-    } catch { /* proceed anyway — success page will show error */ }
-    window.location.href = registrationComplete.paymentPageUrl;
+    } catch { /* proceed anyway */ }
+    window.location.href = paymentUrl;
   }
 
   function handleLoginSubmit(event: FormEvent<HTMLFormElement>) {
@@ -271,13 +255,14 @@ export function AuthGate({
           onSubmit={mode === "login" ? handleLoginSubmit : handleRegistrationSubmit}
           className="bg-white px-7 pb-7 pt-6"
         >
-          {mode === "register" && registrationComplete ? (
-            <PaymentCompletion
-              registration={registrationComplete}
-              activePaymentMethod={activePaymentMethod}
-              onShowManualInstructions={(method) => { setActivePaymentMethod(method); recordPaymentAction(method, "manual_instructions_shown"); }}
-              onCreditCardPay={() => void initCreditPayment()}
-            />
+          {isRedirectingToPayment ? (
+            <div className="flex flex-col items-center gap-3 py-6 text-center">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full" style={{ background: "var(--navy-light)" }}>
+                <CreditCard className="h-6 w-6 animate-pulse" style={{ color: "#0f2240" }} />
+              </div>
+              <p className="text-sm font-bold" style={{ color: "var(--text-primary)" }}>מעביר לדף התשלום...</p>
+              <p className="text-xs" style={{ color: "var(--text-muted)" }}>תועבר חזרה אוטומטית לאחר התשלום</p>
+            </div>
           ) : (
             <>
               {/* Email */}
@@ -316,8 +301,14 @@ export function AuthGate({
                     />
                   </div>
 
+                  {/* Single-device notice */}
+                  <div className="mt-4 flex items-start gap-2 rounded-lg border px-3 py-2.5 text-xs font-medium leading-5" style={{ borderColor: "var(--amber-border)", background: "var(--amber-light)", color: "var(--amber)" }}>
+                    <Lock className="mt-0.5 h-3.5 w-3.5 shrink-0" aria-hidden="true" />
+                    <span>הגישה מוגבלת למכשיר אחד בלבד. הרשם מהמכשיר שממנו תעבד — חיבור ממכשיר נוסף עלול לגרום לחסימה.</span>
+                  </div>
+
                   {/* Plan */}
-                  <fieldset className="mt-5 space-y-2">
+                  <fieldset className="mt-4 space-y-2">
                     <legend className="mb-2.5 text-xs font-black" style={{ color: "var(--text-secondary)" }}>בחרי מסלול</legend>
                     <PlanOption checked={selectedPlan === "basic"} title="Basic" price="19₪" description="גישה מלאה לכל החומר." onSelect={() => setSelectedPlan("basic")} />
                     <PlanOption checked={selectedPlan === "pro"} title="Pro" price="49₪" description="כולל מנטור AI מבוסס חומר הקורס." icon={<Sparkles className="h-3.5 w-3.5" aria-hidden="true" />} onSelect={() => setSelectedPlan("pro")} />

@@ -37,7 +37,7 @@ import type { MentorLogEntry } from "@/lib/mentor-credits";
 type AdminTab = "overview" | "users" | "chats" | "sessions" | "registrations" | "payments";
 type UserFilter = "all" | "allowed" | "not_allowed" | "risk" | "active" | "no_login";
 type PlanFilter = "all" | "basic" | "pro";
-type PaymentFilter = "all" | "pending" | "manual_pending" | "payment_link_opened";
+type PaymentFilter = "all" | "pending" | "manual_pending" | "payment_link_opened" | "activated" | "failed";
 
 // ─── Utilities ─────────────────────────────────────────────────────────────────
 
@@ -71,6 +71,8 @@ function paymentStatusLabel(status?: RegistrationRequest["paymentStatus"]): stri
   switch (status) {
     case "manual_pending": return "הוראות ידני";
     case "payment_link_opened": return "פתח דף תשלום";
+    case "activated": return "שולם ונפתח ✓";
+    case "failed": return "תשלום נכשל";
     default: return "ללא רכישה";
   }
 }
@@ -78,8 +80,10 @@ function paymentStatusLabel(status?: RegistrationRequest["paymentStatus"]): stri
 function paymentStatusClass(status?: RegistrationRequest["paymentStatus"]): string {
   switch (status) {
     case "manual_pending": return "badge-amber";
-    case "payment_link_opened": return "badge-green";
-    default: return "badge-red";
+    case "payment_link_opened": return "badge-navy-light";
+    case "activated": return "badge-green";
+    case "failed": return "badge-red";
+    default: return "badge-muted";
   }
 }
 
@@ -1060,8 +1064,10 @@ function RegistrationsSection({
         <Select value={paymentFilter} onChange={(v) => setPaymentFilter(v as PaymentFilter)}>
           <option value="all">כל סטטוסי התשלום</option>
           <option value="pending">מילאו ולא רכשו</option>
-          <option value="manual_pending">הוראות ידני</option>
           <option value="payment_link_opened">פתחו לינק תשלום</option>
+          <option value="activated">שולמו ונפתחו</option>
+          <option value="failed">תשלום נכשל</option>
+          <option value="manual_pending">הוראות ידני</option>
         </Select>
       </div>
       <ResponsiveTable minWidth="1120px">

@@ -53,7 +53,7 @@ export type RegistrationRequest = {
 
 export type PaymentMethod = "bit" | "paybox" | "credit";
 export type PaymentActionType = "manual_instructions_shown" | "payment_link_opened";
-export type PaymentStatus = "pending" | "manual_pending" | "payment_link_opened";
+export type PaymentStatus = "pending" | "manual_pending" | "payment_link_opened" | "activated" | "failed";
 
 export type PaymentActionRecord = {
   id: string;
@@ -333,11 +333,21 @@ export async function consumePendingPayment(token: string): Promise<{ email: str
   } catch { return null; }
 }
 
+export async function markRegistrationStatus(email: string, status: PaymentStatus): Promise<void> {
+  const normalized = normalizeEmail(email);
+  const authFile = await readAuthFile();
+  const requests = await getRegistrationRequests(authFile);
+  const existing = requests.find((r) => normalizeEmail(r.email) === normalized);
+  if (!existing) return;
+  await persistRegistrationRequest(authFile, { ...existing, paymentStatus: status });
+}
+
 export async function activatePaymentUser(email: string, plan: RegistrationPlan, request: Request): Promise<{
   ok: true; email: string; cookieValue: string; isFirstLogin: boolean;
 } | { ok: false; message: string }> {
   await addAllowedEmail(email);
   if (plan === "pro") await addProEmail(email);
+  await markRegistrationStatus(email, "activated").catch(() => {});
   const result = await loginWithEmail(email, request);
   if (!result.ok) return { ok: false, message: result.message ?? "שגיאה בכניסה." };
   return { ok: true, email: result.email, cookieValue: result.cookieValue, isFirstLogin: result.isFirstLogin };
