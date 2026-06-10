@@ -12,11 +12,16 @@ interface PracticeQuestion {
   contentHe: string | null;
 }
 
+interface KnowledgeItem {
+  name: string;
+  content: string;
+}
+
 interface WeekData {
   week: number;
   title: string;
-  definitions: string[];
-  theorems: string[];
+  definitions: KnowledgeItem[];
+  theorems: KnowledgeItem[];
   formulas: string[];
   examNotes: string[];
   practiceQuestions: PracticeQuestion[];
@@ -55,23 +60,64 @@ function saveChecked(set: Set<string>) {
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...set])); } catch {}
 }
 
-// ── Checkbox item ──────────────────────────────────────────────────────────
+// ── Collapsible knowledge item (definition / theorem) ─────────────────────
 
-function CheckItem({
-  id, label, checked, onToggle, small
-}: { id: string; label: string; checked: boolean; onToggle: (id: string) => void; small?: boolean }) {
+function CollapsibleKnowledgeItem({
+  id, item, checked, onToggle,
+}: { id: string; item: { name: string; content: string }; checked: boolean; onToggle: (id: string) => void }) {
+  const [open, setOpen] = useState(false);
+  const hasContent = item.content.trim().length > 0;
+
   return (
-    <button
-      type="button"
-      onClick={() => onToggle(id)}
-      className={`flex w-full items-start gap-2.5 rounded-lg px-3 py-2 text-right transition hover:bg-[var(--bg-inset)] ${small ? "text-sm" : "text-[15px]"}`}
-      style={{ color: checked ? "var(--text-muted)" : "var(--text-primary)" }}
-    >
-      <span className="mt-0.5 shrink-0" style={{ color: checked ? "var(--teal)" : "var(--border)" }}>
-        {checked ? <CheckSquare className="h-4 w-4" /> : <Square className="h-4 w-4" />}
-      </span>
-      <span className={checked ? "line-through opacity-60" : ""}>{label}</span>
-    </button>
+    <div style={{ borderColor: "var(--border)" }}>
+      <div className="flex items-center gap-0 pr-1">
+        {/* Expand toggle */}
+        <button
+          type="button"
+          onClick={() => hasContent && setOpen(v => !v)}
+          className="flex flex-1 items-center gap-2.5 px-3 py-2.5 text-right transition hover:bg-(--bg-inset)"
+          style={{ color: checked ? "var(--text-muted)" : "var(--text-primary)", cursor: hasContent ? "pointer" : "default" }}
+          aria-expanded={open}
+        >
+          {hasContent && (
+            <span className="mt-0.5 shrink-0" style={{ color: "var(--text-muted)" }}>
+              {open
+                ? <ChevronDown className="h-3.5 w-3.5" />
+                : <ChevronRight className="h-3.5 w-3.5" />}
+            </span>
+          )}
+          <span className={`flex-1 text-sm font-semibold leading-snug ${checked ? "line-through opacity-50" : ""}`}>
+            {item.name}
+          </span>
+        </button>
+
+        {/* Checkbox */}
+        <button
+          type="button"
+          onClick={() => onToggle(id)}
+          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg transition hover:bg-(--bg-inset)"
+          aria-label={checked ? "סמן כלא נעשה" : "סמן כנעשה"}
+        >
+          <span style={{ color: checked ? "var(--teal)" : "var(--border-strong)" }}>
+            {checked ? <CheckSquare className="h-4 w-4" /> : <Square className="h-4 w-4" />}
+          </span>
+        </button>
+      </div>
+
+      {open && hasContent && (
+        <div
+          className="border-t px-4 py-3 text-sm leading-relaxed"
+          style={{
+            borderColor: "var(--border)",
+            background: "var(--bg-subtle)",
+            color: "var(--text-secondary)",
+            direction: "rtl",
+          }}
+        >
+          <MathContent text={item.content} className="" />
+        </div>
+      )}
+    </div>
   );
 }
 
@@ -190,8 +236,8 @@ function PracticeQ({ q, index, checked, onToggle }: { q: PracticeQuestion; index
 function WeekSection({ wd, blockColor, checked, onToggle }: { wd: WeekData; blockColor: Block["color"]; checked: Set<string>; onToggle: (id: string) => void }) {
   const col = COLOR[blockColor];
   const allItems = [
-    ...wd.definitions.map(d => `def-w${wd.week}-${d}`),
-    ...wd.theorems.map(t => `thm-w${wd.week}-${t}`),
+    ...wd.definitions.map(d => `def-w${wd.week}-${d.name}`),
+    ...wd.theorems.map(t => `thm-w${wd.week}-${t.name}`),
   ];
   const doneItems = allItems.filter(id => checked.has(id)).length;
 
@@ -206,7 +252,7 @@ function WeekSection({ wd, blockColor, checked, onToggle }: { wd: WeekData; bloc
           שבוע {wd.week}
         </span>
         <h3 className="text-lg font-extrabold" style={{ color: "var(--text-primary)" }}>{wd.title}</h3>
-        <div className="flex-1 min-w-[120px]">
+        <div className="flex-1 min-w-30">
           <ProgressBar done={doneItems} total={allItems.length} color={col.text} />
         </div>
       </div>
@@ -214,13 +260,13 @@ function WeekSection({ wd, blockColor, checked, onToggle }: { wd: WeekData; bloc
       {/* Definitions */}
       {wd.definitions.length > 0 && (
         <Section id={`defs-w${wd.week}`} title="הגדרות" icon={<BookOpen className="h-4 w-4" />} accent={col.text}>
-          <div className="rounded-xl border divide-y" style={{ borderColor: "var(--border)" }}>
+          <div className="rounded-xl border divide-y overflow-hidden" style={{ borderColor: "var(--border)" }}>
             {wd.definitions.map(def => (
-              <CheckItem
-                key={def}
-                id={`def-w${wd.week}-${def}`}
-                label={def}
-                checked={checked.has(`def-w${wd.week}-${def}`)}
+              <CollapsibleKnowledgeItem
+                key={def.name}
+                id={`def-w${wd.week}-${def.name}`}
+                item={def}
+                checked={checked.has(`def-w${wd.week}-${def.name}`)}
                 onToggle={onToggle}
               />
             ))}
@@ -231,13 +277,13 @@ function WeekSection({ wd, blockColor, checked, onToggle }: { wd: WeekData; bloc
       {/* Theorems */}
       {wd.theorems.length > 0 && (
         <Section id={`thms-w${wd.week}`} title="משפטים והוכחות" icon={<Lightbulb className="h-4 w-4" />} accent={col.text}>
-          <div className="rounded-xl border divide-y" style={{ borderColor: "var(--border)" }}>
+          <div className="rounded-xl border divide-y overflow-hidden" style={{ borderColor: "var(--border)" }}>
             {wd.theorems.map(thm => (
-              <CheckItem
-                key={thm}
-                id={`thm-w${wd.week}-${thm}`}
-                label={thm}
-                checked={checked.has(`thm-w${wd.week}-${thm}`)}
+              <CollapsibleKnowledgeItem
+                key={thm.name}
+                id={`thm-w${wd.week}-${thm.name}`}
+                item={thm}
+                checked={checked.has(`thm-w${wd.week}-${thm.name}`)}
                 onToggle={onToggle}
               />
             ))}
@@ -292,8 +338,8 @@ function BlockSection({ block, checked, onToggle }: { block: Block; checked: Set
   const col = COLOR[block.color];
   const allCheckable = [
     ...block.weekData.flatMap(wd => [
-      ...wd.definitions.map(d => `def-w${wd.week}-${d}`),
-      ...wd.theorems.map(t => `thm-w${wd.week}-${t}`),
+      ...wd.definitions.map(d => `def-w${wd.week}-${d.name}`),
+      ...wd.theorems.map(t => `thm-w${wd.week}-${t.name}`),
     ]),
     ...block.pastExamQuestions.map(q => q.id),
     ...block.weekData.flatMap(wd => wd.practiceQuestions.map(q => q.id)),
@@ -364,8 +410,8 @@ function BlockSection({ block, checked, onToggle }: { block: Block; checked: Set
 function Sidebar({ blocks, checked }: { blocks: Block[]; checked: Set<string> }) {
   const totalAll = blocks.flatMap(b => [
     ...b.weekData.flatMap(wd => [
-      ...wd.definitions.map(d => `def-w${wd.week}-${d}`),
-      ...wd.theorems.map(t => `thm-w${wd.week}-${t}`),
+      ...wd.definitions.map(d => `def-w${wd.week}-${d.name}`),
+      ...wd.theorems.map(t => `thm-w${wd.week}-${t.name}`),
     ]),
     ...b.pastExamQuestions.map(q => q.id),
     ...b.weekData.flatMap(wd => wd.practiceQuestions.map(q => q.id)),
@@ -399,8 +445,8 @@ function Sidebar({ blocks, checked }: { blocks: Block[]; checked: Set<string> })
             const col = COLOR[b.color];
             const blockItems = [
               ...b.weekData.flatMap(wd => [
-                ...wd.definitions.map(d => `def-w${wd.week}-${d}`),
-                ...wd.theorems.map(t => `thm-w${wd.week}-${t}`),
+                ...wd.definitions.map(d => `def-w${wd.week}-${d.name}`),
+                ...wd.theorems.map(t => `thm-w${wd.week}-${t.name}`),
               ]),
               ...b.pastExamQuestions.map(q => q.id),
               ...b.weekData.flatMap(wd => wd.practiceQuestions.map(q => q.id)),
