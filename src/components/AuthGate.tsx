@@ -209,7 +209,7 @@ export function AuthGate({
   return (
     <div
       className="fixed inset-0 z-[100] flex items-center justify-center px-5 py-8"
-      style={{ background: "rgba(245,240,255,0.72)", backdropFilter: "blur(12px)" }}
+      style={{ background: "rgba(240,244,249,0.72)", backdropFilter: "blur(12px)" }}
       role="dialog"
       aria-modal="true"
       aria-labelledby="auth-title"
@@ -217,7 +217,7 @@ export function AuthGate({
       <form
         onSubmit={mode === "login" ? handleLoginSubmit : handleRegistrationSubmit}
         className="w-full max-w-[320px] overflow-y-auto rounded-[30px] bg-white px-8 py-8"
-        style={{ boxShadow: "0px 0px 40px rgba(128,0,255,0.12)" }}
+        style={{ boxShadow: "0px 0px 40px rgba(15,34,64,0.14)" }}
       >
         {/* Heading */}
         <p
@@ -234,19 +234,19 @@ export function AuthGate({
             type="button"
             onClick={() => { setMode("login"); setRegistrationMessage(""); setRegistrationComplete(null); setActivePaymentMethod(null); }}
             className="relative pb-1 transition"
-            style={{ color: mode === "login" ? "#8000ff" : "rgb(150,150,150)" }}
+            style={{ color: mode === "login" ? "#1e3a5f" : "rgb(150,150,150)" }}
           >
             כניסה
-            {mode === "login" && <span className="absolute inset-x-0 bottom-0 h-0.5 rounded-full" style={{ background: "#8000ff" }} />}
+            {mode === "login" && <span className="absolute inset-x-0 bottom-0 h-0.5 rounded-full" style={{ background: "#1e3a5f" }} />}
           </button>
           <button
             type="button"
             onClick={() => { setMode("register"); setMessage(""); setRegistrationComplete(null); setActivePaymentMethod(null); }}
             className="relative pb-1 transition"
-            style={{ color: mode === "register" ? "#8000ff" : "rgb(150,150,150)" }}
+            style={{ color: mode === "register" ? "#1e3a5f" : "rgb(150,150,150)" }}
           >
             הרשמה
-            {mode === "register" && <span className="absolute inset-x-0 bottom-0 h-0.5 rounded-full" style={{ background: "#8000ff" }} />}
+            {mode === "register" && <span className="absolute inset-x-0 bottom-0 h-0.5 rounded-full" style={{ background: "#1e3a5f" }} />}
           </button>
         </div>
 
@@ -261,7 +261,7 @@ export function AuthGate({
           <>
             {/* Email */}
             <div className="relative mb-1 flex items-center">
-              <Mail className="absolute right-2 h-4 w-4" style={{ color: "#8000ff" }} aria-hidden="true" />
+              <Mail className="absolute right-2 h-4 w-4" style={{ color: "#1e3a5f" }} aria-hidden="true" />
               <input
                 id="auth-email"
                 type="email"
@@ -280,7 +280,7 @@ export function AuthGate({
               <>
                 {/* Phone */}
                 <div className="relative mb-1 mt-3 flex items-center">
-                  <Phone className="absolute right-2 h-4 w-4" style={{ color: "#8000ff" }} aria-hidden="true" />
+                  <Phone className="absolute right-2 h-4 w-4" style={{ color: "#1e3a5f" }} aria-hidden="true" />
                   <input
                     id="register-phone"
                     type="tel"
@@ -304,7 +304,7 @@ export function AuthGate({
 
                 <div className="mt-3 flex items-center justify-between text-sm font-black" style={{ color: "#2e2e2e" }}>
                   <span>סה״כ</span>
-                  <span className="font-mono text-base" style={{ color: "#8000ff" }}>{registrationTotal}₪</span>
+                  <span className="font-mono text-base" style={{ color: "#1e3a5f" }}>{registrationTotal}₪</span>
                 </div>
               </>
             )}
@@ -326,7 +326,7 @@ export function AuthGate({
 
         {/* Single-device checkbox */}
         {mode === "login" && (
-          <label className="mt-4 flex cursor-pointer items-start gap-2.5 text-xs font-medium leading-5" style={{ color: acceptedSingleDeviceNotice ? "#8000ff" : "rgb(120,120,120)" }}>
+          <label className="mt-4 flex cursor-pointer items-start gap-2.5 text-xs font-medium leading-5" style={{ color: acceptedSingleDeviceNotice ? "#1e3a5f" : "rgb(120,120,120)" }}>
             <input
               type="checkbox"
               checked={acceptedSingleDeviceNotice}
@@ -334,7 +334,7 @@ export function AuthGate({
                 setAcceptedSingleDeviceNotice(e.target.checked);
                 if (e.target.checked && message === "צריך לאשר את תנאי החיבור ממסך אחד לפני הכניסה.") setMessage("");
               }}
-              className="mt-0.5 h-3.5 w-3.5 accent-[#8000ff]"
+              className="mt-0.5 h-3.5 w-3.5 accent-[#1e3a5f]"
             />
             <span>אני מבין/ה שהגישה מוגבלת למסך אחד בלבד.</span>
           </label>
@@ -346,7 +346,7 @@ export function AuthGate({
             type="submit"
             disabled={mode === "login" ? authState.status === "checking" || isSubmitting || !acceptedSingleDeviceNotice : isRegisterSubmitting}
             className="auth-shimmer-btn relative mt-6 h-10 w-full overflow-hidden rounded-full text-sm font-semibold tracking-wide text-white transition disabled:cursor-not-allowed disabled:opacity-50"
-            style={{ background: "#8000ff", border: "2px solid #8000ff" }}
+            style={{ background: "linear-gradient(135deg, #0f2240, #1e3a5f)", border: "none" }}
           >
             {mode === "login"
               ? isSubmitting ? "מתחבר..." : "כניסה"
