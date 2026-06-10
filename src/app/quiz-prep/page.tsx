@@ -456,90 +456,114 @@ export default function QuizPrepPage() {
         <div id="part-c" style={{ marginTop: "2.5rem" }}>
           <SectionTitle color={C.green}>חלק ג׳ — 4 שאלות לתרגול</SectionTitle>
 
-          {[
-            {
-              q: "שאלה 1",
-              problem: <span>קבעי האם <K m="\displaystyle\sum_{n=1}^\infty \frac{n!\cdot 3^n}{(2n)!}" /> מתכנס.</span>,
-              method: "מבחן המנה",
-              accent: C.purple,
-              solution: (
-                <>
-                  <K d m="L = \lim_{n\to\infty} \frac{a_{n+1}}{a_n} = \lim_{n\to\infty} \frac{(n+1)!\cdot 3^{n+1}}{(2n+2)!} \cdot \frac{(2n)!}{n!\cdot 3^n} = \lim_{n\to\infty} \frac{3(n+1)}{(2n+2)(2n+1)} = 0 < 1" />
-                  <div style={{ color: C.green, fontWeight: 700 }}>✓ הטור מתכנס.</div>
-                </>
-              ),
-            },
-            {
-              q: "שאלה 2",
-              problem: <span>קבעי האם <K m="\displaystyle\sum_{n=2}^\infty \frac{(-1)^n}{\sqrt{n}}" /> מתכנס. האם בהחלט?</span>,
-              method: "מבחן לייבניץ",
-              accent: C.amber,
-              solution: (
-                <>
-                  <K m="(a_n) = 1/\sqrt{n}" /> — יורדת ו<K m="\lim 1/\sqrt{n} = 0" />.
-                  לפי לייבניץ: <strong style={{ color: C.green }}>הטור מתכנס (מותנית)</strong>.
-                  <br />לא בהחלט: <K m="\sum 1/\sqrt{n}" /> מתבדר (<K m="p=1/2 \le 1" />). ✓
-                </>
-              ),
-            },
-            {
-              q: "שאלה 3 — בסגנון הסימולציה",
-              problem: (
-                <span>
-                  יהי <K m="(a_n)" /> חיובית. הגדר <K m="b_n = \frac{\ln(1/a_n)}{\ln n}" /> לכל <K m="n \ge 2" />.
-                  נניח <K m="\lim b_n = p > 1" />. הוכיחי ש<K m="\sum a_n < \infty" />.
-                </span>
-              ),
-              method: "השוואה ישיר + p-series",
-              accent: C.blue,
-              solution: (
-                <>
-                  <Step n={1} text={<>קח <K m="\epsilon = \frac{p-1}{2}" />. קיים <K m="N" /> כך שלכל <K m="n \ge N" />: <K m="b_n > \frac{p+1}{2} =: q > 1" />.</>} />
-                  <Step n={2} text={<><K m="\frac{\ln(1/a_n)}{\ln n} > q" /> ←  <K m="\ln(1/a_n) > q\ln n" /> ← <K m="a_n < \frac{1}{n^q}" />.</>} />
-                  <Step n={3} text={<>מאחר ש <K m="q > 1" />: <K m="\sum 1/n^q < \infty" />. לפי השוואה ישיר: <strong style={{ color: C.green }}><K m="\sum a_n < \infty" />. ✓</strong></>} />
-                </>
-              ),
-            },
-            {
-              q: "שאלה 4",
-              problem: (
-                <span>
-                  הוכיחי: אם <K m="\sum a_n" /> מתכנס לחלוטין, אזי{" "}
-                  <K m="\left|\sum_{n=1}^\infty a_n\right| \le \sum_{n=1}^\infty |a_n|" />.
-                </span>
-              ),
-              method: "אי-שוויון המשולש + גבול",
-              accent: C.navy,
-              solution: (
-                <>
-                  לכל <K m="N" />: <K m="\left|\sum_{n=1}^N a_n\right| \le \sum_{n=1}^N |a_n|" />.
-                  שני הגבולות קיימים, לכן:
-                  <K d m="\left|\sum_{n=1}^\infty a_n\right| = \lim_{N\to\infty}\left|\sum_{n=1}^N a_n\right| \le \lim_{N\to\infty}\sum_{n=1}^N|a_n| = \sum_{n=1}^\infty|a_n| \quad\checkmark" />
-                </>
-              ),
-            },
-          ].map(({ q, problem, method, accent, solution }) => (
-            <div key={q} style={{
-              background: C.card, borderRadius: 12, border: `1px solid ${C.border}`,
-              borderRight: `5px solid ${accent}`, boxShadow: C.shadow,
-              marginBottom: "1.25rem", overflow: "hidden",
-            }}>
-              <div style={{ padding: "10px 18px", background: "#fafaf9",
-                borderBottom: `1px solid ${C.border}`, display: "flex",
-                alignItems: "center", gap: "0.75rem" }}>
-                <span style={{ background: accent, color: "#fff", borderRadius: 8,
-                  padding: "2px 10px", fontSize: "0.8rem", fontWeight: 800 }}>{q}</span>
-                <span style={{ fontSize: "0.92rem", fontWeight: 600, flex: 1 }}>{problem}</span>
-                <Tag color={accent}>{method}</Tag>
-              </div>
-              <div style={{ padding: "14px 18px 16px", fontSize: "0.92rem",
-                lineHeight: 1.85, color: C.text }}>
-                <strong style={{ color: C.muted, fontSize: "0.75rem",
-                  textTransform: "uppercase", letterSpacing: "0.08em" }}>פתרון:</strong>
-                <div style={{ marginTop: "0.5rem" }}>{solution}</div>
-              </div>
+          {/* שאלה 1 */}
+          <div style={{ background: C.card, borderRadius: 12, border: `1px solid ${C.border}`,
+            borderRight: `5px solid ${C.purple}`, boxShadow: C.shadow, marginBottom: "1.25rem", overflow: "hidden" }}>
+            <div style={{ padding: "10px 18px", background: "#fafaf9",
+              borderBottom: `1px solid ${C.border}`, display: "flex", alignItems: "center", gap: "0.75rem" }}>
+              <span style={{ background: C.purple, color: "#fff", borderRadius: 8,
+                padding: "2px 10px", fontSize: "0.8rem", fontWeight: 800 }}>שאלה 1</span>
+              <span style={{ fontSize: "0.92rem", fontWeight: 600, flex: 1 }}>
+                קבעי האם <K m="\displaystyle\sum_{n=1}^\infty \frac{n!\cdot 3^n}{(2n)!}" /> מתכנס.
+              </span>
+              <Tag color={C.purple}>מבחן המנה</Tag>
             </div>
-          ))}
+            <details style={{ padding: "14px 18px 16px", fontSize: "0.92rem", lineHeight: 1.85, color: C.text }}>
+              <summary style={{ cursor: "pointer", fontWeight: 700, color: C.purple,
+                listStyle: "none", display: "flex", alignItems: "center", gap: "0.5rem",
+                userSelect: "none" as const }}>
+                <span style={{ background: C.purpleBg, border: `1px solid ${C.purpleBd}`,
+                  borderRadius: 8, padding: "3px 14px", fontSize: "0.82rem" }}>הצג פתרון ▼</span>
+              </summary>
+              <div style={{ marginTop: "0.75rem", borderTop: `1px solid ${C.border}`, paddingTop: "0.75rem" }}>
+                <K d m="L = \lim_{n\to\infty} \frac{a_{n+1}}{a_n} = \lim_{n\to\infty} \frac{(n+1)!\cdot 3^{n+1}}{(2n+2)!} \cdot \frac{(2n)!}{n!\cdot 3^n} = \lim_{n\to\infty} \frac{3(n+1)}{(2n+2)(2n+1)} = 0 < 1" />
+                <div style={{ color: C.green, fontWeight: 700 }}>✓ הטור מתכנס.</div>
+              </div>
+            </details>
+          </div>
+
+          {/* שאלה 2 */}
+          <div style={{ background: C.card, borderRadius: 12, border: `1px solid ${C.border}`,
+            borderRight: `5px solid ${C.amber}`, boxShadow: C.shadow, marginBottom: "1.25rem", overflow: "hidden" }}>
+            <div style={{ padding: "10px 18px", background: "#fafaf9",
+              borderBottom: `1px solid ${C.border}`, display: "flex", alignItems: "center", gap: "0.75rem" }}>
+              <span style={{ background: C.amber, color: "#fff", borderRadius: 8,
+                padding: "2px 10px", fontSize: "0.8rem", fontWeight: 800 }}>שאלה 2</span>
+              <span style={{ fontSize: "0.92rem", fontWeight: 600, flex: 1 }}>
+                קבעי האם <K m="\displaystyle\sum_{n=2}^\infty \frac{(-1)^n}{\sqrt{n}}" /> מתכנס. האם בהחלט?
+              </span>
+              <Tag color={C.amber}>מבחן לייבניץ</Tag>
+            </div>
+            <details style={{ padding: "14px 18px 16px", fontSize: "0.92rem", lineHeight: 1.85, color: C.text }}>
+              <summary style={{ cursor: "pointer", fontWeight: 700, color: C.amber,
+                listStyle: "none", display: "flex", alignItems: "center", gap: "0.5rem",
+                userSelect: "none" as const }}>
+                <span style={{ background: C.amberBg, border: `1px solid ${C.amberBd}`,
+                  borderRadius: 8, padding: "3px 14px", fontSize: "0.82rem" }}>הצג פתרון ▼</span>
+              </summary>
+              <div style={{ marginTop: "0.75rem", borderTop: `1px solid ${C.border}`, paddingTop: "0.75rem" }}>
+                <K m="(a_n) = 1/\sqrt{n}" /> — יורדת ו<K m="\lim 1/\sqrt{n} = 0" />.
+                לפי לייבניץ: <strong style={{ color: C.green }}>הטור מתכנס (מותנית)</strong>.
+                <br />לא בהחלט: <K m="\sum 1/\sqrt{n}" /> מתבדר (<K m="p=1/2 \le 1" />). ✓
+              </div>
+            </details>
+          </div>
+
+          {/* שאלה 3 */}
+          <div style={{ background: C.card, borderRadius: 12, border: `1px solid ${C.border}`,
+            borderRight: `5px solid ${C.blue}`, boxShadow: C.shadow, marginBottom: "1.25rem", overflow: "hidden" }}>
+            <div style={{ padding: "10px 18px", background: "#fafaf9",
+              borderBottom: `1px solid ${C.border}`, display: "flex", alignItems: "center", gap: "0.75rem" }}>
+              <span style={{ background: C.blue, color: "#fff", borderRadius: 8,
+                padding: "2px 10px", fontSize: "0.8rem", fontWeight: 800 }}>שאלה 3 — בסגנון הסימולציה</span>
+              <span style={{ fontSize: "0.92rem", fontWeight: 600, flex: 1 }}>
+                יהי <K m="(a_n)" /> חיובית. הגדר <K m="b_n = \frac{\ln(1/a_n)}{\ln n}" /> לכל <K m="n \ge 2" />.
+                נניח <K m="\lim b_n = p > 1" />. הוכיחי ש<K m="\sum a_n < \infty" />.
+              </span>
+              <Tag color={C.blue}>השוואה + p-series</Tag>
+            </div>
+            <details style={{ padding: "14px 18px 16px", fontSize: "0.92rem", lineHeight: 1.85, color: C.text }}>
+              <summary style={{ cursor: "pointer", fontWeight: 700, color: C.blue,
+                listStyle: "none", display: "flex", alignItems: "center", gap: "0.5rem",
+                userSelect: "none" as const }}>
+                <span style={{ background: C.blueBg, border: `1px solid ${C.blueBd}`,
+                  borderRadius: 8, padding: "3px 14px", fontSize: "0.82rem" }}>הצג פתרון ▼</span>
+              </summary>
+              <div style={{ marginTop: "0.75rem", borderTop: `1px solid ${C.border}`, paddingTop: "0.75rem" }}>
+                <Step n={1} text={<>קח <K m="\epsilon = \frac{p-1}{2}" />. קיים <K m="N" /> כך שלכל <K m="n \ge N" />: <K m="b_n > \frac{p+1}{2} =: q > 1" />.</>} />
+                <Step n={2} text={<><K m="\frac{\ln(1/a_n)}{\ln n} > q" /> ← <K m="\ln(1/a_n) > q\ln n" /> ← <K m="a_n < \frac{1}{n^q}" />.</>} />
+                <Step n={3} text={<>מאחר ש <K m="q > 1" />: <K m="\sum 1/n^q < \infty" />. לפי השוואה ישיר: <strong style={{ color: C.green }}><K m="\sum a_n < \infty" />. ✓</strong></>} />
+              </div>
+            </details>
+          </div>
+
+          {/* שאלה 4 */}
+          <div style={{ background: C.card, borderRadius: 12, border: `1px solid ${C.border}`,
+            borderRight: `5px solid ${C.navy}`, boxShadow: C.shadow, marginBottom: "1.25rem", overflow: "hidden" }}>
+            <div style={{ padding: "10px 18px", background: "#fafaf9",
+              borderBottom: `1px solid ${C.border}`, display: "flex", alignItems: "center", gap: "0.75rem" }}>
+              <span style={{ background: C.navy, color: "#fff", borderRadius: 8,
+                padding: "2px 10px", fontSize: "0.8rem", fontWeight: 800 }}>שאלה 4</span>
+              <span style={{ fontSize: "0.92rem", fontWeight: 600, flex: 1 }}>
+                הוכיחי: אם <K m="\sum a_n" /> מתכנס לחלוטין, אזי{" "}
+                <K m="\left|\sum_{n=1}^\infty a_n\right| \le \sum_{n=1}^\infty |a_n|" />.
+              </span>
+              <Tag color={C.navy}>אי-שוויון המשולש + גבול</Tag>
+            </div>
+            <details style={{ padding: "14px 18px 16px", fontSize: "0.92rem", lineHeight: 1.85, color: C.text }}>
+              <summary style={{ cursor: "pointer", fontWeight: 700, color: C.navy,
+                listStyle: "none", display: "flex", alignItems: "center", gap: "0.5rem",
+                userSelect: "none" as const }}>
+                <span style={{ background: C.navyBg, border: `1px solid ${C.navyBd}`,
+                  borderRadius: 8, padding: "3px 14px", fontSize: "0.82rem" }}>הצג פתרון ▼</span>
+              </summary>
+              <div style={{ marginTop: "0.75rem", borderTop: `1px solid ${C.border}`, paddingTop: "0.75rem" }}>
+                לכל <K m="N" />: <K m="\left|\sum_{n=1}^N a_n\right| \le \sum_{n=1}^N |a_n|" />.
+                שני הגבולות קיימים, לכן:
+                <K d m="\left|\sum_{n=1}^\infty a_n\right| = \lim_{N\to\infty}\left|\sum_{n=1}^N a_n\right| \le \lim_{N\to\infty}\sum_{n=1}^N|a_n| = \sum_{n=1}^\infty|a_n| \quad\checkmark" />
+              </div>
+            </details>
+          </div>
         </div>
 
         {/* ══════════════════════════════════════════════════════
