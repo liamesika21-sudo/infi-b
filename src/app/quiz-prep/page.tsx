@@ -270,7 +270,7 @@ export default function QuizPrepPage() {
         </TheoremCard>
 
         {/* 6. מנה השוואה */}
-        <TheoremCard title="נוסחת צבר 2 — גרסת השוואה (מנה)" accent={C.purple}>
+        <TheoremCard id="thm-ratio-2a" title="נוסחת צבר 2 — גרסת השוואה (מנה)" accent={C.purple}>
           <strong>משפט:</strong> יהיו <K m="(a_n),(b_n)" /> חיוביות. נניח שלכל <K m="n \ge N" />:{" "}
           <K m="\frac{a_{n+1}}{a_n} \le \frac{b_{n+1}}{b_n}" />.
           אם <K m="\sum b_n < \infty" /> אזי <K m="\sum a_n < \infty" />.
@@ -282,7 +282,7 @@ export default function QuizPrepPage() {
         </TheoremCard>
 
         {/* 7. מבחן המנה */}
-        <TheoremCard title="נוסחת צבר 2, גרסה 2 — מבחן המנה ✱" accent={C.purple}>
+        <TheoremCard id="thm-ratio-2b" title="נוסחת צבר 2, גרסה 2 — מבחן המנה ✱" accent={C.purple}>
           <strong>משפט:</strong> יהי <K m="L = \lim_{n\to\infty} \frac{a_{n+1}}{a_n}" /> קיים עם <K m="0 \le L < 1" />.
           אזי <K m="\sum a_n < \infty" />.
           <Proof>
@@ -297,7 +297,7 @@ export default function QuizPrepPage() {
         </TheoremCard>
 
         {/* 8. שורש התבדרות */}
-        <TheoremCard title="משפט 3 — שורש, גרסת התבדרות ✱" accent={C.red}>
+        <TheoremCard id="thm-root-div" title="משפט 3 — שורש, גרסת התבדרות ✱" accent={C.red}>
           <strong>משפט:</strong> יהי <K m="L = \lim_{n\to\infty} \sqrt[n]{a_n} > 1" />.
           אזי <K m="\lim a_n \ne 0" /> — הטור מתבדר.
           <Proof>
@@ -308,7 +308,7 @@ export default function QuizPrepPage() {
         </TheoremCard>
 
         {/* 9. מבחן האינטגרל */}
-        <TheoremCard title="משפט 5 — מבחן האינטגרל ✱" accent={C.amber}>
+        <TheoremCard id="thm-integral" title="משפט 5 — מבחן האינטגרל ✱" accent={C.amber}>
           <strong>משפט:</strong> תהי <K m="f" /> על <K m="[k,\infty)" />, יורדת, <K m="\lim_{x\to\infty} f(x)=0" />.
           אזי <K m="\sum_{n=k}^\infty f(n) < \infty" /> אמ"מ <K m="\int_k^\infty f(x)\,dx < \infty" />.
           יתרה מזו:
@@ -334,7 +334,7 @@ export default function QuizPrepPage() {
         </TheoremCard>
 
         {/* 10. התכנסות מוחלטת */}
-        <TheoremCard title="משפט 1 — מבחן ההתכנסות המוחלטת" accent={C.green}>
+        <TheoremCard id="thm-abs-conv" title="משפט 1 — מבחן ההתכנסות המוחלטת" accent={C.green}>
           <strong>משפט:</strong> אם <K m="\sum |a_n| < \infty" /> אזי <K m="\sum a_n < \infty" />.
           <Proof>
             <Step n={1} text={<>הגדר <K m="b_n = |a_n| - a_n" />. מאחר ש <K m="|x| \ge x" /> ו<K m="|x| \ge -x" />:<K d m="0 \le b_n = |a_n|-a_n \le 2|a_n|" /></>} />
@@ -344,7 +344,7 @@ export default function QuizPrepPage() {
         </TheoremCard>
 
         {/* 11. לייבניץ */}
-        <TheoremCard title="משפט 2 — מבחן לייבניץ ✱" accent={C.navy}>
+        <TheoremCard id="thm-leibniz" title="משפט 2 — מבחן לייבניץ ✱" accent={C.navy}>
           <strong>משפט:</strong> נניח ש<K m="(a_n)" /> יורדת, <K m="\lim a_n = 0" />.
           אזי <K m="\sum_{n=1}^\infty (-1)^{n+1}a_n = S \in \mathbb{R}" /> ו<K m="a_1-a_2 \le S \le a_1" />.
           <Proof>
@@ -368,14 +368,16 @@ export default function QuizPrepPage() {
           </Proof>
         </TheoremCard>
 
+        </div>{/* /part-a */}
+
         {/* ══════════════════════════════════════════════════════
             PART B — HOMEWORK ANALYSIS
         ══════════════════════════════════════════════════════ */}
-        <div style={{ marginTop: "2.5rem" }}>
+        <div id="part-b" style={{ marginTop: "2.5rem" }}>
           <SectionTitle color="#7c3aed">חלק ב׳ — ניתוח שיעורי בית 6, 7, 8</SectionTitle>
 
           {/* HW 6 */}
-          <div style={{ background: C.card, borderRadius: 12, border: `1px solid ${C.border}`,
+          <div id="hw6" style={{ background: C.card, borderRadius: 12, border: `1px solid ${C.border}`,
             boxShadow: C.shadow, marginBottom: "1.5rem", overflow: "hidden" }}>
             <div style={{ padding: "10px 18px", background: C.navyBg,
               borderBottom: `1px solid ${C.navyBd}`, fontWeight: 800,
@@ -399,7 +401,7 @@ export default function QuizPrepPage() {
           </div>
 
           {/* HW 7 */}
-          <div style={{ background: C.card, borderRadius: 12, border: `1px solid ${C.border}`,
+          <div id="hw7" style={{ background: C.card, borderRadius: 12, border: `1px solid ${C.border}`,
             boxShadow: C.shadow, marginBottom: "1.5rem", overflow: "hidden" }}>
             <div style={{ padding: "10px 18px", background: C.purpleBg,
               borderBottom: `1px solid ${C.purpleBd}`, fontWeight: 800,
@@ -422,7 +424,7 @@ export default function QuizPrepPage() {
           </div>
 
           {/* HW 8 */}
-          <div style={{ background: C.card, borderRadius: 12, border: `1px solid ${C.border}`,
+          <div id="hw8" style={{ background: C.card, borderRadius: 12, border: `1px solid ${C.border}`,
             boxShadow: C.shadow, marginBottom: "1.5rem", overflow: "hidden" }}>
             <div style={{ padding: "10px 18px", background: C.amberBg,
               borderBottom: `1px solid ${C.amberBd}`, fontWeight: 800,
@@ -451,7 +453,7 @@ export default function QuizPrepPage() {
         {/* ══════════════════════════════════════════════════════
             PART C — PRACTICE QUESTIONS
         ══════════════════════════════════════════════════════ */}
-        <div style={{ marginTop: "2.5rem" }}>
+        <div id="part-c" style={{ marginTop: "2.5rem" }}>
           <SectionTitle color={C.green}>חלק ג׳ — 4 שאלות לתרגול</SectionTitle>
 
           {[
@@ -543,7 +545,7 @@ export default function QuizPrepPage() {
         {/* ══════════════════════════════════════════════════════
             PART D — KEY POINTS
         ══════════════════════════════════════════════════════ */}
-        <div style={{ marginTop: "2.5rem" }}>
+        <div id="part-d" style={{ marginTop: "2.5rem" }}>
           <SectionTitle color={C.red}>חלק ד׳ — נקודות חשובות לזכור</SectionTitle>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))",
             gap: "0.875rem" }}>
@@ -587,7 +589,8 @@ export default function QuizPrepPage() {
           </p>
         </div>
 
-      </div>
+        </div>{/* /inner content */}
+      </div>{/* /flex outer */}
     </div>
   );
 }
