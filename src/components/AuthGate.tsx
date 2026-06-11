@@ -45,6 +45,19 @@ export function AuthGate({
   useEffect(() => {
     let isMounted = true;
 
+    // Optimistic auth: if localStorage has a cached email, show as authenticated immediately
+    // while server validates in background. Eliminates the modal flash for returning users.
+    try {
+      const cached = localStorage.getItem("infi_auth_cache");
+      if (cached) {
+        const { email: cachedEmail } = JSON.parse(cached) as { email?: string };
+        if (typeof cachedEmail === "string" && cachedEmail) {
+          setAuthState({ status: "authenticated", email: cachedEmail });
+          onAuthenticated?.(cachedEmail);
+        }
+      }
+    } catch { /* localStorage may be unavailable */ }
+
     async function checkAuth() {
       try {
         const response = await fetch("/api/auth/status", {
@@ -55,10 +68,14 @@ export function AuthGate({
         if (!isMounted) return;
 
         if (response.ok && data.ok && data.email) {
+          try { localStorage.setItem("infi_auth_cache", JSON.stringify({ email: data.email })); } catch {}
           setAuthState({ status: "authenticated", email: data.email });
           onAuthenticated?.(data.email);
           return;
         }
+
+        // Server denied — clear cache
+        try { localStorage.removeItem("infi_auth_cache"); } catch {}
 
         // detect abandoned payment: not authenticated but pending payment in localStorage
         try {
@@ -87,8 +104,13 @@ export function AuthGate({
               : undefined,
         });
       } catch {
+        // Network error: if we already set optimistic auth, keep it; otherwise block
         if (isMounted) {
-          setAuthState({ status: "blocked", message: "לא הצלחתי לבדוק את החיבור כרגע." });
+          setAuthState((prev) =>
+            prev.status === "authenticated"
+              ? prev
+              : { status: "blocked", message: "לא הצלחתי לבדוק את החיבור כרגע." }
+          );
         }
       }
     }
@@ -122,6 +144,7 @@ export function AuthGate({
       };
 
       if (response.ok && data.ok && data.email) {
+        try { localStorage.setItem("infi_auth_cache", JSON.stringify({ email: data.email })); } catch {}
         setAuthState({ status: "authenticated", email: data.email });
         onAuthenticated?.(data.email, { showOnboarding: data.isFirstLogin === true });
         return;

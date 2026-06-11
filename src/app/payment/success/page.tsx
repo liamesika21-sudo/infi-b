@@ -47,6 +47,9 @@ export default function PaymentSuccessPage() {
 
       if (res.ok && data.ok) {
         localStorage.removeItem(STORAGE_KEY);
+        if (data.email) {
+          try { localStorage.setItem("infi_auth_cache", JSON.stringify({ email: data.email })); } catch {}
+        }
         setState("success");
         setMessage("גישה הופעלה בהצלחה! מועברים לאתר...");
         if (data.email) setEmail(data.email);
