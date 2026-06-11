@@ -1087,14 +1087,18 @@ export async function loginWithEmail(
     return { ok: false as const, status: 400, message: "צריך להזין כתובת מייל תקינה." };
   }
 
-  const effectiveAllowed = await getEffectiveAllowedEmails(authFile);
-  if (!effectiveAllowed.includes(normalizedEmail)) {
-    return {
-      ok: false as const,
-      status: 403,
-      reason: "not_allowed",
-      message: "המייל הזה לא נמצא ברשימת המורשים.",
-    };
+  const adminEmails = getConfiguredAdminEmails(authFile);
+  const isAdmin = adminEmails.includes(normalizedEmail);
+  if (!isAdmin) {
+    const effectiveAllowed = await getEffectiveAllowedEmails(authFile);
+    if (!effectiveAllowed.includes(normalizedEmail)) {
+      return {
+        ok: false as const,
+        status: 403,
+        reason: "not_allowed",
+        message: "המייל הזה לא נמצא ברשימת המורשים.",
+      };
+    }
   }
 
   const currentDeviceId = getClientDeviceId(request);

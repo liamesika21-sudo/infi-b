@@ -1,36 +1,31 @@
 {
   "allowedEmails": [
+    "liamesika21@gmail.com",
     "shoham.rosen@post.runi.ac.il",
     "rotem.lezerovich@post.runi.ac.il",
     "hadar.sarig@post.runi.ac.il",
     "linoy.baliti@post.runi.ac.il",
     "hilarahel.silber@post.runi.ac.il",
-    "liamesika2121@gmail.com",
-        "liamesika21@gmail.com",
-
     "gabrielle.geffen@post.runi.ac.il",
     "tomccohen@gmail.com",
     "adam.peles@runi.ac.il",
     "giladezer80@gmail.com",
     "dana.maimon@post.runi.ac.il",
-     "mika.rotman@post.runi.ac.il",
+    "mika.rotman@post.runi.ac.il",
     "shiralior.nahmany@post.runi.ac.il",
     "michalrozennew@gmail.com",
     "omer.pekatch@post.runi.ac.il"
   ],
   "proEmails": [
-    "liamesika2121@gmail.com",
-            "liamesika21@gmail.com",
-
+    "liamesika21@gmail.com",
     "omer.pekatch@post.runi.ac.il",
     "michalrozennew@gmail.com",
-        "giladezer80@gmail.com",
-
+    "giladezer80@gmail.com",
     "tomccohen@gmail.com"
   ],
   "adminEmails": [
-    "liamesika2121@gmail.com",
-            "liamesika21@gmail.com"
+    "liamesika21@gmail.com",
+    "liamesika2121@gmail.com"
   ],
   "registrationRequests": [],
   "users": {}
