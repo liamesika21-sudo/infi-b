@@ -53,7 +53,7 @@ export type RegistrationRequest = {
 
 export type PaymentMethod = "bit" | "paybox" | "credit";
 export type PaymentActionType = "manual_instructions_shown" | "payment_link_opened";
-export type PaymentStatus = "pending" | "manual_pending" | "payment_link_opened" | "activated" | "failed";
+export type PaymentStatus = "pending" | "manual_pending" | "payment_link_opened" | "activated" | "failed" | "abandoned";
 
 export type PaymentActionRecord = {
   id: string;
@@ -339,6 +339,8 @@ export async function markRegistrationStatus(email: string, status: PaymentStatu
   const requests = await getRegistrationRequests(authFile);
   const existing = requests.find((r) => normalizeEmail(r.email) === normalized);
   if (!existing) return;
+  // never downgrade from activated
+  if (existing.paymentStatus === "activated") return;
   await persistRegistrationRequest(authFile, { ...existing, paymentStatus: status });
 }
 

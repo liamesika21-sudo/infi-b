@@ -60,6 +60,23 @@ export function AuthGate({
           return;
         }
 
+        // detect abandoned payment: not authenticated but pending payment in localStorage
+        try {
+          const raw = localStorage.getItem("infi_pending_payment");
+          if (raw) {
+            const pending = JSON.parse(raw) as { email?: string; plan?: string };
+            if (pending?.email) {
+              void fetch("/api/payment/failed", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email: pending.email, status: "abandoned" }),
+                keepalive: true,
+              }).catch(() => {});
+            }
+            localStorage.removeItem("infi_pending_payment");
+          }
+        } catch { /* silent */ }
+
         setAuthState({
           status: "blocked",
           message:

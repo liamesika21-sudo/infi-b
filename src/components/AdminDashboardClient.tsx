@@ -37,7 +37,7 @@ import type { MentorLogEntry } from "@/lib/mentor-credits";
 type AdminTab = "overview" | "users" | "chats" | "sessions" | "registrations" | "payments";
 type UserFilter = "all" | "allowed" | "not_allowed" | "risk" | "active" | "no_login";
 type PlanFilter = "all" | "basic" | "pro";
-type PaymentFilter = "all" | "pending" | "manual_pending" | "payment_link_opened" | "activated" | "failed";
+type PaymentFilter = "all" | "pending" | "manual_pending" | "payment_link_opened" | "activated" | "failed" | "abandoned";
 
 // ─── Utilities ─────────────────────────────────────────────────────────────────
 
@@ -69,21 +69,23 @@ function hasMultiDeviceAttempt(user: AdminAuthUser): boolean {
 
 function paymentStatusLabel(status?: RegistrationRequest["paymentStatus"]): string {
   switch (status) {
-    case "manual_pending": return "הוראות ידני";
-    case "payment_link_opened": return "פתח דף תשלום";
-    case "activated": return "שולם ונפתח ✓";
-    case "failed": return "תשלום נכשל";
-    default: return "ללא רכישה";
+    case "manual_pending":       return "הוראות ידני";
+    case "payment_link_opened":  return "פתח דף תשלום";
+    case "activated":            return "שולם ונפתח ✓";
+    case "failed":               return "תשלום נכשל ✕";
+    case "abandoned":            return "עזב/ה באמצע";
+    default:                     return "ללא רכישה";
   }
 }
 
 function paymentStatusClass(status?: RegistrationRequest["paymentStatus"]): string {
   switch (status) {
-    case "manual_pending": return "badge-amber";
-    case "payment_link_opened": return "badge-navy-light";
-    case "activated": return "badge-green";
-    case "failed": return "badge-red";
-    default: return "badge-muted";
+    case "manual_pending":       return "badge-amber";
+    case "payment_link_opened":  return "badge-navy-light";
+    case "activated":            return "badge-green";
+    case "failed":               return "badge-red";
+    case "abandoned":            return "badge-amber";
+    default:                     return "badge-muted";
   }
 }
 
@@ -1067,6 +1069,7 @@ function RegistrationsSection({
           <option value="payment_link_opened">פתחו לינק תשלום</option>
           <option value="activated">שולמו ונפתחו</option>
           <option value="failed">תשלום נכשל</option>
+          <option value="abandoned">עזבו באמצע</option>
           <option value="manual_pending">הוראות ידני</option>
         </Select>
       </div>
