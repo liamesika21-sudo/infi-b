@@ -221,10 +221,11 @@ function PracticeQ({ q, index, checked, onToggle }: { q: PracticeQuestion; index
           {checked ? "פתרתי" : "סמן כפתור"}
         </button>
       </div>
-      <div className="px-4 py-3 text-sm leading-relaxed" style={{ direction: "rtl" }}>
+      <div className="px-4 py-3 text-sm leading-relaxed">
         <MathContent
           text={showHe && q.contentHe ? q.contentHe : q.content}
           className="practice-question-text"
+          dir={showHe && q.contentHe ? "rtl" : "ltr"}
         />
       </div>
     </div>

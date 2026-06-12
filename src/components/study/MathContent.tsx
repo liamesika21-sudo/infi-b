@@ -65,17 +65,9 @@ function renderInlineLine(rawLine: string) {
           />
         );
       }
-      return (
-        <span key={i} dir="auto" style={{ unicodeBidi: "plaintext" }}>
-          {renderBoldText(unwrapMathDelim(part))}
-        </span>
-      );
+      return <span key={i}>{renderBoldText(unwrapMathDelim(part))}</span>;
     }
-    return (
-      <span key={i} dir="auto" style={{ unicodeBidi: "plaintext" }}>
-        {renderBoldText(part)}
-      </span>
-    );
+    return <span key={i}>{renderBoldText(part)}</span>;
   });
 }
 
@@ -84,10 +76,10 @@ function renderInlineLine(rawLine: string) {
  * display equations. Full-bold lines become sub-headings. Bullet and
  * numbered-list lines get dedicated structure. Everything else is a paragraph.
  */
-export function MathContent({ text, className = "" }: { text: string; className?: string }) {
+export function MathContent({ text, className = "", dir: contentDir = "rtl" }: { text: string; className?: string; dir?: "rtl" | "ltr" }) {
   const lines = text.split("\n");
   return (
-    <div className={`math-content ${className}`} dir="rtl">
+    <div className={`math-content ${className}`} dir={contentDir}>
       {lines.map((line, li) => {
         // Empty line → visible paragraph break
         if (!line.trim()) return <div key={li} className="h-6" />;
@@ -113,7 +105,7 @@ export function MathContent({ text, className = "" }: { text: string; className?
         // Full-bold line (e.g. **תזכורת: משפט דרבו:**) → sub-heading
         if (/^\*\*[^*\n]+\*\*$/.test(trimmed)) {
           return (
-            <p key={li} className="mc-head" dir="rtl">
+            <p key={li} className="mc-head" dir={contentDir}>
               {renderInlineLine(trimmed.slice(2, -2))}
             </p>
           );
@@ -122,7 +114,7 @@ export function MathContent({ text, className = "" }: { text: string; className?
         // Bullet point (• text)
         if (trimmed.startsWith("• ") || trimmed.startsWith("• ")) {
           return (
-            <p key={li} className="mc-bullet" dir="rtl">
+            <p key={li} className="mc-bullet" dir={contentDir}>
               {renderInlineLine(trimmed.slice(2))}
             </p>
           );
@@ -132,7 +124,7 @@ export function MathContent({ text, className = "" }: { text: string; className?
         const numMatch = trimmed.match(/^(\d+)\.\s+(.+)/);
         if (numMatch) {
           return (
-            <div key={li} className="mc-num">
+            <div key={li} className="mc-num" dir={contentDir}>
               <span className="mc-num-marker">{numMatch[1]}.</span>
               <span className="mc-num-body">{renderInlineLine(numMatch[2])}</span>
             </div>
@@ -141,7 +133,7 @@ export function MathContent({ text, className = "" }: { text: string; className?
 
         // Regular paragraph
         return (
-          <p key={li} dir="rtl">
+          <p key={li} dir={contentDir}>
             {renderInlineLine(line)}
           </p>
         );

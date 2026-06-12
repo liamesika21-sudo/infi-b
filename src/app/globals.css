@@ -133,7 +133,6 @@ p { margin: 0; }
 }
 
 .math-content {
-  direction: rtl;
   font-size: 0.9375rem;
   font-family: var(--font-heebo), "Heebo", "Arial Hebrew", Arial, sans-serif;
   text-align: start;
@@ -141,7 +140,6 @@ p { margin: 0; }
 .math-content p {
   margin: 0.6rem 0;
   line-height: 2.1;
-  unicode-bidi: plaintext;
 }
 
 /* Inside task lists, tighter line spacing */
@@ -204,7 +202,6 @@ p { margin: 0; }
   margin: 1.2rem 0 0.5rem;
   padding-bottom: 0.3rem;
   border-bottom: 1px solid var(--border);
-  unicode-bidi: plaintext;
   line-height: 1.7;
 }
 .practice-question-text .mc-head {
@@ -217,7 +214,6 @@ p { margin: 0; }
   padding-right: 1.3rem;
   margin: 0.45rem 0;
   line-height: 2.0;
-  unicode-bidi: plaintext;
 }
 .mc-bullet::before {
   content: "•";
@@ -233,7 +229,6 @@ p { margin: 0; }
   gap: 0.55rem;
   align-items: flex-start;
   margin: 0.5rem 0;
-  direction: rtl;
 }
 .mc-num-marker {
   font-weight: 900;
@@ -247,7 +242,6 @@ p { margin: 0; }
   flex: 1;
   min-width: 0;
   line-height: 2.0;
-  unicode-bidi: plaintext;
 }
 
 /* ═══════════════════════════════════════════════════════
