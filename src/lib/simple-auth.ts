@@ -1071,7 +1071,8 @@ export async function validateCookieForRequest(request: Request): Promise<AuthCh
 
   const authFile = await readAuthFile();
   const effectiveAllowed = await getEffectiveAllowedEmails(authFile);
-  if (!effectiveAllowed.includes(authCookie.email)) {
+  const adminEmails = getConfiguredAdminEmails(authFile);
+  if (!effectiveAllowed.includes(authCookie.email) && !adminEmails.includes(authCookie.email)) {
     return { ok: false, reason: "not_allowed" };
   }
 
