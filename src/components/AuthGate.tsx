@@ -28,10 +28,23 @@ export function AuthGate({
 }) {
   const [authState, setAuthState] = useState<AuthState>({ status: "checking" });
   const [mode, setMode] = useState<"login" | "register">("register");
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState(() => {
+    if (typeof window === "undefined") return "";
+    try {
+      const cached = localStorage.getItem("infi_auth_cache");
+      if (cached) {
+        const { email: e } = JSON.parse(cached) as { email?: string };
+        if (typeof e === "string" && e) return e;
+      }
+    } catch {}
+    return "";
+  });
   const [phone, setPhone] = useState("");
   const [selectedPlan, setSelectedPlan] = useState<"basic" | "pro">("basic");
-  const [acceptedSingleDeviceNotice, setAcceptedSingleDeviceNotice] = useState(false);
+  const [acceptedSingleDeviceNotice, setAcceptedSingleDeviceNotice] = useState(() => {
+    if (typeof window === "undefined") return false;
+    try { return !!localStorage.getItem("infi_auth_cache"); } catch { return false; }
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isRegisterSubmitting, setIsRegisterSubmitting] = useState(false);
   const [message, setMessage] = useState("");

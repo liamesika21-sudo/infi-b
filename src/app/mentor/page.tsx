@@ -1,14 +1,14 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
-import { Send, Sparkles, Lock, BookOpenCheck } from "lucide-react";
+import { Send, Sparkles, Lock, BookOpenCheck, BookmarkPlus, Check, Maximize2, Minimize2 } from "lucide-react";
 import katex from "katex";
 import "katex/dist/katex.min.css";
 import weekSummariesRaw from "@/../data/generated/calculus2/week-chat-summaries.json";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 interface Message {
-  role: "user" | "assistant";
+  role: "user" | "assistant" | "system";
   content: string;
 }
 
@@ -178,8 +178,28 @@ function ProGate() {
 
 // ── Message bubble ─────────────────────────────────────────────────────────
 
-function MessageBubble({ msg, isStreaming }: { msg: Message; isStreaming?: boolean }) {
+function MessageBubble({ msg, isStreaming, onSave, saved }: {
+  msg: Message;
+  isStreaming?: boolean;
+  onSave?: () => void;
+  saved?: boolean;
+}) {
   const isUser = msg.role === "user";
+
+  // System confirmation message
+  if (msg.role === "system") {
+    return (
+      <div className="flex justify-center py-1">
+        <span
+          className="flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold"
+          style={{ background: "var(--teal-light)", color: "var(--teal)", border: "1px solid var(--teal-border)" }}
+        >
+          <Check className="h-3 w-3" />
+          {msg.content}
+        </span>
+      </div>
+    );
+  }
 
   return (
     <div className={`flex gap-3 ${isUser ? "flex-row-reverse" : "flex-row"}`}>
@@ -195,32 +215,50 @@ function MessageBubble({ msg, isStreaming }: { msg: Message; isStreaming?: boole
         {isUser ? "אני" : "M"}
       </div>
 
-      {/* Bubble */}
-      <div
-        className={`rounded-2xl px-4 py-3 text-sm leading-relaxed ${isUser ? "max-w-[80%]" : "max-w-[92%]"}`}
-        style={
-          isUser
-            ? { background: "var(--navy-mid)", color: "#fff" }
-            : {
-                background: "var(--bg-subtle)",
-                border: "1px solid var(--border)",
-                color: "var(--text-primary)",
-              }
-        }
-      >
-        {isUser ? (
-          <p>{msg.content}</p>
-        ) : (
-          <div
-            dangerouslySetInnerHTML={{ __html: formatMessageHtml(msg.content) }}
-            style={{ direction: "rtl" }}
-          />
-        )}
-        {isStreaming && (
-          <span
-            className="inline-block w-1.5 h-4 rounded-sm animate-pulse ml-0.5"
-            style={{ background: "var(--navy-mid)", verticalAlign: "middle" }}
-          />
+      {/* Bubble + save button */}
+      <div className={isUser ? "max-w-[80%]" : "max-w-[92%] min-w-0"}>
+        <div
+          className="rounded-2xl px-4 py-3 text-sm leading-relaxed"
+          style={
+            isUser
+              ? { background: "var(--navy-mid)", color: "#fff" }
+              : {
+                  background: "var(--bg-subtle)",
+                  border: "1px solid var(--border)",
+                  color: "var(--text-primary)",
+                }
+          }
+        >
+          {isUser ? (
+            <p>{msg.content}</p>
+          ) : (
+            <div
+              dangerouslySetInnerHTML={{ __html: formatMessageHtml(msg.content) }}
+              style={{ direction: "rtl" }}
+            />
+          )}
+          {isStreaming && (
+            <span
+              className="inline-block w-1.5 h-4 rounded-sm animate-pulse ml-0.5"
+              style={{ background: "var(--navy-mid)", verticalAlign: "middle" }}
+            />
+          )}
+        </div>
+
+        {/* Save to notebook button (assistant only) */}
+        {onSave && !isStreaming && (
+          <div className="mt-1 flex justify-start">
+            <button
+              type="button"
+              onClick={onSave}
+              disabled={saved}
+              className="flex items-center gap-1 rounded-lg px-2 py-0.5 text-[11px] font-semibold transition hover:opacity-70 disabled:opacity-50"
+              style={{ color: saved ? "var(--teal)" : "var(--text-muted)" }}
+            >
+              {saved ? <Check className="h-3 w-3" /> : <BookmarkPlus className="h-3 w-3" />}
+              {saved ? "נשמר במחברת" : "שמור למחברת"}
+            </button>
+          </div>
         )}
       </div>
     </div>
@@ -246,7 +284,7 @@ function loadStoredMessages(): Message[] {
 
 function saveMessages(msgs: Message[]) {
   try {
-    localStorage.setItem(CHAT_STORAGE_KEY, JSON.stringify(msgs));
+    localStorage.setItem(CHAT_STORAGE_KEY, JSON.stringify(msgs.filter(m => m.role !== "system")));
   } catch {}
 }
 
@@ -259,6 +297,8 @@ function ChatInterface({ status }: { status: MentorStatus }) {
   const [streamingContent, setStreamingContent] = useState("");
   const [creditsUsed, setCreditsUsed] = useState(status.used);
   const [error, setError] = useState<string | null>(null);
+  const [savedIndices, setSavedIndices] = useState<Set<number>>(new Set());
+  const [isExpanded, setIsExpanded] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -274,6 +314,35 @@ function ChatInterface({ status }: { status: MentorStatus }) {
   useEffect(() => {
     saveMessages(messages);
   }, [messages]);
+
+  // Lock body scroll + close on Escape while expanded
+  useEffect(() => {
+    if (!isExpanded) return;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsExpanded(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [isExpanded]);
+
+  // Show a pre-written weekly summary instantly — no API call, no tokens spent
+  const sendWeekSummary = useCallback((w: WeekSummary) => {
+    if (isLoading) return;
+    setError(null);
+    const splitIdx = w.message.indexOf("\n\nמה הדברים");
+    const summaryBody = splitIdx >= 0 ? w.message.slice(0, splitIdx).trim() : w.message;
+    const answer = `${summaryBody}\n\n💬 רוצה להעמיק? שאל אותי על כל אחד מהנושאים למעלה ואסביר לעומק עם דוגמאות.`;
+    setMessages((prev) => [
+      ...prev,
+      { role: "user", content: `סיכום שבוע ${w.week} — ${w.title}` },
+      { role: "assistant", content: answer },
+    ]);
+  }, [isLoading]);
 
   const sendMessage = useCallback(
     async (text: string) => {
@@ -339,6 +408,21 @@ function ChatInterface({ status }: { status: MentorStatus }) {
     [messages, isLoading, creditsUsed, status.limit]
   );
 
+  const saveToNotebook = useCallback(async (content: string, index: number) => {
+    if (savedIndices.has(index)) return;
+    try {
+      const res = await fetch("/api/notebook", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type: "note", weekNumber: 0, content, source: "מנטור AI" }),
+      });
+      if (res.ok) {
+        setSavedIndices(prev => new Set([...prev, index]));
+        setMessages(prev => [...prev, { role: "system", content: "ההסבר נשמר למחברת" }]);
+      }
+    } catch {}
+  }, [savedIndices]);
+
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
@@ -355,7 +439,22 @@ function ChatInterface({ status }: { status: MentorStatus }) {
   const showStarters = messages.length === 0 && !isLoading;
 
   return (
-    <div className="flex flex-col" style={{ height: "calc(100vh - 140px)", minHeight: "500px" }}>
+    <div
+      className="flex flex-col"
+      style={
+        isExpanded
+          ? {
+              position: "fixed",
+              inset: 0,
+              zIndex: 50,
+              height: "100vh",
+              maxHeight: "100vh",
+              background: "var(--bg-page)",
+              padding: "12px",
+            }
+          : { height: "calc(100vh - 140px)", minHeight: "500px" }
+      }
+    >
       {/* Header */}
       <div
         className="shrink-0 flex items-center justify-between rounded-t-2xl px-5 py-3.5"
@@ -382,19 +481,31 @@ function ChatInterface({ status }: { status: MentorStatus }) {
             </p>
           </div>
         </div>
-        {messages.length > 0 && (
+        <div className="flex items-center gap-3">
+          {messages.length > 0 && (
+            <button
+              type="button"
+              onClick={() => {
+                setMessages([]);
+                saveMessages([]);
+              }}
+              className="text-[11px] font-bold transition hover:opacity-70"
+              style={{ color: "var(--text-muted)" }}
+            >
+              נקה שיחה
+            </button>
+          )}
           <button
             type="button"
-            onClick={() => {
-              setMessages([]);
-              saveMessages([]);
-            }}
-            className="text-[11px] font-bold transition hover:opacity-70"
+            onClick={() => setIsExpanded((v) => !v)}
+            title={isExpanded ? "צמצם" : "מסך מלא"}
+            aria-label={isExpanded ? "צמצם" : "מסך מלא"}
+            className="flex items-center justify-center transition hover:opacity-70"
             style={{ color: "var(--text-muted)" }}
           >
-            נקה שיחה
+            {isExpanded ? <Minimize2 className="h-4 w-4" /> : <Maximize2 className="h-4 w-4" />}
           </button>
-        )}
+        </div>
       </div>
 
       {/* Messages area */}
@@ -418,7 +529,7 @@ function ChatInterface({ status }: { status: MentorStatus }) {
                   <button
                     key={w.week}
                     type="button"
-                    onClick={() => void sendMessage(w.message)}
+                    onClick={() => sendWeekSummary(w)}
                     className="rounded-xl border px-3 py-2 text-right text-xs font-bold transition hover:opacity-80"
                     style={{
                       borderColor: "var(--teal-border)",
@@ -471,7 +582,12 @@ function ChatInterface({ status }: { status: MentorStatus }) {
 
         {/* Message history */}
         {messages.map((msg, i) => (
-          <MessageBubble key={i} msg={msg} />
+          <MessageBubble
+            key={i}
+            msg={msg}
+            onSave={msg.role === "assistant" ? () => void saveToNotebook(msg.content, i) : undefined}
+            saved={savedIndices.has(i)}
+          />
         ))}
 
         {/* Streaming response */}
