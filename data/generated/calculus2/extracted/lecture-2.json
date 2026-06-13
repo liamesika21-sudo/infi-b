@@ -1,0 +1,205 @@
+{
+  "lecture": 2,
+  "date": "26.03.26",
+  "topics": ["אינטגרל לא מסוים (פונקציה קדומה)", "שיטות אינטגרציה", "אינטגרל מסוים (סכומי דארבו)"],
+  "items": [
+    {
+      "kind": "definition",
+      "label": "הגדרה",
+      "number": null,
+      "name": "פונקציה קדומה",
+      "statement_he": "יהי $I \\subseteq \\mathbb{R}$ קטע ותהיינה $F, f$ שתי פונקציות המוגדרות על $I$. נאמר כי $F$ היא פונקציה קדומה של $f$ ב-$I$ אם:\n(i) $F$ גזירה ב-$I$.\n(ii) לכל $x \\in I$ מתקיים $F'(x) = f(x)$.",
+      "proof_he": null,
+      "topic": "אינטגרל לא מסוים"
+    },
+    {
+      "kind": "definition",
+      "label": "הגדרה",
+      "number": null,
+      "name": "אינטגרל לא מסוים",
+      "statement_he": "במקרה כזה, נגדיר את הסכום הכולל (indefinite) של $f$ על $I$ ע\"י:\n$$\\int f(x)\\,dx = \\{ F(x) + C : C \\in \\mathbb{R} \\}$$\nובאופן מקוצר:\n$$\\int f(x)\\,dx = F(x) + C.$$",
+      "proof_he": null,
+      "topic": "אינטגרל לא מסוים"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמאות",
+      "number": null,
+      "name": "אינטגרלים בסיסיים (טבלת אינטגרלים)",
+      "statement_he": "טבלת אינטגרלים בסיסיים:\n1. $\\int \\cos x\\,dx = \\sin x + C$\n2. $\\int \\sin x\\,dx = -\\cos x + C$\n3. $\\int x\\,dx = \\frac{x^2}{2} + C$\n4. $\\int x^2\\,dx = \\frac{x^3}{3} + C$\n5. $\\int \\frac{dx}{x} = \\ln x + C$ ב-$(0, \\infty)$;\nב-$(-\\infty, 0)$: $\\int \\frac{dx}{x} = \\ln(-x) + C$, כי $[\\ln(-x)]' = \\frac{1}{-x} \\cdot (-1) = \\frac{1}{x}$, ובאופן כללי $\\int \\frac{dx}{x} = \\ln|x| + C$.",
+      "proof_he": null,
+      "topic": "אינטגרל לא מסוים"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט 1",
+      "number": "1",
+      "name": "פונקציות קדומות נבדלות בקבוע",
+      "statement_he": "תהיינה $f, F, G$ שלוש פונקציות המוגדרות בקטע $I \\subseteq \\mathbb{R}$. נניח כי $F, G$ הן פונקציות קדומות של $f$ בקטע $I$. אזי קיים $C \\in \\mathbb{R}$ כך שלכל $x \\in I$ מתקיים\n$$F(x) = G(x) + C.$$",
+      "proof_he": "נגדיר את הפונקציה העזר $h$:\n$h(x) = F(x) - G(x)$ לכל $x \\in I$.\nואז $h$ גזירה ב-$I$ (כהפרש של שתי גזירות) ולכל $x \\in I$ מתקיים\n$$h'(x) = F'(x) - G'(x) = f(x) - f(x) = 0$$\n(לפי ההגדרה).\nכעת ממסקנה חלקה ב' בהרצאה 1 קיים $C \\in \\mathbb{R}$ כך שלכל $x \\in I$ מתקיים $h(x) = C$, כלומר\n$h(x) = F(x) - G(x) = C$ לכל $x \\in I$, ואז\n$F(x) = G(x) + C$ לכל $x \\in I$.",
+      "topic": "אינטגרל לא מסוים"
+    },
+    {
+      "kind": "corollary",
+      "label": "מסקנה 1",
+      "number": "1",
+      "name": "אוסף כל הפונקציות הקדומות",
+      "statement_he": "$$\\int f(x)\\,dx = \\{ F(x) + C : C \\in \\mathbb{R} \\} = \\{ \\text{כל הפונקציות הקדומות של } f \\text{ ב-}I \\}.$$\n(כאשר $F$ פונקציה קדומה של $f$).",
+      "proof_he": null,
+      "topic": "אינטגרל לא מסוים"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמא",
+      "number": null,
+      "name": "הפונקציה הקדומה אינה רציפה בהכרח",
+      "statement_he": "הפונקציה הקדומה: $F(x) = \\begin{cases} \\ln x & x > 0 \\\\ \\ln(-x) + 1 & x < 0 \\end{cases}$ לכל $x \\neq 0$.\nהיא קדומה של $\\frac{1}{x}$ כי $F'(x) = \\frac{1}{x}$ לכל $x \\neq 0$.\nאבל אז לפי קיים $C \\in \\mathbb{R}$ כך ש- $F(x) = \\ln|x| + C$ לכל $x \\neq 0$.\nאבל זה לא נכון, כי יש חשיבות בהנחה של $I$ קטע. הצורך ש-$F$ קדומה היא בקטע ולא בכמה קטעים, וגם בתחום ההגדרה של $f$ כך שלם.",
+      "proof_he": null,
+      "topic": "אינטגרל לא מסוים"
+    },
+    {
+      "kind": "note",
+      "label": "הערה 1",
+      "number": "1",
+      "name": "תנאי לקיום פונקציה קדומה",
+      "statement_he": "אם קיים $\\int f(x)\\,dx$ אזי קודמת של $f$ ב-$I$.\nמסקנה: אם קיים $\\int D(x)\\,dx$ אזי קיים כי ראינו ש- $D$ פונקציה קדומה אבל לא קיים $D$ (כפי שנראה בהרצאה 24).",
+      "proof_he": null,
+      "topic": "אינטגרל לא מסוים"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט 2",
+      "number": "2",
+      "name": "תכונות האינטגרל הלא מסוים (לינאריות, בחלקים, החלפת משתנה)",
+      "statement_he": "תהיינה $f, g, F, G$ ארבע פונקציות המוגדרות בקטע $I \\subseteq \\mathbb{R}$. נניח כי $F, G$ הן פונקציות קדומות של $f, g$ ב-$I$. אזי:\n(i) לינאריות: לכל $\\alpha, \\beta \\in \\mathbb{R}$ מתקיים\n$$\\int [\\alpha f(x) + \\beta g(x)]\\,dx = \\alpha \\int f(x)\\,dx + \\beta \\int g(x)\\,dx.$$\n(ii) אינטגרציה בחלקים:\n$$\\int F'(x) G(x)\\,dx = F(x) G(x) - \\int F(x) G'(x)\\,dx.$$\n(iii) שיטת ההצבה (החלפת המשתנה):\n$$\\int g(F(x)) \\cdot f(x)\\,dx = \\int g(t)\\,dt, \\quad t = F(x).$$",
+      "proof_he": "נוכיח את (iii): נשים לב שמתקיים, לכל $x \\in I$,\n$$[G(F(x))]' = G'(F(x)) \\cdot F'(x) = g(F(x)) \\cdot f(x)$$\n(מהשרשרת).\nאזי $G(F(x))$ קדומה של $g(F(x)) \\cdot f(x)$ בקטע $I$, ואזי ע\"פ ההגדרה\n$$\\int g(F(x)) f(x)\\,dx = G(F(x)) + C = G(t) + C = \\int g(t)\\,dt, \\quad t = F(x).$$",
+      "topic": "שיטות אינטגרציה"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמאות",
+      "number": null,
+      "name": "אינטגרלים נוספים (e, חזקה, מעריכית, arctg)",
+      "statement_he": "נוסיף לטבלת האינטגרלים הבסיסיים את:\n1. $\\int e^x\\,dx = e^x + C$\n2. $\\int x^{\\alpha}\\,dx = \\frac{x^{\\alpha+1}}{\\alpha+1} + C$, לכל $\\alpha \\neq -1$\n3. $\\int a^x\\,dx = \\frac{a^x}{\\ln a} + C$, לכל $0 < a \\neq 1$\n4. $\\int \\frac{dx}{1+x^2} = \\arctan x + C$",
+      "proof_he": null,
+      "topic": "שיטות אינטגרציה"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמאות לפי לינאריות",
+      "number": null,
+      "name": "אינטגרלים לפי לינאריות",
+      "statement_he": "1. $\\int (x - x^2 + 2x^3)\\,dx = \\frac{x^2}{2} - \\frac{x^3}{3} + 2 \\cdot \\frac{x^4}{4} + C$\n2. $\\int (e^x - 5x)\\,dx = e^x - \\frac{5x^2}{2} + C$\n3. $\\int \\frac{x^2 - x}{x^3}\\,dx = \\int \\left( \\frac{1}{x} - \\frac{1}{x^2} \\right) dx = \\ln|x| + \\frac{1}{x} + C$ (כאשר $\\left( \\frac{1}{x} \\right)' = -\\frac{1}{x^2}$).",
+      "proof_he": null,
+      "topic": "שיטות אינטגרציה"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמאות לאינטגרציה בחלקים",
+      "number": null,
+      "name": "אינטגרציה בחלקים",
+      "statement_he": "1. $\\int x e^x\\,dx = x e^x - \\int e^x \\cdot 1\\,dx = x e^x - e^x + C$, כאשר $\\begin{cases} u'(x) = e^x \\to u(x) = e^x \\\\ v(x) = x \\to v'(x) = 1 \\end{cases}$\n2. $\\int x^2 e^x\\,dx = x^2 e^x - \\int e^x \\cdot 2x\\,dx = x^2 e^x - 2 \\int x e^x\\,dx = x^2 e^x - 2x e^x + 2e^x + C$, כאשר $\\begin{cases} u' = e^x \\to u = e^x \\\\ v = x^2 \\to v' = 2x \\end{cases}$\n3. $\\int \\ln x\\,dx = x \\ln x - \\int x \\cdot \\frac{1}{x}\\,dx = x \\ln x - \\int 1\\,dx = x \\ln x - x + C$, כאשר $\\begin{cases} u' = 1 \\to u = x \\\\ v = \\ln x \\to v' = \\frac{1}{x} \\end{cases}$",
+      "proof_he": null,
+      "topic": "שיטות אינטגרציה"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמאות לפי ההצבה",
+      "number": null,
+      "name": "אינטגרציה בהצבה",
+      "statement_he": "1. $\\int \\sin(x^2) \\cdot 2x\\,dx = \\int g(F(x)) f(x)\\,dx$, כאשר $\\begin{cases} g(t) = \\sin t \\\\ F(x) = x^2 \\end{cases}$, ואז $g(F(x)) f(x) = \\sin(x^2) \\cdot 2x$, $f(x) = 2x$. לכן $= \\int g(t)\\,dt = \\int \\sin t\\,dt = -\\cos t + C$ (עם $t = F(x) = x^2$) $= -\\cos(x^2) + C$.\nנכתוב בקיצור בכלל מהר:\n$\\int \\sin(x^2) 2x\\,dx = \\int \\sin(t)\\,dt$ עם $\\begin{cases} t = x^2 \\\\ dt = 2x\\,dx \\end{cases}$.\n2. $\\int \\sin(x^3) \\cdot x^2\\,dx = \\int \\sin(t) \\cdot x^2 \\cdot \\frac{dt}{3x^2}$, עם $\\begin{cases} t = x^3 \\\\ dt = 3x^2\\,dx \\to dx = \\frac{dt}{3x^2} \\end{cases}$ $= \\frac{1}{3} \\int \\sin t\\,dt = -\\frac{1}{3} \\cos t + C = -\\frac{1}{3} \\cos(x^3) + C$.\n3. $\\int \\frac{\\ln x}{x}\\,dx = \\int \\frac{t}{x} \\cdot x\\,dt = \\int t\\,dt$, עם $\\begin{cases} t = \\ln x \\\\ dt = \\frac{1}{x}\\,dx \\to dx = x\\,dt \\end{cases}$ $= \\frac{t^2}{2} + C = \\frac{(\\ln x)^2}{2} + C$.\n4. $\\int \\frac{\\sin x}{\\cos x}\\,dx = \\int \\frac{\\sin x}{t} \\cdot \\frac{dt}{-\\sin x}$, עם $\\begin{cases} t = \\cos x \\\\ dt = -\\sin x\\,dx \\to dx = \\frac{dt}{-\\sin x} \\end{cases}$ $= -\\int \\frac{dt}{t} = -\\ln|t| + C = -\\ln|\\cos x| + C$.\n5. $\\int \\cos x \\sin x\\,dx = \\int t \\cdot \\sin x \\cdot \\frac{dt}{-\\sin x}$, עם $\\begin{cases} t = \\cos x \\\\ dt = -\\sin x\\,dx \\to dx = \\frac{dt}{-\\sin x} \\end{cases}$ $= -\\frac{t^2}{2} + C = -\\frac{\\cos^2 x}{2} + C$. בדרך אחרת: $\\int \\cos x \\sin x\\,dx = \\int \\cos x \\cdot t \\cdot \\frac{dt}{\\cos x} = \\frac{t^2}{2} + C = \\frac{\\sin^2 x}{2} + C$, עם $\\begin{cases} t = \\sin x \\\\ dt = \\cos x\\,dx \\to dx = \\frac{dt}{\\cos x} \\end{cases}$.",
+      "proof_he": null,
+      "topic": "שיטות אינטגרציה"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל 1",
+      "number": "1",
+      "name": "אינטגרל של arctg",
+      "statement_he": "מצאו את האינטגרל הלא מסוים הבא:\n$$\\int \\arctan x\\,dx$$",
+      "proof_he": "פתרון:\n$\\int \\arctan x\\,dx = x \\arctan x - \\int \\frac{x}{1+x^2}\\,dx$, כאשר $\\begin{cases} u' = 1 \\to u = x \\\\ v = \\arctan x \\to v' = \\frac{1}{1+x^2} \\end{cases}$\n$= x \\arctan x - \\int \\frac{x}{t} \\cdot \\frac{dt}{2x}$, עם $\\begin{cases} t = 1+x^2 \\\\ dt = 2x\\,dx \\to dx = \\frac{dt}{2x} \\end{cases}$\n$= x \\arctan x - \\frac{1}{2} \\int \\frac{dt}{t} = x \\arctan x - \\frac{1}{2} \\ln|t| + C = x \\arctan x - \\frac{1}{2} \\ln|1+x^2| + C$.",
+      "topic": "שיטות אינטגרציה"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל 2",
+      "number": "2",
+      "name": "אינטגרל של שורש 1 פחות x בריבוע",
+      "statement_he": "מצאו את האינטגרל הלא מסוים הבא:\n$$\\int \\sqrt{1 - x^2}\\,dx$$",
+      "proof_he": "פתרון:\n$\\int \\sqrt{1-x^2}\\,dx = \\int \\sqrt{1-x^2} \\sqrt{1-x^2}\\,dt$, עם $\\begin{cases} t = \\arcsin x \\to x = \\sin t \\\\ dt = \\frac{1}{\\sqrt{1-x^2}}\\,dx \\to dx = \\sqrt{1-x^2}\\,dt \\end{cases}$\n$= \\int (1 - x^2)\\,dt = \\int (1 - \\sin^2 t)\\,dt = \\int \\cos^2 t\\,dt$ (עם $x = \\sin t$)\n$= \\int \\frac{\\cos(2t) + 1}{2}\\,dt = \\frac{1}{2} \\int \\cos(2t)\\,dt + \\frac{1}{2} \\int 1\\,dt$ (כי $\\cos^2 t = \\frac{\\cos 2t + 1}{2}$)\n$= \\frac{1}{2} \\int \\cos u \\cdot \\frac{du}{2} + \\frac{1}{2} t = \\frac{1}{4} \\sin u + \\frac{1}{2} t + C$, עם $\\begin{cases} u = 2t \\\\ du = 2\\,dt \\to dt = \\frac{du}{2} \\end{cases}$\n$= \\frac{1}{4} \\sin(2t) + \\frac{1}{2} t + C = \\frac{1}{4} \\sin(2 \\arcsin x) + \\frac{1}{2} \\arcsin x + C$.",
+      "topic": "שיטות אינטגרציה"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל 3",
+      "number": "3",
+      "name": "אינטגרל של arcsin",
+      "statement_he": "מצאו את האינטגרל הלא מסוים הבא:\n$$\\int \\arcsin x\\,dx$$",
+      "proof_he": "פתרון:\n$\\int \\arcsin x\\,dx = x \\arcsin x - \\int \\frac{x}{\\sqrt{1-x^2}}\\,dx$, כאשר $\\begin{cases} u' = 1 \\to u = x \\\\ v = \\arcsin x \\to v' = \\frac{1}{\\sqrt{1-x^2}} \\end{cases}$\n$= x \\arcsin x - \\int \\frac{x}{\\sqrt{t}} \\cdot \\frac{dt}{-2x}$, עם $\\begin{cases} t = 1-x^2 \\\\ dt = -2x\\,dx \\to dx = \\frac{dt}{-2x} \\end{cases}$\n$= x \\arcsin x + \\int \\frac{dt}{2\\sqrt{t}} = x \\arcsin x + \\sqrt{t} + C = x \\arcsin x + \\sqrt{1-x^2} + C$.",
+      "topic": "שיטות אינטגרציה"
+    },
+    {
+      "kind": "definition",
+      "label": "הגדרה",
+      "number": null,
+      "name": "חלוקה של קטע",
+      "statement_he": "יהיו $a, b \\in \\mathbb{R}$ כך ש- $a < b$ ויהי $n \\in \\mathbb{N}$. חלוקה בגודל $n$ של הקטע $[a,b]$ מוגדרת להיות וקטור עולה $P = (x_0, \\ldots, x_n)$ כך ש-\n$$a = x_0 < x_1 < \\cdots < x_n = b.$$",
+      "proof_he": null,
+      "topic": "אינטגרל מסוים"
+    },
+    {
+      "kind": "definition",
+      "label": "הגדרה",
+      "number": null,
+      "name": "סכומי דארבו העליון והתחתון, אינטגרל עליון ותחתון",
+      "statement_he": "יהיו $a, b \\in \\mathbb{R}$ כך ש- $a < b$ ותהי $f$ פונק' חסומה ב-$[a,b]$. נ\"ח ש-$f$ חסומה ותהי $P = (x_0, \\ldots, x_n)$ חלוקה של $[a,b]$.\n(i) הסכום העליון של $f$ ביחס לחלוקה $P$ מסומן ב- $\\bar{S}(f, P)$ ומוגדר ע\"י:\n$$\\bar{S}(f, P) = \\sum_{k=1}^{n} M_k \\cdot (x_k - x_{k-1})$$\nכאשר לכל $1 \\leq k \\leq n$:\n$$M_k = \\sup \\{ f(x) : x_{k-1} \\leq x \\leq x_k \\}.$$\n(ii) הסכום התחתון של $f$ ביחס לחלוקה $P$ מסומן ב- $\\underline{S}(f, P)$ ומוגדר ע\"י:\n$$\\underline{S}(f, P) = \\sum_{k=1}^{n} m_k \\cdot (x_k - x_{k-1})$$\nכאשר לכל $1 \\leq k \\leq n$:\n$$m_k = \\inf \\{ f(x) : x_{k-1} \\leq x \\leq x_k \\}.$$\n(iii) האינטגרל העליון של $f$ בקטע $[a,b]$ מסומן ב- $\\bar{I}(f)$ ומוגדר ע\"י:\n$$\\bar{I}(f) = \\inf \\{ \\bar{S}(f, P) : P \\text{ חלוקה של } [a,b] \\}.$$\n(iv) האינטגרל התחתון של $f$ בקטע $[a,b]$ מסומן ב- $\\underline{I}(f)$ ומוגדר ע\"י:\n$$\\underline{I}(f) = \\sup \\{ \\underline{S}(f, P) : P \\text{ חלוקה של } [a,b] \\}.$$",
+      "proof_he": null,
+      "topic": "אינטגרל מסוים"
+    },
+    {
+      "kind": "note",
+      "label": "הערה 2",
+      "number": "2",
+      "name": "קיום הסופרמום והאינפימום",
+      "statement_he": "מהיות $f$ חסומה, אכן $f$ חסומה ולכן נסמן ומקיים $M_k$ ו- $m_k$ מספרים כי-ם של $1 \\leq k \\leq n$ מתאים, ולכן הסכום העליון/התחתון.",
+      "proof_he": null,
+      "topic": "אינטגרל מסוים"
+    },
+    {
+      "kind": "note",
+      "label": "הערה",
+      "number": null,
+      "name": "פירוש גאומטרי של סכומי דארבו ואי-שוויון",
+      "statement_he": "הסכום העליון - השטח הכולל של המלבנים האדומים (מעל הגרף);\nהסכום התחתון - השטח הכולל של המלבנים הירוקים (מתחת הגרף).\nחסם תחתון: $S \\leq \\bar{S}(f, P)$, ולכן $S \\leq \\inf \\{ \\bar{S}(f, P) : P \\} = \\bar{I}$.\nחסם מלעיל: $\\underline{S}(f, P) \\leq S$, ולכן $\\underline{I}(f) = \\sup \\{ \\underline{S}(f, P) \\} \\leq S$.\nכלומר $\\underline{I}(f) \\leq S \\leq \\bar{I}(f)$ (רעיון לפצב\"י).",
+      "proof_he": null,
+      "topic": "אינטגרל מסוים"
+    },
+    {
+      "kind": "definition",
+      "label": "הגדרה",
+      "number": null,
+      "name": "אינטגרביליות (אינטגרל מסוים)",
+      "statement_he": "יהיו $a, b \\in \\mathbb{R}$ כך ש- $a < b$ ותהי $f$ פונק' חסומה ב-$[a,b]$. נ\"ח ש-$f$ חסומה. ונאמר כי $f$ אינטגרבילית ב-$[a,b]$ אם קיים $S \\in \\mathbb{R}$ כך ש- $S = \\bar{I}(f) = \\underline{I}(f)$. במקרה כזה נסמן את\nהאינטגרל המסוים של $f$ בקטע $[a,b]$ להיות:\n$$\\int_a^b f(x)\\,dx = S.$$",
+      "proof_he": null,
+      "topic": "אינטגרל מסוים"
+    },
+    {
+      "kind": "note",
+      "label": "הערה 3",
+      "number": "3",
+      "name": "פירוש גאומטרי של האינטגרל המסוים",
+      "statement_he": "אם $0 \\leq f(x)$ לכל $x \\in [a,b]$ וגם $f$ אינטגרבילית, אזי כפי שנראה $\\int_a^b f(x)\\,dx$ הוא השטח שמתחת לגרף של $f$ ומעל ציר $x$ בקטע $[a,b]$.",
+      "proof_he": null,
+      "topic": "אינטגרל מסוים"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט 3",
+      "number": "3",
+      "name": "אינטגרל של פונקציה קבועה",
+      "statement_he": "יהי $C \\in \\mathbb{R}$ ויהיו $a, b \\in \\mathbb{R}$ כך ש- $a < b$. אזי הפונקציה הקבועה $f(x) = C$ היא אינטגרבילית ב-$[a,b]$, וכן לכל $x \\in [a,b]$ ומתקיים\n$$\\int_a^b C\\,dx = C \\cdot (b - a).$$",
+      "proof_he": "תהי $P = (x_0, \\ldots, x_n)$ חלוקה של $[a,b]$. נחשב:\n$$\\bar{S}(f, P) = \\sum_{k=1}^{n} M_k \\cdot (x_k - x_{k-1}) = \\sum_{k=1}^{n} C \\cdot (x_k - x_{k-1})$$\nכאשר $M_k = \\sup \\{ f(x) : x_{k-1} \\leq x \\leq x_k \\} = \\sup \\{ C : x_{k-1} \\leq x \\leq x_k \\} = \\sup \\{ C \\} = C$.\n$$= C \\cdot \\sum_{k=1}^{n} (x_k - x_{k-1}) = C \\cdot (x_1 - x_0 + x_2 - x_1 + \\cdots + x_n - x_{n-1}) = C \\cdot (x_n - x_0) = C \\cdot (b - a).$$\nאזי\n$$\\bar{I}(f) = \\inf \\{ \\bar{S}(f, P) : P \\text{ חלוקה של } [a,b] \\} = \\inf \\{ C \\cdot (b-a) : P \\text{ חלוקה של } [a,b] \\} = C \\cdot (b - a).$$\nבאופן דומה,\n$$\\underline{S}(f, P) = \\sum_{k=1}^{n} m_k \\cdot (x_k - x_{k-1}) = \\sum_{k=1}^{n} C \\cdot (x_k - x_{k-1})$$\nכאשר $m_k = \\inf \\{ f(x) : x_{k-1} \\leq x \\leq x_k \\} = \\inf \\{ C : x_{k-1} \\leq x \\leq x_k \\} = \\inf \\{ C \\} = C$.\n$$= C \\cdot \\sum_{k=1}^{n} (x_k - x_{k-1}) = C \\cdot (x_n - x_0) = C \\cdot (b - a).$$\nאזי\n$$\\underline{I}(f) = \\sup \\{ \\underline{S}(f, P) : P \\} = \\sup \\{ C \\cdot (b-a) : P \\} = C \\cdot (b - a).$$\nאזי $\\bar{I}(f) = \\underline{I}(f) = C \\cdot (b - a)$, ולכן $f$ אינטגרבילית ב-$[a,b]$, וכן\n$$\\int_a^b C\\,dx = C \\cdot (b - a).$$",
+      "topic": "אינטגרל מסוים"
+    }
+  ]
+}

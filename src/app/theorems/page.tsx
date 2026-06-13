@@ -1,6 +1,7 @@
 import katex from "katex";
 import "katex/dist/katex.min.css";
 import { TheoremsSidebar } from "./TheoremsSidebar";
+import { LectureKnowledgeForWeek } from "@/components/LectureKnowledge";
 
 /* ─── Tiny KaTeX helper (server-side) ─── */
 function K({ m, d = false }: { m: string; d?: boolean }) {
@@ -117,6 +118,8 @@ function WeekSection({ num, title, children }: { num: number; title: string; chi
         <h2 style={{ color: S.primary, fontSize: "1.4rem", fontWeight: 800, margin: 0 }}>{title}</h2>
       </div>
       {children}
+      {/* Word-for-word definitions & theorems straight from the lectures (renders nothing if none mapped to this week) */}
+      <LectureKnowledgeForWeek week={num} />
     </div>
   );
 }

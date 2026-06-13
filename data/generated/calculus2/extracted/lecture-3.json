@@ -1,0 +1,232 @@
+{
+  "lecture": 3,
+  "date": "16.4.26",
+  "topics": ["תכונות האינטגרל המסוים", "אינטגרביליות", "משפט הערך הממוצע האינטגרלי", "המשפט היסודי של החשבון האינטגרלי", "פונקציה קדומה", "חישוב אינטגרלים מסוימים"],
+  "items": [
+    {
+      "kind": "example",
+      "label": "דוגמא",
+      "number": null,
+      "name": "פונקציה לא אינטגרבילית (אינסוף ב-0)",
+      "statement_he": "הפונק' המוגדרת ע\"י $$f(x) = \\begin{cases} \\frac{1}{x} & 0 < x \\le 1 \\\\ 0 & x = 0 \\end{cases}$$ עבור $x \\in [0,1]$ היא לא חסומה ולכן גם לא אינטגרבילית ב-$[0,1]$.",
+      "proof_he": null,
+      "topic": "אינטגרביליות"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט 1",
+      "number": "1",
+      "name": "תכונות אריתמטיות של האינטגרל המסוים",
+      "statement_he": "תהיינה $a,b \\in \\mathbb{R}$ כך ש-$a < b$ ותהיינה $f,g$ שתי פונקציות חסומות ב-$[a,b]$.\n\n(i) ליניאריות: נניח כי $f,g$ אינטגרביליות ב-$[a,b]$. אזי לכל $\\alpha,\\beta \\in \\mathbb{R}$, $\\alpha f + \\beta g$ אינטגרבילית ב-$[a,b]$ ובנוסף $$\\int_a^b [\\alpha f(x) + \\beta g(x)]\\,dx = \\alpha \\int_a^b f(x)\\,dx + \\beta \\int_a^b g(x)\\,dx$$\n\n(ii) כפל ל'[חילוק]: נניח כי $f,g$ אינטגרביליות ב-$[a,b]$. אזי $g \\pm f$ ו-$f \\cdot g$ אינטגרביליות ב-$[a,b]$. אם בנוסף $\\frac{f}{g}$ מוגדרת וחסומה ב-$[a,b]$, אז גם $\\frac{f}{g}$ אינטגרבילית ב-$[a,b]$. אם בפרט $g$ רחוקה מ-$0$ אזי $\\frac{f}{g}$ חסומה ב-$[a,b]$.\n\n(iii) אם $f$ רחבה[רציפה] ב-$[a,b]$ אזי $f$ אינטגרבילית ב-$[a,b]$.\n\n(iv) אם $f$ מונוטונית ב-$[a,b]$ אזי $f$ אינטגרבילית ב-$[a,b]$.\n\n(v) מונוטוניות האינטגרל המסוים: נניח כי $f,g$ אינטגרביליות ב-$[a,b]$. נניח בנוסף כי $f(x) \\le g(x)$ לכל $x \\in [a,b]$. אזי $$\\int_a^b f(x)\\,dx \\le \\int_a^b g(x)\\,dx$$\n\n(vi) שאת ההפרדה[שמירה תחת פיצול]: יהי $a < c < b$ ו-$f$ חסומה ב-$[a,b]$. אזי $f$ אינטגרבילית ב-$[a,c]$ וגם ב-$[c,b]$, ומתקיים $$\\int_a^b f(x)\\,dx = \\int_a^c f(x)\\,dx + \\int_c^b f(x)\\,dx$$\n\n(vii) אי-רגישות לנקודה בודדת: נניח כי $f$ אינטגרבילית ב-$[a,b]$. נניח בנוסף שקיימת $x_0 \\in [a,b]$ כך ש-$g(x) = f(x)$ לכל $x \\in [a,b]$ כך ש-$x \\ne x_0$. אזי $g$ אינטגרבילית ב-$[a,b]$ ובנוסף $$\\int_a^b g(x)\\,dx = \\int_a^b f(x)\\,dx$$",
+      "proof_he": "ללא הוכחה.",
+      "topic": "תכונות האינטגרל המסוים"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": "1",
+      "name": "חישוב אינטגרל של 1/x על [1,3]",
+      "statement_he": "$$\\int_1^3 \\frac{dx}{x}$$ ק\"מ[קיים] כי הפונק' $f(x) = \\frac{1}{x}$ רציפה ולכן אינטגרבילית ב-$[1,3]$.",
+      "proof_he": null,
+      "topic": "אינטגרביליות"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": "2",
+      "name": "חישוב אינטגרל של sinx/x על [1,3]",
+      "statement_he": "$$\\int_1^3 \\frac{\\sin x}{x}\\,dx$$ ק\"מ[קיים] כי הפונק' $f(x) = \\frac{\\sin x}{x}$ רציפה ולכן אינטגרבילית ב-$[1,3]$.",
+      "proof_he": null,
+      "topic": "אינטגרביליות"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": "3",
+      "name": "אינטגרל של sinx/x על [-1,3] עם הרחבה רציפה",
+      "statement_he": "$$\\int_{-1}^3 \\frac{\\sin x}{x}\\,dx$$ ק\"מ[קיים] כי הפונק' $$f(x) = \\begin{cases} \\frac{\\sin x}{x} & x \\ne 0 \\\\ 1 & x = 0 \\end{cases}$$ רציפה ולכן אינטגרבילית ב-$[-1,3]$. מתכונת האי-רגישות לערך בודדת, הערך $f(0)$ אף משנה את ערך האינטגרל. לכן $$\\int_{-1}^3 \\frac{\\sin x}{x}\\,dx$$ ק\"מ[קיים] ואין צורך לציין את $f(0)$.",
+      "proof_he": null,
+      "topic": "אינטגרביליות"
+    },
+    {
+      "kind": "corollary",
+      "label": "מסקנה 1",
+      "number": "1",
+      "name": "אינטגרביליות מובטיחה בקטע סגור",
+      "statement_he": "אם $f$ רציפה ב-$[a,b]$ או $f$ מונוטונית ב-$[a,b]$, אז $\\int_a^b f$ קיים, ויש סיכוי שלכן יהי[יהיה] אם $f$ רציפה ב-$[a,b]$.",
+      "proof_he": null,
+      "topic": "אינטגרביליות"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": "4",
+      "name": "אינטגרל של (cosx-1)/x^2 על [0,1]",
+      "statement_he": "$$\\int_0^1 \\frac{\\cos x - 1}{x^2}\\,dx$$ ק\"מ[קיים] (אחרי תיקון הפונקציה ב-$x=0$).",
+      "proof_he": null,
+      "topic": "אינטגרביליות"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": "5",
+      "name": "אינטגרל של (e^x-1)/x על [0,1]",
+      "statement_he": "$$\\int_0^1 \\frac{e^x - 1}{x}\\,dx$$ ק\"מ[קיים] (אחרי תיקון הפונקציה ב-$x=0$).",
+      "proof_he": null,
+      "topic": "אינטגרביליות"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": "6",
+      "name": "אינטגרל של sign(x) על [-2,3]",
+      "statement_he": "$$\\int_{-2}^3 \\operatorname{sign}(x)\\,dx$$ ק\"מ[קיים] כי $\\operatorname{sign}(x)$ פונקציה מונוטונית (לא יורדת) $\\Leftarrow$ אינטגרבילית.",
+      "proof_he": null,
+      "topic": "אינטגרביליות"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": "7",
+      "name": "חישוב אינטגרל של sign(x) על [-2,3]",
+      "statement_he": "חשבו $$\\int_{-2}^3 \\operatorname{sign}(x)\\,dx$$ כאשר $$\\operatorname{sign}(x) = \\begin{cases} 1 & x > 0 \\\\ -1 & x < 0 \\\\ 0 & x = 0 \\end{cases}$$",
+      "proof_he": "$$\\int_{-2}^3 \\operatorname{sign}(x)\\,dx \\overset{\\text{שאת ההפרדה}}{=} \\int_{-2}^0 \\operatorname{sign}(x)\\,dx + \\int_0^3 \\operatorname{sign}(x)\\,dx = \\int_{-2}^0 (-1)\\,dx + \\int_0^3 1\\,dx \\overset{\\int_a^b c\\,dx = c\\cdot(b-a)}{=} -1 \\cdot (0+2) + 1 \\cdot (3-0) = 1$$",
+      "topic": "חישוב אינטגרלים מסוימים"
+    },
+    {
+      "kind": "note",
+      "label": "הערה 1",
+      "number": "1",
+      "name": "אינטגרל של פונקציה שלילית והאינטגרל כשטח מסומן",
+      "statement_he": "אם $0 \\le f(x) \\le 0$ עבור $x \\in [a,b]$ אזי $f$ אינטגרבילית ב-$[a,b]$ אזי $-f(x) \\ge 0$ עבור $x \\in [a,b]$ ולכן $-f$ אינטגרבילית. ולכן $$\\int_a^b f(x)\\,dx \\overset{\\text{ליניאריות}}{=} -\\int_a^b [-f(x)]\\,dx = -\\left( \\substack{\\text{השטח שמתחת} \\\\ \\text{ל-}(-f)} \\right) = -\\left( \\substack{\\text{השטח} \\\\ \\text{מעל }f} \\right)$$ באופן כללי יותר: $$\\int_a^b f(x)\\,dx = S_1 - S_2 + S_3$$",
+      "proof_he": null,
+      "topic": "תכונות האינטגרל המסוים"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט 2",
+      "number": "2",
+      "name": "אי-שוויון הערך המוחלט של האינטגרל",
+      "statement_he": "(אי-שוויון ה-$\\Delta$ [המשולש]) תהיינה $a,b \\in \\mathbb{R}$ כך ש-$a<b$ ותהי $f$ פונק' המוגדרת ב-$[a,b]$. נניח כי $f$ אינטגרבילית ב-$[a,b]$. אזי $$\\left| \\int_a^b f(x)\\,dx \\right| \\le \\int_a^b |f(x)|\\,dx$$",
+      "proof_he": "מאי-שוויון $\\Delta$ [המשולש] $|.|$ רציפה ב-$[a,b]$ ומאחר ש-$f$ אינטגרבילית ב-$[a,b]$ אז $|f(x)|$ אינטגרבילית ב-$[a,b]$ (הרכבה של רציפה עם אינטג') ולכן $\\int_a^b |f(x)|\\,dx$ ק\"מ[קיים]. נשים $\\heartsuit$ עבור $x \\in [a,b]$ מתקיים $$-|f(x)| \\le f(x) \\le |f(x)|$$ לכן ממונוטוניות האינטגרל המסוים: $$-\\int_a^b |f(x)|\\,dx = \\int_a^b -|f(x)|\\,dx \\le \\int_a^b f(x)\\,dx \\le \\int_a^b |f(x)|\\,dx$$ לכן עבור $r = \\int_a^b |f(x)|\\,dx$ מתקיים $$-r \\le \\int_a^b f(x)\\,dx \\le r$$ ולכן $$\\left| \\int_a^b f(x)\\,dx \\right| \\le r$$",
+      "topic": "תכונות האינטגרל המסוים"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט 3",
+      "number": "3",
+      "name": "משפט הערך הממוצע האינטגרלי",
+      "statement_he": "(ערך הב\"ע[הביניים] האינטגרלי) תהיינה $a,b \\in \\mathbb{R}$ כך ש-$a<b$ ותהי $f$ פונק' המוגדרת ב-$[a,b]$. נניח כי $f$ רציפה ב-$[a,b]$. אזי קיימת $c \\in [a,b]$ שעבורה $$f(c) = \\frac{1}{b-a} \\int_a^b f(x)\\,dx$$",
+      "proof_he": "כיוון ש-$f$ רציפה ב-$[a,b]$, אזי $f$ אינטגרבילית ב-$[a,b]$ ולכן $\\int_a^b f(x)\\,dx$ ק\"מ[קיים]. נסמן $r = \\frac{1}{b-a} \\int_a^b f(x)\\,dx$. נרצה להראות שקיימת $c \\in [a,b]$ שעבורה $f(c) = r$ ו ק\"מ[וקיים].\nכיוון ש-$f$ רציפה, אזי ממשפט וירשטרס[ויירשטראס], ק\"מ[קיימים] $x_1, x_2 \\in [a,b]$ כך ש-$f(x_2) \\le f(x) \\le f(x_1)$ עבור $x \\in [a,b]$. נסמן $M = f(x_1)$ ו-$m = f(x_2)$. אזי $$m \\le f(x) \\le M \\quad \\text{עבור } x \\in [a,b]$$ לכן ממונוטוניות האינטגרל המסוים: $$m(b-a) = \\int_a^b m\\,dx \\le \\int_a^b f(x)\\,dx \\le \\int_a^b M\\,dx = M \\cdot (b-a)$$ נחלק ב-$b-a$ ונקבל $$f(x_2) = m \\le r \\le M = f(x_1)$$ אם $x_1 = x_2$ אזי $f(x_2) = r = f(x_1)$ ולכן קיימת $c \\in [a,b]$ כך ש-$f(c) = r$ וסיימנו (שנבחר $c = x_1$). אחרת ממשפט ערך הביניים ק\"מ[קיים] $c$ הנמצא בין $x_1$ ל-$x_2$ ($c \\in [x_1, x_2]$ או $c \\in [x_2, x_1]$) כך ש-$f(c) = r$.",
+      "topic": "משפט הערך הממוצע האינטגרלי"
+    },
+    {
+      "kind": "definition",
+      "label": "הגדרה",
+      "number": null,
+      "name": "אינטגרל על קטע מנוון והיפוך גבולות",
+      "statement_he": "תהיינה $a,b \\in \\mathbb{R}$ כך ש-$a<b$ ותהי $f$ פונק' המוגדרת ב-$[a,b]$. נניח כי $f$ אינטגרבילית ב-$[a,b]$. נסמן:\n(i) $$\\int_a^a f(x)\\,dx = 0$$\n(ii) $$\\int_b^a f(x)\\,dx = -\\int_a^b f(x)\\,dx$$",
+      "proof_he": null,
+      "topic": "תכונות האינטגרל המסוים"
+    },
+    {
+      "kind": "note",
+      "label": "הערה 3",
+      "number": "3",
+      "name": "תכונת הפיצול תחת ההגדרה החדשה",
+      "statement_he": "תחת ההגדרה הנ\"ל, שאת ההפרדה[תכונת הפיצול] נכונה (כפי שראינו מספר ביניים) עבור $a,b,c \\in \\mathbb{R}$ באשר[כאשר] אם $a < b < c$:\n$$\\int_a^c = \\int_a^b + \\int_b^c \\quad \\text{שאת ההפרדה}$$\nנזכיר שאת כלל ונקבל $$\\int_a^b = \\int_a^c - \\int_b^c = \\int_a^c + \\int_c^b$$\nלומר[כלומר] $$\\int_a^b = \\int_a^c + \\int_c^b$$",
+      "proof_he": null,
+      "topic": "תכונות האינטגרל המסוים"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט 4",
+      "number": "4",
+      "name": "המשפט היסודי - גזירות פונקציית הצבירה",
+      "statement_he": "תהיינה $a,b \\in \\mathbb{R}$ כך ש-$a<b$ ותהי $f$ פונק' רציפה ב-$[a,b]$. נניח כי $f$ רציפה ב-$[a,b]$. נג'[נגדיר] בפונק' המוגדרת $F$: $$F(x) = \\int_a^x f(t)\\,dt \\quad \\text{עבור } a \\le x \\le b$$ אזי $F$ רציפה.",
+      "proof_he": "נניח כי $f$ רציפה ב-$[a,b]$ ולכן אינטגרבילית. אזי לכל $x \\in [a,b]$, מאמת ההגדרה[מעצם ההגדרה] $f$ אינטגרבילית גם ב-$[a,x]$ עבור $a < x < b$. לכן $\\int_a^x f(t)\\,dt$ ק\"מ[קיים] עבור $a < x < b$ וכן $\\int_a^b f(t)\\,dt$ ק\"מ[קיים], אזי $F$ מוגדרת היטב בקטע $[a,b]$. צריך $x = a$ מתק\"מ[מתקיים]. אזי $F(a) = \\int_a^a f(t)\\,dt = 0$ ולכן $F$ מוגדרת היטב ב-$[a,b]$.\nצריך ונוכיח כי $F$ רציפה ב-$[a,b]$: יהי $x_0 \\in [a,b]$ ויהי $\\varepsilon > 0$. צ\"ל[צריך להראות] כי קיים $\\delta > 0$ כך שלכל $x \\in [a,b]$ כך ש-$|x - x_0| < \\delta$ מתק\"מ[מתקיים] $$|F(x) - F(x_0)| < \\varepsilon$$ תהי $x_0 \\in [a,b]$ ויהי $\\varepsilon > 0$. מאחר ש-$f$ חסומה ב-$[a,b]$ ולכן ק\"מ[קיים] $K > 0$ כך שלכל $x \\in [a,b]$, $$(*) \\quad |f(x)| \\le K$$ נבחר $\\delta = \\frac{\\varepsilon}{K}$. ויהי $x \\in [a,b]$ כך ש-$|x - x_0| < \\delta$.\nנניח קודם ש-$x_0 < x$:\n$$|F(x) - F(x_0)| = \\left| \\int_a^x f(t)\\,dt - \\int_a^{x_0} f(t)\\,dt \\right| \\overset{\\text{שאת ההפרדה}}{=} \\left| \\int_{x_0}^x f(t)\\,dt \\right| \\overset{\\Delta}{\\le} \\int_{x_0}^x |f(t)|\\,dt \\overset{(*)}{\\le} \\int_{x_0}^x K\\,dt = K \\cdot (x - x_0) \\overset{x > x_0}{=} K \\cdot |x - x_0| < K \\cdot \\delta \\overset{\\delta = \\frac{\\varepsilon}{K}}{=} \\varepsilon$$\nכאשר $(*)$ נשים $\\heartsuit$ עבור $t \\in [x_0, x]$ מתק\"מ[מתקיים] $|x_0 - x| \\le |x_0 - t|$ ולכן $(*)$ מתק\"מ[מתקיים] עבור $t \\in [x_0, x]$ כלומר $|f(t)| \\le K$ עבור $t \\in [x_0, x]$ ולכן ממונוטוניות האינטגרל המסוים $$\\int_{x_0}^x |f(t)|\\,dt \\overset{(*)}{\\le} \\int_{x_0}^x K\\,dt$$\nכעת נניח ש-$x < x_0$:\n$$|F(x) - F(x_0)| = \\left| \\int_a^x f(t)\\,dt - \\int_a^{x_0} f(t)\\,dt \\right| \\overset{\\text{שאת ההפרדה}}{=} \\left| -\\int_x^{x_0} f(t)\\,dt \\right| = \\left| \\int_x^{x_0} f(t)\\,dt \\right| \\overset{\\Delta}{\\le} \\int_x^{x_0} |f(t)|\\,dt \\overset{(**)}{\\le} \\int_x^{x_0} K\\,dt = K(x_0 - x) \\overset{x_0 > x}{=} K \\cdot |x - x_0| < K \\cdot \\delta \\overset{\\delta = \\frac{\\varepsilon}{K}}{=} \\varepsilon$$\nכאשר $(**)$ נשים $\\heartsuit$ עבור $t \\in [x, x_0]$ מתק\"מ[מתקיים] $|x_0 - x| \\le |x_0 - t|$ ולכן $(*)$ מתק\"מ[מתקיים] עבור $t \\in [x, x_0]$ כלומר $|f(t)| \\le K$ עבור $t \\in [x, x_0]$ ולכן ממונוטוניות האינטגרל המסוים $$\\int_x^{x_0} |f(t)|\\,dt \\overset{(**)}{\\le} \\int_x^{x_0} K\\,dt$$\nבאותו האופן מוכיחים עבור המקרה $x < x_0$.",
+      "topic": "המשפט היסודי של החשבון האינטגרלי"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": null,
+      "name": "חישוב F(x) של אינטגרל sign על [-2,3]",
+      "statement_he": "נח שב[נחשב] את $F$ עבור $x \\in [-2,3]$, $$F(x) = \\int_{-2}^x \\operatorname{sign}(x)\\,dx$$",
+      "proof_he": "אם $-2 \\le x \\le 0$, $$F(x) = \\int_{-2}^x \\operatorname{sign}(x)\\,dx = \\int_{-2}^x (-1)\\,dx \\overset{c\\cdot(b-a)}{=} -(x+2) = -2 - x$$ אם $0 \\le x \\le 3$, $$F(x) = \\int_{-2}^x \\operatorname{sign}(x)\\,dx = \\int_{-2}^0 (-1)\\,dx + \\int_0^x 1\\,dx = -(0+2) + 1 \\cdot (x-0) = -2 + x$$ לכן $$F(x) = \\begin{cases} -2 - x & -2 \\le x \\le 0 \\\\ -2 + x & 0 \\le x \\le 3 \\end{cases} = -2 + |x|$$",
+      "topic": "המשפט היסודי של החשבון האינטגרלי"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט 5",
+      "number": "5",
+      "name": "המשפט היסודי - הנגזרת של פונקציית הצבירה",
+      "statement_he": "(המשפט היסודי של החשבון האינטגרלי) תהיינה $a,b \\in \\mathbb{R}$ כך ש-$a<b$ ותהי $f$ פונק' המוגדרת ב-$[a,b]$. נניח כי $f$ רציפה ב-$[a,b]$. נג'[נגדיר] בפונק' המוגדרת $F$: $$F(x) = \\int_a^x f(t)\\,dt \\quad \\text{עבור } a \\le x \\le b$$ תהי $x_0 \\in [a,b]$. נניח כי $f$ רציפה ב-$x_0$. אזי $F$ גזירה ב-$x_0$ ובנוסף, $F'(x_0) = f(x_0)$.",
+      "proof_he": "נניח כי $f$ רציפה ב-$[a,b]$ ולכן אינטגרבילית. אזי לכל $x \\in [a,b]$, מאמת ההגדרה[מעצם ההגדרה] $f$ אינטגרבילית גם ב-$[a,x]$ עבור $a < x < b$. לכן $\\int_a^x f(t)\\,dt$ ק\"מ[קיים] עבור $a < x < b$ וכן $\\int_a^b f(t)\\,dt$ ק\"מ[קיים], אזי $F$ מוגדרת היטב בקטע $[a,b]$. צריך $x = a$ מתק\"מ[מתקיים]. אזי $F(a) = \\int_a^a f(t)\\,dt = 0$ ולכן $F$ מוגדרת היטב ב-$[a,b]$.\nצריך ונוכיח כי $F$ גזירה ב-$x_0$: יהי $\\varepsilon > 0$. צ\"ל[צריך להראות] כי קיים $\\delta > 0$ כך שלכל $x \\in [a,b]$ ועבורו $0 < |x - x_0| < \\delta$ מתק\"מ[מתקיים] $$\\left| \\frac{F(x) - F(x_0)}{x - x_0} - f(x_0) \\right| < \\varepsilon$$\nיהי $\\varepsilon > 0$. מאחר ש-$f$ רציפה ב-$x_0$, ק\"מ[קיים] $\\delta_1 > 0$ כך שלכל $x \\in [a,b]$ ועבורו $|x - x_0| < \\delta_1$ מתק\"מ[מתקיים] $$(*) \\quad |f(x) - f(x_0)| < \\frac{\\varepsilon}{2}$$\nנבחר $\\delta = \\delta_1$. ויהי $x \\in [a,b]$. ועבורו $0 < |x - x_0| < \\delta$. נניח קודם כי $x_0 < x$:\n$$\\left| \\frac{F(x) - F(x_0)}{x - x_0} - f(x_0) \\right| = \\left| \\frac{\\int_a^x f(t)\\,dt - \\int_a^{x_0} f(t)\\,dt}{x - x_0} - f(x_0) \\right| \\overset{\\text{שאת ההפרדה}}{=} \\left| \\frac{1}{x - x_0} \\int_{x_0}^x f(t)\\,dt - f(x_0) \\right|$$\n$$= \\left| \\frac{1}{x - x_0} \\left[ \\int_{x_0}^x f(t)\\,dt - (x - x_0) f(x_0) \\right] \\right| \\overset{c\\cdot(b-a)}{=} \\left| \\frac{1}{x - x_0} \\left[ \\int_{x_0}^x f(t)\\,dt - \\int_{x_0}^x f(x_0)\\,dt \\right] \\right| = \\left| \\frac{1}{x - x_0} \\int_{x_0}^x [f(t) - f(x_0)]\\,dt \\right|$$\n$$\\overset{\\Delta}{\\le} \\frac{1}{|x - x_0|} \\cdot \\int_{x_0}^x |f(t) - f(x_0)|\\,dt \\overset{(*)}{\\le} \\frac{1}{|x - x_0|} \\int_{x_0}^x \\frac{\\varepsilon}{2}\\,dt \\overset{c\\cdot(b-a)}{=} \\frac{1}{|x - x_0|} \\cdot \\frac{\\varepsilon}{2} \\cdot (x - x_0) \\overset{x > x_0}{=} \\frac{1}{|x - x_0|} \\cdot \\frac{\\varepsilon}{2} \\cdot |x - x_0| = \\frac{\\varepsilon}{2} < \\varepsilon$$\nכאשר $(*)$ נשים $\\heartsuit$ עבור $t \\in [x_0, x]$ מתק\"מ[מתקיים] $|x_0 - x| \\le |x_0 - t|$ ולכן $(*)$ מתק\"מ[מתקיים] עבור $t \\in [x_0, x]$ כלומר $|f(t) - f(x_0)| < \\frac{\\varepsilon}{2}$ עבור $t \\in [x_0, x]$ ולכן ממונוטוניות המסוים, $$\\int_{x_0}^x |f(t) - f(x_0)|\\,dt < \\int_{x_0}^x \\frac{\\varepsilon}{2}\\,dt$$\nבאותו האופן מוכיחים עבור המקרה $x < x_0$.",
+      "topic": "המשפט היסודי של החשבון האינטגרלי"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט 6",
+      "number": "6",
+      "name": "נוסחת ניוטון-לייבניץ",
+      "statement_he": "(נוסחת ניוטון-לייבניץ) תהיינה $a,b \\in \\mathbb{R}$ כך ש-$a<b$ ותהי $f$ פונק' המוגדרת ב-$[a,b]$. נניח כי $f$ רציפה ב-$[a,b]$. תהי $G$ פונק' קדומה של $f$ ב-$[a,b]$. אזי $$\\int_a^b f(x)\\,dx = \\left[ G(x) \\right]_a^b = G(b) - G(a)$$",
+      "proof_he": "כאשר $G, F$ קדומות של $f$ ב-$[a,b]$. לכן קיים $C \\in \\mathbb{R}$ כך ש-$F(x) = G(x) + C$ לכל $x \\in [a,b]$. לכן $$\\int_a^b f(x)\\,dx = \\int_a^b f(t)\\,dt = F(b) \\overset{F(a) = \\int_a^a f(t)\\,dt = 0}{=} F(b) - F(a) = G(b) + C - (G(a) + C) = G(b) - G(a)$$",
+      "topic": "המשפט היסודי של החשבון האינטגרלי"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט 6",
+      "number": "6",
+      "name": "קיום פונקציה קדומה לפונקציה רציפה (ניסוח חוזר)",
+      "statement_he": "הוכחת משפט 6: כאשר $f$ רציפה ב-$[a,b]$ ולכן $$\\int_a^b f(x)\\,dx \\quad \\text{ק\"מ[קיים]}$$ נג'[נגדיר] בפונק' המוגדרת $F$: $$F(x) = \\int_a^x f(t)\\,dt \\quad \\text{עבור } a \\le x \\le b$$ מאחר ש-$f$ רציפה ב-$[a,b]$ אזי (מהמשפט) ה'ס'פ'[היסודי], $F$ גזירה ב-$[a,b]$ ובנוסף $F'(x) = f(x)$ עבור $x \\in [a,b]$.",
+      "proof_he": "לכן $G, F$ קדומות של $f$ ב-$[a,b]$. לכן קיים $C \\in \\mathbb{R}$ כך ש-$F(x) = G(x) + C$ לכל $x \\in [a,b]$. לכן $$\\int_a^b f(x)\\,dx = \\int_a^b f(t)\\,dt = F(b) \\overset{F(a) = \\int_a^a f(t)\\,dt = 0}{=} F(b) - F(a) = G(b) + C - (G(a) + C) = G(b) - G(a)$$",
+      "topic": "המשפט היסודי של החשבון האינטגרלי"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": "1",
+      "name": "חישוב אינטגרל של x^2 על [0,1]",
+      "statement_he": "$$\\int_0^1 x^2\\,dx = \\left[ \\frac{x^3}{3} \\right]_0^1 = \\frac{1}{3} - 0 = \\frac{1}{3}$$",
+      "proof_he": null,
+      "topic": "חישוב אינטגרלים מסוימים"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": "2",
+      "name": "חישוב אינטגרל של שורש x על [0,1]",
+      "statement_he": "$$\\int_0^1 \\sqrt{x}\\,dx = \\int_0^1 x^{1/2}\\,dx = \\left[ \\frac{x^{3/2}}{3/2} \\right]_0^1 = \\frac{1}{3/2} - 0 = \\frac{2}{3}$$",
+      "proof_he": null,
+      "topic": "חישוב אינטגרלים מסוימים"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": "3",
+      "name": "חישוב אינטגרל של sinx על [0,pi]",
+      "statement_he": "$$\\int_0^\\pi \\sin x\\,dx = \\left[ -\\cos x \\right]_0^\\pi = -(-1) - (-1) = 2$$",
+      "proof_he": null,
+      "topic": "חישוב אינטגרלים מסוימים"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": "3",
+      "name": "חישוב אינטגרל של sinx על [0,pi/2]",
+      "statement_he": "$$\\int_0^{\\pi/2} \\sin x\\,dx = \\left[ -\\cos x \\right]_0^{\\pi/2} = 0 - (-1) = 1$$",
+      "proof_he": null,
+      "topic": "חישוב אינטגרלים מסוימים"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": "4",
+      "name": "חישוב אינטגרל של שורש(1-x^2) על [-1,1]",
+      "statement_he": "$$\\int_{-1}^1 \\sqrt{1 - x^2}\\,dx = \\left[ \\frac{1}{2}\\sin(2\\arcsin x) + \\frac{1}{2}\\arcsin x \\right]_{-1}^1 = \\left[ \\frac{1}{2}\\sin(\\underbrace{2\\arcsin 1}_{\\pi}) + \\frac{1}{2}\\arcsin 1 \\right] - \\left[ \\frac{1}{2}\\sin(\\underbrace{2\\arcsin(-1)}_{-\\pi}) + \\frac{1}{2}\\arcsin(-1) \\right] = \\frac{1}{2} \\cdot \\frac{\\pi}{2} - \\left( -\\frac{\\pi}{4} \\right) = \\frac{\\pi}{2}$$ (מתאים למחצית שטח עיגול היחידה $x^2 + y^2 = 1$, $y = \\pm\\sqrt{1 - x^2}$).",
+      "proof_he": null,
+      "topic": "חישוב אינטגרלים מסוימים"
+    }
+  ]
+}

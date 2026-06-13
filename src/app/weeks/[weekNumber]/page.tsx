@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import { WeekHomeworkSection } from "./WeekHomeworkSection";
 import { WeekProgressTracker, type ProgSection, type ProgQuestion } from "@/components/progress/WeekProgressTracker";
+import { LectureKnowledgeForWeek } from "@/components/LectureKnowledge";
 
 export const dynamic = "force-dynamic";
 
@@ -381,6 +382,11 @@ export default async function WeekDetailPage({ params }: Props) {
               )}
             </Column>
           </div>
+
+          {/* ── Word-for-word definitions & theorems from the lectures ── */}
+          <section id="lecture-knowledge" className="mb-8 scroll-mt-24">
+            <LectureKnowledgeForWeek week={weekNum} />
+          </section>
 
           {/* ── Definitions quick-link ── */}
           <div

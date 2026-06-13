@@ -1,0 +1,2133 @@
+[
+  {
+    "lecture": 1,
+    "week": 2,
+    "date": "19.3.26",
+    "topics": [
+      "סדרות",
+      "גבול סדרה",
+      "סדרות חסומות",
+      "מונוטוניות",
+      "התכנסות והתבדרות",
+      "תת-סדרות"
+    ],
+    "items": [
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "הגדרת סדרה",
+        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$. סדרה של מספרים ממשיים, המסומנת ב-$(a_n)_{n=k}^{\\infty}$, מוגדרת כפונקציה\n$$a : \\{n \\in \\mathbb{Z} : n \\ge k\\} \\longrightarrow \\mathbb{R} ,$$\nכאשר לכל $n \\ge k$, $a_n$ הוא ערך הפונקציה ב-$n$, ופורמלית, $a_n = a(n)$, ונקרא אבר כללי, או האבר ה-$n$-י בסדרה $(a_n)$.",
+        "proof_he": null,
+        "topic": "סדרות"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": "1",
+        "name": "הסדרה $(-1)^n$",
+        "statement_he": "נביט בסדרה $(a_n)_{n=0}^{\\infty}$ המוגדרת ע\"י: $a_n = (-1)^n$ לכל $n \\ge 0$. $a_0 = (-1)^0 = 1$. $a_n : 1, -1, 1, -1, 1, -1, \\ldots$",
+        "proof_he": null,
+        "topic": "סדרות"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": "2",
+        "name": "סדרת פיבונאצ'י",
+        "statement_he": "נביט בסדרת פיבונאצ'י $(F_n)_{n=0}^{\\infty}$ המוגדרת ע\"י:\n$$\\begin{cases} F_n = F_{n-1} + F_{n-2} & \\forall n \\ge 2 \\\\ F_0 = 0, \\; F_1 = 1 \\end{cases}$$\n$F_n : 0, 1, 1, 2, 3, 5, 8, 13, \\ldots$",
+        "proof_he": null,
+        "topic": "סדרות"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "שוויון סדרות",
+        "statement_he": "יהי $0 \\le k_1, k_2 \\in \\mathbb{Z}$ ותהיינה $(a_n)_{n=k_1}^{\\infty}$ ו-$(b_n)_{n=k_2}^{\\infty}$ שתי סדרות של מספרים ממשיים. נאמר כי הן שוות ונסמן $(a_n)_{n=k_1}^{\\infty} = (b_n)_{n=k_2}^{\\infty}$ אם:\n(i) $k_1 = k_2$\n(ii) לכל $n \\ge k_1$ מתקיים $a_n = b_n$.",
+        "proof_he": null,
+        "topic": "סדרות"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "גבול סדרה",
+        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה של מספרים ממשיים. יהי $L \\in \\mathbb{R}$. נאמר כי $L$ הוא הגבול של הסדרה $(a_n)_{n=k}^{\\infty}$ (או שהסדרה מתכנסת ל-$L$) ונסמן $\\lim_{n \\to \\infty} a_n = L$, אם לכל $\\varepsilon > 0$ קיים $N \\in \\mathbb{N}$ כך שלכל $n \\ge N$ מתקיים $|a_n - L| < \\varepsilon$.",
+        "proof_he": null,
+        "topic": "גבול סדרה"
+      },
+      {
+        "kind": "note",
+        "label": "הערה",
+        "number": "1",
+        "name": "השוואה לגבול פונקציה באינסוף",
+        "statement_he": "ההגדרה לעיל מזכירה את ההגדרה של גבול פונקציה: $\\lim_{x \\to \\infty} f(x) = L$ אם לכל $\\varepsilon > 0$ קיים $M > 0$ כך שלכל $x > M$ מתקיים $|f(x) - L| < \\varepsilon$.",
+        "proof_he": null,
+        "topic": "גבול סדרה"
+      },
+      {
+        "kind": "note",
+        "label": "הערה",
+        "number": null,
+        "name": "פעולות על גבולות סדרות",
+        "statement_he": "כל המשפטים של גבולות פונקציות באינסוף, ובפרט 1 ופרק 1, נכונים לסדרות:\n(i) יחידות הגבול\n(ii) פעולות $\\pm$, $\\cdot$, $\\div$, $\\sqrt{\\;}$, $|\\cdot|$ וכאשר הם מוגדרים\n(iii) מונוטוניות הגבול\n(iv) סנדביץ'\n(v) $a \\times b$.",
+        "proof_he": null,
+        "topic": "גבול סדרה"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "סדרה חסומה",
+        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה של מספרים ממשיים. יהי $L \\in \\mathbb{R}$. נאמר כי:\n(i) $(a_n)_{n=k}^{\\infty}$ חסומה מלעיל אם קיים $M \\in \\mathbb{R}$ כך שלכל $n \\ge k$ מתקיים $a_n \\le M$ ($M$ נקרא חסם מלעיל של הסדרה).\n(ii) $(a_n)_{n=k}^{\\infty}$ חסומה מלרע אם קיים $m \\in \\mathbb{R}$ כך שלכל $n \\ge k$ מתקיים $a_n \\ge m$ ($m$ נקרא חסם מלרע של הסדרה).\n(iii) $(a_n)_{n=k}^{\\infty}$ חסומה אם קיים $M > 0$ כך שלכל $n \\ge k$ מתקיים $|a_n| \\le M$.",
+        "proof_he": null,
+        "topic": "סדרות חסומות"
+      },
+      {
+        "kind": "note",
+        "label": "הערה",
+        "number": "2",
+        "name": "חסומה אם\"ם חסומה מלעיל ומלרע",
+        "statement_he": "$(a_n)_{n=k}^{\\infty}$ חסומה אם\"ם היא חסומה מלעיל ומלרע ונפתור.",
+        "proof_he": null,
+        "topic": "סדרות חסומות"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "1",
+        "name": "$\\lim 1/n = 0$",
+        "statement_he": "הוכיחו באמצעות הגדרת הגבול של הסדרה כי\n$$\\lim_{n \\to \\infty} \\frac{1}{n} = 0 .$$",
+        "proof_he": "יהי $\\varepsilon > 0$. מארכימדיות, קיים $N \\in \\mathbb{N}$ כך ש-$\\boxed{N > \\frac{1}{\\varepsilon}}$. יהי $N \\in \\mathbb{N}$ כך ש-$N > \\frac{1}{\\varepsilon}$. אזי לכל $n \\ge N$:\n$$\\left| \\frac{1}{n} - 0 \\right| = \\frac{1}{n} \\underset{n \\ge N}{\\le} \\frac{1}{N} < \\varepsilon .$$",
+        "topic": "גבול סדרה"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "2",
+        "name": "$\\lim \\lfloor \\alpha n \\rfloor / n = \\alpha$",
+        "statement_he": "יהי $\\alpha > 0$. חשבו או הוכיחו את הגבול\n$$\\lim_{n \\to \\infty} \\frac{\\lfloor \\alpha n \\rfloor}{n} .$$",
+        "proof_he": "פתרון: שים $\\heartsuit$ כי לכל $n \\in \\mathbb{N}$,\n$$\\alpha - \\frac{1}{n} = \\frac{\\alpha n - 1}{n} \\underset{x-1 < \\lfloor x \\rfloor}{<} \\frac{\\lfloor \\alpha n \\rfloor}{n} \\underset{\\lfloor x \\rfloor \\le x}{\\le} \\frac{\\alpha n}{n} = \\alpha .$$\nאזי $\\alpha - \\frac{1}{n} \\le \\frac{\\lfloor \\alpha n \\rfloor}{n} \\le \\alpha$, וכאשר $n \\to \\infty$ האגף השמאלי שואף ל-$\\alpha$ והאגף הימני שואף ל-$\\alpha$, ולכן מסנדביץ' הגבול הוא $\\alpha$.",
+        "topic": "גבול סדרה"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "3",
+        "name": "$\\lim \\sin n / n$",
+        "statement_he": "חשבו או הוכיחו את הגבול\n$$\\lim_{n \\to \\infty} \\frac{\\sin n}{n} .$$",
+        "proof_he": "פתרון: $\\lim_{n \\to \\infty} \\frac{\\sin n}{n} \\underset{\\text{סנדביץ'}}{=} 0$ (כי $|\\sin n| \\le 1$ לכל $n$).",
+        "topic": "גבול סדרה"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "התבדרות ל-$\\pm\\infty$ והתכנסות",
+        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה של מספרים ממשיים. נאמר כי:\n(i) $\\lim_{n \\to \\infty} a_n = \\infty$ אם לכל $M > 0$ קיים $N \\in \\mathbb{N}$ כך שלכל $n \\ge N$ מתקיים $a_n > M$.\n(ii) $\\lim_{n \\to \\infty} a_n = -\\infty$ אם לכל $M < 0$ קיים $N \\in \\mathbb{N}$ כך שלכל $n \\ge N$ מתקיים $a_n < M$.\n(iii) $(a_n)_{n=1}^{\\infty}$ מתכנסת אם קיים $L \\in \\mathbb{R}$ כך ש-$\\lim_{n \\to \\infty} a_n = L$, ואם אינה מתכנסת היא מתבדרת (divergent).\n(iv) $(a_n)_{n=1}^{\\infty}$ מתבדרת בהחלט אם הגבול שלה אינו קיים. במקרים הבאים ערכי הסדרה מתקיים:\n(א) $(a_n)_{n=1}^{\\infty}$ מתבדרת\n(ב) $\\lim_{n \\to \\infty} a_n = \\infty$\n(ג) $\\lim_{n \\to \\infty} a_n = -\\infty$.",
+        "proof_he": null,
+        "topic": "התכנסות והתבדרות"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "מונוטוניות",
+        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה של מספרים ממשיים. נאמר כי:\n(i) $(a_n)_{n=k}^{\\infty}$ עולה אם לכל $n \\in \\mathbb{N}$, $a_{n+1} \\ge a_n$.\n(ii) $(a_n)_{n=k}^{\\infty}$ יורדת אם לכל $n \\in \\mathbb{N}$, $a_{n+1} \\le a_n$.\n(iii) $(a_n)_{n=k}^{\\infty}$ עולה ממש אם לכל $n \\in \\mathbb{N}$, $a_{n+1} > a_n$.\n(iv) $(a_n)_{n=k}^{\\infty}$ יורדת ממש אם לכל $n \\in \\mathbb{N}$, $a_{n+1} < a_n$.\n(v) $(a_n)_{n=k}^{\\infty}$ מונוטונית אם (i) או (ii).\n(vi) $(a_n)_{n=k}^{\\infty}$ מונוטונית ממש אם (iii) או (iv).",
+        "proof_he": null,
+        "topic": "מונוטוניות"
+      },
+      {
+        "kind": "note",
+        "label": "הערה",
+        "number": "3",
+        "name": "פעולות על מונוטוניות באלגברה",
+        "statement_he": "כל המשפטים של אלגברה ופרק 1 נכונים בעבור פעולת המונוטוניות בתחב:\n(i) אלגברה ($+\\infty, \\infty \\cdot \\infty, \\ldots$)\n(ii) סנדביץ'\n(iii) סדרה מונוטונית מתכנסת באופן הרחב.\nננסח באופן את (iii):",
+        "proof_he": null,
+        "topic": "מונוטוניות"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "1",
+        "name": "עולה וחסומה מלעיל מתכנסת ל-sup",
+        "statement_he": "תהי $(a_n)_{n=k}^{\\infty}$ סדרה של מספרים ממשיים. נניח כי $(a_n)_{n=k}^{\\infty}$ עולה ואם $(a_n)_{n=k}^{\\infty}$ חסומה מלעיל בתחב, אזי $(a_n)_{n=k}^{\\infty}$ מתכנסת ו-\n$$\\lim_{n \\to \\infty} a_n = \\sup\\{a_n : n \\ge k\\} .$$",
+        "proof_he": "הוכחה: בתרגול 2 שאלה 2ב.",
+        "topic": "מונוטוניות"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "2",
+        "name": "יורדת וחסומה מלרע מתכנסת ל-inf",
+        "statement_he": "תהי $(a_n)_{n=k}^{\\infty}$ סדרה של מספרים ממשיים. נניח כי $(a_n)_{n=k}^{\\infty}$ יורדת ואם $(a_n)_{n=k}^{\\infty}$ חסומה מלרע בתחב, אזי $(a_n)_{n=k}^{\\infty}$ מתכנסת ו-\n$$\\lim_{n \\to \\infty} a_n = \\inf\\{a_n : n \\ge k\\} .$$",
+        "proof_he": "הוכחה: בקווים להוכחה של משפט 1.",
+        "topic": "מונוטוניות"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "3",
+        "name": "התכנסות זנב הסדרה",
+        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=1}^{\\infty}$ סדרה של מספרים ממשיים. אם $(a_n)_{n=1}^{\\infty}$ מתכנסת אזי $(a_{n+k})_{n=1}^{\\infty}$ מתכנסת ובנוסף\n$$\\lim_{n \\to \\infty} a_{n+k} = \\lim_{n \\to \\infty} a_n .$$",
+        "proof_he": "הוכחה: בתרגול 2 שאלה 2ב.",
+        "topic": "התכנסות והתבדרות"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "4",
+        "name": "סדרה רקורסיבית $a_{n+2}=\\sqrt{a_n}+\\sqrt{a_{n+1}}$",
+        "statement_he": "נביט בסדרה $(a_n)_{n=1}^{\\infty}$ המוגדרת באמצעות רקורסיה ע\"י:\n$$\\begin{cases} a_{n+2} = \\sqrt{a_n} + \\sqrt{a_{n+1}} & \\forall n \\in \\mathbb{N} \\\\ a_1 = 9, \\; a_2 = 6 \\end{cases}$$\nהוכיחו ש-$(a_n)_{n=1}^{\\infty}$ מתכנסת וחשבו את הגבול שלה.",
+        "proof_he": "פתרון: נוכיח תחילה כי לכל $n \\in \\mathbb{N}$ מתקיים $a_n \\ge 4$ ומכך נראה שהסדרה מוגבלת היטב, ומזה נוכיח את הגבול.\n\nנוכיח כי $a_n \\ge 4$ באינדוקציה על $n$.\n\nבסיס האינדוקציה ($n=1, n=2$): $a_1 = 9 \\ge 4$ ✓, $a_2 = 6 \\ge 4$ ✓.\n\nצעד האינדוקציה ($n, n+1 \\Rightarrow n+2$): יהי $n \\in \\mathbb{N}$ ונניח שהטענה נכונה עבור $n$ ועבור $n+1$, פומר $a_n \\ge 4$ וכן $a_{n+1} \\ge 4$. נוכיח שהטענה נכונה עבור $n+2$:\n$$a_{n+2} = \\underset{\\text{הרקורסיה}}{\\sqrt{a_n}} + \\sqrt{a_{n+1}} \\underset{\\text{הנחת האינדוקציה}}{\\ge} \\sqrt{4} + \\sqrt{4} = 4 .$$\n\nנוכיח כעת שהסדרה $(a_n)_{n=1}^{\\infty}$ יורדת, פומר נוכיח את הטענה $a_{n+1} \\le a_n$ לכל $n \\in \\mathbb{N}$ באינדוקציה על $n$.\n\nבסיס האינדוקציה ($n=1, n=2$): $a_2 = 6 \\le 9 = a_1$ ✓. $a_3 = \\sqrt{a_1} + \\sqrt{a_2} = \\sqrt{9} + \\sqrt{6} = 3 + \\sqrt{6} \\le 6 = a_2$ ✓ (כי $\\sqrt{6} \\le 3$ כי $6 \\le 9$).\n\nצעד האינדוקציה ($n-1, n \\Rightarrow n+1$): יהי $2 \\le n \\in \\mathbb{N}$ ונוכיח שהטענה נכונה עבור $n$ ועבור $n-1$, פומר נניח $a_{n+1} \\le a_n$ (עבור $n$) ו-$a_n \\le a_{n-1}$ (עבור $n-1$). נוכיח שהטענה נכונה עבור $n+1$ ($a_{n+2} \\le a_{n+1}$):\n$$a_{n+2} = \\underset{\\text{הרקורסיה}}{\\sqrt{a_n}} + \\sqrt{a_{n+1}} \\underset{\\text{הנחת האינדוקציה}}{\\le} \\sqrt{a_{n+1}} + \\sqrt{a_n} = a_{n+1} .$$\n\nמכן הסדרה $(a_n)_{n=1}^{\\infty}$ יורדת והמותנה מספ' $4$ ולכן, מתכנסת, פומר, קיים $L \\in \\mathbb{R}$ כך ש-$\\lim_{n \\to \\infty} a_n = L$. עתה נחשב את הגבול $L$:\n$$L = \\lim_{n \\to \\infty} a_n \\underset{\\text{משפט 3}}{=} \\lim_{n \\to \\infty} a_{n+2} \\underset{\\text{הרקורסיה}}{=} \\lim_{n \\to \\infty} \\left( \\sqrt{a_n} + \\sqrt{a_{n+1}} \\right) \\underset{\\text{אלגברה ומשפט 3}}{=} \\sqrt{L} + \\sqrt{L} = 2\\sqrt{L} .$$\nאזי $L = 2\\sqrt{L}$ ולכן $\\sqrt{L} = 2$ או $L = 0$, ולכן $L = 4$ או $L = 0$. נשים $\\heartsuit$ כי\n$$L = \\lim_{n \\to \\infty} a_n \\underset{\\text{יורדת}}{=} \\inf\\{a_n : n \\in \\mathbb{N}\\} \\underset{\\text{מהוכחתנו}}{\\ge} 4 \\implies L \\ge 4 .$$\nולכן $L = 4$.",
+        "topic": "התכנסות והתבדרות"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "תת-סדרה",
+        "statement_he": "תהיינה $(a_n)_{n=1}^{\\infty}$ ו-$(b_k)_{k=1}^{\\infty}$ שתי סדרות של מספרים ממשיים. נאמר כי $(b_k)_{k=1}^{\\infty}$ היא תת-סדרה של $(a_n)_{n=1}^{\\infty}$ אם קיימת סדרה $(n_k)_{k=1}^{\\infty}$ של מספרים טבעיים עולה ממש כך שלכל $k \\in \\mathbb{N}$ מתקיים\n$$b_k = a_{n_k} .$$",
+        "proof_he": null,
+        "topic": "תת-סדרות"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": null,
+        "name": "תת-סדרה לדוגמה",
+        "statement_he": "$a_n : \\cancel{a_1} \\; a_2 \\; a_3 \\; \\cancel{a_4} \\; a_5 \\; \\cancel{a_6} \\; \\cancel{a_7} \\; a_8 \\; a_9 \\ldots$\n$n_k : 2, 3, 5, 8, 9, \\ldots$\n$b_1 = a_2, \\; b_2 = a_3, \\; b_3 = a_5, \\; b_4 = a_8, \\; b_5 = a_9$\n$b_k : a_2 \\; a_3 \\; a_5 \\; a_8 \\; a_9 \\ldots$",
+        "proof_he": null,
+        "topic": "תת-סדרות"
+      },
+      {
+        "kind": "note",
+        "label": "הערה",
+        "number": "4",
+        "name": "כל סדרה היא תת-סדרה של עצמה",
+        "statement_he": "נשים $\\heartsuit$ כי כל סדרה היא תת-סדרה של עצמה. בהתקבלה ני $(a_n)_{n=1}^{\\infty}$ ע\"י המתאם תאברים.\nפתרון: נבחר $n_k = 2k$ לכל $k \\in \\mathbb{N}$. שים $\\heartsuit$ כי $(n_k)_{k=1}^{\\infty}$ הינה סדרה של מספרים טבעיים:\n$n_k : 2, 4, 6, 8, \\ldots$\nבמקבה כה $b_k = a_{n_k} = a_{2k}$ לכל $k \\in \\mathbb{N}$ אזי $(a_{2k})_{k=1}^{\\infty}$ הינה תת-סדרה של $(a_n)_{n=1}^{\\infty}$ נתת הסדרה של האברים הזוגיים. באופן דומה, גם $(a_{2k-1})_{k=1}^{\\infty}$ הינה תת-סדרה של $(a_n)_{n=1}^{\\infty}$. באם שתי הסדרות $(a_{2n})_{n=1}^{\\infty}$ ו-$(a_{2n-1})_{n=1}^{\\infty}$ הן וכן תת-סדרות בדוגמה לי.",
+        "proof_he": null,
+        "topic": "תת-סדרות"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "4",
+        "name": "תת-סדרה של מתכנסת מתכנסת לאותו גבול (וירושה)",
+        "statement_he": "(וירושה) תהי $(a_n)_{n=1}^{\\infty}$ סדרה של מספרים ממשיים ותהי $(n_k)_{k=1}^{\\infty}$ סדרה עולה ממש של מספרים טבעיים. נניח כי $(a_n)_{n=1}^{\\infty}$ מתכנסת באמצעות הרחב. אזי תת הסדרה $(a_{n_k})_{k=1}^{\\infty}$ מתכנסת באמצעות הרחב ובנוסף\n$$\\lim_{k \\to \\infty} a_{n_k} = \\lim_{n \\to \\infty} a_n .$$",
+        "proof_he": "הוכחת משפט הירושה:\nמקרה א': נניח שהסדרה $(a_n)_{n=1}^{\\infty}$ מתכנסת, פומר שקיים $L \\in \\mathbb{R}$ כך ש-$\\lim_{n \\to \\infty} a_n = L$. נוכיח כי $\\lim_{k \\to \\infty} a_{n_k} = L$ ונס\"ם.\nיהי $\\varepsilon > 0$. מהיות $\\lim_{n \\to \\infty} a_n = L$ קיים $N_1 \\in \\mathbb{N}$ כך שלכל $n \\ge N_1$ מתקיים\n$$|a_n - L| < \\varepsilon \\quad (*)$$\nנבחר $\\boxed{K = N_1}$ ויהי $k \\ge K$. אזי $n_k \\ge k \\ge K = N_1$ (מהיות $n_k$ סדרה עולה ממש) ולכן $(*)$ מתקיים עבור $n_k$ ולכן\n$$|a_{n_k} - L| \\underset{(*)}{<} \\varepsilon .$$\n\nמקרה ב': נניח כי $\\lim_{n \\to \\infty} a_n = \\infty$. נוכיח כי $\\lim_{k \\to \\infty} a_{n_k} = \\infty$ ונס\"ם.\nיהי $M > 0$. מהיות $\\lim_{n \\to \\infty} a_n = \\infty$ קיים $N_1 \\in \\mathbb{N}$ כך שלכל $n \\ge N_1$ מתקיים\n$$a_n > M \\quad (**)$$\nנבחר $\\boxed{K = N_1}$ ויהי $k \\ge K$. אזי $n_k \\ge k \\ge K = N_1$ (מהיות $n_k$ סדרה עולה ממש) ולכן $(**)$ מתקיים עבור $n_k$ ולכן\n$$a_{n_k} \\underset{(**)}{>} M .$$\n\nמקרה ג': נניח כי $\\lim_{n \\to \\infty} a_n = -\\infty$. נוכיח כי $\\lim_{k \\to \\infty} a_{n_k} = -\\infty$ ונס\"ם.\nיהי $M < 0$. מהיות $\\lim_{n \\to \\infty} a_n = -\\infty$ קיים $N_1 \\in \\mathbb{N}$ כך שלכל $n \\ge N_1$ מתקיים\n$$a_n < M \\quad (**)$$\nנבחר $\\boxed{K = N_1}$ ויהי $k \\ge K$. אזי $n_k \\ge k \\ge K = N_1$ (מהיות $n_k$ סדרה עולה ממש) ולכן $(**)$ מתקיים עבור $n_k$ ולכן\n$$a_{n_k} \\underset{(**)}{<} M .$$",
+        "topic": "תת-סדרות"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "1",
+        "name": "תת-סדרה עם $n_k \\ge k$",
+        "statement_he": "תהי $(n_k)_{k=1}^{\\infty}$ סדרה עולה ממש של מספרים טבעיים. הוכיחו כי לכל $k \\in \\mathbb{N}$ מתקיים $n_k \\ge k$.",
+        "proof_he": "הוכחה: נוכיח באינדוקציה על $k$.\nבסיס האינדוקציה ($k=1$): $n_1 \\ge 1$ כי $n_1 \\in \\mathbb{N}$.\nצעד האינדוקציה ($k \\Rightarrow k+1$): יהי $k \\in \\mathbb{N}$ ונניח שהטענה נכונה עבור $k$, פומר $n_k \\ge k$. נוכיח שהטענה נכונה עבור $k+1$. מהיות $(n_k)_{k=1}^{\\infty}$ עולה ממש, הרי ש-$n_{k+1} > n_k$. מהיות $n_k, n_{k+1}$ טבעיים, אזי $n_{k+1} \\ge n_k + 1$. ולכן\n$$n_{k+1} \\ge n_k + 1 \\underset{\\text{הנחת האינדוקציה}}{\\ge} k + 1 .$$",
+        "topic": "תת-סדרות"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": "1",
+        "name": "תת-סדרת המספרים הראשוניים",
+        "statement_he": "תהי $(p_k)_{k=1}^{\\infty}$ סדרת המספרים הראשוניים, אזי\n$$\\lim_{k \\to \\infty} p_k \\underset{\\text{וירושה}}{=} \\lim_{n \\to \\infty} n = \\infty .$$\nבאותו אופן\n$$\\lim_{k \\to \\infty} \\frac{1}{p_k} \\underset{\\text{וירושה}}{=} \\lim_{n \\to \\infty} \\frac{1}{n} = 0 .$$\n$\\frac{1}{n} : \\cancel{1} \\; \\frac{1}{2} \\; \\frac{1}{3} \\; \\cancel{\\frac{1}{4}} \\; \\frac{1}{5} \\ldots$\n$\\frac{1}{p_k} : \\frac{1}{2} \\; \\frac{1}{3} \\; \\frac{1}{5} \\; \\frac{1}{7} \\; \\frac{1}{11} \\ldots$",
+        "proof_he": null,
+        "topic": "תת-סדרות"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": "2",
+        "name": "התבדרות $(-1)^n$ דרך תת-סדרות",
+        "statement_he": "נביט בסדרה $(a_n)_{n=0}^{\\infty}$ המוגדרת ע\"י: $a_n = (-1)^n$ לכל $n \\ge 0$. שים $\\heartsuit$ כי\n$$\\lim_{k \\to \\infty} a_{2k} = \\lim_{k \\to \\infty} (-1)^{2k} = \\lim_{k \\to \\infty} 1 = 1$$\n$$\\lim_{k \\to \\infty} a_{2k-1} = \\lim_{k \\to \\infty} (-1)^{2k-1} = \\lim_{k \\to \\infty} (-1) = (-1)$$\nאזי $\\lim_{n \\to \\infty} (-1)^n$ אינו קיים כי גבולן של תת-סדרות שונה.",
+        "proof_he": null,
+        "topic": "תת-סדרות"
+      },
+      {
+        "kind": "corollary",
+        "label": "מסקנה",
+        "number": "1",
+        "name": "התכנסות זנב דרך תת-סדרה",
+        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=1}^{\\infty}$ סדרה של מספרים ממשיים. נניח כי $(a_n)_{n=1}^{\\infty}$ מתכנסת באמצעות הרחב. אזי $(a_{n+k})_{n=1}^{\\infty}$ מתכנסת באמצעות הרחב ו-\n$$\\lim_{n \\to \\infty} a_{n+k} = \\lim_{n \\to \\infty} a_n .$$",
+        "proof_he": "הוכחה: $(a_{n+k})_{n=1}^{\\infty}$ הינה תת-סדרה של $(a_n)_{n=1}^{\\infty}$ ולכן מירושה\n$$\\lim_{n \\to \\infty} a_{n+k} = \\lim_{n \\to \\infty} a_n .$$",
+        "topic": "תת-סדרות"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "5",
+        "name": "התכנסות דרך תת-סדרות זוגית ואי-זוגית",
+        "statement_he": "תהי $(a_n)_{n=1}^{\\infty}$ סדרה של מספרים ממשיים. יהי $L \\in \\mathbb{R}$. מ\"ח כי\n$$\\lim_{k \\to \\infty} a_{2k} = \\lim_{k \\to \\infty} a_{2k-1} = L$$\nאזי $(a_n)_{n=1}^{\\infty}$ מתכנסת ו-\n$$\\lim_{n \\to \\infty} a_n = L .$$",
+        "proof_he": "הוכחה: יהי $\\varepsilon > 0$. מהיות $\\lim_{k \\to \\infty} a_{2k} = L$ קיים $K_1 \\in \\mathbb{N}$ כך שלכל $k \\ge K_1$ מתקיים\n$$|a_{2k} - L| < \\varepsilon \\quad (*)$$\nמהיות $\\lim_{k \\to \\infty} a_{2k-1} = L$ קיים $K_2 \\in \\mathbb{N}$ כך שלכל $k \\ge K_2$ מתקיים\n$$|a_{2k-1} - L| < \\varepsilon \\quad (**)$$\nנבחר $\\boxed{N = \\max\\{2K_1, 2K_2 - 1\\}}$ ויהי $n \\ge N$.\nאם $n$ זוגי, אזי קיים $K \\in \\mathbb{N}$ כך ש-$n = 2k$ ולכן $2k = n \\ge N \\ge 2K_1$ ולכן $k \\ge K_1$ ולכן $(*)$ מתקיים עבור $k$ ולכן\n$$|a_n - L| = |a_{2k} - L| \\underset{(*)}{<} \\varepsilon .$$\nאחרת, $n$ אי-זוגי, ולכן קיים $K \\in \\mathbb{N}$ כך ש-$n = 2k-1$, ולכן $2k - 1 = n \\ge N \\ge 2K_2 - 1$ ולכן $k \\ge K_2$ ולכן $(**)$ מתקיים עבור $k$ ולכן\n$$|a_n - L| = |a_{2k-1} - L| \\underset{(**)}{<} \\varepsilon .$$",
+        "topic": "תת-סדרות"
+      }
+    ]
+  },
+  {
+    "lecture": 2,
+    "week": 4,
+    "date": "26.03.26",
+    "topics": [
+      "אינטגרל לא מסוים (פונקציה קדומה)",
+      "שיטות אינטגרציה",
+      "אינטגרל מסוים (סכומי דארבו)"
+    ],
+    "items": [
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "פונקציה קדומה",
+        "statement_he": "יהי $I \\subseteq \\mathbb{R}$ קטע ותהיינה $F, f$ שתי פונקציות המוגדרות על $I$. נאמר כי $F$ היא פונקציה קדומה של $f$ ב-$I$ אם:\n(i) $F$ גזירה ב-$I$.\n(ii) לכל $x \\in I$ מתקיים $F'(x) = f(x)$.",
+        "proof_he": null,
+        "topic": "אינטגרל לא מסוים"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "אינטגרל לא מסוים",
+        "statement_he": "במקרה כזה, נגדיר את הסכום הכולל (indefinite) של $f$ על $I$ ע\"י:\n$$\\int f(x)\\,dx = \\{ F(x) + C : C \\in \\mathbb{R} \\}$$\nובאופן מקוצר:\n$$\\int f(x)\\,dx = F(x) + C.$$",
+        "proof_he": null,
+        "topic": "אינטגרל לא מסוים"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמאות",
+        "number": null,
+        "name": "אינטגרלים בסיסיים (טבלת אינטגרלים)",
+        "statement_he": "טבלת אינטגרלים בסיסיים:\n1. $\\int \\cos x\\,dx = \\sin x + C$\n2. $\\int \\sin x\\,dx = -\\cos x + C$\n3. $\\int x\\,dx = \\frac{x^2}{2} + C$\n4. $\\int x^2\\,dx = \\frac{x^3}{3} + C$\n5. $\\int \\frac{dx}{x} = \\ln x + C$ ב-$(0, \\infty)$;\nב-$(-\\infty, 0)$: $\\int \\frac{dx}{x} = \\ln(-x) + C$, כי $[\\ln(-x)]' = \\frac{1}{-x} \\cdot (-1) = \\frac{1}{x}$, ובאופן כללי $\\int \\frac{dx}{x} = \\ln|x| + C$.",
+        "proof_he": null,
+        "topic": "אינטגרל לא מסוים"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט 1",
+        "number": "1",
+        "name": "פונקציות קדומות נבדלות בקבוע",
+        "statement_he": "תהיינה $f, F, G$ שלוש פונקציות המוגדרות בקטע $I \\subseteq \\mathbb{R}$. נניח כי $F, G$ הן פונקציות קדומות של $f$ בקטע $I$. אזי קיים $C \\in \\mathbb{R}$ כך שלכל $x \\in I$ מתקיים\n$$F(x) = G(x) + C.$$",
+        "proof_he": "נגדיר את הפונקציה העזר $h$:\n$h(x) = F(x) - G(x)$ לכל $x \\in I$.\nואז $h$ גזירה ב-$I$ (כהפרש של שתי גזירות) ולכל $x \\in I$ מתקיים\n$$h'(x) = F'(x) - G'(x) = f(x) - f(x) = 0$$\n(לפי ההגדרה).\nכעת ממסקנה חלקה ב' בהרצאה 1 קיים $C \\in \\mathbb{R}$ כך שלכל $x \\in I$ מתקיים $h(x) = C$, כלומר\n$h(x) = F(x) - G(x) = C$ לכל $x \\in I$, ואז\n$F(x) = G(x) + C$ לכל $x \\in I$.",
+        "topic": "אינטגרל לא מסוים"
+      },
+      {
+        "kind": "corollary",
+        "label": "מסקנה 1",
+        "number": "1",
+        "name": "אוסף כל הפונקציות הקדומות",
+        "statement_he": "$$\\int f(x)\\,dx = \\{ F(x) + C : C \\in \\mathbb{R} \\} = \\{ \\text{כל הפונקציות הקדומות של } f \\text{ ב-}I \\}.$$\n(כאשר $F$ פונקציה קדומה של $f$).",
+        "proof_he": null,
+        "topic": "אינטגרל לא מסוים"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמא",
+        "number": null,
+        "name": "הפונקציה הקדומה אינה רציפה בהכרח",
+        "statement_he": "הפונקציה הקדומה: $F(x) = \\begin{cases} \\ln x & x > 0 \\\\ \\ln(-x) + 1 & x < 0 \\end{cases}$ לכל $x \\neq 0$.\nהיא קדומה של $\\frac{1}{x}$ כי $F'(x) = \\frac{1}{x}$ לכל $x \\neq 0$.\nאבל אז לפי קיים $C \\in \\mathbb{R}$ כך ש- $F(x) = \\ln|x| + C$ לכל $x \\neq 0$.\nאבל זה לא נכון, כי יש חשיבות בהנחה של $I$ קטע. הצורך ש-$F$ קדומה היא בקטע ולא בכמה קטעים, וגם בתחום ההגדרה של $f$ כך שלם.",
+        "proof_he": null,
+        "topic": "אינטגרל לא מסוים"
+      },
+      {
+        "kind": "note",
+        "label": "הערה 1",
+        "number": "1",
+        "name": "תנאי לקיום פונקציה קדומה",
+        "statement_he": "אם קיים $\\int f(x)\\,dx$ אזי קודמת של $f$ ב-$I$.\nמסקנה: אם קיים $\\int D(x)\\,dx$ אזי קיים כי ראינו ש- $D$ פונקציה קדומה אבל לא קיים $D$ (כפי שנראה בהרצאה 24).",
+        "proof_he": null,
+        "topic": "אינטגרל לא מסוים"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט 2",
+        "number": "2",
+        "name": "תכונות האינטגרל הלא מסוים (לינאריות, בחלקים, החלפת משתנה)",
+        "statement_he": "תהיינה $f, g, F, G$ ארבע פונקציות המוגדרות בקטע $I \\subseteq \\mathbb{R}$. נניח כי $F, G$ הן פונקציות קדומות של $f, g$ ב-$I$. אזי:\n(i) לינאריות: לכל $\\alpha, \\beta \\in \\mathbb{R}$ מתקיים\n$$\\int [\\alpha f(x) + \\beta g(x)]\\,dx = \\alpha \\int f(x)\\,dx + \\beta \\int g(x)\\,dx.$$\n(ii) אינטגרציה בחלקים:\n$$\\int F'(x) G(x)\\,dx = F(x) G(x) - \\int F(x) G'(x)\\,dx.$$\n(iii) שיטת ההצבה (החלפת המשתנה):\n$$\\int g(F(x)) \\cdot f(x)\\,dx = \\int g(t)\\,dt, \\quad t = F(x).$$",
+        "proof_he": "נוכיח את (iii): נשים לב שמתקיים, לכל $x \\in I$,\n$$[G(F(x))]' = G'(F(x)) \\cdot F'(x) = g(F(x)) \\cdot f(x)$$\n(מהשרשרת).\nאזי $G(F(x))$ קדומה של $g(F(x)) \\cdot f(x)$ בקטע $I$, ואזי ע\"פ ההגדרה\n$$\\int g(F(x)) f(x)\\,dx = G(F(x)) + C = G(t) + C = \\int g(t)\\,dt, \\quad t = F(x).$$",
+        "topic": "שיטות אינטגרציה"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמאות",
+        "number": null,
+        "name": "אינטגרלים נוספים (e, חזקה, מעריכית, arctg)",
+        "statement_he": "נוסיף לטבלת האינטגרלים הבסיסיים את:\n1. $\\int e^x\\,dx = e^x + C$\n2. $\\int x^{\\alpha}\\,dx = \\frac{x^{\\alpha+1}}{\\alpha+1} + C$, לכל $\\alpha \\neq -1$\n3. $\\int a^x\\,dx = \\frac{a^x}{\\ln a} + C$, לכל $0 < a \\neq 1$\n4. $\\int \\frac{dx}{1+x^2} = \\arctan x + C$",
+        "proof_he": null,
+        "topic": "שיטות אינטגרציה"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמאות לפי לינאריות",
+        "number": null,
+        "name": "אינטגרלים לפי לינאריות",
+        "statement_he": "1. $\\int (x - x^2 + 2x^3)\\,dx = \\frac{x^2}{2} - \\frac{x^3}{3} + 2 \\cdot \\frac{x^4}{4} + C$\n2. $\\int (e^x - 5x)\\,dx = e^x - \\frac{5x^2}{2} + C$\n3. $\\int \\frac{x^2 - x}{x^3}\\,dx = \\int \\left( \\frac{1}{x} - \\frac{1}{x^2} \\right) dx = \\ln|x| + \\frac{1}{x} + C$ (כאשר $\\left( \\frac{1}{x} \\right)' = -\\frac{1}{x^2}$).",
+        "proof_he": null,
+        "topic": "שיטות אינטגרציה"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמאות לאינטגרציה בחלקים",
+        "number": null,
+        "name": "אינטגרציה בחלקים",
+        "statement_he": "1. $\\int x e^x\\,dx = x e^x - \\int e^x \\cdot 1\\,dx = x e^x - e^x + C$, כאשר $\\begin{cases} u'(x) = e^x \\to u(x) = e^x \\\\ v(x) = x \\to v'(x) = 1 \\end{cases}$\n2. $\\int x^2 e^x\\,dx = x^2 e^x - \\int e^x \\cdot 2x\\,dx = x^2 e^x - 2 \\int x e^x\\,dx = x^2 e^x - 2x e^x + 2e^x + C$, כאשר $\\begin{cases} u' = e^x \\to u = e^x \\\\ v = x^2 \\to v' = 2x \\end{cases}$\n3. $\\int \\ln x\\,dx = x \\ln x - \\int x \\cdot \\frac{1}{x}\\,dx = x \\ln x - \\int 1\\,dx = x \\ln x - x + C$, כאשר $\\begin{cases} u' = 1 \\to u = x \\\\ v = \\ln x \\to v' = \\frac{1}{x} \\end{cases}$",
+        "proof_he": null,
+        "topic": "שיטות אינטגרציה"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמאות לפי ההצבה",
+        "number": null,
+        "name": "אינטגרציה בהצבה",
+        "statement_he": "1. $\\int \\sin(x^2) \\cdot 2x\\,dx = \\int g(F(x)) f(x)\\,dx$, כאשר $\\begin{cases} g(t) = \\sin t \\\\ F(x) = x^2 \\end{cases}$, ואז $g(F(x)) f(x) = \\sin(x^2) \\cdot 2x$, $f(x) = 2x$. לכן $= \\int g(t)\\,dt = \\int \\sin t\\,dt = -\\cos t + C$ (עם $t = F(x) = x^2$) $= -\\cos(x^2) + C$.\nנכתוב בקיצור בכלל מהר:\n$\\int \\sin(x^2) 2x\\,dx = \\int \\sin(t)\\,dt$ עם $\\begin{cases} t = x^2 \\\\ dt = 2x\\,dx \\end{cases}$.\n2. $\\int \\sin(x^3) \\cdot x^2\\,dx = \\int \\sin(t) \\cdot x^2 \\cdot \\frac{dt}{3x^2}$, עם $\\begin{cases} t = x^3 \\\\ dt = 3x^2\\,dx \\to dx = \\frac{dt}{3x^2} \\end{cases}$ $= \\frac{1}{3} \\int \\sin t\\,dt = -\\frac{1}{3} \\cos t + C = -\\frac{1}{3} \\cos(x^3) + C$.\n3. $\\int \\frac{\\ln x}{x}\\,dx = \\int \\frac{t}{x} \\cdot x\\,dt = \\int t\\,dt$, עם $\\begin{cases} t = \\ln x \\\\ dt = \\frac{1}{x}\\,dx \\to dx = x\\,dt \\end{cases}$ $= \\frac{t^2}{2} + C = \\frac{(\\ln x)^2}{2} + C$.\n4. $\\int \\frac{\\sin x}{\\cos x}\\,dx = \\int \\frac{\\sin x}{t} \\cdot \\frac{dt}{-\\sin x}$, עם $\\begin{cases} t = \\cos x \\\\ dt = -\\sin x\\,dx \\to dx = \\frac{dt}{-\\sin x} \\end{cases}$ $= -\\int \\frac{dt}{t} = -\\ln|t| + C = -\\ln|\\cos x| + C$.\n5. $\\int \\cos x \\sin x\\,dx = \\int t \\cdot \\sin x \\cdot \\frac{dt}{-\\sin x}$, עם $\\begin{cases} t = \\cos x \\\\ dt = -\\sin x\\,dx \\to dx = \\frac{dt}{-\\sin x} \\end{cases}$ $= -\\frac{t^2}{2} + C = -\\frac{\\cos^2 x}{2} + C$. בדרך אחרת: $\\int \\cos x \\sin x\\,dx = \\int \\cos x \\cdot t \\cdot \\frac{dt}{\\cos x} = \\frac{t^2}{2} + C = \\frac{\\sin^2 x}{2} + C$, עם $\\begin{cases} t = \\sin x \\\\ dt = \\cos x\\,dx \\to dx = \\frac{dt}{\\cos x} \\end{cases}$.",
+        "proof_he": null,
+        "topic": "שיטות אינטגרציה"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל 1",
+        "number": "1",
+        "name": "אינטגרל של arctg",
+        "statement_he": "מצאו את האינטגרל הלא מסוים הבא:\n$$\\int \\arctan x\\,dx$$",
+        "proof_he": "פתרון:\n$\\int \\arctan x\\,dx = x \\arctan x - \\int \\frac{x}{1+x^2}\\,dx$, כאשר $\\begin{cases} u' = 1 \\to u = x \\\\ v = \\arctan x \\to v' = \\frac{1}{1+x^2} \\end{cases}$\n$= x \\arctan x - \\int \\frac{x}{t} \\cdot \\frac{dt}{2x}$, עם $\\begin{cases} t = 1+x^2 \\\\ dt = 2x\\,dx \\to dx = \\frac{dt}{2x} \\end{cases}$\n$= x \\arctan x - \\frac{1}{2} \\int \\frac{dt}{t} = x \\arctan x - \\frac{1}{2} \\ln|t| + C = x \\arctan x - \\frac{1}{2} \\ln|1+x^2| + C$.",
+        "topic": "שיטות אינטגרציה"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל 2",
+        "number": "2",
+        "name": "אינטגרל של שורש 1 פחות x בריבוע",
+        "statement_he": "מצאו את האינטגרל הלא מסוים הבא:\n$$\\int \\sqrt{1 - x^2}\\,dx$$",
+        "proof_he": "פתרון:\n$\\int \\sqrt{1-x^2}\\,dx = \\int \\sqrt{1-x^2} \\sqrt{1-x^2}\\,dt$, עם $\\begin{cases} t = \\arcsin x \\to x = \\sin t \\\\ dt = \\frac{1}{\\sqrt{1-x^2}}\\,dx \\to dx = \\sqrt{1-x^2}\\,dt \\end{cases}$\n$= \\int (1 - x^2)\\,dt = \\int (1 - \\sin^2 t)\\,dt = \\int \\cos^2 t\\,dt$ (עם $x = \\sin t$)\n$= \\int \\frac{\\cos(2t) + 1}{2}\\,dt = \\frac{1}{2} \\int \\cos(2t)\\,dt + \\frac{1}{2} \\int 1\\,dt$ (כי $\\cos^2 t = \\frac{\\cos 2t + 1}{2}$)\n$= \\frac{1}{2} \\int \\cos u \\cdot \\frac{du}{2} + \\frac{1}{2} t = \\frac{1}{4} \\sin u + \\frac{1}{2} t + C$, עם $\\begin{cases} u = 2t \\\\ du = 2\\,dt \\to dt = \\frac{du}{2} \\end{cases}$\n$= \\frac{1}{4} \\sin(2t) + \\frac{1}{2} t + C = \\frac{1}{4} \\sin(2 \\arcsin x) + \\frac{1}{2} \\arcsin x + C$.",
+        "topic": "שיטות אינטגרציה"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל 3",
+        "number": "3",
+        "name": "אינטגרל של arcsin",
+        "statement_he": "מצאו את האינטגרל הלא מסוים הבא:\n$$\\int \\arcsin x\\,dx$$",
+        "proof_he": "פתרון:\n$\\int \\arcsin x\\,dx = x \\arcsin x - \\int \\frac{x}{\\sqrt{1-x^2}}\\,dx$, כאשר $\\begin{cases} u' = 1 \\to u = x \\\\ v = \\arcsin x \\to v' = \\frac{1}{\\sqrt{1-x^2}} \\end{cases}$\n$= x \\arcsin x - \\int \\frac{x}{\\sqrt{t}} \\cdot \\frac{dt}{-2x}$, עם $\\begin{cases} t = 1-x^2 \\\\ dt = -2x\\,dx \\to dx = \\frac{dt}{-2x} \\end{cases}$\n$= x \\arcsin x + \\int \\frac{dt}{2\\sqrt{t}} = x \\arcsin x + \\sqrt{t} + C = x \\arcsin x + \\sqrt{1-x^2} + C$.",
+        "topic": "שיטות אינטגרציה"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "חלוקה של קטע",
+        "statement_he": "יהיו $a, b \\in \\mathbb{R}$ כך ש- $a < b$ ויהי $n \\in \\mathbb{N}$. חלוקה בגודל $n$ של הקטע $[a,b]$ מוגדרת להיות וקטור עולה $P = (x_0, \\ldots, x_n)$ כך ש-\n$$a = x_0 < x_1 < \\cdots < x_n = b.$$",
+        "proof_he": null,
+        "topic": "אינטגרל מסוים"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "סכומי דארבו העליון והתחתון, אינטגרל עליון ותחתון",
+        "statement_he": "יהיו $a, b \\in \\mathbb{R}$ כך ש- $a < b$ ותהי $f$ פונק' חסומה ב-$[a,b]$. נ\"ח ש-$f$ חסומה ותהי $P = (x_0, \\ldots, x_n)$ חלוקה של $[a,b]$.\n(i) הסכום העליון של $f$ ביחס לחלוקה $P$ מסומן ב- $\\bar{S}(f, P)$ ומוגדר ע\"י:\n$$\\bar{S}(f, P) = \\sum_{k=1}^{n} M_k \\cdot (x_k - x_{k-1})$$\nכאשר לכל $1 \\leq k \\leq n$:\n$$M_k = \\sup \\{ f(x) : x_{k-1} \\leq x \\leq x_k \\}.$$\n(ii) הסכום התחתון של $f$ ביחס לחלוקה $P$ מסומן ב- $\\underline{S}(f, P)$ ומוגדר ע\"י:\n$$\\underline{S}(f, P) = \\sum_{k=1}^{n} m_k \\cdot (x_k - x_{k-1})$$\nכאשר לכל $1 \\leq k \\leq n$:\n$$m_k = \\inf \\{ f(x) : x_{k-1} \\leq x \\leq x_k \\}.$$\n(iii) האינטגרל העליון של $f$ בקטע $[a,b]$ מסומן ב- $\\bar{I}(f)$ ומוגדר ע\"י:\n$$\\bar{I}(f) = \\inf \\{ \\bar{S}(f, P) : P \\text{ חלוקה של } [a,b] \\}.$$\n(iv) האינטגרל התחתון של $f$ בקטע $[a,b]$ מסומן ב- $\\underline{I}(f)$ ומוגדר ע\"י:\n$$\\underline{I}(f) = \\sup \\{ \\underline{S}(f, P) : P \\text{ חלוקה של } [a,b] \\}.$$",
+        "proof_he": null,
+        "topic": "אינטגרל מסוים"
+      },
+      {
+        "kind": "note",
+        "label": "הערה 2",
+        "number": "2",
+        "name": "קיום הסופרמום והאינפימום",
+        "statement_he": "מהיות $f$ חסומה, אכן $f$ חסומה ולכן נסמן ומקיים $M_k$ ו- $m_k$ מספרים כי-ם של $1 \\leq k \\leq n$ מתאים, ולכן הסכום העליון/התחתון.",
+        "proof_he": null,
+        "topic": "אינטגרל מסוים"
+      },
+      {
+        "kind": "note",
+        "label": "הערה",
+        "number": null,
+        "name": "פירוש גאומטרי של סכומי דארבו ואי-שוויון",
+        "statement_he": "הסכום העליון - השטח הכולל של המלבנים האדומים (מעל הגרף);\nהסכום התחתון - השטח הכולל של המלבנים הירוקים (מתחת הגרף).\nחסם תחתון: $S \\leq \\bar{S}(f, P)$, ולכן $S \\leq \\inf \\{ \\bar{S}(f, P) : P \\} = \\bar{I}$.\nחסם מלעיל: $\\underline{S}(f, P) \\leq S$, ולכן $\\underline{I}(f) = \\sup \\{ \\underline{S}(f, P) \\} \\leq S$.\nכלומר $\\underline{I}(f) \\leq S \\leq \\bar{I}(f)$ (רעיון לפצב\"י).",
+        "proof_he": null,
+        "topic": "אינטגרל מסוים"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "אינטגרביליות (אינטגרל מסוים)",
+        "statement_he": "יהיו $a, b \\in \\mathbb{R}$ כך ש- $a < b$ ותהי $f$ פונק' חסומה ב-$[a,b]$. נ\"ח ש-$f$ חסומה. ונאמר כי $f$ אינטגרבילית ב-$[a,b]$ אם קיים $S \\in \\mathbb{R}$ כך ש- $S = \\bar{I}(f) = \\underline{I}(f)$. במקרה כזה נסמן את\nהאינטגרל המסוים של $f$ בקטע $[a,b]$ להיות:\n$$\\int_a^b f(x)\\,dx = S.$$",
+        "proof_he": null,
+        "topic": "אינטגרל מסוים"
+      },
+      {
+        "kind": "note",
+        "label": "הערה 3",
+        "number": "3",
+        "name": "פירוש גאומטרי של האינטגרל המסוים",
+        "statement_he": "אם $0 \\leq f(x)$ לכל $x \\in [a,b]$ וגם $f$ אינטגרבילית, אזי כפי שנראה $\\int_a^b f(x)\\,dx$ הוא השטח שמתחת לגרף של $f$ ומעל ציר $x$ בקטע $[a,b]$.",
+        "proof_he": null,
+        "topic": "אינטגרל מסוים"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט 3",
+        "number": "3",
+        "name": "אינטגרל של פונקציה קבועה",
+        "statement_he": "יהי $C \\in \\mathbb{R}$ ויהיו $a, b \\in \\mathbb{R}$ כך ש- $a < b$. אזי הפונקציה הקבועה $f(x) = C$ היא אינטגרבילית ב-$[a,b]$, וכן לכל $x \\in [a,b]$ ומתקיים\n$$\\int_a^b C\\,dx = C \\cdot (b - a).$$",
+        "proof_he": "תהי $P = (x_0, \\ldots, x_n)$ חלוקה של $[a,b]$. נחשב:\n$$\\bar{S}(f, P) = \\sum_{k=1}^{n} M_k \\cdot (x_k - x_{k-1}) = \\sum_{k=1}^{n} C \\cdot (x_k - x_{k-1})$$\nכאשר $M_k = \\sup \\{ f(x) : x_{k-1} \\leq x \\leq x_k \\} = \\sup \\{ C : x_{k-1} \\leq x \\leq x_k \\} = \\sup \\{ C \\} = C$.\n$$= C \\cdot \\sum_{k=1}^{n} (x_k - x_{k-1}) = C \\cdot (x_1 - x_0 + x_2 - x_1 + \\cdots + x_n - x_{n-1}) = C \\cdot (x_n - x_0) = C \\cdot (b - a).$$\nאזי\n$$\\bar{I}(f) = \\inf \\{ \\bar{S}(f, P) : P \\text{ חלוקה של } [a,b] \\} = \\inf \\{ C \\cdot (b-a) : P \\text{ חלוקה של } [a,b] \\} = C \\cdot (b - a).$$\nבאופן דומה,\n$$\\underline{S}(f, P) = \\sum_{k=1}^{n} m_k \\cdot (x_k - x_{k-1}) = \\sum_{k=1}^{n} C \\cdot (x_k - x_{k-1})$$\nכאשר $m_k = \\inf \\{ f(x) : x_{k-1} \\leq x \\leq x_k \\} = \\inf \\{ C : x_{k-1} \\leq x \\leq x_k \\} = \\inf \\{ C \\} = C$.\n$$= C \\cdot \\sum_{k=1}^{n} (x_k - x_{k-1}) = C \\cdot (x_n - x_0) = C \\cdot (b - a).$$\nאזי\n$$\\underline{I}(f) = \\sup \\{ \\underline{S}(f, P) : P \\} = \\sup \\{ C \\cdot (b-a) : P \\} = C \\cdot (b - a).$$\nאזי $\\bar{I}(f) = \\underline{I}(f) = C \\cdot (b - a)$, ולכן $f$ אינטגרבילית ב-$[a,b]$, וכן\n$$\\int_a^b C\\,dx = C \\cdot (b - a).$$",
+        "topic": "אינטגרל מסוים"
+      }
+    ]
+  },
+  {
+    "lecture": 3,
+    "week": 4,
+    "date": "16.4.26",
+    "topics": [
+      "תכונות האינטגרל המסוים",
+      "אינטגרביליות",
+      "משפט הערך הממוצע האינטגרלי",
+      "המשפט היסודי של החשבון האינטגרלי",
+      "פונקציה קדומה",
+      "חישוב אינטגרלים מסוימים"
+    ],
+    "items": [
+      {
+        "kind": "example",
+        "label": "דוגמא",
+        "number": null,
+        "name": "פונקציה לא אינטגרבילית (אינסוף ב-0)",
+        "statement_he": "הפונק' המוגדרת ע\"י $$f(x) = \\begin{cases} \\frac{1}{x} & 0 < x \\le 1 \\\\ 0 & x = 0 \\end{cases}$$ עבור $x \\in [0,1]$ היא לא חסומה ולכן גם לא אינטגרבילית ב-$[0,1]$.",
+        "proof_he": null,
+        "topic": "אינטגרביליות"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט 1",
+        "number": "1",
+        "name": "תכונות אריתמטיות של האינטגרל המסוים",
+        "statement_he": "תהיינה $a,b \\in \\mathbb{R}$ כך ש-$a < b$ ותהיינה $f,g$ שתי פונקציות חסומות ב-$[a,b]$.\n\n(i) ליניאריות: נניח כי $f,g$ אינטגרביליות ב-$[a,b]$. אזי לכל $\\alpha,\\beta \\in \\mathbb{R}$, $\\alpha f + \\beta g$ אינטגרבילית ב-$[a,b]$ ובנוסף $$\\int_a^b [\\alpha f(x) + \\beta g(x)]\\,dx = \\alpha \\int_a^b f(x)\\,dx + \\beta \\int_a^b g(x)\\,dx$$\n\n(ii) כפל ל'[חילוק]: נניח כי $f,g$ אינטגרביליות ב-$[a,b]$. אזי $g \\pm f$ ו-$f \\cdot g$ אינטגרביליות ב-$[a,b]$. אם בנוסף $\\frac{f}{g}$ מוגדרת וחסומה ב-$[a,b]$, אז גם $\\frac{f}{g}$ אינטגרבילית ב-$[a,b]$. אם בפרט $g$ רחוקה מ-$0$ אזי $\\frac{f}{g}$ חסומה ב-$[a,b]$.\n\n(iii) אם $f$ רחבה[רציפה] ב-$[a,b]$ אזי $f$ אינטגרבילית ב-$[a,b]$.\n\n(iv) אם $f$ מונוטונית ב-$[a,b]$ אזי $f$ אינטגרבילית ב-$[a,b]$.\n\n(v) מונוטוניות האינטגרל המסוים: נניח כי $f,g$ אינטגרביליות ב-$[a,b]$. נניח בנוסף כי $f(x) \\le g(x)$ לכל $x \\in [a,b]$. אזי $$\\int_a^b f(x)\\,dx \\le \\int_a^b g(x)\\,dx$$\n\n(vi) שאת ההפרדה[שמירה תחת פיצול]: יהי $a < c < b$ ו-$f$ חסומה ב-$[a,b]$. אזי $f$ אינטגרבילית ב-$[a,c]$ וגם ב-$[c,b]$, ומתקיים $$\\int_a^b f(x)\\,dx = \\int_a^c f(x)\\,dx + \\int_c^b f(x)\\,dx$$\n\n(vii) אי-רגישות לנקודה בודדת: נניח כי $f$ אינטגרבילית ב-$[a,b]$. נניח בנוסף שקיימת $x_0 \\in [a,b]$ כך ש-$g(x) = f(x)$ לכל $x \\in [a,b]$ כך ש-$x \\ne x_0$. אזי $g$ אינטגרבילית ב-$[a,b]$ ובנוסף $$\\int_a^b g(x)\\,dx = \\int_a^b f(x)\\,dx$$",
+        "proof_he": "ללא הוכחה.",
+        "topic": "תכונות האינטגרל המסוים"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "1",
+        "name": "חישוב אינטגרל של 1/x על [1,3]",
+        "statement_he": "$$\\int_1^3 \\frac{dx}{x}$$ ק\"מ[קיים] כי הפונק' $f(x) = \\frac{1}{x}$ רציפה ולכן אינטגרבילית ב-$[1,3]$.",
+        "proof_he": null,
+        "topic": "אינטגרביליות"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "2",
+        "name": "חישוב אינטגרל של sinx/x על [1,3]",
+        "statement_he": "$$\\int_1^3 \\frac{\\sin x}{x}\\,dx$$ ק\"מ[קיים] כי הפונק' $f(x) = \\frac{\\sin x}{x}$ רציפה ולכן אינטגרבילית ב-$[1,3]$.",
+        "proof_he": null,
+        "topic": "אינטגרביליות"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "3",
+        "name": "אינטגרל של sinx/x על [-1,3] עם הרחבה רציפה",
+        "statement_he": "$$\\int_{-1}^3 \\frac{\\sin x}{x}\\,dx$$ ק\"מ[קיים] כי הפונק' $$f(x) = \\begin{cases} \\frac{\\sin x}{x} & x \\ne 0 \\\\ 1 & x = 0 \\end{cases}$$ רציפה ולכן אינטגרבילית ב-$[-1,3]$. מתכונת האי-רגישות לערך בודדת, הערך $f(0)$ אף משנה את ערך האינטגרל. לכן $$\\int_{-1}^3 \\frac{\\sin x}{x}\\,dx$$ ק\"מ[קיים] ואין צורך לציין את $f(0)$.",
+        "proof_he": null,
+        "topic": "אינטגרביליות"
+      },
+      {
+        "kind": "corollary",
+        "label": "מסקנה 1",
+        "number": "1",
+        "name": "אינטגרביליות מובטיחה בקטע סגור",
+        "statement_he": "אם $f$ רציפה ב-$[a,b]$ או $f$ מונוטונית ב-$[a,b]$, אז $\\int_a^b f$ קיים, ויש סיכוי שלכן יהי[יהיה] אם $f$ רציפה ב-$[a,b]$.",
+        "proof_he": null,
+        "topic": "אינטגרביליות"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "4",
+        "name": "אינטגרל של (cosx-1)/x^2 על [0,1]",
+        "statement_he": "$$\\int_0^1 \\frac{\\cos x - 1}{x^2}\\,dx$$ ק\"מ[קיים] (אחרי תיקון הפונקציה ב-$x=0$).",
+        "proof_he": null,
+        "topic": "אינטגרביליות"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "5",
+        "name": "אינטגרל של (e^x-1)/x על [0,1]",
+        "statement_he": "$$\\int_0^1 \\frac{e^x - 1}{x}\\,dx$$ ק\"מ[קיים] (אחרי תיקון הפונקציה ב-$x=0$).",
+        "proof_he": null,
+        "topic": "אינטגרביליות"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "6",
+        "name": "אינטגרל של sign(x) על [-2,3]",
+        "statement_he": "$$\\int_{-2}^3 \\operatorname{sign}(x)\\,dx$$ ק\"מ[קיים] כי $\\operatorname{sign}(x)$ פונקציה מונוטונית (לא יורדת) $\\Leftarrow$ אינטגרבילית.",
+        "proof_he": null,
+        "topic": "אינטגרביליות"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "7",
+        "name": "חישוב אינטגרל של sign(x) על [-2,3]",
+        "statement_he": "חשבו $$\\int_{-2}^3 \\operatorname{sign}(x)\\,dx$$ כאשר $$\\operatorname{sign}(x) = \\begin{cases} 1 & x > 0 \\\\ -1 & x < 0 \\\\ 0 & x = 0 \\end{cases}$$",
+        "proof_he": "$$\\int_{-2}^3 \\operatorname{sign}(x)\\,dx \\overset{\\text{שאת ההפרדה}}{=} \\int_{-2}^0 \\operatorname{sign}(x)\\,dx + \\int_0^3 \\operatorname{sign}(x)\\,dx = \\int_{-2}^0 (-1)\\,dx + \\int_0^3 1\\,dx \\overset{\\int_a^b c\\,dx = c\\cdot(b-a)}{=} -1 \\cdot (0+2) + 1 \\cdot (3-0) = 1$$",
+        "topic": "חישוב אינטגרלים מסוימים"
+      },
+      {
+        "kind": "note",
+        "label": "הערה 1",
+        "number": "1",
+        "name": "אינטגרל של פונקציה שלילית והאינטגרל כשטח מסומן",
+        "statement_he": "אם $0 \\le f(x) \\le 0$ עבור $x \\in [a,b]$ אזי $f$ אינטגרבילית ב-$[a,b]$ אזי $-f(x) \\ge 0$ עבור $x \\in [a,b]$ ולכן $-f$ אינטגרבילית. ולכן $$\\int_a^b f(x)\\,dx \\overset{\\text{ליניאריות}}{=} -\\int_a^b [-f(x)]\\,dx = -\\left( \\substack{\\text{השטח שמתחת} \\\\ \\text{ל-}(-f)} \\right) = -\\left( \\substack{\\text{השטח} \\\\ \\text{מעל }f} \\right)$$ באופן כללי יותר: $$\\int_a^b f(x)\\,dx = S_1 - S_2 + S_3$$",
+        "proof_he": null,
+        "topic": "תכונות האינטגרל המסוים"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט 2",
+        "number": "2",
+        "name": "אי-שוויון הערך המוחלט של האינטגרל",
+        "statement_he": "(אי-שוויון ה-$\\Delta$ [המשולש]) תהיינה $a,b \\in \\mathbb{R}$ כך ש-$a<b$ ותהי $f$ פונק' המוגדרת ב-$[a,b]$. נניח כי $f$ אינטגרבילית ב-$[a,b]$. אזי $$\\left| \\int_a^b f(x)\\,dx \\right| \\le \\int_a^b |f(x)|\\,dx$$",
+        "proof_he": "מאי-שוויון $\\Delta$ [המשולש] $|.|$ רציפה ב-$[a,b]$ ומאחר ש-$f$ אינטגרבילית ב-$[a,b]$ אז $|f(x)|$ אינטגרבילית ב-$[a,b]$ (הרכבה של רציפה עם אינטג') ולכן $\\int_a^b |f(x)|\\,dx$ ק\"מ[קיים]. נשים $\\heartsuit$ עבור $x \\in [a,b]$ מתקיים $$-|f(x)| \\le f(x) \\le |f(x)|$$ לכן ממונוטוניות האינטגרל המסוים: $$-\\int_a^b |f(x)|\\,dx = \\int_a^b -|f(x)|\\,dx \\le \\int_a^b f(x)\\,dx \\le \\int_a^b |f(x)|\\,dx$$ לכן עבור $r = \\int_a^b |f(x)|\\,dx$ מתקיים $$-r \\le \\int_a^b f(x)\\,dx \\le r$$ ולכן $$\\left| \\int_a^b f(x)\\,dx \\right| \\le r$$",
+        "topic": "תכונות האינטגרל המסוים"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט 3",
+        "number": "3",
+        "name": "משפט הערך הממוצע האינטגרלי",
+        "statement_he": "(ערך הב\"ע[הביניים] האינטגרלי) תהיינה $a,b \\in \\mathbb{R}$ כך ש-$a<b$ ותהי $f$ פונק' המוגדרת ב-$[a,b]$. נניח כי $f$ רציפה ב-$[a,b]$. אזי קיימת $c \\in [a,b]$ שעבורה $$f(c) = \\frac{1}{b-a} \\int_a^b f(x)\\,dx$$",
+        "proof_he": "כיוון ש-$f$ רציפה ב-$[a,b]$, אזי $f$ אינטגרבילית ב-$[a,b]$ ולכן $\\int_a^b f(x)\\,dx$ ק\"מ[קיים]. נסמן $r = \\frac{1}{b-a} \\int_a^b f(x)\\,dx$. נרצה להראות שקיימת $c \\in [a,b]$ שעבורה $f(c) = r$ ו ק\"מ[וקיים].\nכיוון ש-$f$ רציפה, אזי ממשפט וירשטרס[ויירשטראס], ק\"מ[קיימים] $x_1, x_2 \\in [a,b]$ כך ש-$f(x_2) \\le f(x) \\le f(x_1)$ עבור $x \\in [a,b]$. נסמן $M = f(x_1)$ ו-$m = f(x_2)$. אזי $$m \\le f(x) \\le M \\quad \\text{עבור } x \\in [a,b]$$ לכן ממונוטוניות האינטגרל המסוים: $$m(b-a) = \\int_a^b m\\,dx \\le \\int_a^b f(x)\\,dx \\le \\int_a^b M\\,dx = M \\cdot (b-a)$$ נחלק ב-$b-a$ ונקבל $$f(x_2) = m \\le r \\le M = f(x_1)$$ אם $x_1 = x_2$ אזי $f(x_2) = r = f(x_1)$ ולכן קיימת $c \\in [a,b]$ כך ש-$f(c) = r$ וסיימנו (שנבחר $c = x_1$). אחרת ממשפט ערך הביניים ק\"מ[קיים] $c$ הנמצא בין $x_1$ ל-$x_2$ ($c \\in [x_1, x_2]$ או $c \\in [x_2, x_1]$) כך ש-$f(c) = r$.",
+        "topic": "משפט הערך הממוצע האינטגרלי"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "אינטגרל על קטע מנוון והיפוך גבולות",
+        "statement_he": "תהיינה $a,b \\in \\mathbb{R}$ כך ש-$a<b$ ותהי $f$ פונק' המוגדרת ב-$[a,b]$. נניח כי $f$ אינטגרבילית ב-$[a,b]$. נסמן:\n(i) $$\\int_a^a f(x)\\,dx = 0$$\n(ii) $$\\int_b^a f(x)\\,dx = -\\int_a^b f(x)\\,dx$$",
+        "proof_he": null,
+        "topic": "תכונות האינטגרל המסוים"
+      },
+      {
+        "kind": "note",
+        "label": "הערה 3",
+        "number": "3",
+        "name": "תכונת הפיצול תחת ההגדרה החדשה",
+        "statement_he": "תחת ההגדרה הנ\"ל, שאת ההפרדה[תכונת הפיצול] נכונה (כפי שראינו מספר ביניים) עבור $a,b,c \\in \\mathbb{R}$ באשר[כאשר] אם $a < b < c$:\n$$\\int_a^c = \\int_a^b + \\int_b^c \\quad \\text{שאת ההפרדה}$$\nנזכיר שאת כלל ונקבל $$\\int_a^b = \\int_a^c - \\int_b^c = \\int_a^c + \\int_c^b$$\nלומר[כלומר] $$\\int_a^b = \\int_a^c + \\int_c^b$$",
+        "proof_he": null,
+        "topic": "תכונות האינטגרל המסוים"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט 4",
+        "number": "4",
+        "name": "המשפט היסודי - גזירות פונקציית הצבירה",
+        "statement_he": "תהיינה $a,b \\in \\mathbb{R}$ כך ש-$a<b$ ותהי $f$ פונק' רציפה ב-$[a,b]$. נניח כי $f$ רציפה ב-$[a,b]$. נג'[נגדיר] בפונק' המוגדרת $F$: $$F(x) = \\int_a^x f(t)\\,dt \\quad \\text{עבור } a \\le x \\le b$$ אזי $F$ רציפה.",
+        "proof_he": "נניח כי $f$ רציפה ב-$[a,b]$ ולכן אינטגרבילית. אזי לכל $x \\in [a,b]$, מאמת ההגדרה[מעצם ההגדרה] $f$ אינטגרבילית גם ב-$[a,x]$ עבור $a < x < b$. לכן $\\int_a^x f(t)\\,dt$ ק\"מ[קיים] עבור $a < x < b$ וכן $\\int_a^b f(t)\\,dt$ ק\"מ[קיים], אזי $F$ מוגדרת היטב בקטע $[a,b]$. צריך $x = a$ מתק\"מ[מתקיים]. אזי $F(a) = \\int_a^a f(t)\\,dt = 0$ ולכן $F$ מוגדרת היטב ב-$[a,b]$.\nצריך ונוכיח כי $F$ רציפה ב-$[a,b]$: יהי $x_0 \\in [a,b]$ ויהי $\\varepsilon > 0$. צ\"ל[צריך להראות] כי קיים $\\delta > 0$ כך שלכל $x \\in [a,b]$ כך ש-$|x - x_0| < \\delta$ מתק\"מ[מתקיים] $$|F(x) - F(x_0)| < \\varepsilon$$ תהי $x_0 \\in [a,b]$ ויהי $\\varepsilon > 0$. מאחר ש-$f$ חסומה ב-$[a,b]$ ולכן ק\"מ[קיים] $K > 0$ כך שלכל $x \\in [a,b]$, $$(*) \\quad |f(x)| \\le K$$ נבחר $\\delta = \\frac{\\varepsilon}{K}$. ויהי $x \\in [a,b]$ כך ש-$|x - x_0| < \\delta$.\nנניח קודם ש-$x_0 < x$:\n$$|F(x) - F(x_0)| = \\left| \\int_a^x f(t)\\,dt - \\int_a^{x_0} f(t)\\,dt \\right| \\overset{\\text{שאת ההפרדה}}{=} \\left| \\int_{x_0}^x f(t)\\,dt \\right| \\overset{\\Delta}{\\le} \\int_{x_0}^x |f(t)|\\,dt \\overset{(*)}{\\le} \\int_{x_0}^x K\\,dt = K \\cdot (x - x_0) \\overset{x > x_0}{=} K \\cdot |x - x_0| < K \\cdot \\delta \\overset{\\delta = \\frac{\\varepsilon}{K}}{=} \\varepsilon$$\nכאשר $(*)$ נשים $\\heartsuit$ עבור $t \\in [x_0, x]$ מתק\"מ[מתקיים] $|x_0 - x| \\le |x_0 - t|$ ולכן $(*)$ מתק\"מ[מתקיים] עבור $t \\in [x_0, x]$ כלומר $|f(t)| \\le K$ עבור $t \\in [x_0, x]$ ולכן ממונוטוניות האינטגרל המסוים $$\\int_{x_0}^x |f(t)|\\,dt \\overset{(*)}{\\le} \\int_{x_0}^x K\\,dt$$\nכעת נניח ש-$x < x_0$:\n$$|F(x) - F(x_0)| = \\left| \\int_a^x f(t)\\,dt - \\int_a^{x_0} f(t)\\,dt \\right| \\overset{\\text{שאת ההפרדה}}{=} \\left| -\\int_x^{x_0} f(t)\\,dt \\right| = \\left| \\int_x^{x_0} f(t)\\,dt \\right| \\overset{\\Delta}{\\le} \\int_x^{x_0} |f(t)|\\,dt \\overset{(**)}{\\le} \\int_x^{x_0} K\\,dt = K(x_0 - x) \\overset{x_0 > x}{=} K \\cdot |x - x_0| < K \\cdot \\delta \\overset{\\delta = \\frac{\\varepsilon}{K}}{=} \\varepsilon$$\nכאשר $(**)$ נשים $\\heartsuit$ עבור $t \\in [x, x_0]$ מתק\"מ[מתקיים] $|x_0 - x| \\le |x_0 - t|$ ולכן $(*)$ מתק\"מ[מתקיים] עבור $t \\in [x, x_0]$ כלומר $|f(t)| \\le K$ עבור $t \\in [x, x_0]$ ולכן ממונוטוניות האינטגרל המסוים $$\\int_x^{x_0} |f(t)|\\,dt \\overset{(**)}{\\le} \\int_x^{x_0} K\\,dt$$\nבאותו האופן מוכיחים עבור המקרה $x < x_0$.",
+        "topic": "המשפט היסודי של החשבון האינטגרלי"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": null,
+        "name": "חישוב F(x) של אינטגרל sign על [-2,3]",
+        "statement_he": "נח שב[נחשב] את $F$ עבור $x \\in [-2,3]$, $$F(x) = \\int_{-2}^x \\operatorname{sign}(x)\\,dx$$",
+        "proof_he": "אם $-2 \\le x \\le 0$, $$F(x) = \\int_{-2}^x \\operatorname{sign}(x)\\,dx = \\int_{-2}^x (-1)\\,dx \\overset{c\\cdot(b-a)}{=} -(x+2) = -2 - x$$ אם $0 \\le x \\le 3$, $$F(x) = \\int_{-2}^x \\operatorname{sign}(x)\\,dx = \\int_{-2}^0 (-1)\\,dx + \\int_0^x 1\\,dx = -(0+2) + 1 \\cdot (x-0) = -2 + x$$ לכן $$F(x) = \\begin{cases} -2 - x & -2 \\le x \\le 0 \\\\ -2 + x & 0 \\le x \\le 3 \\end{cases} = -2 + |x|$$",
+        "topic": "המשפט היסודי של החשבון האינטגרלי"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט 5",
+        "number": "5",
+        "name": "המשפט היסודי - הנגזרת של פונקציית הצבירה",
+        "statement_he": "(המשפט היסודי של החשבון האינטגרלי) תהיינה $a,b \\in \\mathbb{R}$ כך ש-$a<b$ ותהי $f$ פונק' המוגדרת ב-$[a,b]$. נניח כי $f$ רציפה ב-$[a,b]$. נג'[נגדיר] בפונק' המוגדרת $F$: $$F(x) = \\int_a^x f(t)\\,dt \\quad \\text{עבור } a \\le x \\le b$$ תהי $x_0 \\in [a,b]$. נניח כי $f$ רציפה ב-$x_0$. אזי $F$ גזירה ב-$x_0$ ובנוסף, $F'(x_0) = f(x_0)$.",
+        "proof_he": "נניח כי $f$ רציפה ב-$[a,b]$ ולכן אינטגרבילית. אזי לכל $x \\in [a,b]$, מאמת ההגדרה[מעצם ההגדרה] $f$ אינטגרבילית גם ב-$[a,x]$ עבור $a < x < b$. לכן $\\int_a^x f(t)\\,dt$ ק\"מ[קיים] עבור $a < x < b$ וכן $\\int_a^b f(t)\\,dt$ ק\"מ[קיים], אזי $F$ מוגדרת היטב בקטע $[a,b]$. צריך $x = a$ מתק\"מ[מתקיים]. אזי $F(a) = \\int_a^a f(t)\\,dt = 0$ ולכן $F$ מוגדרת היטב ב-$[a,b]$.\nצריך ונוכיח כי $F$ גזירה ב-$x_0$: יהי $\\varepsilon > 0$. צ\"ל[צריך להראות] כי קיים $\\delta > 0$ כך שלכל $x \\in [a,b]$ ועבורו $0 < |x - x_0| < \\delta$ מתק\"מ[מתקיים] $$\\left| \\frac{F(x) - F(x_0)}{x - x_0} - f(x_0) \\right| < \\varepsilon$$\nיהי $\\varepsilon > 0$. מאחר ש-$f$ רציפה ב-$x_0$, ק\"מ[קיים] $\\delta_1 > 0$ כך שלכל $x \\in [a,b]$ ועבורו $|x - x_0| < \\delta_1$ מתק\"מ[מתקיים] $$(*) \\quad |f(x) - f(x_0)| < \\frac{\\varepsilon}{2}$$\nנבחר $\\delta = \\delta_1$. ויהי $x \\in [a,b]$. ועבורו $0 < |x - x_0| < \\delta$. נניח קודם כי $x_0 < x$:\n$$\\left| \\frac{F(x) - F(x_0)}{x - x_0} - f(x_0) \\right| = \\left| \\frac{\\int_a^x f(t)\\,dt - \\int_a^{x_0} f(t)\\,dt}{x - x_0} - f(x_0) \\right| \\overset{\\text{שאת ההפרדה}}{=} \\left| \\frac{1}{x - x_0} \\int_{x_0}^x f(t)\\,dt - f(x_0) \\right|$$\n$$= \\left| \\frac{1}{x - x_0} \\left[ \\int_{x_0}^x f(t)\\,dt - (x - x_0) f(x_0) \\right] \\right| \\overset{c\\cdot(b-a)}{=} \\left| \\frac{1}{x - x_0} \\left[ \\int_{x_0}^x f(t)\\,dt - \\int_{x_0}^x f(x_0)\\,dt \\right] \\right| = \\left| \\frac{1}{x - x_0} \\int_{x_0}^x [f(t) - f(x_0)]\\,dt \\right|$$\n$$\\overset{\\Delta}{\\le} \\frac{1}{|x - x_0|} \\cdot \\int_{x_0}^x |f(t) - f(x_0)|\\,dt \\overset{(*)}{\\le} \\frac{1}{|x - x_0|} \\int_{x_0}^x \\frac{\\varepsilon}{2}\\,dt \\overset{c\\cdot(b-a)}{=} \\frac{1}{|x - x_0|} \\cdot \\frac{\\varepsilon}{2} \\cdot (x - x_0) \\overset{x > x_0}{=} \\frac{1}{|x - x_0|} \\cdot \\frac{\\varepsilon}{2} \\cdot |x - x_0| = \\frac{\\varepsilon}{2} < \\varepsilon$$\nכאשר $(*)$ נשים $\\heartsuit$ עבור $t \\in [x_0, x]$ מתק\"מ[מתקיים] $|x_0 - x| \\le |x_0 - t|$ ולכן $(*)$ מתק\"מ[מתקיים] עבור $t \\in [x_0, x]$ כלומר $|f(t) - f(x_0)| < \\frac{\\varepsilon}{2}$ עבור $t \\in [x_0, x]$ ולכן ממונוטוניות המסוים, $$\\int_{x_0}^x |f(t) - f(x_0)|\\,dt < \\int_{x_0}^x \\frac{\\varepsilon}{2}\\,dt$$\nבאותו האופן מוכיחים עבור המקרה $x < x_0$.",
+        "topic": "המשפט היסודי של החשבון האינטגרלי"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט 6",
+        "number": "6",
+        "name": "נוסחת ניוטון-לייבניץ",
+        "statement_he": "(נוסחת ניוטון-לייבניץ) תהיינה $a,b \\in \\mathbb{R}$ כך ש-$a<b$ ותהי $f$ פונק' המוגדרת ב-$[a,b]$. נניח כי $f$ רציפה ב-$[a,b]$. תהי $G$ פונק' קדומה של $f$ ב-$[a,b]$. אזי $$\\int_a^b f(x)\\,dx = \\left[ G(x) \\right]_a^b = G(b) - G(a)$$",
+        "proof_he": "כאשר $G, F$ קדומות של $f$ ב-$[a,b]$. לכן קיים $C \\in \\mathbb{R}$ כך ש-$F(x) = G(x) + C$ לכל $x \\in [a,b]$. לכן $$\\int_a^b f(x)\\,dx = \\int_a^b f(t)\\,dt = F(b) \\overset{F(a) = \\int_a^a f(t)\\,dt = 0}{=} F(b) - F(a) = G(b) + C - (G(a) + C) = G(b) - G(a)$$",
+        "topic": "המשפט היסודי של החשבון האינטגרלי"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט 6",
+        "number": "6",
+        "name": "קיום פונקציה קדומה לפונקציה רציפה (ניסוח חוזר)",
+        "statement_he": "הוכחת משפט 6: כאשר $f$ רציפה ב-$[a,b]$ ולכן $$\\int_a^b f(x)\\,dx \\quad \\text{ק\"מ[קיים]}$$ נג'[נגדיר] בפונק' המוגדרת $F$: $$F(x) = \\int_a^x f(t)\\,dt \\quad \\text{עבור } a \\le x \\le b$$ מאחר ש-$f$ רציפה ב-$[a,b]$ אזי (מהמשפט) ה'ס'פ'[היסודי], $F$ גזירה ב-$[a,b]$ ובנוסף $F'(x) = f(x)$ עבור $x \\in [a,b]$.",
+        "proof_he": "לכן $G, F$ קדומות של $f$ ב-$[a,b]$. לכן קיים $C \\in \\mathbb{R}$ כך ש-$F(x) = G(x) + C$ לכל $x \\in [a,b]$. לכן $$\\int_a^b f(x)\\,dx = \\int_a^b f(t)\\,dt = F(b) \\overset{F(a) = \\int_a^a f(t)\\,dt = 0}{=} F(b) - F(a) = G(b) + C - (G(a) + C) = G(b) - G(a)$$",
+        "topic": "המשפט היסודי של החשבון האינטגרלי"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "1",
+        "name": "חישוב אינטגרל של x^2 על [0,1]",
+        "statement_he": "$$\\int_0^1 x^2\\,dx = \\left[ \\frac{x^3}{3} \\right]_0^1 = \\frac{1}{3} - 0 = \\frac{1}{3}$$",
+        "proof_he": null,
+        "topic": "חישוב אינטגרלים מסוימים"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "2",
+        "name": "חישוב אינטגרל של שורש x על [0,1]",
+        "statement_he": "$$\\int_0^1 \\sqrt{x}\\,dx = \\int_0^1 x^{1/2}\\,dx = \\left[ \\frac{x^{3/2}}{3/2} \\right]_0^1 = \\frac{1}{3/2} - 0 = \\frac{2}{3}$$",
+        "proof_he": null,
+        "topic": "חישוב אינטגרלים מסוימים"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "3",
+        "name": "חישוב אינטגרל של sinx על [0,pi]",
+        "statement_he": "$$\\int_0^\\pi \\sin x\\,dx = \\left[ -\\cos x \\right]_0^\\pi = -(-1) - (-1) = 2$$",
+        "proof_he": null,
+        "topic": "חישוב אינטגרלים מסוימים"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "3",
+        "name": "חישוב אינטגרל של sinx על [0,pi/2]",
+        "statement_he": "$$\\int_0^{\\pi/2} \\sin x\\,dx = \\left[ -\\cos x \\right]_0^{\\pi/2} = 0 - (-1) = 1$$",
+        "proof_he": null,
+        "topic": "חישוב אינטגרלים מסוימים"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "4",
+        "name": "חישוב אינטגרל של שורש(1-x^2) על [-1,1]",
+        "statement_he": "$$\\int_{-1}^1 \\sqrt{1 - x^2}\\,dx = \\left[ \\frac{1}{2}\\sin(2\\arcsin x) + \\frac{1}{2}\\arcsin x \\right]_{-1}^1 = \\left[ \\frac{1}{2}\\sin(\\underbrace{2\\arcsin 1}_{\\pi}) + \\frac{1}{2}\\arcsin 1 \\right] - \\left[ \\frac{1}{2}\\sin(\\underbrace{2\\arcsin(-1)}_{-\\pi}) + \\frac{1}{2}\\arcsin(-1) \\right] = \\frac{1}{2} \\cdot \\frac{\\pi}{2} - \\left( -\\frac{\\pi}{4} \\right) = \\frac{\\pi}{2}$$ (מתאים למחצית שטח עיגול היחידה $x^2 + y^2 = 1$, $y = \\pm\\sqrt{1 - x^2}$).",
+        "proof_he": null,
+        "topic": "חישוב אינטגרלים מסוימים"
+      }
+    ]
+  },
+  {
+    "lecture": 4,
+    "week": 5,
+    "date": "23.4.26",
+    "topics": [
+      "אינטגרציה בחלקים",
+      "אינטגרציה בהצבה",
+      "אינטגרלים לא אמיתיים (מוכללים)",
+      "מבחני השוואה",
+      "טורים"
+    ],
+    "items": [
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "1",
+        "name": "אינטגרציה בחלקים (אינטגרל לא מסוים)",
+        "statement_he": "תהיינה $u, v$ פונקציות גזירות ברציפות ב-$[a,b]$, ויהיו $a, b \\in \\mathbb{R}$ כך ש-$a < b$. אזי\n$$\\int_a^b u'(x)v(x)\\,dx = \\left[u(x)v(x)\\right]_a^b - \\int_a^b u(x)v'(x)\\,dx$$",
+        "proof_he": "$$\\int_a^b u'(x)v(x)\\,dx = \\int_a^b \\left[u'(x)v(x) + u(x)v'(x) - u(x)v'(x)\\right]\\,dx$$\n$$\\underset{\\text{לינאריות}}{=} \\int_a^b \\left[u'(x)v(x) + u(x)v'(x)\\right]\\,dx - \\int_a^b u(x)v'(x)\\,dx$$\n$$= \\int_a^b \\left(u(x)v(x)\\right)'\\,dx - \\int_a^b u(x)v'(x)\\,dx \\underset{\\text{נוסחת ניוטון לייבניץ}}{=}$$\n$$= \\left[u(x)v(x)\\right]_a^b - \\int_a^b u(x)v'(x)\\,dx$$",
+        "topic": "אינטגרציה בחלקים"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "2",
+        "name": "אינטגרציה בהצבה (אינטגרל לא מסוים)",
+        "statement_he": "תהיינה $a, b \\in \\mathbb{R}$ כך ש-$a < b$, ותהי $f$ פונקציה גזירה ברציפות ב-$[a,b]$. תהי $g$ פונקציה רציפה $f \\circ g$ מוגדרת ורציפה ב-$[a,b]$. אזי ($f \\circ g$ נחיתות גזירה ב-$f$ ו-$g$ מונוטוניות) ממש ב-$[a,b]$. אזי\n$$\\int_a^b g(f(x)) \\cdot f'(x)\\,dx = \\int_{f(a)}^{f(b)} g(t)\\,dt$$",
+        "proof_he": "בקורס שעבר. [לא ברור]",
+        "topic": "אינטגרציה בהצבה"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": null,
+        "name": "אינטגרציה בחלקים $\\int x\\ln x\\,dx$",
+        "statement_he": "$$\\int_1^3 x\\ln x\\,dx \\underset{\\substack{u'=x \\ \\to \\ u=\\frac{x^2}{2} \\\\ v=\\ln x \\ \\to \\ v'=\\frac{1}{x}}}{=} \\left[\\frac{x^2}{2}\\ln x\\right]_1^3 - \\int_1^3 \\frac{x}{2}\\,dx$$\n$$= \\frac{9}{2}\\cdot\\ln 3 - 0 - \\left[\\frac{x^2}{4}\\right]_1^3 = \\frac{9}{2}\\ln 3 - \\frac{9}{4} + \\frac{1}{4}$$",
+        "proof_he": null,
+        "topic": "אינטגרציה בחלקים"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": null,
+        "name": "אינטגרציה בהצבה $\\int xe^{x^2}\\,dx$",
+        "statement_he": "$$\\int_0^2 xe^{x^2}\\,dx \\underset{\\substack{t=x^2 \\\\ dt=2x\\,dx \\ \\to \\ dx=\\frac{dt}{2x}}}{=} \\int_0^4 xe^t \\cdot \\frac{dt}{2x}$$\n$$= \\frac{1}{2}\\int_0^4 e^t\\,dt = \\frac{1}{2}(e^4 - 1)$$",
+        "proof_he": null,
+        "topic": "אינטגרציה בהצבה"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "אינטגרל לא אמיתי על $[a,\\infty)$",
+        "statement_he": "יהי $a \\in \\mathbb{R}$ ותהי $f: [a,\\infty) \\to \\mathbb{R}$. נניח ש-$f$ אינטגרבילית ב-$[a,b]$ לכל $b > a$. נאמר כי האינטגרל הלא אמיתי $\\int_a^\\infty f(x)\\,dx$ מתכנס אם קיים הגבול $\\lim_{b\\to\\infty} \\int_a^b f(x)\\,dx$. במקרה זה נגדיר\n$$\\int_a^\\infty f(x)\\,dx = \\lim_{b\\to\\infty} \\int_a^b f(x)\\,dx$$",
+        "proof_he": null,
+        "topic": "אינטגרלים לא אמיתיים"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "אינטגרל לא אמיתי על $(-\\infty,b]$",
+        "statement_he": "יהי $b \\in \\mathbb{R}$ ותהי $f: (-\\infty,b] \\to \\mathbb{R}$. נניח ש-$f$ אינטגרבילית ב-$[a,b]$ לכל $a < b$. נאמר כי האינטגרל הלא אמיתי $\\int_{-\\infty}^b f(x)\\,dx$ מתכנס אם קיים הגבול $\\lim_{a\\to-\\infty} \\int_a^b f(x)\\,dx$. במקרה זה נגדיר\n$$\\int_{-\\infty}^b f(x)\\,dx = \\lim_{a\\to-\\infty} \\int_a^b f(x)\\,dx$$",
+        "proof_he": null,
+        "topic": "אינטגרלים לא אמיתיים"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "אינטגרל לא אמיתי על $\\mathbb{R}$",
+        "statement_he": "תהי $f: \\mathbb{R} \\to \\mathbb{R}$. נאמר כי $\\int_{-\\infty}^\\infty f(x)\\,dx$ מתכנס אם $\\int_{-\\infty}^0 f(x)\\,dx$ ו-$\\int_0^\\infty f(x)\\,dx$ מתכנסים. במקרה זה נגדיר\n$$\\int_{-\\infty}^\\infty f(x)\\,dx = \\int_{-\\infty}^0 f(x)\\,dx + \\int_0^\\infty f(x)\\,dx$$",
+        "proof_he": null,
+        "topic": "אינטגרלים לא אמיתיים"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "אינטגרל לא אמיתי עם נקודת אי-רציפות בקצה השמאלי",
+        "statement_he": "תהיינה $a, b \\in \\mathbb{R}$ כך ש-$a < b$, ותהי $f$ פונקציה המוגדרת ב-$(a,b]$. נניח ש-$f$ אינטגרבילית ב-$[a+\\delta, b]$ לכל $0 < \\delta < b-a$. נאמר שהאינטגרל הלא אמיתי $\\int_a^b f(x)\\,dx$ מתכנס אם קיים הגבול $\\lim_{\\delta\\to 0^+} \\int_{a+\\delta}^b f(x)\\,dx$. במקרה זה נגדיר\n$$\\int_a^b f(x)\\,dx = \\lim_{\\delta\\to 0^+} \\int_{a+\\delta}^b f(x)\\,dx$$",
+        "proof_he": null,
+        "topic": "אינטגרלים לא אמיתיים"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "אינטגרל לא אמיתי עם נקודת אי-רציפות בקצה הימני",
+        "statement_he": "תהיינה $a, b \\in \\mathbb{R}$ כך ש-$a < b$, ותהי $f$ פונקציה המוגדרת ב-$[a,b)$. נניח ש-$f$ אינטגרבילית ב-$[a, b-\\delta]$ לכל $0 < \\delta < b-a$. נאמר שהאינטגרל הלא אמיתי $\\int_a^b f(x)\\,dx$ מתכנס אם קיים הגבול $\\lim_{\\delta\\to 0^+} \\int_a^{b-\\delta} f(x)\\,dx$. במקרה זה נגדיר\n$$\\int_a^b f(x)\\,dx = \\lim_{\\delta\\to 0^+} \\int_a^{b-\\delta} f(x)\\,dx$$",
+        "proof_he": null,
+        "topic": "אינטגרלים לא אמיתיים"
+      },
+      {
+        "kind": "note",
+        "label": "הערה",
+        "number": "1",
+        "name": "אינטגרל מתכנס בכל נקודות הרציפות",
+        "statement_he": "באופן דומה, נאמר שאינטגרל מתכנס באופן הרחב אם הפולג את הפולס האמיתי קיים בכל נקודות הרציפות. [לא ברור]",
+        "proof_he": null,
+        "topic": "אינטגרלים לא אמיתיים"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": "1",
+        "name": "$\\int_0^\\infty e^{-x}\\,dx$",
+        "statement_he": "$$\\int_0^\\infty e^{-x}\\,dx = \\lim_{b\\to\\infty} \\int_0^b e^{-x}\\,dx = \\lim_{b\\to\\infty} \\left[-e^{-x}\\right]_0^b = \\lim_{b\\to\\infty}\\left[-e^{-b} + 1\\right] \\underset{\\text{כי}}{=} 1$$\nנכתוב בקיצור:\n$$\\int_0^\\infty e^{-x}\\,dx = \\left[-e^{-x}\\right]_0^\\infty = -e^{-\\infty} + 1 = 1$$",
+        "proof_he": null,
+        "topic": "אינטגרלים לא אמיתיים"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": "2",
+        "name": "$\\int_{-\\infty}^0 \\frac{dx}{1+x^2}$",
+        "statement_he": "$$\\int_{-\\infty}^0 \\frac{dx}{1+x^2} = \\left[\\arctan x\\right]_{-\\infty}^0 = \\arctan 0 - \\arctan(-\\infty) = \\frac{\\pi}{2}$$",
+        "proof_he": null,
+        "topic": "אינטגרלים לא אמיתיים"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": "3",
+        "name": "$\\int_0^\\infty \\frac{dx}{1+x^2}$",
+        "statement_he": "$$\\int_0^\\infty \\frac{dx}{1+x^2} = \\left[\\arctan x\\right]_0^\\infty = \\arctan\\infty - \\arctan(0) = \\frac{\\pi}{2}$$",
+        "proof_he": null,
+        "topic": "אינטגרלים לא אמיתיים"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": "4",
+        "name": "$\\int_{-\\infty}^\\infty \\frac{dx}{1+x^2}$",
+        "statement_he": "$$\\int_{-\\infty}^\\infty \\frac{dx}{1+x^2} = \\int_{-\\infty}^0 + \\int_0^\\infty = \\frac{\\pi}{2} + \\frac{\\pi}{2} = \\pi$$",
+        "proof_he": null,
+        "topic": "אינטגרלים לא אמיתיים"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": "5",
+        "name": "$\\int_0^\\infty \\sin x\\,dx$ מתבדר",
+        "statement_he": "$$\\int_0^\\infty \\sin x\\,dx = \\left[-\\cos x\\right]_0^\\infty = -\\cos\\infty + 1$$\nשווה לא קיים, מתבדר. [האינטגרל מתבדר]",
+        "proof_he": null,
+        "topic": "אינטגרלים לא אמיתיים"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": "6",
+        "name": "$\\int_0^1 \\frac{dx}{\\sqrt{1-x^2}}$",
+        "statement_he": "$$\\int_0^1 \\frac{dx}{\\sqrt{1-x^2}} = \\lim_{\\delta\\to 0^+} \\int_0^{1-\\delta} \\frac{dx}{\\sqrt{1-x^2}} = \\lim_{\\delta\\to 0^+} \\left[\\arcsin x\\right]_0^{1-\\delta}$$\n$$\\underset{\\text{רציפות}}{=} \\left[\\arcsin x\\right]_0^{1^-} = \\arcsin 1^- - \\arcsin 0 = \\frac{\\pi}{2}$$",
+        "proof_he": null,
+        "topic": "אינטגרלים לא אמיתיים"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": "7",
+        "name": "$\\int_{-1}^0 \\frac{dx}{\\sqrt{1-x^2}}$",
+        "statement_he": "$$\\int_{-1}^0 \\frac{dx}{\\sqrt{1-x^2}} = \\lim_{\\delta\\to 0^+} \\int_{-1+\\delta}^0 \\frac{dx}{\\sqrt{1-x^2}} = \\lim_{\\delta\\to 0^+} \\left[\\arcsin x\\right]_{-1+\\delta}^0$$\n$$\\underset{\\text{רציפות}}{=} \\left[\\arcsin x\\right]_{-1^+}^0 = \\arcsin 0 - \\arcsin(-1) = \\frac{\\pi}{2}$$",
+        "proof_he": null,
+        "topic": "אינטגרלים לא אמיתיים"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": "8",
+        "name": "$\\int_{-1}^1 \\frac{dx}{\\sqrt{1-x^2}}$",
+        "statement_he": "$$\\int_{-1}^1 \\frac{dx}{\\sqrt{1-x^2}} = \\int_{-1}^0 + \\int_0^1 = \\pi$$",
+        "proof_he": null,
+        "topic": "אינטגרלים לא אמיתיים"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": "9",
+        "name": "$\\int_0^3 \\frac{dx}{\\ln x}$",
+        "statement_he": "$$\\int_0^3 \\frac{dx}{\\ln x} = \\int_0^{1/2} + \\int_{1/2}^1 + \\int_1^3$$",
+        "proof_he": null,
+        "topic": "אינטגרלים לא אמיתיים"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "3",
+        "name": "אינטגרל $\\frac{1}{x^p}$ (תנאי התכנסות לפי $p$)",
+        "statement_he": "יהי $p \\in \\mathbb{R}$. אזי\n$$\\text{(i)} \\quad \\int_1^\\infty \\frac{dx}{x^p} = \\begin{cases} \\dfrac{1}{p-1} & p>1 \\\\[6pt] \\infty & p \\le 1 \\end{cases}$$\n$$\\text{(ii)} \\quad \\int_0^1 \\frac{dx}{x^p} = \\begin{cases} \\dfrac{1}{1-p} & p<1 \\\\[6pt] \\infty & p \\ge 1 \\end{cases}$$",
+        "proof_he": "(i) נחשב לפי המקרים. נניח $p \\ne 1$.\n$$\\int_1^\\infty \\frac{dx}{x^p} = \\int_1^\\infty x^{-p}\\,dx \\underset{\\int x^\\alpha}{=} \\left[\\frac{x^{-p+1}}{-p+1}\\right]_1^\\infty = \\frac{\\infty^{1-p}}{1-p} - \\frac{1}{1-p} = \\begin{cases} \\infty & p<1 \\\\[4pt] \\dfrac{1}{p-1} & p>1 \\end{cases}$$\nאם $p=1$:\n$$\\int_1^\\infty \\frac{dx}{x} = \\left[\\ln|x|\\right]_1^\\infty = \\ln\\infty - \\ln 1 = \\infty - 0 = \\infty$$\nסיכום:\n$$\\int_1^\\infty \\frac{dx}{x^p} = \\begin{cases} \\dfrac{1}{p-1} & p>1 \\\\[4pt] \\infty & p \\le 1 \\end{cases}$$\n(ii) נניח $p \\ne 1$.\n$$\\int_0^1 \\frac{dx}{x^p} = \\int_0^1 x^{-p}\\,dx \\underset{\\int x^\\alpha}{=} \\left[\\frac{x^{-p+1}}{-p+1}\\right]_{0^+}^1 = \\frac{1}{1-p} - \\frac{(0^+)^{1-p}}{1-p} = \\begin{cases} \\dfrac{1}{1-p} & p<1 \\\\[4pt] \\infty & p>1 \\end{cases}$$\nאם $p=1$:\n$$\\int_0^1 \\frac{dx}{x} = \\left[\\ln|x|\\right]_{0^+}^1 = \\ln 1 - \\ln 0^+ = 0 - (-\\infty) = \\infty$$\nסיכום:\n$$\\int_0^1 \\frac{dx}{x^p} = \\begin{cases} \\dfrac{1}{1-p} & p<1 \\\\[4pt] \\infty & p \\ge 1 \\end{cases}$$",
+        "topic": "אינטגרלים לא אמיתיים"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": null,
+        "name": "ערכי $\\int \\frac{1}{x^p}$ עבור $p=2$ ו-$p=1/2$",
+        "statement_he": "$$\\int_1^\\infty \\frac{dx}{x^2} \\underset{p>1}{=} \\frac{1}{2-1} = 1 \\qquad \\int_0^1 \\frac{dx}{x^2} = \\infty$$\n$$\\int_1^\\infty \\frac{dx}{\\sqrt{x}} \\underset{p<1}{=} \\infty \\qquad \\int_0^1 \\frac{dx}{\\sqrt{x}} = \\frac{1}{1-1/2} = 2$$",
+        "proof_he": null,
+        "topic": "אינטגרלים לא אמיתיים"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "2",
+        "name": "מבחן ההשוואה (לאינטגרלים)",
+        "statement_he": "יהי $a \\in \\mathbb{R}$ ותהיינה $f, g$ שתי פונקציות המוגדרות ב-$[a,\\infty)$. נניח כי\n(i) $0 \\le f(x) \\le g(x)$ לכל $x \\ge a$.\n(ii) $f, g$ רציפות ב-$[a,b]$ לכל $b > a$.\n(iii) $\\int_a^\\infty g(x)\\,dx$ מתכנס.\nאזי $\\int_a^\\infty f(x)\\,dx$ מתכנס, ובנוסף,\n$$\\int_a^\\infty f(x)\\,dx \\le \\int_a^\\infty g(x)\\,dx$$",
+        "proof_he": "נגדיר בפונקציה המצברת $F$:\n$$F(x) = \\int_a^x f(t)\\,dt \\quad \\text{לכל } x \\ge a.$$\nמהיות $f$ אינטגרבילית ב-$[a,x]$ לכל $x > a$, ומהיות $F(a) = \\int_a^a f(t)\\,dt = 0$, הרי ש-$F$ מוגדרת.\nהיטב. נשים לב נוכיח ש-$F$ עולה.\nיהיו $a \\le x_1 < x_2$. נוכיח ש-$F(x_1) \\le F(x_2)$.\n$$F(x_2) - F(x_1) = \\int_a^{x_2} f(t)\\,dt - \\int_a^{x_1} f(t)\\,dt = \\int_{x_1}^{x_2} f(t)\\,dt \\underset{\\text{מונוטוניות}}{\\ge} \\int_{x_1}^{x_2} 0\\,dx = 0$$\nובכך הראינו $F(x_1) \\le F(x_2)$ כלומר $F$ עולה.\nבאותו האופן, נגדיר בפונקציה המצברת $G$:\n$$G(x) = \\int_a^x g(t)\\,dt \\quad \\text{לכל } x \\ge a.$$\nגם $G$ מוגדרת היטב ועולה. בנוסף, לכל $x \\ge a$,\n$$F(x) = \\int_a^x f(t)\\,dt \\underset{\\text{מונוטוניות}}{\\le} \\int_a^x g(t)\\,dt = G(x)$$\nמהיות $\\int_a^\\infty g(x)\\,dx$ מתכנס, קיים $S \\in \\mathbb{R}$ כך ש-\n$$S = \\int_a^\\infty g(x)\\,dx = \\lim_{x\\to\\infty} \\int_a^x g(t)\\,dt = \\lim_{x\\to\\infty} G(x)$$\nאזי לכל $x \\ge a$,\n$$F(x) \\le G(x) \\le \\sup\\{G(x) : x \\ge a\\} \\underset{\\text{עולה}}{=} \\lim_{x\\to\\infty} G(x) = S$$\nכלומר $S$ חסם מלעיל של $F$. אזי\n$$\\int_a^\\infty f(x)\\,dx \\underset{\\text{הגדרה}}{=} \\lim_{x\\to\\infty} \\int_a^x f(t)\\,dt = \\lim_{x\\to\\infty} F(x) \\underset{\\text{עולה}}{=} \\sup\\{F(x) : x \\ge a\\} \\underset{\\text{מונוטוניות}}{\\le} S = \\int_a^\\infty g(x)\\,dx$$",
+        "topic": "מבחני השוואה"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "התכנסות בהחלט (אינטגרל)",
+        "statement_he": "יהי $a \\in \\mathbb{R}$ ותהי $f$ פונקציה המוגדרת ב-$(a,\\infty]$. נאמר כי $f$ אינטגרבילית הלא אמיתי $\\int_a^\\infty f(x)\\,dx$ מתכנס בהחלט אם $\\int_a^\\infty |f(x)|\\,dx < \\infty$.",
+        "proof_he": null,
+        "topic": "מבחני השוואה"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "3",
+        "name": "התכנסות בהחלט גוררת התכנסות",
+        "statement_he": "(מבחן ההתכנסות בהחלט גוררת התכנסות עבור אינטגרלים) אם $f$ אינטגרבילית הלא אמיתי $\\int_a^\\infty f(x)\\,dx$ מתכנס בהחלט אז $\\int_a^\\infty f(x)\\,dx$ מתכנס.",
+        "proof_he": "נשים לב, לכל $x \\ge a$ מתקיים:\n$$0 \\le |f(x)| - f(x) \\le 2|f(x)|$$\n(כי $f(x) \\le |f(x)|$ ו-$-f(x) \\le |f(x)|$).\nאזי ממבחן ההשוואה,\n$$\\int_a^\\infty \\left[|f(x)| - f(x)\\right]\\,dx \\le \\int_a^\\infty 2|f(x)|\\,dx = 2\\int_a^\\infty |f(x)|\\,dx < \\infty$$\nובכך $\\int_a^\\infty \\left[|f(x)| - f(x)\\right]\\,dx < \\infty$. אזי\n$$\\int_a^\\infty f(x)\\,dx = \\int_a^\\infty \\left[|f(x)| - \\left(|f(x)| - f(x)\\right)\\right]\\,dx = \\text{מתכנס} - \\text{מתכנס} = \\text{מתכנס}$$",
+        "topic": "מבחני השוואה"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": null,
+        "name": "התכנסות $\\int_1^\\infty \\frac{x}{\\sqrt{x^5+x+1}}\\,dx$ במבחן השוואה",
+        "statement_he": "קבעו האם האינטגרל הלא אמיתי הבא מתכנס:\n$$\\int_1^\\infty \\frac{x}{\\sqrt{x^5+x+1}}\\,dx$$",
+        "proof_he": "פתרון: נשתמש ב-ג.\n$$\\int_1^\\infty \\frac{x}{\\sqrt{x^5+x+1}}\\,dx \\le \\int_1^\\infty \\frac{x\\,dx}{\\sqrt{x^5}} = \\int_1^\\infty \\frac{dx}{x^{1.5}} \\underset{p=1.5}{<} \\infty$$\nאזי $\\int_1^\\infty \\frac{x}{\\sqrt{x^5+x+1}}\\,dx < \\infty$. [$a < \\infty$]",
+        "topic": "מבחני השוואה"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": null,
+        "name": "התבדרות $\\int_1^\\infty \\frac{dx}{\\sqrt{x}-\\frac{1}{2}}$",
+        "statement_he": "קבעו האם האינטגרל הלא אמיתי הבא מתכנס:\n$$\\int_1^\\infty \\frac{dx}{\\sqrt{x}-\\frac{1}{2}}$$",
+        "proof_he": "פתרון:\n$$\\int_1^\\infty \\frac{dx}{\\sqrt{x}-\\frac{1}{2}} \\ge \\int_1^\\infty \\frac{dx}{\\sqrt{x}} \\underset{p<1}{=} \\infty$$\nאזי $\\int_1^\\infty \\frac{dx}{\\sqrt{x}-\\frac{1}{2}} = \\infty$. [מתבדר]",
+        "topic": "מבחני השוואה"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": null,
+        "name": "התבדרות $\\int_1^\\infty \\frac{dx}{1+3x+\\sqrt{x}}$",
+        "statement_he": "קבעו האם האינטגרל הלא אמיתי הבא מתכנס:\n$$\\int_1^\\infty \\frac{dx}{1+3x+\\sqrt{x}}$$",
+        "proof_he": "פתרון:\n$$\\int_1^\\infty \\frac{dx}{1+3x+\\sqrt{x}} \\underset{1+\\sqrt{x}\\le x+x}{\\ge} \\int_1^\\infty \\frac{dx}{3x+2x} = \\int_1^\\infty \\frac{dx}{5x} = \\frac{1}{5}\\int_1^\\infty \\frac{dx}{x} = \\infty$$\nאזי $\\int_1^\\infty \\frac{dx}{1+3x+\\sqrt{x}} = \\infty$.",
+        "topic": "מבחני השוואה"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": null,
+        "name": "$\\int_0^1 \\frac{dx}{x^2+\\sqrt{x}}$ עם מבחן השוואה",
+        "statement_he": "קבעו האם האינטגרל הלא אמיתי הבא מתכנס:\nפתרון: לפי מבחן ההשוואה נותר נשאר ניסוח, ל-$0 < \\delta < 1$:\n$$\\int_0^1 \\frac{dx}{x^2+\\sqrt{x}} \\le \\int_0^1 \\frac{dx}{x^2} = \\infty$$\n$$\\int_0^1 \\frac{dx}{x^2+\\sqrt{x}} \\le \\int_0^1 \\frac{dx}{\\sqrt{x}} < \\infty$$",
+        "proof_he": null,
+        "topic": "מבחני השוואה"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": null,
+        "name": "התכנסות בהחלט $\\int_1^\\infty \\frac{\\sin x}{1+x^2}\\,dx$",
+        "statement_he": "מתכנס בהחלט (ולכן ג.)\n$$\\int_1^\\infty \\frac{\\sin x}{1+x^2}\\,dx$$",
+        "proof_he": "$$\\int_1^\\infty \\frac{|\\sin x|}{1+x^2}\\,dx \\le \\int_1^\\infty \\frac{1}{1+x^2}\\,dx \\le \\int_1^\\infty \\frac{dx}{x^2} < \\infty$$",
+        "topic": "מבחני השוואה"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "טור אינסופי והתכנסותו",
+        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^\\infty$ סדרה של מספרים. נאמר שהטור $\\sum_{n=k}^\\infty a_n$ מתכנס אם קיים הגבול $\\lim_{N\\to\\infty} \\sum_{n=k}^N a_n$. במקרה זה נגדיר\n$$\\sum_{n=k}^\\infty a_n = \\lim_{N\\to\\infty} \\sum_{n=k}^N a_n$$",
+        "proof_he": null,
+        "topic": "טורים"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": null,
+        "name": "טורים מפורסמים (סדרות חשובות)",
+        "statement_he": "$$\\text{(1)} \\quad \\sum_{n=0}^\\infty \\frac{1}{2^n} = 1 + \\frac{1}{2} + \\frac{1}{4} + \\frac{1}{8} + \\dots = 2$$\n$$\\text{(2)} \\quad \\sum_{n=1}^\\infty \\frac{1}{n} = 1 + \\frac{1}{2} + \\frac{1}{3} + \\frac{1}{4} + \\dots = \\infty$$\n$$\\text{(3)} \\quad \\sum_{n=1}^\\infty \\frac{1}{n^2} = 1 + \\frac{1}{2^2} + \\frac{1}{3^2} + \\frac{1}{4^2} + \\dots = \\frac{\\pi^2}{6}$$\n$$\\text{(4)} \\quad \\sum_{n=1}^\\infty \\frac{1}{n^4} = 1 + \\frac{1}{2^4} + \\frac{1}{3^4} + \\frac{1}{4^4} + \\dots = \\frac{\\pi^4}{90}$$\n$$\\text{(5)} \\quad \\sum_{n=1}^\\infty \\frac{1}{n^p} = \\zeta(p) \\qquad \\text{עבור } p=3, \\ \\zeta(p) \\text{ אינו ידוע.}$$\n$$\\text{(6)} \\quad \\sum_{n=1}^\\infty \\frac{(-1)^{n+1}}{n} = 1 - \\frac{1}{2} + \\frac{1}{3} - \\dots = \\ln 2$$",
+        "proof_he": null,
+        "topic": "טורים"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": null,
+        "name": "$\\sum_{n=0}^\\infty 1$ מתבדר",
+        "statement_he": "$$\\sum_{n=0}^\\infty 1 \\underset{\\text{הגדרה}}{=} \\lim_{N\\to\\infty} \\sum_{n=0}^N 1 = \\lim_{N\\to\\infty}(N+1) = \\infty$$",
+        "proof_he": null,
+        "topic": "טורים"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "4",
+        "name": "הטור הגאומטרי",
+        "statement_he": "יהי $q \\in \\mathbb{R}$. אזי\n$$\\sum_{n=0}^\\infty q^n = 1 + q + q^2 + \\dots = \\begin{cases} \\dfrac{1}{1-q} & |q|<1 \\\\[6pt] \\text{מתבדר} & |q| \\ge 1 \\end{cases}$$",
+        "proof_he": "נראית תחילה ש-$q \\ne 1$. אזי\n$$\\sum_{n=0}^\\infty q^n = \\lim_{N\\to\\infty} \\sum_{n=0}^N q^n = \\lim_{N\\to\\infty}\\left(1 + q + q^2 + \\dots + q^N\\right) = \\lim_{N\\to\\infty} \\frac{1-q^{N+1}}{1-q} = \\frac{1-q^\\infty}{1-q} = \\begin{cases} \\dfrac{1}{1-q} & |q|<1 \\\\[4pt] \\text{לא קיים} & |q|>1 \\end{cases}$$\nעבור $q=1$, נטפל בנפרד בקצוות הטור:\n$$\\sum_{n=0}^\\infty 1 \\underset{\\text{הגדרה}}{=} \\lim_{N\\to\\infty} \\sum_{n=0}^N 1 = \\lim_{N\\to\\infty}(N+1) = \\infty$$",
+        "topic": "טורים"
+      }
+    ]
+  },
+  {
+    "lecture": 5,
+    "week": 6,
+    "date": "30.4.26",
+    "topics": [
+      "טורים",
+      "טור הנדסי",
+      "טור הרמוני",
+      "התכנסות טורים",
+      "מבחני השוואה"
+    ],
+    "items": [
+      {
+        "kind": "theorem",
+        "label": "משפט 0",
+        "number": "0",
+        "name": "הטור ההנדסי",
+        "statement_he": "יהי $q \\in \\mathbb{R}$. אז: $$\\sum_{n=0}^{\\infty} q^n = \\begin{cases} \\dfrac{1}{1-q} & |q|<1 \\\\ \\text{מתבדר} & |q| \\geq 1 \\end{cases}$$",
+        "proof_he": "פושטות נוכיח עבור $q \\neq 1$. נחשב: $$\\sum_{n=0}^{\\infty} q^n = \\lim_{N \\to \\infty} \\sum_{n=0}^{N} q^n = \\lim_{N \\to \\infty}(1 + q + q^2 + \\dots + q^N)$$ כאשר המעבר לפי הגדרה. $$= \\lim_{N \\to \\infty} \\frac{1 - q^{N+1}}{1-q} = \\begin{cases} \\dfrac{1}{1-q} & |q|<1 \\\\ \\text{אין גבול} & |q| \\geq 1 \\end{cases}$$ כאשר המעבר לפי נוסחת סכום של סדרה הנדסית. אם $q=1$, נחשב בנפרד: $$\\sum_{n=0}^{\\infty} q^n = \\lim_{N \\to \\infty} \\sum_{n=0}^{N} q^n = \\lim_{N \\to \\infty}(1 + q + q^2 + \\dots + q^N)$$ כאשר המעבר לפי הגדרה. $q=1$: $$= \\lim_{N \\to \\infty}(1 + 1 + \\dots + 1) = \\lim_{N \\to \\infty}(N+1) = \\infty$$",
+        "topic": "טור הנדסי"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט 1",
+        "number": "1",
+        "name": "הטור הטלסקופי",
+        "statement_he": "$$\\sum_{n=2}^{\\infty} \\frac{1}{n(n-1)} = 1$$ (הטור מתכנס)",
+        "proof_he": "הטור מתכנס. $$\\sum_{n=2}^{\\infty} \\frac{1}{n(n-1)} = \\lim_{N \\to \\infty} \\sum_{n=2}^{N} \\frac{1}{n(n-1)} = \\lim_{N \\to \\infty} \\sum_{n=2}^{N} \\left(\\frac{1}{n-1} - \\frac{1}{n}\\right)$$ כאשר המעבר הראשון לפי הגדרה, והמעבר השני לפי פירוק לשברים פשוטים. $$= \\lim_{N \\to \\infty}\\left[\\left(1 - \\frac{1}{2}\\right) + \\left(\\frac{1}{2} - \\frac{1}{3}\\right) + \\dots + \\left(\\frac{1}{N-1} - \\frac{1}{N}\\right)\\right]$$ (כאשר $n=2$, $n=3$, ..., $n=N$). $$= \\lim_{N \\to \\infty}\\left[1 - \\frac{1}{2} + \\frac{1}{2} - \\frac{1}{3} + \\dots + \\frac{1}{N-1} - \\frac{1}{N}\\right]$$ סכום טלסקופי + צמצום אברים. $$= \\lim_{N \\to \\infty}\\left(1 - \\frac{1}{N}\\right) = 1$$",
+        "topic": "טור הנדסי"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "סכום חלקי וטור",
+        "statement_he": "יהי $0 \\leq k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה. אם נרצה את סכום הסדרה $(a_n)_{n=k}^{\\infty}$ נגדיר את סדרת הסכומים החלקיים שלה $(S_N)_{N=k}^{\\infty}$, המוגדרת ע\\\"י $$S_N = \\sum_{n=k}^{N} a_n \\quad \\text{עבור } N \\geq k.$$ $S_k = a_k$, $\\quad S_{k+1} = a_k + a_{k+1}$, $\\quad S_{k+2} = a_k + a_{k+1} + a_{k+2}$.",
+        "proof_he": null,
+        "topic": "התכנסות טורים"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה 1",
+        "number": "1",
+        "name": "הגדרת הטור",
+        "statement_he": "$$\\sum_{n=k}^{\\infty} a_n = \\lim_{N \\to \\infty} \\sum_{n=k}^{N} a_n = \\lim_{N \\to \\infty} S_N$$ (כאשר המעבר הראשון לפי הגדרה). ואם הגבול קיים אומרים שהטור $\\sum_{n=k}^{\\infty} a_n$ מתכנס, אחרת אומרים שסדרת הסכומים החלקיים של $(a_n)_{n=k}^{\\infty}$ מתבדרת.",
+        "proof_he": null,
+        "topic": "התכנסות טורים"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט 2",
+        "number": "2",
+        "name": "הטור ההרמוני",
+        "statement_he": "$$\\sum_{n=1}^{\\infty} \\frac{1}{n} = 1 + \\frac{1}{2} + \\frac{1}{3} + \\dots$$ מתבדר.",
+        "proof_he": "נניח בשלילה שהטור ההרמוני מתכנס. אזי קיים $S \\in \\mathbb{R}$ כך ש- $S = \\sum_{n=1}^{\\infty} \\frac{1}{n}$. נביט בסדרת הסכומים החלקיים $(S_N)_{N=1}^{\\infty}$ של הטור ההרמוני, כאשר הסדרה המוגדרת ע\\\"י $$S_N = \\sum_{n=1}^{N} \\frac{1}{n} \\quad \\text{עבור } N \\in \\mathbb{N}.$$ אזי $\\lim_{N \\to \\infty} S_N = S$ ולכן גם $\\lim_{N \\to \\infty} S_{2N} = S$ (מסדרה היורשת). אזי מאלגברה: $$\\lim_{N \\to \\infty}(S_{2N} - S_N) = S - S = 0.$$ אבל, עבור $N \\in \\mathbb{N}$: $$S_{2N} - S_N = \\sum_{n=1}^{2N} \\frac{1}{n} - \\sum_{n=1}^{N} \\frac{1}{n} = \\sum_{n=N+1}^{2N} \\frac{1}{n}$$ $$= \\frac{1}{N+1} + \\frac{1}{N+2} + \\dots + \\frac{1}{2N} \\geq \\frac{1}{2N} + \\frac{1}{2N} + \\dots + \\frac{1}{2N} = N \\cdot \\frac{1}{2N} = \\frac{1}{2}$$ (במונה הקטן ביותר; $N$ מחוברים מימין ו-$N$ מחוברים משמאל). אזי $S_{2N} - S_N \\geq \\frac{1}{2}$ עבור $N \\in \\mathbb{N}$, אזי מאריתמטיקה $$0 = \\lim_{N \\to \\infty}(S_{2N} - S_N) \\geq \\frac{1}{2}.$$ קיבלנו סתירה.",
+        "topic": "טור הרמוני"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "זנב הטור",
+        "statement_he": "תהי $(a_n)_{n=0}^{\\infty}$ סדרה אם מס\\\"מ ו'הי $0 \\leq k \\in \\mathbb{Z}$. הזנב ה-$k$ של הטור $\\sum_{n=0}^{\\infty} a_n$ מוגדר להיות הטור $\\sum_{n=k}^{\\infty} a_n$.",
+        "proof_he": null,
+        "topic": "התכנסות טורים"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט 3",
+        "number": "3",
+        "name": "התכנסות הטור והזנב",
+        "statement_he": "(הזנבות) תהי $(a_n)_{n=0}^{\\infty}$ סדרה אם מס\\\"מ ויהי $0 \\leq k \\in \\mathbb{Z}$. אזי הטור $\\sum_{n=k}^{\\infty} a_n$ מתכנס אם\\\"ם זנב הטור $\\sum_{n=k}^{\\infty} a_n$ מתכנס ובמקרה זה: $$\\sum_{n=0}^{\\infty} a_n = \\sum_{n=k}^{\\infty} a_n + \\sum_{n=0}^{k-1} a_n.$$",
+        "proof_he": "$\\Leftarrow$: נניח שהטור $\\sum_{n=0}^{\\infty} a_n$ מתכנס. אזי קיים $S \\in \\mathbb{R}$ כך ש- $S = \\sum_{n=0}^{\\infty} a_n$. אזי $$\\sum_{n=k}^{\\infty} a_n = \\lim_{N \\to \\infty} \\sum_{n=k}^{N} a_n = \\lim_{N \\to \\infty}\\left[\\sum_{n=0}^{N} a_n - \\sum_{n=0}^{k-1} a_n\\right]$$ כאשר המעבר לפי הגדרה (החלק השמאלי שואף ל-$S$ ב-$N$). $$= S - \\sum_{n=0}^{k-1} a_n$$ ומכאן ולכן הטור מתכנס וגם: $$\\sum_{n=0}^{\\infty} a_n = S = \\sum_{n=k}^{\\infty} a_n + \\sum_{n=0}^{k-1} a_n.$$ $\\Rightarrow$: נניח שזנב הטור $\\sum_{n=k}^{\\infty} a_n$ מתכנס. אזי קיים $S_1 \\in \\mathbb{R}$ כך ש- $S_1 = \\sum_{n=k}^{\\infty} a_n$. אזי $$\\sum_{n=0}^{\\infty} a_n = \\lim_{N \\to \\infty} \\sum_{n=0}^{N} a_n = \\lim_{N \\to \\infty}\\left[\\sum_{n=k}^{N} a_n + \\sum_{n=0}^{k-1} a_n\\right]$$ כאשר המעבר לפי הגדרה (החלק השמאלי שואף ל-$S_1$ ב-$N$). $$= S_1 + \\sum_{n=0}^{k-1} a_n = \\sum_{n=k}^{\\infty} a_n + \\sum_{n=0}^{k-1} a_n.$$",
+        "topic": "התכנסות טורים"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט 4",
+        "number": "4",
+        "name": "לינאריות הטור",
+        "statement_he": "(אלגברת טורים / לינאריות) יהי $0 \\leq k \\in \\mathbb{Z}$ ותהיינה $(a_n)_{n=k}^{\\infty}$ ו-$(b_n)_{n=k}^{\\infty}$ שתי סדרות אם מס\\\"מ. יהיו $\\alpha, \\beta \\in \\mathbb{R}$. נניח שהטורים $\\sum_{n=k}^{\\infty} a_n$ ו-$\\sum_{n=k}^{\\infty} b_n$ מתכנסים. אז הטור $\\sum_{n=k}^{\\infty}(\\alpha a_n + \\beta b_n)$ מתכנס ובנוסף: $$\\sum_{n=k}^{\\infty}(\\alpha a_n + \\beta b_n) = \\alpha \\sum_{n=k}^{\\infty} a_n + \\beta \\sum_{n=k}^{\\infty} b_n.$$",
+        "proof_he": "מהיות הטורים $\\sum_{n=k}^{\\infty} a_n$ ו-$\\sum_{n=k}^{\\infty} b_n$ מתכנסים, קיימים $S_1, S_2 \\in \\mathbb{R}$ כך ש- $S_1 = \\sum_{n=k}^{\\infty} a_n$ ו-$S_2 = \\sum_{n=k}^{\\infty} b_n$. אזי $$\\sum_{n=k}^{\\infty}(\\alpha a_n + \\beta b_n) = \\lim_{N \\to \\infty} \\sum_{n=k}^{N}(\\alpha a_n + \\beta b_n) = \\lim_{N \\to \\infty}\\left[\\alpha \\sum_{n=k}^{N} a_n + \\beta \\sum_{n=k}^{N} b_n\\right]$$ כאשר המעבר לפי הגדרה + סכום סופי, ופירוק לפי לינאריות הסכום הסופי + אלגברת גבולות. $$= \\alpha S_1 + \\beta S_2 = \\alpha \\sum_{n=k}^{\\infty} a_n + \\beta \\sum_{n=k}^{\\infty} b_n.$$",
+        "topic": "התכנסות טורים"
+      },
+      {
+        "kind": "corollary",
+        "label": "מסקנה 1",
+        "number": "1",
+        "name": "סכום והפרש טורים",
+        "statement_he": "יהי $0 \\leq k \\in \\mathbb{Z}$ ותהיינה $(a_n)_{n=k}^{\\infty}$ ו-$(b_n)_{n=k}^{\\infty}$ שתי סדרות אם מס\\\"מ. נניח שהטורים $\\sum_{n=k}^{\\infty} a_n$ ו-$\\sum_{n=k}^{\\infty} b_n$ מתכנסים. אז הטור $\\sum_{n=k}^{\\infty}(a_n \\pm b_n)$ מתכנס ובנוסף: $$\\sum_{n=k}^{\\infty}(a_n \\pm b_n) = \\sum_{n=k}^{\\infty} a_n \\pm \\sum_{n=k}^{\\infty} b_n.$$",
+        "proof_he": "נבחר $\\alpha = 1$ ו-$\\beta = \\pm 1$ ונשתמש במשפט הקודם.",
+        "topic": "התכנסות טורים"
+      },
+      {
+        "kind": "corollary",
+        "label": "מסקנה 2",
+        "number": "2",
+        "name": "כפל בקבוע",
+        "statement_he": "יהי $0 \\leq k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה אם מס\\\"מ. יהי $0 \\neq \\alpha \\in \\mathbb{R}$. אז הטור $\\sum_{n=k}^{\\infty} a_n$ מתכנס אם\\\"ם הטור $\\sum_{n=k}^{\\infty}(\\alpha \\cdot a_n)$ מתכנס, ובנוסף: $$\\sum_{n=k}^{\\infty}(\\alpha \\cdot a_n) = \\alpha \\sum_{n=k}^{\\infty} a_n.$$",
+        "proof_he": "$\\Leftarrow$: נניח שהטור $\\sum_{n=k}^{\\infty} a_n$ מתכנס. אזי (נבחר $\\beta = 0$) ממשפט הלינאריות, אזי הטור $\\sum_{n=k}^{\\infty}(\\alpha \\cdot a_n)$ מתכנס ו- $$\\sum_{n=k}^{\\infty}(\\alpha \\cdot a_n) = \\alpha \\sum_{n=k}^{\\infty} a_n.$$ $\\Rightarrow$: נניח שהטור $\\sum_{n=k}^{\\infty}(\\alpha \\cdot a_n)$ מתכנס. אזי מהכיוון הראשון (נכפל ב-$\\frac{1}{\\alpha}$), $$\\sum_{n=k}^{\\infty} a_n = \\sum_{n=k}^{\\infty}\\left(\\frac{1}{\\alpha} \\cdot \\alpha \\cdot a_n\\right) = \\frac{1}{\\alpha} \\sum_{n=k}^{\\infty}(\\alpha \\cdot a_n)$$ נכפל ב-$\\alpha$ את שני האגפים מקבל $$\\sum_{n=k}^{\\infty}(\\alpha \\cdot a_n) = \\alpha \\sum_{n=k}^{\\infty} a_n.$$",
+        "topic": "התכנסות טורים"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמאות",
+        "number": "1",
+        "name": "טור עם פירוק לטורים הנדסיים",
+        "statement_he": "$$\\sum_{n=0}^{\\infty}\\left(\\frac{1}{2^{n+1}} - \\frac{1}{2^{2n}}\\right) = \\sum_{n=0}^{\\infty}\\left(\\frac{1}{2} \\cdot \\frac{1}{2^n} - \\frac{1}{4^n}\\right) = \\frac{1}{2}\\sum_{n=0}^{\\infty}\\frac{1}{2^n} - \\sum_{n=0}^{\\infty}\\left(\\frac{1}{4}\\right)^n = \\frac{1}{2} \\cdot \\frac{1}{1 - 1/2} - \\frac{1}{1 - 1/4}$$ (לפי לינאריות; $\\frac{1}{1-q}$).",
+        "proof_he": null,
+        "topic": "טור הנדסי"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמאות",
+        "number": "2",
+        "name": "טור הנדסי החל מ-n=2",
+        "statement_he": "$$\\sum_{n=2}^{\\infty}\\left(\\frac{3}{4}\\right)^n = \\sum_{n=0}^{\\infty}\\left(\\frac{3}{4}\\right)^n - 1 - \\frac{3}{4} = \\frac{1}{1 - 3/4} - 1 - \\frac{3}{4}$$",
+        "proof_he": null,
+        "topic": "טור הנדסי"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמאות",
+        "number": "3",
+        "name": "הפרש טור מתבדר",
+        "statement_he": "$$\\sum_{n=10}^{\\infty}\\left((0.99)^n - \\frac{1}{n}\\right) = \\sum_{n=10}^{\\infty}(0.99)^n - \\sum_{n=10}^{\\infty}\\frac{1}{n} = \\underbrace{\\text{מתבדר}}_{\\text{(זנב של הרמוני)}} - \\underbrace{\\text{מתכנס}}_{\\text{(זנב של הנדסי)}} = \\text{מתבדר}$$",
+        "proof_he": null,
+        "topic": "התכנסות טורים"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל 1",
+        "number": "1",
+        "name": "טור טלסקופי עם ln",
+        "statement_he": "חשבו את ערך הטור הבא או הוכיחו שהוא מתבדר באופן הבא: $$\\sum_{n=1}^{\\infty} \\ln\\left(1 + \\frac{1}{n}\\right)$$",
+        "proof_he": "נחשב: $$\\sum_{n=1}^{\\infty} \\ln\\left(1 + \\frac{1}{n}\\right) = \\lim_{N \\to \\infty} \\sum_{n=1}^{N} \\ln\\left(1 + \\frac{1}{n}\\right) = \\lim_{N \\to \\infty} \\sum_{n=1}^{N} \\ln\\left(\\frac{n+1}{n}\\right)$$ כאשר המעבר לפי הגדרה. $$= \\lim_{N \\to \\infty} \\sum_{n=1}^{N}(\\ln(n+1) - \\ln n) =$$ $$= \\lim_{N \\to \\infty}\\left[(\\ln 2 - \\ln 1) + (\\ln 3 - \\ln 2) + \\dots + (\\ln(N+1) - \\ln N)\\right]$$ (כאשר $n=1$, $n=2$, ..., $n=N$). $$= \\lim_{N \\to \\infty}\\left[\\ln 2 - \\ln 1 + \\ln 3 - \\ln 2 + \\dots + \\ln(N+1) - \\ln N\\right]$$ $$= \\lim_{N \\to \\infty}[\\ln(N+1) - \\ln 1] = \\lim_{N \\to \\infty} \\ln(N+1) = \\lim_{x \\to \\infty} \\ln x = \\infty$$ (המעבר ב-$N$ לפי הגדרה).",
+        "topic": "התכנסות טורים"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל 2",
+        "number": "2",
+        "name": "תוספת בחינה 25% מסויית",
+        "statement_he": "יוסי. יש תוספת שאם $25\\%$ של הסויית. כמה כאן ויוסי שואל את הבחינה. אלך יוסי. ובכל תוספת שאן גם של תוספת הסויי שלו? [לא ברור]",
+        "proof_he": "$$3 + \\frac{1}{4} \\cdot 3 + \\frac{1}{4^2} \\cdot 3 + \\frac{1}{4^3} \\cdot 3 + \\dots = \\sum_{n=0}^{\\infty} \\frac{3}{4^n} = 3 \\cdot \\sum_{n=0}^{\\infty} \\frac{1}{4^n} = 3 \\cdot \\frac{1}{1 - 1/4} = \\frac{3}{3/4} = 4$$ (לינאריות).",
+        "topic": "טור הנדסי"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט 5",
+        "number": "5",
+        "name": "תנאי הכרחי להתכנסות",
+        "statement_he": "(תנאי הכרחי) יהי $0 \\leq k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה אם מס\\\"מ. נניח כי הטור $\\sum_{n=k}^{\\infty} a_n$ מתכנס. אזי $$\\lim_{n \\to \\infty} a_n = 0.$$",
+        "proof_he": "מהיות הטור $\\sum_{n=k}^{\\infty} a_n$ מתכנס קיים $S \\in \\mathbb{R}$ כך ש- $S = \\sum_{n=k}^{\\infty} a_n$. אזי $$\\lim_{n \\to \\infty} a_n = \\lim_{N \\to \\infty} a_N = \\lim_{N \\to \\infty}\\left[\\underbrace{\\sum_{n=k}^{N} a_n}_{S_N} - \\underbrace{\\sum_{n=k}^{N-1} a_n}_{S_{N-1}}\\right] = S - S = 0.$$",
+        "topic": "התכנסות טורים"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמאות",
+        "number": "1",
+        "name": "מבחן התבדרות עם גבול אבר",
+        "statement_he": "האם הטור $$\\sum_{n=3}^{\\infty} \\frac{2n-1}{3n+7}$$ מתבדר כי...",
+        "proof_he": "$$\\lim_{n \\to \\infty} a_n = \\lim_{n \\to \\infty} \\frac{2n-1}{3n+7} = \\lim_{n \\to \\infty} \\frac{2 - 1/n}{3 + 7/n} = \\frac{2}{3}$$ אזי $\\lim_{n \\to \\infty} a_n \\neq 0$ ולכן מהשלילת התנאי ההכרחי הטור מתבדר.",
+        "topic": "התכנסות טורים"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמאות",
+        "number": "2",
+        "name": "מבחן התבדרות cos",
+        "statement_he": "האם הטור $$\\sum_{n=1}^{\\infty} \\cos\\left(\\frac{1}{n}\\right)$$ מתבדר כי...",
+        "proof_he": "$$\\lim_{n \\to \\infty} a_n = \\lim_{n \\to \\infty} \\cos\\frac{1}{n} = \\lim_{x \\to 0} \\cos x = 1 \\neq 0$$ (כאשר $x_n = \\frac{1}{n}$ הינה). אזי $\\lim_{n \\to \\infty} a_n \\neq 0$ ולכן מהשלילת התנאי ההכרחי הטור מתבדר.",
+        "topic": "התכנסות טורים"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמאות",
+        "number": "3",
+        "name": "הרמוני - תנאי הכרחי לא מספיק",
+        "statement_he": "$$\\sum_{n=1}^{\\infty} \\frac{1}{n}$$ אבל מתבדר. כאן המשפט יוצא הכיוון: אם נכון רק כיוון ההפך ($\\lim_{n \\to \\infty} a_n = 0 \\;\\not\\!\\!\\!\\Rightarrow\\; \\sum_{n=k}^{\\infty} a_n$ מתכנס)",
+        "proof_he": "$$\\lim_{n \\to \\infty} a_n = \\lim_{n \\to \\infty} \\frac{1}{n} = 0$$",
+        "topic": "טור הרמוני"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "טור אי-שלילי",
+        "statement_he": "יהי $0 \\leq k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה אם מס\\\"מ. נאמר שהטור $\\sum_{n=k}^{\\infty} a_n$ הוא טור אי-שלילי, אם $a_n \\geq 0$ עבור $n \\geq k$.",
+        "proof_he": null,
+        "topic": "התכנסות טורים"
+      },
+      {
+        "kind": "note",
+        "label": "הערה",
+        "number": "2",
+        "name": "סדרת סכומים חלקיים מונוטונית עולה",
+        "statement_he": "אם הטור $\\sum_{n=k}^{\\infty} a_n$ הינו אי\\\"ש, אזי סדרת הסכומים החלקיים $(S_N)_{N=k}^{\\infty}$ הינה מונוטונית עולה. כאן עבור $N \\geq k$: $$S_{N+1} - S_N = \\sum_{n=k}^{N+1} a_n - \\sum_{n=k}^{N} a_n = a_{N+1} \\geq 0,$$ ולכן $S_N \\leq S_{N+1}$ עבור $N \\geq k$. אזי אם הטור אי\\\"ש - שלו מתכנס ובמקרה ההרחב ו- $$\\sum_{n=k}^{\\infty} a_n = \\lim_{N \\to \\infty} S_N = \\sup\\{S_N : N \\geq k\\}$$ אם הטור מתכנס לפי שאם הטור מתכנס אם סדרה $(S_N)_{N=k}^{\\infty}$ חסומה מלעיל, ואם סדרה $(S_N)_{N=k}^{\\infty}$ לא חסומה מלעיל, אז $\\sum_{n=k}^{\\infty} a_n = \\infty$.",
+        "proof_he": null,
+        "topic": "התכנסות טורים"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "סימון התכנסות אי-שלילי",
+        "statement_he": "יהי $0 \\leq k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה אם מס\\\"מ. אם הטור $\\sum_{n=k}^{\\infty} a_n$ הינו אי\\\"ש מתכנס נאמר כי נסמן $\\sum_{n=k}^{\\infty} a_n < \\infty$ אם הטור $\\sum_{n=k}^{\\infty} a_n$ מתכנס.",
+        "proof_he": null,
+        "topic": "התכנסות טורים"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט 6",
+        "number": "6",
+        "name": "מבחן ההשוואה",
+        "statement_he": "(מבחן ההשוואה לטורים אי-שליליים) יהי $0 \\leq k \\in \\mathbb{Z}$ ותהיינה $(a_n)_{n=k}^{\\infty}$ ו-$(b_n)_{n=k}^{\\infty}$ שתי סדרות אם מס\\\"מ. נניח כי: (i) $\\;0 \\leq a_n \\leq b_n$, עבור $n \\geq k$. (ii) $\\;\\sum_{n=k}^{\\infty} b_n < \\infty$. אז $\\sum_{n=k}^{\\infty} a_n < \\infty$ ובנוסף: $$\\sum_{n=k}^{\\infty} a_n \\leq \\sum_{n=k}^{\\infty} b_n.$$",
+        "proof_he": "מהיות, מנתון, קיים $S \\in \\mathbb{R}$ כך ש- $$S = \\sum_{n=k}^{\\infty} b_n = \\sup\\left\\{\\sum_{n=k}^{N} b_n : N \\geq k\\right\\}.$$ תהי $(S_N)_{N=k}^{\\infty}$ את סדרת הסכומים החלקיים של הטור $\\sum_{n=k}^{\\infty} a_n$, שהיא $S_N = \\sum_{n=k}^{N} a_n$ עבור $N \\geq k$. מהיות $a_n \\geq 0$ עבור $n \\geq k$, הטור $\\sum_{n=k}^{\\infty} a_n$ אי\\\"ש ולכן עבור $N \\geq k$: $$S_N = \\sum_{n=k}^{N} a_n \\leq \\sum_{n=k}^{N} b_n \\leq S$$ (כאשר אי השוויון הראשון מ-$a_n \\leq b_n$ עבור $n$ (סכום סופי), ואי השוויון השני כי $S$ חסם מלעיל). אזי $S_N \\leq S$ עבור $N \\geq k$ ולכן $(S_N)_{N=k}^{\\infty}$ חסומה מלעיל. אזי גם $S$. אזי גם מתכנסת (עולה + חסומה מלעיל) ולכן הטור $\\sum_{n=k}^{\\infty} a_n < \\infty$ ובנוסף $$\\sum_{n=k}^{\\infty} a_n = \\lim_{N \\to \\infty} S_N = \\sup\\{S_N : N \\geq k\\} \\leq S = \\sum_{n=k}^{\\infty} b_n.$$",
+        "topic": "מבחני השוואה"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל 3",
+        "number": "3",
+        "name": "מבחן השוואה - קביעת התכנסות",
+        "statement_he": "קבעו האם גם את מהטורים הבאים מתכנס או מתבדר.",
+        "proof_he": "(1) הטור $\\sum_{n=1}^{\\infty} \\frac{1}{n^2+1}$. הטור אי\\\"ש. נביט: מאחר ש- $$\\sum_{n=2}^{\\infty} \\frac{1}{n^2+1} \\leq \\sum_{n=2}^{\\infty} \\frac{1}{n^2} \\leq \\sum_{n=2}^{\\infty} \\frac{1}{n(n-1)} < \\infty$$ (טלסקופי). אזי ממבחן ההשוואה ולכן $\\sum_{n=2}^{\\infty} \\frac{1}{n^2+1} < \\infty$. ו- $\\sum_{n=1}^{\\infty} \\frac{1}{n^2+1} < \\infty$ כי גם הזנב מתכנס. ($a \\leq b < \\infty \\Rightarrow a < \\infty$). (2) הטור $1 + \\frac{1}{3} + \\frac{1}{5} + \\frac{1}{7} + \\dots$. הטור אי\\\"ש. נביט: $$1 + \\frac{1}{3} + \\frac{1}{5} + \\frac{1}{7} + \\dots = \\sum_{n=1}^{\\infty} \\frac{1}{2n-1} \\geq \\sum_{n=1}^{\\infty} \\frac{1}{2n} = \\frac{1}{2} \\sum_{n=1}^{\\infty} \\frac{1}{n} = \\infty$$ (הרמוני). אזי ממבחן ההשוואה $1 + \\frac{1}{3} + \\frac{1}{5} + \\frac{1}{7} + \\dots = \\infty$. ($a \\geq b = \\infty \\Rightarrow a = \\infty$).",
+        "topic": "מבחני השוואה"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט 7",
+        "number": "7",
+        "name": "טור ה-p ההרמוני",
+        "statement_he": "(הטור ה-$p$ ההרמוני) יהי $p \\in \\mathbb{R}$. אז: $$\\sum_{n=1}^{\\infty} \\frac{1}{n^p} = \\begin{cases} \\text{מתכנס} & p>1 \\\\ \\text{מתבדר} & p \\leq 1 \\end{cases}$$",
+        "proof_he": null,
+        "topic": "מבחני השוואה"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמאות",
+        "number": null,
+        "name": "p-הרמוני דוגמאות",
+        "statement_he": "$$\\sum_{n=1}^{\\infty} \\frac{1}{n^{1.1}} < \\infty \\quad (p = 1.1 \\text{ הרמוני}), \\qquad \\sum_{n=1}^{\\infty} \\frac{1}{\\sqrt{n}} = \\infty \\quad (p = 1/2 \\text{ הרמוני})$$",
+        "proof_he": null,
+        "topic": "מבחני השוואה"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט 8",
+        "number": "8",
+        "name": "מבחן ההשוואה הגבולי",
+        "statement_he": "(מבחן ההשוואה הגבולי לטורים אי-שליליים) יהי $0 \\leq k \\in \\mathbb{Z}$ ותהיינה $(a_n)_{n=k}^{\\infty}$ ו-$(b_n)_{n=k}^{\\infty}$ שתי סדרות אם מס\\\"מ. נניח כי: (i) $\\;a_n > 0$ ו-$b_n > 0$, עבור $n \\geq k$. (ii) קיים $L \\in \\mathbb{R}$ כך ש- $L > 0$ ו- $$L = \\lim_{n \\to \\infty} \\frac{a_n}{b_n}.$$ אז $\\sum_{n=k}^{\\infty} a_n < \\infty$ אם\\\"ם $\\sum_{n=k}^{\\infty} b_n < \\infty$.",
+        "proof_he": null,
+        "topic": "מבחני השוואה"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל 4",
+        "number": "4",
+        "name": "מבחן השוואה גבולי - דוגמאות",
+        "statement_he": "קבעו האם גם את מהטורים הבאים מתכנס או מתבדר.",
+        "proof_he": "(1) הטור $\\sum_{n=1}^{\\infty} \\frac{1}{n^2-n+3}$. נביט: ניב בסדרה $(b_n)_{n=1}^{\\infty}$ המוגדרת ע\\\"י $b_n = \\frac{1}{n^2}$ עבור $n \\in \\mathbb{N}$. נחשב: $$L = \\lim_{n \\to \\infty} \\frac{a_n}{b_n} = \\lim_{n \\to \\infty} \\frac{\\left(\\frac{1}{n^2-n+3}\\right)}{\\left(\\frac{1}{n^2}\\right)} = \\lim_{n \\to \\infty} \\frac{n^2}{n^2-n+3} = \\lim_{n \\to \\infty} \\frac{1}{1 - \\frac{1}{n} + \\frac{3}{n^2}} = 1$$ אזי הטור $\\sum_{n=1}^{\\infty} \\frac{1}{n^2-n+3}$ מתכנס בדיוק כמו הטור ה-$2$ הרמוני. (2) הטור $\\sum_{n=1}^{\\infty} \\frac{1}{\\sqrt{n^{1.5}-n+3}}$. נביט: ניב בסדרה $(b_n)_{n=1}^{\\infty}$ המוגדרת ע\\\"י $b_n = \\frac{1}{n^{3/4}}$ עבור $n \\in \\mathbb{N}$. נחשב: $$L = \\lim_{n \\to \\infty} \\frac{a_n}{b_n} = \\lim_{n \\to \\infty} \\frac{\\left(\\frac{1}{\\sqrt{n^{1.5}-n+3}}\\right)}{\\left(\\frac{1}{n^{3/4}}\\right)} = \\lim_{n \\to \\infty} \\frac{n^{3/4}}{\\sqrt{n^{1.5}-n+3}}$$ $$= \\lim_{n \\to \\infty} \\sqrt{\\frac{n^{3/2}}{n^{3/2}-n+3}} = \\lim_{n \\to \\infty} \\sqrt{\\frac{1}{1 - \\frac{1}{n^{1/2}} + \\frac{3}{n^{3/2}}}} = 1$$ אזי הטור מתבדר בדיוק כמו הטור ה-$3/4$ הרמוני. טבלה: $\\sum_{n=1}^{\\infty} a_n$ מול $\\sum_{n=1}^{\\infty} b_n$: $\\sum_{n=1}^{\\infty} \\frac{1}{n^3+n}$ מול $\\sum_{n=1}^{\\infty} \\frac{1}{n^3}$ — מתכנס; $\\sum_{n=1}^{\\infty} \\frac{n}{\\sqrt{n^5+n}}$ מול $\\sum_{n=1}^{\\infty} \\frac{1}{\\sqrt{n}}$ — מתבדר; $\\sum_{n=1}^{\\infty} \\frac{n^3}{\\sqrt[3]{n^{10}+5}}$ מול $\\sum_{n=1}^{\\infty} \\frac{1}{n^{1/3}}$ — מתבדר; $\\sum_{n=1}^{\\infty} \\arctan n$ — מתבדר (תנאי הכרחי); $\\sum_{n=1}^{\\infty}\\left(\\arctan n - \\frac{\\pi}{2}\\right)$ — [לא ברור]",
+        "topic": "מבחני השוואה"
+      }
+    ]
+  },
+  {
+    "lecture": 6,
+    "week": 7,
+    "date": "7.5.26",
+    "topics": [
+      "מבחני התכנסות לטורים",
+      "מבחן ההשוואה הגבולי",
+      "מבחן השורש",
+      "מבחן המנה",
+      "מבחן העיבוי",
+      "מבחן האינטגרל",
+      "טור החזקות"
+    ],
+    "items": [
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "8",
+        "name": "מבחן ההשוואה הגבולי",
+        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהיינה $(a_n)_{n=k}^{\\infty}$ ו-$(b_n)_{n=k}^{\\infty}$ שתי סדרות של מס' ממשיים. נניח כי:\n(i) לכל $n \\ge k$, $a_n \\ge 0$ ו-$b_n > 0$.\n(ii) קיים $L \\in \\mathbb{R}$ כך ש-$L > 0$ וכך ש- $L = \\lim_{n \\to \\infty} \\frac{a_n}{b_n}$.\nאזי $\\sum_{n=k}^{\\infty} b_n < \\infty$ אם ורק אם $\\sum_{n=k}^{\\infty} a_n < \\infty$.",
+        "proof_he": "$\\Leftarrow$: נניח לל\"כ ש- $\\sum_{n=k}^{\\infty} b_n < \\infty$. נראה: מכיוון ש- $L = \\lim_{n \\to \\infty} \\frac{a_n}{b_n}$, קיים $N_1 \\in \\mathbb{N}$ כך שלכל $n \\ge N_1$, $\\left| \\frac{a_n}{b_n} - L \\right| < 1$, לכן לכל $n \\ge N_1$, $\\frac{a_n}{b_n} \\le L + 1$, וכך בכפל ב-$b_n$ ונקבל לכל $n \\ge N_1$, $0 \\le a_n \\le (L+1) b_n$. לכן ממקריטריון ההשוואה: $\\sum_{n=N_1}^{\\infty} a_n \\le \\sum_{n=N_1}^{\\infty} (L+1) b_n = (L+1) \\sum_{n=N_1}^{\\infty} b_n < \\infty$ (כי הטור של $b_n$ מתכנס). לכן $\\sum_{n=N_1}^{\\infty} a_n < \\infty$ ולכן $\\sum_{n=k}^{\\infty} a_n < \\infty$.\n$\\Rightarrow$: נניח לל\"כ ש- $\\sum_{n=k}^{\\infty} a_n < \\infty$. נראה: מכיוון ש- $L = \\lim_{n \\to \\infty} \\frac{a_n}{b_n}$, קיים $N_1 \\in \\mathbb{N}$ כך שלכל $n \\ge N_1$, $\\left| \\frac{a_n}{b_n} - L \\right| < \\frac{L}{2}$, לכן לכל $n \\ge N_1$, $\\frac{a_n}{b_n} \\ge L - \\frac{L}{2} = \\frac{L}{2}$, וכך בכפל ב-$b_n$ ונחלק ב-$\\frac{L}{2}$, ונקבל לכל $n \\ge N_1$, $0 \\le b_n \\le \\frac{2}{L} a_n$. לכן ממקריטריון ההשוואה: $\\sum_{n=N_1}^{\\infty} b_n \\le \\sum_{n=N_1}^{\\infty} \\frac{2}{L} a_n = \\frac{2}{L} \\sum_{n=N_1}^{\\infty} a_n < \\infty$ (כי הטור של $a_n$ מתכנס). לכן $\\sum_{n=N_1}^{\\infty} b_n < \\infty$ ולכן $\\sum_{n=k}^{\\infty} b_n < \\infty$.",
+        "topic": "מבחן ההשוואה הגבולי"
+      },
+      {
+        "kind": "corollary",
+        "label": "מסקנה",
+        "number": "1",
+        "name": "מקרה L=0",
+        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהיינה $(a_n)_{n=k}^{\\infty}$ ו-$(b_n)_{n=k}^{\\infty}$ שתי סדרות של מס' ממשיים. נניח כי:\n(i) לכל $n \\ge k$, $a_n \\ge 0$ ו-$b_n > 0$.\n(ii) $\\lim_{n \\to \\infty} \\frac{a_n}{b_n} = 0$.\nאזי $\\sum_{n=k}^{\\infty} b_n < \\infty \\Rightarrow \\sum_{n=k}^{\\infty} a_n < \\infty$.",
+        "proof_he": "הוכחה: כאן השלמת הקודם בכיוון האחד (כי) הסתמכנו על ההנחה ש- $L \\ne 0$ בכיוון השני. כב\"ה.",
+        "topic": "מבחן ההשוואה הגבולי"
+      },
+      {
+        "kind": "corollary",
+        "label": "מסקנה",
+        "number": "2",
+        "name": "מקרה L=∞",
+        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהיינה $(a_n)_{n=k}^{\\infty}$ ו-$(b_n)_{n=k}^{\\infty}$ שתי סדרות של מס' ממשיים. נניח כי:\n(i) לכל $n \\ge k$, $a_n > 0$ ו-$b_n > 0$.\n(ii) $\\lim_{n \\to \\infty} \\frac{a_n}{b_n} = \\infty$.\nאזי $\\sum_{n=k}^{\\infty} a_n < \\infty \\Rightarrow \\sum_{n=k}^{\\infty} b_n < \\infty$.",
+        "proof_he": "הוכחה: נש\"פ כי $\\lim_{n \\to \\infty} \\frac{b_n}{a_n} = \\lim_{n \\to \\infty} \\frac{1}{\\left[ \\frac{a_n}{b_n} \\right]} = \\frac{1}{\\infty} = 0$ ולכן ממסקנה 1, סה\"נ.",
+        "topic": "מבחן ההשוואה הגבולי"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "1",
+        "name": "טור sin(1/n)",
+        "statement_he": "קבעו האם הטור הבא מתכנס או מתבדר: $\\sum_{n=1}^{\\infty} \\sin\\left( \\frac{1}{n} \\right)$.",
+        "proof_he": "פתרון: נב\"ה בסדרה $(b_n)_{n=1}^{\\infty}$ המוגדרת ע\"י נשים $b_n = \\frac{1}{n}$ לכל $n \\in \\mathbb{N}$.\n$L = \\lim_{n \\to \\infty} \\frac{a_n}{b_n} = \\lim_{n \\to \\infty} \\frac{\\sin\\left( \\frac{1}{n} \\right)}{\\frac{1}{n}} = \\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$ (כאשר $x_n = \\frac{1}{n}$).\nלכן הטור מתבדר ב\"ה יחד עם הטור ההרמוני.",
+        "topic": "מבחן ההשוואה הגבולי"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "2",
+        "name": "טור arctan(n²)-π/2",
+        "statement_he": "קבעו האם הטור הבא מתכנס או מתבדר: $\\sum_{n=1}^{\\infty} \\left( \\arctan(n^2) - \\frac{\\pi}{2} \\right)$.",
+        "proof_he": "פתרון: נב\"ה בטור $\\sum_{n=1}^{\\infty} \\left( \\frac{\\pi}{2} - \\arctan(n^2) \\right)$. נב\"ה בסדרה $(b_n)_{n=1}^{\\infty}$ המוגדרת ע\"י נשים $b_n = \\frac{1}{n^2}$ לכל $n \\in \\mathbb{N}$.\n$L = \\lim_{n \\to \\infty} \\frac{a_n}{b_n} = \\lim_{n \\to \\infty} \\frac{\\frac{\\pi}{2} - \\arctan(n^2)}{\\frac{1}{n^2}} = \\lim_{x \\to \\infty} \\frac{\\frac{\\pi}{2} - \\arctan x}{\\frac{1}{x}}$ (כאשר $x_n = n^2$, לופיטל) $\\overset{\\frac{0}{0}}{=} \\lim_{x \\to \\infty} \\frac{\\left[ -\\frac{1}{1+x^2} \\right]}{\\left[ -\\frac{1}{x^2} \\right]} = \\lim_{x \\to \\infty} \\frac{-(-x^2)}{1+x^2} = \\lim_{x \\to \\infty} \\frac{x^2}{1+x^2} = \\lim_{x \\to \\infty} \\frac{1}{\\frac{1}{x^2} + 1} = 1$.\nלכן הטור $\\sum_{n=1}^{\\infty} \\left( \\frac{\\pi}{2} - \\arctan(n^2) \\right)$ מתכנס ב\"ה עם הטור $\\sum_{n=1}^{\\infty} \\frac{1}{n^2}$. לכן הטור $\\sum_{n=1}^{\\infty} \\left( \\arctan(n^2) - \\frac{\\pi}{2} \\right)$ מתכנס. כי הוא נ\"ל של מתכנס.",
+        "topic": "מבחן ההשוואה הגבולי"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "1",
+        "name": "מבחן השורש",
+        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה של מס' ממשיים. נניח כי:\n(i) לכל $n \\ge k$, $a_n \\ge 0$.\n(ii) קיים $L \\in \\mathbb{R}$ עבורו/וכזה $L = \\lim_{n \\to \\infty} \\sqrt[n]{a_n}$ והנניח, $0 \\le L < 1$.\nאזי הטור $\\sum_{n=k}^{\\infty} a_n < \\infty$.",
+        "proof_he": null,
+        "topic": "מבחן השורש"
+      },
+      {
+        "kind": "lemma",
+        "label": "טענת עזר",
+        "number": "1",
+        "name": "טענת עזר למבחן השורש",
+        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה של מס' ממשיים. יהי $0 \\le q < 1$. נניח כי:\n(i) לכל $n \\ge k$, $a_n \\ge 0$.\n(ii) קיים $N \\in \\mathbb{N}$ כך שלכל $n \\ge N$ מתקיים $\\sqrt[n]{a_n} \\le q$.\nאזי הטור $\\sum_{n=N}^{\\infty} a_n < \\infty$.",
+        "proof_he": "הוכחת טענת עזר 1: מכיוון שלכל $n \\ge N$, $\\sqrt[n]{a_n} \\le q$, לכן לכל $n \\ge N$, $0 \\le a_n \\le q^n$. לכן ממקריטריון ההשוואה, $\\sum_{n=N}^{\\infty} a_n \\le \\sum_{n=N}^{\\infty} q^n < \\infty$ (כי טור הנדסי מתכנס שכן $0 \\le q < 1$). לכן $\\sum_{n=N}^{\\infty} a_n < \\infty$.",
+        "topic": "מבחן השורש"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "1",
+        "name": "הוכחת מבחן השורש",
+        "statement_he": "הוכחת משפט 1 (מבחן השורש): נסמן $q = \\frac{1+L}{2}$. נשים לב כי $0 \\le q < 1$. מכיוון ש- $L = \\lim_{n \\to \\infty} \\sqrt[n]{a_n}$, קיים $N_1 \\in \\mathbb{N}$ כך שלכל $n \\ge N_1$ מתקיים $\\left| \\sqrt[n]{a_n} - L \\right| < \\frac{1-L}{2}$, לכן לכל $n \\ge N_1$ מתקיים $\\sqrt[n]{a_n} \\le L + \\frac{1-L}{2} = \\frac{1+L}{2} = q$. לכן מטענת עזר 1, $\\sum_{n=N_1}^{\\infty} a_n < \\infty$ ולכן $\\sum_{n=k}^{\\infty} a_n < \\infty$.",
+        "proof_he": "[ראה ניסוח ב-statement; ליווי שרטוט ציר המספרים עם $L$, $L+\\square$, $1$ ו- $q = \\frac{1+L}{2}$, $\\frac{1-L}{2}$.]",
+        "topic": "מבחן השורש"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "2",
+        "name": "מבחן המנה",
+        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה של מס' ממשיים. נניח כי:\n(i) לכל $n \\ge k$, $a_n > 0$.\n(ii) קיים $L \\in \\mathbb{R}$ עבורו/וכזה $L = \\lim_{n \\to \\infty} \\frac{a_{n+1}}{a_n}$ והנניח, $0 \\le L < 1$.\nאזי הטור $\\sum_{n=k}^{\\infty} a_n < \\infty$.",
+        "proof_he": null,
+        "topic": "מבחן המנה"
+      },
+      {
+        "kind": "lemma",
+        "label": "טענת עזר",
+        "number": "2",
+        "name": "טענת עזר למבחן המנה",
+        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהיינה $(a_n)_{n=k}^{\\infty}$ ו-$(b_n)_{n=k}^{\\infty}$ שתי סדרות של מס' ממשיים. נניח כי:\n(i) לכל $n \\ge k$, $a_n, b_n > 0$.\n(ii) קיים $N \\in \\mathbb{N}$ כך שלכל $n \\ge N$ מתקיים $\\frac{a_{n+1}}{a_n} \\le \\frac{b_{n+1}}{b_n}$.\nאזי $\\sum_{n=N}^{\\infty} b_n < \\infty \\Rightarrow \\sum_{n=N}^{\\infty} a_n < \\infty$.",
+        "proof_he": "הוכחת טענת עזר 2: של\"פ לכל $n \\ge N$, $\\frac{a_{n+1}}{a_n} \\cdot \\frac{a_n}{a_{n-1}} \\cdots \\frac{a_{N+1}}{a_N} \\le \\frac{b_{n+1}}{b_n} \\cdot \\frac{b_n}{b_{n-1}} \\cdots \\frac{b_{N+1}}{b_N}$ (מההנחה). לכן לכל $n \\ge N$, $\\frac{a_{n+1}}{a_N} \\le \\frac{b_{n+1}}{b_N}$ ולכן לכל $n \\ge N$, $a_{n+1} \\le \\frac{a_N}{b_N} \\cdot b_{n+1}$. לכן לכל $n \\ge N+1$, $a_n \\le \\frac{a_N}{b_N} \\cdot b_n$. של\"פ עבור $n = N$, מתקיים $a_N = \\frac{a_N}{b_N} \\cdot b_N$ ולכן לכל $n \\ge N$, $0 \\le a_n \\le \\frac{a_N}{b_N} \\cdot b_n$. לכן ממקריטריון ההשוואה, $\\sum_{n=N}^{\\infty} a_n \\le \\sum_{n=N}^{\\infty} \\frac{a_N}{b_N} \\cdot b_n = \\frac{a_N}{b_N} \\sum_{n=N}^{\\infty} b_n < \\infty$ ולכן $\\sum_{n=N}^{\\infty} a_n < \\infty$.",
+        "topic": "מבחן המנה"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "2",
+        "name": "הוכחת מבחן המנה",
+        "statement_he": "הוכחת משפט 2 (מבחן המנה): נסמן $q = \\frac{1+L}{2}$. מכיוון ש- $0 \\le L < 1$, אזי $0 \\le q < 1$. מכיוון ש- $L = \\lim_{n \\to \\infty} \\frac{a_{n+1}}{a_n}$, קיים $N_1 \\in \\mathbb{N}$ כך שלכל $n \\ge N_1$ מתקיים $\\left| \\frac{a_{n+1}}{a_n} - L \\right| < \\frac{1-L}{2}$, לכן לכל $n \\ge N_1$ מתקיים $\\frac{a_{n+1}}{a_n} \\le L + \\frac{1-L}{2} = \\frac{1+L}{2} = q$. נב\"ה בסדרה $(b_n)_{n=k}^{\\infty}$ המוגדרת ע\"י נשים $b_n = q^n$ לכל $n \\ge k$. של\"פ $\\frac{a_{n+1}}{a_n} \\le q = \\frac{b_{n+1}}{b_n}$. $\\sum_{n=N_1}^{\\infty} b_n = \\sum_{n=N_1}^{\\infty} q^n < \\infty$ (כי טור הנדסי מתכנס שכן $0 \\le q < 1$). לכן מטענת עזר 2, $\\sum_{n=N_1}^{\\infty} a_n < \\infty$ ולכן $\\sum_{n=k}^{\\infty} a_n < \\infty$.",
+        "proof_he": "[ראה ניסוח ב-statement]",
+        "topic": "מבחן המנה"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "3",
+        "name": "טור עם מכפלות אי-זוגיות",
+        "statement_he": "קבעו האם הטור הבא מתכנס או מתבדר: $\\sum_{n=1}^{\\infty} \\frac{1 \\cdot 3 \\cdot 5 \\cdots (2n-1)}{4 \\cdot 8 \\cdots (4n)}$.",
+        "proof_he": "פתרון: נב\"ה במבחן המנה.\n$L = \\lim_{n \\to \\infty} \\frac{a_{n+1}}{a_n} = \\lim_{n \\to \\infty} \\frac{\\left[ \\frac{1 \\cdot 3 \\cdot 5 \\cdots (2n-1) \\cdot (2n+1)}{4 \\cdot 8 \\cdots (4n) \\cdot (4n+4)} \\right]}{\\left[ \\frac{1 \\cdot 3 \\cdot 5 \\cdots (2n-1)}{4 \\cdot 8 \\cdots (4n)} \\right]} = \\lim_{n \\to \\infty} \\frac{2n+1}{4n+4} = \\lim_{n \\to \\infty} \\frac{2 + \\frac{1}{n}}{4 + \\frac{4}{n}} < 1$.\nלכן הטור מתכנס.",
+        "topic": "מבחן המנה"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "4",
+        "name": "טור n^(2n)·sin^n",
+        "statement_he": "קבעו האם הטור הבא מתכנס או מתבדר: $\\sum_{n=1}^{\\infty} n^{2n} \\left[ \\sin\\left( \\frac{1}{2n^2} \\right) \\right]^n$.",
+        "proof_he": "פתרון: נב\"ה במבחן השורש.\n$L = \\lim_{n \\to \\infty} \\sqrt[n]{a_n} = \\lim_{n \\to \\infty} \\left[ n^2 \\cdot \\sin\\left( \\frac{1}{2n^2} \\right) \\right] = \\lim_{x \\to 0} \\frac{\\sin(x)}{2x} = \\frac{1}{2} < 1$ (כאשר $x_n = \\frac{1}{2n^2}$).\nלכן הטור מתכנס.",
+        "topic": "מבחן השורש"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "3",
+        "name": "מבחן השורש - מקרה התבדרות",
+        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה של מס' ממשיים. נניח כי:\n(i) לכל $n \\ge k$, $a_n \\ge 0$.\n(ii) קיים $L \\in \\mathbb{R}$ עבורו/וכזה $L = \\lim_{n \\to \\infty} \\sqrt[n]{a_n}$ והנניח, $L > 1$.\nאזי הטור $\\sum_{n=k}^{\\infty} a_n$ מתבדר (שכן $\\lim_{n \\to \\infty} a_n \\ne 0$ ולכן הטור מתבדר (לכן)).",
+        "proof_he": "הוכחה: מכיוון ש- $L = \\lim_{n \\to \\infty} \\sqrt[n]{a_n}$, קיים $N_1 \\in \\mathbb{N}$ כך שלכל $n \\ge N_1$, מתקיים $\\left| \\sqrt[n]{a_n} - L \\right| < L-1$, ולכן לכל $n \\ge N_1$ מתקיים $\\sqrt[n]{a_n} > L - (L-1) = 1$. לכן לכל $n \\ge N_1$ מתקיים $a_n \\ge 1$. נניח בשלילה כי $\\lim_{n \\to \\infty} a_n = 0$. לכן מאריתמטיקת גבולות וכלל הסנדוויץ' $0 = \\lim_{n \\to \\infty} a_n \\ge \\lim_{n \\to \\infty} 1 = 1$. סתירה! כב\"ה.",
+        "topic": "מבחן השורש"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "4",
+        "name": "מבחן המנה - מקרה התבדרות",
+        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה של מס' ממשיים. נניח כי:\n(i) לכל $n \\ge k$, $a_n > 0$.\n(ii) קיים $L \\in \\mathbb{R}$ עבורו/וכזה $L = \\lim_{n \\to \\infty} \\frac{a_{n+1}}{a_n}$ והנניח, $L > 1$.\nאזי $\\lim_{n \\to \\infty} a_n \\ne 0$ (ולכן הטור $\\sum_{n=k}^{\\infty} a_n$ מתבדר).",
+        "proof_he": "הוכחה: באופן ודומה.",
+        "topic": "מבחן המנה"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "5",
+        "name": "טור a^n·n!/n^n",
+        "statement_he": "יהי $0 < a \\ne e$. קבעו האם הטור הבא מתכנס או מתבדר: $\\sum_{n=1}^{\\infty} \\frac{a^n \\cdot n!}{n^n}$.",
+        "proof_he": "פתרון: נב\"ה במבחן המנה.\n$L = \\lim_{n \\to \\infty} \\frac{a_{n+1}}{a_n} = \\lim_{n \\to \\infty} \\frac{\\left[ \\frac{a^{n+1} \\cdot (n+1)!}{(n+1)^{n+1}} \\right]}{\\left[ \\frac{a^n \\cdot n!}{n^n} \\right]} = \\lim_{n \\to \\infty} \\frac{a^{n+1} (n+1)! \\, n^n}{a^n \\cdot n! \\cdot (n+1)^{n+1}} = \\lim_{n \\to \\infty} \\frac{a \\cdot n^n}{(n+1)^n} = \\lim_{n \\to \\infty} a \\cdot \\left( \\frac{n}{n+1} \\right)^n = \\lim_{n \\to \\infty} \\frac{a}{\\left( \\frac{n+1}{n} \\right)^n} = \\lim_{n \\to \\infty} \\frac{a}{\\left( 1 + \\frac{1}{n} \\right)^n} = \\frac{a}{e}$.\nלכן הטור מתכנס עבור $0 \\le a < e$ ($L < 1$) ומתבדר עבור $a > e$.",
+        "topic": "מבחן המנה"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "6",
+        "name": "טור מכפלות בריבוע",
+        "statement_he": "יהי $0 < a \\ne e$. קבעו האם הטור הבא מתכנס או מתבדר: $\\sum_{n=1}^{\\infty} \\frac{1^2 \\cdot 3^2 \\cdot 5^2 \\cdots (2n-1)^2}{2 \\cdot 4 \\cdot 6 \\cdots 4n} = \\frac{1^2}{2 \\cdot 4} + \\frac{1^2 \\cdot 3^2}{2 \\cdot 4 \\cdot 6 \\cdot 8} + \\cdots$ (האיבר $n=1$ ו- $n=2$).",
+        "proof_he": "פתרון: נב\"ה במבחן המנה.\n$L = \\lim_{n \\to \\infty} \\frac{a_{n+1}}{a_n} = \\lim_{n \\to \\infty} \\frac{\\frac{1^2 \\cdot 3^2 \\cdot 5^2 \\cdots (2n-1)^2 \\cdot (2n+1)^2}{2 \\cdot 4 \\cdot 6 \\cdots 4n \\, (4n+2)(4n+4)}}{\\left[ \\frac{1^2 \\cdot 3^2 \\cdot 5^2 \\cdots (2n-1)^2}{2 \\cdot 4 \\cdot 6 \\cdots 4n} \\right]} = \\lim_{n \\to \\infty} \\frac{(2n+1)^2}{(4n+2)(4n+4)} = \\lim_{n \\to \\infty} \\frac{\\left( 2 + \\frac{1}{n} \\right)^2}{\\left( 4 + \\frac{2}{n} \\right)\\left( 4 + \\frac{4}{n} \\right)} = \\frac{4}{16} < 1$.\nלכן הטור מתכנס.",
+        "topic": "מבחן המנה"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "5",
+        "name": "מבחן האינטגרל",
+        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $f$ פונק' המוגדרת ב- $[k, \\infty)$. נניח כי:\n(i) $f$ יורדת.\n(ii) $\\lim_{x \\to \\infty} f(x) = 0$.\nאזי הטור $\\sum_{n=k}^{\\infty} f(n) < \\infty$ אם ורק אם $\\int_{k}^{\\infty} f(x) \\, dx < \\infty$, והנניח $\\int_{k}^{\\infty} f(x) \\, dx \\le \\sum_{n=k}^{\\infty} f(n) \\le f(k) + \\int_{k}^{\\infty} f(x) \\, dx$.",
+        "proof_he": null,
+        "topic": "מבחן האינטגרל"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "6",
+        "name": "טור ה-p ההרמוני",
+        "statement_he": "יהי $p \\in \\mathbb{R}$. אזי נוכל להוכיח את משפט 7 מהרצאה 5: $\\sum_{n=1}^{\\infty} \\frac{1}{n^p} = \\begin{cases} \\text{מתכנס} & p > 1 \\\\ \\text{מתבדר} & p \\le 1 \\end{cases}$.",
+        "proof_he": "הוכחה: נניח קודם $0 < p \\le d$ (כלומר $p > 0$). נב\"ה בפונק' המוגדרת $f(x) = \\frac{1}{x^p}$ לכל $x \\ge 1$. נב\"ה.\n(i) $f$ יורדת: נש\"פ ש- $f$ גזירה ומקיימת לכל $x \\ge 1$, $f'(x) = (x^{-p})' = -p \\cdot x^{-p-1} = \\frac{-p}{x^{p+1}} \\le 0$ (כי $p > 0$). לכן $f$ יורדת.\n(ii) $\\lim_{x \\to \\infty} f(x) = \\lim_{x \\to \\infty} \\frac{1}{x^p} = \\frac{1}{\\infty^p} = 0$ (כי $p > 0$).\nלכן ממבחן האינטגרל, $\\sum_{n=1}^{\\infty} \\frac{1}{n^p} < \\infty$ אם ורק אם $\\int_{1}^{\\infty} \\frac{dx}{x^p} < \\infty$. ראינו כי $\\int_{1}^{\\infty} \\frac{dx}{x^p} = \\begin{cases} \\frac{1}{p-1} & p > 1 \\\\ \\infty & p \\le 1 \\end{cases}$. לכן הטור $\\sum_{n=1}^{\\infty} \\frac{1}{n^p}$ מתכנס עבור $p > 1$ ומתבדר עבור $0 < p \\le 1$.\nכעת נניח כי $p \\le 0$. לכן $\\sum_{n=1}^{\\infty} \\frac{1}{n^p} = \\sum_{n=1}^{\\infty} n^{-p} \\ge \\sum_{n=1}^{\\infty} 1 = \\infty$ (כי $-p \\ge 0$). לכן $\\sum_{n=1}^{\\infty} \\frac{1}{n^p} = \\infty$. לכן $\\sum_{n=1}^{\\infty} \\frac{1}{n^p} = \\begin{cases} \\text{מתכנס} & p > 1 \\\\ \\infty & p \\le 1 \\end{cases}$.\nכמו כן (ניסיון במבחן השורש): $L = \\lim_{n \\to \\infty} \\sqrt[n]{\\frac{1}{n^p}} = \\lim_{n \\to \\infty} \\frac{1}{\\left( \\sqrt[n]{n} \\right)^p} = 1$. ובמבחן המנה: $L = \\lim_{n \\to \\infty} \\frac{\\left( \\frac{1}{(n+1)^p} \\right)}{\\left( \\frac{1}{n^p} \\right)} = \\lim_{n \\to \\infty} \\left( \\frac{n}{(n+1)} \\right)^p = \\lim_{n \\to \\infty} \\frac{1}{\\left( 1 + \\frac{1}{n} \\right)^p} = 1$.",
+        "topic": "מבחן האינטגרל"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "6",
+        "name": "טור 1/(n·ln n)",
+        "statement_he": "קבעו האם הטור הבא מתכנס או מתבדר: $\\sum_{n=2}^{\\infty} \\frac{1}{n \\ln n}$.",
+        "proof_he": null,
+        "topic": "מבחן האינטגרל"
+      }
+    ]
+  },
+  {
+    "lecture": 7,
+    "week": 8,
+    "date": "14.05.26",
+    "topics": [
+      "מבחן העיבוי (האינטגרלי)",
+      "התכנסות בהחלט",
+      "טורים עם סימנים מתחלפים",
+      "מבחן לייבניץ"
+    ],
+    "items": [
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "5",
+        "name": "מבחן האינטגרל",
+        "statement_he": "יהי $0 \\le K \\in \\mathbb{Z}$ ותהי $f$ פונקציה המוגדרת ב- $[K,\\infty)$. נניח כי\n(i) $f$ יורדת.\n(ii) $\\lim_{x \\to \\infty} f(x) = 0$.\nאזי הטור $\\sum_{n=K}^{\\infty} f(n) < \\infty$ אם ורק אם $\\int_{K}^{\\infty} f(x)\\,dx < \\infty$, ובמקרה זה $\\int_{K}^{\\infty} f(x)\\,dx \\le \\sum_{n=K}^{\\infty} f(n) \\le f(K) + \\int_{K}^{\\infty} f(x)\\,dx$.",
+        "proof_he": "מגדירים $\\gamma$: $F(x) = \\int_{K}^{x} f(t)\\,dt$ עבור $x \\ge 1$. מכיוון ש- $f$ יורדת ב- $[K,x]$ עבור $x > K$ ו- $f$ אינטגרבילית ב- $[K,x]$ עבור $x > K$, אזי $F(x)$ מוגדרת היטב עבור $x > K$. כמו כן עבור $x = K$, $F(K) = \\int_{K}^{K} f(t)\\,dt = 0$. נראה כי $F$ מוגדרת היטב. נראה כי $F$ עולה: עבור $K \\le x_1 < x_2$, $F(x_2) - F(x_1) = \\int_{K}^{x_2} f(t)\\,dt - \\int_{K}^{x_1} f(t)\\,dt = \\int_{x_1}^{x_2} f(t)\\,dt \\ge 0$ (כי $f(x) \\ge 0$ עבור כל $x$). אזי $F(x_1) \\le F(x_2)$ עבור $K \\le x_1 < x_2$ ולכן $F$ עולה. עתה נוכיח כי $F$ חסומה מלעיל: יהי $x \\ge K$. נסמן $N = \\lceil x \\rceil$. אזי $F(x) \\le F(N) = \\int_{K}^{N} f(t)\\,dt = \\int_{K}^{K+1} f(t)\\,dt + \\dots + \\int_{N-1}^{N} f(t)\\,dt \\le f(K) + \\dots + f(N-1) = \\sum_{n=K}^{N-1} f(n) \\le \\sup\\left\\{ \\sum_{n=K}^{N} f(n) : N \\ge K \\right\\} = \\sum_{n=K}^{\\infty} f(n) = S$. אזי $F$ עולה וחסומה מלעיל ע\"י $S$. $\\Leftarrow$: נניח כי $\\int_{K}^{\\infty} f(x)\\,dx < \\infty$ ולכן $\\int_{K}^{\\infty} f(x)\\,dx = \\lim_{x \\to \\infty} F(x) = \\sup\\{ F(x) : x \\ge K \\} \\le S = \\sum_{n=K}^{\\infty} f(n)$. $\\Rightarrow$: עתה נניח כי $\\int_{K}^{\\infty} f(x)\\,dx < \\infty$. אזי $S \\in \\mathbb{R}$ ולכן $S = \\int_{K}^{\\infty} f(x)\\,dx$. תהי $(S_N)_{N=K}^{\\infty}$ סדרת הסכומים החלקיים של הטור $\\sum_{n=K}^{\\infty} f(n)$, כלומר $S_N = \\sum_{n=K}^{N} f(n)$ עבור $N \\ge K$. מכיוון ש- $\\sum_{n=K}^{\\infty} f(n)$ עולה, הרי ש- $(S_N)_{N=K}^{\\infty}$ עולה. נוכיח כי $(S_N)_{N=K}^{\\infty}$ חסומה מלעיל: יהי $N \\ge K$. אזי $S_N = \\sum_{n=K}^{N} f(n) = f(K) + f(K+1) + \\dots + f(N) \\le f(K) + \\int_{K}^{K+1} f(x)\\,dx + \\dots + \\int_{N-1}^{N} f(x)\\,dx = f(K) + \\int_{K}^{N} f(x)\\,dx = f(K) + F(N) \\le f(K) + \\sup\\{ F(x) : x \\ge K \\} = f(K) + \\lim_{x \\to \\infty} F(x) = f(K) + \\int_{K}^{\\infty} f(x)\\,dx$. אזי $(S_N)_{N=K}^{\\infty}$ עולה וחסומה מלעיל ע\"י $f(K) + \\int_{K}^{\\infty} f(x)\\,dx$. אזי $\\sum_{n=K}^{\\infty} f(n) < \\infty$ ובמקרה זה $\\sum_{n=K}^{\\infty} f(n) = \\lim_{N \\to \\infty} S_N = \\sup\\{ S_N : N \\ge K \\} \\le f(K) + \\int_{K}^{\\infty} f(x)\\,dx$. מ.ש.ל.",
+        "topic": "מבחן העיבוי (האינטגרלי)"
+      },
+      {
+        "kind": "lemma",
+        "label": "טענת עזר",
+        "number": "1",
+        "name": "אומדן אינטגרלי לפונקציה יורדת",
+        "statement_he": "יהי $0 \\le K \\in \\mathbb{Z}$ ותהי $f$ פונקציה המוגדרת ב- $[K,\\infty)$. נניח כי\n(i) $f$ יורדת.\n(ii) $\\lim_{x \\to \\infty} f(x) = 0$.\nאזי עבור כל $n \\ge K$ מתקיים $f(n+1) \\le \\int_{n}^{n+1} f(x)\\,dx \\le f(n)$.",
+        "proof_he": "הוכחת טענת העזר: יהי $n \\ge K$. מכיוון ש- $f$ יורדת, עבור $n \\le x \\le n+1$ מתקיים $f(n+1) \\le f(x) \\le f(n)$. נשתמש במונוטוניות האינטגרל, ומקבלים $f(n+1) = \\int_{n}^{n+1} f(n+1)\\,dx \\le \\int_{n}^{n+1} f(x)\\,dx \\le \\int_{n}^{n+1} f(n)\\,dx = f(n)$ (כאשר $\\int_{n}^{n+1} f(n+1)\\,dx = c \\cdot (b-a)$ ו- $\\int_{n}^{n+1} f(n)\\,dx = c \\cdot (b-a)$). מ.ש.ל. הוכחת מבחן האינטגרל: מכיוון ש- $f$ מוגדרת ב- $[K,\\infty)$ יורדת, $\\lim_{x \\to \\infty} f(x) = \\inf\\{ f(x) : x \\ge 1 \\}$. מהנתון $\\lim_{x \\to \\infty} f(x) = 0$ אזי $\\inf\\{ f(x) : x \\ge 1 \\} = 0$ אזי $f(x) \\ge 0$ (חסם מלרע) עבור כל $x \\ge 1$.",
+        "topic": "מבחן העיבוי (האינטגרלי)"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "התכנסות בהחלט",
+        "statement_he": "יהי $0 \\le K \\in \\mathbb{Z}$ ותהי $(a_n)_{n=K}^{\\infty}$ סדרה של מ\"ס ממשיים. נאמר שהטור $\\sum_{n=K}^{\\infty} a_n$ מתכנס בהחלט אם $\\sum_{n=K}^{\\infty} |a_n| < \\infty$.",
+        "proof_he": null,
+        "topic": "התכנסות בהחלט"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "1",
+        "name": "מבחן ההתכנסות בהחלט",
+        "statement_he": "יהי $0 \\le K \\in \\mathbb{Z}$ ותהי $(a_n)_{n=K}^{\\infty}$ סדרה של מ\"ס ממשיים. נניח שהטור $\\sum_{n=K}^{\\infty} a_n$ מתכנס בהחלט. אזי הטור מתכנס.",
+        "proof_he": "הוכחה: נגדיר בסדרה $(b_n)_{n=K}^{\\infty}$ המוגדרת ע\"י $b_n = |a_n| - a_n$ עבור $n \\ge K$. נשים לב כי, עבור כל $n \\ge K$ מתקיים $0 \\le b_n = |a_n| - a_n \\le 2|a_n|$ (כי $x \\le |x|$ ו- $-a_n \\le |a_n|$). אזי לפי מבחן ההשוואה, $\\sum_{n=K}^{\\infty} b_n \\le \\sum_{n=K}^{\\infty} 2|a_n| = 2 \\sum_{n=K}^{\\infty} |a_n| < \\infty$ (מתכנס בהחלט). אזי $\\sum_{n=K}^{\\infty} b_n < \\infty$. אזי $\\sum_{n=K}^{\\infty} a_n = \\sum_{n=K}^{\\infty} (|a_n| - b_n) = \\sum_{n=K}^{\\infty} |a_n| - \\sum_{n=K}^{\\infty} b_n =$ מתכנס $-$ מתכנס $=$ מתכנס (כאשר $b_n = |a_n| - a_n$). מ.ש.ל.",
+        "topic": "התכנסות בהחלט"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": null,
+        "name": "התכנסות $\\sum \\sin(n)/n^{1.5}$ בהחלט",
+        "statement_he": "הטור $\\sum_{n=1}^{\\infty} \\frac{\\sin(n)}{n^{1.5}}$ מתכנס בהחלט. בהחלט כי $\\sum_{n=1}^{\\infty} \\frac{|\\sin(n)|}{n^{1.5}} \\le \\sum_{n=1}^{\\infty} \\frac{1}{n^{1.5}} < \\infty$ (הרמוני $1.5$). אזי הטור מתכנס.",
+        "proof_he": null,
+        "topic": "התכנסות בהחלט"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "התכנסות בתנאי",
+        "statement_he": "יהי $0 \\le K \\in \\mathbb{Z}$ ותהי $(a_n)_{n=K}^{\\infty}$ סדרה של מ\"ס ממשיים. נאמר שהטור $\\sum_{n=K}^{\\infty} a_n$ מתכנס בתנאי אם הטור $\\sum_{n=K}^{\\infty} a_n$ מתכנס אבל לא מתכנס בהחלט (כלומר $\\sum_{n=K}^{\\infty} |a_n| = \\infty$).",
+        "proof_he": null,
+        "topic": "טורים עם סימנים מתחלפים"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "טור סימנים מתחלפים",
+        "statement_he": "תהי $(a_n)_{n=1}^{\\infty}$ סדרה של מ\"ס ממשיים. נאמר שהטור $\\sum_{n=1}^{\\infty} (-1)^{n+1} \\cdot a_n$ הוא טור לייבניץ אם\n(i) $(a_n)_{n=1}^{\\infty}$ יורדת.\n(ii) $\\lim_{n \\to \\infty} a_n = 0$.",
+        "proof_he": null,
+        "topic": "טורים עם סימנים מתחלפים"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "2",
+        "name": "מבחן לייבניץ",
+        "statement_he": "יהי $\\sum_{n=1}^{\\infty} (-1)^{n+1} \\cdot a_n$ טור לייבניץ. אזי הטור מתכנס לסכום $S \\in \\mathbb{R}$, ובנוסף $a_1 - a_2 \\le S \\le a_1$.",
+        "proof_he": "נסמן תהי $(S_N)_{N=1}^{\\infty}$ סדרת הסכומים החלקיים של הטור $\\sum_{n=1}^{\\infty} (-1)^{n+1} \\cdot a_n$, כלומר $S_N = \\sum_{n=1}^{N} (-1)^{n+1} \\cdot a_n$ עבור $N \\ge 1$. נרצה להוכיח שלכל $\\lim_{N \\to \\infty} S_N = S$ כך ש- $S \\in \\mathbb{R}$ ובנוסף $a_1 - a_2 \\le S \\le a_1$. נבחן את $(S_{2N})_{N=1}^{\\infty}$. עבור כל $N \\in \\mathbb{N}$, $S_{2(N+1)} - S_{2N} = \\sum_{n=1}^{2N+2} (-1)^{n+1} \\cdot a_n - \\sum_{n=1}^{2N} (-1)^{n+1} \\cdot a_n = a_{2N+1} - a_{2N+2} \\ge 0$ (יורדת). אזי $S_{2N} \\le S_{2(N+1)}$ עבור כל $N \\in \\mathbb{N}$ אזי $(S_{2N})_{N=1}^{\\infty}$ עולה. עתה נוכיח כי $(S_{2N})_{N=1}^{\\infty}$ חסומה מלעיל: יהי $N \\in \\mathbb{N}$. אזי $S_{2N} = \\sum_{n=1}^{2N} (-1)^{n+1} \\cdot a_n = a_1 - a_2 + a_3 - a_4 + \\dots + a_{2N-1} - a_{2N} = a_1 - (a_2 - a_3) - \\dots - (a_{2N-2} - a_{2N-1}) - a_{2N} \\le a_1 - a_{2N} \\overset{(*)}{\\le} a_1$. $(*)$ מכיוון ש- $(a_n)_{n=1}^{\\infty}$ יורדת, $\\lim_{n \\to \\infty} a_n = \\inf\\{ a_n : n \\ge 1 \\}$ ומאחר ו- $\\lim_{n \\to \\infty} a_n = 0$ הרי ש- $\\inf\\{ a_n : n \\ge 1 \\} = 0$ אזי $a_{2N} \\ge 0$ (חסם מלרע). אזי $(S_{2N})_{N=1}^{\\infty}$ עולה וחסומה מלעיל ע\"י $a_1$. אזי קיים $S \\in \\mathbb{R}$ כך ש- $S = \\lim_{N \\to \\infty} S_{2N}$, ובנוסף $a_1 - a_2 = S_2 \\le S = \\lim_{N \\to \\infty} S_{2N} = \\sup\\{ S_{2N} : N \\ge 1 \\} \\le a_1$ (מונוטוניות). ולכן $a_1 - a_2 \\le S \\le a_1$. עתה נוכיח כי $\\lim_{N \\to \\infty} S_{2N-1} = S$. נשים לב כי $\\lim_{N \\to \\infty} S_{2N-1} = \\lim_{N \\to \\infty} (S_{2N} + a_{2N}) = S + 0 = S$ ($(**)$ $S_{2N} = S_{2N-1} - a_{2N}$ מתוך $S_{2N} = \\sum_{n=1}^{2N} (-1)^{n+1} \\cdot a_n = a_1 - a_2 + a_3 - a_4 + \\dots + a_{2N-1} - a_{2N}$; $(**)$ $\\lim_{N \\to \\infty} a_{2N} = \\lim_{N \\to \\infty} a_N = 0$ יורדת). אזי $\\lim_{N \\to \\infty} S_{2N} = \\lim_{N \\to \\infty} S_{2N-1} = S$ אזי $\\lim_{N \\to \\infty} S_N = S$ וכמו כן הראינו ש- $a_1 - a_2 \\le S \\le a_1$. מ.ש.ל.",
+        "topic": "מבחן לייבניץ"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": null,
+        "name": "הטור ההרמוני המתחלף",
+        "statement_he": "הטור ההרמוני המתחלף: $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n} = 1 - \\frac{1}{2} + \\frac{1}{3} - \\dots$. במקרה זה, $a_n = \\frac{1}{n}$ עבור כל $n \\in \\mathbb{N}$. זה סדרה יורדת השואפת ל- $0$ ולכן זהו טור לייבניץ. לכן הוא מתכנס. הטור לא מתכנס בהחלט (כי הטור ההרמוני מתבדר) ולכן הוא מתכנס בתנאי.\nטבלה: $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n}$ מתכנס $\\checkmark$, מתכנס בהחלט $\\times$. $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n^2}$ מתכנס $\\checkmark$, מתכנס בהחלט $\\checkmark$. $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{\\sqrt{n}}$ מתכנס $\\checkmark$, מתכנס בהחלט $\\times$.",
+        "proof_he": null,
+        "topic": "מבחן לייבניץ"
+      }
+    ]
+  },
+  {
+    "lecture": 8,
+    "week": 9,
+    "date": "19.5.26",
+    "topics": [
+      "סדרות חלקיות של טורים",
+      "מבחן הסוגריים",
+      "טורי חזקות",
+      "רדיוס ההתכנסות",
+      "תחום ההתכנסות"
+    ],
+    "items": [
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "סדרת סכומים חלקיים (קיבוץ איברים)",
+        "statement_he": "תהיינה $(a_n)_{n=1}^{\\infty}$ ו-$(b_k)_{k=1}^{\\infty}$ שתי סדרות של מס' ממש'ים. נאמר שהטור $\\sum_{k=1}^{\\infty} b_k$ התקבל מהטור $\\sum_{n=1}^{\\infty} a_n$ ע\"י קיבוץ סדרי של סדר איבריו, אם קיימת סדרה עולה ממש של מס' טבעיים $(n_k)_{k=1}^{\\infty}$ כך ש- $(i)$ $n_1 = 1$ $(ii)$ לכל $k \\geq 1$, $b_k = a_{n_k} + a_{n_k+1} + a_{n_k+2} + \\dots + a_{n_{k+1}-1}$",
+        "proof_he": null,
+        "topic": "סדרות חלקיות של טורים"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "2",
+        "name": "מבחן הסוגריים",
+        "statement_he": "תהיינה $(a_n)_{n=1}^{\\infty}$ ו-$(b_k)_{k=1}^{\\infty}$ שתי סדרות של מס' ממש'ים. נניח שהטור $\\sum_{k=1}^{\\infty} b_k$ התקבל מהטור $\\sum_{n=1}^{\\infty} a_n$ ע\"י קיבוץ סדרי. נניח שהטור $\\sum_{n=1}^{\\infty} a_n$ מתכנס באופן הרחב. אזי גם הטור $\\sum_{k=1}^{\\infty} b_k$ מתכנס באופן הרחב, והנ\"ל $\\sum_{k=1}^{\\infty} b_k = \\sum_{n=1}^{\\infty} a_n$",
+        "proof_he": "תהיינה $(S_N)_{N=1}^{\\infty}$ ו-$(T_K)_{K=1}^{\\infty}$ סדרות הסכומים החלקי'ם של הטורים $\\sum_{n=1}^{\\infty} a_n$ ו-$\\sum_{k=1}^{\\infty} b_k$ בהתאמה, כלומר $T_K = \\sum_{\\ell=1}^{K} b_\\ell$, $\\forall K \\geq 1$, $S_N = \\sum_{n=1}^{N} a_n$, $\\forall N \\geq 1$. מכיון ש-$\\sum_{n=1}^{\\infty} a_n$ מתכנס באופן הרחב, אזי $\\lim_{N \\to \\infty} S_N$ ק\"ם באופן הרחב. נרצה להוכיח כי $\\lim_{K \\to \\infty} T_K$ ק\"ם באופן הרחב והנ\"ל $\\lim_{K \\to \\infty} T_K = \\lim_{N \\to \\infty} S_N$. נשים לב, לכל $K \\geq 1$, $T_K = \\sum_{\\ell=1}^{K} b_\\ell = b_1 + b_2 + \\dots + b_K = (a_{n_1} + \\dots + a_{n_2-1}) + (a_{n_2} + \\dots + a_{n_3-1}) + \\dots + (a_{n_K} + \\dots + a_{n_{K+1}-1}) = a_1 + \\dots + a_{n_{K+1}-1} = S_{n_{K+1}-1}$ (השתמשנו ש- $n_1 = 1$). אזי לכל $K$ נקבל $T_K = S_{n_{K+1}-1}$. כלומר $(T_K)_{K=1}^{\\infty}$ היא ת\"ח של $(S_N)_{N=1}^{\\infty}$. נסמן $C_K = n_{K+1}-1$. נרצה להוכיח כי $(C_K)_{K=1}^{\\infty}$ היא סדרה עולה ממש של מס' טבע'ים: $(i)$ עולה ממש: לכל $K \\in \\mathbb{N}$, $C_{K+1} = n_{K+2}-1 > n_{K+1}-1 = C_K$ (כי $(n_k)_{k=1}^{\\infty}$ עולה ממש). $(ii)$ של מס' טבעי'ם: לכל $K \\in \\mathbb{N}$, $C_K \\geq C_1 = n_2-1 > n_1-1 = 0$ (כי $(n_k)_{k=1}^{\\infty}$ עולה ממש, $n_1 = 1$). אזי $C_K > 0$ ומכיון ש- $C_K \\in \\mathbb{Z}$ נקבל $C_K \\geq 1$. ולכן $(T_K)$ ת\"ח של $(S_N)$, מהמשפט המתאים $\\lim_{K \\to \\infty} T_K = \\lim_{N \\to \\infty} S_N$.",
+        "topic": "סדרות חלקיות של טורים"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": "2",
+        "name": "טור עם איברים מתאפסים",
+        "statement_he": "תהיינה $(a_n)_{n=1}^{\\infty}$ ו-$(b_n)_{n=1}^{\\infty}$ שתי סדרות של מס' ממש'ים. נניח שלכל $n \\in \\mathbb{N}$ מתקיים $b_n = \\begin{cases} a_k & n=2k-1 \\\\ 0 & n=2k \\end{cases}$. אזי הטורים $\\sum_{n=1}^{\\infty} a_n$ ו-$\\sum_{n=1}^{\\infty} b_n$ שקולים, כלומר $\\sum_{n=1}^{\\infty} b_n = \\sum_{n=1}^{\\infty} a_n$.",
+        "proof_he": "$\\Leftarrow$: נניח כי הטור $\\sum_{n=1}^{\\infty} a_n$ מתכנס. אזי קי\"ם $S \\in \\mathbb{R}$ כך ש- $S = \\sum_{n=1}^{\\infty} a_n$. נוכיח כי $\\sum_{n=1}^{\\infty} b_n = S$ ונסיים. תהי $(S_N)_{N=1}^{\\infty}$ סדרת הסכומים החלקי'ם של $\\sum_{n=1}^{\\infty} b_n$, כלומר $S_N = \\sum_{n=1}^{N} b_n$, $\\forall N \\in \\mathbb{N}$. נשים לב לכל $N \\in \\mathbb{N}$, $S_{2N} = \\sum_{n=1}^{2N} b_n = b_1 + b_2 + \\dots + b_{2N} = a_1 + 0 + a_2 + \\dots + a_N + 0 = a_1 + \\dots + a_N = \\sum_{n=1}^{N} a_n$. $\\lim_{N \\to \\infty} S_{2N} = \\lim_{N \\to \\infty} \\sum_{n=1}^{N} a_n = \\sum_{n=1}^{\\infty} a_n = S$. באותו האופן, לכל $N \\in \\mathbb{N}$, $S_{2N-1} = \\sum_{n=1}^{2N-1} b_n = b_1 + b_2 + \\dots + b_{2N-1} = a_1 + 0 + a_2 + \\dots + a_N = a_1 + \\dots + a_N = \\sum_{n=1}^{N} a_n$. $\\lim_{N \\to \\infty} S_{2N-1} = \\lim_{N \\to \\infty} \\sum_{n=1}^{N} a_n = \\sum_{n=1}^{\\infty} a_n = S$. אזי $\\lim_{N \\to \\infty} S_{2N-1} = \\lim_{N \\to \\infty} S_{2N} = S$ ולכן $\\sum_{n=1}^{\\infty} b_n = \\lim_{N \\to \\infty} S_N = S$. $\\Rightarrow$: נניח כי הטור $\\sum_{n=1}^{\\infty} b_n$ מתכנס. אזי קי\"ם $S \\in \\mathbb{R}$ כך ש- $S = \\sum_{n=1}^{\\infty} b_n$. נשים לב שהטור $\\sum_{n=1}^{\\infty} a_n$ התקבל מ- $\\sum_{n=1}^{\\infty} b_n$ ע\"י קיבוץ ולכן (ממבחן הסוגריים) $\\sum_{n=1}^{\\infty} a_n = a_1 + a_2 + \\dots = (a_1 + 0) + (a_2 + 0) + a_3 + \\dots = (b_1 + b_2) + (b_3 + b_4) + \\dots = b_1 + b_2 + b_3 + \\dots = S$.",
+        "topic": "סדרות חלקיות של טורים"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "טור חזקות",
+        "statement_he": "תהי $x_0 \\in \\mathbb{R}$. טור חזקות סביב $x_0$ הוא טור מהצורה $\\sum_{n=0}^{\\infty} a_n (x-x_0)^n = a_0 + a_1(x-x_0) + a_2(x-x_0)^2 + \\dots$ כאשר $(a_n)_{n=0}^{\\infty}$ הינה סדרה של מס' ממש'ים ו-$x \\in \\mathbb{R}$.",
+        "proof_he": null,
+        "topic": "טורי חזקות"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "תחום ההתכנסות",
+        "statement_he": "תהי $x_0 \\in \\mathbb{R}$ ותהי $(a_n)_{n=0}^{\\infty}$ סדרה של מס' ממש'ים. תחום ההתכנסות של טור החזקות $\\sum_{n=0}^{\\infty} a_n (x-x_0)^n = a_0 + a_1(x-x_0) + a_2(x-x_0)^2 + \\dots$ מוגדר להיות קב' של ערכי ה-$x$ שבורם הטור מתכנס.",
+        "proof_he": null,
+        "topic": "תחום ההתכנסות"
+      },
+      {
+        "kind": "note",
+        "label": "הערה",
+        "number": "1",
+        "name": "התכנסות בנקודת המרכז",
+        "statement_he": "טור החזקות $\\sum_{n=0}^{\\infty} a_n (x-x_0)^n$ נשים $\\heartsuit$ תמיד מתכנס בנק' $x_0$ (וערכו $a_0$). ולכן תחום ההתכנסות אינו הקבוצה הריקה. אכן $\\sum_{n=0}^{\\infty} a_n (x-x_0)^n = a_0 + a_1(x-x_0) + a_2(x-x_0)^2 + \\dots = a_0 + 0 + 0 + \\dots = a_0$ (נציב ב- $x = x_0$).",
+        "proof_he": null,
+        "topic": "תחום ההתכנסות"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "3",
+        "name": "תחום התכנסות של $\\sum (x+1)^{2n}$",
+        "statement_he": "מצאו את תחום ההתכנסות של טור החזקות $\\sum_{n=0}^{\\infty} (x+1)^{2n}$. לכל $x$ בתחום ההתכנסות, חשבו את ערכו של הטור.",
+        "proof_he": "פתרון: נשים $\\heartsuit$ לכל $x \\in \\mathbb{R}$, $\\sum_{n=0}^{\\infty} (x+1)^{2n} = \\sum_{n=0}^{\\infty} t^n$ כאשר $t = (x+1)^2$. אזי הטור מתכנס $\\Leftrightarrow$ אם\"ם $|t| < 1 \\Leftrightarrow (x+1)^2 < 1 \\Leftrightarrow$ אם\"ם $|x+1| < 1$, כלומר אם\"ם $-2 < x < 0$. עבור $-2 < x < 0$ נקבל $\\sum_{n=0}^{\\infty} (x+1)^{2n} = \\sum_{n=0}^{\\infty} t^n = \\frac{1}{1-t} = \\frac{1}{1-(x+1)^2}$ (כאשר $t = (x+1)^2$, $|t| < 1$).",
+        "topic": "תחום ההתכנסות"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "רדיוס ההתכנסות",
+        "statement_he": "יהי $\\sum_{n=0}^{\\infty} a_n (x-x_0)^n$ טור חזקות. נגדיר את רדיוס ההתכנסות של הטור להיות $R = \\sup \\left\\{ r \\geq 0 : \\text{הטור מתכנס אם } x \\in [x_0-r, x_0+r] \\right\\}$",
+        "proof_he": null,
+        "topic": "רדיוס ההתכנסות"
+      },
+      {
+        "kind": "note",
+        "label": "הערה",
+        "number": "2",
+        "name": "תכונות הרדיוס",
+        "statement_he": "מכיון שהטור מתכנס ב- $x_0$ (הערה 1), אזי הוא מתכנס אם $x \\in [x_0-0, x_0+0]$, ולכן הקבוצה $\\left\\{ r \\geq 0 : \\text{הטור מתכנס אם } x \\in [x_0-r, x_0+r] \\right\\}$ $0 \\in$ ולכן הקבוצה אינה ריקה, ולכן מוגדר היטב הסופרימום $R$ (ייתכן שגם $R = \\infty$).",
+        "proof_he": null,
+        "topic": "רדיוס ההתכנסות"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "3",
+        "name": "אפיון רדיוס ההתכנסות",
+        "statement_he": "תהי $x_0 \\in \\mathbb{R}$ ותהי $(a_n)_{n=0}^{\\infty}$ סדרה של מס' ממש'ים. יהי $R$ רדיוס ההתכנסות של טור החזקות $\\sum_{n=0}^{\\infty} a_n (x-x_0)^n$. אזי: $(i)$ אם $R = \\infty$, הטור $\\sum_{n=0}^{\\infty} a_n (x-x_0)^n$ מתכנס בהחלט לכל $x \\in \\mathbb{R}$. $(ii)$ אם $R = 0$, הטור $\\sum_{n=0}^{\\infty} a_n (x-x_0)^n$ מתבדר לכל $x \\neq x_0$ (ומתכנס ב- $x = x_0$). $(iii)$ אם $0 < R < \\infty$, הטור מתכנס בהחלט אם $R > |x-x_0|$ ומתבדר אם $|x-x_0| > R$. יתר על כן, אם $|x-x_0| > R$ הטור מתבדר מתנאי הכרחי, כלומר $\\lim_{n \\to \\infty} a_n (x-x_0)^n \\neq 0$. עבור $|x-x_0| = R$ אם יודעים $(*)$.",
+        "proof_he": "לא נוכיח.",
+        "topic": "רדיוס ההתכנסות"
+      },
+      {
+        "kind": "corollary",
+        "label": "מסקנה",
+        "number": "1",
+        "name": "התכנסות רק בנקודות הקצה",
+        "statement_he": "טור החזקות $\\sum_{n=0}^{\\infty} a_n (x-x_0)^n$ כולל שמתכנס יתכן רק בנקודות $x_0 \\pm R$.",
+        "proof_he": null,
+        "topic": "רדיוס ההתכנסות"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "4",
+        "name": "תחום התכנסות של $\\sum \\frac{(-1)^{n+1} x^n}{n}$",
+        "statement_he": "מצאו את תחום ההתכנסות של טור החזקות $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} \\cdot x^n}{n}$.",
+        "proof_he": "פתרון: נשים $\\heartsuit$ עבור $x = 1$ נקבל $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} \\cdot x^n}{n} = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n} = $ הטור מתכנס (מתכנס בתנאי). אזי $x = 1$ נק' קצה של תחום ההתכנסות. מכיון ש- $x_0 = 0$ הרי ש- $R = 1$. נבדוק את $x = -1$: $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} \\cdot x^n}{n} = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} (-1)^n}{n} = \\sum_{n=1}^{\\infty} \\frac{(-1)^{2n+1}}{n} = \\sum_{n=1}^{\\infty} \\frac{-1}{n} = -\\sum_{n=1}^{\\infty} \\frac{1}{n} = -\\infty$. אזי תחום ההתכנסות הטור הוא $(-1, 1]$.",
+        "topic": "תחום ההתכנסות"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "5",
+        "name": "תחום התכנסות של $\\sum \\frac{x^n}{n!}$",
+        "statement_he": "מצאו את תחום ההתכנסות של טור החזקות $\\sum_{n=0}^{\\infty} \\frac{x^n}{n!} = \\frac{1}{0!} + \\frac{x}{1!} + \\frac{x^2}{2!} + \\dots$",
+        "proof_he": "פתרון: נפליק יהיה לכל ערכים של $x$ הטור מתכנס בהחלט ממבחן המנה: $\\lim_{n \\to \\infty} \\frac{\\left[ \\frac{|x|^{n+1}}{(n+1)!} \\right]}{\\left[ \\frac{|x|^n}{n!} \\right]} = \\lim_{n \\to \\infty} \\frac{|x|^{n+1} \\cdot n!}{|x|^n (n+1)!} = \\lim_{n \\to \\infty} \\frac{|x|}{n+1} = 0 < 1$. אזי הטור מתכנס בהחלט לכל $x \\in \\mathbb{R}$ ולכן $R = \\infty$ ותחום ההתכנסות הוא $(-\\infty, \\infty) = \\mathbb{R}$.",
+        "topic": "תחום ההתכנסות"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "6",
+        "name": "תחום התכנסות של $\\sum n^n x^n$",
+        "statement_he": "מצאו את תחום ההתכנסות של טור החזקות $\\sum_{n=1}^{\\infty} n^n x^n = x + 2^2 \\cdot x^2 + 3^3 \\cdot x^3 + \\dots$",
+        "proof_he": "פתרון: נשים $\\heartsuit$ לכל $x \\neq 0$, $\\lim_{n \\to \\infty} |n^n x^n| = \\lim_{n \\to \\infty} (n|x|)^n = \\infty$. אזי הטור מתבדר מתנאי הכרחי לכל $x \\neq 0$. אזי $R = 0$ ותחום ההתכנסות הטור הוא $\\{0\\}$.",
+        "topic": "תחום ההתכנסות"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "4",
+        "name": "קושי-הדמר (נוסחת רדיוס ההתכנסות)",
+        "statement_he": "תהי $x_0 \\in \\mathbb{R}$ ותהי $(a_n)_{n=0}^{\\infty}$ סדרה של מס' ממש'ים. יהי $R$ רדיוס ההתכנסות של טור החזקות $\\sum_{n=0}^{\\infty} a_n (x-x_0)^n$. נניח ש-ק\"ם הגבול באופן הרחב $L = \\lim_{n \\to \\infty} \\sqrt[n]{|a_n|}$. $(i)$ אם $L = 0$ אזי $R = \\infty$. $(ii)$ אם $L = \\infty$ אזי $R = 0$. $(iii)$ אם $0 < L < \\infty$ אזי $R = \\frac{1}{L}$.",
+        "proof_he": "מסקנה 3: נרצה לסמן בקיצור $R = \\lim_{n \\to \\infty} \\frac{1}{\\sqrt[n]{|a_n|}}$ ולהשתמש באומסכמה ש- $\\frac{1}{\\infty} = 0$ ו- $\\frac{1}{0^+} = \\infty$. הוכחה: $(i)$ נניח כי $L = 0$. נרצה להוכיח שהטור מתכנס בהחלט לכל $x \\in \\mathbb{R}$. ונתשמש במבחן השורש: $\\lim_{n \\to \\infty} \\sqrt[n]{|a_n (x-x_0)^n|} = \\lim_{n \\to \\infty} \\sqrt[n]{|a_n| \\cdot |x-x_0|^n} = \\lim_{n \\to \\infty} \\left[ \\sqrt[n]{|a_n|} \\cdot |x-x_0| \\right] = L \\cdot |x-x_0| = 0 < 1$. אזי הטור מתכנס בהחלט ממבחן השורש. $(ii)$ נניח כי $L = \\infty$. נרצה להוכיח שהטור מתבדר אם $x \\neq x_0$. יהי $x \\neq x_0$. אזי $\\lim_{n \\to \\infty} \\sqrt[n]{|a_n (x-x_0)^n|} = \\lim_{n \\to \\infty} \\sqrt[n]{|a_n| \\cdot |x-x_0|^n} = \\lim_{n \\to \\infty} \\left[ \\sqrt[n]{|a_n|} \\cdot |x-x_0| \\right] = L \\cdot |x-x_0| = \\infty$. אזי ק\"ם $N_1 \\in \\mathbb{N}$ כך שלכל $n \\geq N_1$, $\\sqrt[n]{|a_n (x-x_0)^n|} \\geq 1$ ולכן $|a_n (x-x_0)^n| \\geq 1$ לכל $n \\geq N_1$. נניח בשלילה ש- $\\lim_{n \\to \\infty} a_n (x-x_0)^n = 0$. אזי $\\lim_{n \\to \\infty} |a_n (x-x_0)^n| = 0$ ולכן מאריתמטיקה הבאה $\\lim_{n \\to \\infty} |a_n (x-x_0)^n| = 0 \\geq 1$. סתי' רחל! אזי $\\lim_{n \\to \\infty} a_n (x-x_0)^n \\neq 0$ ולכן מתנאי הכרחי, הטור מתבדר. $(iii)$ נניח כי $0 < L < \\infty$ ונוכיח כי $R = \\frac{1}{L}$. נסמן $R_1 = \\frac{1}{L}$. נוכיח שהטור מתכנס בהחלט אם $|x-x_0| < R_1$ ומתבדר אם $|x-x_0| > R_1$ ומכך נקבל $R = R_1$ ונסיים. יהי $|x-x_0| < R_1$. נראה כי הטור מתכנס בהחלט. $\\lim_{n \\to \\infty} \\sqrt[n]{|a_n (x-x_0)^n|} = \\lim_{n \\to \\infty} \\sqrt[n]{|a_n| \\cdot |x-x_0|^n} = \\lim_{n \\to \\infty} \\left[ \\sqrt[n]{|a_n|} \\cdot |x-x_0| \\right] = L \\cdot |x-x_0| = \\frac{|x-x_0|}{R_1} < 1$.",
+        "topic": "רדיוס ההתכנסות"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": "1",
+        "name": "הטור הגיאומטרי",
+        "statement_he": "$\\sum_{n=0}^{\\infty} x^n = 1 + x + x^2 + \\dots$ באמקרה זה $x_0 = 0$ ו- $a_0 = a_1 = a_2 = \\dots = 1$. ראינו שהטור מתכנס אם\"ם $|x| < 1$ ואם\"ם $|x| < 1$ מתקיים $\\sum_{n=0}^{\\infty} x^n = \\frac{1}{1-x}$.",
+        "proof_he": null,
+        "topic": "טורי חזקות"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": "2",
+        "name": "טור חזקות סביב $x_0=-1$",
+        "statement_he": "$\\sum_{n=1}^{\\infty} \\frac{(x+1)^{3n}}{n} = (x+1)^3 + \\frac{(x+1)^6}{2} + \\frac{(x+1)^9}{3} + \\dots$ באמקרה זה $x_0 = -1$, $a_3 = 1$, $a_6 = \\frac{1}{2}$, $a_9 = \\frac{1}{3}$, $a_0 = a_1 = a_2 = 0$.",
+        "proof_he": null,
+        "topic": "טורי חזקות"
+      }
+    ]
+  },
+  {
+    "lecture": 9,
+    "week": 9,
+    "date": "25.5.26",
+    "topics": [
+      "טורי חזקות",
+      "גזירה ואינטגרציה איבר-איבר",
+      "טורי טיילור",
+      "פיתוחים לפונקציות אלמנטריות",
+      "אי רציונליות של e",
+      "משפט טיילור עם שארית לגראנז'"
+    ],
+    "items": [
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "1",
+        "name": "גזירה ואינטגרציה איבר-איבר של טור חזקות",
+        "statement_he": "יהי $x_0 \\in \\mathbb{R}$ ותהי $(a_n)_{n=0}^{\\infty}$ סדרה של מספרים ממשיים. יהי $R$ רדיוס ההתכנסות של הטור החזקות $\\sum_{n=0}^{\\infty} a_n(x-x_0)^n = a_0 + a_1(x-x_0) + a_2(x-x_0)^2 + \\cdots$. נניח כי $R > 0$ ונסמן בפונקציה המוגדרת ע\"י $f(x) = \\sum_{n=0}^{\\infty} a_n(x-x_0)^n$ של $|x-x_0| < R$. אזי: (i) טור החזקות המתקבל מהטור ע\"י גזירה איבר-איבר, כלומר הטור $\\sum_{n=1}^{\\infty} a_n \\cdot n \\cdot (x-x_0)^{n-1}$ הוא בעל רדיוס התכנסות השווה לרדיוס של הטור המקורי, כלומר $R$. (ii) $f$ גזירה ובכל $|x-x_0| < R$ מתק\"ים $f'(x) = \\sum_{n=1}^{\\infty} a_n \\cdot n \\cdot (x-x_0)^{n-1}$. (iii) טור החזקות המתקבל מהטור ע\"י אינטגרציה, כלומר הטור $\\sum_{n=0}^{\\infty} a_n \\frac{(x-x_0)^{n+1}}{n+1}$ הוא בעל רדיוס התכנסות השווה לרדיוס של הטור המקורי, כלומר $R$. (iv) יהי $x \\in \\mathbb{R}$ כך שטור החזקות מתכנס $\\sum_{n=0}^{\\infty} a_n \\frac{(x-x_0)^{n+1}}{n+1}$, אזי בכל $x$ זה מתקיים $\\int_{x_0}^{x} f(t)\\,dt = \\sum_{n=0}^{\\infty} a_n \\frac{(x-x_0)^{n+1}}{n+1}$.",
+        "proof_he": "לא נוכיח.",
+        "topic": "גזירה ואינטגרציה איבר-איבר"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "1",
+        "name": "חישוב $\\sum n/2^{n-1}$",
+        "statement_he": "הוכיחו שהטור $\\sum_{n=1}^{\\infty} \\frac{n}{2^{n-1}}$ מתכנס וחשבו את ערכו.",
+        "proof_he": "פתרון: נביט בטור החזקות $\\sum_{n=0}^{\\infty} x^n$. טור זה מתכנס לכל $|x| < 1$ ומתקיים $\\sum_{n=0}^{\\infty} x^n = \\frac{1}{1-x}$ של $|x| < 1$. ממשפט הגזירה איבר-איבר, של $|x| < 1$ מתק\"ים $\\sum_{n=1}^{\\infty} n \\cdot x^{n-1} = \\left(\\frac{1}{1-x}\\right)' = \\frac{1}{(1-x)^2}$. נציב $x = \\frac{1}{2}$ ונקבל $\\sum_{n=1}^{\\infty} \\frac{n}{2^{n-1}} = \\sum_{n=1}^{\\infty} n \\cdot \\left(\\frac{1}{2}\\right)^{n-1} = \\frac{1}{(1-1/2)^2} = 4$.",
+        "topic": "גזירה ואינטגרציה איבר-איבר"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "2",
+        "name": "ערך טור החזקות בקצה הימני (אבל)",
+        "statement_he": "יהי $x_0 \\in \\mathbb{R}$ ותהי $(a_n)_{n=0}^{\\infty}$ סדרה של מספרים ממשיים. יהי $R$ רדיוס ההתכנסות של הטור החזקות $\\sum_{n=0}^{\\infty} a_n(x-x_0)^n = a_0 + a_1(x-x_0) + a_2(x-x_0)^2 + \\cdots$. נניח כי $R > 0$ ונסמן בפונקציה $f(x) = \\sum_{n=0}^{\\infty} a_n(x-x_0)^n$ של $|x-x_0| < R$. ע\"מ כי טור החזקות מתכנס בנק' $x_0 + R$, אזי $\\lim_{x \\to x_0 + R^-} f(x)$ ק\"ים ומתקיים $\\sum_{n=0}^{\\infty} a_n R^n = \\lim_{x \\to x_0 + R^-} f(x)$.",
+        "proof_he": "לא נוכיח.",
+        "topic": "גזירה ואינטגרציה איבר-איבר"
+      },
+      {
+        "kind": "note",
+        "label": "הערה",
+        "number": "1",
+        "name": "גרסה לקצה השמאלי",
+        "statement_he": "משפט 2 ניתן ניסוח גם עבור $x = x_0 - R$. במקרה זה, $\\sum_{n=0}^{\\infty} a_n(-R)^n = \\lim_{x \\to x_0 - R^+} f(x)$.",
+        "proof_he": null,
+        "topic": "גזירה ואינטגרציה איבר-איבר"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "3",
+        "name": "פיתוח של $\\ln(1+x)$",
+        "statement_he": "מתק\"ים $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} x^n}{n} = \\ln(1+x)$ של $-1 < x \\leq 1$.",
+        "proof_he": "פתרון: נביט בטור החזקות $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} x^n}{n} = x - \\frac{x^2}{2} + \\frac{x^3}{3} - \\cdots$. ראינו כבר בהרצאה 8 בתרגיל 4 שתחום ההתכנסות הוא הקטע $(-1, 1]$. נביט בפונק' המוגדרת ע\"י $f(x) = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} x^n}{n}$ של $|x| < 1$. נגזור איבר-איבר ונקבל של $|x| < 1$: $f'(x) = \\sum_{n=1}^{\\infty} \\left(\\frac{(-1)^{n+1} x^n}{n}\\right)' = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} n x^{n-1}}{n} = \\sum_{n=1}^{\\infty} (-1)^{n+1} \\cdot x^{n-1} = \\sum_{n=0}^{\\infty} (-1)^{n+2} x^n = \\sum_{n=0}^{\\infty} (-1)^n x^n = \\sum_{n=0}^{\\infty} (-x)^n = \\sum_{n=0}^{\\infty} t^n$ (כאשר $t = -x$) $= \\frac{1}{1-t} = \\frac{1}{1+x}$ של $|t| < 1$. אזי של $|x| < 1$: $f'(x) = \\frac{1}{1+x}$. אזי ק\"ים כך $C \\in \\mathbb{R}$ ש- של $|x| < 1$: $f(x) = \\ln|1+x| + C = \\ln(1+x) + C$. נציב $x = 0$ ונקבל $f(0) = \\ln 1 + C = C$. בנוסף של $|x| < 1$: $f(x) = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} x^n}{n} = x - \\frac{x^2}{2} + \\frac{x^3}{3} - \\cdots$, אזי $f(0) = 0$, אזי $C = 0$, אזי של $|x| < 1$: $f(x) = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} x^n}{n} = \\ln(1+x)$. נותר נבדוק שוויון מתק\"ים גם עבור $x = 1$: ממשפט אבל בנק' הקצה של הקטע, עבור $x = 1$: $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n} = \\lim_{x \\to 1^-} f(x) = \\lim_{x \\to 1^-} \\ln(1+x) = \\ln 2$.",
+        "topic": "פיתוחים לפונקציות אלמנטריות"
+      },
+      {
+        "kind": "corollary",
+        "label": "מסקנה",
+        "number": "1",
+        "name": "טור הרמוני מתחלף",
+        "statement_he": "נציב $x = 1$ בטור של הטור הקודם, ונקבל $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n} = 1 - \\frac{1}{2} + \\frac{1}{3} - \\frac{1}{4} + \\cdots = \\ln 2$.",
+        "proof_he": null,
+        "topic": "פיתוחים לפונקציות אלמנטריות"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "4",
+        "name": "פיתוח של $e^x$",
+        "statement_he": "של $x \\in \\mathbb{R}$ מתק\"ים $e^x = \\sum_{n=0}^{\\infty} \\frac{x^n}{n!}$.",
+        "proof_he": "הוכחה: נביט בטור החזקות $\\sum_{n=0}^{\\infty} \\frac{x^n}{n!} = 1 + x + \\frac{x^2}{2} + \\frac{x^3}{6} + \\cdots$. ראינו כבר בהרצאה 8 בתרגיל 5 שתחום ההתכנסות הוא $\\mathbb{R}$. נביט בפונק' המוגדרת ע\"י $f(x) = \\sum_{n=0}^{\\infty} \\frac{x^n}{n!}$ של $x \\in \\mathbb{R}$. נגזור איבר-איבר ונקבל של $x \\in \\mathbb{R}$: $f'(x) = \\sum_{n=0}^{\\infty} \\left(\\frac{x^n}{n!}\\right)' = \\sum_{n=1}^{\\infty} \\frac{n \\cdot x^{n-1}}{n!} = \\sum_{n=1}^{\\infty} \\frac{x^{n-1}}{(n-1)!} = \\sum_{n=0}^{\\infty} \\frac{x^n}{n!} = f(x)$. אזי $f'(x) = f(x)$ של $x \\in \\mathbb{R}$. אזי של $x \\in \\mathbb{R}$: $\\left[\\frac{f(x)}{e^x}\\right]' = \\frac{f'(x) e^x - f(x) e^x}{e^{2x}} = 0$ (כי $f'(x) = f(x)$). אזי ק\"ים כך $C \\in \\mathbb{R}$ ש- של $x \\in \\mathbb{R}$: $\\frac{f(x)}{e^x} = C \\Rightarrow f(x) = C \\cdot e^x$. נציב $x = 0$ ונקבל $1 = f(0) = C \\Rightarrow f(x) = e^x$ של $x \\in \\mathbb{R}$.",
+        "topic": "פיתוחים לפונקציות אלמנטריות"
+      },
+      {
+        "kind": "corollary",
+        "label": "מסקנה",
+        "number": "2",
+        "name": "טור עבור $e$",
+        "statement_he": "מתק\"ים $e = \\sum_{n=0}^{\\infty} \\frac{1}{n!} = 1 + 1 + \\frac{1}{2} + \\frac{1}{6} + \\frac{1}{24} + \\cdots$.",
+        "proof_he": null,
+        "topic": "פיתוחים לפונקציות אלמנטריות"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "5",
+        "name": "אי רציונליות של $e$",
+        "statement_he": "$e$ הוא אי-רציונלי.",
+        "proof_he": "הוכחה: נניח בשלילה ש- $e \\in \\mathbb{Q}$ ונגיע לסתירה. אזי ק\"ים $a, b \\in \\mathbb{N}$ כך ש- $e = \\frac{a}{b}$. נכונן אובדן כלליות ש- $b > 1$. אזי $2 < e < 3$. נביט במספר ממשי, $\\alpha = b!\\left(e - \\sum_{n=0}^{b} \\frac{1}{n!}\\right)$. נוכיח: (i) $\\alpha \\in \\mathbb{Z}$. (ii) $0 < \\alpha < 1$. הוכחת נוכיח את (i): נראה כי $\\alpha$ שלם. $\\alpha = b!\\left(e - \\sum_{n=0}^{b} \\frac{1}{n!}\\right) = b!\\left(\\frac{a}{b} - \\sum_{n=0}^{b} \\frac{1}{n!}\\right) = (b-1)! \\cdot a - \\sum_{n=0}^{b} \\frac{b!}{n!} = (b-1)! \\cdot a - \\sum_{n=0}^{b} (n+1)\\cdot(n+2)\\cdots b \\in \\mathbb{Z}$ (שני האיברים שלמים). נוכיח את (ii): נראה תחילה ש- $\\alpha > 0$: $\\alpha = b!\\left(e - \\sum_{n=0}^{b} \\frac{1}{n!}\\right) = b!\\left(\\sum_{n=0}^{\\infty} \\frac{1}{n!} - \\sum_{n=0}^{b} \\frac{1}{n!}\\right)$ (ממסקנה 2) $= b! \\sum_{n=b+1}^{\\infty} \\frac{1}{n!} \\geq \\frac{b!}{(b+1)!} = \\frac{1}{b+1} > 0$. נראה תחילה ש- $\\alpha < 1$: באופן דומה $\\alpha = b! \\sum_{n=b+1}^{\\infty} \\frac{1}{n!} = \\sum_{n=b+1}^{\\infty} \\frac{b!}{n!} = \\sum_{n=b+1}^{\\infty} \\frac{1}{(b+1)(b+2)\\cdots n} = \\frac{1}{b+1} + \\frac{1}{(b+1)(b+2)} + \\frac{1}{(b+1)(b+2)(b+3)} + \\cdots \\leq \\frac{1}{b+1} + \\frac{1}{(b+1)^2} + \\frac{1}{(b+1)^3} + \\cdots = \\frac{1}{b+1}\\left(1 + \\frac{1}{b+1} + \\frac{1}{(b+1)^2} + \\frac{1}{(b+1)^3} + \\cdots\\right) = \\frac{1}{b+1} \\cdot \\frac{1}{1 - \\frac{1}{b+1}} = \\frac{1}{b+1-1} = \\frac{1}{b} < 1$ (כי $b > 1$).",
+        "topic": "אי רציונליות של e"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "6",
+        "name": "פיתוח של $\\arctan x$",
+        "statement_he": "של $-1 \\leq x \\leq 1$ מתק\"ים $\\arctan x = \\sum_{n=0}^{\\infty} \\frac{(-1)^n \\cdot x^{2n+1}}{2n+1} = x - \\frac{x^3}{3} + \\frac{x^5}{5} - \\cdots$.",
+        "proof_he": "הוכחה: נביט בטור החזקות $\\sum_{n=0}^{\\infty} \\frac{(-1)^n \\cdot x^{2n+1}}{2n+1}$, נמצא את תחום ההתכנסות שלו: עבור $x = \\pm 1$ נקבל $\\sum_{n=0}^{\\infty} \\frac{(-1)^n \\cdot x^{2n+1}}{2n+1} = \\sum_{n=0}^{\\infty} \\frac{(-1)^n (\\pm 1)}{2n+1} = \\pm \\sum_{n=0}^{\\infty} \\frac{(-1)^n}{2n+1} = \\pm\\left(1 - \\frac{1}{3} + \\frac{1}{5} - \\frac{1}{7} + \\cdots\\right) = \\pm(\\text{מתכנס לפי לייבניץ})$. ובנוסף $\\sum_{n=0}^{\\infty} \\left|\\frac{(-1)^n \\cdot x^{2n+1}}{2n+1}\\right| = \\sum_{n=0}^{\\infty} \\frac{1}{2n+1} \\geq \\sum_{n=0}^{\\infty} \\frac{1}{2n+2} = \\frac{1}{2}\\sum_{n=0}^{\\infty} \\frac{1}{n+1} = \\frac{1}{2}\\sum_{n=1}^{\\infty} \\frac{1}{n} = \\infty$ (עבור $x = \\pm 1$). אזי הטור מתכנס בתנאי ב- $\\pm 1$. אזי $x = \\pm 1$ נק' הקצה של תחום ההתכנסות והטור מתכנס בהן ולכן תחום ההתכנסות הוא הקטע $[-1, 1]$. נביט בפונק' המוגדרת ע\"י $f(x) = \\sum_{n=0}^{\\infty} \\frac{(-1)^n \\cdot x^{2n+1}}{2n+1} = x - \\frac{x^3}{3} + \\frac{x^5}{5} - \\cdots$ של $|x| < 1$. נגזור איבר-איבר ונקבל של $|x| < 1$: $f'(x) = 1 - x^2 + x^4 - \\cdots = \\sum_{n=0}^{\\infty} (-1)^n x^{2n} = \\sum_{n=0}^{\\infty} (-1)^n t^n = \\sum_{n=0}^{\\infty} (-t)^n = \\frac{1}{1+t}$ (כאשר $t = x^2$, $|-t| < 1$) $= \\frac{1}{1+x^2}$. אזי $f'(x) = \\frac{1}{1+x^2}$ של $|x| < 1$. אזי ק\"ים כך $C \\in \\mathbb{R}$ ש- של $|x| < 1$: $f(x) = \\arctan x + C$. נציב $x = 0$ ונקבל $0 = f(0) = \\arctan 0 + C = C$. אזי $C = 0$ אזי של $|x| < 1$: $f(x) = \\sum_{n=0}^{\\infty} \\frac{(-1)^n \\cdot x^{2n+1}}{2n+1} = \\arctan x$. נותר נבדוק שוויון מתק\"ים גם עבור $x = \\pm 1$: עבור $x = 1$, ממשפט אבל בנק' הקצה של הקטע, $\\sum_{n=0}^{\\infty} \\frac{(-1)^n}{2n+1} = \\lim_{x \\to 1^-} f(x) = \\lim_{x \\to 1^-} \\arctan x = \\arctan 1$. עבור $x = -1$, ממשפט אבל בנק' הקצה של הקטע, $\\sum_{n=0}^{\\infty} \\frac{(-1)^n (-1)}{2n+1} = \\lim_{x \\to -1^+} f(x) = \\lim_{x \\to -1^+} \\arctan x = \\arctan(-1)$.",
+        "topic": "פיתוחים לפונקציות אלמנטריות"
+      },
+      {
+        "kind": "corollary",
+        "label": "מסקנה",
+        "number": "3",
+        "name": "טור לייבניץ עבור $\\pi/4$",
+        "statement_he": "מתק\"ים $\\frac{\\pi}{4} = \\sum_{n=0}^{\\infty} \\frac{(-1)^n}{2n+1} = 1 - \\frac{1}{3} + \\frac{1}{5} - \\frac{1}{7} + \\cdots$.",
+        "proof_he": null,
+        "topic": "פיתוחים לפונקציות אלמנטריות"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "2",
+        "name": "התכנסות $\\sum a_n |x|^n$",
+        "statement_he": "הוכיחו / הפריכו את הטענה הבאה: ק\"ם טור חזקות $\\sum_{n=0}^{\\infty} a_n x^n$ עם רדיוס $R > 0$ כך של $x \\in (-R, R)$ מתק\"ים $|x| = \\sum_{n=0}^{\\infty} a_n x^n$.",
+        "proof_he": "פתרון: הטענה שגויה. כי $|x|$ אינה גזירה ב- $x_0 = 0$ ולכן טור חזקות עם רדיוס חיובי ת\"ב, כי טור חזקות גזיר. (לא נוכיח)",
+        "topic": "טורי טיילור"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "7",
+        "name": "יחידות מקדמי טור חזקות",
+        "statement_he": "(משפט היחידות) יהי $x_0 \\in \\mathbb{R}$ ותהי $(a_n)_{n=0}^{\\infty}$ סדרה של מספרים ממשיים. יהי $R$ רדיוס ההתכנסות של טור החזקות $\\sum_{n=0}^{\\infty} a_n(x-x_0)^n$ ונניח כי $R > 0$. נביט בפונק' המוגדרת ע\"י $f(x) = \\sum_{n=0}^{\\infty} a_n(x-x_0)^n$ של $|x-x_0| < R$. אזי: לכל $0 \\leq n \\in \\mathbb{Z}$, $f$ גזירה $n$ פעמים ב- $x_0$, ובנוסף, $a_n = \\frac{f^{(n)}(x_0)}{n!}$.",
+        "proof_he": null,
+        "topic": "טורי טיילור"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "פולינום טיילור ושארית",
+        "statement_he": "יהי $x_0 \\in \\mathbb{R}$ ויהי $0 \\leq N \\in \\mathbb{Z}$. תהי $f$ פונק' הגזירה $N$ פעמים ב- $x_0$. פולינום טיילור מסדר $N$ של $f$ סביב $x_0$ הוא פולינום שדרגתו $\\leq N$ $T_N(x) = \\sum_{n=0}^{N} \\frac{f^{(n)}(x_0)}{n!} \\cdot (x-x_0)^n = f(x_0) + f'(x_0)(x-x_0) + \\frac{f''(x_0)}{2} \\cdot (x-x_0)^2 + \\cdots + \\frac{f^{(N)}(x_0)}{N!} \\cdot (x-x_0)^N$. שארית הטיילור של $f$ סביב $x_0$ מסדר $N$ מוגדרת ע\"י $R_N(x) = f(x) - T_N(x)$.",
+        "proof_he": null,
+        "topic": "טורי טיילור"
+      },
+      {
+        "kind": "note",
+        "label": "הערה",
+        "number": "2",
+        "name": "פולינומי טיילור מסדר נמוך",
+        "statement_he": "מתק\"ים $T_0(x) = f(x_0)$ (פולינום מדרגה $\\leq 0$). $T_1(x) = f(x_0) + f'(x_0)(x-x_0)$ (פולינום מדרגה $\\leq 1$) ישר המשיק. $T_2(x) = f(x_0) + f'(x_0)(x-x_0) + \\frac{f''(x_0)}{2} \\cdot (x-x_0)^2$ פולינום מדרגה $\\leq 2$. באופן הכללי, נשים לב ש- $T_N(x)$ הוא פולינום מדרגה $\\leq N$.",
+        "proof_he": null,
+        "topic": "טורי טיילור"
+      },
+      {
+        "kind": "note",
+        "label": "הערה",
+        "number": "3",
+        "name": "נגזרות פולינום טיילור ב-$x_0$",
+        "statement_he": "(i) מתק\"ים $T_N(x) = \\sum_{n=0}^{N} \\frac{f^{(n)}(x_0)}{n!} \\cdot (x-x_0)^n = f(x_0) + f'(x_0)(x-x_0) + \\frac{f''(x_0)}{2} \\cdot (x-x_0)^2 + \\cdots + \\frac{f^{(N)}(x_0)}{N!} \\cdot (x-x_0)^N$ אזי $T_N(x_0) = f(x_0)$. (ii) $T_N'(x) = f'(x_0) + 2 \\cdot \\frac{f''(x_0)}{2}(x-x_0) + \\cdots + N \\cdot \\frac{f^{(N)}(x_0)}{N!}(x-x_0)^{N-1} = f'(x_0) + f''(x_0) \\cdot (x-x_0) + \\cdots + \\frac{f^{(N)}(x_0)}{(N-1)!}(x-x_0)^{N-1}$ אזי $T_N'(x_0) = f'(x_0)$. (iii) $T_N''(x) = f''(x_0) + 2\\frac{f'''(x_0)}{2!}(x-x_0) + \\cdots + (N-1)\\frac{f^{(N)}(x_0)}{(N-1)!}(x-x_0)^{N-2}$ אזי $T_N''(x_0) = f''(x_0)$. (iv) באותו האופן, של $0 \\leq K \\leq N$, $T_N^{(K)}(x_0) = f^{(K)}(x_0)$. (v) $T^{(N+1)}(x) = 0$.",
+        "proof_he": null,
+        "topic": "טורי טיילור"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "8",
+        "name": "משפט טיילור עם שארית לגראנז'",
+        "statement_he": "(משפט השארית של לגראנז') תהיינה $x, x_0 \\in \\mathbb{R}$ כך ש- $x > x_0$ ויהי $0 \\leq N \\in \\mathbb{Z}$. תהי $f$ פונק' הגזירה $N$ פעמים ב- $[x_0, x]$. נניח כי (i) $f^{(N)}$ רציפה ב- $[x_0, x]$. (ii) $f^{(N)}$ גזירה ב- $(x_0, x)$. אזי קיימת $x_0 < c < x$ שעבורה $R_N(x) = \\frac{f^{(N+1)}(c)}{(N+1)!} \\cdot (x-x_0)^{N+1}$.",
+        "proof_he": null,
+        "topic": "משפט טיילור עם שארית לגראנז'"
+      },
+      {
+        "kind": "note",
+        "label": "הערה",
+        "number": "4",
+        "name": "המקרה $N=0$ הוא משפט לגראנז'",
+        "statement_he": "כאשר $N = 0$ מתקבל ם $f(x) - f(x_0) = f(x) - T_0(x) = R_0(x) = \\frac{f'(c)}{1!} \\cdot (x-x_0)$ כלומר מתקבל ם $f(x) - f(x_0) = f'(c) \\cdot (x-x_0)$ כלומר קיבלנו את משפט לגראנז'. אזי משפט טיילור עם שארית לגראנז' הוא הכללה של משפט לגראנז'.",
+        "proof_he": null,
+        "topic": "משפט טיילור עם שארית לגראנז'"
+      }
+    ]
+  },
+  {
+    "lecture": 10,
+    "week": 9,
+    "date": "4.6.26",
+    "topics": [
+      "טורי חזקות",
+      "טור טיילור",
+      "פולינום טיילור",
+      "שארית טיילור",
+      "טור מקלורן"
+    ],
+    "items": [
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "7",
+        "name": "משפט הגזירות (של טור חזקות)",
+        "statement_he": "יהי $x_0\\in\\mathbb{R}$ ותהי $(a_n)_{n=0}^{\\infty}$ סדרה של מספרים ממשיים. יהי $R$ רדיוס ההתכנסות של טור החזקות $\\sum_{n=0}^{\\infty} a_n(x-x_0)^n$ ונניח כי $R>0$. נגדיר בתוך המרווח $(x_0-R,x_0+R)$ פונקציה $f$ ע\"י $f(x)=\\sum_{n=0}^{\\infty} a_n(x-x_0)^n$ של $|x-x_0|<R$. אזי לכל $n\\in\\mathbb{Z}$, $0\\le n$, $f$ גזירה $n$ פעמים ב-$x_0$, והנגזרת $a_n = \\dfrac{f^{(n)}(x_0)}{n!}$.",
+        "proof_he": "נשים $\\oplus$ ש\"מ - פ. $f(x) = \\sum_{n=0}^{\\infty} a_n(x-x_0)^n = a_0 + a_1(x-x_0) + a_2(x-x_0)^2 + \\dots$ נציב $x=x_0$ ונקבל $f(x_0)=a_0+0+0+\\dots = a_0$, אזי $a_0 = f(x_0) = \\dfrac{f^{(0)}(x_0)}{0!}$. ממשפט הגזירה איבר-איבר, של $|x-x_0|<R$, $f'(x) = a_1 + 2\\cdot a_2(x-x_0) + 3a_3(x-x_0)^2 + \\dots$ נציב $x=x_0$ ונקבל $f'(x_0) = a_1+0+0+\\dots = a_1$, אזי $a_1 = f'(x_0) = \\dfrac{f^{(1)}(x_0)}{1!}$. ממשפט הגזירה איבר-איבר, של $|x-x_0|<R$, $f''(x) = 2a_2 + 3\\cdot2\\cdot a_3(x-x_0) + \\dots$ נציב $x=x_0$ ונקבל $f''(x_0) = 2a_2$, אזי $a_2 = \\dfrac{f^{(2)}(x_0)}{2!}$. נמשיך של נגזרות גבוהות יותר. עבור $n$ כללי, ממשפט הגזירה איבר-איבר, של $|x-x_0|<R$, $f^{(n)}(x) = n!\\cdot a_n + (n+1)\\cdot n\\cdots 2\\cdot a_{n+1}(x-x_0) + \\dots$ נציב $x=x_0$ ונקבל $f^{(n)}(x_0) = n!\\cdot a_n$. נחלק ב-$n!$ ונקבל $a_n = \\dfrac{f^{(n)}(x_0)}{n!}$.",
+        "topic": "טורי חזקות"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל",
+        "number": "1",
+        "name": "חישוב נגזרות של arctg",
+        "statement_he": "חשבו את $f^{(101)}(0)$ ואת $f^{(102)}(0)$ עבור הפונקציה $f(x)=\\operatorname{arctg}x$. נזכר/נשתמש כי של $-1\\le x\\le 1$: $\\operatorname{arctg}x = \\sum_{n=0}^{\\infty} \\dfrac{(-1)^n x^{2n+1}}{2n+1} = x - \\dfrac{x^3}{3} + \\dfrac{x^5}{5} - \\dots$ לפי משפט הגזירות, $a_{101} = \\dfrac{f^{(101)}(0)}{(101)!}$, אזי $f^{(101)}(0) = a_{101}\\cdot 101! = \\dfrac{(-1)^{50}}{101}\\cdot 101! = 100!$. $f^{(102)}(0) = 0$.",
+        "proof_he": null,
+        "topic": "טורי חזקות"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "פולינום טיילור מסדר N",
+        "statement_he": "תהי $f$ פונקציה, יהי $x_0\\in\\mathbb{R}$ ויהי $N\\in\\mathbb{Z}$, $0\\le N$. תהי $f$ פונקציה הגזירה $N$ פעמים ב-$x_0$. פולינום טיילור מסדר $N$ של $f$ סביב $x_0$ הוא הפולינום $T_N(x) = \\sum_{n=0}^{N} \\dfrac{f^{(n)}(x_0)}{n!}\\cdot(x-x_0)^n = f(x_0) + f'(x_0)(x-x_0) + \\dfrac{f''(x_0)}{2}\\cdot(x-x_0)^2 + \\dots + \\dfrac{f^{(N)}(x_0)}{N!}\\cdot(x-x_0)^N$.",
+        "proof_he": null,
+        "topic": "פולינום טיילור"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "שארית טיילור מסדר N",
+        "statement_he": "שארית הטיילור של $f$ סביב $x_0$ מסדר $N$ נקבע ע\"י $R_N(x) = f(x) - T_N(x)$.",
+        "proof_he": null,
+        "topic": "שארית טיילור"
+      },
+      {
+        "kind": "note",
+        "label": "הערה",
+        "number": "1",
+        "name": "פולינומי טיילור בסדרים נמוכים",
+        "statement_he": "מתקיים: $T_0(x) = f(x_0)$ (פולינום מסדר $\\le 0$). $T_1(x) = f(x_0) + f'(x_0)(x-x_0)$ (פולינום מסדר $\\le 1$, ישר המשיק). $T_2(x) = f(x_0) + f'(x_0)(x-x_0) + \\dfrac{f''(x_0)}{2}\\cdot(x-x_0)^2$ (פולינום מסדר $\\le 2$). באופן כללי, $T_N(x)$ הוא פולינום מסדר $\\le N$.",
+        "proof_he": null,
+        "topic": "פולינום טיילור"
+      },
+      {
+        "kind": "note",
+        "label": "הערה",
+        "number": "2",
+        "name": "תכונות פולינום טיילור",
+        "statement_he": "מתקיים: (i) $T_N(x) = \\sum_{n=0}^{N} \\dfrac{f^{(n)}(x_0)}{n!}\\cdot(x-x_0)^n = f(x_0) + f'(x_0)(x-x_0) + \\dfrac{f''(x_0)}{2}\\cdot(x-x_0)^2 + \\dots + \\dfrac{f^{(N)}(x_0)}{N!}\\cdot(x-x_0)^N$, אזי $T_N(x_0) = f(x_0)$. (ii) $T_N'(x) = f'(x_0) + 2\\cdot\\dfrac{f''(x_0)}{2}(x-x_0) + \\dots + N\\cdot\\dfrac{f^{(N)}(x_0)}{N!}(x-x_0)^{N-1} = f'(x_0) + f''(x_0)\\cdot(x-x_0) + \\dots + \\dfrac{f^{(N)}(x_0)}{(N-1)!}(x-x_0)^{N-1}$, אזי $T_N'(x_0) = f'(x_0)$. (iii) $T_N''(x) = f''(x_0) + 2\\dfrac{f'''(x_0)}{2!}(x-x_0) + \\dots + (N-1)\\dfrac{f^{(N)}(x_0)}{(N-1)!}(x-x_0)^{N-2}$, אזי $T_N''(x_0) = f''(x_0)$. (iv) באופן כללי של $0\\le K\\le N$, $T_N^{(K)}(x_0) = f^{(K)}(x_0)$. (v) $T^{(N+1)}(x) = 0$ (פולינום מסדר $\\le N$).",
+        "proof_he": null,
+        "topic": "פולינום טיילור"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט",
+        "number": "1",
+        "name": "משפט השארית של טיילור (צורת לגראנז')",
+        "statement_he": "תהינה $x,x_0\\in\\mathbb{R}$ כך ש- $x>x_0$ ויהי $N\\in\\mathbb{Z}$, $0\\le N$. תהי $f$ פונקציה הגזירה $N$ פעמים ב-$[x_0,x]$. נניח כי: (i) $f^{(N)}$ רציפה ב-$[x_0,x]$. (ii) $f^{(N)}$ גזירה ב-$(x_0,x)$. אזי קיימת $x_0<c<x$ שעבורה $R_N(x) = \\dfrac{f^{(N+1)}(c)}{(N+1)!}\\cdot(x-x_0)^{N+1}$.",
+        "proof_he": "(ההוכחה ניתנת בהמשך, לאחר הערה 3, באמצעות הפונקציה $g$.)",
+        "topic": "שארית טיילור"
+      },
+      {
+        "kind": "note",
+        "label": "הערה",
+        "number": "3",
+        "name": "מקרה N=0 ומשפט לגראנז'",
+        "statement_he": "נשים $\\oplus$ עבור $N=0$ נקבל: $f(x) - f(x_0) = f(x) - T_0(x) = R_0(x) = \\dfrac{f'(c)}{1!}\\cdot(x-x_0)$. אומר $\\dfrac{f(x)-f(x_0)}{x-x_0} = f'(c)$, אזי משפט טיילור $\\Leftarrow$ לגראנז'.",
+        "proof_he": null,
+        "topic": "שארית טיילור"
+      },
+      {
+        "kind": "exercise",
+        "label": "תרגיל עזר",
+        "number": "1",
+        "name": "תרגיל עזר למשפט השארית",
+        "statement_he": "תהינה $x,x_0\\in\\mathbb{R}$ כך ש- $x>x_0$ ויהי $N\\in\\mathbb{Z}$, $0\\le N$. תהי $f$ פונקציה הגזירה $N$ פעמים ב-$[x_0,x]$. נניח כי: (i) $f^{(N)}$ רציפה ב-$[x_0,x]$. (ii) $f^{(N)}$ גזירה ב-$(x_0,x)$. (iii) $f(x)=0$. (iv) של $0\\le K\\le N$ מתקיים $f^{(K)}(x_0)=0$. אזי קיימת $x_0<c<x$ שעבורה $f^{(N+1)}(c)=0$.",
+        "proof_he": null,
+        "topic": "שארית טיילור"
+      },
+      {
+        "kind": "note",
+        "label": "הערה",
+        "number": "3",
+        "name": "מקרה N=0 של תרגיל העזר (רול)",
+        "statement_he": "נשים $\\oplus$ עבור $N=0$ נקבל את משפט רול עם $f(a)=f(b)=0$.",
+        "proof_he": "הוכחת ש\"ל: נב\"ש בקטע $[x_0,x]$. מהיות $f^{(N)}$ רציפה ב-$[x_0,x]$ (תנאי i) אזי $f$ רציפה ב-$[x_0,x]$. מהיות $f^{(N)}$ גזירה ב-$(x_0,x)$ (תנאי ii) אזי $f$ גזירה ב-$(x_0,x)$. בנוסף $f(x)=0$ (תנאי iii) ו-$f(x_0)=0$ (תנאי iv). לכן ממשפט רול קיימת $x_0<c_1<x$ שעבורה $f'(c_1)=0$. נחזור על התהליך עם נגזרת נב\"ש בקטע $[x_0,x]$: מהיות $f^{(N)}$ רציפה ב-$[x_0,x]$ (תנאי i) אזי $f'$ רציפה ב-$[x_0,x]$, מהיות $f^{(N)}$ גזירה ב-$(x_0,x)$ (תנאי ii) אזי $f'$ גזירה ב-$(x_0,c_1)$. בנוסף $f'(c_1)=0$ ו-$f'(x_0)=0$ (תנאי iv), לכן ממשפט רול קיימת $x_0<c_2<c_1$ שעבורה $f'(c_2)=0$. נחזור על התהליך $N$ פעמים. כאשר נב\"ש בקטע $[x_0,c_N]$: $f^{(N)}$ רציפה ב-$[x_0,c_N]$ ומהיות $f^{(N)}$ גזירה ב-$(x_0,c_N)$, ו-$f^{(N)}(c_N)=0$ ו-$f^{(N)}(x_0)=0$, לכן ממשפט רול קיים $x_0<c<c_N$ שעבורה $f^{(N+1)}(c)=0$.",
+        "topic": "שארית טיילור"
+      },
+      {
+        "kind": "note",
+        "label": "הוכחת משפט השארית של טיילור",
+        "number": null,
+        "name": "הוכחת משפט השארית (נחל)",
+        "statement_he": "נחל $\\alpha = \\dfrac{f(x) - T_N(x)}{(x-x_0)^{N+1}}$. נגדיר בנקודה המתאימה הפונקציה $g$ ע\"י: $g(t) = f(t) - T_N(t) - \\alpha\\cdot(t-x_0)^{N+1}$. של $t\\in[x_0,x]$. נשים $\\oplus$ ש\"ל ש-$g$ מקיימת $N$ תנאים ב-$[x_0,x]$ ובהינתן: (a) $g^{(N)}$ רציפה ב-$[x_0,x]$ (תנאי i). (b) $g^{(N)}$ גזירה ב-$(x_0,x)$ (תנאי ii). (c) נציב $t=x$: $g(x) = f(x) - T_N(x) - \\alpha\\cdot(x-x_0)^{N+1} = f(x) - T_N(x) - \\dfrac{f(x)-T_N(x)}{(x-x_0)^{N+1}}\\cdot(x-x_0)^{N+1} = 0$ (תנאי iii). (d) של $0\\le K\\le N$, נגזרת $K$ פעמים ונקבל של $x_0\\le t\\le x$: $g^{(K)}(t) = f^{(K)}(t) - T_N^{(K)}(t) - \\alpha\\cdot(N+1)\\cdot N\\cdots(N+1-(K-1))(t-x_0)^{N+1-K}$. נציב $t=x_0$ ונקבל $g^{(K)}(x_0) = f^{(K)}(x_0) - T_N^{(K)}(x_0) - 0 = 0$ (כי $f^{(K)}(x_0) = T_N^{(K)}(x_0)$) (תנאי iv). אזי מתרגיל העזר, $g$ מקיימת את התנאים, ולכן קיימת $x_0<c<x$ שעבורה $g^{(N+1)}(c)=0$. נגזרת $N+1$ פעמים ונקבל של $x_0<t<x$: $g^{(N+1)}(t) = f^{(N+1)}(t) - 0 - \\alpha\\cdot(N+1)!$. נציב $t=c$ ונקבל $0 = g^{(N+1)}(c) = f^{(N+1)}(c) - \\alpha\\cdot(N+1)!$. אזי $\\underbrace{\\dfrac{f(x)-T_N(x)}{(x-x_0)^{N+1}}}_{R_N(x)} = \\alpha = \\dfrac{f^{(N+1)}(c)}{(N+1)!}$. נכפל ב-$(x-x_0)^{N+1}$ ונקבל $R_N(x) = \\dfrac{f^{(N+1)}(c)}{(N+1)!}(x-x_0)^{N+1}$.",
+        "proof_he": null,
+        "topic": "שארית טיילור"
+      },
+      {
+        "kind": "example",
+        "label": "תרגיל",
+        "number": "1",
+        "name": "חישוב e בדיוק 10⁻³",
+        "statement_he": "חשבו את $e$ בשגיאה הקטנה מ- $10^{-3}$. פתרון: נחפש $\\alpha\\in\\mathbb{R}$ כך ש- $|e-\\alpha|<10^{-3}$. נב\"ש בפונקציה המעריכית $f$ ע\"י $f(x)=e^x$ של $x\\in\\mathbb{R}$. נרצה לחשב את $f(1)$. נבחר $x_0=0$ ונבחר $x=1$. ממשפט $\\oplus$ של $N\\in\\mathbb{Z}$, $0\\le N$: $T_N(x) = \\sum_{n=0}^{N} \\dfrac{f^{(n)}(0)}{n!}\\cdot x^n = \\sum_{n=0}^{N} \\dfrac{x^n}{n!}$ (כי $f^{(n)}(x)=e^x$). נבחר $N=6$. ממשפט השארית של טיילור, קיימת $0<c<1$ שעבורה $|R_N(1)| = \\left|\\dfrac{f^{(N+1)}(c)}{(N+1)!}\\cdot(1-0)^{N+1}\\right| = \\left|\\dfrac{e^c}{(N+1)!}\\right| = \\dfrac{e^c}{(N+1)!} \\le_{c<1} \\dfrac{e}{(N+1)!} \\le \\dfrac{3}{(N+1)!} < 10^{-3}$ (כי $(N+1)!>3000$ עבור $N=6$). אזי $|e^1 - T_6(1)| = |R_6(1)| < 10^{-3}$. נבחר $\\alpha = T_6(1)$ ונקבל $e \\approx \\alpha = \\sum_{n=0}^{6} \\dfrac{1}{n!} = 1+1+\\dfrac{1}{2}+\\dfrac{1}{3!}+\\dots+\\dfrac{1}{6!}$.",
+        "proof_he": null,
+        "topic": "שארית טיילור"
+      },
+      {
+        "kind": "example",
+        "label": "תרגיל",
+        "number": "2",
+        "name": "חישוב √e בדיוק 10⁻⁵",
+        "statement_he": "חשבו את $\\sqrt{e}$ בשגיאה הקטנה מ- $10^{-5}$. פתרון: נחפש $\\alpha\\in\\mathbb{R}$ כך ש- $|\\sqrt{e}-\\alpha|<10^{-5}$. נב\"ש בפונקציה המעריכית $f$ ע\"י $f(x)=e^x$ של $x\\in\\mathbb{R}$. נרצה לחשב את $f(\\tfrac{1}{2})$. נבחר $x_0=0$ ונבחר $x=\\tfrac{1}{2}$. ממשפט $\\oplus$ של $N\\in\\mathbb{Z}$, $0\\le N$: $T_N(x) = \\sum_{n=0}^{N} \\dfrac{f^{(n)}(0)}{n!}\\cdot x^n = \\sum_{n=0}^{N} \\dfrac{x^n}{n!}$ (כי $f^{(n)}(x)=e^x$). נבחר $N=6$. ממשפט השארית של טיילור, קיימת $0<c<\\tfrac{1}{2}$ שעבורה $|R_N(\\tfrac{1}{2})| = \\left|\\dfrac{f^{(N+1)}(c)}{(N+1)!}\\left(\\tfrac{1}{2}-0\\right)^{N+1}\\right| = \\left|\\dfrac{e^c}{(N+1)!}\\cdot\\dfrac{1}{2^{N+1}}\\right| = \\dfrac{e^c}{(N+1)!\\,2^{N+1}} \\le_{c<\\frac{1}{2}} \\dfrac{\\sqrt{e}}{(N+1)!\\,2^{N+1}} \\le \\dfrac{2}{(N+1)!\\,2^{N+1}} = \\dfrac{1}{(N+1)!\\,2^{N}} < 10^{-5}$ (כי $(N+1)!\\,2^N>100{,}000$ עבור $N=6$). אזי $|\\sqrt{e} - T_6(\\tfrac{1}{2})| = |R_6(\\tfrac{1}{2})| < 10^{-5}$. נבחר $\\alpha = T_6(\\tfrac{1}{2})$ ונקבל $\\sqrt{e} \\approx \\alpha = \\sum_{n=0}^{6} \\dfrac{(1/2)^n}{n!}$.",
+        "proof_he": null,
+        "topic": "שארית טיילור"
+      },
+      {
+        "kind": "example",
+        "label": "תרגיל",
+        "number": "3",
+        "name": "חישוב √17 בדיוק 10⁻⁴",
+        "statement_he": "חשבו את $\\sqrt{17}$ עם שגיאה הקטנה מ- $10^{-4}$. פתרון: נחפש $\\alpha\\in\\mathbb{R}$ כך ש- $|\\sqrt{17}-\\alpha|<10^{-4}$. נב\"ש בפונקציה המעריכית $f$ ע\"י $f(x)=\\sqrt{x}$ של $0\\le x$. נרצה לחשב את $f(17)$. נבחר $x_0=16$ ונבחר $x=17$. נבחר $N=2$. ממשפט השארית של טיילור, קיימת $16<c<17$ שעבורה $|R_N(17)| = \\left|\\dfrac{f^{(N+1)}(c)}{(N+1)!}(17-16)^{N+1}\\right| = \\left|\\dfrac{\\frac{3}{8}c^{-5/2}}{3!}\\right| = \\dfrac{3}{8\\cdot6}\\cdot\\dfrac{1}{c^{5/2}} \\le \\dfrac{3}{8\\cdot6}\\cdot\\dfrac{1}{16^{5/2}} = \\dfrac{3}{8\\cdot6}\\cdot\\dfrac{1}{4^5} = \\dfrac{1}{16\\cdot4^5} = \\dfrac{1}{4^7} = \\dfrac{1}{2^{14}} < 10^{-4}$. אזי $\\sqrt{17} \\approx T_2(17) = 4 + \\dfrac{1}{8} - \\dfrac{1}{512}$, כאשר $T_2(x) = f(16) + f'(16)(x-16) + \\dfrac{f''(16)}{2}(x-16)^2$. (טבלת הנגזרות: $N=0$: $f^{(N)}(x)=\\sqrt{x}$, $f^{(N)}(16)=4$. $N=1$: $\\dfrac{1}{2\\sqrt{x}}$, $\\dfrac{1}{8}$. $N=2$: $-\\dfrac{1}{4}x^{-3/2}$, $-\\dfrac{1}{4}\\cdot16^{-3/2}=-\\dfrac{1}{256}$. $N=3$: $\\dfrac{3}{8}x^{-5/2}$.)",
+        "proof_he": null,
+        "topic": "שארית טיילור"
+      },
+      {
+        "kind": "definition",
+        "label": "הגדרה",
+        "number": null,
+        "name": "טור טיילור",
+        "statement_he": "תהי $f$ פונקציה ויהי $x_0\\in\\mathbb{R}$. בסביבה של $x_0$ נניח ש-$f$ גזירה $\\infty$ פעמים ב-$x_0$ (אומר של $f^{(n)}(x_0)$ קיימת של $n\\in\\mathbb{Z}$, $0\\le n$). טור הטיילור של $f$ סביב $x_0$ מוגדר להיות $T_f(x) = \\sum_{n=0}^{\\infty} \\dfrac{f^{(n)}(x_0)}{n!}(x-x_0)^n$.",
+        "proof_he": null,
+        "topic": "טור טיילור"
+      },
+      {
+        "kind": "note",
+        "label": "הערה",
+        "number": "4",
+        "name": "טור חזקות וטור טיילור",
+        "statement_he": "תזכורת: של $f$ קיים טור חזקות, בעל רדיוס חיובי, סביב $x_0$ המווה לפונקציה $f(x)=T_f(x)$, של $|x-x_0|<R$, אזי יש $|x-x_0|<R$. לכן יש שתי אפשרויות: (i) $f(x)=T_f(x)$ של $|x-x_0|<R$ עבור $0<R$ (רדיוס ההתכנסות של הטור). (ii) של קיים ל-$f$ פיתוח לטור חזקות סביב $x_0$.",
+        "proof_he": null,
+        "topic": "טור טיילור"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": "1",
+        "name": "טור מקלורן של eˣ",
+        "statement_he": "נב\"ש בפונקציה המעריכית $f$ ע\"י $f(x)=e^x$ של $x$. ונבחר $x_0=0$. טוענים כי $e^x = \\sum_{n=0}^{\\infty} \\dfrac{x^n}{n!}$, $\\forall x\\in\\mathbb{R}$, אזי וונבל שזה טור מקלורן: $T_f(x) = \\sum_{n=0}^{\\infty} \\dfrac{f^{(n)}(x_0)}{n!}(x-x_0)^n = \\sum_{n=0}^{\\infty} \\dfrac{f^{(n)}(0)}{n!}x^n = \\sum_{n=0}^{\\infty} \\dfrac{x^n}{n!}$ (כי $f^{(n)}(x)=e^x$). אזי $T_f(x) = \\sum_{n=0}^{\\infty} \\dfrac{x^n}{n!}$, $\\forall x\\in\\mathbb{R}$.",
+        "proof_he": null,
+        "topic": "טור טיילור"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": "2",
+        "name": "טור טיילור של eˣ סביב x₀=1",
+        "statement_he": "נב\"ש בפונקציה המעריכית $f$ ע\"י $f(x)=e^x$ של $x$. ונבחר $x_0=1$. טוענים כי $e^x = \\sum_{n=0}^{\\infty} \\dfrac{x^n}{n!}$, $\\forall x\\in\\mathbb{R}$, נכפל ב-$e$: $e^{x-1} = \\sum_{n=0}^{\\infty} \\dfrac{(x-1)^n}{n!}$, $\\forall x\\in\\mathbb{R}$, ונקבל $e^x = \\sum_{n=0}^{\\infty} \\dfrac{e}{n!}(x-1)^n$, $\\forall x\\in\\mathbb{R}$. אזי מאחת ש-$T_f(x) = \\sum_{n=0}^{\\infty} \\dfrac{e}{n!}(x-1)^n$. וונבל שזה נכון שטור מאפלריה: $T_f(x) = \\sum_{n=0}^{\\infty} \\dfrac{f^{(n)}(x_0)}{n!}(x-x_0)^n = \\sum_{n=0}^{\\infty} \\dfrac{f^{(n)}(1)}{n!}(x-1)^n = \\sum_{n=0}^{\\infty} \\dfrac{e}{n!}(x-1)^n$ (כי $f^{(n)}(x)=e^x$).",
+        "proof_he": null,
+        "topic": "טור טיילור"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": "3",
+        "name": "טור מקלורן של sin x",
+        "statement_he": "נב\"ש בפונקציה המעריכית $f$ ע\"י $f(x)=\\sin x$ של $x\\in\\mathbb{R}$. נב\"ש $\\oplus$.",
+        "proof_he": null,
+        "topic": "טור טיילור"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": "4",
+        "name": "טור מקלורן של cos x",
+        "statement_he": "נב\"ש בפונקציה המעריכית $f$ ע\"י $f(x)=\\cos x$ של $x\\in\\mathbb{R}$. באותו אופן הפיתוח: $T_f(x) = 1 - \\dfrac{x^2}{2!} + \\dfrac{x^4}{4!} - \\dots = \\sum_{n=0}^{\\infty} \\dfrac{(-1)^n x^{2n}}{(2n)!}$.",
+        "proof_he": null,
+        "topic": "טור טיילור"
+      },
+      {
+        "kind": "example",
+        "label": "דוגמה",
+        "number": "5",
+        "name": "טור מקלורן של 1/(1-x)",
+        "statement_he": "נב\"ש בפונקציה $f$ ע\"י $f(x)=\\dfrac{1}{1-x}$ של $x\\ne 1$. נבחר $x_0=0$. אזי $T_f(x) = \\sum_{n=0}^{\\infty} x^n$.",
+        "proof_he": null,
+        "topic": "טור טיילור"
+      }
+    ]
+  }
+]

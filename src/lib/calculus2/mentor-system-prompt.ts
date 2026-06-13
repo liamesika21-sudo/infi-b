@@ -15,12 +15,22 @@ interface MaxInsightsData {
   }>;
 }
 
-interface LectureSummary {
-  lectureNumber: number;
-  mainTopics?: string[];
-  keyTheorems?: string[];
-  keyDefinitions?: string[];
-  keyFormulas?: string[];
+interface LectureKnowledgeItem {
+  kind: "definition" | "theorem" | "corollary" | "lemma" | "note" | "example" | "exercise";
+  label: string;
+  number: string | null;
+  name: string;
+  statement_he: string;
+  proof_he: string | null;
+  topic: string;
+}
+
+interface LectureKnowledge {
+  lecture: number;
+  week: number;
+  date: string | null;
+  topics: string[];
+  items: LectureKnowledgeItem[];
 }
 
 interface KnowledgeItem {
@@ -52,13 +62,13 @@ async function readMaxInsights(): Promise<MaxInsightsData> {
   }
 }
 
-async function readLectureSummaries(): Promise<LectureSummary[]> {
+async function readLectureKnowledge(): Promise<LectureKnowledge[]> {
   try {
     const raw = await readFile(
-      path.join(process.cwd(), "data/generated/calculus2/lecture-summaries.json"),
+      path.join(process.cwd(), "data/generated/calculus2/lecture-knowledge.json"),
       "utf8"
     );
-    return JSON.parse(raw) as LectureSummary[];
+    return JSON.parse(raw) as LectureKnowledge[];
   } catch {
     return [];
   }
@@ -76,14 +86,18 @@ async function readBattlePlanData(): Promise<BattlePlanBlock[]> {
   }
 }
 
-function buildLectureBlock(lectures: LectureSummary[]): string {
-  if (!lectures.length) return "(לא נטענו סיכומי הרצאות)";
+function buildLectureBlock(lectures: LectureKnowledge[]): string {
+  if (!lectures.length) return "(לא נטענו משפטי ההרצאות)";
   return lectures
     .map((lec) => {
-      const lines: string[] = [`### הרצאה ${lec.lectureNumber}${lec.mainTopics?.length ? ` — ${lec.mainTopics.join(", ")}` : ""}`];
-      if (lec.keyTheorems?.length) lines.push(`  משפטים: ${lec.keyTheorems.join(" | ")}`);
-      if (lec.keyDefinitions?.length) lines.push(`  הגדרות: ${lec.keyDefinitions.join(" | ")}`);
-      if (lec.keyFormulas?.length) lines.push(`  נוסחאות: ${lec.keyFormulas.join(" | ")}`);
+      const head = `### הרצאה ${lec.lecture}${lec.date ? ` (${lec.date})` : ""}${lec.topics?.length ? ` — ${lec.topics.join(", ")}` : ""}`;
+      const lines: string[] = [head];
+      // Only definitions, theorems, corollaries, lemmas — the numbered index the mentor must cite exactly.
+      for (const it of lec.items) {
+        if (!["definition", "theorem", "corollary", "lemma"].includes(it.kind)) continue;
+        const stmt = it.statement_he.replace(/\s*\n\s*/g, " ").trim();
+        lines.push(`**${it.label}${it.name ? ` — ${it.name}` : ""}:** ${stmt}`);
+      }
       return lines.join("\n");
     })
     .join("\n\n");
@@ -125,7 +139,7 @@ export async function buildMentorSystemPrompt(): Promise<string> {
 
   const [insights, lectures, battlePlan] = await Promise.all([
     readMaxInsights(),
-    readLectureSummaries(),
+    readLectureKnowledge(),
     readBattlePlanData(),
   ]);
 
@@ -173,6 +187,7 @@ export async function buildMentorSystemPrompt(): Promise<string> {
 6. **שאלות תרגול** — כשמבקשים שאלה, בנה שאלה בסגנון בחינה אמיתית.
 7. **בלי תוויות דוברים** — אסור לכתוב ביטויים כמו "יוסי מדבר", "מקס מדבר", "לפי יוסי", "מקס אומר", או כותרות דומות. אם צריך פורמליות ואינטואיציה, שלב אותן טבעית באותה תשובה.
 8. **בונים יחד** — אם השאלה גדולה, התחל בצעד הראשון, בדוק שהמשתמש איתך, ורק אז המשך. אל תזרוק את כל הפתרון בבת אחת אלא אם ביקשו "פתרון מלא".
+9. **מספרי משפטים/הגדרות — לפי האינדקס בלבד** — בסעיף "חומרי ההרצאה — משפטים והגדרות לפי מספור מדויק" למטה יש את המשפטים וההגדרות הרשמיים של כל הרצאה, עם המספור המדויק (למשל "משפט 3" של הרצאה 1). כששואלים "מה אומר משפט 3 בהרצאה 1", "הגדרה X" וכד׳ — מצא את הפריט המתאים באינדקס וצטט את הניסוח שלו במדויק. **אסור להמציא או לנחש**: אם המספר המבוקש לא מופיע באינדקס עבור אותה הרצאה — אמור בכנות "אין לי את הפריט הממוספר הזה בהרצאה הזו" והצע את המשפטים שכן קיימים שם לפי שם/מספר. שים לב: מספור המשפטים מתאפס/מתחיל מחדש בכל הרצאה.
 
 ---
 
@@ -184,7 +199,9 @@ ${knowledgeBase}
 
 ---
 
-## חומרי ההרצאה — מה נלמד בכל הרצאה
+## חומרי ההרצאה — משפטים והגדרות לפי מספור מדויק
+
+זהו האינדקס הרשמי. כששואלים על "משפט N בהרצאה X" או "הגדרה" מהרצאה מסוימת — צטט מכאן במדויק. המספור מתחיל מחדש בכל הרצאה.
 
 ${lectureBlock}
 

@@ -1,0 +1,169 @@
+{
+  "lecture": 9,
+  "date": "25.5.26",
+  "topics": ["טורי חזקות", "גזירה ואינטגרציה איבר-איבר", "טורי טיילור", "פיתוחים לפונקציות אלמנטריות", "אי רציונליות של e", "משפט טיילור עם שארית לגראנז'"],
+  "items": [
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "1",
+      "name": "גזירה ואינטגרציה איבר-איבר של טור חזקות",
+      "statement_he": "יהי $x_0 \\in \\mathbb{R}$ ותהי $(a_n)_{n=0}^{\\infty}$ סדרה של מספרים ממשיים. יהי $R$ רדיוס ההתכנסות של הטור החזקות $\\sum_{n=0}^{\\infty} a_n(x-x_0)^n = a_0 + a_1(x-x_0) + a_2(x-x_0)^2 + \\cdots$. נניח כי $R > 0$ ונסמן בפונקציה המוגדרת ע\"י $f(x) = \\sum_{n=0}^{\\infty} a_n(x-x_0)^n$ של $|x-x_0| < R$. אזי: (i) טור החזקות המתקבל מהטור ע\"י גזירה איבר-איבר, כלומר הטור $\\sum_{n=1}^{\\infty} a_n \\cdot n \\cdot (x-x_0)^{n-1}$ הוא בעל רדיוס התכנסות השווה לרדיוס של הטור המקורי, כלומר $R$. (ii) $f$ גזירה ובכל $|x-x_0| < R$ מתק\"ים $f'(x) = \\sum_{n=1}^{\\infty} a_n \\cdot n \\cdot (x-x_0)^{n-1}$. (iii) טור החזקות המתקבל מהטור ע\"י אינטגרציה, כלומר הטור $\\sum_{n=0}^{\\infty} a_n \\frac{(x-x_0)^{n+1}}{n+1}$ הוא בעל רדיוס התכנסות השווה לרדיוס של הטור המקורי, כלומר $R$. (iv) יהי $x \\in \\mathbb{R}$ כך שטור החזקות מתכנס $\\sum_{n=0}^{\\infty} a_n \\frac{(x-x_0)^{n+1}}{n+1}$, אזי בכל $x$ זה מתקיים $\\int_{x_0}^{x} f(t)\\,dt = \\sum_{n=0}^{\\infty} a_n \\frac{(x-x_0)^{n+1}}{n+1}$.",
+      "proof_he": "לא נוכיח.",
+      "topic": "גזירה ואינטגרציה איבר-איבר"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": "1",
+      "name": "חישוב $\\sum n/2^{n-1}$",
+      "statement_he": "הוכיחו שהטור $\\sum_{n=1}^{\\infty} \\frac{n}{2^{n-1}}$ מתכנס וחשבו את ערכו.",
+      "proof_he": "פתרון: נביט בטור החזקות $\\sum_{n=0}^{\\infty} x^n$. טור זה מתכנס לכל $|x| < 1$ ומתקיים $\\sum_{n=0}^{\\infty} x^n = \\frac{1}{1-x}$ של $|x| < 1$. ממשפט הגזירה איבר-איבר, של $|x| < 1$ מתק\"ים $\\sum_{n=1}^{\\infty} n \\cdot x^{n-1} = \\left(\\frac{1}{1-x}\\right)' = \\frac{1}{(1-x)^2}$. נציב $x = \\frac{1}{2}$ ונקבל $\\sum_{n=1}^{\\infty} \\frac{n}{2^{n-1}} = \\sum_{n=1}^{\\infty} n \\cdot \\left(\\frac{1}{2}\\right)^{n-1} = \\frac{1}{(1-1/2)^2} = 4$.",
+      "topic": "גזירה ואינטגרציה איבר-איבר"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "2",
+      "name": "ערך טור החזקות בקצה הימני (אבל)",
+      "statement_he": "יהי $x_0 \\in \\mathbb{R}$ ותהי $(a_n)_{n=0}^{\\infty}$ סדרה של מספרים ממשיים. יהי $R$ רדיוס ההתכנסות של הטור החזקות $\\sum_{n=0}^{\\infty} a_n(x-x_0)^n = a_0 + a_1(x-x_0) + a_2(x-x_0)^2 + \\cdots$. נניח כי $R > 0$ ונסמן בפונקציה $f(x) = \\sum_{n=0}^{\\infty} a_n(x-x_0)^n$ של $|x-x_0| < R$. ע\"מ כי טור החזקות מתכנס בנק' $x_0 + R$, אזי $\\lim_{x \\to x_0 + R^-} f(x)$ ק\"ים ומתקיים $\\sum_{n=0}^{\\infty} a_n R^n = \\lim_{x \\to x_0 + R^-} f(x)$.",
+      "proof_he": "לא נוכיח.",
+      "topic": "גזירה ואינטגרציה איבר-איבר"
+    },
+    {
+      "kind": "note",
+      "label": "הערה",
+      "number": "1",
+      "name": "גרסה לקצה השמאלי",
+      "statement_he": "משפט 2 ניתן ניסוח גם עבור $x = x_0 - R$. במקרה זה, $\\sum_{n=0}^{\\infty} a_n(-R)^n = \\lim_{x \\to x_0 - R^+} f(x)$.",
+      "proof_he": null,
+      "topic": "גזירה ואינטגרציה איבר-איבר"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "3",
+      "name": "פיתוח של $\\ln(1+x)$",
+      "statement_he": "מתק\"ים $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} x^n}{n} = \\ln(1+x)$ של $-1 < x \\leq 1$.",
+      "proof_he": "פתרון: נביט בטור החזקות $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} x^n}{n} = x - \\frac{x^2}{2} + \\frac{x^3}{3} - \\cdots$. ראינו כבר בהרצאה 8 בתרגיל 4 שתחום ההתכנסות הוא הקטע $(-1, 1]$. נביט בפונק' המוגדרת ע\"י $f(x) = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} x^n}{n}$ של $|x| < 1$. נגזור איבר-איבר ונקבל של $|x| < 1$: $f'(x) = \\sum_{n=1}^{\\infty} \\left(\\frac{(-1)^{n+1} x^n}{n}\\right)' = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} n x^{n-1}}{n} = \\sum_{n=1}^{\\infty} (-1)^{n+1} \\cdot x^{n-1} = \\sum_{n=0}^{\\infty} (-1)^{n+2} x^n = \\sum_{n=0}^{\\infty} (-1)^n x^n = \\sum_{n=0}^{\\infty} (-x)^n = \\sum_{n=0}^{\\infty} t^n$ (כאשר $t = -x$) $= \\frac{1}{1-t} = \\frac{1}{1+x}$ של $|t| < 1$. אזי של $|x| < 1$: $f'(x) = \\frac{1}{1+x}$. אזי ק\"ים כך $C \\in \\mathbb{R}$ ש- של $|x| < 1$: $f(x) = \\ln|1+x| + C = \\ln(1+x) + C$. נציב $x = 0$ ונקבל $f(0) = \\ln 1 + C = C$. בנוסף של $|x| < 1$: $f(x) = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} x^n}{n} = x - \\frac{x^2}{2} + \\frac{x^3}{3} - \\cdots$, אזי $f(0) = 0$, אזי $C = 0$, אזי של $|x| < 1$: $f(x) = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} x^n}{n} = \\ln(1+x)$. נותר נבדוק שוויון מתק\"ים גם עבור $x = 1$: ממשפט אבל בנק' הקצה של הקטע, עבור $x = 1$: $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n} = \\lim_{x \\to 1^-} f(x) = \\lim_{x \\to 1^-} \\ln(1+x) = \\ln 2$.",
+      "topic": "פיתוחים לפונקציות אלמנטריות"
+    },
+    {
+      "kind": "corollary",
+      "label": "מסקנה",
+      "number": "1",
+      "name": "טור הרמוני מתחלף",
+      "statement_he": "נציב $x = 1$ בטור של הטור הקודם, ונקבל $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n} = 1 - \\frac{1}{2} + \\frac{1}{3} - \\frac{1}{4} + \\cdots = \\ln 2$.",
+      "proof_he": null,
+      "topic": "פיתוחים לפונקציות אלמנטריות"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "4",
+      "name": "פיתוח של $e^x$",
+      "statement_he": "של $x \\in \\mathbb{R}$ מתק\"ים $e^x = \\sum_{n=0}^{\\infty} \\frac{x^n}{n!}$.",
+      "proof_he": "הוכחה: נביט בטור החזקות $\\sum_{n=0}^{\\infty} \\frac{x^n}{n!} = 1 + x + \\frac{x^2}{2} + \\frac{x^3}{6} + \\cdots$. ראינו כבר בהרצאה 8 בתרגיל 5 שתחום ההתכנסות הוא $\\mathbb{R}$. נביט בפונק' המוגדרת ע\"י $f(x) = \\sum_{n=0}^{\\infty} \\frac{x^n}{n!}$ של $x \\in \\mathbb{R}$. נגזור איבר-איבר ונקבל של $x \\in \\mathbb{R}$: $f'(x) = \\sum_{n=0}^{\\infty} \\left(\\frac{x^n}{n!}\\right)' = \\sum_{n=1}^{\\infty} \\frac{n \\cdot x^{n-1}}{n!} = \\sum_{n=1}^{\\infty} \\frac{x^{n-1}}{(n-1)!} = \\sum_{n=0}^{\\infty} \\frac{x^n}{n!} = f(x)$. אזי $f'(x) = f(x)$ של $x \\in \\mathbb{R}$. אזי של $x \\in \\mathbb{R}$: $\\left[\\frac{f(x)}{e^x}\\right]' = \\frac{f'(x) e^x - f(x) e^x}{e^{2x}} = 0$ (כי $f'(x) = f(x)$). אזי ק\"ים כך $C \\in \\mathbb{R}$ ש- של $x \\in \\mathbb{R}$: $\\frac{f(x)}{e^x} = C \\Rightarrow f(x) = C \\cdot e^x$. נציב $x = 0$ ונקבל $1 = f(0) = C \\Rightarrow f(x) = e^x$ של $x \\in \\mathbb{R}$.",
+      "topic": "פיתוחים לפונקציות אלמנטריות"
+    },
+    {
+      "kind": "corollary",
+      "label": "מסקנה",
+      "number": "2",
+      "name": "טור עבור $e$",
+      "statement_he": "מתק\"ים $e = \\sum_{n=0}^{\\infty} \\frac{1}{n!} = 1 + 1 + \\frac{1}{2} + \\frac{1}{6} + \\frac{1}{24} + \\cdots$.",
+      "proof_he": null,
+      "topic": "פיתוחים לפונקציות אלמנטריות"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "5",
+      "name": "אי רציונליות של $e$",
+      "statement_he": "$e$ הוא אי-רציונלי.",
+      "proof_he": "הוכחה: נניח בשלילה ש- $e \\in \\mathbb{Q}$ ונגיע לסתירה. אזי ק\"ים $a, b \\in \\mathbb{N}$ כך ש- $e = \\frac{a}{b}$. נכונן אובדן כלליות ש- $b > 1$. אזי $2 < e < 3$. נביט במספר ממשי, $\\alpha = b!\\left(e - \\sum_{n=0}^{b} \\frac{1}{n!}\\right)$. נוכיח: (i) $\\alpha \\in \\mathbb{Z}$. (ii) $0 < \\alpha < 1$. הוכחת נוכיח את (i): נראה כי $\\alpha$ שלם. $\\alpha = b!\\left(e - \\sum_{n=0}^{b} \\frac{1}{n!}\\right) = b!\\left(\\frac{a}{b} - \\sum_{n=0}^{b} \\frac{1}{n!}\\right) = (b-1)! \\cdot a - \\sum_{n=0}^{b} \\frac{b!}{n!} = (b-1)! \\cdot a - \\sum_{n=0}^{b} (n+1)\\cdot(n+2)\\cdots b \\in \\mathbb{Z}$ (שני האיברים שלמים). נוכיח את (ii): נראה תחילה ש- $\\alpha > 0$: $\\alpha = b!\\left(e - \\sum_{n=0}^{b} \\frac{1}{n!}\\right) = b!\\left(\\sum_{n=0}^{\\infty} \\frac{1}{n!} - \\sum_{n=0}^{b} \\frac{1}{n!}\\right)$ (ממסקנה 2) $= b! \\sum_{n=b+1}^{\\infty} \\frac{1}{n!} \\geq \\frac{b!}{(b+1)!} = \\frac{1}{b+1} > 0$. נראה תחילה ש- $\\alpha < 1$: באופן דומה $\\alpha = b! \\sum_{n=b+1}^{\\infty} \\frac{1}{n!} = \\sum_{n=b+1}^{\\infty} \\frac{b!}{n!} = \\sum_{n=b+1}^{\\infty} \\frac{1}{(b+1)(b+2)\\cdots n} = \\frac{1}{b+1} + \\frac{1}{(b+1)(b+2)} + \\frac{1}{(b+1)(b+2)(b+3)} + \\cdots \\leq \\frac{1}{b+1} + \\frac{1}{(b+1)^2} + \\frac{1}{(b+1)^3} + \\cdots = \\frac{1}{b+1}\\left(1 + \\frac{1}{b+1} + \\frac{1}{(b+1)^2} + \\frac{1}{(b+1)^3} + \\cdots\\right) = \\frac{1}{b+1} \\cdot \\frac{1}{1 - \\frac{1}{b+1}} = \\frac{1}{b+1-1} = \\frac{1}{b} < 1$ (כי $b > 1$).",
+      "topic": "אי רציונליות של e"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "6",
+      "name": "פיתוח של $\\arctan x$",
+      "statement_he": "של $-1 \\leq x \\leq 1$ מתק\"ים $\\arctan x = \\sum_{n=0}^{\\infty} \\frac{(-1)^n \\cdot x^{2n+1}}{2n+1} = x - \\frac{x^3}{3} + \\frac{x^5}{5} - \\cdots$.",
+      "proof_he": "הוכחה: נביט בטור החזקות $\\sum_{n=0}^{\\infty} \\frac{(-1)^n \\cdot x^{2n+1}}{2n+1}$, נמצא את תחום ההתכנסות שלו: עבור $x = \\pm 1$ נקבל $\\sum_{n=0}^{\\infty} \\frac{(-1)^n \\cdot x^{2n+1}}{2n+1} = \\sum_{n=0}^{\\infty} \\frac{(-1)^n (\\pm 1)}{2n+1} = \\pm \\sum_{n=0}^{\\infty} \\frac{(-1)^n}{2n+1} = \\pm\\left(1 - \\frac{1}{3} + \\frac{1}{5} - \\frac{1}{7} + \\cdots\\right) = \\pm(\\text{מתכנס לפי לייבניץ})$. ובנוסף $\\sum_{n=0}^{\\infty} \\left|\\frac{(-1)^n \\cdot x^{2n+1}}{2n+1}\\right| = \\sum_{n=0}^{\\infty} \\frac{1}{2n+1} \\geq \\sum_{n=0}^{\\infty} \\frac{1}{2n+2} = \\frac{1}{2}\\sum_{n=0}^{\\infty} \\frac{1}{n+1} = \\frac{1}{2}\\sum_{n=1}^{\\infty} \\frac{1}{n} = \\infty$ (עבור $x = \\pm 1$). אזי הטור מתכנס בתנאי ב- $\\pm 1$. אזי $x = \\pm 1$ נק' הקצה של תחום ההתכנסות והטור מתכנס בהן ולכן תחום ההתכנסות הוא הקטע $[-1, 1]$. נביט בפונק' המוגדרת ע\"י $f(x) = \\sum_{n=0}^{\\infty} \\frac{(-1)^n \\cdot x^{2n+1}}{2n+1} = x - \\frac{x^3}{3} + \\frac{x^5}{5} - \\cdots$ של $|x| < 1$. נגזור איבר-איבר ונקבל של $|x| < 1$: $f'(x) = 1 - x^2 + x^4 - \\cdots = \\sum_{n=0}^{\\infty} (-1)^n x^{2n} = \\sum_{n=0}^{\\infty} (-1)^n t^n = \\sum_{n=0}^{\\infty} (-t)^n = \\frac{1}{1+t}$ (כאשר $t = x^2$, $|-t| < 1$) $= \\frac{1}{1+x^2}$. אזי $f'(x) = \\frac{1}{1+x^2}$ של $|x| < 1$. אזי ק\"ים כך $C \\in \\mathbb{R}$ ש- של $|x| < 1$: $f(x) = \\arctan x + C$. נציב $x = 0$ ונקבל $0 = f(0) = \\arctan 0 + C = C$. אזי $C = 0$ אזי של $|x| < 1$: $f(x) = \\sum_{n=0}^{\\infty} \\frac{(-1)^n \\cdot x^{2n+1}}{2n+1} = \\arctan x$. נותר נבדוק שוויון מתק\"ים גם עבור $x = \\pm 1$: עבור $x = 1$, ממשפט אבל בנק' הקצה של הקטע, $\\sum_{n=0}^{\\infty} \\frac{(-1)^n}{2n+1} = \\lim_{x \\to 1^-} f(x) = \\lim_{x \\to 1^-} \\arctan x = \\arctan 1$. עבור $x = -1$, ממשפט אבל בנק' הקצה של הקטע, $\\sum_{n=0}^{\\infty} \\frac{(-1)^n (-1)}{2n+1} = \\lim_{x \\to -1^+} f(x) = \\lim_{x \\to -1^+} \\arctan x = \\arctan(-1)$.",
+      "topic": "פיתוחים לפונקציות אלמנטריות"
+    },
+    {
+      "kind": "corollary",
+      "label": "מסקנה",
+      "number": "3",
+      "name": "טור לייבניץ עבור $\\pi/4$",
+      "statement_he": "מתק\"ים $\\frac{\\pi}{4} = \\sum_{n=0}^{\\infty} \\frac{(-1)^n}{2n+1} = 1 - \\frac{1}{3} + \\frac{1}{5} - \\frac{1}{7} + \\cdots$.",
+      "proof_he": null,
+      "topic": "פיתוחים לפונקציות אלמנטריות"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": "2",
+      "name": "התכנסות $\\sum a_n |x|^n$",
+      "statement_he": "הוכיחו / הפריכו את הטענה הבאה: ק\"ם טור חזקות $\\sum_{n=0}^{\\infty} a_n x^n$ עם רדיוס $R > 0$ כך של $x \\in (-R, R)$ מתק\"ים $|x| = \\sum_{n=0}^{\\infty} a_n x^n$.",
+      "proof_he": "פתרון: הטענה שגויה. כי $|x|$ אינה גזירה ב- $x_0 = 0$ ולכן טור חזקות עם רדיוס חיובי ת\"ב, כי טור חזקות גזיר. (לא נוכיח)",
+      "topic": "טורי טיילור"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "7",
+      "name": "יחידות מקדמי טור חזקות",
+      "statement_he": "(משפט היחידות) יהי $x_0 \\in \\mathbb{R}$ ותהי $(a_n)_{n=0}^{\\infty}$ סדרה של מספרים ממשיים. יהי $R$ רדיוס ההתכנסות של טור החזקות $\\sum_{n=0}^{\\infty} a_n(x-x_0)^n$ ונניח כי $R > 0$. נביט בפונק' המוגדרת ע\"י $f(x) = \\sum_{n=0}^{\\infty} a_n(x-x_0)^n$ של $|x-x_0| < R$. אזי: לכל $0 \\leq n \\in \\mathbb{Z}$, $f$ גזירה $n$ פעמים ב- $x_0$, ובנוסף, $a_n = \\frac{f^{(n)}(x_0)}{n!}$.",
+      "proof_he": null,
+      "topic": "טורי טיילור"
+    },
+    {
+      "kind": "definition",
+      "label": "הגדרה",
+      "number": null,
+      "name": "פולינום טיילור ושארית",
+      "statement_he": "יהי $x_0 \\in \\mathbb{R}$ ויהי $0 \\leq N \\in \\mathbb{Z}$. תהי $f$ פונק' הגזירה $N$ פעמים ב- $x_0$. פולינום טיילור מסדר $N$ של $f$ סביב $x_0$ הוא פולינום שדרגתו $\\leq N$ $T_N(x) = \\sum_{n=0}^{N} \\frac{f^{(n)}(x_0)}{n!} \\cdot (x-x_0)^n = f(x_0) + f'(x_0)(x-x_0) + \\frac{f''(x_0)}{2} \\cdot (x-x_0)^2 + \\cdots + \\frac{f^{(N)}(x_0)}{N!} \\cdot (x-x_0)^N$. שארית הטיילור של $f$ סביב $x_0$ מסדר $N$ מוגדרת ע\"י $R_N(x) = f(x) - T_N(x)$.",
+      "proof_he": null,
+      "topic": "טורי טיילור"
+    },
+    {
+      "kind": "note",
+      "label": "הערה",
+      "number": "2",
+      "name": "פולינומי טיילור מסדר נמוך",
+      "statement_he": "מתק\"ים $T_0(x) = f(x_0)$ (פולינום מדרגה $\\leq 0$). $T_1(x) = f(x_0) + f'(x_0)(x-x_0)$ (פולינום מדרגה $\\leq 1$) ישר המשיק. $T_2(x) = f(x_0) + f'(x_0)(x-x_0) + \\frac{f''(x_0)}{2} \\cdot (x-x_0)^2$ פולינום מדרגה $\\leq 2$. באופן הכללי, נשים לב ש- $T_N(x)$ הוא פולינום מדרגה $\\leq N$.",
+      "proof_he": null,
+      "topic": "טורי טיילור"
+    },
+    {
+      "kind": "note",
+      "label": "הערה",
+      "number": "3",
+      "name": "נגזרות פולינום טיילור ב-$x_0$",
+      "statement_he": "(i) מתק\"ים $T_N(x) = \\sum_{n=0}^{N} \\frac{f^{(n)}(x_0)}{n!} \\cdot (x-x_0)^n = f(x_0) + f'(x_0)(x-x_0) + \\frac{f''(x_0)}{2} \\cdot (x-x_0)^2 + \\cdots + \\frac{f^{(N)}(x_0)}{N!} \\cdot (x-x_0)^N$ אזי $T_N(x_0) = f(x_0)$. (ii) $T_N'(x) = f'(x_0) + 2 \\cdot \\frac{f''(x_0)}{2}(x-x_0) + \\cdots + N \\cdot \\frac{f^{(N)}(x_0)}{N!}(x-x_0)^{N-1} = f'(x_0) + f''(x_0) \\cdot (x-x_0) + \\cdots + \\frac{f^{(N)}(x_0)}{(N-1)!}(x-x_0)^{N-1}$ אזי $T_N'(x_0) = f'(x_0)$. (iii) $T_N''(x) = f''(x_0) + 2\\frac{f'''(x_0)}{2!}(x-x_0) + \\cdots + (N-1)\\frac{f^{(N)}(x_0)}{(N-1)!}(x-x_0)^{N-2}$ אזי $T_N''(x_0) = f''(x_0)$. (iv) באותו האופן, של $0 \\leq K \\leq N$, $T_N^{(K)}(x_0) = f^{(K)}(x_0)$. (v) $T^{(N+1)}(x) = 0$.",
+      "proof_he": null,
+      "topic": "טורי טיילור"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "8",
+      "name": "משפט טיילור עם שארית לגראנז'",
+      "statement_he": "(משפט השארית של לגראנז') תהיינה $x, x_0 \\in \\mathbb{R}$ כך ש- $x > x_0$ ויהי $0 \\leq N \\in \\mathbb{Z}$. תהי $f$ פונק' הגזירה $N$ פעמים ב- $[x_0, x]$. נניח כי (i) $f^{(N)}$ רציפה ב- $[x_0, x]$. (ii) $f^{(N)}$ גזירה ב- $(x_0, x)$. אזי קיימת $x_0 < c < x$ שעבורה $R_N(x) = \\frac{f^{(N+1)}(c)}{(N+1)!} \\cdot (x-x_0)^{N+1}$.",
+      "proof_he": null,
+      "topic": "משפט טיילור עם שארית לגראנז'"
+    },
+    {
+      "kind": "note",
+      "label": "הערה",
+      "number": "4",
+      "name": "המקרה $N=0$ הוא משפט לגראנז'",
+      "statement_he": "כאשר $N = 0$ מתקבל ם $f(x) - f(x_0) = f(x) - T_0(x) = R_0(x) = \\frac{f'(c)}{1!} \\cdot (x-x_0)$ כלומר מתקבל ם $f(x) - f(x_0) = f'(c) \\cdot (x-x_0)$ כלומר קיבלנו את משפט לגראנז'. אזי משפט טיילור עם שארית לגראנז' הוא הכללה של משפט לגראנז'.",
+      "proof_he": null,
+      "topic": "משפט טיילור עם שארית לגראנז'"
+    }
+  ]
+}

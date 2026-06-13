@@ -1,0 +1,160 @@
+{
+  "lecture": 8,
+  "date": "19.5.26",
+  "topics": ["סדרות חלקיות של טורים", "מבחן הסוגריים", "טורי חזקות", "רדיוס ההתכנסות", "תחום ההתכנסות"],
+  "items": [
+    {
+      "kind": "definition",
+      "label": "הגדרה",
+      "number": null,
+      "name": "סדרת סכומים חלקיים (קיבוץ איברים)",
+      "statement_he": "תהיינה $(a_n)_{n=1}^{\\infty}$ ו-$(b_k)_{k=1}^{\\infty}$ שתי סדרות של מס' ממש'ים. נאמר שהטור $\\sum_{k=1}^{\\infty} b_k$ התקבל מהטור $\\sum_{n=1}^{\\infty} a_n$ ע\"י קיבוץ סדרי של סדר איבריו, אם קיימת סדרה עולה ממש של מס' טבעיים $(n_k)_{k=1}^{\\infty}$ כך ש- $(i)$ $n_1 = 1$ $(ii)$ לכל $k \\geq 1$, $b_k = a_{n_k} + a_{n_k+1} + a_{n_k+2} + \\dots + a_{n_{k+1}-1}$",
+      "proof_he": null,
+      "topic": "סדרות חלקיות של טורים"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "2",
+      "name": "מבחן הסוגריים",
+      "statement_he": "תהיינה $(a_n)_{n=1}^{\\infty}$ ו-$(b_k)_{k=1}^{\\infty}$ שתי סדרות של מס' ממש'ים. נניח שהטור $\\sum_{k=1}^{\\infty} b_k$ התקבל מהטור $\\sum_{n=1}^{\\infty} a_n$ ע\"י קיבוץ סדרי. נניח שהטור $\\sum_{n=1}^{\\infty} a_n$ מתכנס באופן הרחב. אזי גם הטור $\\sum_{k=1}^{\\infty} b_k$ מתכנס באופן הרחב, והנ\"ל $\\sum_{k=1}^{\\infty} b_k = \\sum_{n=1}^{\\infty} a_n$",
+      "proof_he": "תהיינה $(S_N)_{N=1}^{\\infty}$ ו-$(T_K)_{K=1}^{\\infty}$ סדרות הסכומים החלקי'ם של הטורים $\\sum_{n=1}^{\\infty} a_n$ ו-$\\sum_{k=1}^{\\infty} b_k$ בהתאמה, כלומר $T_K = \\sum_{\\ell=1}^{K} b_\\ell$, $\\forall K \\geq 1$, $S_N = \\sum_{n=1}^{N} a_n$, $\\forall N \\geq 1$. מכיון ש-$\\sum_{n=1}^{\\infty} a_n$ מתכנס באופן הרחב, אזי $\\lim_{N \\to \\infty} S_N$ ק\"ם באופן הרחב. נרצה להוכיח כי $\\lim_{K \\to \\infty} T_K$ ק\"ם באופן הרחב והנ\"ל $\\lim_{K \\to \\infty} T_K = \\lim_{N \\to \\infty} S_N$. נשים לב, לכל $K \\geq 1$, $T_K = \\sum_{\\ell=1}^{K} b_\\ell = b_1 + b_2 + \\dots + b_K = (a_{n_1} + \\dots + a_{n_2-1}) + (a_{n_2} + \\dots + a_{n_3-1}) + \\dots + (a_{n_K} + \\dots + a_{n_{K+1}-1}) = a_1 + \\dots + a_{n_{K+1}-1} = S_{n_{K+1}-1}$ (השתמשנו ש- $n_1 = 1$). אזי לכל $K$ נקבל $T_K = S_{n_{K+1}-1}$. כלומר $(T_K)_{K=1}^{\\infty}$ היא ת\"ח של $(S_N)_{N=1}^{\\infty}$. נסמן $C_K = n_{K+1}-1$. נרצה להוכיח כי $(C_K)_{K=1}^{\\infty}$ היא סדרה עולה ממש של מס' טבע'ים: $(i)$ עולה ממש: לכל $K \\in \\mathbb{N}$, $C_{K+1} = n_{K+2}-1 > n_{K+1}-1 = C_K$ (כי $(n_k)_{k=1}^{\\infty}$ עולה ממש). $(ii)$ של מס' טבעי'ם: לכל $K \\in \\mathbb{N}$, $C_K \\geq C_1 = n_2-1 > n_1-1 = 0$ (כי $(n_k)_{k=1}^{\\infty}$ עולה ממש, $n_1 = 1$). אזי $C_K > 0$ ומכיון ש- $C_K \\in \\mathbb{Z}$ נקבל $C_K \\geq 1$. ולכן $(T_K)$ ת\"ח של $(S_N)$, מהמשפט המתאים $\\lim_{K \\to \\infty} T_K = \\lim_{N \\to \\infty} S_N$.",
+      "topic": "סדרות חלקיות של טורים"
+    },
+    {
+      "kind": "definition",
+      "label": "הגדרה",
+      "number": "2",
+      "name": "טור עם איברים מתאפסים",
+      "statement_he": "תהיינה $(a_n)_{n=1}^{\\infty}$ ו-$(b_n)_{n=1}^{\\infty}$ שתי סדרות של מס' ממש'ים. נניח שלכל $n \\in \\mathbb{N}$ מתקיים $b_n = \\begin{cases} a_k & n=2k-1 \\\\ 0 & n=2k \\end{cases}$. אזי הטורים $\\sum_{n=1}^{\\infty} a_n$ ו-$\\sum_{n=1}^{\\infty} b_n$ שקולים, כלומר $\\sum_{n=1}^{\\infty} b_n = \\sum_{n=1}^{\\infty} a_n$.",
+      "proof_he": "$\\Leftarrow$: נניח כי הטור $\\sum_{n=1}^{\\infty} a_n$ מתכנס. אזי קי\"ם $S \\in \\mathbb{R}$ כך ש- $S = \\sum_{n=1}^{\\infty} a_n$. נוכיח כי $\\sum_{n=1}^{\\infty} b_n = S$ ונסיים. תהי $(S_N)_{N=1}^{\\infty}$ סדרת הסכומים החלקי'ם של $\\sum_{n=1}^{\\infty} b_n$, כלומר $S_N = \\sum_{n=1}^{N} b_n$, $\\forall N \\in \\mathbb{N}$. נשים לב לכל $N \\in \\mathbb{N}$, $S_{2N} = \\sum_{n=1}^{2N} b_n = b_1 + b_2 + \\dots + b_{2N} = a_1 + 0 + a_2 + \\dots + a_N + 0 = a_1 + \\dots + a_N = \\sum_{n=1}^{N} a_n$. $\\lim_{N \\to \\infty} S_{2N} = \\lim_{N \\to \\infty} \\sum_{n=1}^{N} a_n = \\sum_{n=1}^{\\infty} a_n = S$. באותו האופן, לכל $N \\in \\mathbb{N}$, $S_{2N-1} = \\sum_{n=1}^{2N-1} b_n = b_1 + b_2 + \\dots + b_{2N-1} = a_1 + 0 + a_2 + \\dots + a_N = a_1 + \\dots + a_N = \\sum_{n=1}^{N} a_n$. $\\lim_{N \\to \\infty} S_{2N-1} = \\lim_{N \\to \\infty} \\sum_{n=1}^{N} a_n = \\sum_{n=1}^{\\infty} a_n = S$. אזי $\\lim_{N \\to \\infty} S_{2N-1} = \\lim_{N \\to \\infty} S_{2N} = S$ ולכן $\\sum_{n=1}^{\\infty} b_n = \\lim_{N \\to \\infty} S_N = S$. $\\Rightarrow$: נניח כי הטור $\\sum_{n=1}^{\\infty} b_n$ מתכנס. אזי קי\"ם $S \\in \\mathbb{R}$ כך ש- $S = \\sum_{n=1}^{\\infty} b_n$. נשים לב שהטור $\\sum_{n=1}^{\\infty} a_n$ התקבל מ- $\\sum_{n=1}^{\\infty} b_n$ ע\"י קיבוץ ולכן (ממבחן הסוגריים) $\\sum_{n=1}^{\\infty} a_n = a_1 + a_2 + \\dots = (a_1 + 0) + (a_2 + 0) + a_3 + \\dots = (b_1 + b_2) + (b_3 + b_4) + \\dots = b_1 + b_2 + b_3 + \\dots = S$.",
+      "topic": "סדרות חלקיות של טורים"
+    },
+    {
+      "kind": "definition",
+      "label": "הגדרה",
+      "number": null,
+      "name": "טור חזקות",
+      "statement_he": "תהי $x_0 \\in \\mathbb{R}$. טור חזקות סביב $x_0$ הוא טור מהצורה $\\sum_{n=0}^{\\infty} a_n (x-x_0)^n = a_0 + a_1(x-x_0) + a_2(x-x_0)^2 + \\dots$ כאשר $(a_n)_{n=0}^{\\infty}$ הינה סדרה של מס' ממש'ים ו-$x \\in \\mathbb{R}$.",
+      "proof_he": null,
+      "topic": "טורי חזקות"
+    },
+    {
+      "kind": "definition",
+      "label": "הגדרה",
+      "number": null,
+      "name": "תחום ההתכנסות",
+      "statement_he": "תהי $x_0 \\in \\mathbb{R}$ ותהי $(a_n)_{n=0}^{\\infty}$ סדרה של מס' ממש'ים. תחום ההתכנסות של טור החזקות $\\sum_{n=0}^{\\infty} a_n (x-x_0)^n = a_0 + a_1(x-x_0) + a_2(x-x_0)^2 + \\dots$ מוגדר להיות קב' של ערכי ה-$x$ שבורם הטור מתכנס.",
+      "proof_he": null,
+      "topic": "תחום ההתכנסות"
+    },
+    {
+      "kind": "note",
+      "label": "הערה",
+      "number": "1",
+      "name": "התכנסות בנקודת המרכז",
+      "statement_he": "טור החזקות $\\sum_{n=0}^{\\infty} a_n (x-x_0)^n$ נשים $\\heartsuit$ תמיד מתכנס בנק' $x_0$ (וערכו $a_0$). ולכן תחום ההתכנסות אינו הקבוצה הריקה. אכן $\\sum_{n=0}^{\\infty} a_n (x-x_0)^n = a_0 + a_1(x-x_0) + a_2(x-x_0)^2 + \\dots = a_0 + 0 + 0 + \\dots = a_0$ (נציב ב- $x = x_0$).",
+      "proof_he": null,
+      "topic": "תחום ההתכנסות"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": "3",
+      "name": "תחום התכנסות של $\\sum (x+1)^{2n}$",
+      "statement_he": "מצאו את תחום ההתכנסות של טור החזקות $\\sum_{n=0}^{\\infty} (x+1)^{2n}$. לכל $x$ בתחום ההתכנסות, חשבו את ערכו של הטור.",
+      "proof_he": "פתרון: נשים $\\heartsuit$ לכל $x \\in \\mathbb{R}$, $\\sum_{n=0}^{\\infty} (x+1)^{2n} = \\sum_{n=0}^{\\infty} t^n$ כאשר $t = (x+1)^2$. אזי הטור מתכנס $\\Leftrightarrow$ אם\"ם $|t| < 1 \\Leftrightarrow (x+1)^2 < 1 \\Leftrightarrow$ אם\"ם $|x+1| < 1$, כלומר אם\"ם $-2 < x < 0$. עבור $-2 < x < 0$ נקבל $\\sum_{n=0}^{\\infty} (x+1)^{2n} = \\sum_{n=0}^{\\infty} t^n = \\frac{1}{1-t} = \\frac{1}{1-(x+1)^2}$ (כאשר $t = (x+1)^2$, $|t| < 1$).",
+      "topic": "תחום ההתכנסות"
+    },
+    {
+      "kind": "definition",
+      "label": "הגדרה",
+      "number": null,
+      "name": "רדיוס ההתכנסות",
+      "statement_he": "יהי $\\sum_{n=0}^{\\infty} a_n (x-x_0)^n$ טור חזקות. נגדיר את רדיוס ההתכנסות של הטור להיות $R = \\sup \\left\\{ r \\geq 0 : \\text{הטור מתכנס אם } x \\in [x_0-r, x_0+r] \\right\\}$",
+      "proof_he": null,
+      "topic": "רדיוס ההתכנסות"
+    },
+    {
+      "kind": "note",
+      "label": "הערה",
+      "number": "2",
+      "name": "תכונות הרדיוס",
+      "statement_he": "מכיון שהטור מתכנס ב- $x_0$ (הערה 1), אזי הוא מתכנס אם $x \\in [x_0-0, x_0+0]$, ולכן הקבוצה $\\left\\{ r \\geq 0 : \\text{הטור מתכנס אם } x \\in [x_0-r, x_0+r] \\right\\}$ $0 \\in$ ולכן הקבוצה אינה ריקה, ולכן מוגדר היטב הסופרימום $R$ (ייתכן שגם $R = \\infty$).",
+      "proof_he": null,
+      "topic": "רדיוס ההתכנסות"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "3",
+      "name": "אפיון רדיוס ההתכנסות",
+      "statement_he": "תהי $x_0 \\in \\mathbb{R}$ ותהי $(a_n)_{n=0}^{\\infty}$ סדרה של מס' ממש'ים. יהי $R$ רדיוס ההתכנסות של טור החזקות $\\sum_{n=0}^{\\infty} a_n (x-x_0)^n$. אזי: $(i)$ אם $R = \\infty$, הטור $\\sum_{n=0}^{\\infty} a_n (x-x_0)^n$ מתכנס בהחלט לכל $x \\in \\mathbb{R}$. $(ii)$ אם $R = 0$, הטור $\\sum_{n=0}^{\\infty} a_n (x-x_0)^n$ מתבדר לכל $x \\neq x_0$ (ומתכנס ב- $x = x_0$). $(iii)$ אם $0 < R < \\infty$, הטור מתכנס בהחלט אם $R > |x-x_0|$ ומתבדר אם $|x-x_0| > R$. יתר על כן, אם $|x-x_0| > R$ הטור מתבדר מתנאי הכרחי, כלומר $\\lim_{n \\to \\infty} a_n (x-x_0)^n \\neq 0$. עבור $|x-x_0| = R$ אם יודעים $(*)$.",
+      "proof_he": "לא נוכיח.",
+      "topic": "רדיוס ההתכנסות"
+    },
+    {
+      "kind": "corollary",
+      "label": "מסקנה",
+      "number": "1",
+      "name": "התכנסות רק בנקודות הקצה",
+      "statement_he": "טור החזקות $\\sum_{n=0}^{\\infty} a_n (x-x_0)^n$ כולל שמתכנס יתכן רק בנקודות $x_0 \\pm R$.",
+      "proof_he": null,
+      "topic": "רדיוס ההתכנסות"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": "4",
+      "name": "תחום התכנסות של $\\sum \\frac{(-1)^{n+1} x^n}{n}$",
+      "statement_he": "מצאו את תחום ההתכנסות של טור החזקות $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} \\cdot x^n}{n}$.",
+      "proof_he": "פתרון: נשים $\\heartsuit$ עבור $x = 1$ נקבל $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} \\cdot x^n}{n} = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n} = $ הטור מתכנס (מתכנס בתנאי). אזי $x = 1$ נק' קצה של תחום ההתכנסות. מכיון ש- $x_0 = 0$ הרי ש- $R = 1$. נבדוק את $x = -1$: $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} \\cdot x^n}{n} = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1} (-1)^n}{n} = \\sum_{n=1}^{\\infty} \\frac{(-1)^{2n+1}}{n} = \\sum_{n=1}^{\\infty} \\frac{-1}{n} = -\\sum_{n=1}^{\\infty} \\frac{1}{n} = -\\infty$. אזי תחום ההתכנסות הטור הוא $(-1, 1]$.",
+      "topic": "תחום ההתכנסות"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": "5",
+      "name": "תחום התכנסות של $\\sum \\frac{x^n}{n!}$",
+      "statement_he": "מצאו את תחום ההתכנסות של טור החזקות $\\sum_{n=0}^{\\infty} \\frac{x^n}{n!} = \\frac{1}{0!} + \\frac{x}{1!} + \\frac{x^2}{2!} + \\dots$",
+      "proof_he": "פתרון: נפליק יהיה לכל ערכים של $x$ הטור מתכנס בהחלט ממבחן המנה: $\\lim_{n \\to \\infty} \\frac{\\left[ \\frac{|x|^{n+1}}{(n+1)!} \\right]}{\\left[ \\frac{|x|^n}{n!} \\right]} = \\lim_{n \\to \\infty} \\frac{|x|^{n+1} \\cdot n!}{|x|^n (n+1)!} = \\lim_{n \\to \\infty} \\frac{|x|}{n+1} = 0 < 1$. אזי הטור מתכנס בהחלט לכל $x \\in \\mathbb{R}$ ולכן $R = \\infty$ ותחום ההתכנסות הוא $(-\\infty, \\infty) = \\mathbb{R}$.",
+      "topic": "תחום ההתכנסות"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": "6",
+      "name": "תחום התכנסות של $\\sum n^n x^n$",
+      "statement_he": "מצאו את תחום ההתכנסות של טור החזקות $\\sum_{n=1}^{\\infty} n^n x^n = x + 2^2 \\cdot x^2 + 3^3 \\cdot x^3 + \\dots$",
+      "proof_he": "פתרון: נשים $\\heartsuit$ לכל $x \\neq 0$, $\\lim_{n \\to \\infty} |n^n x^n| = \\lim_{n \\to \\infty} (n|x|)^n = \\infty$. אזי הטור מתבדר מתנאי הכרחי לכל $x \\neq 0$. אזי $R = 0$ ותחום ההתכנסות הטור הוא $\\{0\\}$.",
+      "topic": "תחום ההתכנסות"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "4",
+      "name": "קושי-הדמר (נוסחת רדיוס ההתכנסות)",
+      "statement_he": "תהי $x_0 \\in \\mathbb{R}$ ותהי $(a_n)_{n=0}^{\\infty}$ סדרה של מס' ממש'ים. יהי $R$ רדיוס ההתכנסות של טור החזקות $\\sum_{n=0}^{\\infty} a_n (x-x_0)^n$. נניח ש-ק\"ם הגבול באופן הרחב $L = \\lim_{n \\to \\infty} \\sqrt[n]{|a_n|}$. $(i)$ אם $L = 0$ אזי $R = \\infty$. $(ii)$ אם $L = \\infty$ אזי $R = 0$. $(iii)$ אם $0 < L < \\infty$ אזי $R = \\frac{1}{L}$.",
+      "proof_he": "מסקנה 3: נרצה לסמן בקיצור $R = \\lim_{n \\to \\infty} \\frac{1}{\\sqrt[n]{|a_n|}}$ ולהשתמש באומסכמה ש- $\\frac{1}{\\infty} = 0$ ו- $\\frac{1}{0^+} = \\infty$. הוכחה: $(i)$ נניח כי $L = 0$. נרצה להוכיח שהטור מתכנס בהחלט לכל $x \\in \\mathbb{R}$. ונתשמש במבחן השורש: $\\lim_{n \\to \\infty} \\sqrt[n]{|a_n (x-x_0)^n|} = \\lim_{n \\to \\infty} \\sqrt[n]{|a_n| \\cdot |x-x_0|^n} = \\lim_{n \\to \\infty} \\left[ \\sqrt[n]{|a_n|} \\cdot |x-x_0| \\right] = L \\cdot |x-x_0| = 0 < 1$. אזי הטור מתכנס בהחלט ממבחן השורש. $(ii)$ נניח כי $L = \\infty$. נרצה להוכיח שהטור מתבדר אם $x \\neq x_0$. יהי $x \\neq x_0$. אזי $\\lim_{n \\to \\infty} \\sqrt[n]{|a_n (x-x_0)^n|} = \\lim_{n \\to \\infty} \\sqrt[n]{|a_n| \\cdot |x-x_0|^n} = \\lim_{n \\to \\infty} \\left[ \\sqrt[n]{|a_n|} \\cdot |x-x_0| \\right] = L \\cdot |x-x_0| = \\infty$. אזי ק\"ם $N_1 \\in \\mathbb{N}$ כך שלכל $n \\geq N_1$, $\\sqrt[n]{|a_n (x-x_0)^n|} \\geq 1$ ולכן $|a_n (x-x_0)^n| \\geq 1$ לכל $n \\geq N_1$. נניח בשלילה ש- $\\lim_{n \\to \\infty} a_n (x-x_0)^n = 0$. אזי $\\lim_{n \\to \\infty} |a_n (x-x_0)^n| = 0$ ולכן מאריתמטיקה הבאה $\\lim_{n \\to \\infty} |a_n (x-x_0)^n| = 0 \\geq 1$. סתי' רחל! אזי $\\lim_{n \\to \\infty} a_n (x-x_0)^n \\neq 0$ ולכן מתנאי הכרחי, הטור מתבדר. $(iii)$ נניח כי $0 < L < \\infty$ ונוכיח כי $R = \\frac{1}{L}$. נסמן $R_1 = \\frac{1}{L}$. נוכיח שהטור מתכנס בהחלט אם $|x-x_0| < R_1$ ומתבדר אם $|x-x_0| > R_1$ ומכך נקבל $R = R_1$ ונסיים. יהי $|x-x_0| < R_1$. נראה כי הטור מתכנס בהחלט. $\\lim_{n \\to \\infty} \\sqrt[n]{|a_n (x-x_0)^n|} = \\lim_{n \\to \\infty} \\sqrt[n]{|a_n| \\cdot |x-x_0|^n} = \\lim_{n \\to \\infty} \\left[ \\sqrt[n]{|a_n|} \\cdot |x-x_0| \\right] = L \\cdot |x-x_0| = \\frac{|x-x_0|}{R_1} < 1$.",
+      "topic": "רדיוס ההתכנסות"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמה",
+      "number": "1",
+      "name": "הטור הגיאומטרי",
+      "statement_he": "$\\sum_{n=0}^{\\infty} x^n = 1 + x + x^2 + \\dots$ באמקרה זה $x_0 = 0$ ו- $a_0 = a_1 = a_2 = \\dots = 1$. ראינו שהטור מתכנס אם\"ם $|x| < 1$ ואם\"ם $|x| < 1$ מתקיים $\\sum_{n=0}^{\\infty} x^n = \\frac{1}{1-x}$.",
+      "proof_he": null,
+      "topic": "טורי חזקות"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמה",
+      "number": "2",
+      "name": "טור חזקות סביב $x_0=-1$",
+      "statement_he": "$\\sum_{n=1}^{\\infty} \\frac{(x+1)^{3n}}{n} = (x+1)^3 + \\frac{(x+1)^6}{2} + \\frac{(x+1)^9}{3} + \\dots$ באמקרה זה $x_0 = -1$, $a_3 = 1$, $a_6 = \\frac{1}{2}$, $a_9 = \\frac{1}{3}$, $a_0 = a_1 = a_2 = 0$.",
+      "proof_he": null,
+      "topic": "טורי חזקות"
+    }
+  ]
+}

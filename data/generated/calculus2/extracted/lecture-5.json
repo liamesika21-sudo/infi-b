@@ -1,0 +1,259 @@
+{
+  "lecture": 5,
+  "date": "30.4.26",
+  "topics": ["טורים", "טור הנדסי", "טור הרמוני", "התכנסות טורים", "מבחני השוואה"],
+  "items": [
+    {
+      "kind": "theorem",
+      "label": "משפט 0",
+      "number": "0",
+      "name": "הטור ההנדסי",
+      "statement_he": "יהי $q \\in \\mathbb{R}$. אז: $$\\sum_{n=0}^{\\infty} q^n = \\begin{cases} \\dfrac{1}{1-q} & |q|<1 \\\\ \\text{מתבדר} & |q| \\geq 1 \\end{cases}$$",
+      "proof_he": "פושטות נוכיח עבור $q \\neq 1$. נחשב: $$\\sum_{n=0}^{\\infty} q^n = \\lim_{N \\to \\infty} \\sum_{n=0}^{N} q^n = \\lim_{N \\to \\infty}(1 + q + q^2 + \\dots + q^N)$$ כאשר המעבר לפי הגדרה. $$= \\lim_{N \\to \\infty} \\frac{1 - q^{N+1}}{1-q} = \\begin{cases} \\dfrac{1}{1-q} & |q|<1 \\\\ \\text{אין גבול} & |q| \\geq 1 \\end{cases}$$ כאשר המעבר לפי נוסחת סכום של סדרה הנדסית. אם $q=1$, נחשב בנפרד: $$\\sum_{n=0}^{\\infty} q^n = \\lim_{N \\to \\infty} \\sum_{n=0}^{N} q^n = \\lim_{N \\to \\infty}(1 + q + q^2 + \\dots + q^N)$$ כאשר המעבר לפי הגדרה. $q=1$: $$= \\lim_{N \\to \\infty}(1 + 1 + \\dots + 1) = \\lim_{N \\to \\infty}(N+1) = \\infty$$",
+      "topic": "טור הנדסי"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט 1",
+      "number": "1",
+      "name": "הטור הטלסקופי",
+      "statement_he": "$$\\sum_{n=2}^{\\infty} \\frac{1}{n(n-1)} = 1$$ (הטור מתכנס)",
+      "proof_he": "הטור מתכנס. $$\\sum_{n=2}^{\\infty} \\frac{1}{n(n-1)} = \\lim_{N \\to \\infty} \\sum_{n=2}^{N} \\frac{1}{n(n-1)} = \\lim_{N \\to \\infty} \\sum_{n=2}^{N} \\left(\\frac{1}{n-1} - \\frac{1}{n}\\right)$$ כאשר המעבר הראשון לפי הגדרה, והמעבר השני לפי פירוק לשברים פשוטים. $$= \\lim_{N \\to \\infty}\\left[\\left(1 - \\frac{1}{2}\\right) + \\left(\\frac{1}{2} - \\frac{1}{3}\\right) + \\dots + \\left(\\frac{1}{N-1} - \\frac{1}{N}\\right)\\right]$$ (כאשר $n=2$, $n=3$, ..., $n=N$). $$= \\lim_{N \\to \\infty}\\left[1 - \\frac{1}{2} + \\frac{1}{2} - \\frac{1}{3} + \\dots + \\frac{1}{N-1} - \\frac{1}{N}\\right]$$ סכום טלסקופי + צמצום אברים. $$= \\lim_{N \\to \\infty}\\left(1 - \\frac{1}{N}\\right) = 1$$",
+      "topic": "טור הנדסי"
+    },
+    {
+      "kind": "definition",
+      "label": "הגדרה",
+      "number": null,
+      "name": "סכום חלקי וטור",
+      "statement_he": "יהי $0 \\leq k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה. אם נרצה את סכום הסדרה $(a_n)_{n=k}^{\\infty}$ נגדיר את סדרת הסכומים החלקיים שלה $(S_N)_{N=k}^{\\infty}$, המוגדרת ע\\\"י $$S_N = \\sum_{n=k}^{N} a_n \\quad \\text{עבור } N \\geq k.$$ $S_k = a_k$, $\\quad S_{k+1} = a_k + a_{k+1}$, $\\quad S_{k+2} = a_k + a_{k+1} + a_{k+2}$.",
+      "proof_he": null,
+      "topic": "התכנסות טורים"
+    },
+    {
+      "kind": "definition",
+      "label": "הגדרה 1",
+      "number": "1",
+      "name": "הגדרת הטור",
+      "statement_he": "$$\\sum_{n=k}^{\\infty} a_n = \\lim_{N \\to \\infty} \\sum_{n=k}^{N} a_n = \\lim_{N \\to \\infty} S_N$$ (כאשר המעבר הראשון לפי הגדרה). ואם הגבול קיים אומרים שהטור $\\sum_{n=k}^{\\infty} a_n$ מתכנס, אחרת אומרים שסדרת הסכומים החלקיים של $(a_n)_{n=k}^{\\infty}$ מתבדרת.",
+      "proof_he": null,
+      "topic": "התכנסות טורים"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט 2",
+      "number": "2",
+      "name": "הטור ההרמוני",
+      "statement_he": "$$\\sum_{n=1}^{\\infty} \\frac{1}{n} = 1 + \\frac{1}{2} + \\frac{1}{3} + \\dots$$ מתבדר.",
+      "proof_he": "נניח בשלילה שהטור ההרמוני מתכנס. אזי קיים $S \\in \\mathbb{R}$ כך ש- $S = \\sum_{n=1}^{\\infty} \\frac{1}{n}$. נביט בסדרת הסכומים החלקיים $(S_N)_{N=1}^{\\infty}$ של הטור ההרמוני, כאשר הסדרה המוגדרת ע\\\"י $$S_N = \\sum_{n=1}^{N} \\frac{1}{n} \\quad \\text{עבור } N \\in \\mathbb{N}.$$ אזי $\\lim_{N \\to \\infty} S_N = S$ ולכן גם $\\lim_{N \\to \\infty} S_{2N} = S$ (מסדרה היורשת). אזי מאלגברה: $$\\lim_{N \\to \\infty}(S_{2N} - S_N) = S - S = 0.$$ אבל, עבור $N \\in \\mathbb{N}$: $$S_{2N} - S_N = \\sum_{n=1}^{2N} \\frac{1}{n} - \\sum_{n=1}^{N} \\frac{1}{n} = \\sum_{n=N+1}^{2N} \\frac{1}{n}$$ $$= \\frac{1}{N+1} + \\frac{1}{N+2} + \\dots + \\frac{1}{2N} \\geq \\frac{1}{2N} + \\frac{1}{2N} + \\dots + \\frac{1}{2N} = N \\cdot \\frac{1}{2N} = \\frac{1}{2}$$ (במונה הקטן ביותר; $N$ מחוברים מימין ו-$N$ מחוברים משמאל). אזי $S_{2N} - S_N \\geq \\frac{1}{2}$ עבור $N \\in \\mathbb{N}$, אזי מאריתמטיקה $$0 = \\lim_{N \\to \\infty}(S_{2N} - S_N) \\geq \\frac{1}{2}.$$ קיבלנו סתירה.",
+      "topic": "טור הרמוני"
+    },
+    {
+      "kind": "definition",
+      "label": "הגדרה",
+      "number": null,
+      "name": "זנב הטור",
+      "statement_he": "תהי $(a_n)_{n=0}^{\\infty}$ סדרה אם מס\\\"מ ו'הי $0 \\leq k \\in \\mathbb{Z}$. הזנב ה-$k$ של הטור $\\sum_{n=0}^{\\infty} a_n$ מוגדר להיות הטור $\\sum_{n=k}^{\\infty} a_n$.",
+      "proof_he": null,
+      "topic": "התכנסות טורים"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט 3",
+      "number": "3",
+      "name": "התכנסות הטור והזנב",
+      "statement_he": "(הזנבות) תהי $(a_n)_{n=0}^{\\infty}$ סדרה אם מס\\\"מ ויהי $0 \\leq k \\in \\mathbb{Z}$. אזי הטור $\\sum_{n=k}^{\\infty} a_n$ מתכנס אם\\\"ם זנב הטור $\\sum_{n=k}^{\\infty} a_n$ מתכנס ובמקרה זה: $$\\sum_{n=0}^{\\infty} a_n = \\sum_{n=k}^{\\infty} a_n + \\sum_{n=0}^{k-1} a_n.$$",
+      "proof_he": "$\\Leftarrow$: נניח שהטור $\\sum_{n=0}^{\\infty} a_n$ מתכנס. אזי קיים $S \\in \\mathbb{R}$ כך ש- $S = \\sum_{n=0}^{\\infty} a_n$. אזי $$\\sum_{n=k}^{\\infty} a_n = \\lim_{N \\to \\infty} \\sum_{n=k}^{N} a_n = \\lim_{N \\to \\infty}\\left[\\sum_{n=0}^{N} a_n - \\sum_{n=0}^{k-1} a_n\\right]$$ כאשר המעבר לפי הגדרה (החלק השמאלי שואף ל-$S$ ב-$N$). $$= S - \\sum_{n=0}^{k-1} a_n$$ ומכאן ולכן הטור מתכנס וגם: $$\\sum_{n=0}^{\\infty} a_n = S = \\sum_{n=k}^{\\infty} a_n + \\sum_{n=0}^{k-1} a_n.$$ $\\Rightarrow$: נניח שזנב הטור $\\sum_{n=k}^{\\infty} a_n$ מתכנס. אזי קיים $S_1 \\in \\mathbb{R}$ כך ש- $S_1 = \\sum_{n=k}^{\\infty} a_n$. אזי $$\\sum_{n=0}^{\\infty} a_n = \\lim_{N \\to \\infty} \\sum_{n=0}^{N} a_n = \\lim_{N \\to \\infty}\\left[\\sum_{n=k}^{N} a_n + \\sum_{n=0}^{k-1} a_n\\right]$$ כאשר המעבר לפי הגדרה (החלק השמאלי שואף ל-$S_1$ ב-$N$). $$= S_1 + \\sum_{n=0}^{k-1} a_n = \\sum_{n=k}^{\\infty} a_n + \\sum_{n=0}^{k-1} a_n.$$",
+      "topic": "התכנסות טורים"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט 4",
+      "number": "4",
+      "name": "לינאריות הטור",
+      "statement_he": "(אלגברת טורים / לינאריות) יהי $0 \\leq k \\in \\mathbb{Z}$ ותהיינה $(a_n)_{n=k}^{\\infty}$ ו-$(b_n)_{n=k}^{\\infty}$ שתי סדרות אם מס\\\"מ. יהיו $\\alpha, \\beta \\in \\mathbb{R}$. נניח שהטורים $\\sum_{n=k}^{\\infty} a_n$ ו-$\\sum_{n=k}^{\\infty} b_n$ מתכנסים. אז הטור $\\sum_{n=k}^{\\infty}(\\alpha a_n + \\beta b_n)$ מתכנס ובנוסף: $$\\sum_{n=k}^{\\infty}(\\alpha a_n + \\beta b_n) = \\alpha \\sum_{n=k}^{\\infty} a_n + \\beta \\sum_{n=k}^{\\infty} b_n.$$",
+      "proof_he": "מהיות הטורים $\\sum_{n=k}^{\\infty} a_n$ ו-$\\sum_{n=k}^{\\infty} b_n$ מתכנסים, קיימים $S_1, S_2 \\in \\mathbb{R}$ כך ש- $S_1 = \\sum_{n=k}^{\\infty} a_n$ ו-$S_2 = \\sum_{n=k}^{\\infty} b_n$. אזי $$\\sum_{n=k}^{\\infty}(\\alpha a_n + \\beta b_n) = \\lim_{N \\to \\infty} \\sum_{n=k}^{N}(\\alpha a_n + \\beta b_n) = \\lim_{N \\to \\infty}\\left[\\alpha \\sum_{n=k}^{N} a_n + \\beta \\sum_{n=k}^{N} b_n\\right]$$ כאשר המעבר לפי הגדרה + סכום סופי, ופירוק לפי לינאריות הסכום הסופי + אלגברת גבולות. $$= \\alpha S_1 + \\beta S_2 = \\alpha \\sum_{n=k}^{\\infty} a_n + \\beta \\sum_{n=k}^{\\infty} b_n.$$",
+      "topic": "התכנסות טורים"
+    },
+    {
+      "kind": "corollary",
+      "label": "מסקנה 1",
+      "number": "1",
+      "name": "סכום והפרש טורים",
+      "statement_he": "יהי $0 \\leq k \\in \\mathbb{Z}$ ותהיינה $(a_n)_{n=k}^{\\infty}$ ו-$(b_n)_{n=k}^{\\infty}$ שתי סדרות אם מס\\\"מ. נניח שהטורים $\\sum_{n=k}^{\\infty} a_n$ ו-$\\sum_{n=k}^{\\infty} b_n$ מתכנסים. אז הטור $\\sum_{n=k}^{\\infty}(a_n \\pm b_n)$ מתכנס ובנוסף: $$\\sum_{n=k}^{\\infty}(a_n \\pm b_n) = \\sum_{n=k}^{\\infty} a_n \\pm \\sum_{n=k}^{\\infty} b_n.$$",
+      "proof_he": "נבחר $\\alpha = 1$ ו-$\\beta = \\pm 1$ ונשתמש במשפט הקודם.",
+      "topic": "התכנסות טורים"
+    },
+    {
+      "kind": "corollary",
+      "label": "מסקנה 2",
+      "number": "2",
+      "name": "כפל בקבוע",
+      "statement_he": "יהי $0 \\leq k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה אם מס\\\"מ. יהי $0 \\neq \\alpha \\in \\mathbb{R}$. אז הטור $\\sum_{n=k}^{\\infty} a_n$ מתכנס אם\\\"ם הטור $\\sum_{n=k}^{\\infty}(\\alpha \\cdot a_n)$ מתכנס, ובנוסף: $$\\sum_{n=k}^{\\infty}(\\alpha \\cdot a_n) = \\alpha \\sum_{n=k}^{\\infty} a_n.$$",
+      "proof_he": "$\\Leftarrow$: נניח שהטור $\\sum_{n=k}^{\\infty} a_n$ מתכנס. אזי (נבחר $\\beta = 0$) ממשפט הלינאריות, אזי הטור $\\sum_{n=k}^{\\infty}(\\alpha \\cdot a_n)$ מתכנס ו- $$\\sum_{n=k}^{\\infty}(\\alpha \\cdot a_n) = \\alpha \\sum_{n=k}^{\\infty} a_n.$$ $\\Rightarrow$: נניח שהטור $\\sum_{n=k}^{\\infty}(\\alpha \\cdot a_n)$ מתכנס. אזי מהכיוון הראשון (נכפל ב-$\\frac{1}{\\alpha}$), $$\\sum_{n=k}^{\\infty} a_n = \\sum_{n=k}^{\\infty}\\left(\\frac{1}{\\alpha} \\cdot \\alpha \\cdot a_n\\right) = \\frac{1}{\\alpha} \\sum_{n=k}^{\\infty}(\\alpha \\cdot a_n)$$ נכפל ב-$\\alpha$ את שני האגפים מקבל $$\\sum_{n=k}^{\\infty}(\\alpha \\cdot a_n) = \\alpha \\sum_{n=k}^{\\infty} a_n.$$",
+      "topic": "התכנסות טורים"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמאות",
+      "number": "1",
+      "name": "טור עם פירוק לטורים הנדסיים",
+      "statement_he": "$$\\sum_{n=0}^{\\infty}\\left(\\frac{1}{2^{n+1}} - \\frac{1}{2^{2n}}\\right) = \\sum_{n=0}^{\\infty}\\left(\\frac{1}{2} \\cdot \\frac{1}{2^n} - \\frac{1}{4^n}\\right) = \\frac{1}{2}\\sum_{n=0}^{\\infty}\\frac{1}{2^n} - \\sum_{n=0}^{\\infty}\\left(\\frac{1}{4}\\right)^n = \\frac{1}{2} \\cdot \\frac{1}{1 - 1/2} - \\frac{1}{1 - 1/4}$$ (לפי לינאריות; $\\frac{1}{1-q}$).",
+      "proof_he": null,
+      "topic": "טור הנדסי"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמאות",
+      "number": "2",
+      "name": "טור הנדסי החל מ-n=2",
+      "statement_he": "$$\\sum_{n=2}^{\\infty}\\left(\\frac{3}{4}\\right)^n = \\sum_{n=0}^{\\infty}\\left(\\frac{3}{4}\\right)^n - 1 - \\frac{3}{4} = \\frac{1}{1 - 3/4} - 1 - \\frac{3}{4}$$",
+      "proof_he": null,
+      "topic": "טור הנדסי"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמאות",
+      "number": "3",
+      "name": "הפרש טור מתבדר",
+      "statement_he": "$$\\sum_{n=10}^{\\infty}\\left((0.99)^n - \\frac{1}{n}\\right) = \\sum_{n=10}^{\\infty}(0.99)^n - \\sum_{n=10}^{\\infty}\\frac{1}{n} = \\underbrace{\\text{מתבדר}}_{\\text{(זנב של הרמוני)}} - \\underbrace{\\text{מתכנס}}_{\\text{(זנב של הנדסי)}} = \\text{מתבדר}$$",
+      "proof_he": null,
+      "topic": "התכנסות טורים"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל 1",
+      "number": "1",
+      "name": "טור טלסקופי עם ln",
+      "statement_he": "חשבו את ערך הטור הבא או הוכיחו שהוא מתבדר באופן הבא: $$\\sum_{n=1}^{\\infty} \\ln\\left(1 + \\frac{1}{n}\\right)$$",
+      "proof_he": "נחשב: $$\\sum_{n=1}^{\\infty} \\ln\\left(1 + \\frac{1}{n}\\right) = \\lim_{N \\to \\infty} \\sum_{n=1}^{N} \\ln\\left(1 + \\frac{1}{n}\\right) = \\lim_{N \\to \\infty} \\sum_{n=1}^{N} \\ln\\left(\\frac{n+1}{n}\\right)$$ כאשר המעבר לפי הגדרה. $$= \\lim_{N \\to \\infty} \\sum_{n=1}^{N}(\\ln(n+1) - \\ln n) =$$ $$= \\lim_{N \\to \\infty}\\left[(\\ln 2 - \\ln 1) + (\\ln 3 - \\ln 2) + \\dots + (\\ln(N+1) - \\ln N)\\right]$$ (כאשר $n=1$, $n=2$, ..., $n=N$). $$= \\lim_{N \\to \\infty}\\left[\\ln 2 - \\ln 1 + \\ln 3 - \\ln 2 + \\dots + \\ln(N+1) - \\ln N\\right]$$ $$= \\lim_{N \\to \\infty}[\\ln(N+1) - \\ln 1] = \\lim_{N \\to \\infty} \\ln(N+1) = \\lim_{x \\to \\infty} \\ln x = \\infty$$ (המעבר ב-$N$ לפי הגדרה).",
+      "topic": "התכנסות טורים"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל 2",
+      "number": "2",
+      "name": "תוספת בחינה 25% מסויית",
+      "statement_he": "יוסי. יש תוספת שאם $25\\%$ של הסויית. כמה כאן ויוסי שואל את הבחינה. אלך יוסי. ובכל תוספת שאן גם של תוספת הסויי שלו? [לא ברור]",
+      "proof_he": "$$3 + \\frac{1}{4} \\cdot 3 + \\frac{1}{4^2} \\cdot 3 + \\frac{1}{4^3} \\cdot 3 + \\dots = \\sum_{n=0}^{\\infty} \\frac{3}{4^n} = 3 \\cdot \\sum_{n=0}^{\\infty} \\frac{1}{4^n} = 3 \\cdot \\frac{1}{1 - 1/4} = \\frac{3}{3/4} = 4$$ (לינאריות).",
+      "topic": "טור הנדסי"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט 5",
+      "number": "5",
+      "name": "תנאי הכרחי להתכנסות",
+      "statement_he": "(תנאי הכרחי) יהי $0 \\leq k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה אם מס\\\"מ. נניח כי הטור $\\sum_{n=k}^{\\infty} a_n$ מתכנס. אזי $$\\lim_{n \\to \\infty} a_n = 0.$$",
+      "proof_he": "מהיות הטור $\\sum_{n=k}^{\\infty} a_n$ מתכנס קיים $S \\in \\mathbb{R}$ כך ש- $S = \\sum_{n=k}^{\\infty} a_n$. אזי $$\\lim_{n \\to \\infty} a_n = \\lim_{N \\to \\infty} a_N = \\lim_{N \\to \\infty}\\left[\\underbrace{\\sum_{n=k}^{N} a_n}_{S_N} - \\underbrace{\\sum_{n=k}^{N-1} a_n}_{S_{N-1}}\\right] = S - S = 0.$$",
+      "topic": "התכנסות טורים"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמאות",
+      "number": "1",
+      "name": "מבחן התבדרות עם גבול אבר",
+      "statement_he": "האם הטור $$\\sum_{n=3}^{\\infty} \\frac{2n-1}{3n+7}$$ מתבדר כי...",
+      "proof_he": "$$\\lim_{n \\to \\infty} a_n = \\lim_{n \\to \\infty} \\frac{2n-1}{3n+7} = \\lim_{n \\to \\infty} \\frac{2 - 1/n}{3 + 7/n} = \\frac{2}{3}$$ אזי $\\lim_{n \\to \\infty} a_n \\neq 0$ ולכן מהשלילת התנאי ההכרחי הטור מתבדר.",
+      "topic": "התכנסות טורים"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמאות",
+      "number": "2",
+      "name": "מבחן התבדרות cos",
+      "statement_he": "האם הטור $$\\sum_{n=1}^{\\infty} \\cos\\left(\\frac{1}{n}\\right)$$ מתבדר כי...",
+      "proof_he": "$$\\lim_{n \\to \\infty} a_n = \\lim_{n \\to \\infty} \\cos\\frac{1}{n} = \\lim_{x \\to 0} \\cos x = 1 \\neq 0$$ (כאשר $x_n = \\frac{1}{n}$ הינה). אזי $\\lim_{n \\to \\infty} a_n \\neq 0$ ולכן מהשלילת התנאי ההכרחי הטור מתבדר.",
+      "topic": "התכנסות טורים"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמאות",
+      "number": "3",
+      "name": "הרמוני - תנאי הכרחי לא מספיק",
+      "statement_he": "$$\\sum_{n=1}^{\\infty} \\frac{1}{n}$$ אבל מתבדר. כאן המשפט יוצא הכיוון: אם נכון רק כיוון ההפך ($\\lim_{n \\to \\infty} a_n = 0 \\;\\not\\!\\!\\!\\Rightarrow\\; \\sum_{n=k}^{\\infty} a_n$ מתכנס)",
+      "proof_he": "$$\\lim_{n \\to \\infty} a_n = \\lim_{n \\to \\infty} \\frac{1}{n} = 0$$",
+      "topic": "טור הרמוני"
+    },
+    {
+      "kind": "definition",
+      "label": "הגדרה",
+      "number": null,
+      "name": "טור אי-שלילי",
+      "statement_he": "יהי $0 \\leq k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה אם מס\\\"מ. נאמר שהטור $\\sum_{n=k}^{\\infty} a_n$ הוא טור אי-שלילי, אם $a_n \\geq 0$ עבור $n \\geq k$.",
+      "proof_he": null,
+      "topic": "התכנסות טורים"
+    },
+    {
+      "kind": "note",
+      "label": "הערה",
+      "number": "2",
+      "name": "סדרת סכומים חלקיים מונוטונית עולה",
+      "statement_he": "אם הטור $\\sum_{n=k}^{\\infty} a_n$ הינו אי\\\"ש, אזי סדרת הסכומים החלקיים $(S_N)_{N=k}^{\\infty}$ הינה מונוטונית עולה. כאן עבור $N \\geq k$: $$S_{N+1} - S_N = \\sum_{n=k}^{N+1} a_n - \\sum_{n=k}^{N} a_n = a_{N+1} \\geq 0,$$ ולכן $S_N \\leq S_{N+1}$ עבור $N \\geq k$. אזי אם הטור אי\\\"ש - שלו מתכנס ובמקרה ההרחב ו- $$\\sum_{n=k}^{\\infty} a_n = \\lim_{N \\to \\infty} S_N = \\sup\\{S_N : N \\geq k\\}$$ אם הטור מתכנס לפי שאם הטור מתכנס אם סדרה $(S_N)_{N=k}^{\\infty}$ חסומה מלעיל, ואם סדרה $(S_N)_{N=k}^{\\infty}$ לא חסומה מלעיל, אז $\\sum_{n=k}^{\\infty} a_n = \\infty$.",
+      "proof_he": null,
+      "topic": "התכנסות טורים"
+    },
+    {
+      "kind": "definition",
+      "label": "הגדרה",
+      "number": null,
+      "name": "סימון התכנסות אי-שלילי",
+      "statement_he": "יהי $0 \\leq k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה אם מס\\\"מ. אם הטור $\\sum_{n=k}^{\\infty} a_n$ הינו אי\\\"ש מתכנס נאמר כי נסמן $\\sum_{n=k}^{\\infty} a_n < \\infty$ אם הטור $\\sum_{n=k}^{\\infty} a_n$ מתכנס.",
+      "proof_he": null,
+      "topic": "התכנסות טורים"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט 6",
+      "number": "6",
+      "name": "מבחן ההשוואה",
+      "statement_he": "(מבחן ההשוואה לטורים אי-שליליים) יהי $0 \\leq k \\in \\mathbb{Z}$ ותהיינה $(a_n)_{n=k}^{\\infty}$ ו-$(b_n)_{n=k}^{\\infty}$ שתי סדרות אם מס\\\"מ. נניח כי: (i) $\\;0 \\leq a_n \\leq b_n$, עבור $n \\geq k$. (ii) $\\;\\sum_{n=k}^{\\infty} b_n < \\infty$. אז $\\sum_{n=k}^{\\infty} a_n < \\infty$ ובנוסף: $$\\sum_{n=k}^{\\infty} a_n \\leq \\sum_{n=k}^{\\infty} b_n.$$",
+      "proof_he": "מהיות, מנתון, קיים $S \\in \\mathbb{R}$ כך ש- $$S = \\sum_{n=k}^{\\infty} b_n = \\sup\\left\\{\\sum_{n=k}^{N} b_n : N \\geq k\\right\\}.$$ תהי $(S_N)_{N=k}^{\\infty}$ את סדרת הסכומים החלקיים של הטור $\\sum_{n=k}^{\\infty} a_n$, שהיא $S_N = \\sum_{n=k}^{N} a_n$ עבור $N \\geq k$. מהיות $a_n \\geq 0$ עבור $n \\geq k$, הטור $\\sum_{n=k}^{\\infty} a_n$ אי\\\"ש ולכן עבור $N \\geq k$: $$S_N = \\sum_{n=k}^{N} a_n \\leq \\sum_{n=k}^{N} b_n \\leq S$$ (כאשר אי השוויון הראשון מ-$a_n \\leq b_n$ עבור $n$ (סכום סופי), ואי השוויון השני כי $S$ חסם מלעיל). אזי $S_N \\leq S$ עבור $N \\geq k$ ולכן $(S_N)_{N=k}^{\\infty}$ חסומה מלעיל. אזי גם $S$. אזי גם מתכנסת (עולה + חסומה מלעיל) ולכן הטור $\\sum_{n=k}^{\\infty} a_n < \\infty$ ובנוסף $$\\sum_{n=k}^{\\infty} a_n = \\lim_{N \\to \\infty} S_N = \\sup\\{S_N : N \\geq k\\} \\leq S = \\sum_{n=k}^{\\infty} b_n.$$",
+      "topic": "מבחני השוואה"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל 3",
+      "number": "3",
+      "name": "מבחן השוואה - קביעת התכנסות",
+      "statement_he": "קבעו האם גם את מהטורים הבאים מתכנס או מתבדר.",
+      "proof_he": "(1) הטור $\\sum_{n=1}^{\\infty} \\frac{1}{n^2+1}$. הטור אי\\\"ש. נביט: מאחר ש- $$\\sum_{n=2}^{\\infty} \\frac{1}{n^2+1} \\leq \\sum_{n=2}^{\\infty} \\frac{1}{n^2} \\leq \\sum_{n=2}^{\\infty} \\frac{1}{n(n-1)} < \\infty$$ (טלסקופי). אזי ממבחן ההשוואה ולכן $\\sum_{n=2}^{\\infty} \\frac{1}{n^2+1} < \\infty$. ו- $\\sum_{n=1}^{\\infty} \\frac{1}{n^2+1} < \\infty$ כי גם הזנב מתכנס. ($a \\leq b < \\infty \\Rightarrow a < \\infty$). (2) הטור $1 + \\frac{1}{3} + \\frac{1}{5} + \\frac{1}{7} + \\dots$. הטור אי\\\"ש. נביט: $$1 + \\frac{1}{3} + \\frac{1}{5} + \\frac{1}{7} + \\dots = \\sum_{n=1}^{\\infty} \\frac{1}{2n-1} \\geq \\sum_{n=1}^{\\infty} \\frac{1}{2n} = \\frac{1}{2} \\sum_{n=1}^{\\infty} \\frac{1}{n} = \\infty$$ (הרמוני). אזי ממבחן ההשוואה $1 + \\frac{1}{3} + \\frac{1}{5} + \\frac{1}{7} + \\dots = \\infty$. ($a \\geq b = \\infty \\Rightarrow a = \\infty$).",
+      "topic": "מבחני השוואה"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט 7",
+      "number": "7",
+      "name": "טור ה-p ההרמוני",
+      "statement_he": "(הטור ה-$p$ ההרמוני) יהי $p \\in \\mathbb{R}$. אז: $$\\sum_{n=1}^{\\infty} \\frac{1}{n^p} = \\begin{cases} \\text{מתכנס} & p>1 \\\\ \\text{מתבדר} & p \\leq 1 \\end{cases}$$",
+      "proof_he": null,
+      "topic": "מבחני השוואה"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמאות",
+      "number": null,
+      "name": "p-הרמוני דוגמאות",
+      "statement_he": "$$\\sum_{n=1}^{\\infty} \\frac{1}{n^{1.1}} < \\infty \\quad (p = 1.1 \\text{ הרמוני}), \\qquad \\sum_{n=1}^{\\infty} \\frac{1}{\\sqrt{n}} = \\infty \\quad (p = 1/2 \\text{ הרמוני})$$",
+      "proof_he": null,
+      "topic": "מבחני השוואה"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט 8",
+      "number": "8",
+      "name": "מבחן ההשוואה הגבולי",
+      "statement_he": "(מבחן ההשוואה הגבולי לטורים אי-שליליים) יהי $0 \\leq k \\in \\mathbb{Z}$ ותהיינה $(a_n)_{n=k}^{\\infty}$ ו-$(b_n)_{n=k}^{\\infty}$ שתי סדרות אם מס\\\"מ. נניח כי: (i) $\\;a_n > 0$ ו-$b_n > 0$, עבור $n \\geq k$. (ii) קיים $L \\in \\mathbb{R}$ כך ש- $L > 0$ ו- $$L = \\lim_{n \\to \\infty} \\frac{a_n}{b_n}.$$ אז $\\sum_{n=k}^{\\infty} a_n < \\infty$ אם\\\"ם $\\sum_{n=k}^{\\infty} b_n < \\infty$.",
+      "proof_he": null,
+      "topic": "מבחני השוואה"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל 4",
+      "number": "4",
+      "name": "מבחן השוואה גבולי - דוגמאות",
+      "statement_he": "קבעו האם גם את מהטורים הבאים מתכנס או מתבדר.",
+      "proof_he": "(1) הטור $\\sum_{n=1}^{\\infty} \\frac{1}{n^2-n+3}$. נביט: ניב בסדרה $(b_n)_{n=1}^{\\infty}$ המוגדרת ע\\\"י $b_n = \\frac{1}{n^2}$ עבור $n \\in \\mathbb{N}$. נחשב: $$L = \\lim_{n \\to \\infty} \\frac{a_n}{b_n} = \\lim_{n \\to \\infty} \\frac{\\left(\\frac{1}{n^2-n+3}\\right)}{\\left(\\frac{1}{n^2}\\right)} = \\lim_{n \\to \\infty} \\frac{n^2}{n^2-n+3} = \\lim_{n \\to \\infty} \\frac{1}{1 - \\frac{1}{n} + \\frac{3}{n^2}} = 1$$ אזי הטור $\\sum_{n=1}^{\\infty} \\frac{1}{n^2-n+3}$ מתכנס בדיוק כמו הטור ה-$2$ הרמוני. (2) הטור $\\sum_{n=1}^{\\infty} \\frac{1}{\\sqrt{n^{1.5}-n+3}}$. נביט: ניב בסדרה $(b_n)_{n=1}^{\\infty}$ המוגדרת ע\\\"י $b_n = \\frac{1}{n^{3/4}}$ עבור $n \\in \\mathbb{N}$. נחשב: $$L = \\lim_{n \\to \\infty} \\frac{a_n}{b_n} = \\lim_{n \\to \\infty} \\frac{\\left(\\frac{1}{\\sqrt{n^{1.5}-n+3}}\\right)}{\\left(\\frac{1}{n^{3/4}}\\right)} = \\lim_{n \\to \\infty} \\frac{n^{3/4}}{\\sqrt{n^{1.5}-n+3}}$$ $$= \\lim_{n \\to \\infty} \\sqrt{\\frac{n^{3/2}}{n^{3/2}-n+3}} = \\lim_{n \\to \\infty} \\sqrt{\\frac{1}{1 - \\frac{1}{n^{1/2}} + \\frac{3}{n^{3/2}}}} = 1$$ אזי הטור מתבדר בדיוק כמו הטור ה-$3/4$ הרמוני. טבלה: $\\sum_{n=1}^{\\infty} a_n$ מול $\\sum_{n=1}^{\\infty} b_n$: $\\sum_{n=1}^{\\infty} \\frac{1}{n^3+n}$ מול $\\sum_{n=1}^{\\infty} \\frac{1}{n^3}$ — מתכנס; $\\sum_{n=1}^{\\infty} \\frac{n}{\\sqrt{n^5+n}}$ מול $\\sum_{n=1}^{\\infty} \\frac{1}{\\sqrt{n}}$ — מתבדר; $\\sum_{n=1}^{\\infty} \\frac{n^3}{\\sqrt[3]{n^{10}+5}}$ מול $\\sum_{n=1}^{\\infty} \\frac{1}{n^{1/3}}$ — מתבדר; $\\sum_{n=1}^{\\infty} \\arctan n$ — מתבדר (תנאי הכרחי); $\\sum_{n=1}^{\\infty}\\left(\\arctan n - \\frac{\\pi}{2}\\right)$ — [לא ברור]",
+      "topic": "מבחני השוואה"
+    }
+  ]
+}

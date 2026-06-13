@@ -1,0 +1,259 @@
+{
+  "lecture": 1,
+  "date": "19.3.26",
+  "topics": ["סדרות", "גבול סדרה", "סדרות חסומות", "מונוטוניות", "התכנסות והתבדרות", "תת-סדרות"],
+  "items": [
+    {
+      "kind": "definition",
+      "label": "הגדרה",
+      "number": null,
+      "name": "הגדרת סדרה",
+      "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$. סדרה של מספרים ממשיים, המסומנת ב-$(a_n)_{n=k}^{\\infty}$, מוגדרת כפונקציה\n$$a : \\{n \\in \\mathbb{Z} : n \\ge k\\} \\longrightarrow \\mathbb{R} ,$$\nכאשר לכל $n \\ge k$, $a_n$ הוא ערך הפונקציה ב-$n$, ופורמלית, $a_n = a(n)$, ונקרא אבר כללי, או האבר ה-$n$-י בסדרה $(a_n)$.",
+      "proof_he": null,
+      "topic": "סדרות"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמה",
+      "number": "1",
+      "name": "הסדרה $(-1)^n$",
+      "statement_he": "נביט בסדרה $(a_n)_{n=0}^{\\infty}$ המוגדרת ע\"י: $a_n = (-1)^n$ לכל $n \\ge 0$. $a_0 = (-1)^0 = 1$. $a_n : 1, -1, 1, -1, 1, -1, \\ldots$",
+      "proof_he": null,
+      "topic": "סדרות"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמה",
+      "number": "2",
+      "name": "סדרת פיבונאצ'י",
+      "statement_he": "נביט בסדרת פיבונאצ'י $(F_n)_{n=0}^{\\infty}$ המוגדרת ע\"י:\n$$\\begin{cases} F_n = F_{n-1} + F_{n-2} & \\forall n \\ge 2 \\\\ F_0 = 0, \\; F_1 = 1 \\end{cases}$$\n$F_n : 0, 1, 1, 2, 3, 5, 8, 13, \\ldots$",
+      "proof_he": null,
+      "topic": "סדרות"
+    },
+    {
+      "kind": "definition",
+      "label": "הגדרה",
+      "number": null,
+      "name": "שוויון סדרות",
+      "statement_he": "יהי $0 \\le k_1, k_2 \\in \\mathbb{Z}$ ותהיינה $(a_n)_{n=k_1}^{\\infty}$ ו-$(b_n)_{n=k_2}^{\\infty}$ שתי סדרות של מספרים ממשיים. נאמר כי הן שוות ונסמן $(a_n)_{n=k_1}^{\\infty} = (b_n)_{n=k_2}^{\\infty}$ אם:\n(i) $k_1 = k_2$\n(ii) לכל $n \\ge k_1$ מתקיים $a_n = b_n$.",
+      "proof_he": null,
+      "topic": "סדרות"
+    },
+    {
+      "kind": "definition",
+      "label": "הגדרה",
+      "number": null,
+      "name": "גבול סדרה",
+      "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה של מספרים ממשיים. יהי $L \\in \\mathbb{R}$. נאמר כי $L$ הוא הגבול של הסדרה $(a_n)_{n=k}^{\\infty}$ (או שהסדרה מתכנסת ל-$L$) ונסמן $\\lim_{n \\to \\infty} a_n = L$, אם לכל $\\varepsilon > 0$ קיים $N \\in \\mathbb{N}$ כך שלכל $n \\ge N$ מתקיים $|a_n - L| < \\varepsilon$.",
+      "proof_he": null,
+      "topic": "גבול סדרה"
+    },
+    {
+      "kind": "note",
+      "label": "הערה",
+      "number": "1",
+      "name": "השוואה לגבול פונקציה באינסוף",
+      "statement_he": "ההגדרה לעיל מזכירה את ההגדרה של גבול פונקציה: $\\lim_{x \\to \\infty} f(x) = L$ אם לכל $\\varepsilon > 0$ קיים $M > 0$ כך שלכל $x > M$ מתקיים $|f(x) - L| < \\varepsilon$.",
+      "proof_he": null,
+      "topic": "גבול סדרה"
+    },
+    {
+      "kind": "note",
+      "label": "הערה",
+      "number": null,
+      "name": "פעולות על גבולות סדרות",
+      "statement_he": "כל המשפטים של גבולות פונקציות באינסוף, ובפרט 1 ופרק 1, נכונים לסדרות:\n(i) יחידות הגבול\n(ii) פעולות $\\pm$, $\\cdot$, $\\div$, $\\sqrt{\\;}$, $|\\cdot|$ וכאשר הם מוגדרים\n(iii) מונוטוניות הגבול\n(iv) סנדביץ'\n(v) $a \\times b$.",
+      "proof_he": null,
+      "topic": "גבול סדרה"
+    },
+    {
+      "kind": "definition",
+      "label": "הגדרה",
+      "number": null,
+      "name": "סדרה חסומה",
+      "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה של מספרים ממשיים. יהי $L \\in \\mathbb{R}$. נאמר כי:\n(i) $(a_n)_{n=k}^{\\infty}$ חסומה מלעיל אם קיים $M \\in \\mathbb{R}$ כך שלכל $n \\ge k$ מתקיים $a_n \\le M$ ($M$ נקרא חסם מלעיל של הסדרה).\n(ii) $(a_n)_{n=k}^{\\infty}$ חסומה מלרע אם קיים $m \\in \\mathbb{R}$ כך שלכל $n \\ge k$ מתקיים $a_n \\ge m$ ($m$ נקרא חסם מלרע של הסדרה).\n(iii) $(a_n)_{n=k}^{\\infty}$ חסומה אם קיים $M > 0$ כך שלכל $n \\ge k$ מתקיים $|a_n| \\le M$.",
+      "proof_he": null,
+      "topic": "סדרות חסומות"
+    },
+    {
+      "kind": "note",
+      "label": "הערה",
+      "number": "2",
+      "name": "חסומה אם\"ם חסומה מלעיל ומלרע",
+      "statement_he": "$(a_n)_{n=k}^{\\infty}$ חסומה אם\"ם היא חסומה מלעיל ומלרע ונפתור.",
+      "proof_he": null,
+      "topic": "סדרות חסומות"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": "1",
+      "name": "$\\lim 1/n = 0$",
+      "statement_he": "הוכיחו באמצעות הגדרת הגבול של הסדרה כי\n$$\\lim_{n \\to \\infty} \\frac{1}{n} = 0 .$$",
+      "proof_he": "יהי $\\varepsilon > 0$. מארכימדיות, קיים $N \\in \\mathbb{N}$ כך ש-$\\boxed{N > \\frac{1}{\\varepsilon}}$. יהי $N \\in \\mathbb{N}$ כך ש-$N > \\frac{1}{\\varepsilon}$. אזי לכל $n \\ge N$:\n$$\\left| \\frac{1}{n} - 0 \\right| = \\frac{1}{n} \\underset{n \\ge N}{\\le} \\frac{1}{N} < \\varepsilon .$$",
+      "topic": "גבול סדרה"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": "2",
+      "name": "$\\lim \\lfloor \\alpha n \\rfloor / n = \\alpha$",
+      "statement_he": "יהי $\\alpha > 0$. חשבו או הוכיחו את הגבול\n$$\\lim_{n \\to \\infty} \\frac{\\lfloor \\alpha n \\rfloor}{n} .$$",
+      "proof_he": "פתרון: שים $\\heartsuit$ כי לכל $n \\in \\mathbb{N}$,\n$$\\alpha - \\frac{1}{n} = \\frac{\\alpha n - 1}{n} \\underset{x-1 < \\lfloor x \\rfloor}{<} \\frac{\\lfloor \\alpha n \\rfloor}{n} \\underset{\\lfloor x \\rfloor \\le x}{\\le} \\frac{\\alpha n}{n} = \\alpha .$$\nאזי $\\alpha - \\frac{1}{n} \\le \\frac{\\lfloor \\alpha n \\rfloor}{n} \\le \\alpha$, וכאשר $n \\to \\infty$ האגף השמאלי שואף ל-$\\alpha$ והאגף הימני שואף ל-$\\alpha$, ולכן מסנדביץ' הגבול הוא $\\alpha$.",
+      "topic": "גבול סדרה"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": "3",
+      "name": "$\\lim \\sin n / n$",
+      "statement_he": "חשבו או הוכיחו את הגבול\n$$\\lim_{n \\to \\infty} \\frac{\\sin n}{n} .$$",
+      "proof_he": "פתרון: $\\lim_{n \\to \\infty} \\frac{\\sin n}{n} \\underset{\\text{סנדביץ'}}{=} 0$ (כי $|\\sin n| \\le 1$ לכל $n$).",
+      "topic": "גבול סדרה"
+    },
+    {
+      "kind": "definition",
+      "label": "הגדרה",
+      "number": null,
+      "name": "התבדרות ל-$\\pm\\infty$ והתכנסות",
+      "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה של מספרים ממשיים. נאמר כי:\n(i) $\\lim_{n \\to \\infty} a_n = \\infty$ אם לכל $M > 0$ קיים $N \\in \\mathbb{N}$ כך שלכל $n \\ge N$ מתקיים $a_n > M$.\n(ii) $\\lim_{n \\to \\infty} a_n = -\\infty$ אם לכל $M < 0$ קיים $N \\in \\mathbb{N}$ כך שלכל $n \\ge N$ מתקיים $a_n < M$.\n(iii) $(a_n)_{n=1}^{\\infty}$ מתכנסת אם קיים $L \\in \\mathbb{R}$ כך ש-$\\lim_{n \\to \\infty} a_n = L$, ואם אינה מתכנסת היא מתבדרת (divergent).\n(iv) $(a_n)_{n=1}^{\\infty}$ מתבדרת בהחלט אם הגבול שלה אינו קיים. במקרים הבאים ערכי הסדרה מתקיים:\n(א) $(a_n)_{n=1}^{\\infty}$ מתבדרת\n(ב) $\\lim_{n \\to \\infty} a_n = \\infty$\n(ג) $\\lim_{n \\to \\infty} a_n = -\\infty$.",
+      "proof_he": null,
+      "topic": "התכנסות והתבדרות"
+    },
+    {
+      "kind": "definition",
+      "label": "הגדרה",
+      "number": null,
+      "name": "מונוטוניות",
+      "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה של מספרים ממשיים. נאמר כי:\n(i) $(a_n)_{n=k}^{\\infty}$ עולה אם לכל $n \\in \\mathbb{N}$, $a_{n+1} \\ge a_n$.\n(ii) $(a_n)_{n=k}^{\\infty}$ יורדת אם לכל $n \\in \\mathbb{N}$, $a_{n+1} \\le a_n$.\n(iii) $(a_n)_{n=k}^{\\infty}$ עולה ממש אם לכל $n \\in \\mathbb{N}$, $a_{n+1} > a_n$.\n(iv) $(a_n)_{n=k}^{\\infty}$ יורדת ממש אם לכל $n \\in \\mathbb{N}$, $a_{n+1} < a_n$.\n(v) $(a_n)_{n=k}^{\\infty}$ מונוטונית אם (i) או (ii).\n(vi) $(a_n)_{n=k}^{\\infty}$ מונוטונית ממש אם (iii) או (iv).",
+      "proof_he": null,
+      "topic": "מונוטוניות"
+    },
+    {
+      "kind": "note",
+      "label": "הערה",
+      "number": "3",
+      "name": "פעולות על מונוטוניות באלגברה",
+      "statement_he": "כל המשפטים של אלגברה ופרק 1 נכונים בעבור פעולת המונוטוניות בתחב:\n(i) אלגברה ($+\\infty, \\infty \\cdot \\infty, \\ldots$)\n(ii) סנדביץ'\n(iii) סדרה מונוטונית מתכנסת באופן הרחב.\nננסח באופן את (iii):",
+      "proof_he": null,
+      "topic": "מונוטוניות"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "1",
+      "name": "עולה וחסומה מלעיל מתכנסת ל-sup",
+      "statement_he": "תהי $(a_n)_{n=k}^{\\infty}$ סדרה של מספרים ממשיים. נניח כי $(a_n)_{n=k}^{\\infty}$ עולה ואם $(a_n)_{n=k}^{\\infty}$ חסומה מלעיל בתחב, אזי $(a_n)_{n=k}^{\\infty}$ מתכנסת ו-\n$$\\lim_{n \\to \\infty} a_n = \\sup\\{a_n : n \\ge k\\} .$$",
+      "proof_he": "הוכחה: בתרגול 2 שאלה 2ב.",
+      "topic": "מונוטוניות"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "2",
+      "name": "יורדת וחסומה מלרע מתכנסת ל-inf",
+      "statement_he": "תהי $(a_n)_{n=k}^{\\infty}$ סדרה של מספרים ממשיים. נניח כי $(a_n)_{n=k}^{\\infty}$ יורדת ואם $(a_n)_{n=k}^{\\infty}$ חסומה מלרע בתחב, אזי $(a_n)_{n=k}^{\\infty}$ מתכנסת ו-\n$$\\lim_{n \\to \\infty} a_n = \\inf\\{a_n : n \\ge k\\} .$$",
+      "proof_he": "הוכחה: בקווים להוכחה של משפט 1.",
+      "topic": "מונוטוניות"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "3",
+      "name": "התכנסות זנב הסדרה",
+      "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=1}^{\\infty}$ סדרה של מספרים ממשיים. אם $(a_n)_{n=1}^{\\infty}$ מתכנסת אזי $(a_{n+k})_{n=1}^{\\infty}$ מתכנסת ובנוסף\n$$\\lim_{n \\to \\infty} a_{n+k} = \\lim_{n \\to \\infty} a_n .$$",
+      "proof_he": "הוכחה: בתרגול 2 שאלה 2ב.",
+      "topic": "התכנסות והתבדרות"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": "4",
+      "name": "סדרה רקורסיבית $a_{n+2}=\\sqrt{a_n}+\\sqrt{a_{n+1}}$",
+      "statement_he": "נביט בסדרה $(a_n)_{n=1}^{\\infty}$ המוגדרת באמצעות רקורסיה ע\"י:\n$$\\begin{cases} a_{n+2} = \\sqrt{a_n} + \\sqrt{a_{n+1}} & \\forall n \\in \\mathbb{N} \\\\ a_1 = 9, \\; a_2 = 6 \\end{cases}$$\nהוכיחו ש-$(a_n)_{n=1}^{\\infty}$ מתכנסת וחשבו את הגבול שלה.",
+      "proof_he": "פתרון: נוכיח תחילה כי לכל $n \\in \\mathbb{N}$ מתקיים $a_n \\ge 4$ ומכך נראה שהסדרה מוגבלת היטב, ומזה נוכיח את הגבול.\n\nנוכיח כי $a_n \\ge 4$ באינדוקציה על $n$.\n\nבסיס האינדוקציה ($n=1, n=2$): $a_1 = 9 \\ge 4$ ✓, $a_2 = 6 \\ge 4$ ✓.\n\nצעד האינדוקציה ($n, n+1 \\Rightarrow n+2$): יהי $n \\in \\mathbb{N}$ ונניח שהטענה נכונה עבור $n$ ועבור $n+1$, פומר $a_n \\ge 4$ וכן $a_{n+1} \\ge 4$. נוכיח שהטענה נכונה עבור $n+2$:\n$$a_{n+2} = \\underset{\\text{הרקורסיה}}{\\sqrt{a_n}} + \\sqrt{a_{n+1}} \\underset{\\text{הנחת האינדוקציה}}{\\ge} \\sqrt{4} + \\sqrt{4} = 4 .$$\n\nנוכיח כעת שהסדרה $(a_n)_{n=1}^{\\infty}$ יורדת, פומר נוכיח את הטענה $a_{n+1} \\le a_n$ לכל $n \\in \\mathbb{N}$ באינדוקציה על $n$.\n\nבסיס האינדוקציה ($n=1, n=2$): $a_2 = 6 \\le 9 = a_1$ ✓. $a_3 = \\sqrt{a_1} + \\sqrt{a_2} = \\sqrt{9} + \\sqrt{6} = 3 + \\sqrt{6} \\le 6 = a_2$ ✓ (כי $\\sqrt{6} \\le 3$ כי $6 \\le 9$).\n\nצעד האינדוקציה ($n-1, n \\Rightarrow n+1$): יהי $2 \\le n \\in \\mathbb{N}$ ונוכיח שהטענה נכונה עבור $n$ ועבור $n-1$, פומר נניח $a_{n+1} \\le a_n$ (עבור $n$) ו-$a_n \\le a_{n-1}$ (עבור $n-1$). נוכיח שהטענה נכונה עבור $n+1$ ($a_{n+2} \\le a_{n+1}$):\n$$a_{n+2} = \\underset{\\text{הרקורסיה}}{\\sqrt{a_n}} + \\sqrt{a_{n+1}} \\underset{\\text{הנחת האינדוקציה}}{\\le} \\sqrt{a_{n+1}} + \\sqrt{a_n} = a_{n+1} .$$\n\nמכן הסדרה $(a_n)_{n=1}^{\\infty}$ יורדת והמותנה מספ' $4$ ולכן, מתכנסת, פומר, קיים $L \\in \\mathbb{R}$ כך ש-$\\lim_{n \\to \\infty} a_n = L$. עתה נחשב את הגבול $L$:\n$$L = \\lim_{n \\to \\infty} a_n \\underset{\\text{משפט 3}}{=} \\lim_{n \\to \\infty} a_{n+2} \\underset{\\text{הרקורסיה}}{=} \\lim_{n \\to \\infty} \\left( \\sqrt{a_n} + \\sqrt{a_{n+1}} \\right) \\underset{\\text{אלגברה ומשפט 3}}{=} \\sqrt{L} + \\sqrt{L} = 2\\sqrt{L} .$$\nאזי $L = 2\\sqrt{L}$ ולכן $\\sqrt{L} = 2$ או $L = 0$, ולכן $L = 4$ או $L = 0$. נשים $\\heartsuit$ כי\n$$L = \\lim_{n \\to \\infty} a_n \\underset{\\text{יורדת}}{=} \\inf\\{a_n : n \\in \\mathbb{N}\\} \\underset{\\text{מהוכחתנו}}{\\ge} 4 \\implies L \\ge 4 .$$\nולכן $L = 4$.",
+      "topic": "התכנסות והתבדרות"
+    },
+    {
+      "kind": "definition",
+      "label": "הגדרה",
+      "number": null,
+      "name": "תת-סדרה",
+      "statement_he": "תהיינה $(a_n)_{n=1}^{\\infty}$ ו-$(b_k)_{k=1}^{\\infty}$ שתי סדרות של מספרים ממשיים. נאמר כי $(b_k)_{k=1}^{\\infty}$ היא תת-סדרה של $(a_n)_{n=1}^{\\infty}$ אם קיימת סדרה $(n_k)_{k=1}^{\\infty}$ של מספרים טבעיים עולה ממש כך שלכל $k \\in \\mathbb{N}$ מתקיים\n$$b_k = a_{n_k} .$$",
+      "proof_he": null,
+      "topic": "תת-סדרות"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמה",
+      "number": null,
+      "name": "תת-סדרה לדוגמה",
+      "statement_he": "$a_n : \\cancel{a_1} \\; a_2 \\; a_3 \\; \\cancel{a_4} \\; a_5 \\; \\cancel{a_6} \\; \\cancel{a_7} \\; a_8 \\; a_9 \\ldots$\n$n_k : 2, 3, 5, 8, 9, \\ldots$\n$b_1 = a_2, \\; b_2 = a_3, \\; b_3 = a_5, \\; b_4 = a_8, \\; b_5 = a_9$\n$b_k : a_2 \\; a_3 \\; a_5 \\; a_8 \\; a_9 \\ldots$",
+      "proof_he": null,
+      "topic": "תת-סדרות"
+    },
+    {
+      "kind": "note",
+      "label": "הערה",
+      "number": "4",
+      "name": "כל סדרה היא תת-סדרה של עצמה",
+      "statement_he": "נשים $\\heartsuit$ כי כל סדרה היא תת-סדרה של עצמה. בהתקבלה ני $(a_n)_{n=1}^{\\infty}$ ע\"י המתאם תאברים.\nפתרון: נבחר $n_k = 2k$ לכל $k \\in \\mathbb{N}$. שים $\\heartsuit$ כי $(n_k)_{k=1}^{\\infty}$ הינה סדרה של מספרים טבעיים:\n$n_k : 2, 4, 6, 8, \\ldots$\nבמקבה כה $b_k = a_{n_k} = a_{2k}$ לכל $k \\in \\mathbb{N}$ אזי $(a_{2k})_{k=1}^{\\infty}$ הינה תת-סדרה של $(a_n)_{n=1}^{\\infty}$ נתת הסדרה של האברים הזוגיים. באופן דומה, גם $(a_{2k-1})_{k=1}^{\\infty}$ הינה תת-סדרה של $(a_n)_{n=1}^{\\infty}$. באם שתי הסדרות $(a_{2n})_{n=1}^{\\infty}$ ו-$(a_{2n-1})_{n=1}^{\\infty}$ הן וכן תת-סדרות בדוגמה לי.",
+      "proof_he": null,
+      "topic": "תת-סדרות"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "4",
+      "name": "תת-סדרה של מתכנסת מתכנסת לאותו גבול (וירושה)",
+      "statement_he": "(וירושה) תהי $(a_n)_{n=1}^{\\infty}$ סדרה של מספרים ממשיים ותהי $(n_k)_{k=1}^{\\infty}$ סדרה עולה ממש של מספרים טבעיים. נניח כי $(a_n)_{n=1}^{\\infty}$ מתכנסת באמצעות הרחב. אזי תת הסדרה $(a_{n_k})_{k=1}^{\\infty}$ מתכנסת באמצעות הרחב ובנוסף\n$$\\lim_{k \\to \\infty} a_{n_k} = \\lim_{n \\to \\infty} a_n .$$",
+      "proof_he": "הוכחת משפט הירושה:\nמקרה א': נניח שהסדרה $(a_n)_{n=1}^{\\infty}$ מתכנסת, פומר שקיים $L \\in \\mathbb{R}$ כך ש-$\\lim_{n \\to \\infty} a_n = L$. נוכיח כי $\\lim_{k \\to \\infty} a_{n_k} = L$ ונס\"ם.\nיהי $\\varepsilon > 0$. מהיות $\\lim_{n \\to \\infty} a_n = L$ קיים $N_1 \\in \\mathbb{N}$ כך שלכל $n \\ge N_1$ מתקיים\n$$|a_n - L| < \\varepsilon \\quad (*)$$\nנבחר $\\boxed{K = N_1}$ ויהי $k \\ge K$. אזי $n_k \\ge k \\ge K = N_1$ (מהיות $n_k$ סדרה עולה ממש) ולכן $(*)$ מתקיים עבור $n_k$ ולכן\n$$|a_{n_k} - L| \\underset{(*)}{<} \\varepsilon .$$\n\nמקרה ב': נניח כי $\\lim_{n \\to \\infty} a_n = \\infty$. נוכיח כי $\\lim_{k \\to \\infty} a_{n_k} = \\infty$ ונס\"ם.\nיהי $M > 0$. מהיות $\\lim_{n \\to \\infty} a_n = \\infty$ קיים $N_1 \\in \\mathbb{N}$ כך שלכל $n \\ge N_1$ מתקיים\n$$a_n > M \\quad (**)$$\nנבחר $\\boxed{K = N_1}$ ויהי $k \\ge K$. אזי $n_k \\ge k \\ge K = N_1$ (מהיות $n_k$ סדרה עולה ממש) ולכן $(**)$ מתקיים עבור $n_k$ ולכן\n$$a_{n_k} \\underset{(**)}{>} M .$$\n\nמקרה ג': נניח כי $\\lim_{n \\to \\infty} a_n = -\\infty$. נוכיח כי $\\lim_{k \\to \\infty} a_{n_k} = -\\infty$ ונס\"ם.\nיהי $M < 0$. מהיות $\\lim_{n \\to \\infty} a_n = -\\infty$ קיים $N_1 \\in \\mathbb{N}$ כך שלכל $n \\ge N_1$ מתקיים\n$$a_n < M \\quad (**)$$\nנבחר $\\boxed{K = N_1}$ ויהי $k \\ge K$. אזי $n_k \\ge k \\ge K = N_1$ (מהיות $n_k$ סדרה עולה ממש) ולכן $(**)$ מתקיים עבור $n_k$ ולכן\n$$a_{n_k} \\underset{(**)}{<} M .$$",
+      "topic": "תת-סדרות"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": "1",
+      "name": "תת-סדרה עם $n_k \\ge k$",
+      "statement_he": "תהי $(n_k)_{k=1}^{\\infty}$ סדרה עולה ממש של מספרים טבעיים. הוכיחו כי לכל $k \\in \\mathbb{N}$ מתקיים $n_k \\ge k$.",
+      "proof_he": "הוכחה: נוכיח באינדוקציה על $k$.\nבסיס האינדוקציה ($k=1$): $n_1 \\ge 1$ כי $n_1 \\in \\mathbb{N}$.\nצעד האינדוקציה ($k \\Rightarrow k+1$): יהי $k \\in \\mathbb{N}$ ונניח שהטענה נכונה עבור $k$, פומר $n_k \\ge k$. נוכיח שהטענה נכונה עבור $k+1$. מהיות $(n_k)_{k=1}^{\\infty}$ עולה ממש, הרי ש-$n_{k+1} > n_k$. מהיות $n_k, n_{k+1}$ טבעיים, אזי $n_{k+1} \\ge n_k + 1$. ולכן\n$$n_{k+1} \\ge n_k + 1 \\underset{\\text{הנחת האינדוקציה}}{\\ge} k + 1 .$$",
+      "topic": "תת-סדרות"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמה",
+      "number": "1",
+      "name": "תת-סדרת המספרים הראשוניים",
+      "statement_he": "תהי $(p_k)_{k=1}^{\\infty}$ סדרת המספרים הראשוניים, אזי\n$$\\lim_{k \\to \\infty} p_k \\underset{\\text{וירושה}}{=} \\lim_{n \\to \\infty} n = \\infty .$$\nבאותו אופן\n$$\\lim_{k \\to \\infty} \\frac{1}{p_k} \\underset{\\text{וירושה}}{=} \\lim_{n \\to \\infty} \\frac{1}{n} = 0 .$$\n$\\frac{1}{n} : \\cancel{1} \\; \\frac{1}{2} \\; \\frac{1}{3} \\; \\cancel{\\frac{1}{4}} \\; \\frac{1}{5} \\ldots$\n$\\frac{1}{p_k} : \\frac{1}{2} \\; \\frac{1}{3} \\; \\frac{1}{5} \\; \\frac{1}{7} \\; \\frac{1}{11} \\ldots$",
+      "proof_he": null,
+      "topic": "תת-סדרות"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמה",
+      "number": "2",
+      "name": "התבדרות $(-1)^n$ דרך תת-סדרות",
+      "statement_he": "נביט בסדרה $(a_n)_{n=0}^{\\infty}$ המוגדרת ע\"י: $a_n = (-1)^n$ לכל $n \\ge 0$. שים $\\heartsuit$ כי\n$$\\lim_{k \\to \\infty} a_{2k} = \\lim_{k \\to \\infty} (-1)^{2k} = \\lim_{k \\to \\infty} 1 = 1$$\n$$\\lim_{k \\to \\infty} a_{2k-1} = \\lim_{k \\to \\infty} (-1)^{2k-1} = \\lim_{k \\to \\infty} (-1) = (-1)$$\nאזי $\\lim_{n \\to \\infty} (-1)^n$ אינו קיים כי גבולן של תת-סדרות שונה.",
+      "proof_he": null,
+      "topic": "תת-סדרות"
+    },
+    {
+      "kind": "corollary",
+      "label": "מסקנה",
+      "number": "1",
+      "name": "התכנסות זנב דרך תת-סדרה",
+      "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=1}^{\\infty}$ סדרה של מספרים ממשיים. נניח כי $(a_n)_{n=1}^{\\infty}$ מתכנסת באמצעות הרחב. אזי $(a_{n+k})_{n=1}^{\\infty}$ מתכנסת באמצעות הרחב ו-\n$$\\lim_{n \\to \\infty} a_{n+k} = \\lim_{n \\to \\infty} a_n .$$",
+      "proof_he": "הוכחה: $(a_{n+k})_{n=1}^{\\infty}$ הינה תת-סדרה של $(a_n)_{n=1}^{\\infty}$ ולכן מירושה\n$$\\lim_{n \\to \\infty} a_{n+k} = \\lim_{n \\to \\infty} a_n .$$",
+      "topic": "תת-סדרות"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "5",
+      "name": "התכנסות דרך תת-סדרות זוגית ואי-זוגית",
+      "statement_he": "תהי $(a_n)_{n=1}^{\\infty}$ סדרה של מספרים ממשיים. יהי $L \\in \\mathbb{R}$. מ\"ח כי\n$$\\lim_{k \\to \\infty} a_{2k} = \\lim_{k \\to \\infty} a_{2k-1} = L$$\nאזי $(a_n)_{n=1}^{\\infty}$ מתכנסת ו-\n$$\\lim_{n \\to \\infty} a_n = L .$$",
+      "proof_he": "הוכחה: יהי $\\varepsilon > 0$. מהיות $\\lim_{k \\to \\infty} a_{2k} = L$ קיים $K_1 \\in \\mathbb{N}$ כך שלכל $k \\ge K_1$ מתקיים\n$$|a_{2k} - L| < \\varepsilon \\quad (*)$$\nמהיות $\\lim_{k \\to \\infty} a_{2k-1} = L$ קיים $K_2 \\in \\mathbb{N}$ כך שלכל $k \\ge K_2$ מתקיים\n$$|a_{2k-1} - L| < \\varepsilon \\quad (**)$$\nנבחר $\\boxed{N = \\max\\{2K_1, 2K_2 - 1\\}}$ ויהי $n \\ge N$.\nאם $n$ זוגי, אזי קיים $K \\in \\mathbb{N}$ כך ש-$n = 2k$ ולכן $2k = n \\ge N \\ge 2K_1$ ולכן $k \\ge K_1$ ולכן $(*)$ מתקיים עבור $k$ ולכן\n$$|a_n - L| = |a_{2k} - L| \\underset{(*)}{<} \\varepsilon .$$\nאחרת, $n$ אי-זוגי, ולכן קיים $K \\in \\mathbb{N}$ כך ש-$n = 2k-1$, ולכן $2k - 1 = n \\ge N \\ge 2K_2 - 1$ ולכן $k \\ge K_2$ ולכן $(**)$ מתקיים עבור $k$ ולכן\n$$|a_n - L| = |a_{2k-1} - L| \\underset{(**)}{<} \\varepsilon .$$",
+      "topic": "תת-סדרות"
+    }
+  ]
+}

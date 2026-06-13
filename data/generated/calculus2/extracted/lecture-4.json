@@ -1,0 +1,304 @@
+{
+  "lecture": 4,
+  "date": "23.4.26",
+  "topics": ["אינטגרציה בחלקים", "אינטגרציה בהצבה", "אינטגרלים לא אמיתיים (מוכללים)", "מבחני השוואה", "טורים"],
+  "items": [
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "1",
+      "name": "אינטגרציה בחלקים (אינטגרל לא מסוים)",
+      "statement_he": "תהיינה $u, v$ פונקציות גזירות ברציפות ב-$[a,b]$, ויהיו $a, b \\in \\mathbb{R}$ כך ש-$a < b$. אזי\n$$\\int_a^b u'(x)v(x)\\,dx = \\left[u(x)v(x)\\right]_a^b - \\int_a^b u(x)v'(x)\\,dx$$",
+      "proof_he": "$$\\int_a^b u'(x)v(x)\\,dx = \\int_a^b \\left[u'(x)v(x) + u(x)v'(x) - u(x)v'(x)\\right]\\,dx$$\n$$\\underset{\\text{לינאריות}}{=} \\int_a^b \\left[u'(x)v(x) + u(x)v'(x)\\right]\\,dx - \\int_a^b u(x)v'(x)\\,dx$$\n$$= \\int_a^b \\left(u(x)v(x)\\right)'\\,dx - \\int_a^b u(x)v'(x)\\,dx \\underset{\\text{נוסחת ניוטון לייבניץ}}{=}$$\n$$= \\left[u(x)v(x)\\right]_a^b - \\int_a^b u(x)v'(x)\\,dx$$",
+      "topic": "אינטגרציה בחלקים"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "2",
+      "name": "אינטגרציה בהצבה (אינטגרל לא מסוים)",
+      "statement_he": "תהיינה $a, b \\in \\mathbb{R}$ כך ש-$a < b$, ותהי $f$ פונקציה גזירה ברציפות ב-$[a,b]$. תהי $g$ פונקציה רציפה $f \\circ g$ מוגדרת ורציפה ב-$[a,b]$. אזי ($f \\circ g$ נחיתות גזירה ב-$f$ ו-$g$ מונוטוניות) ממש ב-$[a,b]$. אזי\n$$\\int_a^b g(f(x)) \\cdot f'(x)\\,dx = \\int_{f(a)}^{f(b)} g(t)\\,dt$$",
+      "proof_he": "בקורס שעבר. [לא ברור]",
+      "topic": "אינטגרציה בהצבה"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמה",
+      "number": null,
+      "name": "אינטגרציה בחלקים $\\int x\\ln x\\,dx$",
+      "statement_he": "$$\\int_1^3 x\\ln x\\,dx \\underset{\\substack{u'=x \\ \\to \\ u=\\frac{x^2}{2} \\\\ v=\\ln x \\ \\to \\ v'=\\frac{1}{x}}}{=} \\left[\\frac{x^2}{2}\\ln x\\right]_1^3 - \\int_1^3 \\frac{x}{2}\\,dx$$\n$$= \\frac{9}{2}\\cdot\\ln 3 - 0 - \\left[\\frac{x^2}{4}\\right]_1^3 = \\frac{9}{2}\\ln 3 - \\frac{9}{4} + \\frac{1}{4}$$",
+      "proof_he": null,
+      "topic": "אינטגרציה בחלקים"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמה",
+      "number": null,
+      "name": "אינטגרציה בהצבה $\\int xe^{x^2}\\,dx$",
+      "statement_he": "$$\\int_0^2 xe^{x^2}\\,dx \\underset{\\substack{t=x^2 \\\\ dt=2x\\,dx \\ \\to \\ dx=\\frac{dt}{2x}}}{=} \\int_0^4 xe^t \\cdot \\frac{dt}{2x}$$\n$$= \\frac{1}{2}\\int_0^4 e^t\\,dt = \\frac{1}{2}(e^4 - 1)$$",
+      "proof_he": null,
+      "topic": "אינטגרציה בהצבה"
+    },
+    {
+      "kind": "definition",
+      "label": "הגדרה",
+      "number": null,
+      "name": "אינטגרל לא אמיתי על $[a,\\infty)$",
+      "statement_he": "יהי $a \\in \\mathbb{R}$ ותהי $f: [a,\\infty) \\to \\mathbb{R}$. נניח ש-$f$ אינטגרבילית ב-$[a,b]$ לכל $b > a$. נאמר כי האינטגרל הלא אמיתי $\\int_a^\\infty f(x)\\,dx$ מתכנס אם קיים הגבול $\\lim_{b\\to\\infty} \\int_a^b f(x)\\,dx$. במקרה זה נגדיר\n$$\\int_a^\\infty f(x)\\,dx = \\lim_{b\\to\\infty} \\int_a^b f(x)\\,dx$$",
+      "proof_he": null,
+      "topic": "אינטגרלים לא אמיתיים"
+    },
+    {
+      "kind": "definition",
+      "label": "הגדרה",
+      "number": null,
+      "name": "אינטגרל לא אמיתי על $(-\\infty,b]$",
+      "statement_he": "יהי $b \\in \\mathbb{R}$ ותהי $f: (-\\infty,b] \\to \\mathbb{R}$. נניח ש-$f$ אינטגרבילית ב-$[a,b]$ לכל $a < b$. נאמר כי האינטגרל הלא אמיתי $\\int_{-\\infty}^b f(x)\\,dx$ מתכנס אם קיים הגבול $\\lim_{a\\to-\\infty} \\int_a^b f(x)\\,dx$. במקרה זה נגדיר\n$$\\int_{-\\infty}^b f(x)\\,dx = \\lim_{a\\to-\\infty} \\int_a^b f(x)\\,dx$$",
+      "proof_he": null,
+      "topic": "אינטגרלים לא אמיתיים"
+    },
+    {
+      "kind": "definition",
+      "label": "הגדרה",
+      "number": null,
+      "name": "אינטגרל לא אמיתי על $\\mathbb{R}$",
+      "statement_he": "תהי $f: \\mathbb{R} \\to \\mathbb{R}$. נאמר כי $\\int_{-\\infty}^\\infty f(x)\\,dx$ מתכנס אם $\\int_{-\\infty}^0 f(x)\\,dx$ ו-$\\int_0^\\infty f(x)\\,dx$ מתכנסים. במקרה זה נגדיר\n$$\\int_{-\\infty}^\\infty f(x)\\,dx = \\int_{-\\infty}^0 f(x)\\,dx + \\int_0^\\infty f(x)\\,dx$$",
+      "proof_he": null,
+      "topic": "אינטגרלים לא אמיתיים"
+    },
+    {
+      "kind": "definition",
+      "label": "הגדרה",
+      "number": null,
+      "name": "אינטגרל לא אמיתי עם נקודת אי-רציפות בקצה השמאלי",
+      "statement_he": "תהיינה $a, b \\in \\mathbb{R}$ כך ש-$a < b$, ותהי $f$ פונקציה המוגדרת ב-$(a,b]$. נניח ש-$f$ אינטגרבילית ב-$[a+\\delta, b]$ לכל $0 < \\delta < b-a$. נאמר שהאינטגרל הלא אמיתי $\\int_a^b f(x)\\,dx$ מתכנס אם קיים הגבול $\\lim_{\\delta\\to 0^+} \\int_{a+\\delta}^b f(x)\\,dx$. במקרה זה נגדיר\n$$\\int_a^b f(x)\\,dx = \\lim_{\\delta\\to 0^+} \\int_{a+\\delta}^b f(x)\\,dx$$",
+      "proof_he": null,
+      "topic": "אינטגרלים לא אמיתיים"
+    },
+    {
+      "kind": "definition",
+      "label": "הגדרה",
+      "number": null,
+      "name": "אינטגרל לא אמיתי עם נקודת אי-רציפות בקצה הימני",
+      "statement_he": "תהיינה $a, b \\in \\mathbb{R}$ כך ש-$a < b$, ותהי $f$ פונקציה המוגדרת ב-$[a,b)$. נניח ש-$f$ אינטגרבילית ב-$[a, b-\\delta]$ לכל $0 < \\delta < b-a$. נאמר שהאינטגרל הלא אמיתי $\\int_a^b f(x)\\,dx$ מתכנס אם קיים הגבול $\\lim_{\\delta\\to 0^+} \\int_a^{b-\\delta} f(x)\\,dx$. במקרה זה נגדיר\n$$\\int_a^b f(x)\\,dx = \\lim_{\\delta\\to 0^+} \\int_a^{b-\\delta} f(x)\\,dx$$",
+      "proof_he": null,
+      "topic": "אינטגרלים לא אמיתיים"
+    },
+    {
+      "kind": "note",
+      "label": "הערה",
+      "number": "1",
+      "name": "אינטגרל מתכנס בכל נקודות הרציפות",
+      "statement_he": "באופן דומה, נאמר שאינטגרל מתכנס באופן הרחב אם הפולג את הפולס האמיתי קיים בכל נקודות הרציפות. [לא ברור]",
+      "proof_he": null,
+      "topic": "אינטגרלים לא אמיתיים"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמה",
+      "number": "1",
+      "name": "$\\int_0^\\infty e^{-x}\\,dx$",
+      "statement_he": "$$\\int_0^\\infty e^{-x}\\,dx = \\lim_{b\\to\\infty} \\int_0^b e^{-x}\\,dx = \\lim_{b\\to\\infty} \\left[-e^{-x}\\right]_0^b = \\lim_{b\\to\\infty}\\left[-e^{-b} + 1\\right] \\underset{\\text{כי}}{=} 1$$\nנכתוב בקיצור:\n$$\\int_0^\\infty e^{-x}\\,dx = \\left[-e^{-x}\\right]_0^\\infty = -e^{-\\infty} + 1 = 1$$",
+      "proof_he": null,
+      "topic": "אינטגרלים לא אמיתיים"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמה",
+      "number": "2",
+      "name": "$\\int_{-\\infty}^0 \\frac{dx}{1+x^2}$",
+      "statement_he": "$$\\int_{-\\infty}^0 \\frac{dx}{1+x^2} = \\left[\\arctan x\\right]_{-\\infty}^0 = \\arctan 0 - \\arctan(-\\infty) = \\frac{\\pi}{2}$$",
+      "proof_he": null,
+      "topic": "אינטגרלים לא אמיתיים"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמה",
+      "number": "3",
+      "name": "$\\int_0^\\infty \\frac{dx}{1+x^2}$",
+      "statement_he": "$$\\int_0^\\infty \\frac{dx}{1+x^2} = \\left[\\arctan x\\right]_0^\\infty = \\arctan\\infty - \\arctan(0) = \\frac{\\pi}{2}$$",
+      "proof_he": null,
+      "topic": "אינטגרלים לא אמיתיים"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמה",
+      "number": "4",
+      "name": "$\\int_{-\\infty}^\\infty \\frac{dx}{1+x^2}$",
+      "statement_he": "$$\\int_{-\\infty}^\\infty \\frac{dx}{1+x^2} = \\int_{-\\infty}^0 + \\int_0^\\infty = \\frac{\\pi}{2} + \\frac{\\pi}{2} = \\pi$$",
+      "proof_he": null,
+      "topic": "אינטגרלים לא אמיתיים"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמה",
+      "number": "5",
+      "name": "$\\int_0^\\infty \\sin x\\,dx$ מתבדר",
+      "statement_he": "$$\\int_0^\\infty \\sin x\\,dx = \\left[-\\cos x\\right]_0^\\infty = -\\cos\\infty + 1$$\nשווה לא קיים, מתבדר. [האינטגרל מתבדר]",
+      "proof_he": null,
+      "topic": "אינטגרלים לא אמיתיים"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמה",
+      "number": "6",
+      "name": "$\\int_0^1 \\frac{dx}{\\sqrt{1-x^2}}$",
+      "statement_he": "$$\\int_0^1 \\frac{dx}{\\sqrt{1-x^2}} = \\lim_{\\delta\\to 0^+} \\int_0^{1-\\delta} \\frac{dx}{\\sqrt{1-x^2}} = \\lim_{\\delta\\to 0^+} \\left[\\arcsin x\\right]_0^{1-\\delta}$$\n$$\\underset{\\text{רציפות}}{=} \\left[\\arcsin x\\right]_0^{1^-} = \\arcsin 1^- - \\arcsin 0 = \\frac{\\pi}{2}$$",
+      "proof_he": null,
+      "topic": "אינטגרלים לא אמיתיים"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמה",
+      "number": "7",
+      "name": "$\\int_{-1}^0 \\frac{dx}{\\sqrt{1-x^2}}$",
+      "statement_he": "$$\\int_{-1}^0 \\frac{dx}{\\sqrt{1-x^2}} = \\lim_{\\delta\\to 0^+} \\int_{-1+\\delta}^0 \\frac{dx}{\\sqrt{1-x^2}} = \\lim_{\\delta\\to 0^+} \\left[\\arcsin x\\right]_{-1+\\delta}^0$$\n$$\\underset{\\text{רציפות}}{=} \\left[\\arcsin x\\right]_{-1^+}^0 = \\arcsin 0 - \\arcsin(-1) = \\frac{\\pi}{2}$$",
+      "proof_he": null,
+      "topic": "אינטגרלים לא אמיתיים"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמה",
+      "number": "8",
+      "name": "$\\int_{-1}^1 \\frac{dx}{\\sqrt{1-x^2}}$",
+      "statement_he": "$$\\int_{-1}^1 \\frac{dx}{\\sqrt{1-x^2}} = \\int_{-1}^0 + \\int_0^1 = \\pi$$",
+      "proof_he": null,
+      "topic": "אינטגרלים לא אמיתיים"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמה",
+      "number": "9",
+      "name": "$\\int_0^3 \\frac{dx}{\\ln x}$",
+      "statement_he": "$$\\int_0^3 \\frac{dx}{\\ln x} = \\int_0^{1/2} + \\int_{1/2}^1 + \\int_1^3$$",
+      "proof_he": null,
+      "topic": "אינטגרלים לא אמיתיים"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "3",
+      "name": "אינטגרל $\\frac{1}{x^p}$ (תנאי התכנסות לפי $p$)",
+      "statement_he": "יהי $p \\in \\mathbb{R}$. אזי\n$$\\text{(i)} \\quad \\int_1^\\infty \\frac{dx}{x^p} = \\begin{cases} \\dfrac{1}{p-1} & p>1 \\\\[6pt] \\infty & p \\le 1 \\end{cases}$$\n$$\\text{(ii)} \\quad \\int_0^1 \\frac{dx}{x^p} = \\begin{cases} \\dfrac{1}{1-p} & p<1 \\\\[6pt] \\infty & p \\ge 1 \\end{cases}$$",
+      "proof_he": "(i) נחשב לפי המקרים. נניח $p \\ne 1$.\n$$\\int_1^\\infty \\frac{dx}{x^p} = \\int_1^\\infty x^{-p}\\,dx \\underset{\\int x^\\alpha}{=} \\left[\\frac{x^{-p+1}}{-p+1}\\right]_1^\\infty = \\frac{\\infty^{1-p}}{1-p} - \\frac{1}{1-p} = \\begin{cases} \\infty & p<1 \\\\[4pt] \\dfrac{1}{p-1} & p>1 \\end{cases}$$\nאם $p=1$:\n$$\\int_1^\\infty \\frac{dx}{x} = \\left[\\ln|x|\\right]_1^\\infty = \\ln\\infty - \\ln 1 = \\infty - 0 = \\infty$$\nסיכום:\n$$\\int_1^\\infty \\frac{dx}{x^p} = \\begin{cases} \\dfrac{1}{p-1} & p>1 \\\\[4pt] \\infty & p \\le 1 \\end{cases}$$\n(ii) נניח $p \\ne 1$.\n$$\\int_0^1 \\frac{dx}{x^p} = \\int_0^1 x^{-p}\\,dx \\underset{\\int x^\\alpha}{=} \\left[\\frac{x^{-p+1}}{-p+1}\\right]_{0^+}^1 = \\frac{1}{1-p} - \\frac{(0^+)^{1-p}}{1-p} = \\begin{cases} \\dfrac{1}{1-p} & p<1 \\\\[4pt] \\infty & p>1 \\end{cases}$$\nאם $p=1$:\n$$\\int_0^1 \\frac{dx}{x} = \\left[\\ln|x|\\right]_{0^+}^1 = \\ln 1 - \\ln 0^+ = 0 - (-\\infty) = \\infty$$\nסיכום:\n$$\\int_0^1 \\frac{dx}{x^p} = \\begin{cases} \\dfrac{1}{1-p} & p<1 \\\\[4pt] \\infty & p \\ge 1 \\end{cases}$$",
+      "topic": "אינטגרלים לא אמיתיים"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמה",
+      "number": null,
+      "name": "ערכי $\\int \\frac{1}{x^p}$ עבור $p=2$ ו-$p=1/2$",
+      "statement_he": "$$\\int_1^\\infty \\frac{dx}{x^2} \\underset{p>1}{=} \\frac{1}{2-1} = 1 \\qquad \\int_0^1 \\frac{dx}{x^2} = \\infty$$\n$$\\int_1^\\infty \\frac{dx}{\\sqrt{x}} \\underset{p<1}{=} \\infty \\qquad \\int_0^1 \\frac{dx}{\\sqrt{x}} = \\frac{1}{1-1/2} = 2$$",
+      "proof_he": null,
+      "topic": "אינטגרלים לא אמיתיים"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "2",
+      "name": "מבחן ההשוואה (לאינטגרלים)",
+      "statement_he": "יהי $a \\in \\mathbb{R}$ ותהיינה $f, g$ שתי פונקציות המוגדרות ב-$[a,\\infty)$. נניח כי\n(i) $0 \\le f(x) \\le g(x)$ לכל $x \\ge a$.\n(ii) $f, g$ רציפות ב-$[a,b]$ לכל $b > a$.\n(iii) $\\int_a^\\infty g(x)\\,dx$ מתכנס.\nאזי $\\int_a^\\infty f(x)\\,dx$ מתכנס, ובנוסף,\n$$\\int_a^\\infty f(x)\\,dx \\le \\int_a^\\infty g(x)\\,dx$$",
+      "proof_he": "נגדיר בפונקציה המצברת $F$:\n$$F(x) = \\int_a^x f(t)\\,dt \\quad \\text{לכל } x \\ge a.$$\nמהיות $f$ אינטגרבילית ב-$[a,x]$ לכל $x > a$, ומהיות $F(a) = \\int_a^a f(t)\\,dt = 0$, הרי ש-$F$ מוגדרת.\nהיטב. נשים לב נוכיח ש-$F$ עולה.\nיהיו $a \\le x_1 < x_2$. נוכיח ש-$F(x_1) \\le F(x_2)$.\n$$F(x_2) - F(x_1) = \\int_a^{x_2} f(t)\\,dt - \\int_a^{x_1} f(t)\\,dt = \\int_{x_1}^{x_2} f(t)\\,dt \\underset{\\text{מונוטוניות}}{\\ge} \\int_{x_1}^{x_2} 0\\,dx = 0$$\nובכך הראינו $F(x_1) \\le F(x_2)$ כלומר $F$ עולה.\nבאותו האופן, נגדיר בפונקציה המצברת $G$:\n$$G(x) = \\int_a^x g(t)\\,dt \\quad \\text{לכל } x \\ge a.$$\nגם $G$ מוגדרת היטב ועולה. בנוסף, לכל $x \\ge a$,\n$$F(x) = \\int_a^x f(t)\\,dt \\underset{\\text{מונוטוניות}}{\\le} \\int_a^x g(t)\\,dt = G(x)$$\nמהיות $\\int_a^\\infty g(x)\\,dx$ מתכנס, קיים $S \\in \\mathbb{R}$ כך ש-\n$$S = \\int_a^\\infty g(x)\\,dx = \\lim_{x\\to\\infty} \\int_a^x g(t)\\,dt = \\lim_{x\\to\\infty} G(x)$$\nאזי לכל $x \\ge a$,\n$$F(x) \\le G(x) \\le \\sup\\{G(x) : x \\ge a\\} \\underset{\\text{עולה}}{=} \\lim_{x\\to\\infty} G(x) = S$$\nכלומר $S$ חסם מלעיל של $F$. אזי\n$$\\int_a^\\infty f(x)\\,dx \\underset{\\text{הגדרה}}{=} \\lim_{x\\to\\infty} \\int_a^x f(t)\\,dt = \\lim_{x\\to\\infty} F(x) \\underset{\\text{עולה}}{=} \\sup\\{F(x) : x \\ge a\\} \\underset{\\text{מונוטוניות}}{\\le} S = \\int_a^\\infty g(x)\\,dx$$",
+      "topic": "מבחני השוואה"
+    },
+    {
+      "kind": "definition",
+      "label": "הגדרה",
+      "number": null,
+      "name": "התכנסות בהחלט (אינטגרל)",
+      "statement_he": "יהי $a \\in \\mathbb{R}$ ותהי $f$ פונקציה המוגדרת ב-$(a,\\infty]$. נאמר כי $f$ אינטגרבילית הלא אמיתי $\\int_a^\\infty f(x)\\,dx$ מתכנס בהחלט אם $\\int_a^\\infty |f(x)|\\,dx < \\infty$.",
+      "proof_he": null,
+      "topic": "מבחני השוואה"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "3",
+      "name": "התכנסות בהחלט גוררת התכנסות",
+      "statement_he": "(מבחן ההתכנסות בהחלט גוררת התכנסות עבור אינטגרלים) אם $f$ אינטגרבילית הלא אמיתי $\\int_a^\\infty f(x)\\,dx$ מתכנס בהחלט אז $\\int_a^\\infty f(x)\\,dx$ מתכנס.",
+      "proof_he": "נשים לב, לכל $x \\ge a$ מתקיים:\n$$0 \\le |f(x)| - f(x) \\le 2|f(x)|$$\n(כי $f(x) \\le |f(x)|$ ו-$-f(x) \\le |f(x)|$).\nאזי ממבחן ההשוואה,\n$$\\int_a^\\infty \\left[|f(x)| - f(x)\\right]\\,dx \\le \\int_a^\\infty 2|f(x)|\\,dx = 2\\int_a^\\infty |f(x)|\\,dx < \\infty$$\nובכך $\\int_a^\\infty \\left[|f(x)| - f(x)\\right]\\,dx < \\infty$. אזי\n$$\\int_a^\\infty f(x)\\,dx = \\int_a^\\infty \\left[|f(x)| - \\left(|f(x)| - f(x)\\right)\\right]\\,dx = \\text{מתכנס} - \\text{מתכנס} = \\text{מתכנס}$$",
+      "topic": "מבחני השוואה"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמה",
+      "number": null,
+      "name": "התכנסות $\\int_1^\\infty \\frac{x}{\\sqrt{x^5+x+1}}\\,dx$ במבחן השוואה",
+      "statement_he": "קבעו האם האינטגרל הלא אמיתי הבא מתכנס:\n$$\\int_1^\\infty \\frac{x}{\\sqrt{x^5+x+1}}\\,dx$$",
+      "proof_he": "פתרון: נשתמש ב-ג.\n$$\\int_1^\\infty \\frac{x}{\\sqrt{x^5+x+1}}\\,dx \\le \\int_1^\\infty \\frac{x\\,dx}{\\sqrt{x^5}} = \\int_1^\\infty \\frac{dx}{x^{1.5}} \\underset{p=1.5}{<} \\infty$$\nאזי $\\int_1^\\infty \\frac{x}{\\sqrt{x^5+x+1}}\\,dx < \\infty$. [$a < \\infty$]",
+      "topic": "מבחני השוואה"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמה",
+      "number": null,
+      "name": "התבדרות $\\int_1^\\infty \\frac{dx}{\\sqrt{x}-\\frac{1}{2}}$",
+      "statement_he": "קבעו האם האינטגרל הלא אמיתי הבא מתכנס:\n$$\\int_1^\\infty \\frac{dx}{\\sqrt{x}-\\frac{1}{2}}$$",
+      "proof_he": "פתרון:\n$$\\int_1^\\infty \\frac{dx}{\\sqrt{x}-\\frac{1}{2}} \\ge \\int_1^\\infty \\frac{dx}{\\sqrt{x}} \\underset{p<1}{=} \\infty$$\nאזי $\\int_1^\\infty \\frac{dx}{\\sqrt{x}-\\frac{1}{2}} = \\infty$. [מתבדר]",
+      "topic": "מבחני השוואה"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמה",
+      "number": null,
+      "name": "התבדרות $\\int_1^\\infty \\frac{dx}{1+3x+\\sqrt{x}}$",
+      "statement_he": "קבעו האם האינטגרל הלא אמיתי הבא מתכנס:\n$$\\int_1^\\infty \\frac{dx}{1+3x+\\sqrt{x}}$$",
+      "proof_he": "פתרון:\n$$\\int_1^\\infty \\frac{dx}{1+3x+\\sqrt{x}} \\underset{1+\\sqrt{x}\\le x+x}{\\ge} \\int_1^\\infty \\frac{dx}{3x+2x} = \\int_1^\\infty \\frac{dx}{5x} = \\frac{1}{5}\\int_1^\\infty \\frac{dx}{x} = \\infty$$\nאזי $\\int_1^\\infty \\frac{dx}{1+3x+\\sqrt{x}} = \\infty$.",
+      "topic": "מבחני השוואה"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמה",
+      "number": null,
+      "name": "$\\int_0^1 \\frac{dx}{x^2+\\sqrt{x}}$ עם מבחן השוואה",
+      "statement_he": "קבעו האם האינטגרל הלא אמיתי הבא מתכנס:\nפתרון: לפי מבחן ההשוואה נותר נשאר ניסוח, ל-$0 < \\delta < 1$:\n$$\\int_0^1 \\frac{dx}{x^2+\\sqrt{x}} \\le \\int_0^1 \\frac{dx}{x^2} = \\infty$$\n$$\\int_0^1 \\frac{dx}{x^2+\\sqrt{x}} \\le \\int_0^1 \\frac{dx}{\\sqrt{x}} < \\infty$$",
+      "proof_he": null,
+      "topic": "מבחני השוואה"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמה",
+      "number": null,
+      "name": "התכנסות בהחלט $\\int_1^\\infty \\frac{\\sin x}{1+x^2}\\,dx$",
+      "statement_he": "מתכנס בהחלט (ולכן ג.)\n$$\\int_1^\\infty \\frac{\\sin x}{1+x^2}\\,dx$$",
+      "proof_he": "$$\\int_1^\\infty \\frac{|\\sin x|}{1+x^2}\\,dx \\le \\int_1^\\infty \\frac{1}{1+x^2}\\,dx \\le \\int_1^\\infty \\frac{dx}{x^2} < \\infty$$",
+      "topic": "מבחני השוואה"
+    },
+    {
+      "kind": "definition",
+      "label": "הגדרה",
+      "number": null,
+      "name": "טור אינסופי והתכנסותו",
+      "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^\\infty$ סדרה של מספרים. נאמר שהטור $\\sum_{n=k}^\\infty a_n$ מתכנס אם קיים הגבול $\\lim_{N\\to\\infty} \\sum_{n=k}^N a_n$. במקרה זה נגדיר\n$$\\sum_{n=k}^\\infty a_n = \\lim_{N\\to\\infty} \\sum_{n=k}^N a_n$$",
+      "proof_he": null,
+      "topic": "טורים"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמה",
+      "number": null,
+      "name": "טורים מפורסמים (סדרות חשובות)",
+      "statement_he": "$$\\text{(1)} \\quad \\sum_{n=0}^\\infty \\frac{1}{2^n} = 1 + \\frac{1}{2} + \\frac{1}{4} + \\frac{1}{8} + \\dots = 2$$\n$$\\text{(2)} \\quad \\sum_{n=1}^\\infty \\frac{1}{n} = 1 + \\frac{1}{2} + \\frac{1}{3} + \\frac{1}{4} + \\dots = \\infty$$\n$$\\text{(3)} \\quad \\sum_{n=1}^\\infty \\frac{1}{n^2} = 1 + \\frac{1}{2^2} + \\frac{1}{3^2} + \\frac{1}{4^2} + \\dots = \\frac{\\pi^2}{6}$$\n$$\\text{(4)} \\quad \\sum_{n=1}^\\infty \\frac{1}{n^4} = 1 + \\frac{1}{2^4} + \\frac{1}{3^4} + \\frac{1}{4^4} + \\dots = \\frac{\\pi^4}{90}$$\n$$\\text{(5)} \\quad \\sum_{n=1}^\\infty \\frac{1}{n^p} = \\zeta(p) \\qquad \\text{עבור } p=3, \\ \\zeta(p) \\text{ אינו ידוע.}$$\n$$\\text{(6)} \\quad \\sum_{n=1}^\\infty \\frac{(-1)^{n+1}}{n} = 1 - \\frac{1}{2} + \\frac{1}{3} - \\dots = \\ln 2$$",
+      "proof_he": null,
+      "topic": "טורים"
+    },
+    {
+      "kind": "example",
+      "label": "דוגמה",
+      "number": null,
+      "name": "$\\sum_{n=0}^\\infty 1$ מתבדר",
+      "statement_he": "$$\\sum_{n=0}^\\infty 1 \\underset{\\text{הגדרה}}{=} \\lim_{N\\to\\infty} \\sum_{n=0}^N 1 = \\lim_{N\\to\\infty}(N+1) = \\infty$$",
+      "proof_he": null,
+      "topic": "טורים"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "4",
+      "name": "הטור הגאומטרי",
+      "statement_he": "יהי $q \\in \\mathbb{R}$. אזי\n$$\\sum_{n=0}^\\infty q^n = 1 + q + q^2 + \\dots = \\begin{cases} \\dfrac{1}{1-q} & |q|<1 \\\\[6pt] \\text{מתבדר} & |q| \\ge 1 \\end{cases}$$",
+      "proof_he": "נראית תחילה ש-$q \\ne 1$. אזי\n$$\\sum_{n=0}^\\infty q^n = \\lim_{N\\to\\infty} \\sum_{n=0}^N q^n = \\lim_{N\\to\\infty}\\left(1 + q + q^2 + \\dots + q^N\\right) = \\lim_{N\\to\\infty} \\frac{1-q^{N+1}}{1-q} = \\frac{1-q^\\infty}{1-q} = \\begin{cases} \\dfrac{1}{1-q} & |q|<1 \\\\[4pt] \\text{לא קיים} & |q|>1 \\end{cases}$$\nעבור $q=1$, נטפל בנפרד בקצוות הטור:\n$$\\sum_{n=0}^\\infty 1 \\underset{\\text{הגדרה}}{=} \\lim_{N\\to\\infty} \\sum_{n=0}^N 1 = \\lim_{N\\to\\infty}(N+1) = \\infty$$",
+      "topic": "טורים"
+    }
+  ]
+}

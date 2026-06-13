@@ -1,6 +1,7 @@
 import { DEFINITIONS, CATEGORY_LABELS } from "@/lib/calculus2/definitions-data";
 import { DefinitionsClient } from "./DefinitionsClient";
 import { ConvergenceTables } from "./ConvergenceTables";
+import { AllLectureDefinitions } from "@/components/LectureKnowledge";
 
 export default function DefinitionsPage() {
   const categoryCount = Object.fromEntries(
@@ -90,6 +91,28 @@ export default function DefinitionsPage() {
           </p>
         </div>
         <DefinitionsClient />
+      </section>
+
+      {/* ── Word-for-word definitions from the lectures ── */}
+      <section dir="rtl">
+        <div className="mb-6 pb-4 border-b" style={{ borderColor: "var(--border)" }}>
+          <p
+            className="text-xs font-bold uppercase tracking-[0.2em] mb-1"
+            style={{ color: "var(--text-muted)" }}
+          >
+            From the Lectures
+          </p>
+          <h2
+            className="text-2xl font-black"
+            style={{ color: "var(--text-primary)", letterSpacing: "-0.025em" }}
+          >
+            כל ההגדרות מההרצאות — מילה במילה
+          </h2>
+          <p className="mt-1 text-sm" style={{ color: "var(--text-secondary)" }}>
+            ההגדרות הפורמליות בדיוק כפי שנכתבו בהרצאות 1–10, מסודרות לפי הרצאה.
+          </p>
+        </div>
+        <AllLectureDefinitions />
       </section>
     </div>
   );

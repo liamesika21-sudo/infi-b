@@ -1,0 +1,187 @@
+{
+  "lecture": 6,
+  "date": "7.5.26",
+  "topics": ["מבחני התכנסות לטורים", "מבחן ההשוואה הגבולי", "מבחן השורש", "מבחן המנה", "מבחן העיבוי", "מבחן האינטגרל", "טור החזקות"],
+  "items": [
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "8",
+      "name": "מבחן ההשוואה הגבולי",
+      "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהיינה $(a_n)_{n=k}^{\\infty}$ ו-$(b_n)_{n=k}^{\\infty}$ שתי סדרות של מס' ממשיים. נניח כי:\n(i) לכל $n \\ge k$, $a_n \\ge 0$ ו-$b_n > 0$.\n(ii) קיים $L \\in \\mathbb{R}$ כך ש-$L > 0$ וכך ש- $L = \\lim_{n \\to \\infty} \\frac{a_n}{b_n}$.\nאזי $\\sum_{n=k}^{\\infty} b_n < \\infty$ אם ורק אם $\\sum_{n=k}^{\\infty} a_n < \\infty$.",
+      "proof_he": "$\\Leftarrow$: נניח לל\"כ ש- $\\sum_{n=k}^{\\infty} b_n < \\infty$. נראה: מכיוון ש- $L = \\lim_{n \\to \\infty} \\frac{a_n}{b_n}$, קיים $N_1 \\in \\mathbb{N}$ כך שלכל $n \\ge N_1$, $\\left| \\frac{a_n}{b_n} - L \\right| < 1$, לכן לכל $n \\ge N_1$, $\\frac{a_n}{b_n} \\le L + 1$, וכך בכפל ב-$b_n$ ונקבל לכל $n \\ge N_1$, $0 \\le a_n \\le (L+1) b_n$. לכן ממקריטריון ההשוואה: $\\sum_{n=N_1}^{\\infty} a_n \\le \\sum_{n=N_1}^{\\infty} (L+1) b_n = (L+1) \\sum_{n=N_1}^{\\infty} b_n < \\infty$ (כי הטור של $b_n$ מתכנס). לכן $\\sum_{n=N_1}^{\\infty} a_n < \\infty$ ולכן $\\sum_{n=k}^{\\infty} a_n < \\infty$.\n$\\Rightarrow$: נניח לל\"כ ש- $\\sum_{n=k}^{\\infty} a_n < \\infty$. נראה: מכיוון ש- $L = \\lim_{n \\to \\infty} \\frac{a_n}{b_n}$, קיים $N_1 \\in \\mathbb{N}$ כך שלכל $n \\ge N_1$, $\\left| \\frac{a_n}{b_n} - L \\right| < \\frac{L}{2}$, לכן לכל $n \\ge N_1$, $\\frac{a_n}{b_n} \\ge L - \\frac{L}{2} = \\frac{L}{2}$, וכך בכפל ב-$b_n$ ונחלק ב-$\\frac{L}{2}$, ונקבל לכל $n \\ge N_1$, $0 \\le b_n \\le \\frac{2}{L} a_n$. לכן ממקריטריון ההשוואה: $\\sum_{n=N_1}^{\\infty} b_n \\le \\sum_{n=N_1}^{\\infty} \\frac{2}{L} a_n = \\frac{2}{L} \\sum_{n=N_1}^{\\infty} a_n < \\infty$ (כי הטור של $a_n$ מתכנס). לכן $\\sum_{n=N_1}^{\\infty} b_n < \\infty$ ולכן $\\sum_{n=k}^{\\infty} b_n < \\infty$.",
+      "topic": "מבחן ההשוואה הגבולי"
+    },
+    {
+      "kind": "corollary",
+      "label": "מסקנה",
+      "number": "1",
+      "name": "מקרה L=0",
+      "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהיינה $(a_n)_{n=k}^{\\infty}$ ו-$(b_n)_{n=k}^{\\infty}$ שתי סדרות של מס' ממשיים. נניח כי:\n(i) לכל $n \\ge k$, $a_n \\ge 0$ ו-$b_n > 0$.\n(ii) $\\lim_{n \\to \\infty} \\frac{a_n}{b_n} = 0$.\nאזי $\\sum_{n=k}^{\\infty} b_n < \\infty \\Rightarrow \\sum_{n=k}^{\\infty} a_n < \\infty$.",
+      "proof_he": "הוכחה: כאן השלמת הקודם בכיוון האחד (כי) הסתמכנו על ההנחה ש- $L \\ne 0$ בכיוון השני. כב\"ה.",
+      "topic": "מבחן ההשוואה הגבולי"
+    },
+    {
+      "kind": "corollary",
+      "label": "מסקנה",
+      "number": "2",
+      "name": "מקרה L=∞",
+      "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהיינה $(a_n)_{n=k}^{\\infty}$ ו-$(b_n)_{n=k}^{\\infty}$ שתי סדרות של מס' ממשיים. נניח כי:\n(i) לכל $n \\ge k$, $a_n > 0$ ו-$b_n > 0$.\n(ii) $\\lim_{n \\to \\infty} \\frac{a_n}{b_n} = \\infty$.\nאזי $\\sum_{n=k}^{\\infty} a_n < \\infty \\Rightarrow \\sum_{n=k}^{\\infty} b_n < \\infty$.",
+      "proof_he": "הוכחה: נש\"פ כי $\\lim_{n \\to \\infty} \\frac{b_n}{a_n} = \\lim_{n \\to \\infty} \\frac{1}{\\left[ \\frac{a_n}{b_n} \\right]} = \\frac{1}{\\infty} = 0$ ולכן ממסקנה 1, סה\"נ.",
+      "topic": "מבחן ההשוואה הגבולי"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": "1",
+      "name": "טור sin(1/n)",
+      "statement_he": "קבעו האם הטור הבא מתכנס או מתבדר: $\\sum_{n=1}^{\\infty} \\sin\\left( \\frac{1}{n} \\right)$.",
+      "proof_he": "פתרון: נב\"ה בסדרה $(b_n)_{n=1}^{\\infty}$ המוגדרת ע\"י נשים $b_n = \\frac{1}{n}$ לכל $n \\in \\mathbb{N}$.\n$L = \\lim_{n \\to \\infty} \\frac{a_n}{b_n} = \\lim_{n \\to \\infty} \\frac{\\sin\\left( \\frac{1}{n} \\right)}{\\frac{1}{n}} = \\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$ (כאשר $x_n = \\frac{1}{n}$).\nלכן הטור מתבדר ב\"ה יחד עם הטור ההרמוני.",
+      "topic": "מבחן ההשוואה הגבולי"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": "2",
+      "name": "טור arctan(n²)-π/2",
+      "statement_he": "קבעו האם הטור הבא מתכנס או מתבדר: $\\sum_{n=1}^{\\infty} \\left( \\arctan(n^2) - \\frac{\\pi}{2} \\right)$.",
+      "proof_he": "פתרון: נב\"ה בטור $\\sum_{n=1}^{\\infty} \\left( \\frac{\\pi}{2} - \\arctan(n^2) \\right)$. נב\"ה בסדרה $(b_n)_{n=1}^{\\infty}$ המוגדרת ע\"י נשים $b_n = \\frac{1}{n^2}$ לכל $n \\in \\mathbb{N}$.\n$L = \\lim_{n \\to \\infty} \\frac{a_n}{b_n} = \\lim_{n \\to \\infty} \\frac{\\frac{\\pi}{2} - \\arctan(n^2)}{\\frac{1}{n^2}} = \\lim_{x \\to \\infty} \\frac{\\frac{\\pi}{2} - \\arctan x}{\\frac{1}{x}}$ (כאשר $x_n = n^2$, לופיטל) $\\overset{\\frac{0}{0}}{=} \\lim_{x \\to \\infty} \\frac{\\left[ -\\frac{1}{1+x^2} \\right]}{\\left[ -\\frac{1}{x^2} \\right]} = \\lim_{x \\to \\infty} \\frac{-(-x^2)}{1+x^2} = \\lim_{x \\to \\infty} \\frac{x^2}{1+x^2} = \\lim_{x \\to \\infty} \\frac{1}{\\frac{1}{x^2} + 1} = 1$.\nלכן הטור $\\sum_{n=1}^{\\infty} \\left( \\frac{\\pi}{2} - \\arctan(n^2) \\right)$ מתכנס ב\"ה עם הטור $\\sum_{n=1}^{\\infty} \\frac{1}{n^2}$. לכן הטור $\\sum_{n=1}^{\\infty} \\left( \\arctan(n^2) - \\frac{\\pi}{2} \\right)$ מתכנס. כי הוא נ\"ל של מתכנס.",
+      "topic": "מבחן ההשוואה הגבולי"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "1",
+      "name": "מבחן השורש",
+      "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה של מס' ממשיים. נניח כי:\n(i) לכל $n \\ge k$, $a_n \\ge 0$.\n(ii) קיים $L \\in \\mathbb{R}$ עבורו/וכזה $L = \\lim_{n \\to \\infty} \\sqrt[n]{a_n}$ והנניח, $0 \\le L < 1$.\nאזי הטור $\\sum_{n=k}^{\\infty} a_n < \\infty$.",
+      "proof_he": null,
+      "topic": "מבחן השורש"
+    },
+    {
+      "kind": "lemma",
+      "label": "טענת עזר",
+      "number": "1",
+      "name": "טענת עזר למבחן השורש",
+      "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה של מס' ממשיים. יהי $0 \\le q < 1$. נניח כי:\n(i) לכל $n \\ge k$, $a_n \\ge 0$.\n(ii) קיים $N \\in \\mathbb{N}$ כך שלכל $n \\ge N$ מתקיים $\\sqrt[n]{a_n} \\le q$.\nאזי הטור $\\sum_{n=N}^{\\infty} a_n < \\infty$.",
+      "proof_he": "הוכחת טענת עזר 1: מכיוון שלכל $n \\ge N$, $\\sqrt[n]{a_n} \\le q$, לכן לכל $n \\ge N$, $0 \\le a_n \\le q^n$. לכן ממקריטריון ההשוואה, $\\sum_{n=N}^{\\infty} a_n \\le \\sum_{n=N}^{\\infty} q^n < \\infty$ (כי טור הנדסי מתכנס שכן $0 \\le q < 1$). לכן $\\sum_{n=N}^{\\infty} a_n < \\infty$.",
+      "topic": "מבחן השורש"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "1",
+      "name": "הוכחת מבחן השורש",
+      "statement_he": "הוכחת משפט 1 (מבחן השורש): נסמן $q = \\frac{1+L}{2}$. נשים לב כי $0 \\le q < 1$. מכיוון ש- $L = \\lim_{n \\to \\infty} \\sqrt[n]{a_n}$, קיים $N_1 \\in \\mathbb{N}$ כך שלכל $n \\ge N_1$ מתקיים $\\left| \\sqrt[n]{a_n} - L \\right| < \\frac{1-L}{2}$, לכן לכל $n \\ge N_1$ מתקיים $\\sqrt[n]{a_n} \\le L + \\frac{1-L}{2} = \\frac{1+L}{2} = q$. לכן מטענת עזר 1, $\\sum_{n=N_1}^{\\infty} a_n < \\infty$ ולכן $\\sum_{n=k}^{\\infty} a_n < \\infty$.",
+      "proof_he": "[ראה ניסוח ב-statement; ליווי שרטוט ציר המספרים עם $L$, $L+\\square$, $1$ ו- $q = \\frac{1+L}{2}$, $\\frac{1-L}{2}$.]",
+      "topic": "מבחן השורש"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "2",
+      "name": "מבחן המנה",
+      "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה של מס' ממשיים. נניח כי:\n(i) לכל $n \\ge k$, $a_n > 0$.\n(ii) קיים $L \\in \\mathbb{R}$ עבורו/וכזה $L = \\lim_{n \\to \\infty} \\frac{a_{n+1}}{a_n}$ והנניח, $0 \\le L < 1$.\nאזי הטור $\\sum_{n=k}^{\\infty} a_n < \\infty$.",
+      "proof_he": null,
+      "topic": "מבחן המנה"
+    },
+    {
+      "kind": "lemma",
+      "label": "טענת עזר",
+      "number": "2",
+      "name": "טענת עזר למבחן המנה",
+      "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהיינה $(a_n)_{n=k}^{\\infty}$ ו-$(b_n)_{n=k}^{\\infty}$ שתי סדרות של מס' ממשיים. נניח כי:\n(i) לכל $n \\ge k$, $a_n, b_n > 0$.\n(ii) קיים $N \\in \\mathbb{N}$ כך שלכל $n \\ge N$ מתקיים $\\frac{a_{n+1}}{a_n} \\le \\frac{b_{n+1}}{b_n}$.\nאזי $\\sum_{n=N}^{\\infty} b_n < \\infty \\Rightarrow \\sum_{n=N}^{\\infty} a_n < \\infty$.",
+      "proof_he": "הוכחת טענת עזר 2: של\"פ לכל $n \\ge N$, $\\frac{a_{n+1}}{a_n} \\cdot \\frac{a_n}{a_{n-1}} \\cdots \\frac{a_{N+1}}{a_N} \\le \\frac{b_{n+1}}{b_n} \\cdot \\frac{b_n}{b_{n-1}} \\cdots \\frac{b_{N+1}}{b_N}$ (מההנחה). לכן לכל $n \\ge N$, $\\frac{a_{n+1}}{a_N} \\le \\frac{b_{n+1}}{b_N}$ ולכן לכל $n \\ge N$, $a_{n+1} \\le \\frac{a_N}{b_N} \\cdot b_{n+1}$. לכן לכל $n \\ge N+1$, $a_n \\le \\frac{a_N}{b_N} \\cdot b_n$. של\"פ עבור $n = N$, מתקיים $a_N = \\frac{a_N}{b_N} \\cdot b_N$ ולכן לכל $n \\ge N$, $0 \\le a_n \\le \\frac{a_N}{b_N} \\cdot b_n$. לכן ממקריטריון ההשוואה, $\\sum_{n=N}^{\\infty} a_n \\le \\sum_{n=N}^{\\infty} \\frac{a_N}{b_N} \\cdot b_n = \\frac{a_N}{b_N} \\sum_{n=N}^{\\infty} b_n < \\infty$ ולכן $\\sum_{n=N}^{\\infty} a_n < \\infty$.",
+      "topic": "מבחן המנה"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "2",
+      "name": "הוכחת מבחן המנה",
+      "statement_he": "הוכחת משפט 2 (מבחן המנה): נסמן $q = \\frac{1+L}{2}$. מכיוון ש- $0 \\le L < 1$, אזי $0 \\le q < 1$. מכיוון ש- $L = \\lim_{n \\to \\infty} \\frac{a_{n+1}}{a_n}$, קיים $N_1 \\in \\mathbb{N}$ כך שלכל $n \\ge N_1$ מתקיים $\\left| \\frac{a_{n+1}}{a_n} - L \\right| < \\frac{1-L}{2}$, לכן לכל $n \\ge N_1$ מתקיים $\\frac{a_{n+1}}{a_n} \\le L + \\frac{1-L}{2} = \\frac{1+L}{2} = q$. נב\"ה בסדרה $(b_n)_{n=k}^{\\infty}$ המוגדרת ע\"י נשים $b_n = q^n$ לכל $n \\ge k$. של\"פ $\\frac{a_{n+1}}{a_n} \\le q = \\frac{b_{n+1}}{b_n}$. $\\sum_{n=N_1}^{\\infty} b_n = \\sum_{n=N_1}^{\\infty} q^n < \\infty$ (כי טור הנדסי מתכנס שכן $0 \\le q < 1$). לכן מטענת עזר 2, $\\sum_{n=N_1}^{\\infty} a_n < \\infty$ ולכן $\\sum_{n=k}^{\\infty} a_n < \\infty$.",
+      "proof_he": "[ראה ניסוח ב-statement]",
+      "topic": "מבחן המנה"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": "3",
+      "name": "טור עם מכפלות אי-זוגיות",
+      "statement_he": "קבעו האם הטור הבא מתכנס או מתבדר: $\\sum_{n=1}^{\\infty} \\frac{1 \\cdot 3 \\cdot 5 \\cdots (2n-1)}{4 \\cdot 8 \\cdots (4n)}$.",
+      "proof_he": "פתרון: נב\"ה במבחן המנה.\n$L = \\lim_{n \\to \\infty} \\frac{a_{n+1}}{a_n} = \\lim_{n \\to \\infty} \\frac{\\left[ \\frac{1 \\cdot 3 \\cdot 5 \\cdots (2n-1) \\cdot (2n+1)}{4 \\cdot 8 \\cdots (4n) \\cdot (4n+4)} \\right]}{\\left[ \\frac{1 \\cdot 3 \\cdot 5 \\cdots (2n-1)}{4 \\cdot 8 \\cdots (4n)} \\right]} = \\lim_{n \\to \\infty} \\frac{2n+1}{4n+4} = \\lim_{n \\to \\infty} \\frac{2 + \\frac{1}{n}}{4 + \\frac{4}{n}} < 1$.\nלכן הטור מתכנס.",
+      "topic": "מבחן המנה"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": "4",
+      "name": "טור n^(2n)·sin^n",
+      "statement_he": "קבעו האם הטור הבא מתכנס או מתבדר: $\\sum_{n=1}^{\\infty} n^{2n} \\left[ \\sin\\left( \\frac{1}{2n^2} \\right) \\right]^n$.",
+      "proof_he": "פתרון: נב\"ה במבחן השורש.\n$L = \\lim_{n \\to \\infty} \\sqrt[n]{a_n} = \\lim_{n \\to \\infty} \\left[ n^2 \\cdot \\sin\\left( \\frac{1}{2n^2} \\right) \\right] = \\lim_{x \\to 0} \\frac{\\sin(x)}{2x} = \\frac{1}{2} < 1$ (כאשר $x_n = \\frac{1}{2n^2}$).\nלכן הטור מתכנס.",
+      "topic": "מבחן השורש"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "3",
+      "name": "מבחן השורש - מקרה התבדרות",
+      "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה של מס' ממשיים. נניח כי:\n(i) לכל $n \\ge k$, $a_n \\ge 0$.\n(ii) קיים $L \\in \\mathbb{R}$ עבורו/וכזה $L = \\lim_{n \\to \\infty} \\sqrt[n]{a_n}$ והנניח, $L > 1$.\nאזי הטור $\\sum_{n=k}^{\\infty} a_n$ מתבדר (שכן $\\lim_{n \\to \\infty} a_n \\ne 0$ ולכן הטור מתבדר (לכן)).",
+      "proof_he": "הוכחה: מכיוון ש- $L = \\lim_{n \\to \\infty} \\sqrt[n]{a_n}$, קיים $N_1 \\in \\mathbb{N}$ כך שלכל $n \\ge N_1$, מתקיים $\\left| \\sqrt[n]{a_n} - L \\right| < L-1$, ולכן לכל $n \\ge N_1$ מתקיים $\\sqrt[n]{a_n} > L - (L-1) = 1$. לכן לכל $n \\ge N_1$ מתקיים $a_n \\ge 1$. נניח בשלילה כי $\\lim_{n \\to \\infty} a_n = 0$. לכן מאריתמטיקת גבולות וכלל הסנדוויץ' $0 = \\lim_{n \\to \\infty} a_n \\ge \\lim_{n \\to \\infty} 1 = 1$. סתירה! כב\"ה.",
+      "topic": "מבחן השורש"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "4",
+      "name": "מבחן המנה - מקרה התבדרות",
+      "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה של מס' ממשיים. נניח כי:\n(i) לכל $n \\ge k$, $a_n > 0$.\n(ii) קיים $L \\in \\mathbb{R}$ עבורו/וכזה $L = \\lim_{n \\to \\infty} \\frac{a_{n+1}}{a_n}$ והנניח, $L > 1$.\nאזי $\\lim_{n \\to \\infty} a_n \\ne 0$ (ולכן הטור $\\sum_{n=k}^{\\infty} a_n$ מתבדר).",
+      "proof_he": "הוכחה: באופן ודומה.",
+      "topic": "מבחן המנה"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": "5",
+      "name": "טור a^n·n!/n^n",
+      "statement_he": "יהי $0 < a \\ne e$. קבעו האם הטור הבא מתכנס או מתבדר: $\\sum_{n=1}^{\\infty} \\frac{a^n \\cdot n!}{n^n}$.",
+      "proof_he": "פתרון: נב\"ה במבחן המנה.\n$L = \\lim_{n \\to \\infty} \\frac{a_{n+1}}{a_n} = \\lim_{n \\to \\infty} \\frac{\\left[ \\frac{a^{n+1} \\cdot (n+1)!}{(n+1)^{n+1}} \\right]}{\\left[ \\frac{a^n \\cdot n!}{n^n} \\right]} = \\lim_{n \\to \\infty} \\frac{a^{n+1} (n+1)! \\, n^n}{a^n \\cdot n! \\cdot (n+1)^{n+1}} = \\lim_{n \\to \\infty} \\frac{a \\cdot n^n}{(n+1)^n} = \\lim_{n \\to \\infty} a \\cdot \\left( \\frac{n}{n+1} \\right)^n = \\lim_{n \\to \\infty} \\frac{a}{\\left( \\frac{n+1}{n} \\right)^n} = \\lim_{n \\to \\infty} \\frac{a}{\\left( 1 + \\frac{1}{n} \\right)^n} = \\frac{a}{e}$.\nלכן הטור מתכנס עבור $0 \\le a < e$ ($L < 1$) ומתבדר עבור $a > e$.",
+      "topic": "מבחן המנה"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": "6",
+      "name": "טור מכפלות בריבוע",
+      "statement_he": "יהי $0 < a \\ne e$. קבעו האם הטור הבא מתכנס או מתבדר: $\\sum_{n=1}^{\\infty} \\frac{1^2 \\cdot 3^2 \\cdot 5^2 \\cdots (2n-1)^2}{2 \\cdot 4 \\cdot 6 \\cdots 4n} = \\frac{1^2}{2 \\cdot 4} + \\frac{1^2 \\cdot 3^2}{2 \\cdot 4 \\cdot 6 \\cdot 8} + \\cdots$ (האיבר $n=1$ ו- $n=2$).",
+      "proof_he": "פתרון: נב\"ה במבחן המנה.\n$L = \\lim_{n \\to \\infty} \\frac{a_{n+1}}{a_n} = \\lim_{n \\to \\infty} \\frac{\\frac{1^2 \\cdot 3^2 \\cdot 5^2 \\cdots (2n-1)^2 \\cdot (2n+1)^2}{2 \\cdot 4 \\cdot 6 \\cdots 4n \\, (4n+2)(4n+4)}}{\\left[ \\frac{1^2 \\cdot 3^2 \\cdot 5^2 \\cdots (2n-1)^2}{2 \\cdot 4 \\cdot 6 \\cdots 4n} \\right]} = \\lim_{n \\to \\infty} \\frac{(2n+1)^2}{(4n+2)(4n+4)} = \\lim_{n \\to \\infty} \\frac{\\left( 2 + \\frac{1}{n} \\right)^2}{\\left( 4 + \\frac{2}{n} \\right)\\left( 4 + \\frac{4}{n} \\right)} = \\frac{4}{16} < 1$.\nלכן הטור מתכנס.",
+      "topic": "מבחן המנה"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "5",
+      "name": "מבחן האינטגרל",
+      "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $f$ פונק' המוגדרת ב- $[k, \\infty)$. נניח כי:\n(i) $f$ יורדת.\n(ii) $\\lim_{x \\to \\infty} f(x) = 0$.\nאזי הטור $\\sum_{n=k}^{\\infty} f(n) < \\infty$ אם ורק אם $\\int_{k}^{\\infty} f(x) \\, dx < \\infty$, והנניח $\\int_{k}^{\\infty} f(x) \\, dx \\le \\sum_{n=k}^{\\infty} f(n) \\le f(k) + \\int_{k}^{\\infty} f(x) \\, dx$.",
+      "proof_he": null,
+      "topic": "מבחן האינטגרל"
+    },
+    {
+      "kind": "theorem",
+      "label": "משפט",
+      "number": "6",
+      "name": "טור ה-p ההרמוני",
+      "statement_he": "יהי $p \\in \\mathbb{R}$. אזי נוכל להוכיח את משפט 7 מהרצאה 5: $\\sum_{n=1}^{\\infty} \\frac{1}{n^p} = \\begin{cases} \\text{מתכנס} & p > 1 \\\\ \\text{מתבדר} & p \\le 1 \\end{cases}$.",
+      "proof_he": "הוכחה: נניח קודם $0 < p \\le d$ (כלומר $p > 0$). נב\"ה בפונק' המוגדרת $f(x) = \\frac{1}{x^p}$ לכל $x \\ge 1$. נב\"ה.\n(i) $f$ יורדת: נש\"פ ש- $f$ גזירה ומקיימת לכל $x \\ge 1$, $f'(x) = (x^{-p})' = -p \\cdot x^{-p-1} = \\frac{-p}{x^{p+1}} \\le 0$ (כי $p > 0$). לכן $f$ יורדת.\n(ii) $\\lim_{x \\to \\infty} f(x) = \\lim_{x \\to \\infty} \\frac{1}{x^p} = \\frac{1}{\\infty^p} = 0$ (כי $p > 0$).\nלכן ממבחן האינטגרל, $\\sum_{n=1}^{\\infty} \\frac{1}{n^p} < \\infty$ אם ורק אם $\\int_{1}^{\\infty} \\frac{dx}{x^p} < \\infty$. ראינו כי $\\int_{1}^{\\infty} \\frac{dx}{x^p} = \\begin{cases} \\frac{1}{p-1} & p > 1 \\\\ \\infty & p \\le 1 \\end{cases}$. לכן הטור $\\sum_{n=1}^{\\infty} \\frac{1}{n^p}$ מתכנס עבור $p > 1$ ומתבדר עבור $0 < p \\le 1$.\nכעת נניח כי $p \\le 0$. לכן $\\sum_{n=1}^{\\infty} \\frac{1}{n^p} = \\sum_{n=1}^{\\infty} n^{-p} \\ge \\sum_{n=1}^{\\infty} 1 = \\infty$ (כי $-p \\ge 0$). לכן $\\sum_{n=1}^{\\infty} \\frac{1}{n^p} = \\infty$. לכן $\\sum_{n=1}^{\\infty} \\frac{1}{n^p} = \\begin{cases} \\text{מתכנס} & p > 1 \\\\ \\infty & p \\le 1 \\end{cases}$.\nכמו כן (ניסיון במבחן השורש): $L = \\lim_{n \\to \\infty} \\sqrt[n]{\\frac{1}{n^p}} = \\lim_{n \\to \\infty} \\frac{1}{\\left( \\sqrt[n]{n} \\right)^p} = 1$. ובמבחן המנה: $L = \\lim_{n \\to \\infty} \\frac{\\left( \\frac{1}{(n+1)^p} \\right)}{\\left( \\frac{1}{n^p} \\right)} = \\lim_{n \\to \\infty} \\left( \\frac{n}{(n+1)} \\right)^p = \\lim_{n \\to \\infty} \\frac{1}{\\left( 1 + \\frac{1}{n} \\right)^p} = 1$.",
+      "topic": "מבחן האינטגרל"
+    },
+    {
+      "kind": "exercise",
+      "label": "תרגיל",
+      "number": "6",
+      "name": "טור 1/(n·ln n)",
+      "statement_he": "קבעו האם הטור הבא מתכנס או מתבדר: $\\sum_{n=2}^{\\infty} \\frac{1}{n \\ln n}$.",
+      "proof_he": null,
+      "topic": "מבחן האינטגרל"
+    }
+  ]
+}
