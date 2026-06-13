@@ -2,6 +2,7 @@
   {
     "lecture": 1,
     "week": 2,
+    "verified": true,
     "date": "19.3.26",
     "topics": [
       "סדרות",
@@ -16,26 +17,26 @@
         "kind": "definition",
         "label": "הגדרה",
         "number": null,
-        "name": "הגדרת סדרה",
-        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$. סדרה של מספרים ממשיים, המסומנת ב-$(a_n)_{n=k}^{\\infty}$, מוגדרת כפונקציה\n$$a : \\{n \\in \\mathbb{Z} : n \\ge k\\} \\longrightarrow \\mathbb{R} ,$$\nכאשר לכל $n \\ge k$, $a_n$ הוא ערך הפונקציה ב-$n$, ופורמלית, $a_n = a(n)$, ונקרא אבר כללי, או האבר ה-$n$-י בסדרה $(a_n)$.",
+        "name": "סדרה",
+        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$. סדרה של מספרים ממשיים, המסומנת ב-$(a_n)_{n=k}^{\\infty}$, מוגדרת כפונקציה\n$$a : \\{n \\in \\mathbb{Z} : n \\ge k\\} \\longrightarrow \\mathbb{R},$$\nכאשר לכל $n \\ge k$, $a_n$ הוא ערך הפונקציה ב-$n$, ופורמלית $a_n = a(n)$, ונקרא האיבר ה-$n$-י בסדרה.",
         "proof_he": null,
         "topic": "סדרות"
       },
       {
         "kind": "example",
-        "label": "דוגמה",
+        "label": "דוגמה 1",
         "number": "1",
         "name": "הסדרה $(-1)^n$",
-        "statement_he": "נביט בסדרה $(a_n)_{n=0}^{\\infty}$ המוגדרת ע\"י: $a_n = (-1)^n$ לכל $n \\ge 0$. $a_0 = (-1)^0 = 1$. $a_n : 1, -1, 1, -1, 1, -1, \\ldots$",
+        "statement_he": "נביט בסדרה $(a_n)_{n=0}^{\\infty}$ המוגדרת ע\"י $a_n = (-1)^n$ לכל $n \\ge 0$. למשל $a_0 = (-1)^0 = 1$, והסדרה היא\n$$a_n:\\quad 1,\\; -1,\\; 1,\\; -1,\\; 1,\\; -1,\\; \\ldots$$",
         "proof_he": null,
         "topic": "סדרות"
       },
       {
         "kind": "example",
-        "label": "דוגמה",
+        "label": "דוגמה 2",
         "number": "2",
         "name": "סדרת פיבונאצ'י",
-        "statement_he": "נביט בסדרת פיבונאצ'י $(F_n)_{n=0}^{\\infty}$ המוגדרת ע\"י:\n$$\\begin{cases} F_n = F_{n-1} + F_{n-2} & \\forall n \\ge 2 \\\\ F_0 = 0, \\; F_1 = 1 \\end{cases}$$\n$F_n : 0, 1, 1, 2, 3, 5, 8, 13, \\ldots$",
+        "statement_he": "נביט בסדרה $(F_n)_{n=0}^{\\infty}$ המוגדרת ע\"י הרקורסיה\n$$\\begin{cases} F_n = F_{n-1} + F_{n-2} & \\forall n \\ge 2 \\\\ F_0 = 0,\\; F_1 = 1 \\end{cases}$$\nוהסדרה היא $F_n:\\; 0,\\,1,\\,1,\\,2,\\,3,\\,5,\\,8,\\,13,\\,\\ldots$",
         "proof_he": null,
         "topic": "סדרות"
       },
@@ -44,7 +45,7 @@
         "label": "הגדרה",
         "number": null,
         "name": "שוויון סדרות",
-        "statement_he": "יהי $0 \\le k_1, k_2 \\in \\mathbb{Z}$ ותהיינה $(a_n)_{n=k_1}^{\\infty}$ ו-$(b_n)_{n=k_2}^{\\infty}$ שתי סדרות של מספרים ממשיים. נאמר כי הן שוות ונסמן $(a_n)_{n=k_1}^{\\infty} = (b_n)_{n=k_2}^{\\infty}$ אם:\n(i) $k_1 = k_2$\n(ii) לכל $n \\ge k_1$ מתקיים $a_n = b_n$.",
+        "statement_he": "יהיו $0 \\le k_1, k_2 \\in \\mathbb{Z}$ ותהיינה $(a_n)_{n=k_1}^{\\infty}$ ו-$(b_n)_{n=k_2}^{\\infty}$ שתי סדרות של מספרים ממשיים. נאמר כי הן שוות ונסמן $(a_n)_{n=k_1}^{\\infty} = (b_n)_{n=k_2}^{\\infty}$ אם:\n(i) $k_1 = k_2$;\n(ii) לכל $n \\ge k_1$ מתקיים $a_n = b_n$.",
         "proof_he": null,
         "topic": "סדרות"
       },
@@ -53,16 +54,16 @@
         "label": "הגדרה",
         "number": null,
         "name": "גבול סדרה",
-        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה של מספרים ממשיים. יהי $L \\in \\mathbb{R}$. נאמר כי $L$ הוא הגבול של הסדרה $(a_n)_{n=k}^{\\infty}$ (או שהסדרה מתכנסת ל-$L$) ונסמן $\\lim_{n \\to \\infty} a_n = L$, אם לכל $\\varepsilon > 0$ קיים $N \\in \\mathbb{N}$ כך שלכל $n \\ge N$ מתקיים $|a_n - L| < \\varepsilon$.",
+        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה של מספרים ממשיים. יהי $L \\in \\mathbb{R}$. נאמר כי $L$ הוא הגבול של הסדרה (או שהסדרה מתכנסת ל-$L$), ונסמן $\\lim_{n \\to \\infty} a_n = L$, אם לכל $\\varepsilon > 0$ קיים $N \\in \\mathbb{N}$ כך שלכל $n \\ge N$ מתקיים\n$$|a_n - L| < \\varepsilon.$$",
         "proof_he": null,
         "topic": "גבול סדרה"
       },
       {
         "kind": "note",
-        "label": "הערה",
+        "label": "הערה 1",
         "number": "1",
         "name": "השוואה לגבול פונקציה באינסוף",
-        "statement_he": "ההגדרה לעיל מזכירה את ההגדרה של גבול פונקציה: $\\lim_{x \\to \\infty} f(x) = L$ אם לכל $\\varepsilon > 0$ קיים $M > 0$ כך שלכל $x > M$ מתקיים $|f(x) - L| < \\varepsilon$.",
+        "statement_he": "ההגדרה דומה מאוד בצורתה להגדרת הגבול של פונקציה באינסוף: $\\lim_{x \\to \\infty} f(x) = L$ אם לכל $\\varepsilon > 0$ קיים $M > 0$ כך שלכל $x > M$ מתקיים $|f(x) - L| < \\varepsilon$.",
         "proof_he": null,
         "topic": "גבול סדרה"
       },
@@ -70,8 +71,8 @@
         "kind": "note",
         "label": "הערה",
         "number": null,
-        "name": "פעולות על גבולות סדרות",
-        "statement_he": "כל המשפטים של גבולות פונקציות באינסוף, ובפרט 1 ופרק 1, נכונים לסדרות:\n(i) יחידות הגבול\n(ii) פעולות $\\pm$, $\\cdot$, $\\div$, $\\sqrt{\\;}$, $|\\cdot|$ וכאשר הם מוגדרים\n(iii) מונוטוניות הגבול\n(iv) סנדביץ'\n(v) $a \\times b$.",
+        "name": "תכונות הגבול עוברות לסדרות",
+        "statement_he": "כל המשפטים על גבולות של פונקציות באינסוף נשארים נכונים עבור סדרות, ובפרט:\n(i) יחידות הגבול;\n(ii) אריתמטיקה של גבולות — $\\pm$, $\\cdot$, $\\div$, $\\sqrt{\\;}$, $|\\cdot|$ — כאשר הם מוגדרים;\n(iii) מונוטוניות הגבול;\n(iv) כלל הסנדוויץ';\n(v) משפט היינה.",
         "proof_he": null,
         "topic": "גבול סדרה"
       },
@@ -80,44 +81,44 @@
         "label": "הגדרה",
         "number": null,
         "name": "סדרה חסומה",
-        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה של מספרים ממשיים. יהי $L \\in \\mathbb{R}$. נאמר כי:\n(i) $(a_n)_{n=k}^{\\infty}$ חסומה מלעיל אם קיים $M \\in \\mathbb{R}$ כך שלכל $n \\ge k$ מתקיים $a_n \\le M$ ($M$ נקרא חסם מלעיל של הסדרה).\n(ii) $(a_n)_{n=k}^{\\infty}$ חסומה מלרע אם קיים $m \\in \\mathbb{R}$ כך שלכל $n \\ge k$ מתקיים $a_n \\ge m$ ($m$ נקרא חסם מלרע של הסדרה).\n(iii) $(a_n)_{n=k}^{\\infty}$ חסומה אם קיים $M > 0$ כך שלכל $n \\ge k$ מתקיים $|a_n| \\le M$.",
+        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה של מספרים ממשיים. נאמר כי:\n(i) הסדרה חסומה מלעיל אם קיים $M \\in \\mathbb{R}$ כך שלכל $n \\ge k$ מתקיים $a_n \\le M$ ($M$ נקרא חסם מלעיל של הסדרה);\n(ii) הסדרה חסומה מלרע אם קיים $m \\in \\mathbb{R}$ כך שלכל $n \\ge k$ מתקיים $a_n \\ge m$ ($m$ נקרא חסם מלרע של הסדרה);\n(iii) הסדרה חסומה אם קיים $M > 0$ כך שלכל $n \\ge k$ מתקיים $|a_n| \\le M$.",
         "proof_he": null,
         "topic": "סדרות חסומות"
       },
       {
         "kind": "note",
-        "label": "הערה",
+        "label": "הערה 2",
         "number": "2",
         "name": "חסומה אם\"ם חסומה מלעיל ומלרע",
-        "statement_he": "$(a_n)_{n=k}^{\\infty}$ חסומה אם\"ם היא חסומה מלעיל ומלרע ונפתור.",
+        "statement_he": "הסדרה $(a_n)_{n=k}^{\\infty}$ חסומה אם ורק אם היא חסומה מלעיל וגם חסומה מלרע.",
         "proof_he": null,
         "topic": "סדרות חסומות"
       },
       {
         "kind": "exercise",
-        "label": "תרגיל",
+        "label": "תרגיל 1",
         "number": "1",
         "name": "$\\lim 1/n = 0$",
-        "statement_he": "הוכיחו באמצעות הגדרת הגבול של הסדרה כי\n$$\\lim_{n \\to \\infty} \\frac{1}{n} = 0 .$$",
-        "proof_he": "יהי $\\varepsilon > 0$. מארכימדיות, קיים $N \\in \\mathbb{N}$ כך ש-$\\boxed{N > \\frac{1}{\\varepsilon}}$. יהי $N \\in \\mathbb{N}$ כך ש-$N > \\frac{1}{\\varepsilon}$. אזי לכל $n \\ge N$:\n$$\\left| \\frac{1}{n} - 0 \\right| = \\frac{1}{n} \\underset{n \\ge N}{\\le} \\frac{1}{N} < \\varepsilon .$$",
+        "statement_he": "הוכיחו באמצעות הגדרת הגבול של סדרה כי $\\displaystyle\\lim_{n \\to \\infty} \\frac{1}{n} = 0$.",
+        "proof_he": "יהי $\\varepsilon > 0$. מהארכימדיות, קיים $N \\in \\mathbb{N}$ כך ש-$N > \\frac{1}{\\varepsilon}$. אזי לכל $n \\ge N$:\n$$\\left| \\frac{1}{n} - 0 \\right| = \\frac{1}{n} \\;\\underset{n \\ge N}{\\le}\\; \\frac{1}{N} < \\varepsilon.$$",
         "topic": "גבול סדרה"
       },
       {
         "kind": "exercise",
-        "label": "תרגיל",
+        "label": "תרגיל 2",
         "number": "2",
         "name": "$\\lim \\lfloor \\alpha n \\rfloor / n = \\alpha$",
-        "statement_he": "יהי $\\alpha > 0$. חשבו או הוכיחו את הגבול\n$$\\lim_{n \\to \\infty} \\frac{\\lfloor \\alpha n \\rfloor}{n} .$$",
-        "proof_he": "פתרון: שים $\\heartsuit$ כי לכל $n \\in \\mathbb{N}$,\n$$\\alpha - \\frac{1}{n} = \\frac{\\alpha n - 1}{n} \\underset{x-1 < \\lfloor x \\rfloor}{<} \\frac{\\lfloor \\alpha n \\rfloor}{n} \\underset{\\lfloor x \\rfloor \\le x}{\\le} \\frac{\\alpha n}{n} = \\alpha .$$\nאזי $\\alpha - \\frac{1}{n} \\le \\frac{\\lfloor \\alpha n \\rfloor}{n} \\le \\alpha$, וכאשר $n \\to \\infty$ האגף השמאלי שואף ל-$\\alpha$ והאגף הימני שואף ל-$\\alpha$, ולכן מסנדביץ' הגבול הוא $\\alpha$.",
+        "statement_he": "יהי $\\alpha > 0$. חשבו את הגבול $\\displaystyle\\lim_{n \\to \\infty} \\frac{\\lfloor \\alpha n \\rfloor}{n}$.",
+        "proof_he": "נשים לב כי לכל $n \\in \\mathbb{N}$ מתקיים\n$$\\alpha - \\frac{1}{n} = \\frac{\\alpha n - 1}{n} \\;\\underset{x-1 < \\lfloor x \\rfloor}{<}\\; \\frac{\\lfloor \\alpha n \\rfloor}{n} \\;\\underset{\\lfloor x \\rfloor \\le x}{\\le}\\; \\frac{\\alpha n}{n} = \\alpha.$$\nכאשר $n \\to \\infty$ האגף השמאלי $\\alpha - \\frac{1}{n}$ שואף ל-$\\alpha$ והאגף הימני קבוע $\\alpha$, ולכן מכלל הסנדוויץ' הגבול הוא $\\alpha$.",
         "topic": "גבול סדרה"
       },
       {
         "kind": "exercise",
-        "label": "תרגיל",
+        "label": "תרגיל 3",
         "number": "3",
-        "name": "$\\lim \\sin n / n$",
-        "statement_he": "חשבו או הוכיחו את הגבול\n$$\\lim_{n \\to \\infty} \\frac{\\sin n}{n} .$$",
-        "proof_he": "פתרון: $\\lim_{n \\to \\infty} \\frac{\\sin n}{n} \\underset{\\text{סנדביץ'}}{=} 0$ (כי $|\\sin n| \\le 1$ לכל $n$).",
+        "name": "$\\lim \\sin n / n = 0$",
+        "statement_he": "חשבו את הגבול $\\displaystyle\\lim_{n \\to \\infty} \\frac{\\sin n}{n}$.",
+        "proof_he": "מאחר ש-$|\\sin n| \\le 1$ לכל $n$, מכלל הסנדוויץ' מתקיים $\\displaystyle\\lim_{n \\to \\infty} \\frac{\\sin n}{n} = 0$.",
         "topic": "גבול סדרה"
       },
       {
@@ -125,7 +126,7 @@
         "label": "הגדרה",
         "number": null,
         "name": "התבדרות ל-$\\pm\\infty$ והתכנסות",
-        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה של מספרים ממשיים. נאמר כי:\n(i) $\\lim_{n \\to \\infty} a_n = \\infty$ אם לכל $M > 0$ קיים $N \\in \\mathbb{N}$ כך שלכל $n \\ge N$ מתקיים $a_n > M$.\n(ii) $\\lim_{n \\to \\infty} a_n = -\\infty$ אם לכל $M < 0$ קיים $N \\in \\mathbb{N}$ כך שלכל $n \\ge N$ מתקיים $a_n < M$.\n(iii) $(a_n)_{n=1}^{\\infty}$ מתכנסת אם קיים $L \\in \\mathbb{R}$ כך ש-$\\lim_{n \\to \\infty} a_n = L$, ואם אינה מתכנסת היא מתבדרת (divergent).\n(iv) $(a_n)_{n=1}^{\\infty}$ מתבדרת בהחלט אם הגבול שלה אינו קיים. במקרים הבאים ערכי הסדרה מתקיים:\n(א) $(a_n)_{n=1}^{\\infty}$ מתבדרת\n(ב) $\\lim_{n \\to \\infty} a_n = \\infty$\n(ג) $\\lim_{n \\to \\infty} a_n = -\\infty$.",
+        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה של מספרים ממשיים. נאמר כי:\n(i) $\\lim_{n \\to \\infty} a_n = \\infty$ אם לכל $M > 0$ קיים $N \\in \\mathbb{N}$ כך שלכל $n \\ge N$ מתקיים $a_n > M$;\n(ii) $\\lim_{n \\to \\infty} a_n = -\\infty$ אם לכל $M < 0$ קיים $N \\in \\mathbb{N}$ כך שלכל $n \\ge N$ מתקיים $a_n < M$;\n(iii) הסדרה מתכנסת אם קיים $L \\in \\mathbb{R}$ כך ש-$\\lim_{n \\to \\infty} a_n = L$; אם אינה מתכנסת היא מתבדרת (divergent);\n(iv) הסדרה מתכנסת במובן הרחב אם הגבול קיים במובן הרחב, כלומר מתקיים אחד מהבאים: (א) הסדרה מתכנסת, (ב) $\\lim_{n\\to\\infty} a_n = \\infty$, (ג) $\\lim_{n\\to\\infty} a_n = -\\infty$.",
         "proof_he": null,
         "topic": "התכנסות והתבדרות"
       },
@@ -134,53 +135,44 @@
         "label": "הגדרה",
         "number": null,
         "name": "מונוטוניות",
-        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה של מספרים ממשיים. נאמר כי:\n(i) $(a_n)_{n=k}^{\\infty}$ עולה אם לכל $n \\in \\mathbb{N}$, $a_{n+1} \\ge a_n$.\n(ii) $(a_n)_{n=k}^{\\infty}$ יורדת אם לכל $n \\in \\mathbb{N}$, $a_{n+1} \\le a_n$.\n(iii) $(a_n)_{n=k}^{\\infty}$ עולה ממש אם לכל $n \\in \\mathbb{N}$, $a_{n+1} > a_n$.\n(iv) $(a_n)_{n=k}^{\\infty}$ יורדת ממש אם לכל $n \\in \\mathbb{N}$, $a_{n+1} < a_n$.\n(v) $(a_n)_{n=k}^{\\infty}$ מונוטונית אם (i) או (ii).\n(vi) $(a_n)_{n=k}^{\\infty}$ מונוטונית ממש אם (iii) או (iv).",
-        "proof_he": null,
-        "topic": "מונוטוניות"
-      },
-      {
-        "kind": "note",
-        "label": "הערה",
-        "number": "3",
-        "name": "פעולות על מונוטוניות באלגברה",
-        "statement_he": "כל המשפטים של אלגברה ופרק 1 נכונים בעבור פעולת המונוטוניות בתחב:\n(i) אלגברה ($+\\infty, \\infty \\cdot \\infty, \\ldots$)\n(ii) סנדביץ'\n(iii) סדרה מונוטונית מתכנסת באופן הרחב.\nננסח באופן את (iii):",
+        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=k}^{\\infty}$ סדרה של מספרים ממשיים. נאמר כי:\n(i) הסדרה עולה אם לכל $n$ מתקיים $a_{n+1} \\ge a_n$;\n(ii) הסדרה יורדת אם לכל $n$ מתקיים $a_{n+1} \\le a_n$;\n(iii) הסדרה עולה ממש אם לכל $n$ מתקיים $a_{n+1} > a_n$;\n(iv) הסדרה יורדת ממש אם לכל $n$ מתקיים $a_{n+1} < a_n$;\n(v) הסדרה מונוטונית אם מתקיים (i) או (ii);\n(vi) הסדרה מונוטונית ממש אם מתקיים (iii) או (iv).",
         "proof_he": null,
         "topic": "מונוטוניות"
       },
       {
         "kind": "theorem",
-        "label": "משפט",
+        "label": "משפט 1",
         "number": "1",
-        "name": "עולה וחסומה מלעיל מתכנסת ל-sup",
-        "statement_he": "תהי $(a_n)_{n=k}^{\\infty}$ סדרה של מספרים ממשיים. נניח כי $(a_n)_{n=k}^{\\infty}$ עולה ואם $(a_n)_{n=k}^{\\infty}$ חסומה מלעיל בתחב, אזי $(a_n)_{n=k}^{\\infty}$ מתכנסת ו-\n$$\\lim_{n \\to \\infty} a_n = \\sup\\{a_n : n \\ge k\\} .$$",
-        "proof_he": "הוכחה: בתרגול 2 שאלה 2ב.",
+        "name": "סדרה עולה וחסומה מלעיל מתכנסת ל-sup",
+        "statement_he": "תהי $(a_n)_{n=k}^{\\infty}$ סדרה של מספרים ממשיים. נניח כי $(a_n)$ עולה וחסומה מלעיל. אזי $(a_n)$ מתכנסת ומתקיים\n$$\\lim_{n \\to \\infty} a_n = \\sup\\{a_n : n \\ge k\\}.$$",
+        "proof_he": "ההוכחה ניתנה בתרגול 2, שאלה 2ב.",
         "topic": "מונוטוניות"
       },
       {
         "kind": "theorem",
-        "label": "משפט",
+        "label": "משפט 2",
         "number": "2",
-        "name": "יורדת וחסומה מלרע מתכנסת ל-inf",
-        "statement_he": "תהי $(a_n)_{n=k}^{\\infty}$ סדרה של מספרים ממשיים. נניח כי $(a_n)_{n=k}^{\\infty}$ יורדת ואם $(a_n)_{n=k}^{\\infty}$ חסומה מלרע בתחב, אזי $(a_n)_{n=k}^{\\infty}$ מתכנסת ו-\n$$\\lim_{n \\to \\infty} a_n = \\inf\\{a_n : n \\ge k\\} .$$",
-        "proof_he": "הוכחה: בקווים להוכחה של משפט 1.",
+        "name": "סדרה יורדת וחסומה מלרע מתכנסת ל-inf",
+        "statement_he": "תהי $(a_n)_{n=k}^{\\infty}$ סדרה של מספרים ממשיים. נניח כי $(a_n)$ יורדת וחסומה מלרע. אזי $(a_n)$ מתכנסת ומתקיים\n$$\\lim_{n \\to \\infty} a_n = \\inf\\{a_n : n \\ge k\\}.$$",
+        "proof_he": "ההוכחה דומה להוכחת משפט 1.",
         "topic": "מונוטוניות"
       },
       {
         "kind": "theorem",
-        "label": "משפט",
+        "label": "משפט 3",
         "number": "3",
-        "name": "התכנסות זנב הסדרה",
-        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=1}^{\\infty}$ סדרה של מספרים ממשיים. אם $(a_n)_{n=1}^{\\infty}$ מתכנסת אזי $(a_{n+k})_{n=1}^{\\infty}$ מתכנסת ובנוסף\n$$\\lim_{n \\to \\infty} a_{n+k} = \\lim_{n \\to \\infty} a_n .$$",
-        "proof_he": "הוכחה: בתרגול 2 שאלה 2ב.",
+        "name": "התכנסות הזנב — הזזת אינדקס",
+        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=1}^{\\infty}$ סדרה של מספרים ממשיים. אם $(a_n)_{n=1}^{\\infty}$ מתכנסת במובן הרחב, אזי $(a_{n+k})_{n=1}^{\\infty}$ מתכנסת במובן הרחב ובנוסף\n$$\\lim_{n \\to \\infty} a_{n+k} = \\lim_{n \\to \\infty} a_n.$$",
+        "proof_he": "$(a_{n+k})_{n=1}^{\\infty}$ היא תת-סדרה של $(a_n)_{n=1}^{\\infty}$, ולכן מהירושה (משפט 4) $\\lim_{n \\to \\infty} a_{n+k} = \\lim_{n \\to \\infty} a_n$. (ההוכחה הופיעה גם בתרגול 2, שאלה 2א.)",
         "topic": "התכנסות והתבדרות"
       },
       {
         "kind": "exercise",
-        "label": "תרגיל",
+        "label": "תרגיל 4",
         "number": "4",
         "name": "סדרה רקורסיבית $a_{n+2}=\\sqrt{a_n}+\\sqrt{a_{n+1}}$",
-        "statement_he": "נביט בסדרה $(a_n)_{n=1}^{\\infty}$ המוגדרת באמצעות רקורסיה ע\"י:\n$$\\begin{cases} a_{n+2} = \\sqrt{a_n} + \\sqrt{a_{n+1}} & \\forall n \\in \\mathbb{N} \\\\ a_1 = 9, \\; a_2 = 6 \\end{cases}$$\nהוכיחו ש-$(a_n)_{n=1}^{\\infty}$ מתכנסת וחשבו את הגבול שלה.",
-        "proof_he": "פתרון: נוכיח תחילה כי לכל $n \\in \\mathbb{N}$ מתקיים $a_n \\ge 4$ ומכך נראה שהסדרה מוגבלת היטב, ומזה נוכיח את הגבול.\n\nנוכיח כי $a_n \\ge 4$ באינדוקציה על $n$.\n\nבסיס האינדוקציה ($n=1, n=2$): $a_1 = 9 \\ge 4$ ✓, $a_2 = 6 \\ge 4$ ✓.\n\nצעד האינדוקציה ($n, n+1 \\Rightarrow n+2$): יהי $n \\in \\mathbb{N}$ ונניח שהטענה נכונה עבור $n$ ועבור $n+1$, פומר $a_n \\ge 4$ וכן $a_{n+1} \\ge 4$. נוכיח שהטענה נכונה עבור $n+2$:\n$$a_{n+2} = \\underset{\\text{הרקורסיה}}{\\sqrt{a_n}} + \\sqrt{a_{n+1}} \\underset{\\text{הנחת האינדוקציה}}{\\ge} \\sqrt{4} + \\sqrt{4} = 4 .$$\n\nנוכיח כעת שהסדרה $(a_n)_{n=1}^{\\infty}$ יורדת, פומר נוכיח את הטענה $a_{n+1} \\le a_n$ לכל $n \\in \\mathbb{N}$ באינדוקציה על $n$.\n\nבסיס האינדוקציה ($n=1, n=2$): $a_2 = 6 \\le 9 = a_1$ ✓. $a_3 = \\sqrt{a_1} + \\sqrt{a_2} = \\sqrt{9} + \\sqrt{6} = 3 + \\sqrt{6} \\le 6 = a_2$ ✓ (כי $\\sqrt{6} \\le 3$ כי $6 \\le 9$).\n\nצעד האינדוקציה ($n-1, n \\Rightarrow n+1$): יהי $2 \\le n \\in \\mathbb{N}$ ונוכיח שהטענה נכונה עבור $n$ ועבור $n-1$, פומר נניח $a_{n+1} \\le a_n$ (עבור $n$) ו-$a_n \\le a_{n-1}$ (עבור $n-1$). נוכיח שהטענה נכונה עבור $n+1$ ($a_{n+2} \\le a_{n+1}$):\n$$a_{n+2} = \\underset{\\text{הרקורסיה}}{\\sqrt{a_n}} + \\sqrt{a_{n+1}} \\underset{\\text{הנחת האינדוקציה}}{\\le} \\sqrt{a_{n+1}} + \\sqrt{a_n} = a_{n+1} .$$\n\nמכן הסדרה $(a_n)_{n=1}^{\\infty}$ יורדת והמותנה מספ' $4$ ולכן, מתכנסת, פומר, קיים $L \\in \\mathbb{R}$ כך ש-$\\lim_{n \\to \\infty} a_n = L$. עתה נחשב את הגבול $L$:\n$$L = \\lim_{n \\to \\infty} a_n \\underset{\\text{משפט 3}}{=} \\lim_{n \\to \\infty} a_{n+2} \\underset{\\text{הרקורסיה}}{=} \\lim_{n \\to \\infty} \\left( \\sqrt{a_n} + \\sqrt{a_{n+1}} \\right) \\underset{\\text{אלגברה ומשפט 3}}{=} \\sqrt{L} + \\sqrt{L} = 2\\sqrt{L} .$$\nאזי $L = 2\\sqrt{L}$ ולכן $\\sqrt{L} = 2$ או $L = 0$, ולכן $L = 4$ או $L = 0$. נשים $\\heartsuit$ כי\n$$L = \\lim_{n \\to \\infty} a_n \\underset{\\text{יורדת}}{=} \\inf\\{a_n : n \\in \\mathbb{N}\\} \\underset{\\text{מהוכחתנו}}{\\ge} 4 \\implies L \\ge 4 .$$\nולכן $L = 4$.",
+        "statement_he": "נביט בסדרה $(a_n)_{n=1}^{\\infty}$ המוגדרת ברקורסיה\n$$\\begin{cases} a_{n+2} = \\sqrt{a_n} + \\sqrt{a_{n+1}} & \\forall n \\in \\mathbb{N} \\\\ a_1 = 9,\\; a_2 = 6 \\end{cases}$$\nהוכיחו ש-$(a_n)$ מתכנסת וחשבו את גבולה.",
+        "proof_he": "נוכיח תחילה כי $a_n \\ge 4$ לכל $n$, ושהסדרה יורדת, ומכך נסיק התכנסות.\n\n**טענת עזר א ($a_n \\ge 4$) — באינדוקציה על $n$.**\nבסיס ($n=1,2$): $a_1 = 9 \\ge 4$ וכן $a_2 = 6 \\ge 4$.\nצעד ($n, n+1 \\Rightarrow n+2$): נניח $a_n \\ge 4$ ו-$a_{n+1} \\ge 4$. אזי\n$$a_{n+2} = \\sqrt{a_n} + \\sqrt{a_{n+1}} \\;\\underset{\\text{הנחת האינדוקציה}}{\\ge}\\; \\sqrt{4} + \\sqrt{4} = 4.$$\n\n**טענת עזר ב (הסדרה יורדת, $a_{n+1} \\le a_n$) — באינדוקציה על $n$.**\nבסיס: $a_2 = 6 \\le 9 = a_1$; וכן $a_3 = \\sqrt{a_1} + \\sqrt{a_2} = \\sqrt{9} + \\sqrt{6} = 3 + \\sqrt{6} \\le 6 = a_2$ (כי $\\sqrt{6} \\le 3$ שכן $6 \\le 9$).\nצעד ($n-1, n \\Rightarrow n+1$): נניח $a_{n+1} \\le a_n$ וכן $a_n \\le a_{n-1}$. אזי\n$$a_{n+2} = \\sqrt{a_n} + \\sqrt{a_{n+1}} \\;\\underset{\\text{הנחת האינדוקציה}}{\\le}\\; \\sqrt{a_{n+1}} + \\sqrt{a_n} = a_{n+1}.$$\n\n**התכנסות וחישוב הגבול.** מאחר שהסדרה יורדת וחסומה מלרע (ע\"י $4$), היא מתכנסת ממשפט 2, כלומר קיים $L \\in \\mathbb{R}$ עם $\\lim_{n\\to\\infty} a_n = L$. נחשב:\n$$L = \\lim_{n \\to \\infty} a_n \\;\\underset{\\text{משפט 3}}{=}\\; \\lim_{n \\to \\infty} a_{n+2} \\;\\underset{\\text{הרקורסיה}}{=}\\; \\lim_{n \\to \\infty}\\!\\left( \\sqrt{a_n} + \\sqrt{a_{n+1}} \\right) \\;\\underset{\\text{אריתמטיקה ומשפט 3}}{=}\\; \\sqrt{L} + \\sqrt{L} = 2\\sqrt{L}.$$\nמהמשוואה $L = 2\\sqrt{L}$ נקבל $L = 0$ או $L = 4$. אך\n$$L = \\inf\\{a_n : n \\in \\mathbb{N}\\} \\;\\underset{\\text{טענת עזר א}}{\\ge}\\; 4,$$\nולכן $L = 4$.",
         "topic": "התכנסות והתבדרות"
       },
       {
@@ -188,7 +180,7 @@
         "label": "הגדרה",
         "number": null,
         "name": "תת-סדרה",
-        "statement_he": "תהיינה $(a_n)_{n=1}^{\\infty}$ ו-$(b_k)_{k=1}^{\\infty}$ שתי סדרות של מספרים ממשיים. נאמר כי $(b_k)_{k=1}^{\\infty}$ היא תת-סדרה של $(a_n)_{n=1}^{\\infty}$ אם קיימת סדרה $(n_k)_{k=1}^{\\infty}$ של מספרים טבעיים עולה ממש כך שלכל $k \\in \\mathbb{N}$ מתקיים\n$$b_k = a_{n_k} .$$",
+        "statement_he": "תהיינה $(a_n)_{n=1}^{\\infty}$ ו-$(b_k)_{k=1}^{\\infty}$ שתי סדרות של מספרים ממשיים. נאמר כי $(b_k)_{k=1}^{\\infty}$ היא תת-סדרה של $(a_n)_{n=1}^{\\infty}$ אם קיימת סדרה $(n_k)_{k=1}^{\\infty}$ של מספרים טבעיים עולה ממש כך שלכל $k \\in \\mathbb{N}$ מתקיים\n$$b_k = a_{n_k}.$$",
         "proof_he": null,
         "topic": "תת-סדרות"
       },
@@ -196,72 +188,63 @@
         "kind": "example",
         "label": "דוגמה",
         "number": null,
-        "name": "תת-סדרה לדוגמה",
-        "statement_he": "$a_n : \\cancel{a_1} \\; a_2 \\; a_3 \\; \\cancel{a_4} \\; a_5 \\; \\cancel{a_6} \\; \\cancel{a_7} \\; a_8 \\; a_9 \\ldots$\n$n_k : 2, 3, 5, 8, 9, \\ldots$\n$b_1 = a_2, \\; b_2 = a_3, \\; b_3 = a_5, \\; b_4 = a_8, \\; b_5 = a_9$\n$b_k : a_2 \\; a_3 \\; a_5 \\; a_8 \\; a_9 \\ldots$",
-        "proof_he": null,
-        "topic": "תת-סדרות"
-      },
-      {
-        "kind": "note",
-        "label": "הערה",
-        "number": "4",
-        "name": "כל סדרה היא תת-סדרה של עצמה",
-        "statement_he": "נשים $\\heartsuit$ כי כל סדרה היא תת-סדרה של עצמה. בהתקבלה ני $(a_n)_{n=1}^{\\infty}$ ע\"י המתאם תאברים.\nפתרון: נבחר $n_k = 2k$ לכל $k \\in \\mathbb{N}$. שים $\\heartsuit$ כי $(n_k)_{k=1}^{\\infty}$ הינה סדרה של מספרים טבעיים:\n$n_k : 2, 4, 6, 8, \\ldots$\nבמקבה כה $b_k = a_{n_k} = a_{2k}$ לכל $k \\in \\mathbb{N}$ אזי $(a_{2k})_{k=1}^{\\infty}$ הינה תת-סדרה של $(a_n)_{n=1}^{\\infty}$ נתת הסדרה של האברים הזוגיים. באופן דומה, גם $(a_{2k-1})_{k=1}^{\\infty}$ הינה תת-סדרה של $(a_n)_{n=1}^{\\infty}$. באם שתי הסדרות $(a_{2n})_{n=1}^{\\infty}$ ו-$(a_{2n-1})_{n=1}^{\\infty}$ הן וכן תת-סדרות בדוגמה לי.",
+        "name": "תתי-הסדרות הזוגית והאי-זוגית",
+        "statement_he": "ניקח $n_k = 2k$ לכל $k \\in \\mathbb{N}$ (סדרת המספרים הטבעיים הזוגיים $2,4,6,8,\\ldots$). אזי $b_k = a_{n_k} = a_{2k}$, ו-$(a_{2k})_{k=1}^{\\infty}$ היא תת-הסדרה של האיברים הזוגיים. באופן דומה $(a_{2k-1})_{k=1}^{\\infty}$ היא תת-הסדרה של האיברים האי-זוגיים.",
         "proof_he": null,
         "topic": "תת-סדרות"
       },
       {
         "kind": "theorem",
-        "label": "משפט",
+        "label": "משפט 4",
         "number": "4",
-        "name": "תת-סדרה של מתכנסת מתכנסת לאותו גבול (וירושה)",
-        "statement_he": "(וירושה) תהי $(a_n)_{n=1}^{\\infty}$ סדרה של מספרים ממשיים ותהי $(n_k)_{k=1}^{\\infty}$ סדרה עולה ממש של מספרים טבעיים. נניח כי $(a_n)_{n=1}^{\\infty}$ מתכנסת באמצעות הרחב. אזי תת הסדרה $(a_{n_k})_{k=1}^{\\infty}$ מתכנסת באמצעות הרחב ובנוסף\n$$\\lim_{k \\to \\infty} a_{n_k} = \\lim_{n \\to \\infty} a_n .$$",
-        "proof_he": "הוכחת משפט הירושה:\nמקרה א': נניח שהסדרה $(a_n)_{n=1}^{\\infty}$ מתכנסת, פומר שקיים $L \\in \\mathbb{R}$ כך ש-$\\lim_{n \\to \\infty} a_n = L$. נוכיח כי $\\lim_{k \\to \\infty} a_{n_k} = L$ ונס\"ם.\nיהי $\\varepsilon > 0$. מהיות $\\lim_{n \\to \\infty} a_n = L$ קיים $N_1 \\in \\mathbb{N}$ כך שלכל $n \\ge N_1$ מתקיים\n$$|a_n - L| < \\varepsilon \\quad (*)$$\nנבחר $\\boxed{K = N_1}$ ויהי $k \\ge K$. אזי $n_k \\ge k \\ge K = N_1$ (מהיות $n_k$ סדרה עולה ממש) ולכן $(*)$ מתקיים עבור $n_k$ ולכן\n$$|a_{n_k} - L| \\underset{(*)}{<} \\varepsilon .$$\n\nמקרה ב': נניח כי $\\lim_{n \\to \\infty} a_n = \\infty$. נוכיח כי $\\lim_{k \\to \\infty} a_{n_k} = \\infty$ ונס\"ם.\nיהי $M > 0$. מהיות $\\lim_{n \\to \\infty} a_n = \\infty$ קיים $N_1 \\in \\mathbb{N}$ כך שלכל $n \\ge N_1$ מתקיים\n$$a_n > M \\quad (**)$$\nנבחר $\\boxed{K = N_1}$ ויהי $k \\ge K$. אזי $n_k \\ge k \\ge K = N_1$ (מהיות $n_k$ סדרה עולה ממש) ולכן $(**)$ מתקיים עבור $n_k$ ולכן\n$$a_{n_k} \\underset{(**)}{>} M .$$\n\nמקרה ג': נניח כי $\\lim_{n \\to \\infty} a_n = -\\infty$. נוכיח כי $\\lim_{k \\to \\infty} a_{n_k} = -\\infty$ ונס\"ם.\nיהי $M < 0$. מהיות $\\lim_{n \\to \\infty} a_n = -\\infty$ קיים $N_1 \\in \\mathbb{N}$ כך שלכל $n \\ge N_1$ מתקיים\n$$a_n < M \\quad (**)$$\nנבחר $\\boxed{K = N_1}$ ויהי $k \\ge K$. אזי $n_k \\ge k \\ge K = N_1$ (מהיות $n_k$ סדרה עולה ממש) ולכן $(**)$ מתקיים עבור $n_k$ ולכן\n$$a_{n_k} \\underset{(**)}{<} M .$$",
+        "name": "משפט הירושה — תת-סדרה של סדרה מתכנסת",
+        "statement_he": "(ירושה) תהי $(a_n)_{n=1}^{\\infty}$ סדרה של מספרים ממשיים ותהי $(n_k)_{k=1}^{\\infty}$ סדרה עולה ממש של מספרים טבעיים. נניח כי $(a_n)_{n=1}^{\\infty}$ מתכנסת במובן הרחב. אזי תת-הסדרה $(a_{n_k})_{k=1}^{\\infty}$ מתכנסת במובן הרחב ובנוסף\n$$\\lim_{k \\to \\infty} a_{n_k} = \\lim_{n \\to \\infty} a_n.$$",
+        "proof_he": "**מקרה א ($\\lim a_n = L \\in \\mathbb{R}$).** יהי $\\varepsilon > 0$. קיים $N_1 \\in \\mathbb{N}$ כך שלכל $n \\ge N_1$ מתקיים $|a_n - L| < \\varepsilon$ $(*)$. נבחר $K = N_1$ ויהי $k \\ge K$. אזי $n_k \\ge k \\ge K = N_1$ (כי $(n_k)$ עולה ממש, ומכאן $n_k \\ge k$), ולכן $(*)$ חל על $n_k$ ומתקיים $|a_{n_k} - L| < \\varepsilon$.\n\n**מקרה ב ($\\lim a_n = \\infty$).** יהי $M > 0$. קיים $N_1$ כך שלכל $n \\ge N_1$ מתקיים $a_n > M$ $(**)$. נבחר $K = N_1$ ויהי $k \\ge K$. אזי $n_k \\ge k \\ge N_1$ ולכן $a_{n_k} > M$.\n\n**מקרה ג ($\\lim a_n = -\\infty$).** יהי $M < 0$. קיים $N_1$ כך שלכל $n \\ge N_1$ מתקיים $a_n < M$. נבחר $K = N_1$ ויהי $k \\ge K$. אזי $n_k \\ge N_1$ ולכן $a_{n_k} < M$.",
         "topic": "תת-סדרות"
       },
       {
         "kind": "exercise",
-        "label": "תרגיל",
+        "label": "טענת עזר 1",
         "number": "1",
-        "name": "תת-סדרה עם $n_k \\ge k$",
-        "statement_he": "תהי $(n_k)_{k=1}^{\\infty}$ סדרה עולה ממש של מספרים טבעיים. הוכיחו כי לכל $k \\in \\mathbb{N}$ מתקיים $n_k \\ge k$.",
-        "proof_he": "הוכחה: נוכיח באינדוקציה על $k$.\nבסיס האינדוקציה ($k=1$): $n_1 \\ge 1$ כי $n_1 \\in \\mathbb{N}$.\nצעד האינדוקציה ($k \\Rightarrow k+1$): יהי $k \\in \\mathbb{N}$ ונניח שהטענה נכונה עבור $k$, פומר $n_k \\ge k$. נוכיח שהטענה נכונה עבור $k+1$. מהיות $(n_k)_{k=1}^{\\infty}$ עולה ממש, הרי ש-$n_{k+1} > n_k$. מהיות $n_k, n_{k+1}$ טבעיים, אזי $n_{k+1} \\ge n_k + 1$. ולכן\n$$n_{k+1} \\ge n_k + 1 \\underset{\\text{הנחת האינדוקציה}}{\\ge} k + 1 .$$",
+        "name": "$n_k \\ge k$ לסדרת אינדקסים עולה ממש",
+        "statement_he": "תהי $(n_k)_{k=1}^{\\infty}$ סדרה עולה ממש של מספרים טבעיים. אזי לכל $k \\in \\mathbb{N}$ מתקיים $n_k \\ge k$.",
+        "proof_he": "באינדוקציה על $k$. בסיס ($k=1$): $n_1 \\ge 1$ שכן $n_1 \\in \\mathbb{N}$. צעד ($k \\Rightarrow k+1$): נניח $n_k \\ge k$. מאחר ש-$(n_k)$ עולה ממש מתקיים $n_{k+1} > n_k$, ומאחר ש-$n_k, n_{k+1}$ טבעיים נובע $n_{k+1} \\ge n_k + 1$, ולכן\n$$n_{k+1} \\ge n_k + 1 \\;\\underset{\\text{הנחת האינדוקציה}}{\\ge}\\; k + 1.$$",
         "topic": "תת-סדרות"
       },
       {
         "kind": "example",
-        "label": "דוגמה",
+        "label": "דוגמה 1",
         "number": "1",
         "name": "תת-סדרת המספרים הראשוניים",
-        "statement_he": "תהי $(p_k)_{k=1}^{\\infty}$ סדרת המספרים הראשוניים, אזי\n$$\\lim_{k \\to \\infty} p_k \\underset{\\text{וירושה}}{=} \\lim_{n \\to \\infty} n = \\infty .$$\nבאותו אופן\n$$\\lim_{k \\to \\infty} \\frac{1}{p_k} \\underset{\\text{וירושה}}{=} \\lim_{n \\to \\infty} \\frac{1}{n} = 0 .$$\n$\\frac{1}{n} : \\cancel{1} \\; \\frac{1}{2} \\; \\frac{1}{3} \\; \\cancel{\\frac{1}{4}} \\; \\frac{1}{5} \\ldots$\n$\\frac{1}{p_k} : \\frac{1}{2} \\; \\frac{1}{3} \\; \\frac{1}{5} \\; \\frac{1}{7} \\; \\frac{1}{11} \\ldots$",
+        "statement_he": "תהי $(p_k)_{k=1}^{\\infty}$ סדרת המספרים הראשוניים $2,3,5,7,11,\\ldots$. מהירושה,\n$$\\lim_{k \\to \\infty} p_k = \\lim_{n \\to \\infty} n = \\infty, \\qquad \\lim_{k \\to \\infty} \\frac{1}{p_k} = \\lim_{n \\to \\infty} \\frac{1}{n} = 0.$$",
         "proof_he": null,
         "topic": "תת-סדרות"
       },
       {
         "kind": "example",
-        "label": "דוגמה",
+        "label": "דוגמה 2",
         "number": "2",
         "name": "התבדרות $(-1)^n$ דרך תת-סדרות",
-        "statement_he": "נביט בסדרה $(a_n)_{n=0}^{\\infty}$ המוגדרת ע\"י: $a_n = (-1)^n$ לכל $n \\ge 0$. שים $\\heartsuit$ כי\n$$\\lim_{k \\to \\infty} a_{2k} = \\lim_{k \\to \\infty} (-1)^{2k} = \\lim_{k \\to \\infty} 1 = 1$$\n$$\\lim_{k \\to \\infty} a_{2k-1} = \\lim_{k \\to \\infty} (-1)^{2k-1} = \\lim_{k \\to \\infty} (-1) = (-1)$$\nאזי $\\lim_{n \\to \\infty} (-1)^n$ אינו קיים כי גבולן של תת-סדרות שונה.",
+        "statement_he": "נביט ב-$a_n = (-1)^n$. מתקיים\n$$\\lim_{k \\to \\infty} a_{2k} = \\lim_{k \\to \\infty} (-1)^{2k} = 1, \\qquad \\lim_{k \\to \\infty} a_{2k-1} = \\lim_{k \\to \\infty} (-1)^{2k-1} = -1.$$\nמאחר שגבולות שתי תת-הסדרות שונים, $\\lim_{n \\to \\infty} (-1)^n$ אינו קיים (גם לא במובן הרחב).",
         "proof_he": null,
         "topic": "תת-סדרות"
       },
       {
         "kind": "corollary",
-        "label": "מסקנה",
+        "label": "מסקנה 1",
         "number": "1",
-        "name": "התכנסות זנב דרך תת-סדרה",
-        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=1}^{\\infty}$ סדרה של מספרים ממשיים. נניח כי $(a_n)_{n=1}^{\\infty}$ מתכנסת באמצעות הרחב. אזי $(a_{n+k})_{n=1}^{\\infty}$ מתכנסת באמצעות הרחב ו-\n$$\\lim_{n \\to \\infty} a_{n+k} = \\lim_{n \\to \\infty} a_n .$$",
-        "proof_he": "הוכחה: $(a_{n+k})_{n=1}^{\\infty}$ הינה תת-סדרה של $(a_n)_{n=1}^{\\infty}$ ולכן מירושה\n$$\\lim_{n \\to \\infty} a_{n+k} = \\lim_{n \\to \\infty} a_n .$$",
+        "name": "התכנסות הזנב כמסקנה מהירושה",
+        "statement_he": "יהי $0 \\le k \\in \\mathbb{Z}$ ותהי $(a_n)_{n=1}^{\\infty}$ סדרה של מספרים ממשיים. אם $(a_n)$ מתכנסת במובן הרחב, אזי $(a_{n+k})_{n=1}^{\\infty}$ מתכנסת במובן הרחב ו-\n$$\\lim_{n \\to \\infty} a_{n+k} = \\lim_{n \\to \\infty} a_n.$$",
+        "proof_he": "$(a_{n+k})_{n=1}^{\\infty}$ היא תת-סדרה של $(a_n)_{n=1}^{\\infty}$, ולכן מהירושה $\\lim_{n \\to \\infty} a_{n+k} = \\lim_{n \\to \\infty} a_n$.",
         "topic": "תת-סדרות"
       },
       {
         "kind": "theorem",
-        "label": "משפט",
+        "label": "משפט 5",
         "number": "5",
-        "name": "התכנסות דרך תת-סדרות זוגית ואי-זוגית",
-        "statement_he": "תהי $(a_n)_{n=1}^{\\infty}$ סדרה של מספרים ממשיים. יהי $L \\in \\mathbb{R}$. מ\"ח כי\n$$\\lim_{k \\to \\infty} a_{2k} = \\lim_{k \\to \\infty} a_{2k-1} = L$$\nאזי $(a_n)_{n=1}^{\\infty}$ מתכנסת ו-\n$$\\lim_{n \\to \\infty} a_n = L .$$",
-        "proof_he": "הוכחה: יהי $\\varepsilon > 0$. מהיות $\\lim_{k \\to \\infty} a_{2k} = L$ קיים $K_1 \\in \\mathbb{N}$ כך שלכל $k \\ge K_1$ מתקיים\n$$|a_{2k} - L| < \\varepsilon \\quad (*)$$\nמהיות $\\lim_{k \\to \\infty} a_{2k-1} = L$ קיים $K_2 \\in \\mathbb{N}$ כך שלכל $k \\ge K_2$ מתקיים\n$$|a_{2k-1} - L| < \\varepsilon \\quad (**)$$\nנבחר $\\boxed{N = \\max\\{2K_1, 2K_2 - 1\\}}$ ויהי $n \\ge N$.\nאם $n$ זוגי, אזי קיים $K \\in \\mathbb{N}$ כך ש-$n = 2k$ ולכן $2k = n \\ge N \\ge 2K_1$ ולכן $k \\ge K_1$ ולכן $(*)$ מתקיים עבור $k$ ולכן\n$$|a_n - L| = |a_{2k} - L| \\underset{(*)}{<} \\varepsilon .$$\nאחרת, $n$ אי-זוגי, ולכן קיים $K \\in \\mathbb{N}$ כך ש-$n = 2k-1$, ולכן $2k - 1 = n \\ge N \\ge 2K_2 - 1$ ולכן $k \\ge K_2$ ולכן $(**)$ מתקיים עבור $k$ ולכן\n$$|a_n - L| = |a_{2k-1} - L| \\underset{(**)}{<} \\varepsilon .$$",
+        "name": "התכנסות דרך תת-הסדרות הזוגית והאי-זוגית",
+        "statement_he": "תהי $(a_n)_{n=1}^{\\infty}$ סדרה של מספרים ממשיים ויהי $L \\in \\mathbb{R}$. נניח כי\n$$\\lim_{k \\to \\infty} a_{2k} = \\lim_{k \\to \\infty} a_{2k-1} = L.$$\nאזי $(a_n)_{n=1}^{\\infty}$ מתכנסת ומתקיים $\\lim_{n \\to \\infty} a_n = L$.",
+        "proof_he": "יהי $\\varepsilon > 0$. קיים $K_1$ כך שלכל $k \\ge K_1$ מתקיים $|a_{2k} - L| < \\varepsilon$ $(*)$, וקיים $K_2$ כך שלכל $k \\ge K_2$ מתקיים $|a_{2k-1} - L| < \\varepsilon$ $(**)$. נבחר $N = \\max\\{2K_1,\\, 2K_2 - 1\\}$ ויהי $n \\ge N$.\nאם $n$ זוגי, $n = 2k$, אזי $2k = n \\ge N \\ge 2K_1$ כך ש-$k \\ge K_1$, ולכן $|a_n - L| = |a_{2k} - L| \\underset{(*)}{<} \\varepsilon$.\nאם $n$ אי-זוגי, $n = 2k-1$, אזי $2k - 1 = n \\ge N \\ge 2K_2 - 1$ כך ש-$k \\ge K_2$, ולכן $|a_n - L| = |a_{2k-1} - L| \\underset{(**)}{<} \\varepsilon$.",
         "topic": "תת-סדרות"
       }
     ]
@@ -269,28 +252,23 @@
   {
     "lecture": 2,
     "week": 4,
-    "date": "26.03.26",
+    "verified": true,
+    "date": "26.3.26",
     "topics": [
-      "אינטגרל לא מסוים (פונקציה קדומה)",
+      "אינטגרל לא מסוים",
+      "פונקציה קדומה",
       "שיטות אינטגרציה",
-      "אינטגרל מסוים (סכומי דארבו)"
+      "אינטגרל מסוים",
+      "סכומי דרבו",
+      "אינטגרביליות"
     ],
     "items": [
       {
         "kind": "definition",
         "label": "הגדרה",
         "number": null,
-        "name": "פונקציה קדומה",
-        "statement_he": "יהי $I \\subseteq \\mathbb{R}$ קטע ותהיינה $F, f$ שתי פונקציות המוגדרות על $I$. נאמר כי $F$ היא פונקציה קדומה של $f$ ב-$I$ אם:\n(i) $F$ גזירה ב-$I$.\n(ii) לכל $x \\in I$ מתקיים $F'(x) = f(x)$.",
-        "proof_he": null,
-        "topic": "אינטגרל לא מסוים"
-      },
-      {
-        "kind": "definition",
-        "label": "הגדרה",
-        "number": null,
-        "name": "אינטגרל לא מסוים",
-        "statement_he": "במקרה כזה, נגדיר את הסכום הכולל (indefinite) של $f$ על $I$ ע\"י:\n$$\\int f(x)\\,dx = \\{ F(x) + C : C \\in \\mathbb{R} \\}$$\nובאופן מקוצר:\n$$\\int f(x)\\,dx = F(x) + C.$$",
+        "name": "פונקציה קדומה ואינטגרל לא מסוים",
+        "statement_he": "יהי $I \\subseteq \\mathbb{R}$ קטע ותהיינה $F, f$ שתי פונקציות המוגדרות על $I$. נאמר כי $F$ היא פונקציה קדומה של $f$ ב-$I$ אם:\n(i) $F$ גזירה ב-$I$;\n(ii) לכל $x \\in I$ מתקיים $F'(x) = f(x)$.\nבמקרה זה נגדיר את האינטגרל הלא מסוים (indefinite) של $f$ על $I$, ונסמן\n$$\\int f(x)\\,dx = \\{ F(x) + C : C \\in \\mathbb{R} \\},$$\nובקיצור $\\int f(x)\\,dx = F(x) + C$.",
         "proof_he": null,
         "topic": "אינטגרל לא מסוים"
       },
@@ -298,8 +276,8 @@
         "kind": "example",
         "label": "דוגמאות",
         "number": null,
-        "name": "אינטגרלים בסיסיים (טבלת אינטגרלים)",
-        "statement_he": "טבלת אינטגרלים בסיסיים:\n1. $\\int \\cos x\\,dx = \\sin x + C$\n2. $\\int \\sin x\\,dx = -\\cos x + C$\n3. $\\int x\\,dx = \\frac{x^2}{2} + C$\n4. $\\int x^2\\,dx = \\frac{x^3}{3} + C$\n5. $\\int \\frac{dx}{x} = \\ln x + C$ ב-$(0, \\infty)$;\nב-$(-\\infty, 0)$: $\\int \\frac{dx}{x} = \\ln(-x) + C$, כי $[\\ln(-x)]' = \\frac{1}{-x} \\cdot (-1) = \\frac{1}{x}$, ובאופן כללי $\\int \\frac{dx}{x} = \\ln|x| + C$.",
+        "name": "טבלת אינטגרלים בסיסית (I)",
+        "statement_he": "$$\\int \\cos x\\,dx = \\sin x + C \\qquad \\int \\sin x\\,dx = -\\cos x + C$$\n$$\\int x\\,dx = \\frac{x^2}{2} + C \\qquad \\int x^2\\,dx = \\frac{x^3}{3} + C$$\n$$\\int \\frac{dx}{x} = \\ln|x| + C$$\nההצדקה ל-$\\int \\frac{dx}{x}$: בקטע $(0,\\infty)$ מתקיים $\\int \\frac{dx}{x} = \\ln x + C$, ובקטע $(-\\infty,0)$ מתקיים $\\int \\frac{dx}{x} = \\ln(-x) + C$ (כי $[\\ln(-x)]' = \\frac{1}{-x}\\cdot(-1) = \\frac{1}{x}$); באופן כללי $\\int \\frac{dx}{x} = \\ln|x| + C$.",
         "proof_he": null,
         "topic": "אינטגרל לא מסוים"
       },
@@ -307,26 +285,26 @@
         "kind": "theorem",
         "label": "משפט 1",
         "number": "1",
-        "name": "פונקציות קדומות נבדלות בקבוע",
-        "statement_he": "תהיינה $f, F, G$ שלוש פונקציות המוגדרות בקטע $I \\subseteq \\mathbb{R}$. נניח כי $F, G$ הן פונקציות קדומות של $f$ בקטע $I$. אזי קיים $C \\in \\mathbb{R}$ כך שלכל $x \\in I$ מתקיים\n$$F(x) = G(x) + C.$$",
-        "proof_he": "נגדיר את הפונקציה העזר $h$:\n$h(x) = F(x) - G(x)$ לכל $x \\in I$.\nואז $h$ גזירה ב-$I$ (כהפרש של שתי גזירות) ולכל $x \\in I$ מתקיים\n$$h'(x) = F'(x) - G'(x) = f(x) - f(x) = 0$$\n(לפי ההגדרה).\nכעת ממסקנה חלקה ב' בהרצאה 1 קיים $C \\in \\mathbb{R}$ כך שלכל $x \\in I$ מתקיים $h(x) = C$, כלומר\n$h(x) = F(x) - G(x) = C$ לכל $x \\in I$, ואז\n$F(x) = G(x) + C$ לכל $x \\in I$.",
+        "name": "שתי פונקציות קדומות נבדלות בקבוע",
+        "statement_he": "תהיינה $f, F, G$ שלוש פונקציות המוגדרות בקטע $I \\subseteq \\mathbb{R}$. נניח כי $F$ ו-$G$ הן פונקציות קדומות של $f$ ב-$I$. אזי קיים $C \\in \\mathbb{R}$ כך שלכל $x \\in I$ מתקיים\n$$F(x) = G(x) + C.$$",
+        "proof_he": "נגדיר את הפונקציה $h(x) = F(x) - G(x)$ לכל $x \\in I$. אזי $h$ גזירה ב-$I$ (כהפרש פונקציות גזירות), ולכל $x \\in I$ מתקיים\n$$h'(x) = F'(x) - G'(x) = f(x) - f(x) = 0$$\n(מכך ש-$F, G$ קדומות של $f$). לפי המסקנה ממשפט הערך הממוצע (מחדו\"א 1), פונקציה שנגזרתה אפס בקטע היא קבועה, ולכן קיים $C \\in \\mathbb{R}$ כך שלכל $x \\in I$ מתקיים $h(x) = C$, כלומר $F(x) - G(x) = C$, ומכאן $F(x) = G(x) + C$.",
         "topic": "אינטגרל לא מסוים"
       },
       {
         "kind": "corollary",
         "label": "מסקנה 1",
         "number": "1",
-        "name": "אוסף כל הפונקציות הקדומות",
-        "statement_he": "$$\\int f(x)\\,dx = \\{ F(x) + C : C \\in \\mathbb{R} \\} = \\{ \\text{כל הפונקציות הקדומות של } f \\text{ ב-}I \\}.$$\n(כאשר $F$ פונקציה קדומה של $f$).",
-        "proof_he": null,
+        "name": "האינטגרל הלא מסוים הוא אוסף כל הקדומות",
+        "statement_he": "$$\\int f(x)\\,dx = \\{ F(x) + C : C \\in \\mathbb{R} \\} = \\{ \\text{כל הפונקציות הקדומות של } f \\text{ ב-}I \\}.$$",
+        "proof_he": "נובע ישירות ממשפט 1: כל שתי קדומות נבדלות בקבוע, ולכן אוסף כל הקדומות הוא בדיוק $\\{F(x) + C : C \\in \\mathbb{R}\\}$.",
         "topic": "אינטגרל לא מסוים"
       },
       {
-        "kind": "example",
-        "label": "דוגמא",
+        "kind": "note",
+        "label": "הערה",
         "number": null,
-        "name": "הפונקציה הקדומה אינה רציפה בהכרח",
-        "statement_he": "הפונקציה הקדומה: $F(x) = \\begin{cases} \\ln x & x > 0 \\\\ \\ln(-x) + 1 & x < 0 \\end{cases}$ לכל $x \\neq 0$.\nהיא קדומה של $\\frac{1}{x}$ כי $F'(x) = \\frac{1}{x}$ לכל $x \\neq 0$.\nאבל אז לפי קיים $C \\in \\mathbb{R}$ כך ש- $F(x) = \\ln|x| + C$ לכל $x \\neq 0$.\nאבל זה לא נכון, כי יש חשיבות בהנחה של $I$ קטע. הצורך ש-$F$ קדומה היא בקטע ולא בכמה קטעים, וגם בתחום ההגדרה של $f$ כך שלם.",
+        "name": "חשיבות ההנחה שהתחום הוא קטע",
+        "statement_he": "יש חשיבות להנחה כי הפונקציות מוגדרות בקטע. למשל, עבור\n$$F(x) = \\begin{cases} \\ln x & x > 0 \\\\ \\ln(-x) + 1 & x < 0 \\end{cases}$$\nמתקיים $F'(x) = \\frac{1}{x}$ לכל $x \\ne 0$, אך $F$ אינה מהצורה $\\ln|x| + C$ (הקבוע שונה בכל אחד משני הקטעים). הסיבה: תחום ההגדרה $\\{x \\ne 0\\}$ אינו קטע, ולכן משפט 1 אינו חל עליו.",
         "proof_he": null,
         "topic": "אינטגרל לא מסוים"
       },
@@ -334,8 +312,8 @@
         "kind": "note",
         "label": "הערה 1",
         "number": "1",
-        "name": "תנאי לקיום פונקציה קדומה",
-        "statement_he": "אם קיים $\\int f(x)\\,dx$ אזי קודמת של $f$ ב-$I$.\nמסקנה: אם קיים $\\int D(x)\\,dx$ אזי קיים כי ראינו ש- $D$ פונקציה קדומה אבל לא קיים $D$ (כפי שנראה בהרצאה 24).",
+        "name": "האינטגרל הלא מסוים הוא קבוצת פונקציות",
+        "statement_he": "האינטגרל $\\int f(x)\\,dx$ הוא קבוצת פונקציות, ולא פונקציה בודדת — הוא אוסף כל הפונקציות הקדומות של $f$ (הנבדלות זו מזו בקבוע). [בכתב היד מופיעה כאן גם הפניה לתרגיל — מספר ההפניה אינו ברור לי לגמרי בכתב היד.]",
         "proof_he": null,
         "topic": "אינטגרל לא מסוים"
       },
@@ -343,17 +321,17 @@
         "kind": "theorem",
         "label": "משפט 2",
         "number": "2",
-        "name": "תכונות האינטגרל הלא מסוים (לינאריות, בחלקים, החלפת משתנה)",
-        "statement_he": "תהיינה $f, g, F, G$ ארבע פונקציות המוגדרות בקטע $I \\subseteq \\mathbb{R}$. נניח כי $F, G$ הן פונקציות קדומות של $f, g$ ב-$I$. אזי:\n(i) לינאריות: לכל $\\alpha, \\beta \\in \\mathbb{R}$ מתקיים\n$$\\int [\\alpha f(x) + \\beta g(x)]\\,dx = \\alpha \\int f(x)\\,dx + \\beta \\int g(x)\\,dx.$$\n(ii) אינטגרציה בחלקים:\n$$\\int F'(x) G(x)\\,dx = F(x) G(x) - \\int F(x) G'(x)\\,dx.$$\n(iii) שיטת ההצבה (החלפת המשתנה):\n$$\\int g(F(x)) \\cdot f(x)\\,dx = \\int g(t)\\,dt, \\quad t = F(x).$$",
-        "proof_he": "נוכיח את (iii): נשים לב שמתקיים, לכל $x \\in I$,\n$$[G(F(x))]' = G'(F(x)) \\cdot F'(x) = g(F(x)) \\cdot f(x)$$\n(מהשרשרת).\nאזי $G(F(x))$ קדומה של $g(F(x)) \\cdot f(x)$ בקטע $I$, ואזי ע\"פ ההגדרה\n$$\\int g(F(x)) f(x)\\,dx = G(F(x)) + C = G(t) + C = \\int g(t)\\,dt, \\quad t = F(x).$$",
+        "name": "תכונות האינטגרל הלא מסוים (לינאריות, בחלקים, הצבה)",
+        "statement_he": "תהיינה $f, g, F, G$ פונקציות המוגדרות בקטע $I \\subseteq \\mathbb{R}$, כאשר $F$ קדומה של $f$ ו-$G$ קדומה של $g$ ב-$I$ (כלומר $F' = f$, $G' = g$). אזי:\n(i) **לינאריות:** לכל $\\alpha, \\beta \\in \\mathbb{R}$,\n$$\\int [\\alpha f(x) + \\beta g(x)]\\,dx = \\alpha \\int f(x)\\,dx + \\beta \\int g(x)\\,dx.$$\n(ii) **אינטגרציה בחלקים:**\n$$\\int F'(x) G(x)\\,dx = F(x) G(x) - \\int F(x) G'(x)\\,dx.$$\n(iii) **שיטת ההצבה (החלפת המשתנה):**\n$$\\int g(F(x)) \\cdot f(x)\\,dx = \\int g(t)\\,dt, \\qquad t = F(x).$$",
+        "proof_he": "נוכיח את (iii). נשים לב שלכל $x \\in I$ מתקיים, מכלל השרשרת,\n$$[G(F(x))]' = G'(F(x)) \\cdot F'(x) = g(F(x)) \\cdot f(x).$$\nאזי $G(F(x))$ היא פונקציה קדומה של $g(F(x)) \\cdot f(x)$ בקטע $I$, ולכן\n$$\\int g(F(x)) f(x)\\,dx = G(F(x)) + C = G(t) + C = \\int g(t)\\,dt, \\qquad t = F(x).$$",
         "topic": "שיטות אינטגרציה"
       },
       {
         "kind": "example",
         "label": "דוגמאות",
         "number": null,
-        "name": "אינטגרלים נוספים (e, חזקה, מעריכית, arctg)",
-        "statement_he": "נוסיף לטבלת האינטגרלים הבסיסיים את:\n1. $\\int e^x\\,dx = e^x + C$\n2. $\\int x^{\\alpha}\\,dx = \\frac{x^{\\alpha+1}}{\\alpha+1} + C$, לכל $\\alpha \\neq -1$\n3. $\\int a^x\\,dx = \\frac{a^x}{\\ln a} + C$, לכל $0 < a \\neq 1$\n4. $\\int \\frac{dx}{1+x^2} = \\arctan x + C$",
+        "name": "טבלת אינטגרלים בסיסית (II)",
+        "statement_he": "$$\\int e^x\\,dx = e^x + C \\qquad \\int x^{\\alpha}\\,dx = \\frac{x^{\\alpha+1}}{\\alpha+1} + C \\;\\; (\\alpha \\ne -1)$$\n$$\\int a^x\\,dx = \\frac{a^x}{\\ln a} + C \\;\\; (0 < a \\ne 1) \\qquad \\int \\frac{dx}{1+x^2} = \\arctan x + C$$",
         "proof_he": null,
         "topic": "שיטות אינטגרציה"
       },
@@ -361,26 +339,26 @@
         "kind": "example",
         "label": "דוגמאות לפי לינאריות",
         "number": null,
-        "name": "אינטגרלים לפי לינאריות",
-        "statement_he": "1. $\\int (x - x^2 + 2x^3)\\,dx = \\frac{x^2}{2} - \\frac{x^3}{3} + 2 \\cdot \\frac{x^4}{4} + C$\n2. $\\int (e^x - 5x)\\,dx = e^x - \\frac{5x^2}{2} + C$\n3. $\\int \\frac{x^2 - x}{x^3}\\,dx = \\int \\left( \\frac{1}{x} - \\frac{1}{x^2} \\right) dx = \\ln|x| + \\frac{1}{x} + C$ (כאשר $\\left( \\frac{1}{x} \\right)' = -\\frac{1}{x^2}$).",
+        "name": "אינטגרציה לפי לינאריות",
+        "statement_he": "$$\\int (x - x^2 + 2x^3)\\,dx = \\frac{x^2}{2} - \\frac{x^3}{3} + 2\\cdot\\frac{x^4}{4} + C$$\n$$\\int (e^x - 5x)\\,dx = e^x - \\frac{5x^2}{2} + C$$\n$$\\int \\frac{x^2 - x}{x^3}\\,dx = \\int \\left( \\frac{1}{x} - \\frac{1}{x^2} \\right)dx = \\ln|x| + \\frac{1}{x} + C \\quad \\Big( \\big(\\tfrac{1}{x}\\big)' = -\\tfrac{1}{x^2} \\Big)$$",
         "proof_he": null,
         "topic": "שיטות אינטגרציה"
       },
       {
         "kind": "example",
-        "label": "דוגמאות לאינטגרציה בחלקים",
+        "label": "דוגמאות לפי אינטגרציה בחלקים",
         "number": null,
         "name": "אינטגרציה בחלקים",
-        "statement_he": "1. $\\int x e^x\\,dx = x e^x - \\int e^x \\cdot 1\\,dx = x e^x - e^x + C$, כאשר $\\begin{cases} u'(x) = e^x \\to u(x) = e^x \\\\ v(x) = x \\to v'(x) = 1 \\end{cases}$\n2. $\\int x^2 e^x\\,dx = x^2 e^x - \\int e^x \\cdot 2x\\,dx = x^2 e^x - 2 \\int x e^x\\,dx = x^2 e^x - 2x e^x + 2e^x + C$, כאשר $\\begin{cases} u' = e^x \\to u = e^x \\\\ v = x^2 \\to v' = 2x \\end{cases}$\n3. $\\int \\ln x\\,dx = x \\ln x - \\int x \\cdot \\frac{1}{x}\\,dx = x \\ln x - \\int 1\\,dx = x \\ln x - x + C$, כאשר $\\begin{cases} u' = 1 \\to u = x \\\\ v = \\ln x \\to v' = \\frac{1}{x} \\end{cases}$",
+        "statement_he": "$$\\int x e^x\\,dx = x e^x - \\int e^x \\cdot 1\\,dx = x e^x - e^x + C \\quad (u' = e^x,\\; v = x)$$\n$$\\int x^2 e^x\\,dx = x^2 e^x - 2\\!\\int x e^x\\,dx = x^2 e^x - 2x e^x + 2 e^x + C$$\n$$\\int \\ln x\\,dx = x \\ln x - \\int x\\cdot\\frac{1}{x}\\,dx = x \\ln x - x + C \\quad (u' = 1,\\; v = \\ln x)$$",
         "proof_he": null,
         "topic": "שיטות אינטגרציה"
       },
       {
         "kind": "example",
-        "label": "דוגמאות לפי ההצבה",
+        "label": "דוגמאות לפי שיטת ההצבה",
         "number": null,
         "name": "אינטגרציה בהצבה",
-        "statement_he": "1. $\\int \\sin(x^2) \\cdot 2x\\,dx = \\int g(F(x)) f(x)\\,dx$, כאשר $\\begin{cases} g(t) = \\sin t \\\\ F(x) = x^2 \\end{cases}$, ואז $g(F(x)) f(x) = \\sin(x^2) \\cdot 2x$, $f(x) = 2x$. לכן $= \\int g(t)\\,dt = \\int \\sin t\\,dt = -\\cos t + C$ (עם $t = F(x) = x^2$) $= -\\cos(x^2) + C$.\nנכתוב בקיצור בכלל מהר:\n$\\int \\sin(x^2) 2x\\,dx = \\int \\sin(t)\\,dt$ עם $\\begin{cases} t = x^2 \\\\ dt = 2x\\,dx \\end{cases}$.\n2. $\\int \\sin(x^3) \\cdot x^2\\,dx = \\int \\sin(t) \\cdot x^2 \\cdot \\frac{dt}{3x^2}$, עם $\\begin{cases} t = x^3 \\\\ dt = 3x^2\\,dx \\to dx = \\frac{dt}{3x^2} \\end{cases}$ $= \\frac{1}{3} \\int \\sin t\\,dt = -\\frac{1}{3} \\cos t + C = -\\frac{1}{3} \\cos(x^3) + C$.\n3. $\\int \\frac{\\ln x}{x}\\,dx = \\int \\frac{t}{x} \\cdot x\\,dt = \\int t\\,dt$, עם $\\begin{cases} t = \\ln x \\\\ dt = \\frac{1}{x}\\,dx \\to dx = x\\,dt \\end{cases}$ $= \\frac{t^2}{2} + C = \\frac{(\\ln x)^2}{2} + C$.\n4. $\\int \\frac{\\sin x}{\\cos x}\\,dx = \\int \\frac{\\sin x}{t} \\cdot \\frac{dt}{-\\sin x}$, עם $\\begin{cases} t = \\cos x \\\\ dt = -\\sin x\\,dx \\to dx = \\frac{dt}{-\\sin x} \\end{cases}$ $= -\\int \\frac{dt}{t} = -\\ln|t| + C = -\\ln|\\cos x| + C$.\n5. $\\int \\cos x \\sin x\\,dx = \\int t \\cdot \\sin x \\cdot \\frac{dt}{-\\sin x}$, עם $\\begin{cases} t = \\cos x \\\\ dt = -\\sin x\\,dx \\to dx = \\frac{dt}{-\\sin x} \\end{cases}$ $= -\\frac{t^2}{2} + C = -\\frac{\\cos^2 x}{2} + C$. בדרך אחרת: $\\int \\cos x \\sin x\\,dx = \\int \\cos x \\cdot t \\cdot \\frac{dt}{\\cos x} = \\frac{t^2}{2} + C = \\frac{\\sin^2 x}{2} + C$, עם $\\begin{cases} t = \\sin x \\\\ dt = \\cos x\\,dx \\to dx = \\frac{dt}{\\cos x} \\end{cases}$.",
+        "statement_he": "$$\\int \\sin(x^2)\\cdot 2x\\,dx \\;\\underset{t = x^2}{=}\\; \\int \\sin t\\,dt = -\\cos t + C = -\\cos(x^2) + C$$\n$$\\int \\sin(x^3) x^2\\,dx \\;\\underset{t = x^3}{=}\\; \\frac{1}{3}\\!\\int \\sin t\\,dt = -\\frac{1}{3}\\cos(x^3) + C$$\n$$\\int \\frac{\\ln x}{x}\\,dx \\;\\underset{t = \\ln x}{=}\\; \\int t\\,dt = \\frac{(\\ln x)^2}{2} + C$$\n$$\\int \\frac{\\sin x}{\\cos x}\\,dx \\;\\underset{t = \\cos x}{=}\\; -\\int \\frac{dt}{t} = -\\ln|\\cos x| + C$$\n$$\\int \\cos x \\sin x\\,dx \\;\\underset{t = \\cos x}{=}\\; -\\frac{\\cos^2 x}{2} + C \\;\\; \\Big( = \\frac{\\sin^2 x}{2} + C \\text{ בדרך אחרת} \\Big)$$",
         "proof_he": null,
         "topic": "שיטות אינטגרציה"
       },
@@ -388,27 +366,27 @@
         "kind": "exercise",
         "label": "תרגיל 1",
         "number": "1",
-        "name": "אינטגרל של arctg",
-        "statement_he": "מצאו את האינטגרל הלא מסוים הבא:\n$$\\int \\arctan x\\,dx$$",
-        "proof_he": "פתרון:\n$\\int \\arctan x\\,dx = x \\arctan x - \\int \\frac{x}{1+x^2}\\,dx$, כאשר $\\begin{cases} u' = 1 \\to u = x \\\\ v = \\arctan x \\to v' = \\frac{1}{1+x^2} \\end{cases}$\n$= x \\arctan x - \\int \\frac{x}{t} \\cdot \\frac{dt}{2x}$, עם $\\begin{cases} t = 1+x^2 \\\\ dt = 2x\\,dx \\to dx = \\frac{dt}{2x} \\end{cases}$\n$= x \\arctan x - \\frac{1}{2} \\int \\frac{dt}{t} = x \\arctan x - \\frac{1}{2} \\ln|t| + C = x \\arctan x - \\frac{1}{2} \\ln|1+x^2| + C$.",
+        "name": "$\\int \\arctan x\\,dx$",
+        "statement_he": "חשבו את $\\displaystyle\\int \\arctan x\\,dx$.",
+        "proof_he": "אינטגרציה בחלקים עם $u' = 1$, $v = \\arctan x$ ($v' = \\frac{1}{1+x^2}$):\n$$\\int \\arctan x\\,dx = x\\arctan x - \\int \\frac{x}{1+x^2}\\,dx.$$\nבהצבה $t = 1 + x^2$, $dt = 2x\\,dx$:\n$$= x\\arctan x - \\frac{1}{2}\\!\\int \\frac{dt}{t} = x\\arctan x - \\frac{1}{2}\\ln|1+x^2| + C.$$",
         "topic": "שיטות אינטגרציה"
       },
       {
         "kind": "exercise",
         "label": "תרגיל 2",
         "number": "2",
-        "name": "אינטגרל של שורש 1 פחות x בריבוע",
-        "statement_he": "מצאו את האינטגרל הלא מסוים הבא:\n$$\\int \\sqrt{1 - x^2}\\,dx$$",
-        "proof_he": "פתרון:\n$\\int \\sqrt{1-x^2}\\,dx = \\int \\sqrt{1-x^2} \\sqrt{1-x^2}\\,dt$, עם $\\begin{cases} t = \\arcsin x \\to x = \\sin t \\\\ dt = \\frac{1}{\\sqrt{1-x^2}}\\,dx \\to dx = \\sqrt{1-x^2}\\,dt \\end{cases}$\n$= \\int (1 - x^2)\\,dt = \\int (1 - \\sin^2 t)\\,dt = \\int \\cos^2 t\\,dt$ (עם $x = \\sin t$)\n$= \\int \\frac{\\cos(2t) + 1}{2}\\,dt = \\frac{1}{2} \\int \\cos(2t)\\,dt + \\frac{1}{2} \\int 1\\,dt$ (כי $\\cos^2 t = \\frac{\\cos 2t + 1}{2}$)\n$= \\frac{1}{2} \\int \\cos u \\cdot \\frac{du}{2} + \\frac{1}{2} t = \\frac{1}{4} \\sin u + \\frac{1}{2} t + C$, עם $\\begin{cases} u = 2t \\\\ du = 2\\,dt \\to dt = \\frac{du}{2} \\end{cases}$\n$= \\frac{1}{4} \\sin(2t) + \\frac{1}{2} t + C = \\frac{1}{4} \\sin(2 \\arcsin x) + \\frac{1}{2} \\arcsin x + C$.",
+        "name": "$\\int \\sqrt{1-x^2}\\,dx$",
+        "statement_he": "חשבו את $\\displaystyle\\int \\sqrt{1-x^2}\\,dx$.",
+        "proof_he": "בהצבה $t = \\arcsin x$, כלומר $x = \\sin t$ ו-$dx = \\sqrt{1-x^2}\\,dt$:\n$$\\int \\sqrt{1-x^2}\\,dx = \\int (1 - x^2)\\,dt = \\int (1 - \\sin^2 t)\\,dt = \\int \\cos^2 t\\,dt.$$\nבעזרת $\\cos^2 t = \\frac{\\cos(2t) + 1}{2}$:\n$$= \\frac{1}{2}\\!\\int \\cos(2t)\\,dt + \\frac{1}{2}\\!\\int 1\\,dt = \\frac{1}{4}\\sin(2t) + \\frac{1}{2}t + C = \\frac{1}{4}\\sin(2\\arcsin x) + \\frac{1}{2}\\arcsin x + C.$$",
         "topic": "שיטות אינטגרציה"
       },
       {
         "kind": "exercise",
         "label": "תרגיל 3",
         "number": "3",
-        "name": "אינטגרל של arcsin",
-        "statement_he": "מצאו את האינטגרל הלא מסוים הבא:\n$$\\int \\arcsin x\\,dx$$",
-        "proof_he": "פתרון:\n$\\int \\arcsin x\\,dx = x \\arcsin x - \\int \\frac{x}{\\sqrt{1-x^2}}\\,dx$, כאשר $\\begin{cases} u' = 1 \\to u = x \\\\ v = \\arcsin x \\to v' = \\frac{1}{\\sqrt{1-x^2}} \\end{cases}$\n$= x \\arcsin x - \\int \\frac{x}{\\sqrt{t}} \\cdot \\frac{dt}{-2x}$, עם $\\begin{cases} t = 1-x^2 \\\\ dt = -2x\\,dx \\to dx = \\frac{dt}{-2x} \\end{cases}$\n$= x \\arcsin x + \\int \\frac{dt}{2\\sqrt{t}} = x \\arcsin x + \\sqrt{t} + C = x \\arcsin x + \\sqrt{1-x^2} + C$.",
+        "name": "$\\int \\arcsin x\\,dx$",
+        "statement_he": "חשבו את $\\displaystyle\\int \\arcsin x\\,dx$.",
+        "proof_he": "אינטגרציה בחלקים עם $u' = 1$, $v = \\arcsin x$ ($v' = \\frac{1}{\\sqrt{1-x^2}}$):\n$$\\int \\arcsin x\\,dx = x\\arcsin x - \\int \\frac{x}{\\sqrt{1-x^2}}\\,dx.$$\nבהצבה $t = 1 - x^2$, $dt = -2x\\,dx$:\n$$= x\\arcsin x + \\int \\frac{dt}{2\\sqrt{t}} = x\\arcsin x + \\sqrt{t} + C = x\\arcsin x + \\sqrt{1-x^2} + C.$$",
         "topic": "שיטות אינטגרציה"
       },
       {
@@ -416,7 +394,7 @@
         "label": "הגדרה",
         "number": null,
         "name": "חלוקה של קטע",
-        "statement_he": "יהיו $a, b \\in \\mathbb{R}$ כך ש- $a < b$ ויהי $n \\in \\mathbb{N}$. חלוקה בגודל $n$ של הקטע $[a,b]$ מוגדרת להיות וקטור עולה $P = (x_0, \\ldots, x_n)$ כך ש-\n$$a = x_0 < x_1 < \\cdots < x_n = b.$$",
+        "statement_he": "יהיו $a, b \\in \\mathbb{R}$ כך ש-$a < b$ ויהי $n \\in \\mathbb{N}$. חלוקה בעלת $n$ חלקים של הקטע $[a,b]$ היא וקטור עולה $P = (x_0, \\ldots, x_n)$ כך ש-\n$$a = x_0 < x_1 < \\cdots < x_n = b.$$",
         "proof_he": null,
         "topic": "אינטגרל מסוים"
       },
@@ -424,44 +402,35 @@
         "kind": "definition",
         "label": "הגדרה",
         "number": null,
-        "name": "סכומי דארבו העליון והתחתון, אינטגרל עליון ותחתון",
-        "statement_he": "יהיו $a, b \\in \\mathbb{R}$ כך ש- $a < b$ ותהי $f$ פונק' חסומה ב-$[a,b]$. נ\"ח ש-$f$ חסומה ותהי $P = (x_0, \\ldots, x_n)$ חלוקה של $[a,b]$.\n(i) הסכום העליון של $f$ ביחס לחלוקה $P$ מסומן ב- $\\bar{S}(f, P)$ ומוגדר ע\"י:\n$$\\bar{S}(f, P) = \\sum_{k=1}^{n} M_k \\cdot (x_k - x_{k-1})$$\nכאשר לכל $1 \\leq k \\leq n$:\n$$M_k = \\sup \\{ f(x) : x_{k-1} \\leq x \\leq x_k \\}.$$\n(ii) הסכום התחתון של $f$ ביחס לחלוקה $P$ מסומן ב- $\\underline{S}(f, P)$ ומוגדר ע\"י:\n$$\\underline{S}(f, P) = \\sum_{k=1}^{n} m_k \\cdot (x_k - x_{k-1})$$\nכאשר לכל $1 \\leq k \\leq n$:\n$$m_k = \\inf \\{ f(x) : x_{k-1} \\leq x \\leq x_k \\}.$$\n(iii) האינטגרל העליון של $f$ בקטע $[a,b]$ מסומן ב- $\\bar{I}(f)$ ומוגדר ע\"י:\n$$\\bar{I}(f) = \\inf \\{ \\bar{S}(f, P) : P \\text{ חלוקה של } [a,b] \\}.$$\n(iv) האינטגרל התחתון של $f$ בקטע $[a,b]$ מסומן ב- $\\underline{I}(f)$ ומוגדר ע\"י:\n$$\\underline{I}(f) = \\sup \\{ \\underline{S}(f, P) : P \\text{ חלוקה של } [a,b] \\}.$$",
+        "name": "סכומי דרבו ואינטגרל עליון/תחתון",
+        "statement_he": "יהיו $a, b \\in \\mathbb{R}$ כך ש-$a < b$ ותהי $f$ פונקציה חסומה המוגדרת ב-$[a,b]$, ותהי $P = (x_0, \\ldots, x_n)$ חלוקה של $[a,b]$.\n(i) **הסכום העליון** של $f$ ביחס לחלוקה $P$ מסומן $\\overline{S}(f,P)$ ומוגדר ע\"י\n$$\\overline{S}(f,P) = \\sum_{k=1}^{n} M_k (x_k - x_{k-1}), \\qquad M_k = \\sup\\{ f(x) : x_{k-1} \\le x \\le x_k \\}.$$\n(ii) **הסכום התחתון** של $f$ ביחס לחלוקה $P$ מסומן $\\underline{S}(f,P)$ ומוגדר ע\"י\n$$\\underline{S}(f,P) = \\sum_{k=1}^{n} m_k (x_k - x_{k-1}), \\qquad m_k = \\inf\\{ f(x) : x_{k-1} \\le x \\le x_k \\}.$$\n(iii) **האינטגרל העליון** של $f$ ב-$[a,b]$ מסומן $\\overline{I}(f)$ ומוגדר ע\"י $\\overline{I}(f) = \\inf\\{ \\overline{S}(f,P) : P$ חלוקה של $[a,b] \\}$.\n(iv) **האינטגרל התחתון** של $f$ ב-$[a,b]$ מסומן $\\underline{I}(f)$ ומוגדר ע\"י $\\underline{I}(f) = \\sup\\{ \\underline{S}(f,P) : P$ חלוקה של $[a,b] \\}$.",
         "proof_he": null,
-        "topic": "אינטגרל מסוים"
+        "topic": "סכומי דרבו"
       },
       {
         "kind": "note",
         "label": "הערה 2",
         "number": "2",
-        "name": "קיום הסופרמום והאינפימום",
-        "statement_he": "מהיות $f$ חסומה, אכן $f$ חסומה ולכן נסמן ומקיים $M_k$ ו- $m_k$ מספרים כי-ם של $1 \\leq k \\leq n$ מתאים, ולכן הסכום העליון/התחתון.",
+        "name": "הסכום התחתון קטן או שווה לסכום העליון",
+        "statement_he": "לכל חלוקה ולכל $1 \\le k \\le n$ מתקיים $m_k \\le M_k$, ומכאן שהסכום התחתון קטן או שווה לסכום העליון. הסכום העליון $\\overline{S}(f,P)$ הוא שטח המלבנים החוסמים מלמעלה, והסכום התחתון $\\underline{S}(f,P)$ הוא שטח המלבנים החסומים מלמטה. אם $S$ הוא ה\"שטח\" שמתחת לגרף, מתקיים\n$$\\underline{I}(f) \\le S \\le \\overline{I}(f).$$",
         "proof_he": null,
-        "topic": "אינטגרל מסוים"
-      },
-      {
-        "kind": "note",
-        "label": "הערה",
-        "number": null,
-        "name": "פירוש גאומטרי של סכומי דארבו ואי-שוויון",
-        "statement_he": "הסכום העליון - השטח הכולל של המלבנים האדומים (מעל הגרף);\nהסכום התחתון - השטח הכולל של המלבנים הירוקים (מתחת הגרף).\nחסם תחתון: $S \\leq \\bar{S}(f, P)$, ולכן $S \\leq \\inf \\{ \\bar{S}(f, P) : P \\} = \\bar{I}$.\nחסם מלעיל: $\\underline{S}(f, P) \\leq S$, ולכן $\\underline{I}(f) = \\sup \\{ \\underline{S}(f, P) \\} \\leq S$.\nכלומר $\\underline{I}(f) \\leq S \\leq \\bar{I}(f)$ (רעיון לפצב\"י).",
-        "proof_he": null,
-        "topic": "אינטגרל מסוים"
+        "topic": "סכומי דרבו"
       },
       {
         "kind": "definition",
         "label": "הגדרה",
         "number": null,
-        "name": "אינטגרביליות (אינטגרל מסוים)",
-        "statement_he": "יהיו $a, b \\in \\mathbb{R}$ כך ש- $a < b$ ותהי $f$ פונק' חסומה ב-$[a,b]$. נ\"ח ש-$f$ חסומה. ונאמר כי $f$ אינטגרבילית ב-$[a,b]$ אם קיים $S \\in \\mathbb{R}$ כך ש- $S = \\bar{I}(f) = \\underline{I}(f)$. במקרה כזה נסמן את\nהאינטגרל המסוים של $f$ בקטע $[a,b]$ להיות:\n$$\\int_a^b f(x)\\,dx = S.$$",
+        "name": "אינטגרביליות ואינטגרל מסוים",
+        "statement_he": "יהיו $a, b \\in \\mathbb{R}$ כך ש-$a < b$ ותהי $f$ פונקציה חסומה המוגדרת ב-$[a,b]$. נאמר כי $f$ אינטגרבילית ב-$[a,b]$ אם קיים $S \\in \\mathbb{R}$ כך ש-\n$$S = \\overline{I}(f) = \\underline{I}(f).$$\nבמקרה זה נגדיר את האינטגרל המסוים של $f$ בקטע $[a,b]$ להיות $\\displaystyle\\int_a^b f(x)\\,dx = S$.",
         "proof_he": null,
         "topic": "אינטגרל מסוים"
       },
       {
-        "kind": "note",
-        "label": "הערה 3",
+        "kind": "corollary",
+        "label": "מסקנה 3",
         "number": "3",
-        "name": "פירוש גאומטרי של האינטגרל המסוים",
-        "statement_he": "אם $0 \\leq f(x)$ לכל $x \\in [a,b]$ וגם $f$ אינטגרבילית, אזי כפי שנראה $\\int_a^b f(x)\\,dx$ הוא השטח שמתחת לגרף של $f$ ומעל ציר $x$ בקטע $[a,b]$.",
+        "name": "אינטגרל של פונקציה אי-שלילית הוא השטח שמתחת לגרף",
+        "statement_he": "אם $0 \\le f(x)$ לכל $x \\in [a,b]$ ו-$f$ אינטגרבילית, אזי $\\displaystyle\\int_a^b f(x)\\,dx$ הוא השטח שמתחת לגרף של $f$ מעל הקטע $[a,b]$.",
         "proof_he": null,
         "topic": "אינטגרל מסוים"
       },
@@ -470,8 +439,35 @@
         "label": "משפט 3",
         "number": "3",
         "name": "אינטגרל של פונקציה קבועה",
-        "statement_he": "יהי $C \\in \\mathbb{R}$ ויהיו $a, b \\in \\mathbb{R}$ כך ש- $a < b$. אזי הפונקציה הקבועה $f(x) = C$ היא אינטגרבילית ב-$[a,b]$, וכן לכל $x \\in [a,b]$ ומתקיים\n$$\\int_a^b C\\,dx = C \\cdot (b - a).$$",
-        "proof_he": "תהי $P = (x_0, \\ldots, x_n)$ חלוקה של $[a,b]$. נחשב:\n$$\\bar{S}(f, P) = \\sum_{k=1}^{n} M_k \\cdot (x_k - x_{k-1}) = \\sum_{k=1}^{n} C \\cdot (x_k - x_{k-1})$$\nכאשר $M_k = \\sup \\{ f(x) : x_{k-1} \\leq x \\leq x_k \\} = \\sup \\{ C : x_{k-1} \\leq x \\leq x_k \\} = \\sup \\{ C \\} = C$.\n$$= C \\cdot \\sum_{k=1}^{n} (x_k - x_{k-1}) = C \\cdot (x_1 - x_0 + x_2 - x_1 + \\cdots + x_n - x_{n-1}) = C \\cdot (x_n - x_0) = C \\cdot (b - a).$$\nאזי\n$$\\bar{I}(f) = \\inf \\{ \\bar{S}(f, P) : P \\text{ חלוקה של } [a,b] \\} = \\inf \\{ C \\cdot (b-a) : P \\text{ חלוקה של } [a,b] \\} = C \\cdot (b - a).$$\nבאופן דומה,\n$$\\underline{S}(f, P) = \\sum_{k=1}^{n} m_k \\cdot (x_k - x_{k-1}) = \\sum_{k=1}^{n} C \\cdot (x_k - x_{k-1})$$\nכאשר $m_k = \\inf \\{ f(x) : x_{k-1} \\leq x \\leq x_k \\} = \\inf \\{ C : x_{k-1} \\leq x \\leq x_k \\} = \\inf \\{ C \\} = C$.\n$$= C \\cdot \\sum_{k=1}^{n} (x_k - x_{k-1}) = C \\cdot (x_n - x_0) = C \\cdot (b - a).$$\nאזי\n$$\\underline{I}(f) = \\sup \\{ \\underline{S}(f, P) : P \\} = \\sup \\{ C \\cdot (b-a) : P \\} = C \\cdot (b - a).$$\nאזי $\\bar{I}(f) = \\underline{I}(f) = C \\cdot (b - a)$, ולכן $f$ אינטגרבילית ב-$[a,b]$, וכן\n$$\\int_a^b C\\,dx = C \\cdot (b - a).$$",
+        "statement_he": "יהי $C \\in \\mathbb{R}$ ויהיו $a, b \\in \\mathbb{R}$ כך ש-$a < b$. אזי הפונקציה הקבועה $f(x) = C$ אינטגרבילית ב-$[a,b]$, ומתקיים\n$$\\int_a^b C\\,dx = C \\cdot (b - a).$$",
+        "proof_he": "תהי $P = (x_0, \\ldots, x_n)$ חלוקה של $[a,b]$. לכל $1 \\le k \\le n$ מתקיים $M_k = \\sup\\{C\\} = C$, ולכן\n$$\\overline{S}(f,P) = \\sum_{k=1}^{n} C (x_k - x_{k-1}) = C \\sum_{k=1}^{n} (x_k - x_{k-1}) = C(x_n - x_0) = C(b-a)$$\n(הסכום טלסקופי). לכן $\\overline{I}(f) = \\inf\\{ C(b-a) \\} = C(b-a)$. באופן זהה $m_k = \\inf\\{C\\} = C$, ולכן $\\underline{S}(f,P) = C(b-a)$ ו-$\\underline{I}(f) = C(b-a)$. מאחר ש-$\\overline{I}(f) = \\underline{I}(f) = C(b-a)$, הפונקציה אינטגרבילית ו-$\\int_a^b C\\,dx = C(b-a)$.",
+        "topic": "אינטגרל מסוים"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט 4",
+        "number": "4",
+        "name": "פונקציית דיריכלה אינה אינטגרבילית",
+        "statement_he": "יהיו $a, b \\in \\mathbb{R}$ כך ש-$a < b$. פונקציית דיריכלה\n$$D(x) = \\begin{cases} 1 & x \\in \\mathbb{Q} \\\\ 0 & x \\notin \\mathbb{Q} \\end{cases}$$\nאינה אינטגרבילית ב-$[a,b]$.",
+        "proof_he": "תהי $P = (x_0, \\ldots, x_n)$ חלוקה של $[a,b]$. בכל תת-קטע $[x_{k-1}, x_k]$ קיים מספר רציונלי (צפיפות $\\mathbb{Q}$), ולכן $M_k = \\sup\\{ D(x) : x_{k-1} \\le x \\le x_k \\} = 1$. מכאן\n$$\\overline{S}(D,P) = \\sum_{k=1}^{n} 1\\cdot(x_k - x_{k-1}) = b - a, \\qquad \\overline{I}(D) = \\inf\\{ b-a \\} = b-a.$$\nכמו כן בכל תת-קטע קיים מספר אי-רציונלי (צפיפות $\\mathbb{R}\\setminus\\mathbb{Q}$), ולכן $m_k = \\inf\\{ D(x) \\} = 0$, ומכאן\n$$\\underline{S}(D,P) = 0, \\qquad \\underline{I}(D) = \\sup\\{ 0 \\} = 0.$$\nמאחר ש-$\\underline{I}(D) = 0 \\ne b - a = \\overline{I}(D)$, הפונקציה $D(x)$ אינה אינטגרבילית ב-$[a,b]$.",
+        "topic": "אינטגרל מסוים"
+      },
+      {
+        "kind": "note",
+        "label": "הערה",
+        "number": null,
+        "name": "סימון: אינטגרל מסוים מול לא מסוים",
+        "statement_he": "יש להבחין בין האינטגרל המסוים $\\int_a^b f(x)\\,dx$ (מספר) לבין האינטגרל הלא מסוים $\\int f(x)\\,dx$ (קבוצת פונקציות). למשל $\\int_1^5 3\\,dx = 3\\cdot(5-1) = 12$ (לפי $C\\cdot(b-a)$), בעוד $\\int 3\\,dx = 3x + C$.",
+        "proof_he": null,
+        "topic": "אינטגרל מסוים"
+      },
+      {
+        "kind": "theorem",
+        "label": "משפט 5",
+        "number": "5",
+        "name": "האינטגרל התחתון קטן או שווה לעליון",
+        "statement_he": "יהיו $a, b \\in \\mathbb{R}$ כך ש-$a < b$ ותהי $f$ פונקציה חסומה המוגדרת ב-$[a,b]$. אזי\n$$\\underline{I}(f) \\le \\overline{I}(f).$$",
+        "proof_he": "ההוכחה נשענת על כך שלכל שתי חלוקות $P_1, P_2$ של $[a,b]$ מתקיים $\\underline{S}(f,P_1) \\le \\overline{S}(f,P_2)$; מכאן הסופרמום של הסכומים התחתונים קטן או שווה לאינפימום של הסכומים העליונים, כלומר $\\underline{I}(f) \\le \\overline{I}(f)$.",
         "topic": "אינטגרל מסוים"
       }
     ]
@@ -479,6 +475,7 @@
   {
     "lecture": 3,
     "week": 4,
+    "verified": false,
     "date": "16.4.26",
     "topics": [
       "תכונות האינטגרל המסוים",
@@ -719,6 +716,7 @@
   {
     "lecture": 4,
     "week": 5,
+    "verified": false,
     "date": "23.4.26",
     "topics": [
       "אינטגרציה בחלקים",
@@ -1030,6 +1028,7 @@
   {
     "lecture": 5,
     "week": 6,
+    "verified": false,
     "date": "30.4.26",
     "topics": [
       "טורים",
@@ -1296,6 +1295,7 @@
   {
     "lecture": 6,
     "week": 7,
+    "verified": false,
     "date": "7.5.26",
     "topics": [
       "מבחני התכנסות לטורים",
@@ -1492,6 +1492,7 @@
   {
     "lecture": 7,
     "week": 8,
+    "verified": false,
     "date": "14.05.26",
     "topics": [
       "מבחן העיבוי (האינטגרלי)",
@@ -1586,6 +1587,7 @@
   {
     "lecture": 8,
     "week": 9,
+    "verified": false,
     "date": "19.5.26",
     "topics": [
       "סדרות חלקיות של טורים",
@@ -1753,6 +1755,7 @@
   {
     "lecture": 9,
     "week": 9,
+    "verified": false,
     "date": "25.5.26",
     "topics": [
       "טורי חזקות",
@@ -1930,6 +1933,7 @@
   {
     "lecture": 10,
     "week": 9,
+    "verified": false,
     "date": "4.6.26",
     "topics": [
       "טורי חזקות",

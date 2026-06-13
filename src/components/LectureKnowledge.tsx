@@ -20,6 +20,7 @@ interface KItem {
 interface Lecture {
   lecture: number;
   week: number;
+  verified?: boolean;
   date: string | null;
   topics: string[];
   items: KItem[];
@@ -67,10 +68,18 @@ function statementToHtml(text: string): string {
   return html;
 }
 
-function ItemBox({ item }: { item: KItem }) {
-  const isDef = item.kind === "definition";
-  const accent = isDef ? COLORS.red : COLORS.blue;
-  const bg = isDef ? "#fef9f0" : "#f0f4fe";
+const KIND_STYLE: Record<KItem["kind"], { accent: string; bg: string }> = {
+  definition: { accent: COLORS.red, bg: "#fef9f0" },
+  theorem: { accent: COLORS.blue, bg: "#f0f4fe" },
+  corollary: { accent: COLORS.blue, bg: "#f0f4fe" },
+  lemma: { accent: COLORS.blue, bg: "#f0f4fe" },
+  note: { accent: "#d97706", bg: "#fffbeb" },
+  example: { accent: "#6a1b9a", bg: "#faf0fa" },
+  exercise: { accent: "#6a1b9a", bg: "#faf0fa" },
+};
+
+function ItemBox({ item, showProof }: { item: KItem; showProof?: boolean }) {
+  const { accent, bg } = KIND_STYLE[item.kind] ?? KIND_STYLE.theorem;
   return (
     <div
       style={{
@@ -89,6 +98,62 @@ function ItemBox({ item }: { item: KItem }) {
         style={{ lineHeight: 1.9 }}
         dangerouslySetInnerHTML={{ __html: statementToHtml(item.statement_he) }}
       />
+      {showProof && item.proof_he && (
+        <div
+          style={{
+            background: "#ecfdf5",
+            borderRight: `3px solid ${COLORS.green}`,
+            borderRadius: 6,
+            padding: "10px 14px",
+            marginTop: 10,
+          }}
+        >
+          <div style={{ color: COLORS.green, fontWeight: 700, fontSize: "0.85rem", marginBottom: 2 }}>
+            הוכחה
+          </div>
+          <div
+            style={{ lineHeight: 1.9 }}
+            dangerouslySetInnerHTML={{ __html: statementToHtml(item.proof_he) }}
+          />
+        </div>
+      )}
+    </div>
+  );
+}
+
+function LectureBadge({ lec }: { lec: Lecture }) {
+  return (
+    <div
+      style={{
+        fontSize: "0.8rem",
+        fontWeight: 700,
+        color: "#fff",
+        background: COLORS.navy,
+        display: "inline-block",
+        borderRadius: 999,
+        padding: "2px 12px",
+        marginBottom: 6,
+      }}
+    >
+      הרצאה {lec.lecture}
+      {lec.date ? ` · ${lec.date}` : ""}
+      {lec.topics?.length ? ` — ${lec.topics.slice(0, 3).join(", ")}` : ""}
+    </div>
+  );
+}
+
+/**
+ * Rich, in-order rendering used for verified lectures: every item (definition,
+ * note, theorem + proof, example, exercise) shown exactly in lecture order.
+ */
+function LectureGroupFull({ lec }: { lec: Lecture }) {
+  if (!lec.items.length) return null;
+  return (
+    <div style={{ marginBottom: 14 }}>
+      <LectureBadge lec={lec} />
+      {lec.items.map((it, i) => (
+        <ItemBox key={i} item={it} showProof />
+      ))}
     </div>
   );
 }
@@ -98,24 +163,9 @@ function LectureGroup({ lec, kinds }: { lec: Lecture; kinds: KItem["kind"][] }) 
   if (!items.length) return null;
   return (
     <div style={{ marginBottom: 14 }}>
-      <div
-        style={{
-          fontSize: "0.8rem",
-          fontWeight: 700,
-          color: "#fff",
-          background: COLORS.navy,
-          display: "inline-block",
-          borderRadius: 999,
-          padding: "2px 12px",
-          marginBottom: 6,
-        }}
-      >
-        הרצאה {lec.lecture}
-        {lec.date ? ` · ${lec.date}` : ""}
-        {lec.topics?.length ? ` — ${lec.topics.slice(0, 3).join(", ")}` : ""}
-      </div>
+      <LectureBadge lec={lec} />
       {items.map((it, i) => (
-        <ItemBox key={i} item={it} />
+        <ItemBox key={i} item={it} showProof={lec.verified} />
       ))}
     </div>
   );
@@ -168,11 +218,19 @@ export function LectureKnowledgeForWeek({ week }: { week: number }) {
           borderRight: `3px solid ${COLORS.navy}`,
         }}
       >
-        📖 הגדרות ומשפטים — מתוך ההרצאות (מלא, לפי מספור)
+        📖 הגדרות, משפטים והוכחות — מתוך ההרצאות (מלא, לפי מספור)
       </h3>
-      {lectures.map((lec) => (
-        <LectureGroup key={lec.lecture} lec={lec} kinds={["definition", "theorem", "corollary", "lemma"]} />
-      ))}
+      {lectures.map((lec) =>
+        lec.verified ? (
+          <LectureGroupFull key={lec.lecture} lec={lec} />
+        ) : (
+          <LectureGroup
+            key={lec.lecture}
+            lec={lec}
+            kinds={["definition", "theorem", "corollary", "lemma"]}
+          />
+        )
+      )}
     </div>
   );
 }

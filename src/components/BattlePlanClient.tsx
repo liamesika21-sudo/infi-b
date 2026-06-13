@@ -503,10 +503,24 @@ export function BattlePlanClient({ blocks }: { blocks: Block[] }) {
   const loaded = useRef(false);
 
   useEffect(() => {
-    if (!loaded.current) {
-      setChecked(loadChecked());
-      loaded.current = true;
-    }
+    if (loaded.current) return;
+    loaded.current = true;
+
+    // Try server first, fall back to localStorage
+    fetch("/api/battle-plan-progress")
+      .then(r => r.ok ? r.json() as Promise<{ ok: boolean; checked?: string[] }> : Promise.reject())
+      .then(data => {
+        if (data.ok && Array.isArray(data.checked) && data.checked.length > 0) {
+          const serverSet = new Set(data.checked as string[]);
+          setChecked(serverSet);
+          saveChecked(serverSet); // keep localStorage in sync
+        } else {
+          setChecked(loadChecked()); // fallback
+        }
+      })
+      .catch(() => {
+        setChecked(loadChecked()); // offline / not logged in
+      });
   }, []);
 
   function toggle(id: string) {
@@ -514,6 +528,12 @@ export function BattlePlanClient({ blocks }: { blocks: Block[] }) {
       const next = new Set(prev);
       if (next.has(id)) next.delete(id); else next.add(id);
       saveChecked(next);
+      // Save to server (fire-and-forget)
+      fetch("/api/battle-plan-progress", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ checked: [...next] }),
+      }).catch(() => {});
       return next;
     });
   }
