@@ -334,13 +334,10 @@ function ChatInterface({ status }: { status: MentorStatus }) {
   const sendWeekSummary = useCallback((w: WeekSummary) => {
     if (isLoading) return;
     setError(null);
-    const splitIdx = w.message.indexOf("\n\nמה הדברים");
-    const summaryBody = splitIdx >= 0 ? w.message.slice(0, splitIdx).trim() : w.message;
-    const answer = `${summaryBody}\n\n💬 רוצה להעמיק? שאל אותי על כל אחד מהנושאים למעלה ואסביר לעומק עם דוגמאות.`;
     setMessages((prev) => [
       ...prev,
       { role: "user", content: `סיכום שבוע ${w.week} — ${w.title}` },
-      { role: "assistant", content: answer },
+      { role: "assistant", content: w.message },
     ]);
   }, [isLoading]);
 
