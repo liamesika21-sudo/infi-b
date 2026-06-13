@@ -508,74 +508,72 @@ function ChatInterface({ status }: { status: MentorStatus }) {
         </div>
       </div>
 
+      {/* Week summary buttons — always visible */}
+      <div
+        className="shrink-0 px-4 py-2.5"
+        style={{ border: "1px solid var(--border)", borderTop: "none", borderBottom: "1px solid var(--border)" }}
+      >
+        <div className="flex items-center gap-1.5 mb-2">
+          <BookOpenCheck className="h-3.5 w-3.5 shrink-0" style={{ color: "var(--teal)" }} />
+          <p className="text-xs font-bold" style={{ color: "var(--text-secondary)" }}>
+            סיכום שבועי — לחץ לקבל מה למדנו, מה חשוב, אילו משפטים והגדרות
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-1.5">
+          {WEEK_SUMMARIES.map((w) => (
+            <button
+              key={w.week}
+              type="button"
+              onClick={() => sendWeekSummary(w)}
+              disabled={isLoading}
+              className="rounded-lg border px-2.5 py-1.5 text-right text-xs font-bold transition hover:opacity-80 disabled:opacity-40"
+              style={{
+                borderColor: "var(--teal-border)",
+                background: "var(--teal-light)",
+                color: "var(--teal)",
+              }}
+            >
+              שבוע {w.week}
+              <span
+                className="block text-[10px] font-normal mt-0.5"
+                style={{ color: "var(--text-secondary)" }}
+              >
+                {w.title.length > 20 ? w.title.slice(0, 20) + "…" : w.title}
+              </span>
+            </button>
+          ))}
+        </div>
+      </div>
+
       {/* Messages area */}
       <div
         className="flex-1 overflow-y-auto px-5 py-4 space-y-4"
         style={{ border: "1px solid var(--border)", borderTop: "none", borderBottom: "none" }}
       >
-        {/* Starter questions */}
+        {/* Quick question starters — only when chat is empty */}
         {showStarters && (
-          <div className="py-4 space-y-5">
-            {/* Week summaries */}
-            <div>
-              <div className="flex items-center gap-2 mb-2.5">
-                <BookOpenCheck className="h-4 w-4 shrink-0" style={{ color: "var(--teal)" }} />
-                <p className="text-sm font-bold" style={{ color: "var(--text-primary)" }}>
-                  סיכום שבועי — מה חזרתי, מה חשוב, מה לשיעורי בית
-                </p>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {WEEK_SUMMARIES.map((w) => (
-                  <button
-                    key={w.week}
-                    type="button"
-                    onClick={() => sendWeekSummary(w)}
-                    className="rounded-xl border px-3 py-2 text-right text-xs font-bold transition hover:opacity-80"
-                    style={{
-                      borderColor: "var(--teal-border)",
-                      background: "var(--teal-light)",
-                      color: "var(--teal)",
-                    }}
-                  >
-                    שבוע {w.week}
-                    <span
-                      className="block text-[10px] font-normal mt-0.5"
-                      style={{ color: "var(--text-secondary)" }}
-                    >
-                      {w.title.length > 22 ? w.title.slice(0, 22) + "…" : w.title}
-                    </span>
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Divider */}
-            <div className="border-t" style={{ borderColor: "var(--border)" }} />
-
-            {/* Quick question starters */}
-            <div>
-              <p
-                className="text-sm font-semibold mb-3 text-center"
-                style={{ color: "var(--text-secondary)" }}
-              >
-                שאל אותי כל דבר על חומר הקורס
-              </p>
-              <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-                {STARTER_QUESTIONS.map((q) => (
-                  <button
-                    key={q}
-                    onClick={() => void sendMessage(q)}
-                    className="rounded-xl border px-3 py-2.5 text-right text-sm transition hover:opacity-80 cursor-pointer"
-                    style={{
-                      borderColor: "var(--border)",
-                      background: "var(--bg-subtle)",
-                      color: "var(--text-secondary)",
-                    }}
-                  >
-                    {q}
-                  </button>
-                ))}
-              </div>
+          <div className="py-4">
+            <p
+              className="text-sm font-semibold mb-3 text-center"
+              style={{ color: "var(--text-secondary)" }}
+            >
+              שאל אותי כל דבר על חומר הקורס
+            </p>
+            <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+              {STARTER_QUESTIONS.map((q) => (
+                <button
+                  key={q}
+                  onClick={() => void sendMessage(q)}
+                  className="rounded-xl border px-3 py-2.5 text-right text-sm transition hover:opacity-80 cursor-pointer"
+                  style={{
+                    borderColor: "var(--border)",
+                    background: "var(--bg-subtle)",
+                    color: "var(--text-secondary)",
+                  }}
+                >
+                  {q}
+                </button>
+              ))}
             </div>
           </div>
         )}
