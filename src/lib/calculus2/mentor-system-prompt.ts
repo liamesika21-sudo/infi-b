@@ -1,7 +1,18 @@
 import { readFile } from "fs/promises";
 import path from "path";
 
-let cachedPrompt: string | null = null;
+let cachedPrompt: string | null = null; // bump to invalidate: v2
+
+interface HomeworkQuestion {
+  questionNumber: string;
+  content: string;
+}
+
+interface HomeworkAssignment {
+  homeworkNumber: number;
+  weekNumber: number;
+  questions: HomeworkQuestion[];
+}
 
 interface MaxInsightsData {
   intuitions?: Array<{ topic: string; title: string; text: string; maxQuote?: string }>;
@@ -48,6 +59,34 @@ interface WeekData {
 interface BattlePlanBlock {
   title: string;
   weekData: WeekData[];
+}
+
+async function readHomeworkData(): Promise<HomeworkAssignment[]> {
+  try {
+    const raw = await readFile(
+      path.join(process.cwd(), "data/generated/calculus2/homework-analysis.json"),
+      "utf8"
+    );
+    const parsed = JSON.parse(raw) as Record<string, HomeworkAssignment>;
+    return Object.values(parsed).sort((a, b) => a.homeworkNumber - b.homeworkNumber);
+  } catch {
+    return [];
+  }
+}
+
+function buildHomeworkBlock(homeworks: HomeworkAssignment[]): string {
+  if (!homeworks.length) return "";
+  const lines: string[] = [];
+  for (const hw of homeworks) {
+    lines.push(`### שיעורי בית ${hw.homeworkNumber} (שבוע ${hw.weekNumber})`);
+    for (const q of hw.questions) {
+      // "2025" is a misread of the year — it's actually question 1
+      const qNum = q.questionNumber === "2025" ? "1" : q.questionNumber;
+      lines.push(`\n**שאלה ${qNum}:**\n${q.content.trim()}`);
+    }
+    lines.push("\n---");
+  }
+  return lines.join("\n");
 }
 
 async function readMaxInsights(): Promise<MaxInsightsData> {
@@ -137,10 +176,11 @@ function buildKnowledgeBase(blocks: BattlePlanBlock[]): string {
 export async function buildMentorSystemPrompt(): Promise<string> {
   if (cachedPrompt) return cachedPrompt;
 
-  const [insights, lectures, battlePlan] = await Promise.all([
+  const [insights, lectures, battlePlan, homeworks] = await Promise.all([
     readMaxInsights(),
     readLectureKnowledge(),
     readBattlePlanData(),
+    readHomeworkData(),
   ]);
 
   const intuitionLines = (insights.intuitions ?? [])
@@ -166,6 +206,7 @@ export async function buildMentorSystemPrompt(): Promise<string> {
 
   const lectureBlock = buildLectureBlock(lectures);
   const knowledgeBase = buildKnowledgeBase(battlePlan);
+  const homeworkBlock = buildHomeworkBlock(homeworks);
 
   const prompt = `אתה "מנטור אינפי ב׳" — עוזר לימוד לקורס חדוון 2 של אוניברסיטת רייכמן, מועד א׳ 2026.
 
@@ -176,7 +217,7 @@ export async function buildMentorSystemPrompt(): Promise<string> {
 
 ## כללים מחייבים
 
-1. **חומר בלבד** — ענה אך ורק על שאלות הקשורות לחומר קורס זה: גבולות, סדרות, אינטגרלים (מסוים, לא-אמיתי), טורים, טורי חזקות, טיילור/מקלורן. אם שואלים על נושא אחר — השב: "זה לא בחומר הקורס, אוכל לעזור רק עם נושאי האינפי ב׳."
+1. **חומר בלבד** — ענה אך ורק על שאלות הקשורות לחומר קורס זה: גבולות, סדרות, אינטגרלים (מסוים, לא-אמיתי), טורים, טורי חזקות, טיילור/מקלורן, וכן שאלות ספציפיות משיעורי הבית (1–7) ומהרצאות הקורס. אם שואלים על נושא אחר — השב: "זה לא בחומר הקורס, אוכל לעזור רק עם נושאי האינפי ב׳."
 2. **עברית** — ענה תמיד בעברית.
 3. **LaTeX** — כתוב מתמטיקה תמיד כ-LaTeX: $...$ לביטוי בשורה, $$...$$ לתצוגה מרכזית.
 4. **קצר וממוקד** — ברירת המחדל היא 4-8 שורות או עד 3 צעדים. אל תכתוב מגילות, אל תיתן פתרון מלא אם המשתמש ביקש רק כיוון, ובסוף אפשר לשאול שאלה קצרה להמשך.
@@ -204,6 +245,14 @@ ${knowledgeBase}
 זהו האינדקס הרשמי. כששואלים על "משפט N בהרצאה X" או "הגדרה" מהרצאה מסוימת — צטט מכאן במדויק. המספור מתחיל מחדש בכל הרצאה.
 
 ${lectureBlock}
+
+---
+
+## שיעורי בית — שאלות ופתרונות מלאים
+
+כשמשתמש שואל על שאלה מסוימת (למשל "שאלה 3 בשיעורי בית 2" או "3א משיעורי בית 2"), מצא אותה כאן וענה על פי הפתרון המלא. אם שאלה מכילה חלקים (a), (b) וכד׳ — עזור לפי החלק שנשאלת עליו.
+
+${homeworkBlock}
 
 ---
 
