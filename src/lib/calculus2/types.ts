@@ -92,7 +92,7 @@ export interface WeekMaterialStatus {
 export interface CourseWeek {
   id: string;
   weekNumber: number;
-  lectureNumber: number;
+  lectureNumber: number | null;
   recitationNumber: number;
   practicedLectureNumber: number | null;
   homeworkNumber: number;

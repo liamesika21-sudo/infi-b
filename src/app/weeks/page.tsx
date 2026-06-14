@@ -23,7 +23,7 @@ export default async function WeeksPage() {
       <PageHeader
         eyebrow="Week Map"
         title="מפת 13 השבועות"
-        description="לחצי על שבוע לצפייה בסיכום הרצאה, תרגול ומטלה. תרגול N מתרגל בדרך כלל הרצאה N-1."
+        description="לחצי על שבוע לצפייה בסיכום הרצאה, תרגול ומטלה. שבוע N כולל את הרצאה N-1, תרגול N ומטלה N (שבוע 1 — תרגול ומטלה בלבד)."
       />
 
       {/* Stats */}
@@ -35,7 +35,7 @@ export default async function WeeksPage() {
 
       {/* Legend */}
       <StudyCallout variant="info">
-        <strong>ההיסט פדגוגי:</strong> הרצאה N מלמדת חומר חדש. תרגול N לרוב מתרגל הרצאה N-1. כך מצוין בכל שבוע.
+        <strong>מבנה הקורס:</strong> שבוע 1 נפתח בתרגול 1 ומטלה 1 (ללא הרצאה). מכאן והלאה, שבוע N כולל את הרצאה N-1, תרגול N ומטלה N.
       </StudyCallout>
 
       {weeks.length === 0 ? (

@@ -41,14 +41,17 @@ export default async function WeekDetailPage({ params }: Props) {
     readGeneratedData(),
   ]);
 
-  const lectureSummary = analysis.lectureSummaries.find((l) => l.lectureNumber === weekNum);
+  // Course structure: week N contains lecture (N-1), recitation N, assignment N. Week 1 has no lecture.
+  const lectureNum = weekNum > 1 ? weekNum - 1 : null;
+  const lectureSummary = lectureNum
+    ? analysis.lectureSummaries.find((l) => l.lectureNumber === lectureNum)
+    : undefined;
   const recitationSummary = analysis.recitationSummaries.find((r) => r.weekNumber === weekNum);
   const homeworkPriority = analysis.homeworkPriorityMap.find((h) => h.weekNumber === weekNum);
 
-  // Correct mapping: Recitation N practices Lecture N-1
-  const practicedLecture = weekNum > 1 ? weekNum - 1 : null;
-  // Homework N is based on Recitation N + Lecture N-1
-  const homeworkBasedOnLecture = weekNum > 1 ? weekNum - 1 : null;
+  // The lecture studied & practiced in this week (= N-1); the homework is based on it too.
+  const practicedLecture = lectureNum;
+  const homeworkBasedOnLecture = lectureNum;
 
   const lectureExtract = lectureSummary?.sourceFileId
     ? generatedData.extractedTextIndex.find((record) => record.sourceFileId === lectureSummary.sourceFileId)
@@ -188,7 +191,7 @@ export default async function WeekDetailPage({ params }: Props) {
 
           {/* Course mapping */}
           <div className="flex flex-wrap gap-2">
-            <MappingPill icon="📖" label={`הרצאה ${weekNum}`} desc="חומר חדש" />
+            <MappingPill icon="📖" label={lectureNum ? `הרצאה ${lectureNum}` : "שבוע פתיחה"} desc={lectureNum ? "חומר חדש" : "ללא הרצאה"} />
             <span className="self-center text-sm" style={{ color: "var(--border-strong)" }}>→</span>
             <MappingPill
               icon="✏️"
@@ -268,7 +271,7 @@ export default async function WeekDetailPage({ params }: Props) {
           <div className="grid gap-5 lg:grid-cols-3 mb-8">
 
             {/* ─ Lecture ─ */}
-            <Column id="lecture-summary" title="📖 הרצאה" subtitle={`הרצאה ${weekNum} — חומר חדש`} accentColor="var(--navy-mid)">
+            <Column id="lecture-summary" title="📖 הרצאה" subtitle={lectureNum ? `הרצאה ${lectureNum} — חומר חדש` : "שבוע פתיחה — ללא הרצאה"} accentColor="var(--navy-mid)">
               {lectureSummary ? (
                 <div className="space-y-5">
                   {lectureSummary.ocrWarning && (

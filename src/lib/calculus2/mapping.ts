@@ -4,6 +4,12 @@ export function practicedLectureForRecitation(recitationNumber: number): number 
   return recitationNumber > 1 ? recitationNumber - 1 : null;
 }
 
+// Course structure: week N contains lecture (N-1), recitation N, assignment N.
+// Week 1 has no lecture (recitation 1 + assignment 1 only).
+export function lectureForWeek(weekNumber: number): number | null {
+  return weekNumber > 1 ? weekNumber - 1 : null;
+}
+
 export function weekId(weekNumber: number): string {
   return `week-${weekNumber}`;
 }
@@ -11,7 +17,7 @@ export function weekId(weekNumber: number): string {
 export function buildWeekSourceIds(weekNumber: number, files: SourceFile[]): string[] {
   return files
     .filter((file) => {
-      if (file.sourceType === "lecture") return file.lectureNumber === weekNumber;
+      if (file.sourceType === "lecture") return file.lectureNumber === lectureForWeek(weekNumber);
       if (file.sourceType === "recitation") return file.recitationNumber === weekNumber;
       if (file.sourceType === "homework") return file.homeworkNumber === weekNumber;
       if (file.sourceType === "summary") return file.weekNumber === weekNumber;
@@ -23,7 +29,7 @@ export function buildWeekSourceIds(weekNumber: number, files: SourceFile[]): str
 function idsForWeekAndType(weekNumber: number, files: SourceFile[], sourceType: SourceFile["sourceType"]): string[] {
   return files
     .filter((file) => {
-      if (sourceType === "lecture") return file.sourceType === "lecture" && file.lectureNumber === weekNumber;
+      if (sourceType === "lecture") return file.sourceType === "lecture" && file.lectureNumber === lectureForWeek(weekNumber);
       if (sourceType === "recitation") return file.sourceType === "recitation" && file.recitationNumber === weekNumber;
       if (sourceType === "homework") return file.sourceType === "homework" && file.homeworkNumber === weekNumber;
       if (sourceType === "summary") return file.sourceType === "summary" && file.weekNumber === weekNumber;
@@ -33,7 +39,7 @@ function idsForWeekAndType(weekNumber: number, files: SourceFile[], sourceType: 
 }
 
 export function getWeekMaterialStatus(weekNumber: number, files: SourceFile[]): WeekMaterialStatus {
-  const lectureCount = files.filter((file) => file.sourceType === "lecture" && file.lectureNumber === weekNumber).length;
+  const lectureCount = files.filter((file) => file.sourceType === "lecture" && file.lectureNumber === lectureForWeek(weekNumber)).length;
   const recitationCount = files.filter((file) => file.sourceType === "recitation" && file.recitationNumber === weekNumber).length;
   const homeworkCount = files.filter((file) => file.sourceType === "homework" && file.homeworkNumber === weekNumber).length;
   const summaryCount = files.filter((file) => file.sourceType === "summary" && file.weekNumber === weekNumber).length;
@@ -52,7 +58,7 @@ export function buildWeekMap(totalWeeks: number, files: SourceFile[]): CourseWee
     return {
       id: weekId(weekNumber),
       weekNumber,
-      lectureNumber: weekNumber,
+      lectureNumber: lectureForWeek(weekNumber),
       recitationNumber: weekNumber,
       practicedLectureNumber: practicedLectureForRecitation(weekNumber),
       homeworkNumber: weekNumber,

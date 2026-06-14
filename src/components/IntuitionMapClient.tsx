@@ -218,7 +218,7 @@ function WeekPanel({ week, intuition }: EnrichedWeek) {
       <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-4">
         <div className="min-w-0">
           <p className="text-xs font-bold uppercase tracking-widest" style={{ color: "var(--teal)" }}>
-            Week {week.weekNumber} · הרצאה {week.lectureNumber} · תרגול {week.recitationNumber}
+            Week {week.weekNumber}{week.lectureNumber ? ` · הרצאה ${week.lectureNumber}` : ""} · תרגול {week.recitationNumber}
           </p>
           <h2 className="mt-1 text-xl font-extrabold">{intuition?.title ?? "שבוע ללא חומרים זמינים לניתוח אינטואיציה"}</h2>
           <p className="mt-1 line-clamp-2 text-sm leading-7" style={{ color: "var(--text-secondary)" }}>

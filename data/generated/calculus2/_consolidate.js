@@ -4,7 +4,9 @@
 const fs = require("fs");
 const path = require("path");
 const dir = path.join(__dirname, "extracted");
-const L2W = { 1: 2, 2: 4, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 9, 10: 9 };
+// Course structure: week N contains lecture (N-1), recitation N, assignment N.
+// Week 1 has no lecture (recitation 1 + assignment 1 only). So lecture L lives in week L+1.
+const L2W = { 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 10, 10: 11 };
 const PV = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; // <-- update as lectures are hand-verified
 
 const out = [];
@@ -20,7 +22,7 @@ const ws = out.map((lec) => {
   const thms = lec.items.filter((i) => ["theorem", "corollary", "lemma"].includes(i.kind));
   const notes = lec.items.filter((i) => i.kind === "note");
   const title = lec.topics.slice(0, 3).join(", ");
-  const p = [`**שבוע ${lec.lecture} — ${title}**`, "", `📚 **מה למדנו השבוע:**`, lec.topics.join(" · ")];
+  const p = [`**שבוע ${lec.week} — ${title}**`, "", `📚 **מה למדנו השבוע (הרצאה ${lec.lecture}):**`, lec.topics.join(" · ")];
   if (defs.length) { p.push("", `📝 **הגדרות מרכזיות:**`); defs.slice(0, 9).forEach((d) => p.push(`- ${d.name || clean(d.statement_he).slice(0, 60)}`)); }
   if (thms.length) { p.push("", `📐 **משפטים מרכזיים:**`); thms.slice(0, 10).forEach((t) => p.push(`- **${t.label}** — ${t.name}`)); }
   if (notes.length) { p.push("", `⚠️ **הערות חשובות:**`); notes.slice(0, 5).forEach((n) => p.push(`- ${n.name || clean(n.statement_he).slice(0, 70)}`)); }
@@ -28,7 +30,22 @@ const ws = out.map((lec) => {
   const k = thms.slice(0, 3).map((t) => t.label).join(", ");
   p.push(k ? `לשלוט בניסוח המדויק ובתנאים של ${k}, ולדעת מתי כל משפט חל. שננו את ההגדרות הפורמליות — הן הבסיס לכל הוכחה.` : `לשלוט בהגדרות הפורמליות ובמשפטים המרכזיים של השבוע.`);
   p.push("", `💬 רוצה שאסביר משפט מסוים לעומק, אוכיח אותו, או אבנה שאלת תרגול בסגנון בחינה? פשוט תכתוב לי.`);
-  return { week: lec.lecture, title, message: p.join("\n") };
+  return { week: lec.week, title, message: p.join("\n") };
+});
+// Week 1 has no lecture — opening week with recitation 1 + assignment 1 (prerequisite review).
+ws.unshift({
+  week: 1,
+  title: "שבוע פתיחה — תרגול 1 ומטלה 1",
+  message: [
+    `**שבוע 1 — שבוע פתיחה**`, "",
+    `📚 **מה יש השבוע:**`,
+    `שבוע הפתיחה של הקורס כולל את תרגול 1 ואת מטלה 1 — עדיין ללא הרצאה חדשה (ההרצאות מתחילות בשבוע 2).`, "",
+    `📝 **על מה חוזרים:**`,
+    `חזרה על חומר הבסיס מאינפי 1 — סדרות, גבולות, רציפות ונגזרות — שעליו נשען כל הקורס.`, "",
+    `💡 **הכי חשוב לקחת מהשבוע:**`,
+    `לוודא שליטה בהגדרת הגבול, ברציפות ובכללי הגזירה, כי הם הבסיס לאינטגרלים, לטורים ולטורי החזקות שיבואו בהמשך.`, "",
+    `💬 רוצה שאסביר נושא בסיס מאינפי 1, או אבנה שאלת תרגול בסגנון בחינה? פשוט תכתוב לי.`,
+  ].join("\n"),
 });
 fs.writeFileSync(path.join(__dirname, "week-chat-summaries.json"), JSON.stringify(ws, null, 2));
 

@@ -76,14 +76,12 @@ export function WeekCard({ week }: { week: CourseWeek }) {
           >
             <span className="flex items-center gap-1">
               <BookOpen className="h-3 w-3" />
-              הרצאה {week.lectureNumber}
+              {week.lectureNumber ? `הרצאה ${week.lectureNumber}` : "ללא הרצאה"}
             </span>
-            {week.practicedLectureNumber && (
-              <span className="flex items-center gap-1">
-                <FileText className="h-3 w-3" />
-                תרגול הרצאה {week.practicedLectureNumber}
-              </span>
-            )}
+            <span className="flex items-center gap-1">
+              <FileText className="h-3 w-3" />
+              תרגול {week.recitationNumber}
+            </span>
           </div>
         </div>
       </article>

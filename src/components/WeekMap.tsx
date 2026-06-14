@@ -31,10 +31,10 @@ export function WeekMap({
             </div>
 
             <div className="mt-4 space-y-2 rounded-2xl bg-slate-50 p-4 text-sm leading-6 text-slate-700">
-              <p>הרצאה {week.lectureNumber}: חומר חדש.</p>
+              <p>{week.lectureNumber ? `הרצאה ${week.lectureNumber}: חומר חדש.` : "שבוע פתיחה — אין הרצאה חדשה."}</p>
               <p>
                 תרגול {week.recitationNumber}:{" "}
-                {week.practicedLectureNumber ? `מתרגל בדרך כלל את הרצאה ${week.practicedLectureNumber}` : "נדרש מיפוי ידני בתחילת הקורס"}.
+                {week.practicedLectureNumber ? `מתרגל את הרצאה ${week.practicedLectureNumber}` : "תרגול פתיחה (חזרה על אינפי 1)"}.
               </p>
               <p>מטלה {week.homeworkNumber}: מיושרת למספור השבוע/מטלה.</p>
             </div>

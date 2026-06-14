@@ -1209,7 +1209,7 @@ function LectureOverviewTable({ lectureSummaries }: { lectureSummaries: LectureS
                   style={{ borderColor: "var(--border)" }}
                 >
                   <Link
-                    href={`/weeks/${lec.lectureNumber}`}
+                    href={`/weeks/${lec.lectureNumber + 1}`}
                     className="inline-flex h-7 w-7 items-center justify-center rounded-md text-xs font-black transition hover:opacity-70"
                     style={{
                       background: "var(--navy-light)",
@@ -1217,7 +1217,7 @@ function LectureOverviewTable({ lectureSummaries }: { lectureSummaries: LectureS
                       border: "1px solid var(--navy-border)",
                     }}
                   >
-                    {lec.lectureNumber}
+                    {lec.lectureNumber + 1}
                   </Link>
                 </td>
                 <td
