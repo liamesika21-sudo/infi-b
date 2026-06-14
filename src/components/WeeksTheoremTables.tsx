@@ -79,8 +79,20 @@ export function WeeksTheoremTables() {
         <p>כל שורה כתובה כמו משפט קצר לזכור: מה המשפט אומר, ומה הסימן/הנוסחה שכדאי לזהות במבחן.</p>
       </div>
 
-      {WEEKS_THEOREM_TABLES.map((tbl) => (
-        <div className="wtt-card" key={tbl.caption}>
+      {/* Sticky in-section jump nav — pins below the header once you reach the tables */}
+      <nav className="wtt-nav" aria-label="קפיצה להרצאה">
+        <span className="wtt-nav-label">הרצאה</span>
+        <div className="wtt-nav-pills">
+          {WEEKS_THEOREM_TABLES.map((_, i) => (
+            <a key={i} href={`#wtt-lec-${i + 1}`} className="wtt-nav-pill">
+              {i + 1}
+            </a>
+          ))}
+        </div>
+      </nav>
+
+      {WEEKS_THEOREM_TABLES.map((tbl, i) => (
+        <div className="wtt-card" id={`wtt-lec-${i + 1}`} key={tbl.caption}>
           <table>
             <caption>{tbl.caption}</caption>
             <thead>
@@ -107,6 +119,42 @@ const WTT_CSS = `
 .wtt-head{margin-bottom:14px}
 .wtt-head h2{font-size:20px;font-weight:900;margin:0 0 4px;color:var(--text-primary)}
 .wtt-head p{margin:0;font-size:14px;color:var(--text-muted)}
+.wtt-nav{
+  position:sticky;
+  top:56px;
+  z-index:20;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:0 -4px 6px;
+  padding:8px 10px;
+  background:color-mix(in srgb, var(--bg-page) 88%, transparent);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+  border:1px solid var(--border);
+  border-radius:14px;
+}
+.wtt-nav-label{font-size:12.5px;font-weight:900;color:var(--text-muted);flex-shrink:0}
+.wtt-nav-pills{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.wtt-nav-pills::-webkit-scrollbar{display:none}
+.wtt-nav-pill{
+  flex-shrink:0;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:30px;
+  height:30px;
+  padding:0 6px;
+  border-radius:9px;
+  font-size:13.5px;
+  font-weight:800;
+  text-decoration:none;
+  color:var(--navy-mid);
+  background:var(--navy-light);
+  border:1px solid var(--navy-border);
+  transition:opacity .15s, transform .15s;
+}
+.wtt-nav-pill:hover{opacity:.8;transform:translateY(-1px)}
 .wtt-card{
   background:var(--bg-card);
   border:1px solid var(--border);
@@ -114,6 +162,7 @@ const WTT_CSS = `
   box-shadow:0 10px 30px rgba(20,30,60,.05);
   margin:16px 0;
   overflow:hidden;
+  scroll-margin-top:104px;
 }
 .wtt-card table{width:100%;border-collapse:separate;border-spacing:0;table-layout:fixed}
 .wtt-card caption{
