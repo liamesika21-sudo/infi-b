@@ -4,6 +4,7 @@ import { scanDocsFolder } from "@/lib/calculus2/pipeline";
 import { PageHeader } from "@/components/study/StudyCard";
 import { StudyCallout } from "@/components/study/StudyCallout";
 import { WeekCard } from "@/components/study/WeekCard";
+import { WeeksTheoremTables } from "@/components/WeeksTheoremTables";
 
 export const dynamic = "force-dynamic";
 
@@ -54,6 +55,9 @@ export default async function WeeksPage() {
           ))}
         </div>
       )}
+
+      {/* ── Verbatim theorem-summary tables (below the week cards) ── */}
+      <WeeksTheoremTables />
     </div>
   );
 }
