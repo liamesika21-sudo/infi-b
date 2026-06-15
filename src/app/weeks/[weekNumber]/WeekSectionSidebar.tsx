@@ -61,7 +61,12 @@ export function WeekSectionSidebar({ sections }: { sections: WeekSectionNavItem[
     setActiveId(id);
     clickedRef.current = true;
 
-    target.scrollIntoView({ behavior: "smooth", block: "start" });
+    // Manual offset scroll so the target clears the sticky header (and, on
+    // mobile, the sticky pill strip) instead of landing underneath them.
+    const isMobile = window.matchMedia("(max-width: 1023px)").matches;
+    const offset = isMobile ? 112 : 72;
+    const y = target.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
 
     // Re-enable observer after scroll settles
     if (timerRef.current) clearTimeout(timerRef.current);

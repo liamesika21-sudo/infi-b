@@ -23,7 +23,8 @@ import {
 } from "lucide-react";
 import { WeekHomeworkSection } from "./WeekHomeworkSection";
 import { WeekProgressTracker, type ProgSection, type ProgQuestion } from "@/components/progress/WeekProgressTracker";
-import { LectureKnowledgeForWeek } from "@/components/LectureKnowledge";
+import { LectureKnowledgeForWeek, trackableForWeek } from "@/components/LectureKnowledge";
+import { buildWeekGroups, WeekSection as InstructorWeekSection } from "@/components/instructor-notes/MaxInsightsWeek";
 
 export const dynamic = "force-dynamic";
 
@@ -76,11 +77,15 @@ export default async function WeekDetailPage({ params }: Props) {
   const studyGuide = getStudyGuide(weekNum);
   const richContent = getWeekRichContent(weekNum);
 
-  // Build progress tracker data
-  const TRACKABLE_TAGS = ["הגדרה", "משפט", "כלל", "מסקנה"];
-  const trackerSections: ProgSection[] = (richContent?.sections ?? [])
-    .map((s, idx) => ({ idx, tag: s.tag, title: s.title }))
-    .filter(s => TRACKABLE_TAGS.includes(s.tag));
+  // Instructor (Max Mahlin) notes for this week — same content as /instructor-notes.
+  const maxGroups = analysis.maxInsights ? buildWeekGroups(analysis.maxInsights) : [];
+  const instructorGroup = maxGroups.find((g) => g.week === weekNum);
+
+  // Build progress tracker data — definitions/theorems come from the same
+  // word-for-word lecture data shown on the page (lecture N-1), so the
+  // checklist matches exactly what was learned that week.
+  const trackerSections: ProgSection[] = trackableForWeek(weekNum)
+    .map((it, idx) => ({ idx, tag: it.tag, title: it.title }));
   const trackerQuestions: ProgQuestion[] = hwQuestions.slice(0, 8).map(q => ({
     questionId: q.questionId,
     questionNumber: q.questionNumber,
@@ -106,6 +111,7 @@ export default async function WeekDetailPage({ params }: Props) {
     { id: "recitation-summary", label: "סיכום תרגול" },
     { id: "homework-summary", label: "מטלה" },
     lectureQuotes.length > 0 && { id: "lecture-source", label: "ציטוטי הרצאה" },
+    instructorGroup && { id: "instructor-notes", label: "מקס אמר" },
     recitationQuestions.length > 0 && { id: "recitation-questions", label: "שאלות מתרגול" },
   ].filter(Boolean) as WeekSectionNavItem[];
 
@@ -121,8 +127,11 @@ export default async function WeekDetailPage({ params }: Props) {
       {/* ── Main content ── */}
       <div className="flex-1 min-w-0 space-y-0">
 
-        {/* Mobile sidebar — horizontal pill strip */}
-        <div className="lg:hidden -mx-4 mb-2">
+        {/* Mobile sidebar — horizontal pill strip, sticky under the header */}
+        <div
+          className="lg:hidden sticky top-14 z-30 -mx-4 mb-2 px-4 py-1.5"
+          style={{ background: "var(--bg-page)" }}
+        >
           <WeekSectionSidebar sections={weekSections} />
         </div>
 
@@ -214,11 +223,13 @@ export default async function WeekDetailPage({ params }: Props) {
 
         {/* ── Progress tracker ── */}
         {hasTracker && (
-          <WeekProgressTracker
-            weekNum={weekNum}
-            sections={trackerSections}
-            questions={trackerQuestions}
-          />
+          <div id="week-tracker" className="scroll-mt-24">
+            <WeekProgressTracker
+              weekNum={weekNum}
+              sections={trackerSections}
+              questions={trackerQuestions}
+            />
+          </div>
         )}
 
         {/* ── Weekly Summary Banner — Important notes, conclusions, mistakes ── */}
@@ -412,6 +423,16 @@ export default async function WeekDetailPage({ params }: Props) {
           </div>
 
           <LectureSourceQuotes id="lecture-source" quotes={lectureQuotes} />
+
+          {/* ── Instructor notes (Max Mahlin) for this week — same as /instructor-notes ── */}
+          {instructorGroup && (
+            <section id="instructor-notes" className="mb-8 scroll-mt-24">
+              <SectionTitle label="תובנות מהתרגול — מקס מהלין" />
+              <div className="mt-4">
+                <InstructorWeekSection group={instructorGroup} />
+              </div>
+            </section>
+          )}
 
           {/* ── Recitation questions ── */}
           {recitationQuestions.length > 0 && (

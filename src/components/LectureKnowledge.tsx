@@ -28,6 +28,32 @@ interface Lecture {
 
 const LECTURES = lectureKnowledgeRaw as Lecture[];
 
+/* Trackable definitions/theorems for a site "week" — drawn from the same
+   word-for-word lecture data shown on the page, so the personal-progress
+   checklist matches exactly what was learned that week (lecture N-1). */
+export interface TrackItem {
+  tag: "הגדרה" | "משפט" | "מסקנה";
+  title: string;
+}
+const KIND_TAG: Record<string, TrackItem["tag"]> = {
+  definition: "הגדרה",
+  theorem: "משפט",
+  lemma: "משפט",
+  corollary: "מסקנה",
+};
+export function trackableForWeek(week: number): TrackItem[] {
+  const out: TrackItem[] = [];
+  for (const lec of LECTURES.filter((l) => l.week === week)) {
+    for (const it of lec.items) {
+      const tag = KIND_TAG[it.kind];
+      if (!tag) continue;
+      const title = /\d/.test(it.label) ? `${it.label} — ${it.name}` : it.name;
+      out.push({ tag, title });
+    }
+  }
+  return out;
+}
+
 const COLORS = {
   blue: "#1565c0",
   red: "#c0392b",
