@@ -24,6 +24,7 @@ import type { GeneratedDataSnapshot, MaterialInventory } from "@/lib/calculus2";
 import type { readAnalysisData } from "@/lib/calculus2/analysis-reader";
 import type { LectureSummary } from "@/lib/calculus2/analysis-types";
 import { StudyCallout } from "@/components/study/StudyCallout";
+import { TrigValuesTables } from "@/components/TrigValuesTables";
 import { DashboardProgress } from "@/components/progress/DashboardProgress";
 import { HomeworkMasteryAxis } from "@/components/progress/HomeworkMasteryAxis";
 
@@ -636,6 +637,9 @@ export function Dashboard({
       {analysisData.lectureSummaries.length > 0 && (
         <LectureOverviewTable lectureSummaries={analysisData.lectureSummaries} />
       )}
+
+      {/* ══ REFERENCE: trig values + function domains ══ */}
+      <TrigValuesTables />
     </div>
   );
 }
