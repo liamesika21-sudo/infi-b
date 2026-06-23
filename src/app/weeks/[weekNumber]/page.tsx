@@ -25,6 +25,7 @@ import { WeekHomeworkSection } from "./WeekHomeworkSection";
 import { WeekProgressTracker, type ProgSection, type ProgQuestion } from "@/components/progress/WeekProgressTracker";
 import { LectureKnowledgeForWeek, trackableForWeek } from "@/components/LectureKnowledge";
 import { buildWeekGroups, WeekSection as InstructorWeekSection } from "@/components/instructor-notes/MaxInsightsWeek";
+import { WeekCommunityNotes, type TagTarget } from "@/components/study/WeekCommunityNotes";
 
 export const dynamic = "force-dynamic";
 
@@ -101,7 +102,20 @@ export default async function WeekDetailPage({ params }: Props) {
   const mustPractice = recitationSummary?.mustPractice ?? [];
   const hasWeeklySummary = allCommonMistakes.length > 0 || allConclusions.length > 0 || mustPractice.length > 0;
   const hasInferenceDiagram = buildInferenceNodes(lectureSummary, recitationSummary, homeworkPriority).length > 0;
+
+  // Taggable targets for community notes — homework / recitation questions and
+  // theorems / definitions from this week's lecture. Each links to its on-page anchor.
+  const tagTargets: TagTarget[] = buildTagTargets({
+    weekNum,
+    homeworkNumber: homeworkPriority?.homeworkNumber,
+    hwQuestions,
+    recitationCount: recitationQuestions.length,
+    theorems: lectureSummary?.keyTheorems ?? [],
+    definitions: lectureSummary?.keyDefinitions ?? [],
+  });
+
   const weekSections = [
+    { id: "community-notes", label: "הערות קהילה" },
     hasTracker && { id: "week-tracker", label: "מעקב" },
     hasWeeklySummary && { id: "week-start", label: "לפני שמתחילים" },
     studyGuide && { id: "study-guide", label: "איך ללמוד" },
@@ -220,6 +234,9 @@ export default async function WeekDetailPage({ params }: Props) {
             />
           </div>
         </div>
+
+        {/* ── Community notes — public, student-contributed ── */}
+        <WeekCommunityNotes weekNumber={weekNum} tagTargets={tagTargets} />
 
         {/* ── Progress tracker ── */}
         {hasTracker && (
@@ -937,6 +954,55 @@ function buildInferenceNodes(
 
 function firstMeaningful(items: string[] | undefined): string | undefined {
   return items?.find((item) => item.trim().length > 0);
+}
+
+/* ─────────────────── Community-note tag targets ─────────────────── */
+function shortLabel(raw: string, max = 55): string {
+  const plain = raw.replace(/\$+/g, "").replace(/\s+/g, " ").trim();
+  return plain.length > max ? `${plain.slice(0, max)}…` : plain;
+}
+
+function buildTagTargets({
+  weekNum,
+  homeworkNumber,
+  hwQuestions,
+  recitationCount,
+  theorems,
+  definitions,
+}: {
+  weekNum: number;
+  homeworkNumber: number | undefined;
+  hwQuestions: Array<{ questionNumber: number; homeworkNumber: number }>;
+  recitationCount: number;
+  theorems: string[];
+  definitions: string[];
+}): TagTarget[] {
+  const targets: TagTarget[] = [];
+
+  if (homeworkNumber) {
+    targets.push({ type: "homework", label: `מטלה ${homeworkNumber} (כללי)`, anchor: "homework-summary" });
+    for (const q of hwQuestions.slice(0, 12)) {
+      targets.push({
+        type: "homework-question",
+        label: `מטלה ${q.homeworkNumber} · שאלה ${q.questionNumber}`,
+        anchor: "homework-summary",
+      });
+    }
+  }
+
+  for (let i = 0; i < recitationCount; i += 1) {
+    targets.push({ type: "recitation", label: `תרגול ${weekNum} · שאלה ${i + 1}`, anchor: "recitation-questions" });
+  }
+
+  for (const t of theorems.slice(0, 8)) {
+    if (t.trim()) targets.push({ type: "theorem", label: shortLabel(t), anchor: "lecture-summary" });
+  }
+  for (const d of definitions.slice(0, 8)) {
+    if (d.trim()) targets.push({ type: "definition", label: shortLabel(d), anchor: "lecture-summary" });
+  }
+
+  targets.push({ type: "general", label: "כללי / אחר" });
+  return targets;
 }
 
 /* ─────────────────── Lecture Source Quotes ─────────────────── */
