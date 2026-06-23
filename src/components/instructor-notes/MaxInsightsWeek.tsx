@@ -276,9 +276,7 @@ function IntuitionCard({ item }: { item: MaxInsight }) {
       <div className="px-5 py-5 space-y-4">
         {/* Title */}
         {item.title && (
-          <h3 className="text-lg font-black" style={{ color: "var(--text-primary)" }}>
-            {item.title}
-          </h3>
+          <RichHeading text={item.title} className="text-lg" />
         )}
 
         <RichText text={item.text} style={{ color: "var(--text-secondary)" }} />
@@ -318,16 +316,14 @@ function IntuitionCard({ item }: { item: MaxInsight }) {
    Counter-example — verdict first, then logic
 ────────────────────────────────────────────── */
 function CounterExampleCard({ ce }: { ce: MaxCounterExample }) {
-  const isWrong = ce.verdict === "שגוי";
+  const isWrong = ce.verdict.includes("שגוי");
 
   return (
     <article>
       {/* Title + verdict */}
       <div className="flex items-start justify-between gap-4 mb-3">
-        <div>
-          <h3 className="text-base font-black" style={{ color: "var(--text-primary)" }}>
-            {ce.title}
-          </h3>
+        <div className="min-w-0">
+          <RichHeading text={ce.title} className="text-base" />
           <p className="text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>
             תרגול {ce.recitation} · שבוע {ce.week} · {ce.topic}
           </p>
@@ -502,6 +498,15 @@ function RichText({
   return (
     <div dir="rtl" style={style}>
       <MathContent text={normalizeMaxMath(text)} className={`text-sm leading-8 ${className}`} />
+    </div>
+  );
+}
+
+/** Heading that may contain inline math ($...$). Renders math instead of raw text. */
+function RichHeading({ text, className = "" }: { text: string; className?: string }) {
+  return (
+    <div dir="rtl" style={{ color: "var(--text-primary)" }}>
+      <MathContent text={normalizeMaxMath(text)} className={`font-black leading-8 ${className}`} />
     </div>
   );
 }
