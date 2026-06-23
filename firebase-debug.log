@@ -1,0 +1,324 @@
+[debug] [2026-06-20T17:40:27.679Z] ----------------------------------------------------------------------
+[debug] [2026-06-20T17:40:27.681Z] Command:       /Users/liamesika/.nvm/versions/node/v22.19.0/bin/node /Users/liamesika/.npm-global/bin/firebase projects:list --json
+[debug] [2026-06-20T17:40:27.681Z] CLI Version:   14.16.0
+[debug] [2026-06-20T17:40:27.681Z] Platform:      darwin
+[debug] [2026-06-20T17:40:27.681Z] Node Version:  v22.19.0
+[debug] [2026-06-20T17:40:27.681Z] Time:          Sat Jun 20 2026 20:40:27 GMT+0300 (Israel Daylight Time)
+[debug] [2026-06-20T17:40:27.681Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-06-20T17:40:27.682Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2026-06-20T17:40:27.727Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-06-20T17:40:27.727Z] > authorizing via signed-in user (liamesika2121@gmail.com)
+[debug] [2026-06-20T17:40:27.728Z] Checked if tokens are valid: false, expires at: 1781607900830
+[debug] [2026-06-20T17:40:27.728Z] Checked if tokens are valid: false, expires at: 1781607900830
+[debug] [2026-06-20T17:40:27.728Z] > refreshing access token with scopes: []
+[debug] [2026-06-20T17:40:27.729Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-06-20T17:40:27.729Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-06-20T17:40:28.210Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-06-20T17:40:28.211Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-06-20T17:40:28.220Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2026-06-20T17:40:28.349Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2026-06-20T17:40:28.349Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2026-06-20T17:40:29.003Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2026-06-20T17:40:29.003Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] ┌──────────────────────┬──────────────────┬────────────────┬──────────────────────┐
+│ Project Display Name │ Project ID       │ Project Number │ Resource Location ID │
+├──────────────────────┼──────────────────┼────────────────┼──────────────────────┤
+│ all-in-one           │ all-in-one-eed0a │ 353145181160   │ [Not specified]      │
+├──────────────────────┼──────────────────┼────────────────┼──────────────────────┤
+│ ipromotion-hub       │ ipromotion-hub   │ 810717853564   │ [Not specified]      │
+├──────────────────────┼──────────────────┼────────────────┼──────────────────────┤
+│ lia-mesika           │ lia-mesika       │ 512638498558   │ [Not specified]      │
+├──────────────────────┼──────────────────┼────────────────┼──────────────────────┤
+│ Reichman-math        │ reichman-math    │ 724585280580   │ [Not specified]      │
+└──────────────────────┴──────────────────┴────────────────┴──────────────────────┘
+[info] 
+[info] 4 project(s) total.
+[debug] [2026-06-20T17:40:52.502Z] ----------------------------------------------------------------------
+[debug] [2026-06-20T17:40:52.504Z] Command:       /Users/liamesika/.nvm/versions/node/v22.19.0/bin/node /Users/liamesika/.npm-global/bin/firebase auth:export /var/folders/8t/ht8q4szn0h1gp2k82yxn37j00000gn/T/firebase-auth-lookup-AcCb9F/all-in-one-eed0a.json --project all-in-one-eed0a --format=json
+[debug] [2026-06-20T17:40:52.504Z] CLI Version:   14.16.0
+[debug] [2026-06-20T17:40:52.504Z] Platform:      darwin
+[debug] [2026-06-20T17:40:52.504Z] Node Version:  v22.19.0
+[debug] [2026-06-20T17:40:52.504Z] Time:          Sat Jun 20 2026 20:40:52 GMT+0300 (Israel Daylight Time)
+[debug] [2026-06-20T17:40:52.504Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-06-20T17:40:52.507Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-06-20T17:40:52.507Z] > authorizing via signed-in user (liamesika2121@gmail.com)
+[debug] [2026-06-20T17:40:52.507Z] [iam] checking project all-in-one-eed0a for permissions ["firebase.projects.get","firebaseauth.users.get"]
+[debug] [2026-06-20T17:40:52.508Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:40:52.508Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:40:52.508Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/all-in-one-eed0a:testIamPermissions [none]
+[debug] [2026-06-20T17:40:52.508Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/all-in-one-eed0a:testIamPermissions x-goog-quota-user=projects/all-in-one-eed0a
+[debug] [2026-06-20T17:40:52.508Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/all-in-one-eed0a:testIamPermissions {"permissions":["firebase.projects.get","firebaseauth.users.get"]}
+[debug] [2026-06-20T17:40:53.828Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/all-in-one-eed0a:testIamPermissions 200
+[debug] [2026-06-20T17:40:53.829Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/all-in-one-eed0a:testIamPermissions {}
+[debug] [2026-06-20T17:40:53.829Z] [iam] error while checking permissions, command may fail: Authorization failed. This account is missing the following required permissions on project all-in-one-eed0a:
+
+  firebase.projects.get
+  firebaseauth.users.get
+[info] Exporting accounts to /var/folders/8t/ht8q4szn0h1gp2k82yxn37j00000gn/T/firebase-auth-lookup-AcCb9F/all-in-one-eed0a.json
+[debug] [2026-06-20T17:40:53.830Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:40:53.830Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:40:53.830Z] >>> [apiv2][query] POST https://www.googleapis.com/identitytoolkit/v3/relyingparty/downloadAccount [none]
+[debug] [2026-06-20T17:40:53.830Z] >>> [apiv2][body] POST https://www.googleapis.com/identitytoolkit/v3/relyingparty/downloadAccount {"targetProjectId":"all-in-one-eed0a","maxResults":1000}
+[debug] [2026-06-20T17:40:54.266Z] <<< [apiv2][status] POST https://www.googleapis.com/identitytoolkit/v3/relyingparty/downloadAccount 400
+[debug] [2026-06-20T17:40:54.266Z] <<< [apiv2][body] POST https://www.googleapis.com/identitytoolkit/v3/relyingparty/downloadAccount [omitted]
+[error] 
+[error] Error: Request to https://www.googleapis.com/identitytoolkit/v3/relyingparty/downloadAccount had HTTP Error: 400, INSUFFICIENT_PERMISSION
+[debug] [2026-06-20T17:40:54.462Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 400,
+      "message": "INSUFFICIENT_PERMISSION",
+      "errors": [
+        {
+          "message": "INSUFFICIENT_PERMISSION",
+          "domain": "global",
+          "reason": "invalid"
+        }
+      ]
+    }
+  },
+  "response": {
+    "statusCode": 400
+  }
+}
+[debug] [2026-06-20T17:40:55.239Z] ----------------------------------------------------------------------
+[debug] [2026-06-20T17:40:55.241Z] Command:       /Users/liamesika/.nvm/versions/node/v22.19.0/bin/node /Users/liamesika/.npm-global/bin/firebase auth:export /var/folders/8t/ht8q4szn0h1gp2k82yxn37j00000gn/T/firebase-auth-lookup-AcCb9F/ipromotion-hub.json --project ipromotion-hub --format=json
+[debug] [2026-06-20T17:40:55.241Z] CLI Version:   14.16.0
+[debug] [2026-06-20T17:40:55.241Z] Platform:      darwin
+[debug] [2026-06-20T17:40:55.241Z] Node Version:  v22.19.0
+[debug] [2026-06-20T17:40:55.241Z] Time:          Sat Jun 20 2026 20:40:55 GMT+0300 (Israel Daylight Time)
+[debug] [2026-06-20T17:40:55.241Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-06-20T17:40:55.243Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-06-20T17:40:55.244Z] > authorizing via signed-in user (liamesika2121@gmail.com)
+[debug] [2026-06-20T17:40:55.244Z] [iam] checking project ipromotion-hub for permissions ["firebase.projects.get","firebaseauth.users.get"]
+[debug] [2026-06-20T17:40:55.244Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:40:55.244Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:40:55.245Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ipromotion-hub:testIamPermissions [none]
+[debug] [2026-06-20T17:40:55.245Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ipromotion-hub:testIamPermissions x-goog-quota-user=projects/ipromotion-hub
+[debug] [2026-06-20T17:40:55.245Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ipromotion-hub:testIamPermissions {"permissions":["firebase.projects.get","firebaseauth.users.get"]}
+[debug] [2026-06-20T17:40:55.577Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ipromotion-hub:testIamPermissions 200
+[debug] [2026-06-20T17:40:55.578Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ipromotion-hub:testIamPermissions {"permissions":["firebase.projects.get","firebaseauth.users.get"]}
+[info] Exporting accounts to /var/folders/8t/ht8q4szn0h1gp2k82yxn37j00000gn/T/firebase-auth-lookup-AcCb9F/ipromotion-hub.json
+[debug] [2026-06-20T17:40:55.579Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:40:55.579Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:40:55.579Z] >>> [apiv2][query] POST https://www.googleapis.com/identitytoolkit/v3/relyingparty/downloadAccount [none]
+[debug] [2026-06-20T17:40:55.580Z] >>> [apiv2][body] POST https://www.googleapis.com/identitytoolkit/v3/relyingparty/downloadAccount {"targetProjectId":"ipromotion-hub","maxResults":1000}
+[debug] [2026-06-20T17:40:55.951Z] <<< [apiv2][status] POST https://www.googleapis.com/identitytoolkit/v3/relyingparty/downloadAccount 200
+[debug] [2026-06-20T17:40:55.951Z] <<< [apiv2][body] POST https://www.googleapis.com/identitytoolkit/v3/relyingparty/downloadAccount [omitted]
+[info] ✔  Exported 23 account(s) successfully. 
+[debug] [2026-06-20T17:40:56.770Z] ----------------------------------------------------------------------
+[debug] [2026-06-20T17:40:56.772Z] Command:       /Users/liamesika/.nvm/versions/node/v22.19.0/bin/node /Users/liamesika/.npm-global/bin/firebase auth:export /var/folders/8t/ht8q4szn0h1gp2k82yxn37j00000gn/T/firebase-auth-lookup-AcCb9F/lia-mesika.json --project lia-mesika --format=json
+[debug] [2026-06-20T17:40:56.772Z] CLI Version:   14.16.0
+[debug] [2026-06-20T17:40:56.772Z] Platform:      darwin
+[debug] [2026-06-20T17:40:56.772Z] Node Version:  v22.19.0
+[debug] [2026-06-20T17:40:56.773Z] Time:          Sat Jun 20 2026 20:40:56 GMT+0300 (Israel Daylight Time)
+[debug] [2026-06-20T17:40:56.773Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-06-20T17:40:56.776Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-06-20T17:40:56.777Z] > authorizing via signed-in user (liamesika2121@gmail.com)
+[debug] [2026-06-20T17:40:56.777Z] [iam] checking project lia-mesika for permissions ["firebase.projects.get","firebaseauth.users.get"]
+[debug] [2026-06-20T17:40:56.777Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:40:56.777Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:40:56.778Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/lia-mesika:testIamPermissions [none]
+[debug] [2026-06-20T17:40:56.778Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/lia-mesika:testIamPermissions x-goog-quota-user=projects/lia-mesika
+[debug] [2026-06-20T17:40:56.778Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/lia-mesika:testIamPermissions {"permissions":["firebase.projects.get","firebaseauth.users.get"]}
+[debug] [2026-06-20T17:40:57.817Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/lia-mesika:testIamPermissions 200
+[debug] [2026-06-20T17:40:57.818Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/lia-mesika:testIamPermissions {"permissions":["firebase.projects.get","firebaseauth.users.get"]}
+[info] Exporting accounts to /var/folders/8t/ht8q4szn0h1gp2k82yxn37j00000gn/T/firebase-auth-lookup-AcCb9F/lia-mesika.json
+[debug] [2026-06-20T17:40:57.819Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:40:57.819Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:40:57.820Z] >>> [apiv2][query] POST https://www.googleapis.com/identitytoolkit/v3/relyingparty/downloadAccount [none]
+[debug] [2026-06-20T17:40:57.820Z] >>> [apiv2][body] POST https://www.googleapis.com/identitytoolkit/v3/relyingparty/downloadAccount {"targetProjectId":"lia-mesika","maxResults":1000}
+[debug] [2026-06-20T17:40:58.132Z] <<< [apiv2][status] POST https://www.googleapis.com/identitytoolkit/v3/relyingparty/downloadAccount 400
+[debug] [2026-06-20T17:40:58.133Z] <<< [apiv2][body] POST https://www.googleapis.com/identitytoolkit/v3/relyingparty/downloadAccount [omitted]
+[error] 
+[error] Error: Request to https://www.googleapis.com/identitytoolkit/v3/relyingparty/downloadAccount had HTTP Error: 400, CONFIGURATION_NOT_FOUND
+[debug] [2026-06-20T17:40:58.322Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 400,
+      "message": "CONFIGURATION_NOT_FOUND",
+      "errors": [
+        {
+          "message": "CONFIGURATION_NOT_FOUND",
+          "domain": "global",
+          "reason": "invalid"
+        }
+      ]
+    }
+  },
+  "response": {
+    "statusCode": 400
+  }
+}
+[debug] [2026-06-20T17:40:59.107Z] ----------------------------------------------------------------------
+[debug] [2026-06-20T17:40:59.109Z] Command:       /Users/liamesika/.nvm/versions/node/v22.19.0/bin/node /Users/liamesika/.npm-global/bin/firebase auth:export /var/folders/8t/ht8q4szn0h1gp2k82yxn37j00000gn/T/firebase-auth-lookup-AcCb9F/reichman-math.json --project reichman-math --format=json
+[debug] [2026-06-20T17:40:59.109Z] CLI Version:   14.16.0
+[debug] [2026-06-20T17:40:59.109Z] Platform:      darwin
+[debug] [2026-06-20T17:40:59.109Z] Node Version:  v22.19.0
+[debug] [2026-06-20T17:40:59.110Z] Time:          Sat Jun 20 2026 20:40:59 GMT+0300 (Israel Daylight Time)
+[debug] [2026-06-20T17:40:59.110Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-06-20T17:40:59.112Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-06-20T17:40:59.112Z] > authorizing via signed-in user (liamesika2121@gmail.com)
+[debug] [2026-06-20T17:40:59.112Z] [iam] checking project reichman-math for permissions ["firebase.projects.get","firebaseauth.users.get"]
+[debug] [2026-06-20T17:40:59.113Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:40:59.113Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:40:59.113Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/reichman-math:testIamPermissions [none]
+[debug] [2026-06-20T17:40:59.113Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/reichman-math:testIamPermissions x-goog-quota-user=projects/reichman-math
+[debug] [2026-06-20T17:40:59.113Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/reichman-math:testIamPermissions {"permissions":["firebase.projects.get","firebaseauth.users.get"]}
+[debug] [2026-06-20T17:41:00.041Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/reichman-math:testIamPermissions 200
+[debug] [2026-06-20T17:41:00.042Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/reichman-math:testIamPermissions {"permissions":["firebase.projects.get","firebaseauth.users.get"]}
+[info] Exporting accounts to /var/folders/8t/ht8q4szn0h1gp2k82yxn37j00000gn/T/firebase-auth-lookup-AcCb9F/reichman-math.json
+[debug] [2026-06-20T17:41:00.042Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:41:00.043Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:41:00.043Z] >>> [apiv2][query] POST https://www.googleapis.com/identitytoolkit/v3/relyingparty/downloadAccount [none]
+[debug] [2026-06-20T17:41:00.043Z] >>> [apiv2][body] POST https://www.googleapis.com/identitytoolkit/v3/relyingparty/downloadAccount {"targetProjectId":"reichman-math","maxResults":1000}
+[debug] [2026-06-20T17:41:00.569Z] <<< [apiv2][status] POST https://www.googleapis.com/identitytoolkit/v3/relyingparty/downloadAccount 200
+[debug] [2026-06-20T17:41:00.569Z] <<< [apiv2][body] POST https://www.googleapis.com/identitytoolkit/v3/relyingparty/downloadAccount [omitted]
+[info] ✔  Exported 546 account(s) successfully. 
+[debug] [2026-06-20T17:41:35.417Z] ----------------------------------------------------------------------
+[debug] [2026-06-20T17:41:35.419Z] ----------------------------------------------------------------------
+[debug] [2026-06-20T17:41:35.418Z] Command:       /Users/liamesika/.nvm/versions/node/v22.19.0/bin/node /Users/liamesika/.npm-global/bin/firebase auth:export /var/folders/8t/ht8q4szn0h1gp2k82yxn37j00000gn/T/tmp.y59HfBIr74/users.json --project reichman-math --format=json
+[debug] [2026-06-20T17:41:35.418Z] CLI Version:   14.16.0
+[debug] [2026-06-20T17:41:35.418Z] Platform:      darwin
+[debug] [2026-06-20T17:41:35.419Z] Node Version:  v22.19.0
+[debug] [2026-06-20T17:41:35.419Z] Time:          Sat Jun 20 2026 20:41:35 GMT+0300 (Israel Daylight Time)
+[debug] [2026-06-20T17:41:35.419Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-06-20T17:41:35.421Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-06-20T17:41:35.422Z] > authorizing via signed-in user (liamesika2121@gmail.com)
+[debug] [2026-06-20T17:41:35.422Z] [iam] checking project reichman-math for permissions ["firebase.projects.get","firebaseauth.users.get"]
+[debug] [2026-06-20T17:41:35.422Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:41:35.422Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:41:35.422Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/reichman-math:testIamPermissions [none]
+[debug] [2026-06-20T17:41:35.422Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/reichman-math:testIamPermissions x-goog-quota-user=projects/reichman-math
+[debug] [2026-06-20T17:41:35.423Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/reichman-math:testIamPermissions {"permissions":["firebase.projects.get","firebaseauth.users.get"]}
+[debug] [2026-06-20T17:41:35.421Z] Command:       /Users/liamesika/.nvm/versions/node/v22.19.0/bin/node /Users/liamesika/.npm-global/bin/firebase database:instances:list --project reichman-math --json
+[debug] [2026-06-20T17:41:35.421Z] CLI Version:   14.16.0
+[debug] [2026-06-20T17:41:35.421Z] Platform:      darwin
+[debug] [2026-06-20T17:41:35.421Z] Node Version:  v22.19.0
+[debug] [2026-06-20T17:41:35.421Z] Time:          Sat Jun 20 2026 20:41:35 GMT+0300 (Israel Daylight Time)
+[debug] [2026-06-20T17:41:35.421Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-06-20T17:41:35.423Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-06-20T17:41:35.423Z] > authorizing via signed-in user (liamesika2121@gmail.com)
+[debug] [2026-06-20T17:41:35.423Z] [iam] checking project reichman-math for permissions ["firebase.projects.get","firebasedatabase.instances.list"]
+[debug] [2026-06-20T17:41:35.424Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:41:35.424Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:41:35.424Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/reichman-math:testIamPermissions [none]
+[debug] [2026-06-20T17:41:35.424Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/reichman-math:testIamPermissions x-goog-quota-user=projects/reichman-math
+[debug] [2026-06-20T17:41:35.424Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/reichman-math:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.list"]}
+[debug] [2026-06-20T17:41:36.355Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/reichman-math:testIamPermissions 200
+[debug] [2026-06-20T17:41:36.356Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/reichman-math:testIamPermissions {"permissions":["firebase.projects.get","firebaseauth.users.get"]}
+[info] Exporting accounts to /var/folders/8t/ht8q4szn0h1gp2k82yxn37j00000gn/T/tmp.y59HfBIr74/users.json
+[debug] [2026-06-20T17:41:36.357Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:41:36.357Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:41:36.357Z] >>> [apiv2][query] POST https://www.googleapis.com/identitytoolkit/v3/relyingparty/downloadAccount [none]
+[debug] [2026-06-20T17:41:36.357Z] >>> [apiv2][body] POST https://www.googleapis.com/identitytoolkit/v3/relyingparty/downloadAccount {"targetProjectId":"reichman-math","maxResults":1000}
+[debug] [2026-06-20T17:41:36.397Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/reichman-math:testIamPermissions 200
+[debug] [2026-06-20T17:41:36.397Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/reichman-math:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.list"]}
+[debug] [2026-06-20T17:41:36.400Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:41:36.400Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:41:36.400Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/reichman-math/locations/-/instances pageSize=100
+[debug] [2026-06-20T17:41:36.900Z] <<< [apiv2][status] POST https://www.googleapis.com/identitytoolkit/v3/relyingparty/downloadAccount 200
+[debug] [2026-06-20T17:41:36.901Z] <<< [apiv2][body] POST https://www.googleapis.com/identitytoolkit/v3/relyingparty/downloadAccount [omitted]
+[info] ✔  Exported 546 account(s) successfully. 
+[debug] [2026-06-20T17:41:37.765Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/reichman-math/locations/-/instances 200
+[debug] [2026-06-20T17:41:37.766Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/reichman-math/locations/-/instances {"instances":[{"name":"projects/724585280580/locations/europe-west1/instances/reichman-math-default-rtdb","project":"projects/724585280580","databaseUrl":"https://reichman-math-default-rtdb.europe-west1.firebasedatabase.app","type":"DEFAULT_DATABASE","state":"ACTIVE"}]}
+[info] reichman-math-default-rtdb
+[info] Project reichman-math has 1 database instances
+[debug] [2026-06-20T17:41:47.722Z] ----------------------------------------------------------------------
+[debug] [2026-06-20T17:41:47.725Z] ----------------------------------------------------------------------
+[debug] [2026-06-20T17:41:47.723Z] Command:       /Users/liamesika/.nvm/versions/node/v22.19.0/bin/node /Users/liamesika/.npm-global/bin/firebase database:get / --project reichman-math --instance reichman-math-default-rtdb --shallow --json
+[debug] [2026-06-20T17:41:47.724Z] CLI Version:   14.16.0
+[debug] [2026-06-20T17:41:47.724Z] Platform:      darwin
+[debug] [2026-06-20T17:41:47.724Z] Node Version:  v22.19.0
+[debug] [2026-06-20T17:41:47.724Z] Time:          Sat Jun 20 2026 20:41:47 GMT+0300 (Israel Daylight Time)
+[debug] [2026-06-20T17:41:47.724Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-06-20T17:41:47.727Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-06-20T17:41:47.727Z] > authorizing via signed-in user (liamesika2121@gmail.com)
+[debug] [2026-06-20T17:41:47.727Z] [iam] checking project reichman-math for permissions ["firebase.projects.get","firebasedatabase.instances.get"]
+[debug] [2026-06-20T17:41:47.727Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:41:47.727Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:41:47.728Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/reichman-math:testIamPermissions [none]
+[debug] [2026-06-20T17:41:47.728Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/reichman-math:testIamPermissions x-goog-quota-user=projects/reichman-math
+[debug] [2026-06-20T17:41:47.728Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/reichman-math:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.get"]}
+[debug] [2026-06-20T17:41:47.727Z] Command:       /Users/liamesika/.nvm/versions/node/v22.19.0/bin/node /Users/liamesika/.npm-global/bin/firebase firestore:databases:list --project reichman-math --json
+[debug] [2026-06-20T17:41:47.727Z] CLI Version:   14.16.0
+[debug] [2026-06-20T17:41:47.727Z] Platform:      darwin
+[debug] [2026-06-20T17:41:47.727Z] Node Version:  v22.19.0
+[debug] [2026-06-20T17:41:47.727Z] Time:          Sat Jun 20 2026 20:41:47 GMT+0300 (Israel Daylight Time)
+[debug] [2026-06-20T17:41:47.727Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-06-20T17:41:47.729Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-06-20T17:41:47.730Z] > authorizing via signed-in user (liamesika2121@gmail.com)
+[debug] [2026-06-20T17:41:47.730Z] [iam] checking project reichman-math for permissions ["datastore.databases.list","firebase.projects.get"]
+[debug] [2026-06-20T17:41:47.730Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:41:47.730Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:41:47.730Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/reichman-math:testIamPermissions [none]
+[debug] [2026-06-20T17:41:47.730Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/reichman-math:testIamPermissions x-goog-quota-user=projects/reichman-math
+[debug] [2026-06-20T17:41:47.730Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/reichman-math:testIamPermissions {"permissions":["datastore.databases.list","firebase.projects.get"]}
+[debug] [2026-06-20T17:41:48.054Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/reichman-math:testIamPermissions 200
+[debug] [2026-06-20T17:41:48.055Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/reichman-math:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.get"]}
+[debug] [2026-06-20T17:41:48.055Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:41:48.055Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:41:48.055Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/reichman-math/locations/-/instances/reichman-math-default-rtdb [none]
+[debug] [2026-06-20T17:41:48.679Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/reichman-math:testIamPermissions 200
+[debug] [2026-06-20T17:41:48.679Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/reichman-math:testIamPermissions {"permissions":["datastore.databases.list","firebase.projects.get"]}
+[debug] [2026-06-20T17:41:48.680Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:41:48.680Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:41:48.680Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/reichman-math/databases [none]
+[debug] [2026-06-20T17:41:49.136Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/reichman-math/locations/-/instances/reichman-math-default-rtdb 200
+[debug] [2026-06-20T17:41:49.136Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/reichman-math/locations/-/instances/reichman-math-default-rtdb {"name":"projects/724585280580/locations/europe-west1/instances/reichman-math-default-rtdb","project":"projects/724585280580","databaseUrl":"https://reichman-math-default-rtdb.europe-west1.firebasedatabase.app","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[debug] [2026-06-20T17:41:49.138Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:41:49.138Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:41:49.138Z] >>> [apiv2][query] GET https://reichman-math-default-rtdb.europe-west1.firebasedatabase.app/.json shallow=true
+[debug] [2026-06-20T17:41:49.602Z] <<< [apiv2][status] GET https://reichman-math-default-rtdb.europe-west1.firebasedatabase.app/.json 200
+[debug] [2026-06-20T17:41:49.603Z] <<< [apiv2][body] GET https://reichman-math-default-rtdb.europe-west1.firebasedatabase.app/.json [stream]
+[debug] [2026-06-20T17:41:49.613Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/reichman-math/databases 200
+[debug] [2026-06-20T17:41:49.613Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/reichman-math/databases {"databases":[{"name":"projects/reichman-math/databases/(default)","uid":"b7c712a6-22ad-467c-bff7-683d9fd82694","createTime":"2026-03-17T17:39:36.592907Z","updateTime":"2026-03-17T17:39:36.592907Z","locationId":"europe-west1","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2026-06-20T16:41:49.938870Z","appEngineIntegrationMode":"DISABLED","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","databaseEdition":"STANDARD","freeTier":true,"realtimeUpdatesMode":"REALTIME_UPDATES_MODE_ENABLED","etag":"IPippOSulpUDMLHalrK9p5MD"}]}
+[info] ┌───────────────────────────────────────────────┐
+│ Database Name                                 │
+├───────────────────────────────────────────────┤
+│ projects/reichman-math/databases/(default)    │
+└───────────────────────────────────────────────┘
+[debug] [2026-06-20T17:42:08.439Z] ----------------------------------------------------------------------
+[debug] [2026-06-20T17:42:08.440Z] Command:       /Users/liamesika/.nvm/versions/node/v22.19.0/bin/node /Users/liamesika/.npm-global/bin/firebase login:list --json
+[debug] [2026-06-20T17:42:08.440Z] CLI Version:   14.16.0
+[debug] [2026-06-20T17:42:08.440Z] Platform:      darwin
+[debug] [2026-06-20T17:42:08.440Z] Node Version:  v22.19.0
+[debug] [2026-06-20T17:42:08.440Z] Time:          Sat Jun 20 2026 20:42:08 GMT+0300 (Israel Daylight Time)
+[debug] [2026-06-20T17:42:08.440Z] ----------------------------------------------------------------------
+[debug] 
+[info] Logged in as liamesika2121@gmail.com
+[debug] [2026-06-20T17:46:00.937Z] ----------------------------------------------------------------------
+[debug] [2026-06-20T17:46:00.939Z] Command:       /Users/liamesika/.nvm/versions/node/v22.19.0/bin/node /Users/liamesika/.npm-global/bin/firebase auth:export /var/folders/8t/ht8q4szn0h1gp2k82yxn37j00000gn/T/firebase-user-audit-uzUO7Q/auth-users.json --project reichman-math --format=json
+[debug] [2026-06-20T17:46:00.939Z] CLI Version:   14.16.0
+[debug] [2026-06-20T17:46:00.939Z] Platform:      darwin
+[debug] [2026-06-20T17:46:00.939Z] Node Version:  v22.19.0
+[debug] [2026-06-20T17:46:00.939Z] Time:          Sat Jun 20 2026 20:46:00 GMT+0300 (Israel Daylight Time)
+[debug] [2026-06-20T17:46:00.939Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-06-20T17:46:00.941Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-06-20T17:46:00.942Z] > authorizing via signed-in user (liamesika2121@gmail.com)
+[debug] [2026-06-20T17:46:00.942Z] [iam] checking project reichman-math for permissions ["firebase.projects.get","firebaseauth.users.get"]
+[debug] [2026-06-20T17:46:00.942Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:46:00.942Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:46:00.943Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/reichman-math:testIamPermissions [none]
+[debug] [2026-06-20T17:46:00.943Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/reichman-math:testIamPermissions x-goog-quota-user=projects/reichman-math
+[debug] [2026-06-20T17:46:00.943Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/reichman-math:testIamPermissions {"permissions":["firebase.projects.get","firebaseauth.users.get"]}
+[debug] [2026-06-20T17:46:01.882Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/reichman-math:testIamPermissions 200
+[debug] [2026-06-20T17:46:01.882Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/reichman-math:testIamPermissions {"permissions":["firebase.projects.get","firebaseauth.users.get"]}
+[info] Exporting accounts to /var/folders/8t/ht8q4szn0h1gp2k82yxn37j00000gn/T/firebase-user-audit-uzUO7Q/auth-users.json
+[debug] [2026-06-20T17:46:01.883Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:46:01.883Z] Checked if tokens are valid: true, expires at: 1781980827211
+[debug] [2026-06-20T17:46:01.883Z] >>> [apiv2][query] POST https://www.googleapis.com/identitytoolkit/v3/relyingparty/downloadAccount [none]
+[debug] [2026-06-20T17:46:01.883Z] >>> [apiv2][body] POST https://www.googleapis.com/identitytoolkit/v3/relyingparty/downloadAccount {"targetProjectId":"reichman-math","maxResults":1000}
+[debug] [2026-06-20T17:46:02.457Z] <<< [apiv2][status] POST https://www.googleapis.com/identitytoolkit/v3/relyingparty/downloadAccount 200
+[debug] [2026-06-20T17:46:02.457Z] <<< [apiv2][body] POST https://www.googleapis.com/identitytoolkit/v3/relyingparty/downloadAccount [omitted]
+[info] ✔  Exported 546 account(s) successfully. 

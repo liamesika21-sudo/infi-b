@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>מדריך שבועי למבחן — אינפי 2 🎯 100</title>
+<script>
+  MathJax = {
+    tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" id="MathJax-script" async></script>
+<style>
+  :root{
+    --bg:#0f1424; --card:#181f33; --card2:#1f2740; --ink:#eef2ff; --muted:#9aa6c9;
+    --red:#ff5d6c; --redbg:#3a1620; --amber:#ffb24d; --amberbg:#3a2a12;
+    --green:#5fe3a1; --greenbg:#12321f; --blue:#6db3ff; --bluebg:#13243f;
+    --line:#2b344f; --gold:#ffd766;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:linear-gradient(160deg,#0c1020,#101a30 60%,#0c1020);
+    color:var(--ink); font-family:"Segoe UI","Heebo",Arial,sans-serif; line-height:1.7;
+  }
+  .wrap{max-width:1080px; margin:0 auto; padding:24px 18px 80px}
+  header.hero{
+    text-align:center; padding:34px 20px 26px; border-radius:22px; margin-bottom:22px;
+    background:radial-gradient(circle at 30% 0%,#23305a,#141b2e); border:1px solid var(--line);
+    box-shadow:0 18px 50px rgba(0,0,0,.45);
+  }
+  header.hero h1{margin:0 0 6px; font-size:2.1rem; letter-spacing:.3px}
+  header.hero p{margin:4px 0; color:var(--muted)}
+  .goal{display:inline-block; margin-top:12px; padding:8px 18px; border-radius:999px;
+    background:linear-gradient(90deg,#ffd766,#ff9d4d); color:#1a1300; font-weight:800; font-size:1.05rem}
+  .legend{display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-top:16px}
+  .chip{padding:5px 12px; border-radius:999px; font-size:.82rem; font-weight:700; border:1px solid var(--line)}
+  .chip.r{background:var(--redbg); color:var(--red)}
+  .chip.a{background:var(--amberbg); color:var(--amber)}
+  .chip.g{background:var(--greenbg); color:var(--green)}
+  .chip.b{background:var(--bluebg); color:var(--blue)}
+
+  nav.weeks{position:sticky; top:0; z-index:20; display:flex; gap:8px; flex-wrap:wrap; justify-content:center;
+    padding:12px; margin:0 -18px 26px; background:rgba(12,16,32,.85); backdrop-filter:blur(8px); border-bottom:1px solid var(--line)}
+  nav.weeks a{color:var(--ink); text-decoration:none; font-weight:700; font-size:.86rem;
+    padding:6px 12px; border-radius:10px; background:var(--card2); border:1px solid var(--line)}
+  nav.weeks a:hover{background:var(--blue); color:#06101f}
+  nav.weeks a.exam{background:#2a1535; border-color:#5a2f6e}
+
+  .callout{border-radius:16px; padding:18px 20px; margin:0 0 24px; border:1px solid var(--line); background:var(--card)}
+  .callout h2{margin:0 0 10px; font-size:1.25rem}
+  .callout.prio{background:linear-gradient(140deg,#1c2540,#15101f); border-color:#3a2a4a}
+  .prio-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin-top:8px}
+  .prio-grid div{padding:12px 14px; border-radius:12px; background:var(--card2); border:1px solid var(--line); font-size:.92rem}
+  .prio-grid b{display:block; margin-bottom:4px}
+
+  section.week{margin-bottom:22px; border-radius:18px; overflow:hidden; border:1px solid var(--line);
+    background:var(--card); box-shadow:0 10px 30px rgba(0,0,0,.3)}
+  .whead{display:flex; align-items:center; gap:14px; padding:16px 20px; cursor:pointer;
+    background:linear-gradient(90deg,#1d2640,#171d30)}
+  .wnum{flex:0 0 auto; width:46px; height:46px; border-radius:12px; display:grid; place-items:center;
+    font-weight:900; font-size:1.1rem; background:var(--blue); color:#06101f}
+  .whead .t{flex:1}
+  .whead .t h3{margin:0; font-size:1.18rem}
+  .whead .t .sub{color:var(--muted); font-size:.85rem; margin-top:2px}
+  .whead .src{font-size:.74rem; color:var(--muted); text-align:left}
+  .wbody{padding:6px 22px 22px}
+  .wbody.collapsed{display:none}
+
+  .block{margin-top:18px}
+  .block > h4{display:flex; align-items:center; gap:8px; font-size:1.02rem; margin:0 0 10px;
+    padding-bottom:6px; border-bottom:1px dashed var(--line)}
+  .ico{width:26px; height:26px; border-radius:8px; display:grid; place-items:center; font-size:.95rem}
+  .ico.thm{background:var(--redbg)} .ico.hw{background:var(--greenbg)} .ico.note{background:var(--bluebg)}
+
+  .thm{background:var(--card2); border:1px solid var(--line); border-right:4px solid var(--muted);
+    border-radius:12px; padding:12px 16px; margin:10px 0}
+  .thm.crit{border-right-color:var(--red); background:linear-gradient(90deg,#251420,#1f2740)}
+  .thm .name{font-weight:800; margin-bottom:4px}
+  .thm .name .star{color:var(--red)}
+  .thm .mini{font-size:.82rem; color:var(--amber); font-weight:700}
+
+  .hw{background:var(--greenbg); border:1px solid #1f5238; border-radius:12px; padding:12px 16px; margin:10px 0}
+  .hw .q{font-weight:800; color:var(--green)}
+  .hw .why{color:var(--ink); font-size:.93rem; margin-top:4px}
+
+  ul.notes{margin:8px 0 0; padding-inline-start:22px}
+  ul.notes li{margin:7px 0}
+  .trap{color:var(--red); font-weight:700}
+  .tip{color:var(--green); font-weight:700}
+
+  .master{background:linear-gradient(140deg,#141d35,#1c1424); border:1px solid #3a2a4a; border-radius:18px; padding:22px}
+  .master h2{margin-top:0}
+  .check{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:10px}
+  .check label{display:flex; gap:10px; align-items:flex-start; background:var(--card2); border:1px solid var(--line);
+    border-radius:10px; padding:10px 12px; font-size:.92rem; cursor:pointer}
+  .check input{margin-top:5px; accent-color:var(--gold); transform:scale(1.2)}
+  .plan{counter-reset:step; margin-top:16px}
+  .plan .step{position:relative; padding:10px 14px 10px 14px; margin:8px 0; background:var(--card2);
+    border:1px solid var(--line); border-radius:12px}
+  .plan .step::before{counter-increment:step; content:"שלב " counter(step); color:var(--gold); font-weight:800; margin-left:8px}
+
+  footer{text-align:center; color:var(--muted); font-size:.82rem; margin-top:30px}
+  a.inline{color:var(--blue)}
+  @media(max-width:560px){ .whead .src{display:none} header.hero h1{font-size:1.6rem} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <h1>📘 מדריך שבועי למבחן — אינפי 2 (חדו"א 2)</h1>
+  <p>ד"ר יוסי שמאי · רייכמן · מאורגן שבוע-אחר-שבוע: הרצאה + תרגול + שיעורי בית</p>
+  <p>מה לשנן בעל פה · אילו תרגילים לתרגל · ומה לקחת מכל שבוע</p>
+  <div class="goal">🎯 היעד: 100 במבחן</div>
+  <div class="legend">
+    <span class="chip r">🔴 קריטי למבחן — חובה לשנן</span>
+    <span class="chip a">🟠 חשוב</span>
+    <span class="chip g">📝 תרגיל בית להתמקד</span>
+    <span class="chip b">💡 הערה / מלכודת</span>
+  </div>
+</header>
+
+<nav class="weeks">
+  <a href="#w1">שבוע 1</a>
+  <a href="#w2">שבוע 2</a>
+  <a href="#w3">שבוע 3</a>
+  <a href="#w4">שבוע 4</a>
+  <a href="#w5">שבוע 5</a>
+  <a href="#w6">שבוע 6</a>
+  <a href="#w7">שבוע 7</a>
+  <a href="#w8">שבוע 8</a>
+  <a href="#w9">שבוע 9</a>
+  <a href="#w10">שבוע 10</a>
+  <a href="#w11">שבוע 11</a>
+  <a href="#master" class="exam">⭐ סיכום מאסטר</a>
+</nav>
+
+<div class="callout prio">
+  <h2>🧭 לפני שמתחילים — מפת העדיפויות למבחן</h2>
+  <p style="color:var(--muted);margin-top:0">המבחן: <b>5 שאלות × 25 נק', עונים על 4, 3 שעות</b>. כל שאלה ≈ הוכחת משפט "ראו הרצאות" + סעיף הגדרה + סעיף חישוב/הכרעה.</p>
+  <div class="prio-grid">
+    <div><b>🔴 לב המבחן (60% מהזמן)</b>שבועות 6–8: כל מבחני ההתכנסות לטורים + התכנסות בהחלט/בתנאי. שבועות 9–11: רדיוס/תחום התכנסות + טורי טיילור מוכרים.</div>
+    <div><b>🟠 חשוב (30%)</b>שבועות 3–5: אינטגרל מסוים (הצבה+חלקים), FTC עם גבול משתנה, אינטגרל לא אמיתי, סדרות רקורסיביות.</div>
+    <div><b>🟡 בסיס (10%)</b>שבועות 1–2: גבולות/לופיטל, סדרות, היינה — בעיקר ככלי עזר בתוך שאלות גדולות.</div>
+    <div><b>⚫ מחוץ לחומר (0%)</b>כל הרב-משתנה · שארית לגרנז'/טיילור כחסם שגיאה · משפט קושי לערך הממוצע.</div>
+  </div>
+  <p style="margin-bottom:0;font-size:.9rem">📄 לתחזית המלאה לשאלות המבחן ראי: <a class="inline" href="past-exams/ניתוח_מבחנים_ותחזית_2026.md">ניתוח_מבחנים_ותחזית_2026.md</a></p>
+</div>
+
+<!-- ===================== WEEK 1 ===================== -->
+<section class="week" id="w1">
+  <div class="whead" onclick="toggle(this)">
+    <div class="wnum">1</div>
+    <div class="t"><h3>גבולות, לופיטל ומשפט דרבו</h3><div class="sub">תרגול 1 · שיעורי בית 1</div></div>
+    <div class="src">🟡 בסיס</div>
+  </div>
+  <div class="wbody">
+    <div class="block">
+      <h4><span class="ico thm">📐</span> משפטים/הגדרות לשנן בעל פה</h4>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> כלל לופיטל — <span class="mini">שנני את התנאים, לא רק הנוסחה!</span></div>
+        אם $\lim\frac{f}{g}$ מהצורה $\frac{0}{0}$ או $\frac{?}{\infty}$, <b>ו</b>הגבול $\lim\frac{f'}{g'}$ קיים (במובן הרחב), אז $\lim\frac{f(x)}{g(x)}=\lim\frac{f'(x)}{g'(x)}$.</div>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> גבולות $0^0,\ \infty^0,\ 0\cdot\infty$</div>
+        כותבים $u^v=e^{v\ln u}$ ומחשבים את הגבול <b>במעריך</b> $\lim v\ln u$ (בד"כ הורדה למכנה + לופיטל). זו אותה טכניקה שתחזור ב$\sqrt[n]{a_n}$ של מבחן השורש.</div>
+      <div class="thm"><div class="name">משפט דרבו (ערך ביניים לנגזרת)</div>
+        אם $f$ גזירה על $[a,b]$ אז $f'$ מקבלת כל ערך בין $f'(a)$ ל-$f'(b)$. <b>מסקנה:</b> לנגזרת אסור אי-רציפות קפיצה/סליקה.</div>
+    </div>
+    <div class="block">
+      <h4><span class="ico hw">📝</span> תרגילי בית להתמקד (שיעורי בית 1)</h4>
+      <div class="hw"><div class="q">שאלה 1(b): $\displaystyle\lim_{x\to0^+} x^2\ln x$</div><div class="why">הורדה למכנה $\frac{\ln x}{1/x^2}$ + לופיטל על $0\cdot(-\infty)$ — בדיוק הטכניקה של בדיקת קצה בטורי חזקות.</div></div>
+      <div class="hw"><div class="q">שאלה 1(d): $\displaystyle\lim_{x\to\infty}(e^{2x}-x+1)^{1/x}$</div><div class="why">צורת $\infty^0$ → $e^{\ln(\cdot)/x}$ + לופיטל כפול. תבנית $\sqrt[n]{a_n}$ למבחן השורש.</div></div>
+      <div class="hw"><div class="q">שאלה 4(a): מתי <b>אסור</b> לופיטל</div><div class="why">$\lim_{x\to1}\frac{x^3+3x-4}{x^2-3x+2}$ — מלמד שאסור לופיטל כשהגבול אינו $\frac00/\frac?\infty$. נקודת הפסד נפוצה.</div></div>
+    </div>
+    <div class="block">
+      <h4><span class="ico note">💡</span> מסקנות והערות</h4>
+      <ul class="notes">
+        <li><span class="tip">לעצור בזמן:</span> אם אחרי לופיטל החזקה במונה <b>עולה</b> — כיוון שגוי.</li>
+        <li>בידוד גבולות מוכרים: $\frac{\sin x}{x}\to1$, $\frac{1-\cos x}{x^2}\to\frac12$, $\frac{\sin x-x}{x^3}\to-\frac16$ (שאלה 5c).</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WEEK 2 ===================== -->
+<section class="week" id="w2">
+  <div class="whead" onclick="toggle(this)">
+    <div class="wnum">2</div>
+    <div class="t"><h3>סדרות: מונוטוניות, חסימות, היינה ורקורסיה</h3><div class="sub">הרצאה 1 · תרגול 2 · שיעורי בית 2 &nbsp;⬅️ <b style="color:var(--gold)">את כאן עכשיו!</b></div></div>
+    <div class="src">🟡→🟠</div>
+  </div>
+  <div class="wbody">
+    <div class="block">
+      <h4><span class="ico thm">📐</span> משפטים/הגדרות לשנן בעל פה</h4>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> הגדרת גבול סדרה</div>
+        $\lim_{n\to\infty}a_n=L$ אם לכל $\varepsilon>0$ קיים $N$ כך שלכל $n\ge N$: $|a_n-L|<\varepsilon$.</div>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> משפט הסדרה המונוטונית — <span class="mini">הכלי המרכזי לרקורסיה</span></div>
+        עולה וחסומה מלעיל ⟸ מתכנסת, $\lim a_n=\sup\{a_n\}$. &nbsp; יורדת וחסומה מלרע ⟸ מתכנסת, $\lim a_n=\inf\{a_n\}$.</div>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> הלמה של היינה</div>
+        אם $\lim_{x\to x_0}f(x)=L$ ו-$x_n\to x_0$, אז $f(x_n)\to L$. <b>שימוש:</b> כדי "לופיטל"/רציפות על גבול סדרה (אסור לופיטל ישירות על סדרה!).</div>
+      <div class="thm"><div class="name">רעיון נקודת השבת</div> אם $a_{n+1}=f(a_n)$ ו-$a_n\to L$ אז $L=f(L)$ — אבל <b>רק אחרי</b> שהוכחת קיום גבול.</div>
+    </div>
+    <div class="block">
+      <h4><span class="ico hw">📝</span> תרגילי בית להתמקד (שיעורי בית 2)</h4>
+      <div class="hw"><div class="q">שאלה 5(a): $a_1=1,\ a_{n+1}=a_n+\frac1{a_n}$ — הוכח $\lim a_n=\infty$</div><div class="why">תבנית הוכחה מלאה: חיוביות (אינדוקציה) → עולה → שלילה שאין גבול סופי. <b>הופיעה בסימולציה 2025 מילה במילה!</b></div></div>
+      <div class="hw"><div class="q">שאלה 5(b): $a_1=\sqrt2,\ a_{n+1}=\sqrt{2a_n}$ — הוכח התכנסות ומצא $\lim=2$</div><div class="why">רקורסיה סטנדרטית: עולה + חסומה מלעיל ב-2 (אינדוקציה), ואז $L=\sqrt{2L}\Rightarrow L=2$.</div></div>
+    </div>
+    <div class="block">
+      <h4><span class="ico note">💡</span> מסקנות והערות</h4>
+      <ul class="notes">
+        <li><span class="trap">טעות קטלנית:</span> אסור להניח שגבול קיים ואז "למצוא" אותו — קודם מוכיחים קיום! (דוגמה: $a_{n+1}=1+2a_n$ "נותן" $L=-1$ למרות שהסדרה גדלה).</li>
+        <li>מתי <b>לא</b> היינה: $(-1)^n$, $n!$ — אין פונקציה ממשית מתאימה; אז תתי-סדרות/סנדוויץ'.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WEEK 3 ===================== -->
+<section class="week" id="w3">
+  <div class="whead" onclick="toggle(this)">
+    <div class="wnum">3</div>
+    <div class="t"><h3>אינטגרל לא מסוים: קדומה, הצבה, חלקים</h3><div class="sub">הרצאה 2 · תרגול 3 · שיעורי בית 3</div></div>
+    <div class="src">🟠 חשוב</div>
+  </div>
+  <div class="wbody">
+    <div class="block">
+      <h4><span class="ico thm">📐</span> משפטים/הגדרות לשנן בעל פה</h4>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> טבלת אינטגרלים + הצבה ליניארית</div>
+        $\int x^\alpha dx=\frac{x^{\alpha+1}}{\alpha+1}+C\ (\alpha\ne-1)$, $\int\frac{dx}{x}=\ln|x|+C$, $\int\frac{dx}{1+x^2}=\arctan x+C$. במקום $x$ יש $ax+b$? מחלקים ב-$a$.</div>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> אינטגרציה בחלקים</div> $\int u'v\,dx=uv-\int uv'\,dx$.</div>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> החלפת משתנה + התבנית $\frac{f'}{f}$</div>
+        $t=g(x),\ dt=g'(x)dx$ — מחליפים את <b>כל</b> ה-$x$ ואת $dx$. ובפרט $\int\frac{f'(x)}{f(x)}dx=\ln|f(x)|+C$.</div>
+    </div>
+    <div class="block">
+      <h4><span class="ico hw">📝</span> תרגילי בית להתמקד (שיעורי בית 3)</h4>
+      <div class="hw"><div class="q">שאלה 1(a): $\int e^{\sqrt x}\,dx$</div><div class="why">הצבת $t=\sqrt x$ ($dx=2t\,dt$) + חלקים — תבנית "שורש בהצבה" שתמיד מסתדרת.</div></div>
+      <div class="hw"><div class="q">שאלה 1(d): $\int\frac{\sqrt x}{x+1}\,dx$</div><div class="why">$t=\sqrt x$ + הטריק $\frac{t^2}{t^2+1}=1-\frac1{t^2+1}$ → $2(\sqrt x-\arctan\sqrt x)+C$. פישוט שבר לפני אינטגרציה.</div></div>
+      <div class="hw"><div class="q">שאלה 2(a): $\int\sin(\ln x)\,dx$</div><div class="why">חלקים פעמיים + "החזרת האינטגרל לאגף שמאל" — טכניקה שצריך לזהות מיד.</div></div>
+    </div>
+    <div class="block">
+      <h4><span class="ico note">💡</span> מסקנות והערות</h4>
+      <ul class="notes">
+        <li><span class="trap">אין</span> "אינטגרל של מכפלה = מכפלת אינטגרלים".</li>
+        <li>$+C$ הוא <b>קבוצה</b>, לא מספר — אסור "לצמצם" אינטגרל משני אגפים ולהסיק $0=1$ (טעות שאלה 5a).</li>
+        <li>שתי קדומות נבדלות בקבוע — אם קיבלת $\ln$ ומישהו $\arctan$, אחד טעה.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WEEK 4 ===================== -->
+<section class="week" id="w4">
+  <div class="whead" onclick="toggle(this)">
+    <div class="wnum">4</div>
+    <div class="t"><h3>אינטגרל מסוים, FTC וניוטון–לייבניץ</h3><div class="sub">הרצאה 3 · תרגול 4 · שיעורי בית 4</div></div>
+    <div class="src">🟠 חשוב</div>
+  </div>
+  <div class="wbody">
+    <div class="block">
+      <h4><span class="ico thm">📐</span> משפטים/הגדרות לשנן בעל פה</h4>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> המשפט היסודי (FTC)</div>
+        $f$ רציפה על $[a,b]$, $F(x)=\int_a^x f$ ⟹ $F'(x)=f(x)$.</div>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> ניוטון–לייבניץ — <span class="mini">התנאי הוא רציפות!</span></div>
+        $f$ <b>רציפה</b>, $G$ קדומה ⟹ $\int_a^b f=G(b)-G(a)$.</div>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> FTC מוכלל (גבול עליון מורכב)</div>
+        $G(x)=\int_a^{\varphi(x)}f$ ⟹ $G'(x)=f(\varphi(x))\cdot\varphi'(x)$.</div>
+      <div class="thm"><div class="name">תכונות + ערך ממוצע</div>
+        ליניאריות, $\int_a^b=\int_a^c+\int_c^b$, מונוטוניות, $|\int f|\le\int|f|$. ערך ממוצע: $\exists c$, $\int_a^b f=f(c)(b-a)$.</div>
+    </div>
+    <div class="block">
+      <h4><span class="ico hw">📝</span> תרגילי בית להתמקד (שיעורי בית 4)</h4>
+      <div class="hw"><div class="q">שאלה 4: $\displaystyle\lim_{n\to\infty}\frac1n\sum_{k=1}^n\frac{1}{1+(k/n)^2}=\frac\pi4$</div><div class="why"><b>הכי חשוב השבוע:</b> זיהוי סכום רימן כ-$\int_0^1\frac{dx}{1+x^2}$. מחבר סדרות + אינטגרל.</div></div>
+      <div class="hw"><div class="q">שאלה 3(c): $\displaystyle\lim_{x\to0^+}\frac{\int_0^{x^2}\ln(1+\sqrt t)\,dt}{x^3}$</div><div class="why">FTC מוכלל + לופיטל $\frac00$ — תבנית גבול עם אינטגרל בגבול עליון.</div></div>
+      <div class="hw"><div class="q">שאלה 2(b): חסימת $\int_0^{\pi/4}e^{-x}\tan x\,dx$</div><div class="why">חסם אינטגרל ע"י מונוטוניות ($m\le f\le M$) — חוזר בכל מבחן ("סנדוויץ'").</div></div>
+    </div>
+    <div class="block">
+      <h4><span class="ico note">💡</span> מסקנות והערות</h4>
+      <ul class="notes">
+        <li><span class="tip">מתכון סכום רימן:</span> הוצא $\frac1n$ → במקום $k/n$ שים $x$ → קטע $[0,1]$ → חשב $\int_0^1 f$.</li>
+        <li><span class="trap">אסור</span> לפצל $\frac{1^5+\dots+n^5}{n^6}$ לאיברים — זה $0\cdot\infty$. זהי סכום רימן.</li>
+        <li>אי-זוגית על $[-a,a]$ → 0; זוגית → $2\int_0^a$ (שאלה 1a).</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WEEK 5 ===================== -->
+<section class="week" id="w5">
+  <div class="whead" onclick="toggle(this)">
+    <div class="wnum">5</div>
+    <div class="t"><h3>אינטגרלים לא אמיתיים: התכנסות והשוואה</h3><div class="sub">הרצאה 4 · תרגול 5 · שיעורי בית 5</div></div>
+    <div class="src">🟠 חשוב</div>
+  </div>
+  <div class="wbody">
+    <div class="block">
+      <h4><span class="ico thm">📐</span> משפטים/הגדרות לשנן בעל פה</h4>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> הגדרת אינטגרל לא אמיתי</div>
+        $\int_a^\infty f=\lim_{b\to\infty}\int_a^b f$. ב-$(-\infty,\infty)$ או סביב נקודה בעייתית — <b>מפצלים לשני גבולות נפרדים</b>; אם אחד מתבדר — הכול מתבדר. <span class="trap">אין קיזוז $+\infty-\infty$.</span></div>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> משפט ה-$p$ לאינטגרל (החוצץ)</div>
+        $\int_1^\infty\frac{dx}{x^p}$ מתכנס $\iff p>1$. &nbsp; $\int_0^1\frac{dx}{x^p}$ מתכנס $\iff p<1$.</div>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> מבחן ההשוואה לאינטגרלים</div>
+        $0\le f\le g$: אם $\int g$ מתכנס ⟹ $\int f$ מתכנס; אם $\int f$ מתבדר ⟹ $\int g$ מתבדר.</div>
+    </div>
+    <div class="block">
+      <h4><span class="ico hw">📝</span> תרגילי בית להתמקד (שיעורי בית 5)</h4>
+      <div class="hw"><div class="q">שאלה 1(a): $\int_{-\infty}^{\infty}e^{-|x|}\,dx$</div><div class="why">פיצול נכון לשני גבולות נפרדים ($=1+1=2$) — בדיוק הנקודה שאסור לקזז.</div></div>
+      <div class="hw"><div class="q">שאלה 2(b): $\int_1^\infty\frac{7x+\sin x}{2x^3+x+1}\,dx$</div><div class="why">חסימה מלמעלה $\le\frac{4}{x^2}$ → התכנסות לפי $p$. <b>טכניקת ליבה:</b> זיהוי סדר גודל $\sim1/x^2$ וחסימת ה-$\sin$.</div></div>
+      <div class="hw"><div class="q">שאלה 2(c): $\int_1^3\frac{x}{\ln x}\,dx$ (בעייתי ב-1)</div><div class="why">חסימה מלמטה $\ge\frac{x}{x-1}$ → התבדרות. חיסום מלמטה בנקודה פנימית.</div></div>
+    </div>
+    <div class="block">
+      <h4><span class="ico note">💡</span> מסקנות והערות</h4>
+      <ul class="notes">
+        <li><span class="tip">כלל זהב:</span> קודם פותחים לפי ההגדרה (גבול), ורק <b>בתוך</b> הגבול (עם $b$ סופי) משתמשים בניוטון–לייבניץ.</li>
+        <li><span class="trap">מלכודת:</span> $\int_{-1}^{1}\frac{dx}{x}\ne0$ — מתבדר! ($1/x$ לא חסומה ב-0, אסור טיעון אי-זוגיות).</li>
+        <li>$f\to0$ <b>לא</b> מבטיח התכנסות (כמו $\int_1^\infty\frac{dx}{x}$). אנלוגיה לתנאי הכרחי בטורים.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WEEK 6 ===================== -->
+<section class="week" id="w6">
+  <div class="whead" onclick="toggle(this)">
+    <div class="wnum">6</div>
+    <div class="t"><h3>טורים: סכומים חלקיים, גיאומטרי, טלסקופי, p</h3><div class="sub">הרצאה 5 · תרגול 6 · שיעורי בית 6</div></div>
+    <div class="src">🔴 לב המבחן</div>
+  </div>
+  <div class="wbody">
+    <div class="block">
+      <h4><span class="ico thm">📐</span> משפטים/הגדרות לשנן בעל פה</h4>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> הגדרת טור ($a_n$ מול $S_N$)</div>
+        $\sum_{n=k}^\infty a_n=\lim_{N\to\infty}S_N$, $S_N=\sum_{n=k}^N a_n$. טור מתכנס $\iff$ $(S_N)$ מתכנסת.</div>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> תנאי הכרחי</div>
+        $\sum a_n$ מתכנס ⟹ $a_n\to0$. <b>קונטרה-פוזיטיב (כלי פסילה מהיר):</b> $a_n\not\to0$ ⟹ מתבדר. <span class="trap">אזהרה:</span> $a_n\to0$ אינו מספיק (ההרמוני!).</div>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> טור $p$ / גיאומטרי (החוצצים)</div>
+        $\sum\frac{1}{n^p}$ מתכנס $\iff p>1$. &nbsp; $\sum_{n=0}^\infty q^n=\frac{1}{1-q}$ מתכנס $\iff|q|<1$.</div>
+      <div class="thm"><div class="name">השוואה / השוואה גבולי</div>
+        $0\le a_n\le b_n$, $\sum b_n$ מתכנס ⟹ $\sum a_n$ מתכנס. גבולי: $\lim\frac{a_n}{b_n}=L\in(0,\infty)$ ⟹ יחד.</div>
+    </div>
+    <div class="block">
+      <h4><span class="ico hw">📝</span> תרגילי בית להתמקד (שיעורי בית 6)</h4>
+      <div class="hw"><div class="q">שאלה 1(a): $\sum_{n=0}^\infty(-1)^n\frac{2^{2n+1}+(-1)^n}{5^n}=\frac{85}{36}$</div><div class="why">פירוק לשני טורים גיאומטריים + חישוב ערך מדויק — נושא מבחן מובהק.</div></div>
+      <div class="hw"><div class="q">שאלה 1(e): $\sum[\arcsin\frac1{\sqrt{n+1}}-\arcsin\frac1{\sqrt n}]=-\frac\pi2$</div><div class="why">טור טלסקופי — מחשבים $S_N$, מצמצמים, גבול. <b>זכרי: $\lim S_N$ ולא $\lim a_n$.</b></div></div>
+      <div class="hw"><div class="q">שאלה 2(b): $\sum(\sqrt{n+2}-\sqrt n)^3$</div><div class="why">כפל בצמוד → $\sim8/n^{3/2}$ → השוואה גבולית. הליבה של מתכנס/מתבדר.</div></div>
+    </div>
+    <div class="block">
+      <h4><span class="ico note">💡</span> מסקנות והערות</h4>
+      <ul class="notes">
+        <li><span class="trap">אסור</span> לפצל $\sum(a_n-b_n)$ ל-$\sum a_n-\sum b_n$ בלי לדעת ששניהם מתכנסים.</li>
+        <li>דוגמה נגדית ראשונה לבדוק: $a_n=\frac1n$. ($\sum a_n^2$ מתכנס $\not\Rightarrow\sum a_n$).</li>
+        <li>סדרי גודל ליד 0: $\sin x\sim x$, $\arctan x\sim x$ ⟹ $\arctan\frac1n\sim\frac1n$ (מתבדר).</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WEEK 7 ===================== -->
+<section class="week" id="w7">
+  <div class="whead" onclick="toggle(this)">
+    <div class="wnum">7</div>
+    <div class="t"><h3>מבחני התכנסות: שורש, מנה, אינטגרל, השוואה גבולי</h3><div class="sub">הרצאה 6 · תרגול 7 · שיעורי בית 7</div></div>
+    <div class="src">🔴 לב המבחן</div>
+  </div>
+  <div class="wbody">
+    <div class="block">
+      <h4><span class="ico thm">📐</span> משפטים/הגדרות לשנן בעל פה</h4>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> מבחן השורש (קושי)</div>
+        $L=\lim\sqrt[n]{a_n}$: $L<1$ מתכנס, $L>1$ מתבדר, $L=1$ <b>לא מכריע</b>. (ברירת מחדל לחזקות $(\cdot)^n$.)</div>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> מבחן המנה (דאלמבר)</div>
+        $L=\lim\frac{a_{n+1}}{a_n}$: $L<1$ מתכנס, $L>1$ מתבדר, $L=1$ <b>לא מכריע</b>. (ברירת מחדל לעצרות/מכפלות.)</div>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> מבחן האינטגרל</div>
+        $f\ge0$ <b>יורדת</b> על $[k,\infty)$: $\sum f(n)$ מתכנס $\iff\int_k^\infty f$ מתכנס. (כש"ביטוי והנגזרת שלו".)</div>
+      <div class="thm"><div class="name">השוואה גבולי (מלא)</div>
+        $L=\lim\frac{a_n}{b_n}\in(0,\infty)$ → יחד. $L=0$ ו-$\sum b_n$ מתכנס → $\sum a_n$ מתכנס; $L=\infty$ ו-$\sum b_n$ מתבדר → $\sum a_n$ מתבדר.</div>
+    </div>
+    <div class="block">
+      <h4><span class="ico hw">📝</span> תרגילי בית להתמקד (שיעורי בית 7)</h4>
+      <div class="hw"><div class="q">שאלה 1(a): $\sum\frac{4^{3n}(n!)^2}{(2n+1)^{2n}}$</div><div class="why">מבחן מנה + $(1+\frac1n)^n\to e$ → $L=\frac{16}{e^2}>1$ מתבדר. דפוס מבחן נפוץ.</div></div>
+      <div class="hw"><div class="q">שאלה 1(d): $\sum n^{2n}(1-\cos\frac1n)^n$</div><div class="why">מבחן שורש + $\frac{1-\cos x}{x^2}\to\frac12<1$ מתכנס. שורש על חזקה $(\cdot)^n$.</div></div>
+      <div class="hw"><div class="q">שאלה 2: $\sum\frac{1}{n\ln n\,\ln\ln n\,[\ln\ln\ln n]^p}$</div><div class="why">מבחן אינטגרל עם $t=\ln x$ חוזר → מתכנס $\iff p>1$. החוצצים הלוגריתמיים.</div></div>
+    </div>
+    <div class="block">
+      <h4><span class="ico note">💡</span> מסקנות והערות</h4>
+      <ul class="notes">
+        <li><span class="tip">תרשים בחירת מבחן:</span> חזקות $(\cdot)^n$→שורש · עצרות/מכפלות→מנה · "ביטוי+נגזרתו"→אינטגרל · sin/חסום→השוואה · סדר גודל ברור→השוואה גבולי.</li>
+        <li><b>$L=1$ בשורש/מנה</b> = חוסר הכרעה → כלי אחר (לרוב השוואה גבולי).</li>
+        <li>שרשרת סדרי גודל: $\ln\ln n\prec\ln n\prec n^\varepsilon\prec n^p\prec a^n\prec n!\prec n^n$.</li>
+        <li><span class="tip">חוצצים חדשים:</span> $\sum\frac{1}{n(\ln n)^p}$ מתכנס $\iff p>1$ — דחיפת $\ln$ מעבירה לעולם המתכנס.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WEEK 8 ===================== -->
+<section class="week" id="w8">
+  <div class="whead" onclick="toggle(this)">
+    <div class="wnum">8</div>
+    <div class="t"><h3>התכנסות בהחלט/בתנאי, לייבניץ, סוגריים</h3><div class="sub">הרצאה 7 · תרגול 8 · שיעורי בית 8</div></div>
+    <div class="src">🔴 לב המבחן</div>
+  </div>
+  <div class="wbody">
+    <div class="block">
+      <h4><span class="ico thm">📐</span> משפטים/הגדרות לשנן בעל פה</h4>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> התכנסות בהחלט</div>
+        $\sum|a_n|<\infty$ ⟹ $\sum a_n$ מתכנס. (היתרון: על $\sum|a_n|$ — טור אי-שלילי — מותר כל מבחני שבוע 6–7.)</div>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> התכנסות בתנאי (הגדרה)</div>
+        $\sum a_n$ מתכנס אבל $\sum|a_n|=\infty$.</div>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> מבחן לייבניץ</div>
+        $\sum(-1)^{n+1}a_n$ עם $(a_n)$ <b>יורדת</b> ו-$a_n\to0$ ⟹ מתכנס, ו-$a_1-a_2\le S\le a_1$.</div>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> משפט הסוגריים</div>
+        טור מתכנס → הצבת סוגריים שומרת התכנסות וסכום. <b>קונטרה-פוזיטיב (השימוש):</b> אחרי סוגריים מתבדר ⟹ המקורי מתבדר. <span class="trap">ההפך לא נכון!</span></div>
+    </div>
+    <div class="block">
+      <h4><span class="ico hw">📝</span> תרגילי בית להתמקד (שיעורי בית 8)</h4>
+      <div class="hw"><div class="q">שאלה 1(b): $\sum(-1)^{n+1}\sqrt{\frac{\sqrt{n+1}-\sqrt n}{n+1}}$</div><div class="why">צמוד → $\sim1/n^{3/4}$ (לא בהחלט) → לייבניץ → <b>מתכנס בתנאי</b>. התהליך המלא של השבוע.</div></div>
+      <div class="hw"><div class="q">שאלה 4(c): הפרכה — $0\le a_n\le b_n$, $b_n\downarrow0$</div><div class="why">דוגמה נגדית: $a_n=\frac1n$ באי-זוגיים, 0 בזוגיים. לייבניץ דורש ש-$a_n$ <b>עצמה</b> יורדת.</div></div>
+      <div class="hw"><div class="q">שאלה 3: סוגריים + $\sum\frac{1}{n(2n+1)}=2-\ln4$</div><div class="why">שימוש בקבוצה הזוגית של ההרמוני המתחלף; וגם — סוגריים על טור לא-ידוע-כמתכנס = הוכחה מעגלית.</div></div>
+    </div>
+    <div class="block">
+      <h4><span class="ico note">💡</span> מסקנות והערות</h4>
+      <ul class="notes">
+        <li><span class="tip">תרשים זרימה כולל:</span> טור מוכר? → תנאי הכרחי? → אי-שלילי: השוואה/שורש/מנה/אינטגרל → לא אי-שלילי: <b>בהחלט</b> → <b>לייבניץ</b> → <b>סוגריים</b> → הגדרה.</li>
+        <li><span class="trap">קראי את השאלה!</span> אם לא נתון אי-שליליות — מבחני טורים אי-שליליים (השוואה!) לא תקפים.</li>
+        <li><span class="trap">אסור לשנות סדר סכימה</span> בטור אינסופי — אין קומוטטיביות, גם בטור מתכנס.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WEEK 9 ===================== -->
+<section class="week" id="w9">
+  <div class="whead" onclick="toggle(this)">
+    <div class="wnum">9</div>
+    <div class="t"><h3>טורי חזקות, משפט אבל ורדיוס התכנסות</h3><div class="sub">הרצאה 8 · תרגול 9</div></div>
+    <div class="src">🔴 לב המבחן</div>
+  </div>
+  <div class="wbody">
+    <div class="block">
+      <h4><span class="ico thm">📐</span> משפטים/הגדרות לשנן בעל פה</h4>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> הגדרת טור חזקות</div>
+        $\sum_{n=0}^\infty a_n(x-x_0)^n$. אם חזקה לא מופיעה — המקדם שלה 0. <span class="trap">בדיקה:</span> $x$ במכנה / $\sin x$ / $a^{nx}$ → <b>לא</b> טור חזקות.</div>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> משפט אבל</div>
+        מתכנס ב-$x_1$ ו-$|x_2-x_0|<|x_1-x_0|$ ⟹ מתכנס <b>בהחלט</b> ב-$x_2$. <b>קונטרה-פוזיטיב:</b> מתבדר בנקודה ⟹ מתבדר בכל רחוקה יותר.</div>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> רדיוס ותחום התכנסות</div>
+        קיים $R\in[0,\infty]$: $|x-x_0|<R$ מתכנס בהחלט, $>R$ מתבדר, $=R$ (הקצוות) — בודקים <b>ידנית כל קצה</b>. התחום סימטרי סביב $x_0$.</div>
+    </div>
+    <div class="block">
+      <h4><span class="ico note">💡</span> מסקנות והערות</h4>
+      <ul class="notes">
+        <li><span class="tip">הכל בחזקת $n$ → גיאומטרי:</span> מזהים, קוראים ערך ורדיוס; בקצוות של גיאומטרי תמיד מתבדר.</li>
+        <li>סכום $\sum(a_n\pm b_n)x^n$ עם $R_1\ne R_2$: הרדיוס $=\min(R_1,R_2)$ (שרטוט פותר).</li>
+        <li><span class="trap">מלכודת:</span> אל תשתמשי בקושי-הדמר/מנה לרדיוס כשאין נתון על $\lim\sqrt[n]{|a_n|}$.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WEEK 10 ===================== -->
+<section class="week" id="w10">
+  <div class="whead" onclick="toggle(this)">
+    <div class="wnum">10</div>
+    <div class="t"><h3>גזירה/אינטגרציה איבר-איבר + הטורים המוכרים</h3><div class="sub">הרצאה 9 · תרגול 10</div></div>
+    <div class="src">🔴 לב המבחן</div>
+  </div>
+  <div class="wbody">
+    <div class="block">
+      <h4><span class="ico thm">📐</span> משפטים/הגדרות לשנן בעל פה</h4>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> גזירה/אינטגרציה איבר-איבר</div>
+        $f=\sum a_n(x-x_0)^n$ ($R>0$): $f'=\sum n a_n(x-x_0)^{n-1}$, $\int=\sum\frac{a_n}{n+1}(x-x_0)^{n+1}$. <b>הרדיוס $R$ נשמר.</b></div>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> חמשת הטורים המוכרים — לשנן!</div>
+        $\frac{1}{1-x}=\sum x^n\,(|x|<1)$ · $e^x=\sum\frac{x^n}{n!}$ · $\ln(1+x)=\sum\frac{(-1)^{n+1}x^n}{n}\,(-1<x\le1)$ · $\arctan x=\sum\frac{(-1)^n x^{2n+1}}{2n+1}\,(-1\le x\le1)$ · $\sin/\cos$.</div>
+      <div class="thm"><div class="name">אבל בקצה → זהויות מספריות</div>
+        $\sum\frac{(-1)^{n+1}}{n}=\ln2$ · $\frac\pi4=\sum\frac{(-1)^n}{2n+1}$.</div>
+    </div>
+    <div class="block">
+      <h4><span class="ico note">💡</span> מסקנות והערות</h4>
+      <ul class="notes">
+        <li><span class="tip">התאמה לפי האינדקסים, לא ה-$x$:</span> עצרת במכנה → $e^x/\sin/\cos$; $n$ במכנה → $\ln/\arctan$.</li>
+        <li>הטריק ההפוך: $n t^{n-1}=(t^n)'$ ⟹ $\sum n t^n=\frac{t}{(1-t)^2}$.</li>
+        <li>אינטגרל ללא קדומה אלמנטרית ($\int_0^x e^{-t^2}dt$): מפתחים לטור ומאנטגרים איבר-איבר.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WEEK 11 ===================== -->
+<section class="week" id="w11">
+  <div class="whead" onclick="toggle(this)">
+    <div class="wnum">11</div>
+    <div class="t"><h3>יחידות המקדמים + טור/פולינום טיילור</h3><div class="sub">הרצאה 10</div></div>
+    <div class="src">🔴 לב המבחן</div>
+  </div>
+  <div class="wbody">
+    <div class="block">
+      <h4><span class="ico thm">📐</span> משפטים/הגדרות לשנן בעל פה</h4>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> משפט היחידות</div>
+        $f=\sum a_n(x-x_0)^n$ ($R>0$) ⟹ $f$ גזירה אינסוף פעמים ו-$\boxed{a_n=\frac{f^{(n)}(x_0)}{n!}}$ כלומר $f^{(n)}(x_0)=a_n\cdot n!$.</div>
+      <div class="thm crit"><div class="name"><span class="star">🔴</span> פולינום/טור טיילור</div>
+        $T_N(x)=\sum_{n=0}^N\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n$. תכונה: $T_N^{(k)}(x_0)=f^{(k)}(x_0)$ לכל $k\le N$.</div>
+      <div class="thm"><div class="name">דוגמת מפתח (מבחן!)</div>
+        מ-$\arctan x$: $a_{101}=\frac{1}{101}$ ⟹ $f^{(101)}(0)=\frac{101!}{101}=100!$, ו-$f^{(102)}(0)=0$.</div>
+    </div>
+    <div class="block">
+      <h4><span class="ico note">💡</span> מסקנות והערות</h4>
+      <ul class="notes">
+        <li><span class="tip">אסטרטגיית נגזרת גבוהה:</span> רוצה $f^{(n)}(x_0)$? מצאי טור חזקות, קראי $a_n$, כפלי ב-$n!$. הפרידי זוגי/אי-זוגי.</li>
+        <li>⚫ <span class="trap">מחוץ לחומר:</span> שארית לגרנז' $R_N=\frac{f^{(N+1)}(c)}{(N+1)!}(x-x_0)^{N+1}$ והקירובים הנומריים — <b>לא לשנן</b>. החומר הקריטי משבוע זה: יחידות + הגדרת טיילור.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MASTER ===================== -->
+<div class="master" id="master">
+  <h2>⭐ סיכום מאסטר — לפני המבחן</h2>
+
+  <h3 style="color:var(--red)">🔴 10 ההוכחות לשנן בעל פה (כל מבחן כולל לפחות אחת — "כסף קל")</h3>
+  <div class="check">
+    <label><input type="checkbox">משפט לייבניץ (התכנסות + חסם $a_1-a_2\le s\le a_1$)</label>
+    <label><input type="checkbox">מבחן היחס ($L<1$ ⟹ מתכנס)</label>
+    <label><input type="checkbox">מבחן השורש (קושי-הדמר, $R=1/L$)</label>
+    <label><input type="checkbox">משפט אבל (התכנסות בנקודה ⟹ בהחלט פנימה)</label>
+    <label><input type="checkbox">המשפט היסודי (FTC)</label>
+    <label><input type="checkbox">אי-רציונליות של $e$</label>
+    <label><input type="checkbox">קריטריון השוואה / השוואה גבולי</label>
+    <label><input type="checkbox">משפט תת-סדרה (גבול תת-סדרה = גבול הסדרה)</label>
+    <label><input type="checkbox">תנאי הכרחי ($\sum a_n$ מתכנס ⟹ $a_n\to0$)</label>
+    <label><input type="checkbox">קריטריון אינטגרביליות רימן ($\lim(\bar S-\underline S)=0$)</label>
+  </div>
+
+  <h3 style="color:var(--gold)">🔁 חתימות חוזרות — תרגלי עד שינה</h3>
+  <ul class="notes">
+    <li><b>arctan(x)/x</b> → מציאת טור + חילוץ $f^{(10)}(0)=-\frac{10!}{11}$ (2023א, 2025א, סימולציה)</li>
+    <li><b>סדרה רקורסיבית</b> $a_{n+1}=a_n+\frac1{a_n}$ → $\infty$ (סימולציה = שיעורי בית 2 ש'5a מילה במילה)</li>
+    <li><b>מבחן סוגריים</b> → קריסה לטור הרמוני מתבדר (2024א, 2024ב, 2025א)</li>
+    <li><b>סנדוויץ' אינטגרל</b> $\frac{A}{e}\le\int\le A$ (2024א, 2025ב)</li>
+    <li><b>טור פרמטרי "מצא כל $a\ge0$"</b> עם מבחן שורש (2024א, 2025ב)</li>
+  </ul>
+
+  <h3 style="color:var(--green)">📅 תוכנית פעולה</h3>
+  <div class="plan">
+    <div class="step"><b>השלימי שיעורי בית 2</b> — סדרות רקורסיביות (ש'5a,5b). זה הבסיס וגם חתימת מבחן. את כבר כאן! 💪</div>
+    <div class="step"><b>ליבה (🔴):</b> שיעורי בית 6,7,8 עד שכל מבחני ההתכנסות אוטומטיים + שינון 10 ההוכחות.</div>
+    <div class="step"><b>טורי חזקות + טיילור:</b> תחום התכנסות + בדיקת קצוות + 5 הטורים המוכרים (שבועות 9–11).</div>
+    <div class="step"><b>אינטגרציה + סדרות (🟠):</b> שיעורי בית 3,4,5.</div>
+    <div class="step"><b>חזרה אחרונה:</b> פתרי בתנאי מבחן (3 שעות, 4 שאלות) את הסימולציה 2025 + מועד א'+ב' 2025 — הכי קרובים למבחן שלנו.</div>
+  </div>
+
+  <p style="margin-top:18px;text-align:center;font-size:1.05rem;color:var(--gold)">
+    💛 80% מהמבחן = טורים + טורי חזקות/טיילור + אינטגרציה. אין רב-משתנה, אין שארית לגרנז'. את יכולה לעשות 100. קדימה!</p>
+</div>
+
+<footer>
+  נבנה מ-10 הרצאות + 10 תרגולים + 8 שיעורי בית + 9 מבחנים קודמים. כל הנוסחאות אומתו מול המקור.<br>
+  טיפ: לחצי על כותרת שבוע כדי לפתוח/לסגור.
+</footer>
+
+</div>
+<script>
+  function toggle(h){ h.nextElementSibling.classList.toggle('collapsed'); }
+  // smooth-scroll offset for sticky nav
+  document.querySelectorAll('nav.weeks a').forEach(a=>{
+    a.addEventListener('click',e=>{
+      const id=a.getAttribute('href');
+      if(id.startsWith('#')){
+        const el=document.querySelector(id);
+        if(el){ const body=el.querySelector('.wbody'); if(body) body.classList.remove('collapsed'); }
+      }
+    });
+  });
+</script>
+</body>
+</html>
