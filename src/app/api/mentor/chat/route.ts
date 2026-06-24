@@ -122,6 +122,10 @@ export async function POST(request: Request) {
     const err = await anthropicRes.text().catch(() => "");
     console.error("Anthropic error", anthropicRes.status, err);
     if (isAnthropicCreditExhausted(anthropicRes.status, err)) {
+      if (creditLimit === null) {
+        return fallbackResponse(messages, used, creditLimit, auth.email);
+      }
+
       return NextResponse.json(
         { error: "חשבון הקרדיט נגמר", code: "external_credit_exhausted" },
         { status: 402 }

@@ -31,6 +31,7 @@ interface WeekSummary {
 }
 
 const WEEK_SUMMARIES = weekSummariesRaw as WeekSummary[];
+const UNLIMITED_MENTOR_EMAILS = new Set(["liamesika21@gmail.com"]);
 const SUPPORT_WHATSAPP_URL =
   "https://wa.me/972505730440?text=%D7%97%D7%A9%D7%91%D7%95%D7%9F%20%D7%94%D7%A7%D7%A8%D7%93%D7%99%D7%98%20%D7%A9%D7%9C%20%D7%9E%D7%A0%D7%98%D7%95%D7%A8%20AI%20%D7%A0%D7%92%D7%9E%D7%A8%20%D7%95%D7%A6%D7%A8%D7%99%D7%9A%20%D7%9C%D7%94%D7%98%D7%A2%D7%99%D7%9F%20%D7%A7%D7%A8%D7%93%D7%99%D7%98";
 
@@ -337,7 +338,10 @@ function ChatInterface({ status }: { status: MentorStatus }) {
     };
   }, [isExpanded]);
 
-  const reachedCreditLimit = status.limit !== null && creditsUsed >= status.limit;
+  const hasUnlimitedCredits =
+    status.limit === null ||
+    (status.email ? UNLIMITED_MENTOR_EMAILS.has(status.email.toLowerCase().trim()) : false);
+  const reachedCreditLimit = !hasUnlimitedCredits && status.limit !== null && creditsUsed >= status.limit;
 
   // Show a pre-written weekly summary instantly — no API call, no tokens spent
   const sendWeekSummary = useCallback((w: WeekSummary) => {
