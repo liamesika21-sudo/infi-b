@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { validateCookieForRequest, isProEmail } from "@/lib/simple-auth";
 import { getMentorUsage, incrementMentorUsage, saveMentorLog, MENTOR_CREDIT_LIMIT } from "@/lib/mentor-credits";
+import { buildMentorFallbackResponse } from "@/lib/calculus2/mentor-fallback";
 import { buildMentorSystemPrompt } from "@/lib/calculus2/mentor-system-prompt";
 
 export const runtime = "nodejs";
@@ -21,6 +22,23 @@ function cleanMentorText(text: string) {
     .replace(/^\s*(?:#{1,6}\s*)?\(?\s*(?:יוסי|מקס)\s+אומר\s*\)?\s*:?\s*$/gim, "")
     .replace(/[ \t]{2,}/g, " ")
     .replace(/\n{3,}/g, "\n\n");
+}
+
+async function fallbackResponse(messages: Message[], used: number, userEmail: string) {
+  const userQuestion = messages[messages.length - 1].content;
+  const text = cleanMentorText(await buildMentorFallbackResponse(messages));
+
+  void saveMentorLog(userEmail, userQuestion, text);
+
+  return new Response(text, {
+    headers: {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Cache-Control": "no-cache",
+      "X-Credits-Used": String(used),
+      "X-Credits-Limit": String(MENTOR_CREDIT_LIMIT),
+      "X-Mentor-Mode": "fallback",
+    },
+  });
 }
 
 export async function POST(request: Request) {
@@ -56,44 +74,50 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "בקשה לא תקינה" }, { status: 400 });
   }
 
-  const [systemPrompt] = await Promise.all([
-    buildMentorSystemPrompt(),
-    incrementMentorUsage(auth.email),
-  ]);
+  const systemPrompt = await buildMentorSystemPrompt();
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
-    return NextResponse.json({ error: "מפתח API חסר" }, { status: 500 });
+    console.error("Anthropic API key is missing");
+    return fallbackResponse(messages, used, auth.email);
   }
 
-  const anthropicRes = await fetch("https://api.anthropic.com/v1/messages", {
-    method: "POST",
-    headers: {
-      "x-api-key": apiKey,
-      "anthropic-version": "2023-06-01",
-      "content-type": "application/json",
-    },
-    body: JSON.stringify({
-      model: "claude-haiku-4-5-20251001",
-      max_tokens: 700,
-      stream: true,
-      system: systemPrompt,
-      messages,
-    }),
-  });
+  let anthropicRes: Response;
+  try {
+    anthropicRes = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "x-api-key": apiKey,
+        "anthropic-version": "2023-06-01",
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        model: process.env.ANTHROPIC_MODEL ?? "claude-haiku-4-5-20251001",
+        max_tokens: 700,
+        stream: true,
+        system: systemPrompt,
+        messages,
+      }),
+    });
+  } catch (error) {
+    console.error("Anthropic network error", error);
+    return fallbackResponse(messages, used, auth.email);
+  }
 
   if (!anthropicRes.ok) {
     const err = await anthropicRes.text().catch(() => "");
     console.error("Anthropic error", anthropicRes.status, err);
-    return NextResponse.json({ error: "שגיאה בשרת AI" }, { status: 502 });
+    return fallbackResponse(messages, used, auth.email);
   }
 
   const encoder = new TextEncoder();
   const body = anthropicRes.body;
   if (!body) {
-    return NextResponse.json({ error: "שגיאה בשרת AI" }, { status: 502 });
+    console.error("Anthropic response is missing a stream body");
+    return fallbackResponse(messages, used, auth.email);
   }
 
+  const newUsage = await incrementMentorUsage(auth.email);
   const userQuestion = messages[messages.length - 1].content;
   const userEmail = auth.email;
 
@@ -162,8 +186,9 @@ export async function POST(request: Request) {
     headers: {
       "Content-Type": "text/plain; charset=utf-8",
       "Cache-Control": "no-cache",
-      "X-Credits-Used": String(used + 1),
+      "X-Credits-Used": String(newUsage || used + 1),
       "X-Credits-Limit": String(MENTOR_CREDIT_LIMIT),
+      "X-Mentor-Mode": "ai",
     },
   });
 }

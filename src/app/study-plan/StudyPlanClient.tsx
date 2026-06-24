@@ -62,6 +62,29 @@ const PROOFS_10: { n: number; name: string; week: number }[] = [
   { n: 10, name: "קריטריון אינטגרביליות רימן", week: 4 },
 ];
 
+/* ───────── תחזית מבנה המבחן (לפי ניתוח 9 מבחנים) ───────── */
+const EXAM_FORECAST: { q: string; what: string; cert: string }[] = [
+  { q: "שאלה 1", what: "הוכחת משפט ליבה (לייבניץ/יחס/שורש/אבל/FTC/אי-רציונליות $e$) + הכרעת טור", cert: "גבוהה מאוד" },
+  { q: "שאלה 2", what: "טורי חזקות/טיילור — תחום התכנסות + קצוות, או $\\arctan/\\ln(1+x)$, או סכימת טור", cert: "~89%" },
+  { q: "שאלה 3", what: "התכנסות מתקדמת — טור פרמטרי עם מבחן שורש / בהחלט מול בתנאי", cert: "גבוהה" },
+  { q: "שאלה 4", what: "אינטגרל מסוים (הצבה+חלקים) / FTC עם גבול משתנה / סנדוויץ׳ / סדרה רקורסיבית", cert: "בינונית-גבוהה" },
+  { q: "שאלה 5", what: "שילוב קשה — מבחן אינטגרלי↔טור, פרמטר + דוגמה נגדית", cert: "בינונית" },
+];
+
+/* ───────── Top 10 שאלות — חתימות שחוזרות במבחנים ───────── */
+const TOP_QUESTIONS: { n: number; t: string; src: string; href: string; hl: string }[] = [
+  { n: 1, t: "$\\arctan(x)/x$ → מציאת טור + חילוץ $f^{(10)}(0)$", src: "2023א, 2025א, סימולציה — כמעט זהה", href: "/past-exams", hl: "מבחני עבר" },
+  { n: 2, t: "טור פרמטרי ״מצא כל $\\alpha\\geq 0$״ עם מבחן שורש", src: "2024א, 2025ב · ש״ב 7", href: "/weeks/7", hl: "ש״ב 7" },
+  { n: 3, t: "מבחן סוגריים → קריסה לטור הרמוני מתבדר", src: "2024א, 2024ב, 2025א, סימולציה · ש״ב 8", href: "/weeks/8", hl: "ש״ב 8" },
+  { n: 4, t: "סדרה רקורסיבית $a_{n+1}=a_n+1/a_n$ מונוטונית $\\to \\infty$", src: "סימולציה = ש״ב 2 שאלה 5a מילה במילה", href: "/weeks/2", hl: "ש״ב 2" },
+  { n: 5, t: "סנדוויץ׳ אינטגרל $A/e \\leq \\int \\leq A$ (חסמי מונוטוניות)", src: "2024א, 2025ב · ש״ב 4", href: "/weeks/4", hl: "ש״ב 4" },
+  { n: 6, t: "חלקים על אינטגרל עם $f$ מופשטת + נימוק אינטגרביליות", src: "2025א, 2025ב · ש״ב 3 שאלות 4, 6", href: "/weeks/3", hl: "ש״ב 3" },
+  { n: 7, t: "רדיוס + תחום התכנסות עם בדיקת קצוות (לייבניץ בקצה אחד, $p$/הרמוני בשני)", src: "שאלה 2 בכל מבחני 2024–2025", href: "/weeks/9", hl: "שבוע 9" },
+  { n: 8, t: "סכימת טור חזקות לצורה סגורה (גזירה/אינטגרציה איבר-איבר)", src: "ש״ב 8 · שבוע 10", href: "/weeks/10", hl: "שבוע 10" },
+  { n: 9, t: "התכנסות בהחלט מול בתנאי + בניית דוגמה נגדית (שתילת אפסים/קפיצה)", src: "ש״ב 8 שאלות 1b, 4c", href: "/weeks/8", hl: "ש״ב 8" },
+  { n: 10, t: "הכרעת טור בהשוואה גבולית + החוצץ $n\\ln n$", src: "ש״ב 6 שאלה 2b, ש״ב 7 שאלה 2", href: "/weeks/6", hl: "ש״ב 6" },
+];
+
 /* ───────── המשפטים לפי שבוע (הדף הראשון: מה יש לכל שבוע) ───────── */
 interface WeekRef {
   week: number;
@@ -576,12 +599,15 @@ export default function StudyPlanClient() {
         </div>
       </section>
 
+      {/* ── מה 90% מהמבחן יהיה — תחזית + Top 10 שאלות ── */}
+      <TopExamSection checked={checked} toggle={toggle} />
+
       {/* ── הדף הראשון: משפטים לכל שבוע ── */}
       <WeekTheoremRef />
 
       {/* ── 10 ההוכחות ── */}
       <section className="rounded-2xl border p-5" style={{ background: "#fef2f2", borderColor: "var(--red-border)" }}>
-        <h2 className="mb-1 text-base font-black" style={{ color: "var(--red-mid)" }}>🧮 10 ההוכחות לשנן בעל פה</h2>
+        <h2 className="mb-1 text-base font-black" style={{ color: "var(--red-mid)" }}>🧮 Top 10 משפטים והוכחות — לשנן בעל פה</h2>
         <p className="mb-3 text-xs" style={{ color: "#7f1d1d" }}>כל מבחן כולל לפחות אחת — ״כסף קל״. סמני כשאת יודעת לכתוב כל אחת מהזיכרון.</p>
         <div className="grid gap-1.5 sm:grid-cols-2">
           {PROOFS_10.map(p => {
@@ -686,6 +712,61 @@ function Box({ on, color }: { on: boolean; color: string }) {
 
 function weightColor(w: WeekRef["weight"]) {
   return w === "לב המבחן" ? C.red : w === "חשוב" ? C.gold : C.cyan;
+}
+
+function TopExamSection({ checked, toggle }: { checked: ChkMap; toggle: (id: string) => void }) {
+  return (
+    <section className="rounded-2xl border-2 p-5" style={{ background: "#fffbeb", borderColor: "var(--amber-mid)" }}>
+      <h2 className="mb-1 flex items-center gap-2 text-lg font-black" style={{ color: "#92400e" }}>
+        🎯 מה 90% מהמבחן יהיה
+      </h2>
+      <p className="mb-4 text-xs" style={{ color: "#b45309" }}>
+        לפי ניתוח 8 מבחני עבר + סימולציה + שיעורי הבית. 80% מהמבחן = טורים + טורי חזקות/טיילור + אינטגרציה. חצי מכל שאלה = תיאוריה לשינון.
+      </p>
+
+      {/* תחזית מבנה המבחן */}
+      <div className="mb-5 overflow-hidden rounded-xl border bg-white" style={{ borderColor: "var(--amber-border)" }}>
+        {EXAM_FORECAST.map((row, i) => (
+          <div key={i} className="flex items-start gap-3 border-b px-3 py-2 last:border-b-0" style={{ borderColor: "var(--border)" }}>
+            <span className="shrink-0 rounded-md px-2 py-0.5 text-xs font-black" style={{ background: "var(--amber-light)", color: "#92400e" }}>{row.q}</span>
+            <div className="min-w-0 flex-1"><MathContent text={row.what} className="text-sm" /></div>
+            <span className="shrink-0 text-[11px] font-bold" style={{ color: "var(--text-muted)" }}>{row.cert}</span>
+          </div>
+        ))}
+      </div>
+
+      {/* Top 10 שאלות */}
+      <h3 className="mb-1 text-sm font-black" style={{ color: "#92400e" }}>🔥 Top 10 שאלות — חתימות שחוזרות כמעט מילה במילה</h3>
+      <p className="mb-3 text-xs" style={{ color: "#b45309" }}>סמני כל אחת אחרי שפתרת אותה לבד עד הסוף. אלו ההימורים הבטוחים ביותר למבחן.</p>
+      <div className="space-y-1.5">
+        {TOP_QUESTIONS.map((q) => {
+          const id = `topq.${q.n}`;
+          const on = !!checked[id];
+          return (
+            <div key={q.n} className="flex items-start gap-2 rounded-lg border p-2.5" style={{ background: on ? "#dcfce7" : "#fff", borderColor: on ? "var(--green-border)" : "var(--amber-border)" }}>
+              <button onClick={() => toggle(id)} aria-label="סמן כבוצע" className="shrink-0 mt-0.5"><Box on={on} color={C.green} /></button>
+              <div className="min-w-0 flex-1">
+                <div className="flex items-start gap-1.5">
+                  <span className="shrink-0 text-sm font-black" style={{ color: C.amber }}>{q.n}.</span>
+                  <span style={{ opacity: on ? 0.55 : 1, textDecoration: on ? "line-through" : "none" }}>
+                    <MathContent text={q.t} className="text-sm" />
+                  </span>
+                </div>
+                <div className="mt-0.5 flex flex-wrap items-center gap-1.5 pr-5">
+                  <span className="text-[11px]" style={{ color: "var(--text-muted)" }}>{q.src}</span>
+                  <Link href={q.href} className="inline-block whitespace-nowrap rounded px-1.5 py-0.5 text-[10px] font-bold no-underline hover:underline" style={{ background: `${C.cyan}1a`, color: C.cyan }}>↗ {q.hl}</Link>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      <div className="mt-4 rounded-xl border px-3 py-2.5 text-xs" style={{ background: "#fff", borderColor: "var(--amber-border)", color: "#451a03" }}>
+        ➕ בנוסף: סעיף הגדרות (2–4 נק׳ בכל שאלה) — <strong>ש״ב 2 שאלה 1</strong>. ופתרי בתנאי מבחן את <strong>הסימולציה 2025 + מועד א׳+ב׳ 2025</strong> — המנבאים החזקים ביותר. ⚫ מחוץ לחומר: רב-משתנה, שארית לגרנז׳, משפט קושי לערך הממוצע.
+      </div>
+    </section>
+  );
 }
 
 function WeekTheoremRef() {
