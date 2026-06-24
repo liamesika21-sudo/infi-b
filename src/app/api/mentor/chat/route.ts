@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { validateCookieForRequest, isProEmail } from "@/lib/simple-auth";
-import { getMentorUsage, incrementMentorUsage, saveMentorLog, MENTOR_CREDIT_LIMIT } from "@/lib/mentor-credits";
+import { getMentorCreditLimit, getMentorUsage, incrementMentorUsage, saveMentorLog } from "@/lib/mentor-credits";
 import { buildMentorFallbackResponse } from "@/lib/calculus2/mentor-fallback";
 import { buildMentorSystemPrompt } from "@/lib/calculus2/mentor-system-prompt";
 
@@ -24,7 +24,20 @@ function cleanMentorText(text: string) {
     .replace(/\n{3,}/g, "\n\n");
 }
 
-async function fallbackResponse(messages: Message[], used: number, userEmail: string) {
+function creditLimitHeader(limit: number | null): string {
+  return limit === null ? "unlimited" : String(limit);
+}
+
+function isAnthropicCreditExhausted(status: number, body: string): boolean {
+  const normalized = body.toLowerCase();
+  return (
+    status === 402 ||
+    normalized.includes("credit balance is too low") ||
+    normalized.includes("purchase credits")
+  );
+}
+
+async function fallbackResponse(messages: Message[], used: number, limit: number | null, userEmail: string) {
   const userQuestion = messages[messages.length - 1].content;
   const text = cleanMentorText(await buildMentorFallbackResponse(messages));
 
@@ -35,7 +48,7 @@ async function fallbackResponse(messages: Message[], used: number, userEmail: st
       "Content-Type": "text/plain; charset=utf-8",
       "Cache-Control": "no-cache",
       "X-Credits-Used": String(used),
-      "X-Credits-Limit": String(MENTOR_CREDIT_LIMIT),
+      "X-Credits-Limit": creditLimitHeader(limit),
       "X-Mentor-Mode": "fallback",
     },
   });
@@ -53,9 +66,10 @@ export async function POST(request: Request) {
   }
 
   const used = await getMentorUsage(auth.email);
-  if (used >= MENTOR_CREDIT_LIMIT) {
+  const creditLimit = getMentorCreditLimit(auth.email);
+  if (creditLimit !== null && used >= creditLimit) {
     return NextResponse.json(
-      { error: `נגמרו הקרדיטים (${MENTOR_CREDIT_LIMIT}/${MENTOR_CREDIT_LIMIT})` },
+      { error: `נגמרו הקרדיטים (${creditLimit}/${creditLimit})` },
       { status: 429 }
     );
   }
@@ -79,7 +93,7 @@ export async function POST(request: Request) {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
     console.error("Anthropic API key is missing");
-    return fallbackResponse(messages, used, auth.email);
+    return fallbackResponse(messages, used, creditLimit, auth.email);
   }
 
   let anthropicRes: Response;
@@ -101,23 +115,30 @@ export async function POST(request: Request) {
     });
   } catch (error) {
     console.error("Anthropic network error", error);
-    return fallbackResponse(messages, used, auth.email);
+    return fallbackResponse(messages, used, creditLimit, auth.email);
   }
 
   if (!anthropicRes.ok) {
     const err = await anthropicRes.text().catch(() => "");
     console.error("Anthropic error", anthropicRes.status, err);
-    return fallbackResponse(messages, used, auth.email);
+    if (isAnthropicCreditExhausted(anthropicRes.status, err)) {
+      return NextResponse.json(
+        { error: "חשבון הקרדיט נגמר", code: "external_credit_exhausted" },
+        { status: 402 }
+      );
+    }
+    return fallbackResponse(messages, used, creditLimit, auth.email);
   }
 
   const encoder = new TextEncoder();
   const body = anthropicRes.body;
   if (!body) {
     console.error("Anthropic response is missing a stream body");
-    return fallbackResponse(messages, used, auth.email);
+    return fallbackResponse(messages, used, creditLimit, auth.email);
   }
 
-  const newUsage = await incrementMentorUsage(auth.email);
+  const newUsage = creditLimit === null ? used : await incrementMentorUsage(auth.email);
+  const responseUsage = creditLimit === null ? used : newUsage || used + 1;
   const userQuestion = messages[messages.length - 1].content;
   const userEmail = auth.email;
 
@@ -186,8 +207,8 @@ export async function POST(request: Request) {
     headers: {
       "Content-Type": "text/plain; charset=utf-8",
       "Cache-Control": "no-cache",
-      "X-Credits-Used": String(newUsage || used + 1),
-      "X-Credits-Limit": String(MENTOR_CREDIT_LIMIT),
+      "X-Credits-Used": String(responseUsage),
+      "X-Credits-Limit": creditLimitHeader(creditLimit),
       "X-Mentor-Mode": "ai",
     },
   });

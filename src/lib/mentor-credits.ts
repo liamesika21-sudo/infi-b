@@ -1,4 +1,5 @@
 export const MENTOR_CREDIT_LIMIT = 150;
+const MENTOR_UNLIMITED_EMAILS = new Set(["liamesika21@gmail.com"]);
 const LOGS_KEY = "mentor:logs";
 const MAX_LOGS = 500;
 
@@ -19,6 +20,14 @@ function usageKey(email: string): string {
   return `mentor:usage:${email.toLowerCase().trim()}`;
 }
 
+export function hasUnlimitedMentorCredits(email: string): boolean {
+  return MENTOR_UNLIMITED_EMAILS.has(email.toLowerCase().trim());
+}
+
+export function getMentorCreditLimit(email: string): number | null {
+  return hasUnlimitedMentorCredits(email) ? null : MENTOR_CREDIT_LIMIT;
+}
+
 export async function getMentorUsage(email: string): Promise<number> {
   const redis = getRedisConfig();
   if (!redis) return 0;
@@ -36,6 +45,8 @@ export async function getMentorUsage(email: string): Promise<number> {
 }
 
 export async function incrementMentorUsage(email: string): Promise<number> {
+  if (hasUnlimitedMentorCredits(email)) return getMentorUsage(email);
+
   const redis = getRedisConfig();
   if (!redis) return 1;
 

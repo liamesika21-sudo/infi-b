@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
-import { Send, Sparkles, Lock, BookOpenCheck, BookmarkPlus, Check, Maximize2, Minimize2 } from "lucide-react";
+import { Send, Sparkles, Lock, BookOpenCheck, BookmarkPlus, Check, Maximize2, Minimize2, MessageCircle } from "lucide-react";
 import katex from "katex";
 import "katex/dist/katex.min.css";
 import weekSummariesRaw from "@/../data/generated/calculus2/week-chat-summaries.json";
@@ -15,8 +15,13 @@ interface Message {
 interface MentorStatus {
   isPro: boolean;
   used: number;
-  limit: number;
+  limit: number | null;
   email?: string;
+}
+
+interface MentorError {
+  message: string;
+  code?: "external_credit_exhausted" | "generic";
 }
 
 interface WeekSummary {
@@ -26,6 +31,8 @@ interface WeekSummary {
 }
 
 const WEEK_SUMMARIES = weekSummariesRaw as WeekSummary[];
+const SUPPORT_WHATSAPP_URL =
+  "https://wa.me/972505730440?text=%D7%97%D7%A9%D7%91%D7%95%D7%9F%20%D7%94%D7%A7%D7%A8%D7%93%D7%99%D7%98%20%D7%A9%D7%9C%20%D7%9E%D7%A0%D7%98%D7%95%D7%A8%20AI%20%D7%A0%D7%92%D7%9E%D7%A8%20%D7%95%D7%A6%D7%A8%D7%99%D7%9A%20%D7%9C%D7%94%D7%98%D7%A2%D7%99%D7%9F%20%D7%A7%D7%A8%D7%93%D7%99%D7%98";
 
 // ── Math rendering ─────────────────────────────────────────────────────────
 
@@ -296,7 +303,7 @@ function ChatInterface({ status }: { status: MentorStatus }) {
   const [isLoading, setIsLoading] = useState(false);
   const [streamingContent, setStreamingContent] = useState("");
   const [creditsUsed, setCreditsUsed] = useState(status.used);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<MentorError | null>(null);
   const [savedIndices, setSavedIndices] = useState<Set<number>>(new Set());
   const [isExpanded, setIsExpanded] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
@@ -330,6 +337,8 @@ function ChatInterface({ status }: { status: MentorStatus }) {
     };
   }, [isExpanded]);
 
+  const reachedCreditLimit = status.limit !== null && creditsUsed >= status.limit;
+
   // Show a pre-written weekly summary instantly — no API call, no tokens spent
   const sendWeekSummary = useCallback((w: WeekSummary) => {
     if (isLoading) return;
@@ -346,8 +355,8 @@ function ChatInterface({ status }: { status: MentorStatus }) {
       const trimmed = text.trim();
       if (!trimmed || isLoading) return;
 
-      if (creditsUsed >= status.limit) {
-        setError("הגעת למגבלת השימוש במנטור. לפרטים צור קשר.");
+      if (reachedCreditLimit) {
+        setError({ message: "הגעת למגבלת השימוש במנטור. לפרטים צור קשר.", code: "generic" });
         return;
       }
 
@@ -372,8 +381,15 @@ function ChatInterface({ status }: { status: MentorStatus }) {
         });
 
         if (!res.ok) {
-          const data = (await res.json().catch(() => ({}))) as { error?: string };
-          throw new Error(data.error ?? "שגיאה לא צפויה");
+          const data = (await res.json().catch(() => ({}))) as {
+            error?: string;
+            code?: "external_credit_exhausted";
+          };
+          setError({
+            message: data.error ?? "שגיאה לא צפויה",
+            code: data.code ?? "generic",
+          });
+          return;
         }
 
         // Update credit count from header
@@ -397,12 +413,12 @@ function ChatInterface({ status }: { status: MentorStatus }) {
         setMessages((prev) => [...prev, { role: "assistant", content: accumulated }]);
         setStreamingContent("");
       } catch (err) {
-        setError(err instanceof Error ? err.message : "שגיאה בלתי צפויה");
+        setError({ message: err instanceof Error ? err.message : "שגיאה בלתי צפויה", code: "generic" });
       } finally {
         setIsLoading(false);
       }
     },
-    [messages, isLoading, creditsUsed, status.limit]
+    [messages, isLoading, reachedCreditLimit]
   );
 
   const saveToNotebook = useCallback(async (content: string, index: number) => {
@@ -630,7 +646,21 @@ function ChatInterface({ status }: { status: MentorStatus }) {
               color: "#dc2626",
             }}
           >
-            {error}
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <span className="font-semibold">{error.message}</span>
+              {error.code === "external_credit_exhausted" && (
+                <a
+                  href={SUPPORT_WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex shrink-0 items-center justify-center gap-1.5 rounded-lg px-3 py-2 text-xs font-bold text-white transition hover:opacity-90"
+                  style={{ background: "#16a34a" }}
+                >
+                  <MessageCircle className="h-3.5 w-3.5" />
+                  שלח וואטסאפ
+                </a>
+              )}
+            </div>
           </div>
         )}
 
@@ -654,7 +684,7 @@ function ChatInterface({ status }: { status: MentorStatus }) {
           onKeyDown={handleKeyDown}
           placeholder="שאל שאלה על חומר הקורס... (Enter לשליחה, Shift+Enter לשורה חדשה)"
           rows={1}
-          disabled={isLoading || creditsUsed >= status.limit}
+          disabled={isLoading || reachedCreditLimit}
           className="flex-1 resize-none rounded-xl border px-3 py-2.5 text-sm outline-none transition"
           style={{
             background: "var(--bg-page)",
@@ -667,7 +697,7 @@ function ChatInterface({ status }: { status: MentorStatus }) {
         />
         <button
           onClick={() => void sendMessage(input)}
-          disabled={!input.trim() || isLoading || creditsUsed >= status.limit}
+          disabled={!input.trim() || isLoading || reachedCreditLimit}
           className="shrink-0 flex h-10 w-10 items-center justify-center rounded-xl transition disabled:opacity-40"
           style={{ background: "var(--navy-mid)", color: "#fff" }}
         >
@@ -688,11 +718,11 @@ export default function MentorPage() {
   useEffect(() => {
     fetch("/api/mentor/status")
       .then((r) => r.json())
-      .then((data: { isPro?: boolean; used?: number; limit?: number; email?: string }) => {
+      .then((data: { isPro?: boolean; used?: number; limit?: number | null; email?: string }) => {
         setStatus({
           isPro: data.isPro ?? false,
           used: data.used ?? 0,
-          limit: data.limit ?? 150,
+          limit: data.limit === undefined ? 150 : data.limit,
           email: data.email,
         });
       })

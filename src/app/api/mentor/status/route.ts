@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { validateCookieForRequest, isProEmail } from "@/lib/simple-auth";
-import { getMentorUsage, MENTOR_CREDIT_LIMIT } from "@/lib/mentor-credits";
+import { getMentorUsage, getMentorCreditLimit } from "@/lib/mentor-credits";
 
 export const runtime = "nodejs";
 
@@ -20,6 +20,6 @@ export async function GET(request: Request) {
     email: auth.email,
     isPro,
     used,
-    limit: MENTOR_CREDIT_LIMIT,
+    limit: getMentorCreditLimit(auth.email),
   });
 }
