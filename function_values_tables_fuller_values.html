@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>טבלאות ערכים — פונקציות בסיסיות</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f5f7fb;
+      --card:#ffffff;
+      --text:#162033;
+      --muted:#5f6b85;
+      --line:#d9e1f0;
+      --tableHead:#eef3ff;
+      --shadow:0 10px 30px rgba(18,35,74,0.08);
+      --radius:0;
+      --blue:#4f7cff;
+      --purple:#7c4dff;
+      --pink:#ff5c93;
+      --teal:#10b9a9;
+      --orange:#ff9f43;
+      --green:#22c55e;
+      --red:#e11d48;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#f8faff 0%, #f4f7fc 100%);
+      color:var(--text);
+      font-family:'Heebo', Arial, sans-serif;
+      font-size:14px;
+      line-height:1.65;
+    }
+    .page{
+      max-width:1160px;
+      margin:0 auto;
+      padding:32px 20px 60px;
+    }
+
+    .hero{
+      background:linear-gradient(135deg,#ffffff 0%, #eef4ff 55%, #f8efff 100%);
+      border:1px solid #e5ebf6;
+      border-radius:0;
+      box-shadow:var(--shadow);
+      padding:28px 24px;
+      margin-bottom:24px;
+    }
+    .hero-top{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+    .title-wrap{max-width:760px}
+    h1{
+      margin:0 0 10px;
+      font-size:30px;
+      line-height:1.25;
+      font-weight:800;
+      color:#14203d;
+    }
+    .subtitle{
+      margin:0;
+      color:var(--muted);
+      font-size:15px;
+    }
+    .hero-badges{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:18px;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:9px 14px;
+      border-radius:0;
+      font-size:13px;
+      font-weight:700;
+      background:#fff;
+      border:1px solid #e3e9f7;
+      color:#30415f;
+    }
+    .badge.blue{background:#edf3ff;color:#2350c7;border-color:#d8e5ff}
+    .badge.purple{background:#f4efff;color:#6533d2;border-color:#e4d9ff}
+    .badge.teal{background:#e8fbf8;color:#0b8c7e;border-color:#c9f1eb}
+
+    .note{
+      margin-top:18px;
+      background:#fffdfa;
+      border:1px solid #ffe6b5;
+      border-right:5px solid var(--orange);
+      padding:14px 16px;
+      border-radius:0;
+      color:#6a4b00;
+    }
+
+    .cards-grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:18px;
+    }
+
+    .func-card{
+      background:var(--card);
+      border:1px solid #e7edf7;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      break-inside:avoid;
+      page-break-inside:avoid;
+    }
+    .card-head{
+      padding:18px 20px 14px;
+      color:#fff;
+    }
+    .func-card.blue .card-head{background:linear-gradient(135deg,#4f7cff,#6b8fff)}
+    .func-card.purple .card-head{background:linear-gradient(135deg,#7c4dff,#9a6dff)}
+    .func-card.pink .card-head{background:linear-gradient(135deg,#ff5c93,#ff7aa6)}
+    .func-card.teal .card-head{background:linear-gradient(135deg,#10b9a9,#37d1c2)}
+    .func-card.orange .card-head{background:linear-gradient(135deg,#ff9f43,#ffb15f)}
+    .func-card.green .card-head{background:linear-gradient(135deg,#22c55e,#4dd47d)}
+    .func-card.indigo .card-head{background:linear-gradient(135deg,#5965ff,#7b85ff)}
+    .func-card.summary .card-head{background:linear-gradient(135deg,#243b6b,#34508e)}
+
+    h2{
+      margin:0;
+      font-size:22px;
+      font-weight:800;
+      line-height:1.3;
+    }
+    .card-sub{
+      margin-top:6px;
+      font-size:13px;
+      opacity:0.92;
+    }
+    .card-body{padding:18px 20px 20px}
+
+    .meta{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin:0 0 14px;
+    }
+    .meta-box{
+      background:#f8fbff;
+      border:1px solid #e4ebf7;
+      border-radius:0;
+      padding:12px 14px;
+      min-height:64px;
+    }
+    .meta-box .label{
+      display:block;
+      font-size:12px;
+      font-weight:800;
+      margin-bottom:4px;
+      color:#52627f;
+    }
+    .meta-box .value{
+      font-size:14px;
+      color:#1b2943;
+    }
+
+    table{
+      width:100%;
+      border-collapse:separate;
+      border-spacing:0;
+      table-layout:fixed;
+      direction:ltr;
+      overflow:hidden;
+      border:1px solid var(--line);
+      border-radius:0;
+      background:#fff;
+    }
+    th,td{
+      padding:10px 8px;
+      text-align:center;
+      vertical-align:middle;
+      direction:ltr;
+      unicode-bidi:plaintext;
+      border-bottom:1px solid var(--line);
+      border-left:1px solid var(--line);
+    }
+    tr:last-child td{border-bottom:none}
+    th:last-child, td:last-child{border-left:none}
+    th{
+      background:var(--tableHead);
+      font-weight:800;
+      color:#223252;
+    }
+    tbody tr:nth-child(even) td{background:#fbfcff}
+    tbody tr:hover td{background:#f4f8ff}
+
+    .rtl-cell{
+      direction:rtl;
+      unicode-bidi:normal;
+      text-align:center;
+    }
+    .bad{
+      color:var(--red);
+      font-weight:800;
+    }
+    .small{
+      font-size:12.5px;
+      color:var(--muted);
+    }
+
+    .footer-note{
+      margin-top:18px;
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    @media (max-width:860px){
+      .meta{grid-template-columns:1fr}
+      h1{font-size:24px}
+      h2{font-size:19px}
+      .card-body,.card-head{padding-inline:16px}
+    }
+
+    @media (max-width:640px){
+      body{font-size:13px}
+      .page{padding:18px 12px 40px}
+      .hero{padding:20px 16px}
+      table{font-size:12px}
+      th,td{padding:8px 5px}
+      .badge{font-size:12px;padding:8px 12px}
+    }
+
+    .compact-card .card-body{
+      padding:14px 14px 18px;
+    }
+    .compact-table{
+      font-size:12px;
+      table-layout:auto;
+    }
+    .compact-table th,
+    .compact-table td{
+      padding:6px 5px;
+      white-space:nowrap;
+    }
+    .compact-table .rtl-cell{
+      white-space:normal;
+    }
+
+    @media print{
+      body{background:#fff;font-size:12px}
+      .page{padding:8px}
+      .hero,.func-card{box-shadow:none}
+      .hero{border-color:#ccc}
+      .func-card{border-color:#ccc}
+      .card-head{color:#000 !important;background:#f1f1f1 !important}
+      .badge{background:#fff;border-color:#bbb;color:#000}
+      .note{background:#fffdf5}
+      a{color:inherit;text-decoration:none}
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="hero-top">
+        <div class="title-wrap">
+          <h1>טבלאות ערכים — sin, cos, tan, cot, arctan, ln, e<sup>x</sup></h1>
+          <p class="subtitle">דף סיכום מסודר ונוח לקריאה עם תחום הגדרה, תחום רציפות וערכים שימושיים לזכירה.</p>
+        </div>
+      </div>
+
+      <div class="hero-badges">
+        <span class="badge blue">תחומי הגדרה</span>
+        <span class="badge purple">תחומי רציפות</span>
+        <span class="badge teal">ערכים מיוחדים חשובים</span>
+      </div>
+
+      <div class="note">
+        <b>הערה חשובה:</b>
+        כאשר כתוב <b>“לא מוגדר”</b>, הכוונה היא שהפונקציה אינה מוגדרת בנקודה הזו.
+        למשל: <span dir="ltr">ln(0)</span> לא מוגדר, וגם <span dir="ltr">tan(π/2)</span> לא מוגדר.
+      </div>
+    </section>
+
+    <div class="cards-grid">
+      <section class="func-card blue">
+        <div class="card-head">
+          <h2>טבלת ערכים — sin(x)</h2>
+          <div class="card-sub">הפונקציה הסינוסית</div>
+        </div>
+        <div class="card-body">
+          <div class="meta">
+            <div class="meta-box"><span class="label">תחום הגדרה</span><span class="value">כל הממשיים, <span dir="ltr">R</span></span></div>
+            <div class="meta-box"><span class="label">תחום רציפות</span><span class="value">רציפה בכל <span dir="ltr">R</span></span></div>
+          </div>
+          <table>
+            <thead><tr><th>x</th><th>sin(x)</th></tr></thead>
+            <tbody>
+              <tr><td>0</td><td>0</td></tr>
+              <tr><td>π/6</td><td>1/2</td></tr>
+              <tr><td>π/4</td><td>√2/2</td></tr>
+              <tr><td>π/3</td><td>√3/2</td></tr>
+              <tr><td>π/2</td><td>1</td></tr>
+              <tr><td>π</td><td>0</td></tr>
+              <tr><td>3π/2</td><td>-1</td></tr>
+              <tr><td>2π</td><td>0</td></tr>
+              <tr><td>1</td><td>sin(1) ≈ 0.84147</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="func-card purple">
+        <div class="card-head">
+          <h2>טבלת ערכים — cos(x)</h2>
+          <div class="card-sub">הפונקציה הקוסינוסית</div>
+        </div>
+        <div class="card-body">
+          <div class="meta">
+            <div class="meta-box"><span class="label">תחום הגדרה</span><span class="value">כל הממשיים, <span dir="ltr">R</span></span></div>
+            <div class="meta-box"><span class="label">תחום רציפות</span><span class="value">רציפה בכל <span dir="ltr">R</span></span></div>
+          </div>
+          <table>
+            <thead><tr><th>x</th><th>cos(x)</th></tr></thead>
+            <tbody>
+              <tr><td>0</td><td>1</td></tr>
+              <tr><td>π/6</td><td>√3/2</td></tr>
+              <tr><td>π/4</td><td>√2/2</td></tr>
+              <tr><td>π/3</td><td>1/2</td></tr>
+              <tr><td>π/2</td><td>0</td></tr>
+              <tr><td>π</td><td>-1</td></tr>
+              <tr><td>3π/2</td><td>0</td></tr>
+              <tr><td>2π</td><td>1</td></tr>
+              <tr><td>1</td><td>cos(1) ≈ 0.54030</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="func-card pink">
+        <div class="card-head">
+          <h2>טבלת ערכים — tan(x)</h2>
+          <div class="card-sub">טנגנס</div>
+        </div>
+        <div class="card-body">
+          <div class="meta">
+            <div class="meta-box"><span class="label">תחום הגדרה</span><span class="value">כל <span dir="ltr">x ∈ R</span> כך ש־<span dir="ltr">cos(x) ≠ 0</span>, כלומר <span dir="ltr">x ≠ π/2 + kπ</span>, <span dir="ltr">k ∈ Z</span></span></div>
+            <div class="meta-box"><span class="label">תחום רציפות</span><span class="value">רציפה בכל נקודה שבה היא מוגדרת</span></div>
+          </div>
+          <table>
+            <thead><tr><th>x</th><th>tan(x)</th></tr></thead>
+            <tbody>
+              <tr><td>0</td><td>0</td></tr>
+              <tr><td>π/6</td><td>√3/3</td></tr>
+              <tr><td>π/4</td><td>1</td></tr>
+              <tr><td>π/3</td><td>√3</td></tr>
+              <tr><td>π/2</td><td class="bad">לא מוגדר</td></tr>
+              <tr><td>π</td><td>0</td></tr>
+              <tr><td>3π/2</td><td class="bad">לא מוגדר</td></tr>
+              <tr><td>2π</td><td>0</td></tr>
+              <tr><td>1</td><td>tan(1) ≈ 1.55741</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="func-card teal">
+        <div class="card-head">
+          <h2>טבלת ערכים — cot(x)</h2>
+          <div class="card-sub">קוטנגנס</div>
+        </div>
+        <div class="card-body">
+          <div class="meta">
+            <div class="meta-box"><span class="label">תחום הגדרה</span><span class="value">כל <span dir="ltr">x ∈ R</span> כך ש־<span dir="ltr">sin(x) ≠ 0</span>, כלומר <span dir="ltr">x ≠ kπ</span>, <span dir="ltr">k ∈ Z</span></span></div>
+            <div class="meta-box"><span class="label">תחום רציפות</span><span class="value">רציפה בכל נקודה שבה היא מוגדרת</span></div>
+          </div>
+          <table>
+            <thead><tr><th>x</th><th>cot(x)</th></tr></thead>
+            <tbody>
+              <tr><td>0</td><td class="bad">לא מוגדר</td></tr>
+              <tr><td>π/6</td><td>√3</td></tr>
+              <tr><td>π/4</td><td>1</td></tr>
+              <tr><td>π/3</td><td>√3/3</td></tr>
+              <tr><td>π/2</td><td>0</td></tr>
+              <tr><td>π</td><td class="bad">לא מוגדר</td></tr>
+              <tr><td>3π/2</td><td>0</td></tr>
+              <tr><td>2π</td><td class="bad">לא מוגדר</td></tr>
+              <tr><td>1</td><td>cot(1) ≈ 0.64209</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="func-card orange">
+        <div class="card-head">
+          <h2>טבלת ערכים — arctan(x) / arc tg(x)</h2>
+          <div class="card-sub">הפונקציה ההפוכה של טנגנס בתחום הראשי</div>
+        </div>
+        <div class="card-body">
+          <div class="meta">
+            <div class="meta-box"><span class="label">תחום הגדרה</span><span class="value">כל הממשיים, <span dir="ltr">R</span></span></div>
+            <div class="meta-box"><span class="label">תחום רציפות</span><span class="value">רציפה בכל <span dir="ltr">R</span></span></div>
+          </div>
+          <table>
+            <thead><tr><th>x</th><th>arctan(x)</th></tr></thead>
+            <tbody>
+              <tr><td>-∞</td><td>-π/2 <span class="small">במובן של גבול</span></td></tr>
+              <tr><td>-3</td><td>arctan(-3) ≈ -1.24905</td></tr>
+              <tr><td>-2</td><td>arctan(-2) ≈ -1.10715</td></tr>
+              <tr><td>-√3</td><td>-π/3</td></tr>
+              <tr><td>-1</td><td>-π/4</td></tr>
+              <tr><td>-√3/3</td><td>-π/6</td></tr>
+              <tr><td>0</td><td>0</td></tr>
+              <tr><td>√3/3</td><td>π/6</td></tr>
+              <tr><td>1</td><td>π/4</td></tr>
+              <tr><td>√3</td><td>π/3</td></tr>
+              <tr><td>2</td><td>arctan(2) ≈ 1.10715</td></tr>
+              <tr><td>3</td><td>arctan(3) ≈ 1.24905</td></tr>
+              <tr><td>+∞</td><td>π/2 <span class="small">במובן של גבול</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="func-card green">
+        <div class="card-head">
+          <h2>טבלת ערכים — ln(x)</h2>
+          <div class="card-sub">לוגריתם טבעי</div>
+        </div>
+        <div class="card-body">
+          <div class="meta">
+            <div class="meta-box"><span class="label">תחום הגדרה</span><span class="value"><span dir="ltr">(0,∞)</span>, כלומר רק <span dir="ltr">x &gt; 0</span></span></div>
+            <div class="meta-box"><span class="label">תחום רציפות</span><span class="value">רציפה בכל <span dir="ltr">(0,∞)</span></span></div>
+          </div>
+          <table>
+            <thead><tr><th>x</th><th>ln(x)</th></tr></thead>
+            <tbody>
+              <tr><td>-1</td><td class="bad">לא מוגדר בממשיים</td></tr>
+              <tr><td>0</td><td class="bad">לא מוגדר</td></tr>
+              <tr><td>0+</td><td>-∞ <span class="small">במובן של גבול: x→0+</span></td></tr>
+              <tr><td>1/e</td><td>-1</td></tr>
+              <tr><td>1</td><td>0</td></tr>
+              <tr><td>√e</td><td>1/2</td></tr>
+              <tr><td>e</td><td>1</td></tr>
+              <tr><td>e²</td><td>2</td></tr>
+              <tr><td>∞</td><td>∞ <span class="small">במובן של גבול: x→∞</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="func-card indigo">
+        <div class="card-head">
+          <h2>טבלת ערכים — e<sup>x</sup></h2>
+          <div class="card-sub">הפונקציה האקספוננציאלית</div>
+        </div>
+        <div class="card-body">
+          <div class="meta">
+            <div class="meta-box"><span class="label">תחום הגדרה</span><span class="value">כל הממשיים, <span dir="ltr">R</span></span></div>
+            <div class="meta-box"><span class="label">תחום רציפות</span><span class="value">רציפה בכל <span dir="ltr">R</span></span></div>
+          </div>
+          <table>
+            <thead><tr><th>x</th><th>e<sup>x</sup></th></tr></thead>
+            <tbody>
+              <tr><td>-∞</td><td>0 <span class="small">במובן של גבול</span></td></tr>
+              <tr><td>-3</td><td>1/e³ ≈ 0.04979</td></tr>
+              <tr><td>-2</td><td>1/e² ≈ 0.13534</td></tr>
+              <tr><td>-1</td><td>1/e ≈ 0.36788</td></tr>
+              <tr><td>0</td><td>1</td></tr>
+              <tr><td>1</td><td>e ≈ 2.71828</td></tr>
+              <tr><td>2</td><td>e² ≈ 7.38906</td></tr>
+              <tr><td>3</td><td>e³ ≈ 20.08554</td></tr>
+              <tr><td>ln(2)</td><td>2</td></tr>
+              <tr><td>ln(3)</td><td>3</td></tr>
+              <tr><td>∞</td><td>∞ <span class="small">במובן של גבול</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="func-card summary">
+        <div class="card-head">
+          <h2>טבלת סיכום קצרה — תחומי הגדרה ורציפות</h2>
+          <div class="card-sub">לרפרוף מהיר לפני תרגול או מבחן</div>
+        </div>
+        <div class="card-body">
+          <table>
+            <thead><tr><th class="rtl-cell">פונקציה</th><th class="rtl-cell">תחום הגדרה</th><th class="rtl-cell">תחום רציפות</th></tr></thead>
+            <tbody>
+              <tr><td>sin(x)</td><td>R</td><td>R</td></tr>
+              <tr><td>cos(x)</td><td>R</td><td>R</td></tr>
+              <tr><td>tan(x)</td><td>x ≠ π/2 + kπ, k ∈ Z</td><td>רציפה בכל תחום ההגדרה</td></tr>
+              <tr><td>cot(x)</td><td>x ≠ kπ, k ∈ Z</td><td>רציפה בכל תחום ההגדרה</td></tr>
+              <tr><td>arctan(x)</td><td>R</td><td>R</td></tr>
+              <tr><td>ln(x)</td><td>(0,∞)</td><td>(0,∞)</td></tr>
+              <tr><td>e<sup>x</sup></td><td>R</td><td>R</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="func-card summary compact-card">
+        <div class="card-head">
+          <h2>טבלה מאוחדת צפופה — כל הערכים ביחד</h2>
+          <div class="card-sub">לרפרוף מהיר בלי לדפדף בין כל הטבלאות — כולל גם הצבות רגילות כמו 0, 1, 2, 3</div>
+        </div>
+        <div class="card-body">
+          <table class="compact-table">
+            <thead>
+              <tr>
+                <th>x</th>
+                <th>sin(x)</th>
+                <th>cos(x)</th>
+                <th>tan(x)</th>
+                <th>cot(x)</th>
+                <th>arctan(x)</th>
+                <th>ln(x)</th>
+                <th>e<sup>x</sup></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>-∞</td><td>—</td><td>—</td><td>—</td><td>—</td><td>-π/2 גבול</td><td class="bad">לא מוגדר</td><td>0 גבול</td></tr>
+              <tr><td>-3</td><td>≈ -0.14112</td><td>≈ -0.98999</td><td>≈ 0.14255</td><td>≈ 7.01525</td><td>≈ -1.24905</td><td class="bad">לא מוגדר</td><td>1/e³ ≈ 0.04979</td></tr>
+              <tr><td>-2</td><td>≈ -0.90930</td><td>≈ -0.41615</td><td>≈ 2.18504</td><td>≈ 0.45766</td><td>≈ -1.10715</td><td class="bad">לא מוגדר</td><td>1/e² ≈ 0.13534</td></tr>
+              <tr><td>-1</td><td>≈ -0.84147</td><td>≈ 0.54030</td><td>≈ -1.55741</td><td>≈ -0.64209</td><td>-π/4</td><td class="bad">לא מוגדר</td><td>1/e ≈ 0.36788</td></tr>
+              <tr><td>0</td><td>0</td><td>1</td><td>0</td><td class="bad">לא מוגדר</td><td>0</td><td class="bad">לא מוגדר</td><td>1</td></tr>
+              <tr><td>0+</td><td>0</td><td>1</td><td>0</td><td>+∞ גבול</td><td>0</td><td>-∞ גבול</td><td>1</td></tr>
+              <tr><td>π/6</td><td>1/2</td><td>√3/2</td><td>√3/3</td><td>√3</td><td>arctan(π/6)</td><td>ln(π/6)</td><td>e^(π/6)</td></tr>
+              <tr><td>π/4</td><td>√2/2</td><td>√2/2</td><td>1</td><td>1</td><td>arctan(π/4)</td><td>ln(π/4)</td><td>e^(π/4)</td></tr>
+              <tr><td>π/3</td><td>√3/2</td><td>1/2</td><td>√3</td><td>√3/3</td><td>arctan(π/3)</td><td>ln(π/3)</td><td>e^(π/3)</td></tr>
+              <tr><td>π/2</td><td>1</td><td>0</td><td class="bad">לא מוגדר</td><td>0</td><td>arctan(π/2)</td><td>ln(π/2)</td><td>e^(π/2)</td></tr>
+              <tr><td>π</td><td>0</td><td>-1</td><td>0</td><td class="bad">לא מוגדר</td><td>arctan(π)</td><td>ln(π)</td><td>e^π</td></tr>
+              <tr><td>3π/2</td><td>-1</td><td>0</td><td class="bad">לא מוגדר</td><td>0</td><td>arctan(3π/2)</td><td>ln(3π/2)</td><td>e^(3π/2)</td></tr>
+              <tr><td>2π</td><td>0</td><td>1</td><td>0</td><td class="bad">לא מוגדר</td><td>arctan(2π)</td><td>ln(2π)</td><td>e^(2π)</td></tr>
+              <tr><td>1/e</td><td>sin(1/e)</td><td>cos(1/e)</td><td>tan(1/e)</td><td>cot(1/e)</td><td>arctan(1/e)</td><td>-1</td><td>e^(1/e)</td></tr>
+              <tr><td>√3/3</td><td>sin(√3/3)</td><td>cos(√3/3)</td><td>tan(√3/3)</td><td>cot(√3/3)</td><td>π/6</td><td>ln(√3/3)</td><td>e^(√3/3)</td></tr>
+              <tr><td>1</td><td>≈ 0.84147</td><td>≈ 0.54030</td><td>≈ 1.55741</td><td>≈ 0.64209</td><td>π/4</td><td>0</td><td>e ≈ 2.71828</td></tr>
+              <tr><td>√3</td><td>sin(√3)</td><td>cos(√3)</td><td>tan(√3)</td><td>cot(√3)</td><td>π/3</td><td>ln(√3)</td><td>e^√3</td></tr>
+              <tr><td>√e</td><td>sin(√e)</td><td>cos(√e)</td><td>tan(√e)</td><td>cot(√e)</td><td>arctan(√e)</td><td>1/2</td><td>e^√e</td></tr>
+              <tr><td>2</td><td>≈ 0.90930</td><td>≈ -0.41615</td><td>≈ -2.18504</td><td>≈ -0.45766</td><td>≈ 1.10715</td><td>ln(2) ≈ 0.69315</td><td>e² ≈ 7.38906</td></tr>
+              <tr><td>3</td><td>≈ 0.14112</td><td>≈ -0.98999</td><td>≈ -0.14255</td><td>≈ -7.01525</td><td>≈ 1.24905</td><td>ln(3) ≈ 1.09861</td><td>e³ ≈ 20.08554</td></tr>
+              <tr><td>e</td><td>sin(e)</td><td>cos(e)</td><td>tan(e)</td><td>cot(e)</td><td>arctan(e)</td><td>1</td><td>e^e</td></tr>
+              <tr><td>e²</td><td>sin(e²)</td><td>cos(e²)</td><td>tan(e²)</td><td>cot(e²)</td><td>arctan(e²)</td><td>2</td><td>e^(e²)</td></tr>
+              <tr><td>ln(2)</td><td>sin(ln2)</td><td>cos(ln2)</td><td>tan(ln2)</td><td>cot(ln2)</td><td>arctan(ln2)</td><td>ln(ln2)</td><td>2</td></tr>
+              <tr><td>ln(3)</td><td>sin(ln3)</td><td>cos(ln3)</td><td>tan(ln3)</td><td>cot(ln3)</td><td>arctan(ln3)</td><td>ln(ln3)</td><td>3</td></tr>
+              <tr><td>+∞</td><td>—</td><td>—</td><td>—</td><td>—</td><td>π/2 גבול</td><td>∞ גבול</td><td>∞ גבול</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+</body>
+</html>
