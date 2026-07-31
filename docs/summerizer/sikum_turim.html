@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>סיכום שבוע הטורים · אינפי 2</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<style>
+  :root{--bg:#f5f0e8;--card:#fff;--primary:#1a3a5c;--accent:#c0392b;--green:#2e7d32;--amber:#b8860b;--blue:#1565c0;--purple:#6a1b9a;--text:#2c2c2c;--muted:#5a5a5a;--border:#e2d8c8;--radius:14px;--shadow:0 2px 14px rgba(0,0,0,.08)}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Segoe UI','Noto Sans Hebrew',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.8;padding:24px}
+  .wrap{max-width:900px;margin:0 auto}
+  header.top{background:linear-gradient(135deg,var(--primary),#2c5f8a);color:#fff;padding:26px 32px;border-radius:var(--radius);box-shadow:var(--shadow);text-align:center;margin-bottom:20px}
+  header.top h1{font-size:1.75em;font-weight:800;margin-bottom:6px}
+  header.top p{opacity:.9;font-weight:300}
+  h2.sec{font-size:1.3em;color:var(--primary);border-right:5px solid var(--accent);padding-right:12px;margin:26px 0 12px}
+  h3{color:var(--primary);font-size:1.05em;margin:12px 0 4px}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px 22px;box-shadow:var(--shadow);margin-bottom:16px}
+  table{width:100%;border-collapse:collapse;font-size:.92em;margin-top:6px}
+  th,td{padding:9px 11px;border-bottom:1px solid var(--border);text-align:right;vertical-align:top}
+  th{background:var(--primary);color:#fff}
+  tr:nth-child(even) td{background:#faf7f1}
+  code,.m{background:#eef0f4;padding:1px 6px;border-radius:5px;font-family:'Consolas',monospace;font-size:.9em;direction:ltr;display:inline-block}
+  .big{background:#f6f1fb;border:1px solid #d9c4ec;border-radius:11px;padding:14px 18px;margin:12px 0;font-size:.96em}
+  .big b{color:var(--purple)}
+  ol{padding-right:22px}ol li{margin:8px 0} ul{padding-right:20px} ul li{margin:6px 0}
+  .step{background:#eef4fb;border:1px solid #cfe0f2;border-radius:9px;padding:8px 13px;margin:6px 0;font-size:.92em}
+  .warn{background:#fdeceb;border:1px solid #f0b8b3;border-right:5px solid var(--accent);border-radius:10px;padding:12px 16px;font-size:.9em;margin-top:10px}
+  .good{background:#eaf4ea;border:1px solid #bcd9bc;border-right:5px solid var(--green);border-radius:10px;padding:12px 16px;font-size:.9em;margin-top:10px}
+  .good b{color:var(--green)}
+  .pill{display:inline-block;background:#eef0f4;border:1px solid var(--border);border-radius:999px;padding:1px 10px;font-size:.8em;color:var(--primary);font-weight:700}
+  .katex{font-size:1.02em}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>סיכום שבוע הטורים 🔗</h1>
+  <p>חדו״א 2 · תרגול 6 + שיעורי בית 6 · מתי טור מתכנס, מתבדר, ומה ערכו</p>
+</header>
+
+<!-- ① BIG PICTURE -->
+<h2 class="sec">① התמונה הגדולה — הסכום החלקי הוא סדרה</h2>
+<div class="card">
+  <div class="big">
+    <b>הרעיון שמאחד הכל:</b> טור הוא <b>גבול של סדרה</b>. מגדירים את סדרת הסכומים החלקיים
+    $S_N=\sum_{n=k}^{N}a_n$, ואז ״הטור״ הוא $\displaystyle\sum_{n=k}^\infty a_n=\lim_{N\to\infty}S_N$.
+  </div>
+  <p>בדיוק כמו שבאינטגרל לא אמיתי הייתה <b>פונקציה צוברת</b> $F(x)=\int_a^x f$, כאן יש <b>סדרה צוברת</b> $S_N$. שתיהן ״צוברות״ — האינטגרל צובר שטח ברציפות, $S_N$ צוברת נקודות. ולכן:</p>
+  <table>
+    <tr><th>אינטגרל לא אמיתי</th><th>טור</th></tr>
+    <tr><td>$\int_a^\infty f=\lim_{b\to\infty}\int_a^b f$</td><td>$\sum_{n=k}^\infty a_n=\lim_{N\to\infty}\sum_{n=k}^N a_n$</td></tr>
+    <tr><td>$F$ צוברת שטח (רציף)</td><td>$S_N$ צוברת נקודות (בדיד)</td></tr>
+  </table>
+  <div class="good"><b>מתנה 🎁:</b> ברגע שהוכחת שטור <b>מתכנס</b>, קיבלת בחינם ש־$a_n\to0$ (תנאי הכרחי). לפעמים זה מאוד שימושי כדי להסיק גבול.</div>
+</div>
+
+<!-- ② NECESSARY CONDITION -->
+<h2 class="sec">② תנאי הכרחי — הבדיקה הראשונה תמיד</h2>
+<div class="card">
+  <div class="big"><b>משפט:</b> אם $\sum a_n$ מתכנס אז $\lim_{n\to\infty}a_n=0$.</div>
+  <ul>
+    <li><b>הקונטרה־פוזיטיב (השימוש העיקרי):</b> אם $a_n\not\to0$ ⟸ הטור <b>מתבדר</b> מיידית.</li>
+    <li>⚠️ <b>אבל $a_n\to0$ לא אומר כלום!</b> זה לא מבטיח התכנסות (הטור ההרמוני $\sum\frac1n$ — האיברים $\to0$ אבל מתבדר).</li>
+  </ul>
+  <div class="warn">
+    ⏱️ <b>אסטרטגיה:</b> בכל תרגיל, קודם ״הריצי במבט״ את $\lim a_n$. אם ברור שהוא <b>לא</b> $0$ — סיימת, מתבדר. אם הוא $0$ (או לא ברור) — זה רק אומר ״אפשר להתחיל״, ממשיכים למבחנים. אל תבזבזי רבע שעה לחשב גבול רק כדי לגלות שהוא $0$ — כי $0$ לא מסיק כלום.
+  </div>
+</div>
+
+<!-- ③ COMPUTING VALUE -->
+<h2 class="sec">③ לחשב את <u>ערך</u> הטור — רק 2 כלים</h2>
+<div class="card">
+  <p>לזכור: כמעט אף טור אי אפשר לחשב! בארגז הכלים לחישוב ערך יש בעצם רק שניים (+ הגדרה):</p>
+
+  <h3>🔵 טור גיאומטרי</h3>
+  <p>$\displaystyle\sum_{n=0}^\infty q^n=\frac{1}{1-q}$ עבור $|q|<1$ (אחרת מתבדר).</p>
+
+  <h3>🟢 טור טלסקופי — איברים מצטמצמים</h3>
+  <p>מזהים מבנה של <b>איבר פחות האיבר שלפניו</b>: $a_{n+1}-a_n$. אחרי הצמצום נשאר רק <b>הראשון והאחרון</b>.</p>
+  <div class="step"><b>סימן זיהוי:</b> רואים $\sqrt{n+1}-\sqrt{n}$, או $\frac{1}{n}-\frac{1}{n+1}$ — כל דבר שבו האינדקס ״קופץ ב־1״. אם יש קפיצה גדולה יותר (למשל $+5$ מול $+1$) — עדיין טלסקופי, רק נשארים כמה איברים בהתחלה וכמה בסוף (״בדיליי״).</div>
+  <div class="big">
+    <b>דוגמה מהתרגול:</b> $\sum\big(\sqrt{n+2}-2\sqrt{n+1}+\sqrt{n}\big)$ מפרקים לשני טלסקופיים $\to$ הערך יוצא $1-\sqrt2$. שימי לב: הגבול $\sqrt{n+2}-\sqrt2\to\infty$, ולכן <b>אסור</b> היה לפצל לשני טורים נפרדים (ראי המלכודת למטה).
+  </div>
+
+  <div class="warn">
+    ⚠️ <b>מלכודת ״ליניאריות / השטן״ (טעות סטודנט א׳):</b> אסור לפצל $\sum(a_n-b_n)=\sum a_n-\sum b_n$ <b>אלא אם שני הטורים מתכנסים</b>! זה בדיוק כמו באינטגרלים ($\int(f-g)$). טור = גבול, ומותר לפרק גבול של הפרש להפרש גבולות רק כששניהם קיימים. <br>✅ <b>הטריק הנכון:</b> להשאיר את הגבול <b>בחוץ</b> — $\lim_{N\to\infty}\sum_{n=k}^N$ — ואז לפצל את הסכום <b>הסופי</b>, לצמצם, ורק בסוף לקחת גבול.
+  </div>
+</div>
+
+<!-- ④ CONVERGENCE TESTS -->
+<h2 class="sec">④ מבחני התכנסות (לטורים אי־שליליים)</h2>
+<div class="card">
+  <table>
+    <tr><th>מבחן</th><th>הניסוח</th><th>מתי משתמשים</th></tr>
+    <tr><td><b>השוואה</b></td><td>$0\le a_n\le b_n$: אם $\sum b_n$ מתכנס ⟸ $\sum a_n$ מתכנס. אם $\sum a_n$ מתבדר ⟸ $\sum b_n$ מתבדר.</td><td>כשאפשר ״להעיף״ בקלות ביטוי מציק (חסום/קטן).</td></tr>
+    <tr><td><b>השוואה גבולי</b></td><td>$\frac{a_n}{b_n}\to L$, $0<L<\infty$ ⟸ שניהם מתכנסים או שניהם מתבדרים <b>יחד</b>.</td><td>כשיש הרבה איברים מעצבנים — פשוט מזהים סדר גודל ומחלקים.</td></tr>
+    <tr><td><b>זנבות</b></td><td>מספר סופי של איברים בהתחלה <b>לא משפיע</b> על התכנסות — אפשר להתחיל מכל $K$.</td><td>כשחוקיות מתחילה ״משלב מסוים״ (למשל אחרי $n\ge3$).</td></tr>
+  </table>
+  <div class="big">
+    <b>מתי השוואה ומתי השוואה גבולי?</b> אם צריך רק ״להעיף ביטוי אחד״ — השוואה. אם יש לך <b>אינטואיציה לסדר הגודל</b> אבל להעיף ידנית זה ארוך ($+1,+9,\dots$) — השוואה גבולי: בוחרים $b_n$ שהוא סדר הגודל, מחלקים, מסיימים.
+  </div>
+</div>
+
+<!-- ⑤ HARMONIC + P -->
+<h2 class="sec">⑤ הטור ההרמוני ומבחן ה־$p$</h2>
+<div class="card">
+  <table>
+    <tr><th>הטור</th><th>מתכנס / מתבדר</th><th>נימוק</th></tr>
+    <tr><td>$\sum\frac1n$ (הרמוני)</td><td class="m" style="color:var(--accent)">מתבדר</td><td>$p=1$. מתבדר <b>לאט מאוד</b>, אבל מתבדר.</td></tr>
+    <tr><td>$\sum\frac1{n^p}$ (טור ה־$p$)</td><td>מתכנס $\iff p>1$</td><td>מבחן האינטגרל (הרצאה) + $\int_1^\infty\frac{dx}{x^p}$.</td></tr>
+    <tr><td>$\sum\frac1{n^2}=\frac{\pi^2}{6}$</td><td class="m" style="color:var(--green)">מתכנס</td><td>$p=2>1$.</td></tr>
+  </table>
+  <div class="good"><b>חבר טוב 🤝:</b> הטור ההרמוני הוא ״כלי ההשוואה״ הכי שימושי. הרבה טורים מתבדרים כי הם ״סדר גודל של $\frac1n$״ (או גדולים ממנו).</div>
+</div>
+
+<!-- ⑥ TOOLBOX / INTUITION -->
+<h2 class="sec">⑥ ארגז הכלים והאינטואיציות</h2>
+<div class="card">
+  <ul>
+    <li><b>גורם מוביל (לפולינום/רציונלי):</b> מסתכלים על החזקה הדומיננטית במונה ובמכנה ⟸ סדר הגודל ⟸ משווים ל־$\frac1{n^{\text{הפרש}}}$. למשל $\frac{\sqrt{n^2+\dots}}{n^3+\dots}\sim\frac1{n^2}$ ⟸ מתכנס.</li>
+    <li><b>סדרי גודל ליד 0:</b> כש־$n\to\infty$ אז $\frac1n\to0$, ולכן $\;\arctan\frac1n\sim\frac1n\;$ ו־$\;\sin\frac1n\sim\frac1n\;$ (מהגבולות $\frac{\arctan x}{x}\to1,\ \frac{\sin x}{x}\to1$). לכן $\sum\arctan\frac1n$ מתבדר יחד עם ההרמוני.</li>
+    <li><b>״להשאיר ריבוע ⬜״:</b> לא בטוחה עם מה להשוות בהשוואה גבולי? השאירי $\frac{1}{\square}$, השתמשי בהיינה + לופיטל לחישוב הגבול, וגלי מה צריך להיות בריבוע. (חיסרון: לא תמיד עובד אם צריך להעלות את המכנה למעלה.)</li>
+    <li><b>להעיף ביטוי חסום מעצבן:</b> תוספת חסומה כמו $100\sin n$ לא משנה התכנסות. מעיפים אותה במבחן ההשוואה — אבל מזיזים אינדקס כדי לשמור על סימן: לכל $n\ge200$ מתקיים $\;\text{(ביטוי)}\ge\frac{n}{2}$, וזה זנב של הרמוני ⟸ מתבדר.</li>
+  </ul>
+  <div class="step"><b>שאלת ה־Heine:</b> עוברים לגבול־פונקציה (ואז לופיטל) רק כשהנימוק קשור לרציפות/גזירות/גבול מאינפי 1. לסנדוויץ׳, מונוטוניות, השאג וכו׳ — לא צריך היינה.</div>
+</div>
+
+<!-- ⑦ PROVE / DISPROVE -->
+<h2 class="sec">⑦ הוכח / הפרך — הכלים המיוחדים</h2>
+<div class="card">
+  <ul>
+    <li><b>דוגמה נגדית ראשונה לבדוק:</b> תמיד להתחיל מ־$a_n=\frac1n$. הרבה טענות ״נופלות״ מיד עליו (למשל: ״$\sum a_n^2$ מתכנס ⟸ $\sum a_n$ מתכנס״ — שקר, כי $\frac1{n^2}$ מתכנס אבל $\frac1n$ לא).</li>
+    <li><b>תנאי הכרחי בכיוון הישיר:</b> אם נתון ש־$\sum a_n$ מתכנס אז $a_n\to0$, ולכן <b>משלב מסוים</b> $a_n<1$ ⟸ $a_n^2\le a_n$ ⟸ מבחן השוואה ⟸ $\sum a_n^2$ מתכנס. (פותחים הגדרת גבול, ואז השוואה.)</li>
+    <li><b>תת־סדרה זוגי/אי־זוגי:</b> אם $S_{2N}$ ו־$S_{2N-1}$ שואפות ל<b>אותו</b> גבול ⟸ גם $S_N$ שואפת אליו. (זה ההיפך ממשפט הירושה.) שימושי לטורים שבהם הסכום החלקי מתנהג שונה במיקום זוגי מול אי־זוגי.</li>
+    <li><b>הקשר $S_N=S_{N-1}+a_N$:</b> טריק בסיסי — לצבור עד $N-1$ ולהוסיף איבר אחד. עוזר לחבר בין הסדרות הזוגית והאי־זוגית.</li>
+  </ul>
+  <div class="warn">
+    ⚠️ <b>המלכודת הכי גדולה:</b> להסתכל על $\sum_{n=2}^\infty(-1)^n$-ish ולומר ״הביטוי מצטמצם ל־$0$ ⟸ הטור $=0$״. <b>לא!</b> הסכום החלקי יוצא $0$ רק אם עוצרים במיקום <b>אי־זוגי</b>; במיקום זוגי הוא לא $0$. חייבים לבדוק את שתי תת־הסדרות, לא ״להניח את המבוקש״.
+  </div>
+</div>
+
+<!-- ⑧ HW6 MAP -->
+<h2 class="sec">⑧ שיעורי בית 6 — מפת השאלות</h2>
+<div class="card">
+  <table>
+    <tr><th>#</th><th>הנושא</th><th>הכלי</th></tr>
+    <tr><td>1</td><td>חישוב ערך / התבדרות (א׳–ה׳): גיאומטרי, $\cosh\frac1n$ (תנאי הכרחי), טלסקופיים</td><td>גיאומטרי + טלסקופי + תנאי הכרחי</td></tr>
+    <tr><td>2</td><td>התכנסות/התבדרות (א׳–ה׳): $\frac1{\ln n}$, $(\sqrt{n+2}-\sqrt n)^3$, ...</td><td>מבחן אינטגרל + השוואה</td></tr>
+    <tr><td>3</td><td>טעויות סטודנט <span class="pill">רשות</span></td><td>זיהוי מלכודות</td></tr>
+    <tr><td>4</td><td>הוכחה: התכנסות טור $\iff \lim b_n=0$ (סדרה מתחלפת מסודרת)</td><td>תת־סדרה זוגי/אי־זוגי</td></tr>
+    <tr><td>5</td><td>טור $a\,a_n+b\,a_{n+1}+c\,a_{n+2}$ עם $a+b+c=0$</td><td>טלסקופי</td></tr>
+    <tr><td>6</td><td>נכון/לא נכון על טורים (א׳–ד׳)</td><td>הוכח/הפרך + דוגמה נגדית $\frac1n$</td></tr>
+  </table>
+</div>
+
+<p style="text-align:center;color:var(--muted);font-size:.85em;margin:22px 0 8px">
+  לצילום מסך · תלי מעל השולחן · הרעיון המרכזי: $S_N$ היא <b>סדרה</b> — כל השאר נובע מזה 🔗
+</p>
+
+</div>
+
+<script>
+let done=false;
+function render(){
+  if(done) return true;
+  try{ if(typeof renderMathInElement==='function'){
+    renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}],throwOnError:false,ignoredTags:["script","noscript","style","textarea","pre"]});
+    done=true; return true;
+  }}catch(e){}
+  return false;
+}
+function boot(){ if(render())return; let t=0;const iv=setInterval(()=>{if(render()||++t>100)clearInterval(iv);},150); }
+window.addEventListener('DOMContentLoaded',boot);
+window.addEventListener('load',render);
+</script>
+</body>
+</html>

@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-06-05T11:18:00.242Z",
-  "totalFilesScanned": 57,
-  "lecturesFound": 10,
-  "recitationsFound": 10,
-  "homeworkFilesFound": 7,
-  "summariesFound": 17,
-  "pastExamFilesFound": 13,
-  "extractionSuccesses": 55,
+  "generatedAt": "2026-07-28T14:35:49.360Z",
+  "totalFilesScanned": 82,
+  "lecturesFound": 13,
+  "recitationsFound": 13,
+  "homeworkFilesFound": 12,
+  "summariesFound": 23,
+  "pastExamFilesFound": 20,
+  "extractionSuccesses": 80,
   "extractionFailures": 0,
   "needsOcr": 2,
   "detectedTopicsCount": 16,
-  "durationMs": 4808
+  "durationMs": 6819
 }

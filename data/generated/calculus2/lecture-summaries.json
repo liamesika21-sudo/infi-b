@@ -354,5 +354,65 @@
     "extractedTheorems": 0,
     "extractedFormulas": 0,
     "confidence": 0.82
+  },
+  {
+    "lectureNumber": 11,
+    "weekNumber": 11,
+    "sourceFileId": "lecture-lecture-11-group-1-calculus-2-2026",
+    "filename": "Lecture 11 group 1 calculus 2 2026.pdf",
+    "title": "הרצאה 11",
+    "mainTopics": [
+      "גבולות",
+      "טורים",
+      "סדרות"
+    ],
+    "keyDefinitions": [],
+    "keyTheorems": [],
+    "keyFormulas": [],
+    "examNotes": [],
+    "dataQuality": "ocr_only",
+    "summarySourceFile": null,
+    "extractedTheorems": 0,
+    "extractedFormulas": 15,
+    "confidence": 0.8999999999999999
+  },
+  {
+    "lectureNumber": 12,
+    "weekNumber": 12,
+    "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+    "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+    "title": "הרצאה 12",
+    "mainTopics": [
+      "גבולות",
+      "סדרות"
+    ],
+    "keyDefinitions": [],
+    "keyTheorems": [],
+    "keyFormulas": [],
+    "examNotes": [],
+    "dataQuality": "ocr_only",
+    "summarySourceFile": null,
+    "extractedTheorems": 0,
+    "extractedFormulas": 18,
+    "confidence": 0.8999999999999999
+  },
+  {
+    "lectureNumber": 13,
+    "weekNumber": 13,
+    "sourceFileId": "lecture-lecture-13-group-1-calculus-2-2026",
+    "filename": "Lecture 13 group 1 calculus 2 2026.pdf",
+    "title": "הרצאה 13",
+    "mainTopics": [
+      "סדרות"
+    ],
+    "keyDefinitions": [],
+    "keyTheorems": [],
+    "keyFormulas": [],
+    "examNotes": [],
+    "dataQuality": "ocr_only",
+    "summarySourceFile": null,
+    "extractedTheorems": 0,
+    "extractedFormulas": 0,
+    "confidence": 0.8999999999999999
   }
 ]

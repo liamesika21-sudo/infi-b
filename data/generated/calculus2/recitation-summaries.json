@@ -51,6 +51,128 @@
     "confidence": 0.8999999999999999
   },
   {
+    "recitationNumber": 11,
+    "weekNumber": 11,
+    "sourceFileId": "recitation-recitation-11-hebrew",
+    "filename": "Recitation 11-Hebrew.pdf",
+    "practicesLecture": 10,
+    "mainThemes": [
+      "גבולות",
+      "טור טיילור",
+      "טורים",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רציפות",
+      "פולינום טיילור"
+    ],
+    "whatWasPracticed": "תרגול 11 — נושאים: גבולות, טור טיילור, טורים, נגזרות, סדרות, פונקציות, רציפות, פולינום טיילור",
+    "keyTechniques": [],
+    "examRelevance": "medium",
+    "questionCount": 7,
+    "questionIds": [
+      "recitation-recitation-11-hebrew-question-1",
+      "recitation-recitation-11-hebrew-question-2",
+      "recitation-recitation-11-hebrew-question-3",
+      "recitation-recitation-11-hebrew-question-4",
+      "recitation-recitation-11-hebrew-question-5",
+      "recitation-recitation-11-hebrew-question-6",
+      "recitation-recitation-11-hebrew-question-7"
+    ],
+    "solutionPatternCount": 0,
+    "mustPractice": [],
+    "commonMistakes": [],
+    "conclusions": [],
+    "topicCoverage": [
+      "גבולות",
+      "טור טיילור",
+      "טורים",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רציפות",
+      "פולינום טיילור"
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
+    "recitationNumber": 12,
+    "weekNumber": 12,
+    "sourceFileId": "recitation-recitation-12-hebrew",
+    "filename": "Recitation 12-Hebrew.pdf",
+    "practicesLecture": 11,
+    "mainThemes": [
+      "גבולות",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "whatWasPracticed": "תרגול 12 — נושאים: גבולות, נגזרות, פונקציות, רציפות",
+    "keyTechniques": [],
+    "examRelevance": "medium",
+    "questionCount": 5,
+    "questionIds": [
+      "recitation-recitation-12-hebrew-question-1",
+      "recitation-recitation-12-hebrew-question-2",
+      "recitation-recitation-12-hebrew-question-3",
+      "recitation-recitation-12-hebrew-question-4",
+      "recitation-recitation-12-hebrew-question-5"
+    ],
+    "solutionPatternCount": 1,
+    "mustPractice": [],
+    "commonMistakes": [],
+    "conclusions": [],
+    "topicCoverage": [
+      "גבולות",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "confidence": 0.889
+  },
+  {
+    "recitationNumber": 13,
+    "weekNumber": 13,
+    "sourceFileId": "recitation-recitation-13-hebrew",
+    "filename": "Recitation 13-Hebrew.pdf",
+    "practicesLecture": 12,
+    "mainThemes": [
+      "גבולות",
+      "התכנסות בהחלט",
+      "טורים",
+      "מבחן ההשוואה",
+      "מבחן השורש",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "whatWasPracticed": "תרגול 13 — נושאים: גבולות, התכנסות בהחלט, טורים, מבחן ההשוואה, מבחן השורש, סדרות, פונקציות, רציפות",
+    "keyTechniques": [],
+    "examRelevance": "medium",
+    "questionCount": 4,
+    "questionIds": [
+      "recitation-recitation-13-hebrew-question-1",
+      "recitation-recitation-13-hebrew-question-2",
+      "recitation-recitation-13-hebrew-question-3",
+      "recitation-recitation-13-hebrew-question-4"
+    ],
+    "solutionPatternCount": 0,
+    "mustPractice": [],
+    "commonMistakes": [],
+    "conclusions": [],
+    "topicCoverage": [
+      "גבולות",
+      "התכנסות בהחלט",
+      "טורים",
+      "מבחן ההשוואה",
+      "מבחן השורש",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "confidence": 0.7460833333333333
+  },
+  {
     "recitationNumber": 2,
     "weekNumber": 2,
     "sourceFileId": "recitation-recitation-2-hebrew",

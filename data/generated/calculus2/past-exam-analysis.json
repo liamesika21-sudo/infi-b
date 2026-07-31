@@ -1,5 +1,2142 @@
 [
   {
+    "sourceFileId": "past-exams-hebrew-moeda-2022-heb",
+    "filename": "MoedA_2022_heb.pdf",
+    "examYear": 2022,
+    "moed": "A",
+    "questions": [
+      {
+        "id": "past-exams-hebrew-moeda-2022-heb-question-1",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moeda-2022-heb",
+        "questionNumber": "53",
+        "content": "החוג למדעי המחשב אוניברסיטת רייכמן (53) 2 מבחן בחשבון אינפיניטסימלי 16/06/2022 — מועד א׳ !!!אין לרשום פתרונות מאחורי הדף : ז\"מספר ת : מספר מחברת ר יוסי שמאי\"ד :מרצה שעות 3 :משך הבחינה :הוראות תשובות לא מנומקות לא יקבלו .נקודות 25 משקל כל שאלה הוא .עליכן לענות בדיוק על ארבע מתוכן .לותלבחינה חמש שא אסור להפריד דפים .בסוף הבחינה יש להגיש את כל שאלון הבחינה .ורסחל איסור מוחלט להסתמך על חומר שלא נלמד בק .ניקוד !!!אין לרשום פתרונות מאחורי הדף !ת במקומות שאינם מיועדים לכךאין לרשום פתרונו !מהשאלון !בהצלחה ( נקודות 25 ) 1 שאלה .מתכנס ∑∞ n=1 an נניח שהטור .סדרה של מספרים ממשיים (an)∞ n=1 תהי (נקודות 13) (א) .limn→∞ an = 0 הוכיחו כי (נקודות 7) (i) :פתרון 1",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moeda-2022-heb",
+          "filename": "MoedA_2022_heb.pdf",
+          "text": "החוג למדעי המחשב אוניברסיטת רייכמן (53) 2 מבחן בחשבון אינפיניטסימלי 16/06/2022 — מועד א׳ !!!אין לרשום פתרונות מאחורי הדף : ז\"מספר ת : מספר מחברת ר יוסי שמאי\"ד :מרצה שעות 3 :משך הבחינה :הוראות תשובות לא מנומקות לא יקבלו .נקודות 25 משקל כל שאלה הוא .עליכן לענות בדיוק על ארבע מתוכן .לותלבחינה חמש שא אסור להפריד דפים .בסוף הבחינה יש להגיש את כל שאלון הבחינה .ורסחל איסור מוחלט להסתמך על חומר שלא נלמד בק .ניקוד !!!אין לרשום פתרונות מאחורי הדף !ת במקומות שאינם מיועדים לכךאין לרשום פתרונו !מהשאלון !בהצלחה ( נקודות 25 ) 1 שאלה .מתכנס ∑∞ n=1 an נניח שהטור .סדרה של מספרים ממשיים (an)∞ n=1 תהי (נקודות 13) (א) .limn→∞ an = 0 הוכיחו כי (נקודות 7) (i) :פתרון 1"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moeda-2022-heb-question-2",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moeda-2022-heb",
+        "questionNumber": "25",
+        "content": "( נקודות 25 ) 3 שאלה (נקודות 19) (א) פולינום הטיילור ושארית הטיילור :הגדירו את המושגים .x0 = 0פונקציה הגזירה פעמיים ב־ f : R → R תהי (נקודות 3) (i) . 0 סביב f של 2 מסדר :פתרון f של 2 חשבו את פולינום הטיילור מסדר .x > −1 לכל f (x) = √1 + x נביט בפונקציה המוגדרת על ידי (נקודות 4) (ii) .x0 = 0 סביב :פתרון 8",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moeda-2022-heb",
+          "filename": "MoedA_2022_heb.pdf",
+          "text": "( נקודות 25 ) 3 שאלה (נקודות 19) (א) פולינום הטיילור ושארית הטיילור :הגדירו את המושגים .x0 = 0פונקציה הגזירה פעמיים ב־ f : R → R תהי (נקודות 3) (i) . 0 סביב f של 2 מסדר :פתרון f של 2 חשבו את פולינום הטיילור מסדר .x > −1 לכל f (x) = √1 + x נביט בפונקציה המוגדרת על ידי (נקודות 4) (ii) .x0 = 0 סביב :פתרון 8"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moeda-2022-heb-question-3",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moeda-2022-heb",
+        "questionNumber": "25",
+        "content": "( נקודות 25 ) 4 שאלה נניח בנוסף כי .n ∈ N לכל an, bn ∈ N נניח כי .שתי סדרות של מספרים ממשיים (an)∞ n=1, (bn)∞ n=1 תהיינה (נקודות 19) (א) .עולה ממש (bn)∞ n=1 הסדרה .limn→∞ bn = ∞ הוכיחו כי (נקודות 4) (i) :פתרון .קיים limn→∞ an bn הוכיחו כי .an · bn−1 − an−1 · bn = (−1)n מתקיים 2 ≤ n ∈ N נניח בנוסף שלכל (נקודות 15) (ii) :פתרון 11",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moeda-2022-heb",
+          "filename": "MoedA_2022_heb.pdf",
+          "text": "( נקודות 25 ) 4 שאלה נניח בנוסף כי .n ∈ N לכל an, bn ∈ N נניח כי .שתי סדרות של מספרים ממשיים (an)∞ n=1, (bn)∞ n=1 תהיינה (נקודות 19) (א) .עולה ממש (bn)∞ n=1 הסדרה .limn→∞ bn = ∞ הוכיחו כי (נקודות 4) (i) :פתרון .קיים limn→∞ an bn הוכיחו כי .an · bn−1 − an−1 · bn = (−1)n מתקיים 2 ≤ n ∈ N נניח בנוסף שלכל (נקודות 15) (ii) :פתרון 11"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moeda-2022-heb-question-4",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moeda-2022-heb",
+        "questionNumber": "25",
+        "content": "( נקודות 25 ) 5 שאלה .∑∞ n=1 nxn (n−1)! נביט בטור החזקות (נקודות 16) (א) .מצאו את תחום ההתכנסות של הטור (נקודות 4) (i) :פתרון 14",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moeda-2022-heb",
+          "filename": "MoedA_2022_heb.pdf",
+          "text": "( נקודות 25 ) 5 שאלה .∑∞ n=1 nxn (n−1)! נביט בטור החזקות (נקודות 16) (א) .מצאו את תחום ההתכנסות של הטור (נקודות 4) (i) :פתרון 14"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moeda-2022-heb-question-5",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moeda-2022-heb",
+        "questionNumber": "(x)",
+        "content": "השייך לתחום ההתכנסות שמצאתן בסעיף x לכל f (x) = ∑∞ n=1 nxn (n−1)! :נביט בפונקציה המוגדרת על ידי (נקודות 12) (ii) .∑∞ n=0 n2 n! והסיקו את ערך הטור ,בתחום הגדרתה f עבור (ללא סיגמה) מצאו ביטוי פשוט .הקודם :פתרון 15",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moeda-2022-heb",
+          "filename": "MoedA_2022_heb.pdf",
+          "text": "השייך לתחום ההתכנסות שמצאתן בסעיף x לכל f (x) = ∑∞ n=1 nxn (n−1)! :נביט בפונקציה המוגדרת על ידי (נקודות 12) (ii) .∑∞ n=0 n2 n! והסיקו את ערך הטור ,בתחום הגדרתה f עבור (ללא סיגמה) מצאו ביטוי פשוט .הקודם :פתרון 15",
+          "startOffset": 2629,
+          "endOffset": 2840
+        },
+        "confidence": 0.56
+      }
+    ],
+    "detectedTopics": [
+      "גבולות",
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "repeatedPatterns": [
+      "טיילור",
+      "גבול",
+      "התכנסות בהחלט"
+    ],
+    "requiredTheorems": [
+      "מתקיים :הוכיחו או הפריכו את הטענה הבאה (נקודות 6) (ב) 1 − π2 3"
+    ],
+    "requiredFormulas": [
+      ".מתכנס ∑∞",
+      "n=1 an נניח שהטור .סדרה של מספרים ממשיים (an)∞",
+      "n=1 תהי (נקודות 13) (א)",
+      ".limn→∞ an = 0 הוכיחו כי (נקודות 7) (i)",
+      ".מתכנס בהחלט ∑∞",
+      "ex+x √ex −1 dx :קבעו האם האינטגרל הלא אמיתי הבא מתכנס או מתבדר (נקודות 12) (ב)",
+      ".סדרה של מספרים ממשיים (an)∞",
+      "n=0 ותהי x0 ∈ R תהי ( נקודות 25 ) 2 שאלה",
+      "מתכנס ב־ ∑∞",
+      "n=0 an(x − x0)n נניח כי טור החזקות . |x2 − x0| < |x1 − x0| שעבורן x1, x2 ∈ R תהיינה (נקודות 15) (א)",
+      ".x = x2מתכנס בהחלט ב־ ∑∞",
+      "n=0 an(x − x0)n הוכיחו שטור החזקות .x = x1",
+      ":אינכן צריכות להגדיר את המושג :הערה .∑∞",
+      "n=0 an(x − x0)n רדיוס ההתכנסות של טור החזקות :הגדירו את המושג (נקודות 3) (ב)",
+      ". 1 √2−1 − 1 √2+1 + 1 √3−1 − 1 √3+1 + . . . :קבעו האם הטור הבא מתכנס או מתבדר (נקודות 7) (ג)"
+    ],
+    "proofPatterns": [],
+    "difficultyEstimate": "medium",
+    "sourceSnippets": [
+      {
+        "sourceFileId": "past-exams-hebrew-moeda-2022-heb",
+        "filename": "MoedA_2022_heb.pdf",
+        "text": "החוג למדעי המחשב אוניברסיטת רייכמן (53) 2 מבחן בחשבון אינפיניטסימלי 16/06/2022 — מועד א׳ !!!אין לרשום פתרונות מאחורי הדף : ז\"מספר ת : מספר מחברת ר יוסי שמאי\"ד :מרצה שעות 3 :משך הבחינה :הוראות תשובות לא מנומקות לא יקבלו .נקודות 25 משקל כל שאלה הוא .עליכן לענות בדיוק על ארבע מתוכן .לותלבחינה חמש שא אסור להפריד דפים .בסוף הבחינה יש להגיש את כל שאלון הבחינה .ורסחל איסור מוחלט להסתמך על חומר שלא נלמד בק .ניקוד !!!אין לרשום פתרונות מאחורי הדף !ת במקומות שאינם מיועדים לכךאין לרשום פתרונו !מהשאלון !בהצלחה ( נקודות 25 ) 1 שאלה .מתכנס ∑∞ n=1 an נניח שהטור .סדרה של מספרים ממשיים (an)∞ n=1 תהי (נקודות 13) (א) .limn→∞ an = 0 הוכיחו כי (נקודות 7) (i) :פתרון 1"
+      },
+      {
+        "sourceFileId": "past-exams-hebrew-moeda-2022-heb",
+        "filename": "MoedA_2022_heb.pdf",
+        "text": ".מתכנס בהחלט ∑∞ n=1 an n2 הוכיחו שהטור (נקודות 6) (ii) :פתרון 2"
+      },
+      {
+        "sourceFileId": "past-exams-hebrew-moeda-2022-heb",
+        "filename": "MoedA_2022_heb.pdf",
+        "text": ".´ 1 0 ex+x √ex −1 dx :קבעו האם האינטגרל הלא אמיתי הבא מתכנס או מתבדר (נקודות 12) (ב) :פתרון 3"
+      },
+      {
+        "sourceFileId": "past-exams-hebrew-moeda-2022-heb",
+        "filename": "MoedA_2022_heb.pdf",
+        "text": ".סדרה של מספרים ממשיים (an)∞ n=0 ותהי x0 ∈ R תהי ( נקודות 25 ) 2 שאלה מתכנס ב־ ∑∞ n=0 an(x − x0)n נניח כי טור החזקות . |x2 − x0| < |x1 − x0| שעבורן x1, x2 ∈ R תהיינה (נקודות 15) (א) .x = x2מתכנס בהחלט ב־ ∑∞ n=0 an(x − x0)n הוכיחו שטור החזקות .x = x1 :פתרון 5"
+      }
+    ],
+    "confidence": 0.8083333333333333
+  },
+  {
+    "sourceFileId": "past-exams-hebrew-moeda-2023-heb",
+    "filename": "MoedA_2023_heb.pdf",
+    "examYear": 2023,
+    "moed": "A",
+    "questions": [
+      {
+        "id": "past-exams-hebrew-moeda-2023-heb-question-1",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moeda-2023-heb",
+        "questionNumber": "10",
+        "content": ")ב( )10 נקודות( חשבו את ערך האינטגרל המסוים הבא: ∫ π2 0 cos (√x) dx פתרון: 3",
+        "topicIds": [
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moeda-2023-heb",
+          "filename": "MoedA_2023_heb.pdf",
+          "text": ")ב( )10 נקודות( חשבו את ערך האינטגרל המסוים הבא: ∫ π2 0 cos (√x) dx פתרון: 3",
+          "startOffset": 717,
+          "endOffset": 793
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moeda-2023-heb-question-2",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moeda-2023-heb",
+        "questionNumber": "2",
+        "content": "שאלה 2 ) 25 נקודות ( )א( )17 נקודות( .x0 סביב f . הגדירו את המושג: טור הטיילור שלx0 פעמים ב־ ∞ פונקציה הגזירה f ותהי x0 ∈ R ( )2 נקודות( תהיI) פתרון: , ומצאו את תחום התכנסות הטור.f (x) = { arctan x x x 6 = 0 1 x = 0 של הפונקציה x0 = 0 ( )10 נקודות( מצאו את טור הטיילור סביבII) פתרון: 4",
+        "topicIds": [
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moeda-2023-heb",
+          "filename": "MoedA_2023_heb.pdf",
+          "text": "שאלה 2 ) 25 נקודות ( )א( )17 נקודות( .x0 סביב f . הגדירו את המושג: טור הטיילור שלx0 פעמים ב־ ∞ פונקציה הגזירה f ותהי x0 ∈ R ( )2 נקודות( תהיI) פתרון: , ומצאו את תחום התכנסות הטור.f (x) = { arctan x x x 6 = 0 1 x = 0 של הפונקציה x0 = 0 ( )10 נקודות( מצאו את טור הטיילור סביבII) פתרון: 4"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moeda-2023-heb-question-3",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moeda-2023-heb",
+        "questionNumber": "10",
+        "content": ".f (10)(0) ( )5 נקודות( חשבו את הערך שלIII) פתרון: 6",
+        "topicIds": [
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moeda-2023-heb",
+          "filename": "MoedA_2023_heb.pdf",
+          "text": ".f (10)(0) ( )5 נקודות( חשבו את הערך שלIII) פתרון: 6",
+          "startOffset": 1130,
+          "endOffset": 1182
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moeda-2023-heb-question-4",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moeda-2023-heb",
+        "questionNumber": "0",
+        "content": "שעבורה 0 < c < 3 הוכיחו שקיימת נקודה .∫ 3 0 f (x) dx = 0 נניח כי פונקציה רציפה. f : [0, 3] → R )ב( )8 נקודות( תהי .f (c) = 0 פתרון: 7",
+        "topicIds": [
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moeda-2023-heb",
+          "filename": "MoedA_2023_heb.pdf",
+          "text": "שעבורה 0 < c < 3 הוכיחו שקיימת נקודה .∫ 3 0 f (x) dx = 0 נניח כי פונקציה רציפה. f : [0, 3] → R )ב( )8 נקודות( תהי .f (c) = 0 פתרון: 7",
+          "startOffset": 1199,
+          "endOffset": 1332
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moeda-2023-heb-question-5",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moeda-2023-heb",
+        "questionNumber": "4",
+        "content": "שאלה 4 ) 25 נקודות ( פונקציה G ותהי [a, b] רציפה ב־ f . נניח כי[a, b] פונקציה המוגדרת ב־ f . תהיa < b כך ש־ a, b ∈ R )א( )9 נקודות( תהיינה . הוכיחו כי[a, b] ב־ f קדומה של ∫ b a f (x) dx = G(b) − G(a) פתרון: 12",
+        "topicIds": [
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moeda-2023-heb",
+          "filename": "MoedA_2023_heb.pdf",
+          "text": "שאלה 4 ) 25 נקודות ( פונקציה G ותהי [a, b] רציפה ב־ f . נניח כי[a, b] פונקציה המוגדרת ב־ f . תהיa < b כך ש־ a, b ∈ R )א( )9 נקודות( תהיינה . הוכיחו כי[a, b] ב־ f קדומה של ∫ b a f (x) dx = G(b) − G(a) פתרון: 12"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moeda-2023-heb-question-6",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moeda-2023-heb",
+        "questionNumber": "5",
+        "content": "שאלה 5 ) 25 נקודות ( N גזירה f ונניח כי 0 ≤ N ∈ Z יהי .[x0, x]פונקציה המוגדרת ב־ f ותהי x0 < x כך ש־ x0, x ∈ R )א( )15 נקודות( תהיינה , ונניחx0 סביב N מסדר f שארית הטיילור של RN . תהי(x0, x)וגזירה ב־ [x0, x]רציפה ב־ f (N ) . נניח בנוסף כי[x0, x]פעמים ב־ .RN (x) = 0 כי .R(N +1) N (c) = 0 שעבורה x0 < c < x ( )8 נקודות( הוכיחו שקיימת נקודהI) פתרון: 15",
+        "topicIds": [
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moeda-2023-heb",
+          "filename": "MoedA_2023_heb.pdf",
+          "text": "שאלה 5 ) 25 נקודות ( N גזירה f ונניח כי 0 ≤ N ∈ Z יהי .[x0, x]פונקציה המוגדרת ב־ f ותהי x0 < x כך ש־ x0, x ∈ R )א( )15 נקודות( תהיינה , ונניחx0 סביב N מסדר f שארית הטיילור של RN . תהי(x0, x)וגזירה ב־ [x0, x]רציפה ב־ f (N ) . נניח בנוסף כי[x0, x]פעמים ב־ .RN (x) = 0 כי .R(N +1) N (c) = 0 שעבורה x0 < c < x ( )8 נקודות( הוכיחו שקיימת נקודהI) פתרון: 15"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moeda-2023-heb-question-7",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moeda-2023-heb",
+        "questionNumber": "2",
+        "content": "הפונקציה המוגדרת על ידי F : R2 → R )10 נקודות( תהי )ב( F (x, y) = { xy(x2−y2) x2+y2 (x, y) 6 = (0, 0) 0 (x, y) = (0, 0) .F ′ x(0, 0) ( )3 נקודות( חשבו את הערך שלI) .F ′ x(2, 2) ( )3 נקודות( חשבו את הערך שלII) .F ′′ xy (0, 0) ( )4 נקודות( חשבו את הערך שלIII) פתרון: 17",
+        "topicIds": [
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moeda-2023-heb",
+          "filename": "MoedA_2023_heb.pdf",
+          "text": "הפונקציה המוגדרת על ידי F : R2 → R )10 נקודות( תהי )ב( F (x, y) = { xy(x2−y2) x2+y2 (x, y) 6 = (0, 0) 0 (x, y) = (0, 0) .F ′ x(0, 0) ( )3 נקודות( חשבו את הערך שלI) .F ′ x(2, 2) ( )3 נקודות( חשבו את הערך שלII) .F ′′ xy (0, 0) ( )4 נקודות( חשבו את הערך שלIII) פתרון: 17",
+          "startOffset": 2846,
+          "endOffset": 3113
+        },
+        "confidence": 0.56
+      }
+    ],
+    "detectedTopics": [
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "repeatedPatterns": [
+      "טיילור",
+      "התכנסות בהחלט"
+    ],
+    "requiredTheorems": [
+      "החוג למדעי המחשב אוניברסיטת רייכמן מבחן בחשבון אינפיניטסימלי 2 )52( מועד א׳ — 07/07/202..."
+    ],
+    "requiredFormulas": [
+      "cos (√x) dx",
+      ".x0 סביב f . הגדירו את המושג: טור הטיילור שלx0 פעמים ב־ ∞ פונקציה הגזירה f ותהי x0 ∈ R ( )2 נקודות( תהיI)",
+      ", ומצאו את תחום התכנסות הטור.f (x) =",
+      "x x 6 = 0",
+      "1 x = 0 של הפונקציה x0 = 0 ( )10 נקודות( מצאו את טור הטיילור סביבII)",
+      "שעבורה 0 < c < 3 הוכיחו שקיימת נקודה .∫ 3",
+      "0 f (x) dx = 0 נניח כי פונקציה רציפה. f : [0, 3] → R )ב( )8 נקודות( תהי",
+      ".f (c) = 0",
+      "n=1 bn מתכנס בתנאי, וכי ∑∞",
+      "n=1 an שתי סדרות של מספרים ממשיים. נניח כי (bn)∞",
+      "n=1 ו־ (an)∞",
+      "n=1 )א( )10 נקודות( תהיינה",
+      "מתכנס בתנאי. ∑∞",
+      "n=1 (an − bn) מתכנס בהחלט. הוכיחו כי",
+      "מתקיים 2 ≤ n ∈ N ולכל p > 0 )ב( )3 נקודות( הוכיחו שלכל"
+    ],
+    "proofPatterns": [],
+    "difficultyEstimate": "medium",
+    "sourceSnippets": [
+      {
+        "sourceFileId": "past-exams-hebrew-moeda-2023-heb",
+        "filename": "MoedA_2023_heb.pdf",
+        "text": "החוג למדעי המחשב אוניברסיטת רייכמן מבחן בחשבון אינפיניטסימלי 2 )52( מועד א׳ — 07/07/2023 אין לרשום פתרונות מאחורי הדף!!! ר יוסי שמאי\"מרצה: ד משך הבחינה: 3 שעות הוראות: לבחינה חמש שאלות. עליכן לענות בדיוק על ארבע מתוכן. משקל כל שאלה הוא 25 נקודות. אין בחירה בין סעיפים של אותה תשובות לא מנומקות לא יקבלו ניקוד. עליכן לצטט את כל התנאים לכל משפט או טענה. חל איסור מוחלט להסתמך על חומר שאלה. אין לרשום פתרונות במקומות אסור להפריד דפים מהשאלון! בסוף הבחינה יש להגיש את כל שאלון הבחינה. שלא נלמד בקורס. שאינם מיועדים לכך! אין לרשום פתרונות מאחורי הדף!!! בהצלחה! שאלה 1 ) 25 נקודות ( הוא אי־רציונלי. תוכלו להסתמך על כל משפט או טענה קודמים שלמדתן בקורס. e )א( )15 נקודות( הוכיחו כי פתרון: 1",
+        "startOffset": 0,
+        "endOffset": 682
+      },
+      {
+        "sourceFileId": "past-exams-hebrew-moeda-2023-heb",
+        "filename": "MoedA_2023_heb.pdf",
+        "text": ")ב( )10 נקודות( חשבו את ערך האינטגרל המסוים הבא: ∫ π2 0 cos (√x) dx פתרון: 3",
+        "startOffset": 717,
+        "endOffset": 793
+      },
+      {
+        "sourceFileId": "past-exams-hebrew-moeda-2023-heb",
+        "filename": "MoedA_2023_heb.pdf",
+        "text": "שאלה 2 ) 25 נקודות ( )א( )17 נקודות( .x0 סביב f . הגדירו את המושג: טור הטיילור שלx0 פעמים ב־ ∞ פונקציה הגזירה f ותהי x0 ∈ R ( )2 נקודות( תהיI) פתרון: , ומצאו את תחום התכנסות הטור.f (x) = { arctan x x x 6 = 0 1 x = 0 של הפונקציה x0 = 0 ( )10 נקודות( מצאו את טור הטיילור סביבII) פתרון: 4"
+      },
+      {
+        "sourceFileId": "past-exams-hebrew-moeda-2023-heb",
+        "filename": "MoedA_2023_heb.pdf",
+        "text": ".f (10)(0) ( )5 נקודות( חשבו את הערך שלIII) פתרון: 6",
+        "startOffset": 1130,
+        "endOffset": 1182
+      }
+    ],
+    "confidence": 0.8124166666666666
+  },
+  {
+    "sourceFileId": "past-exams-hebrew-moeda-calculus2-2024-heb",
+    "filename": "MoedA_calculus2_2024_heb.pdf",
+    "examYear": 2024,
+    "moed": "A",
+    "questions": [
+      {
+        "id": "past-exams-hebrew-moeda-calculus2-2024-heb-question-1",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moeda-calculus2-2024-heb",
+        "questionNumber": "1.2",
+        "content": "1.2. )10 נקודות( חשבו את ערך האינטגרל המסוים הבא: ∫ 1 0 arccos(x) dx פתרון: 4",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moeda-calculus2-2024-heb",
+          "filename": "MoedA_calculus2_2024_heb.pdf",
+          "text": "1.2. )10 נקודות( חשבו את ערך האינטגרל המסוים הבא: ∫ 1 0 arccos(x) dx פתרון: 4",
+          "startOffset": 793,
+          "endOffset": 870
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moeda-calculus2-2024-heb-question-2",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moeda-calculus2-2024-heb",
+        "questionNumber": "2",
+        "content": "שאלה 2 ) 25 נקודות ( 2.1. )18 נקודות( .(−1, 1] הוא הקטע ∑∞ n=1 (−1)n+1xn n 2.1.1. )5 נקודות( הוכיחו כי תחום ההתכנסות של טור החזקות פתרון: מתקיים −1 < x ≤ 1 2.1.2. )13 נקודות( הוכיחו כי לכל ln |1 + x| = ∞ ∑ n=1 (−1)n+1xn n פתרון: 5",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moeda-calculus2-2024-heb",
+          "filename": "MoedA_calculus2_2024_heb.pdf",
+          "text": "שאלה 2 ) 25 נקודות ( 2.1. )18 נקודות( .(−1, 1] הוא הקטע ∑∞ n=1 (−1)n+1xn n 2.1.1. )5 נקודות( הוכיחו כי תחום ההתכנסות של טור החזקות פתרון: מתקיים −1 < x ≤ 1 2.1.2. )13 נקודות( הוכיחו כי לכל ln |1 + x| = ∞ ∑ n=1 (−1)n+1xn n פתרון: 5"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moeda-calculus2-2024-heb-question-3",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moeda-calculus2-2024-heb",
+        "questionNumber": "1",
+        "content": "מתכנס. 1 − 1 + 1 + 1 2 − 1 2 + 1 2 + 1 3 − 1 3 + 1 3 + . . . 2.2. )7 נקודות( הוכיחו או הפריכו את הטענה הבאה: הטור פתרון: 7",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moeda-calculus2-2024-heb",
+          "filename": "MoedA_calculus2_2024_heb.pdf",
+          "text": "מתכנס. 1 − 1 + 1 + 1 2 − 1 2 + 1 2 + 1 3 − 1 3 + 1 3 + . . . 2.2. )7 נקודות( הוכיחו או הפריכו את הטענה הבאה: הטור פתרון: 7"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moeda-calculus2-2024-heb-question-4",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moeda-calculus2-2024-heb",
+        "questionNumber": "3",
+        "content": "שאלה 3 ) 25 נקודות ( .[0, 1]פונקציה המוגדרת ב־ f 3.1. )17 נקודות( תהי .  − δ. הערה: אינכן צריכות להשתמש בשפת ה־[0, 1)גזירה ב־ f 3.1.1. )2 נקודות( הגדירו את המושג: פתרון: הוכיחו שקיימת .f ′(0) = f (1) וכי f (0) = 0 נניח בנוסף כי .[0, 1)וגזירה ב־ [0, 1]רציפה ב־ f )15 נקודות( נניח כי .3.1.2 .f ′(c) = f (c) c שעבורה 0 < c < 1 פתרון: 8",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moeda-calculus2-2024-heb",
+          "filename": "MoedA_calculus2_2024_heb.pdf",
+          "text": "שאלה 3 ) 25 נקודות ( .[0, 1]פונקציה המוגדרת ב־ f 3.1. )17 נקודות( תהי .  − δ. הערה: אינכן צריכות להשתמש בשפת ה־[0, 1)גזירה ב־ f 3.1.1. )2 נקודות( הגדירו את המושג: פתרון: הוכיחו שקיימת .f ′(0) = f (1) וכי f (0) = 0 נניח בנוסף כי .[0, 1)וגזירה ב־ [0, 1]רציפה ב־ f )15 נקודות( נניח כי .3.1.2 .f ′(c) = f (c) c שעבורה 0 < c < 1 פתרון: 8"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moeda-calculus2-2024-heb-question-5",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moeda-calculus2-2024-heb",
+        "questionNumber": "1",
+        "content": ".∑∞ n=1 ( αn+1 n+1 )n שעבורם הטור הבא מתכנס: α ≥ 0 3.2. )8 נקודות( מצאו את כל ערכי ה־ פתרון: 10",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moeda-calculus2-2024-heb",
+          "filename": "MoedA_calculus2_2024_heb.pdf",
+          "text": ".∑∞ n=1 ( αn+1 n+1 )n שעבורם הטור הבא מתכנס: α ≥ 0 3.2. )8 נקודות( מצאו את כל ערכי ה־ פתרון: 10"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moeda-calculus2-2024-heb-question-6",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moeda-calculus2-2024-heb",
+        "questionNumber": "4",
+        "content": "שאלה 4 ) 25 נקודות ( י”המוגדרת ע (an)∞ n=1 , ונביט בסדרהx > 0 לכל f (x) = 1 2 (x + 2 x ) י”4.1. )18 נקודות( נביט בפונקציה המוגדרת ע    an+1 = f (an) ∀n ∈ N a1 = 2 או הוכיחו שהוא איננו קיים. f 4.1.1. )6 נקודות( חשבו את הערך המינימלי של פתרון: 11",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moeda-calculus2-2024-heb",
+          "filename": "MoedA_calculus2_2024_heb.pdf",
+          "text": "שאלה 4 ) 25 נקודות ( י”המוגדרת ע (an)∞ n=1 , ונביט בסדרהx > 0 לכל f (x) = 1 2 (x + 2 x ) י”4.1. )18 נקודות( נביט בפונקציה המוגדרת ע    an+1 = f (an) ∀n ∈ N a1 = 2 או הוכיחו שהוא איננו קיים. f 4.1.1. )6 נקודות( חשבו את הערך המינימלי של פתרון: 11"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moeda-calculus2-2024-heb-question-7",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moeda-calculus2-2024-heb",
+        "questionNumber": "1",
+        "content": "מוגדרת היטב, ושהיא סדרה מתכנסת. (an)∞ n=1 4.1.2. )7 נקודות( הוכיחו שהסדרה פתרון: 12",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moeda-calculus2-2024-heb",
+          "filename": "MoedA_calculus2_2024_heb.pdf",
+          "text": "מוגדרת היטב, ושהיא סדרה מתכנסת. (an)∞ n=1 4.1.2. )7 נקודות( הוכיחו שהסדרה פתרון: 12",
+          "startOffset": 2036,
+          "endOffset": 2119
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moeda-calculus2-2024-heb-question-8",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moeda-calculus2-2024-heb",
+        "questionNumber": "4.1",
+        "content": ".limn→∞ an 4.1.3. )5 נקודות( חשבו את פתרון: 13",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moeda-calculus2-2024-heb",
+          "filename": "MoedA_calculus2_2024_heb.pdf",
+          "text": ".limn→∞ an 4.1.3. )5 נקודות( חשבו את פתרון: 13",
+          "startOffset": 2137,
+          "endOffset": 2183
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moeda-calculus2-2024-heb-question-9",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moeda-calculus2-2024-heb",
+        "questionNumber": "1",
+        "content": "שעבורה f : (−1, 1) → R 4.2. )8 נקודות( מצאו פונקציה f (n)(0) = (−1)n · (n + 1)! ∀0 ≤ n ∈ Z הערה: תוכלו להשאיר את התשובה כטור. פתרון: 14",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moeda-calculus2-2024-heb",
+          "filename": "MoedA_calculus2_2024_heb.pdf",
+          "text": "שעבורה f : (−1, 1) → R 4.2. )8 נקודות( מצאו פונקציה f (n)(0) = (−1)n · (n + 1)! ∀0 ≤ n ∈ Z הערה: תוכלו להשאיר את התשובה כטור. פתרון: 14",
+          "startOffset": 2201,
+          "endOffset": 2336
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moeda-calculus2-2024-heb-question-10",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moeda-calculus2-2024-heb",
+        "questionNumber": "5",
+        "content": "שאלה 5 ) 25 נקודות ( .x ≥ 0 לכל ex ≥ 1 + x + x2 2 5.1. )8 נקודות( הוכיחו כי פתרון: 15",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moeda-calculus2-2024-heb",
+          "filename": "MoedA_calculus2_2024_heb.pdf",
+          "text": "שאלה 5 ) 25 נקודות ( .x ≥ 0 לכל ex ≥ 1 + x + x2 2 5.1. )8 נקודות( הוכיחו כי פתרון: 15"
+        },
+        "confidence": 0.56
+      }
+    ],
+    "detectedTopics": [
+      "גבולות",
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "repeatedPatterns": [
+      "גבול"
+    ],
+    "requiredTheorems": [
+      "החוג למדעי המחשב אוניברסיטת רייכמן מבחן בחשבון אינפיניטסימלי 2 )52( מועד א׳ — 28/06/202...",
+      "מתכנס"
+    ],
+    "requiredFormulas": [
+      "הוכיחו כי הוא הוא טור לייבניץ. ∑∞",
+      "n=1(−1)n+1an נניח שהטור סדרה של מספרים ממשיים. (an)∞",
+      "n=1 )15 נקודות( תהיינה .1.1",
+      ".a1 − a2 ≤ s ≤ a1 , וכיs ∈ R מתכנס לערך",
+      "arccos(x) dx",
+      ".(−1, 1] הוא הקטע ∑∞",
+      "מתקיים −1 < x ≤ 1 2.1.2. )13 נקודות( הוכיחו כי לכל",
+      "ln |1 + x| =",
+      "הוכיחו שקיימת .f ′(0) = f (1) וכי f (0) = 0 נניח בנוסף כי .[0, 1)וגזירה ב־ [0, 1]רציפה ב־ f )15 נקודות( נניח כי .3.1.2",
+      ".f ′(c) = f (c)",
+      "שעבורם הטור הבא מתכנס: α ≥ 0 3.2. )8 נקודות( מצאו את כל ערכי ה־",
+      "י”המוגדרת ע (an)∞",
+      "n=1 , ונביט בסדרהx > 0 לכל f (x) = 1",
+      "an+1 = f (an) ∀n ∈ N",
+      "מוגדרת היטב, ושהיא סדרה מתכנסת. (an)∞"
+    ],
+    "proofPatterns": [],
+    "difficultyEstimate": "medium",
+    "sourceSnippets": [
+      {
+        "sourceFileId": "past-exams-hebrew-moeda-calculus2-2024-heb",
+        "filename": "MoedA_calculus2_2024_heb.pdf",
+        "text": "החוג למדעי המחשב אוניברסיטת רייכמן מבחן בחשבון אינפיניטסימלי 2 )52( מועד א׳ — 28/06/2024 אין לרשום פתרונות מאחורי הדף!!! ר יוסי שמאי\"מרצה: ד משך הבחינה: 3 שעות הוראות: לבחינה חמש שאלות. עליכן לענות בדיוק על ארבע מתוכן. משקל כל שאלה הוא 25 נקודות. אין בחירה בין סעיפים של אותה תשובות לא מנומקות לא יקבלו ניקוד. עליכן לצטט את כל התנאים לכל משפט או טענה. חל איסור מוחלט להסתמך על חומר שאלה. אין לרשום פתרונות במקומות אסור להפריד דפים מהשאלון! בסוף הבחינה יש להגיש את כל שאלון הבחינה. שלא נלמד בקורס. שאינם מיועדים לכך! אין לרשום פתרונות מאחורי הדף!!! בהצלחה! 1",
+        "startOffset": 0,
+        "endOffset": 557
+      },
+      {
+        "sourceFileId": "past-exams-hebrew-moeda-calculus2-2024-heb",
+        "filename": "MoedA_calculus2_2024_heb.pdf",
+        "text": "שאלה 1 ) 25 נקודות ( הוכיחו כי הוא הוא טור לייבניץ. ∑∞ n=1(−1)n+1an נניח שהטור סדרה של מספרים ממשיים. (an)∞ n=1 )15 נקודות( תהיינה .1.1 .a1 − a2 ≤ s ≤ a1 , וכיs ∈ R מתכנס לערך פתרון: 2"
+      },
+      {
+        "sourceFileId": "past-exams-hebrew-moeda-calculus2-2024-heb",
+        "filename": "MoedA_calculus2_2024_heb.pdf",
+        "text": "1.2. )10 נקודות( חשבו את ערך האינטגרל המסוים הבא: ∫ 1 0 arccos(x) dx פתרון: 4",
+        "startOffset": 793,
+        "endOffset": 870
+      },
+      {
+        "sourceFileId": "past-exams-hebrew-moeda-calculus2-2024-heb",
+        "filename": "MoedA_calculus2_2024_heb.pdf",
+        "text": "שאלה 2 ) 25 נקודות ( 2.1. )18 נקודות( .(−1, 1] הוא הקטע ∑∞ n=1 (−1)n+1xn n 2.1.1. )5 נקודות( הוכיחו כי תחום ההתכנסות של טור החזקות פתרון: מתקיים −1 < x ≤ 1 2.1.2. )13 נקודות( הוכיחו כי לכל ln |1 + x| = ∞ ∑ n=1 (−1)n+1xn n פתרון: 5"
+      }
+    ],
+    "confidence": 0.7771666666666666
+  },
+  {
+    "sourceFileId": "past-exams-hebrew-moedb-2022-heb",
+    "filename": "MoedB_2022_heb.pdf",
+    "examYear": 2022,
+    "moed": "B",
+    "questions": [
+      {
+        "id": "past-exams-hebrew-moedb-2022-heb-question-1",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-2022-heb",
+        "questionNumber": "25",
+        "content": "( נקודות 25 ) 2 שאלה פונקציה קדומה G ותהי [a, b]רציפה ב־ f נניח כי .[a, b]פונקציה המוגדרת ב־ f תהי .a < b כך ש־ a, b ∈ R יהיו (נקודות 10) (א) הוכיחו כי .[a, b]ב־ f של ∫ b a f (x) dx = G(b) − G(a) 4",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-2022-heb",
+          "filename": "MoedB_2022_heb.pdf",
+          "text": "( נקודות 25 ) 2 שאלה פונקציה קדומה G ותהי [a, b]רציפה ב־ f נניח כי .[a, b]פונקציה המוגדרת ב־ f תהי .a < b כך ש־ a, b ∈ R יהיו (נקודות 10) (א) הוכיחו כי .[a, b]ב־ f של ∫ b a f (x) dx = G(b) − G(a) 4"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-2022-heb-question-2",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-2022-heb",
+        "questionNumber": "(x)",
+        "content": ".limx→∞ f (x) = 0 כך ש־ ,פונקציה מונוטונית יורדת f : [0, ∞) → R תהי (נקודות 15) (ב) .[k, ∞)יורדת ב־ sin (f (x)) שעבורו הפונקציה 0 ≤ k ∈ Z הוכיחו שקיים (נקודות 6) (i) :פתרון 5",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-2022-heb",
+          "filename": "MoedB_2022_heb.pdf",
+          "text": ".limx→∞ f (x) = 0 כך ש־ ,פונקציה מונוטונית יורדת f : [0, ∞) → R תהי (נקודות 15) (ב) .[k, ∞)יורדת ב־ sin (f (x)) שעבורו הפונקציה 0 ≤ k ∈ Z הוכיחו שקיים (נקודות 6) (i) :פתרון 5",
+          "startOffset": 1262,
+          "endOffset": 1436
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-2022-heb-question-3",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-2022-heb",
+        "questionNumber": "0",
+        "content": ".מתכנס ∑∞ n=0 (ef (n) − 1) הוכיחו שהטור .מתכנס ∫ ∞ 0 sin (f (x)) dx נניח כי האינטגרל (נקודות 9) (ii) :פתרון 6",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-2022-heb",
+          "filename": "MoedB_2022_heb.pdf",
+          "text": ".מתכנס ∑∞ n=0 (ef (n) − 1) הוכיחו שהטור .מתכנס ∫ ∞ 0 sin (f (x)) dx נניח כי האינטגרל (נקודות 9) (ii) :פתרון 6"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-2022-heb-question-4",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-2022-heb",
+        "questionNumber": "0",
+        "content": "0 ≤ R1 ≤ ∞ יהי .0 ≤ n ∈ Z לכל |bn| ≤ 2 נניח כי .שתי סדרות של מספרים ממשיים (an)∞ n=0, (bn)∞ n=0 תהיינה (נקודות 12) (ב) ∑∞ n=0 an ·bn(x−x0)n רדיוס ההתכנסות של טור החזקות 0 ≤ R2 ≤ ∞ ויהי ∑∞ n=0 an(x−x0)n רדיוס ההתכנסות של טור החזקות . .R2 ≥ R1 הוכיחו כי (נקודות 6) (i) .R2 > R1 מצאו דוגמא שבה (נקודות 6) (i) 8",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-2022-heb",
+          "filename": "MoedB_2022_heb.pdf",
+          "text": "0 ≤ R1 ≤ ∞ יהי .0 ≤ n ∈ Z לכל |bn| ≤ 2 נניח כי .שתי סדרות של מספרים ממשיים (an)∞ n=0, (bn)∞ n=0 תהיינה (נקודות 12) (ב) ∑∞ n=0 an ·bn(x−x0)n רדיוס ההתכנסות של טור החזקות 0 ≤ R2 ≤ ∞ ויהי ∑∞ n=0 an(x−x0)n רדיוס ההתכנסות של טור החזקות . .R2 ≥ R1 הוכיחו כי (נקודות 6) (i) .R2 > R1 מצאו דוגמא שבה (נקודות 6) (i) 8",
+          "startOffset": 1752,
+          "endOffset": 2059
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-2022-heb-question-5",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-2022-heb",
+        "questionNumber": "13",
+        "content": "(נקודות 13) (ב) .ln(n) ≤ nq מתקיים n ≥ k כך שלכל k ∈ N קיים q > 0 הוכיחו כי לכל (נקודות 4) (i) :פתרון .∑∞ n=3 ln(n) nr :שעבורם הטור הבא מתכנס r ∈ R מצאו את כל הערכים של (נקודות 9) (ii) 10",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-2022-heb",
+          "filename": "MoedB_2022_heb.pdf",
+          "text": "(נקודות 13) (ב) .ln(n) ≤ nq מתקיים n ≥ k כך שלכל k ∈ N קיים q > 0 הוכיחו כי לכל (נקודות 4) (i) :פתרון .∑∞ n=3 ln(n) nr :שעבורם הטור הבא מתכנס r ∈ R מצאו את כל הערכים של (נקודות 9) (ii) 10"
+        },
+        "confidence": 0.56
+      }
+    ],
+    "detectedTopics": [
+      "גבולות",
+      "טורים",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "repeatedPatterns": [
+      "גבול",
+      "התכנסות בהחלט"
+    ],
+    "requiredTheorems": [
+      ":הגדירו את המושג"
+    ],
+    "requiredFormulas": [
+      ".סדרה של מספרים ממשיים (an)∞",
+      "n=0 ותהי x0, x1 ∈ R תהיינה ( נקודות 25 ) 1 שאלה",
+      "עליכן לרשום את ההגדרה בשפת ה־ .x1מתכנס בהחלט ב־ ∑∞",
+      "n=0 an(x − x0)n טור החזקות :הגדירו את המושג (נקודות 3) (א)",
+      "רדיוס ההתכנסות של טור החזקות 0 ≤ R ≤ ∞ יהי .L = limn→∞ n",
+      "√|an| כך ש־ 0 ≤ L ≤ ∞ נניח שקיים (נקודות 15) (ב)",
+      "L אזי , 0 < L < ∞ הוכיחו שאם . ∑∞",
+      "n=0 an(x − x0)n",
+      "0 x ln (1 + x2) dx :חשבו את ערך האינטגרל המסוים הבא (נקודות 7) (ג)",
+      "f (x) dx = G(b) − G(a)",
+      ".limx→∞ f (x) = 0 כך ש־ ,פונקציה מונוטונית יורדת f : [0, ∞) → R תהי (נקודות 15) (ב)",
+      ".[k, ∞)יורדת ב־ sin (f (x)) שעבורו הפונקציה 0 ≤ k ∈ Z הוכיחו שקיים (נקודות 6) (i)",
+      ".מתכנס ∑∞",
+      "(ef (n) − 1) הוכיחו שהטור .מתכנס ∫ ∞",
+      "0 sin (f (x)) dx נניח כי האינטגרל (נקודות 9) (ii)"
+    ],
+    "proofPatterns": [],
+    "difficultyEstimate": "medium",
+    "sourceSnippets": [
+      {
+        "sourceFileId": "past-exams-hebrew-moedb-2022-heb",
+        "filename": "MoedB_2022_heb.pdf",
+        "text": "החוג למדעי המחשב המרכז הבינתחומי הרצליה (53) 2 מבחן בחשבון אינפיניטסימלי 21/07/2022 — מועד ב׳ !!!אין לרשום פתרונות מאחורי הדף : ז\"מספר ת : מספר מחברת ר יוסי שמאי\"ד :מרצה שעות 3 :משך הבחינה :הוראות אין בחירה בין סעיפים של אותה .נקודות 25 משקל כל שאלה הוא .ע מתוכןעליכן לענות בדיוק על ארב .לבחינה חמש שאלות בסוף הבחינה יש להגיש את .ור מוחלט להסתמך על חומר שלא נלמד בקורסחל איס .תשובות לא מנומקות לא יקבלו ניקוד .שאלה אין לרשום פתרונות מאחורי !פתרונות במקומות שאינם מיועדים לכך אין לרשום !אסור להפריד דפים מהשאלון .כל שאלון הבחינה !!!הדף !בהצלחה .סדרה של מספרים ממשיים (an)∞ n=0 ותהי x0, x1 ∈ R תהיינה ( נקודות 25 ) 1 שאלה עליכן לרשום את ההגדרה בשפת ה־ .x1מתכנס בהחלט ב־ ∑∞ n=0 an(x − x0)n טור החזקות :הגדירו את המושג (נקודות 3) (א) .! − N :פתרון 1"
+      },
+      {
+        "sourceFileId": "past-exams-hebrew-moedb-2022-heb",
+        "filename": "MoedB_2022_heb.pdf",
+        "text": "רדיוס ההתכנסות של טור החזקות 0 ≤ R ≤ ∞ יהי .L = limn→∞ n √|an| כך ש־ 0 ≤ L ≤ ∞ נניח שקיים (נקודות 15) (ב) .R = 1 L אזי , 0 < L < ∞ הוכיחו שאם . ∑∞ n=0 an(x − x0)n :פתרון 2",
+        "startOffset": 763,
+        "endOffset": 934
+      },
+      {
+        "sourceFileId": "past-exams-hebrew-moedb-2022-heb",
+        "filename": "MoedB_2022_heb.pdf",
+        "text": ".∫ 1 0 x ln (1 + x2) dx :חשבו את ערך האינטגרל המסוים הבא (נקודות 7) (ג) :פתרון 3"
+      },
+      {
+        "sourceFileId": "past-exams-hebrew-moedb-2022-heb",
+        "filename": "MoedB_2022_heb.pdf",
+        "text": "( נקודות 25 ) 2 שאלה פונקציה קדומה G ותהי [a, b]רציפה ב־ f נניח כי .[a, b]פונקציה המוגדרת ב־ f תהי .a < b כך ש־ a, b ∈ R יהיו (נקודות 10) (א) הוכיחו כי .[a, b]ב־ f של ∫ b a f (x) dx = G(b) − G(a) 4"
+      }
+    ],
+    "confidence": 0.7934999999999999
+  },
+  {
+    "sourceFileId": "past-exams-hebrew-moedb-2023-heb",
+    "filename": "MoedB_2023_heb.pdf",
+    "examYear": 2023,
+    "moed": "B",
+    "questions": [
+      {
+        "id": "past-exams-hebrew-moedb-2023-heb-question-1",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-2023-heb",
+        "questionNumber": "0",
+        "content": "כך M > 0 . נניח שקייםx0 = 0 סביב f טור הטיילור של Tf פונקציה הגזירה אינסוף פעמים. יהי f : R → R )ב( )10 נקודות( תהי .x ∈ R לכל f (x) = Tf (x) . הוכיחו כיx ∈ R ולכל n ∈ N לכל ∣ ∣f (n)(x)∣ ∣ ≤ M ש־ 4",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-2023-heb",
+          "filename": "MoedB_2023_heb.pdf",
+          "text": "כך M > 0 . נניח שקייםx0 = 0 סביב f טור הטיילור של Tf פונקציה הגזירה אינסוף פעמים. יהי f : R → R )ב( )10 נקודות( תהי .x ∈ R לכל f (x) = Tf (x) . הוכיחו כיx ∈ R ולכל n ∈ N לכל ∣ ∣f (n)(x)∣ ∣ ≤ M ש־ 4",
+          "startOffset": 858,
+          "endOffset": 1055
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-2023-heb-question-2",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-2023-heb",
+        "questionNumber": "1",
+        "content": ".−1 ≤ x ≤ 1 לכל f (x) = ∑∞ n=1 (−1)n+1x2n+1 2n·(2n+1) הפונקציה המוגדרת על ידי f תהי שאלה 2 ) 25 נקודות ( . חשבו את האינטגרל המסוייםx ∈ R )א( )9 נקודות( יהי ˆ x 0 ln (1 + t2) dt 5",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-2023-heb",
+          "filename": "MoedB_2023_heb.pdf",
+          "text": ".−1 ≤ x ≤ 1 לכל f (x) = ∑∞ n=1 (−1)n+1x2n+1 2n·(2n+1) הפונקציה המוגדרת על ידי f תהי שאלה 2 ) 25 נקודות ( . חשבו את האינטגרל המסוייםx ∈ R )א( )9 נקודות( יהי ˆ x 0 ln (1 + t2) dt 5"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-2023-heb-question-3",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-2023-heb",
+        "questionNumber": "1",
+        "content": "−1 ≤ x ≤ 1 לכל f (x))ג( )10 נקודות( מצאו ביטוי מפורש ל־ 7",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-2023-heb",
+          "filename": "MoedB_2023_heb.pdf",
+          "text": "−1 ≤ x ≤ 1 לכל f (x))ג( )10 נקודות( מצאו ביטוי מפורש ל־ 7",
+          "startOffset": 1325,
+          "endOffset": 1382
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-2023-heb-question-4",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-2023-heb",
+        "questionNumber": "13",
+        "content": ")ב( )13 נקודות( )i( )4 נקודות( חשבו את ערכו של הגבול הבא: lim x→∞ x ln (1 + x2) 9",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-2023-heb",
+          "filename": "MoedB_2023_heb.pdf",
+          "text": ")ב( )13 נקודות( )i( )4 נקודות( חשבו את ערכו של הגבול הבא: lim x→∞ x ln (1 + x2) 9"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-2023-heb-question-5",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-2023-heb",
+        "questionNumber": "9",
+        "content": ")ii( )9 נקודות( קבעו האם האינטגרל הלא אמיתי הבא מתכנס או מתבדר ˆ ∞ 1 dx ln (1 + x2) 10",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-2023-heb",
+          "filename": "MoedB_2023_heb.pdf",
+          "text": ")ii( )9 נקודות( קבעו האם האינטגרל הלא אמיתי הבא מתכנס או מתבדר ˆ ∞ 1 dx ln (1 + x2) 10",
+          "startOffset": 1811,
+          "endOffset": 1897
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-2023-heb-question-6",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-2023-heb",
+        "questionNumber": "5",
+        "content": "שאלה 5 ) 25 נקודות ( הגדירו את המושג: הנגזרת החלקית .(x0, y0) פונקציה המוגדרת לפחות בסביבה של F ותהי (x0, y0) ∈ R2 )א( )2 נקודות( תהי .F ′ x(x0, y0) חשבו את הערך של .x, y ∈ R לכל F (x, y) = ex cos(y) המוגדרת על ידי F : R2 → R )ב( )7 נקודות( נביט בפונקציה .x, y ∈ R לכל F ′′ xx(x, y) + F ′′ yy (x, y) 15",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-2023-heb",
+          "filename": "MoedB_2023_heb.pdf",
+          "text": "שאלה 5 ) 25 נקודות ( הגדירו את המושג: הנגזרת החלקית .(x0, y0) פונקציה המוגדרת לפחות בסביבה של F ותהי (x0, y0) ∈ R2 )א( )2 נקודות( תהי .F ′ x(x0, y0) חשבו את הערך של .x, y ∈ R לכל F (x, y) = ex cos(y) המוגדרת על ידי F : R2 → R )ב( )7 נקודות( נביט בפונקציה .x, y ∈ R לכל F ′′ xx(x, y) + F ′′ yy (x, y) 15"
+        },
+        "confidence": 0.56
+      }
+    ],
+    "detectedTopics": [
+      "גבולות",
+      "טורים",
+      "נגזרות",
+      "סדרות",
+      "פונקציות"
+    ],
+    "repeatedPatterns": [
+      "טיילור",
+      "גבול",
+      "התכנסות בהחלט"
+    ],
+    "requiredTheorems": [
+      "החוג למדעי המחשב אוניברסיטת רייכמן מבחן בחשבון אינפיניטסימלי 2 )52( מועד ב׳ — 09/08/202..."
+    ],
+    "requiredFormulas": [
+      "סדרה של מספרים ממשיים. (an)∞",
+      "n=0 ותהי x0 ∈ R תהי שאלה 1 ) 25 נקודות (",
+      "מתכנס בנקודה ∑∞",
+      "n=0 an(x − x0)n נניח כי טור החזקות .|x2 − x0| < |x1 − x0| כך ש־ x1, x2 ∈ R )א( )15 נקודות( תהיינה",
+      ".x = x2 מתכנס בהחלט בנקודה ∑∞",
+      "n=0 an(x − x0)n . הוכיחו כיx = x1",
+      "כך M > 0 . נניח שקייםx0 = 0 סביב f טור הטיילור של Tf פונקציה הגזירה אינסוף פעמים. יהי f : R → R )ב( )10 נקודות( תהי",
+      ".x ∈ R לכל f (x) = Tf (x) . הוכיחו כיx ∈ R ולכל n ∈ N לכל ∣",
+      "∣ ≤ M ש־",
+      ".−1 ≤ x ≤ 1 לכל f (x) = ∑∞",
+      "ln (1 + t2) dt",
+      "−1 ≤ x ≤ 1 לכל f (x))ג( )10 נקודות( מצאו ביטוי מפורש ל־",
+      ", ויהיו[a, b] סדרה של חלוקות של (Pn)∞",
+      "n=1 . תהי[a, b]פונקציה החסומה ב־ f ותהי a < b כך ש־ a, b ∈ R )א( )12 נקודות( תהיינה",
+      "[ ¯S(f, Pn) − S(f, Pn)] = 0"
+    ],
+    "proofPatterns": [],
+    "difficultyEstimate": "medium",
+    "sourceSnippets": [
+      {
+        "sourceFileId": "past-exams-hebrew-moedb-2023-heb",
+        "filename": "MoedB_2023_heb.pdf",
+        "text": "החוג למדעי המחשב אוניברסיטת רייכמן מבחן בחשבון אינפיניטסימלי 2 )52( מועד ב׳ — 09/08/2023 אין לרשום פתרונות מאחורי הדף!!! ר יוסי שמאי\"מרצה: ד משך הבחינה: 3 שעות הוראות: לבחינה חמש שאלות. עליכן לענות בדיוק על ארבע מתוכן. משקל כל שאלה הוא 25 נקודות. אין בחירה בין סעיפים של אותה תשובות לא מנומקות לא יקבלו ניקוד. עליכן לצטט את כל התנאים לכל משפט או טענה. חל איסור מוחלט להסתמך על חומר שאלה. אין לרשום פתרונות במקומות אסור להפריד דפים מהשאלון! בסוף הבחינה יש להגיש את כל שאלון הבחינה. שלא נלמד בקורס. שאינם מיועדים לכך! אין לרשום פתרונות מאחורי הדף!!! בהצלחה! 1",
+        "startOffset": 0,
+        "endOffset": 557
+      },
+      {
+        "sourceFileId": "past-exams-hebrew-moedb-2023-heb",
+        "filename": "MoedB_2023_heb.pdf",
+        "text": "סדרה של מספרים ממשיים. (an)∞ n=0 ותהי x0 ∈ R תהי שאלה 1 ) 25 נקודות ( מתכנס בנקודה ∑∞ n=0 an(x − x0)n נניח כי טור החזקות .|x2 − x0| < |x1 − x0| כך ש־ x1, x2 ∈ R )א( )15 נקודות( תהיינה .x = x2 מתכנס בהחלט בנקודה ∑∞ n=0 an(x − x0)n . הוכיחו כיx = x1 2"
+      },
+      {
+        "sourceFileId": "past-exams-hebrew-moedb-2023-heb",
+        "filename": "MoedB_2023_heb.pdf",
+        "text": "כך M > 0 . נניח שקייםx0 = 0 סביב f טור הטיילור של Tf פונקציה הגזירה אינסוף פעמים. יהי f : R → R )ב( )10 נקודות( תהי .x ∈ R לכל f (x) = Tf (x) . הוכיחו כיx ∈ R ולכל n ∈ N לכל ∣ ∣f (n)(x)∣ ∣ ≤ M ש־ 4",
+        "startOffset": 858,
+        "endOffset": 1055
+      },
+      {
+        "sourceFileId": "past-exams-hebrew-moedb-2023-heb",
+        "filename": "MoedB_2023_heb.pdf",
+        "text": ".−1 ≤ x ≤ 1 לכל f (x) = ∑∞ n=1 (−1)n+1x2n+1 2n·(2n+1) הפונקציה המוגדרת על ידי f תהי שאלה 2 ) 25 נקודות ( . חשבו את האינטגרל המסוייםx ∈ R )א( )9 נקודות( יהי ˆ x 0 ln (1 + t2) dt 5"
+      }
+    ],
+    "confidence": 0.7969999999999999
+  },
+  {
+    "sourceFileId": "past-exams-hebrew-moedb-calculus2-2024-heb",
+    "filename": "MoedB_calculus2_2024_heb.pdf",
+    "examYear": 2024,
+    "moed": "B",
+    "questions": [
+      {
+        "id": "past-exams-hebrew-moedb-calculus2-2024-heb-question-1",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2024-heb",
+        "questionNumber": "1",
+        "content": "שאלה 1 ) 25 נקודות ( . נניח כי[a, b]שתי פונקצייות המוגדרות ב־ f, g . תהיינהa < b כך ש־ a, b ∈ R 1.1. )15 נקודות( יהיו .[a.b]רציפות ב־ f, g (I) .(a, b)גזירות ב־ f, g (II) .x ∈ (a, b) לכל g′(x) 6 = 0 (III) כך ש־ a < c < b הוכיחו שקיימת f (b) − f (a) g(b) − g(a) = f ′(c) g′(c) פתרון: 2",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "רציפות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-calculus2-2024-heb",
+          "filename": "MoedB_calculus2_2024_heb.pdf",
+          "text": "שאלה 1 ) 25 נקודות ( . נניח כי[a, b]שתי פונקצייות המוגדרות ב־ f, g . תהיינהa < b כך ש־ a, b ∈ R 1.1. )15 נקודות( יהיו .[a.b]רציפות ב־ f, g (I) .(a, b)גזירות ב־ f, g (II) .x ∈ (a, b) לכל g′(x) 6 = 0 (III) כך ש־ a < c < b הוכיחו שקיימת f (b) − f (a) g(b) − g(a) = f ′(c) g′(c) פתרון: 2"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-calculus2-2024-heb-question-2",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2024-heb",
+        "questionNumber": "1",
+        "content": "∑∞ n=1 3n−16 2n+3 an מתכנס בהחלט. הוכיחו שהטור ∑∞ n=1 an סדרה של מספרים ממשיים. נניח שהטור (an)∞ n=1 1.2. )10 נקודות( תהי מתכנס. פתרון: 4",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-calculus2-2024-heb",
+          "filename": "MoedB_calculus2_2024_heb.pdf",
+          "text": "∑∞ n=1 3n−16 2n+3 an מתכנס בהחלט. הוכיחו שהטור ∑∞ n=1 an סדרה של מספרים ממשיים. נניח שהטור (an)∞ n=1 1.2. )10 נקודות( תהי מתכנס. פתרון: 4"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-calculus2-2024-heb-question-3",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2024-heb",
+        "questionNumber": "2",
+        "content": "שאלה 2 ) 25 נקודות ( שתי סדרות של מספרים ממשיים. (bk)∞ k=1 ו־ (an)∞ n=1 2.1. )17 נקודות( תהיינה קיים limk→∞ ank קיים. הוכיחו כי limn→∞ an סדרה עולה ממש של מספרים טבעיים. נניח כי (nk)∞ k=1 2.1.1. )7 נקודות( תהי וכי lim k→∞ ank = lim n→∞ an פתרון: 5",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "רציפות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-calculus2-2024-heb",
+          "filename": "MoedB_calculus2_2024_heb.pdf",
+          "text": "שאלה 2 ) 25 נקודות ( שתי סדרות של מספרים ממשיים. (bk)∞ k=1 ו־ (an)∞ n=1 2.1. )17 נקודות( תהיינה קיים limk→∞ ank קיים. הוכיחו כי limn→∞ an סדרה עולה ממש של מספרים טבעיים. נניח כי (nk)∞ k=1 2.1.1. )7 נקודות( תהי וכי lim k→∞ ank = lim n→∞ an פתרון: 5"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-calculus2-2024-heb-question-4",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2024-heb",
+        "questionNumber": "1",
+        "content": "י השמת סוגריים.”ע ∑∞ n=1 an מתקבל מהטור ∑∞ k=1 bk 2.1.2. )2 נקודות( הגדירו את המושג: הטור פתרון: מתכנס. הוכיחו ∑∞ n=1 an י השמת סוגריים. נניח בנוסף שהטור”ע ∑∞ n=1 an מתקבל מהטור ∑∞ k=1 bk 2.1.3. )8 נקודות( נניח כי .∑∞ k=1 bk = ∑∞ n=1 an מתכנס, ו־ ∑∞ k=1 bk כי פתרון: 6",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-calculus2-2024-heb",
+          "filename": "MoedB_calculus2_2024_heb.pdf",
+          "text": "י השמת סוגריים.”ע ∑∞ n=1 an מתקבל מהטור ∑∞ k=1 bk 2.1.2. )2 נקודות( הגדירו את המושג: הטור פתרון: מתכנס. הוכיחו ∑∞ n=1 an י השמת סוגריים. נניח בנוסף שהטור”ע ∑∞ n=1 an מתקבל מהטור ∑∞ k=1 bk 2.1.3. )8 נקודות( נניח כי .∑∞ k=1 bk = ∑∞ n=1 an מתכנס, ו־ ∑∞ k=1 bk כי פתרון: 6"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-calculus2-2024-heb-question-5",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2024-heb",
+        "questionNumber": "1",
+        "content": "1 (n+1)(n+3) = 1 2 ( 1 n+1 − 1 n+3 ) או הוכיחו שהוא לא מתכנס. רמז: מתקיים ∑∞ n=1 1 (n+1)(n+3) 2.2. )8 נקודות( חשבו את ערך הטור .n ∈ N לכל פתרון: 8",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-calculus2-2024-heb",
+          "filename": "MoedB_calculus2_2024_heb.pdf",
+          "text": "1 (n+1)(n+3) = 1 2 ( 1 n+1 − 1 n+3 ) או הוכיחו שהוא לא מתכנס. רמז: מתקיים ∑∞ n=1 1 (n+1)(n+3) 2.2. )8 נקודות( חשבו את ערך הטור .n ∈ N לכל פתרון: 8"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-calculus2-2024-heb-question-6",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2024-heb",
+        "questionNumber": "3",
+        "content": "שאלה 3 ) 25 נקודות ( 3.1. )12 נקודות( חשבו את הגבול הבא או הוכיחו שהוא לא קיים במובן הרחב lim x→0 cot(x) − 1 x x .cot(x) = cos(x) sin(x) הערה: פתרון: 9",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-calculus2-2024-heb",
+          "filename": "MoedB_calculus2_2024_heb.pdf",
+          "text": "שאלה 3 ) 25 נקודות ( 3.1. )12 נקודות( חשבו את הגבול הבא או הוכיחו שהוא לא קיים במובן הרחב lim x→0 cot(x) − 1 x x .cot(x) = cos(x) sin(x) הערה: פתרון: 9"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-calculus2-2024-heb-question-7",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2024-heb",
+        "questionNumber": "1",
+        "content": "י”סדרה של מספרים ממשיים. נביט בסדרה המוגדרת ע (an)∞ n=1 3.2. )13 נקודות( תהי bn =    ak n = 2k − 1 −ak n = 2k ∀n ∈ N .limn→∞ bn = 0 מתכנס אם ורק אם ∑∞ n=1 bn הוכיחו שהטור פתרון: 10",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-calculus2-2024-heb",
+          "filename": "MoedB_calculus2_2024_heb.pdf",
+          "text": "י”סדרה של מספרים ממשיים. נביט בסדרה המוגדרת ע (an)∞ n=1 3.2. )13 נקודות( תהי bn =    ak n = 2k − 1 −ak n = 2k ∀n ∈ N .limn→∞ bn = 0 מתכנס אם ורק אם ∑∞ n=1 bn הוכיחו שהטור פתרון: 10",
+          "startOffset": 1931,
+          "endOffset": 2114
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-calculus2-2024-heb-question-8",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2024-heb",
+        "questionNumber": "4",
+        "content": "שאלה 4 ) 25 נקודות ( י”ונביט בסדרה המוגדרת ע α ≥ 0 4.1. )15 נקודות( יהי    an+1 = 1 2 (a2 n + 1) ∀n ∈ N a1 = α מתכנסת במובן הרחב. (an)∞ n=1 עולה והסיקו שהסדרה (an)∞ n=1 4.1.1. )5 נקודות( הוכיחו שהסדרה פתרון: 11",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-calculus2-2024-heb",
+          "filename": "MoedB_calculus2_2024_heb.pdf",
+          "text": "שאלה 4 ) 25 נקודות ( י”ונביט בסדרה המוגדרת ע α ≥ 0 4.1. )15 נקודות( יהי    an+1 = 1 2 (a2 n + 1) ∀n ∈ N a1 = α מתכנסת במובן הרחב. (an)∞ n=1 עולה והסיקו שהסדרה (an)∞ n=1 4.1.1. )5 נקודות( הוכיחו שהסדרה פתרון: 11"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-calculus2-2024-heb-question-9",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2024-heb",
+        "questionNumber": "0",
+        "content": ".limn→∞ an , חשבו את הערך שלα≥ 0 4.1.2. )10 נקודות( לכל פתרון: 12",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-calculus2-2024-heb",
+          "filename": "MoedB_calculus2_2024_heb.pdf",
+          "text": ".limn→∞ an , חשבו את הערך שלα≥ 0 4.1.2. )10 נקודות( לכל פתרון: 12",
+          "startOffset": 2363,
+          "endOffset": 2428
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-calculus2-2024-heb-question-10",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2024-heb",
+        "questionNumber": "1",
+        "content": "ונביט N ∈ N לכל SN = ∑N n=1 an י”סדרה של מספרים ממשיים. נביט בסדרה המוגדרת ע (an)∞ n=1 4.2. )10 נקודות( תהי מתבדר. ∑∞ n=1 an מתכנס. הוכיחו שהטור ∑∞ n=2 bn . נניח שהטור2 ≤ n ∈ N לכל bn = S2 n − 2Sn−1 + 3 י”בסדרה המוגדרת ע אין פתרון ממשי. x2 − 2x + 3 = 0 רמז: למשוואה פתרון: 13",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-calculus2-2024-heb",
+          "filename": "MoedB_calculus2_2024_heb.pdf",
+          "text": "ונביט N ∈ N לכל SN = ∑N n=1 an י”סדרה של מספרים ממשיים. נביט בסדרה המוגדרת ע (an)∞ n=1 4.2. )10 נקודות( תהי מתבדר. ∑∞ n=1 an מתכנס. הוכיחו שהטור ∑∞ n=2 bn . נניח שהטור2 ≤ n ∈ N לכל bn = S2 n − 2Sn−1 + 3 י”בסדרה המוגדרת ע אין פתרון ממשי. x2 − 2x + 3 = 0 רמז: למשוואה פתרון: 13"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-calculus2-2024-heb-question-11",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2024-heb",
+        "questionNumber": "5",
+        "content": "שאלה 5 ) 25 נקודות ( .∑∞ n=0 xn n+1 5.1. )15 נקודות( נביט בטור החזקות 5.1.1. )5 נקודות( מצאו את תחום התכנסות טור החזקות. פתרון: 14",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-calculus2-2024-heb",
+          "filename": "MoedB_calculus2_2024_heb.pdf",
+          "text": "שאלה 5 ) 25 נקודות ( .∑∞ n=0 xn n+1 5.1. )15 נקודות( נביט בטור החזקות 5.1.1. )5 נקודות( מצאו את תחום התכנסות טור החזקות. פתרון: 14"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-calculus2-2024-heb-question-12",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2024-heb",
+        "questionNumber": "0",
+        "content": ".∑∞ n=0 1 3n(n+1) 5.1.2. )10 נקודות( חשבו את ערך הטור פתרון: 15",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-calculus2-2024-heb",
+          "filename": "MoedB_calculus2_2024_heb.pdf",
+          "text": ".∑∞ n=0 1 3n(n+1) 5.1.2. )10 נקודות( חשבו את ערך הטור פתרון: 15"
+        },
+        "confidence": 0.56
+      }
+    ],
+    "detectedTopics": [
+      "גבולות",
+      "טורים",
+      "סדרות",
+      "רציפות"
+    ],
+    "repeatedPatterns": [
+      "גבול",
+      "התכנסות בהחלט"
+    ],
+    "requiredTheorems": [
+      "החוג למדעי המחשב אוניברסיטת רייכמן מבחן בחשבון אינפיניטסימלי 2 )52( מועד ב׳ אין לרשום פ..."
+    ],
+    "requiredFormulas": [
+      ".x ∈ (a, b) לכל g′(x) 6 = 0 (III)",
+      "g(b) − g(a) = f ′(c)",
+      "n=1 3n−16",
+      "2n+3 an מתכנס בהחלט. הוכיחו שהטור ∑∞",
+      "n=1 an סדרה של מספרים ממשיים. נניח שהטור (an)∞",
+      "n=1 1.2. )10 נקודות( תהי",
+      "שתי סדרות של מספרים ממשיים. (bk)∞",
+      "k=1 ו־ (an)∞",
+      "n=1 2.1. )17 נקודות( תהיינה",
+      "קיים limk→∞ ank קיים. הוכיחו כי limn→∞ an סדרה עולה ממש של מספרים טבעיים. נניח כי (nk)∞",
+      "k=1 2.1.1. )7 נקודות( תהי",
+      "k→∞ ank = lim",
+      "י השמת סוגריים.”ע ∑∞",
+      "n=1 an מתקבל מהטור ∑∞",
+      "k=1 bk 2.1.2. )2 נקודות( הגדירו את המושג: הטור"
+    ],
+    "proofPatterns": [],
+    "difficultyEstimate": "medium",
+    "sourceSnippets": [
+      {
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2024-heb",
+        "filename": "MoedB_calculus2_2024_heb.pdf",
+        "text": "החוג למדעי המחשב אוניברסיטת רייכמן מבחן בחשבון אינפיניטסימלי 2 )52( מועד ב׳ אין לרשום פתרונות מאחורי הדף!!! ר יוסי שמאי\"מרצה: ד משך הבחינה: 3 שעות הוראות: לבחינה חמש שאלות. עליכן לענות בדיוק על ארבע מתוכן. משקל כל שאלה הוא 25 נקודות. אין בחירה בין סעיפים של אותה תשובות לא מנומקות לא יקבלו ניקוד. עליכן לצטט את כל התנאים לכל משפט או טענה. חל איסור מוחלט להסתמך על חומר שאלה. אין לרשום פתרונות במקומות אסור להפריד דפים מהשאלון! בסוף הבחינה יש להגיש את כל שאלון הבחינה. שלא נלמד בקורס. שאינם מיועדים לכך! אין לרשום פתרונות מאחורי הדף!!! בהצלחה! 1",
+        "startOffset": 0,
+        "endOffset": 544
+      },
+      {
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2024-heb",
+        "filename": "MoedB_calculus2_2024_heb.pdf",
+        "text": "שאלה 1 ) 25 נקודות ( . נניח כי[a, b]שתי פונקצייות המוגדרות ב־ f, g . תהיינהa < b כך ש־ a, b ∈ R 1.1. )15 נקודות( יהיו .[a.b]רציפות ב־ f, g (I) .(a, b)גזירות ב־ f, g (II) .x ∈ (a, b) לכל g′(x) 6 = 0 (III) כך ש־ a < c < b הוכיחו שקיימת f (b) − f (a) g(b) − g(a) = f ′(c) g′(c) פתרון: 2"
+      },
+      {
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2024-heb",
+        "filename": "MoedB_calculus2_2024_heb.pdf",
+        "text": "∑∞ n=1 3n−16 2n+3 an מתכנס בהחלט. הוכיחו שהטור ∑∞ n=1 an סדרה של מספרים ממשיים. נניח שהטור (an)∞ n=1 1.2. )10 נקודות( תהי מתכנס. פתרון: 4"
+      },
+      {
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2024-heb",
+        "filename": "MoedB_calculus2_2024_heb.pdf",
+        "text": "שאלה 2 ) 25 נקודות ( שתי סדרות של מספרים ממשיים. (bk)∞ k=1 ו־ (an)∞ n=1 2.1. )17 נקודות( תהיינה קיים limk→∞ ank קיים. הוכיחו כי limn→∞ an סדרה עולה ממש של מספרים טבעיים. נניח כי (nk)∞ k=1 2.1.1. )7 נקודות( תהי וכי lim k→∞ ank = lim n→∞ an פתרון: 5"
+      }
+    ],
+    "confidence": 0.8070833333333334
+  },
+  {
+    "sourceFileId": "past-exams-hebrew-moedb-calculus2-2025-heb",
+    "filename": "MoedB_calculus2_2025_heb.pdf",
+    "examYear": 2025,
+    "moed": "B",
+    "questions": [
+      {
+        "id": "past-exams-hebrew-moedb-calculus2-2025-heb-question-1",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2025-heb",
+        "questionNumber": "2",
+        "content": "החוג למדעי המחשב אוניברסיטת רייכמן מבחן בחשבון אינפיניטסימלי 2 )52( מועד ב׳ ר יוסי שמאי. משך הבחינה: 3 שעות.\"מרצה: ד הוראות: לבחינה חמש שאלות. עליכן לענות בדיוק על ארבע מתוכן. משקל כל שאלה הוא 25 נקודות. אין בחירה בין סעיפים של אותה תשובות לא מנומקות לא יקבלו ניקוד. עליכן לצטט את כל התנאים לכל משפט או טענה. חל איסור מוחלט להסתמך על חומר שאלה. שלא נלמד בקורס.אין לרשום פתרונות במקומות שאינם מיועדים לכך! אין לרשום פתרונות מאחורי הדף!!! בהצלחה! שאלה 1 ) 25 נקודות ( שתי סדרות של מספרים חיוביים. (an)∞ n=k , (bn)∞ n=k ותהיינה 0 ≤ k ∈ N 1.1. )17 נקודות( יהי 1.1.1 )8 נקודות( נניח כי ∃N ∈ N : ∀n ≥ N, an+1 an ≤ bn+1 bn . ∑∞ n=N bn < ∞ ⇒ ∑∞ n=N an < ∞ הוכיחו כי פתרון: וכך ש־ 0 ≤ L < 1 כך ש־ L ∈ R 1.1.2 )9 נקודות( נניח שקיים L = lim n→∞ an+1 an .∑∞ n=k an < ∞ הוכיחו כי פתרון: 1",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-calculus2-2025-heb",
+          "filename": "MoedB_calculus2_2025_heb.pdf",
+          "text": "החוג למדעי המחשב אוניברסיטת רייכמן מבחן בחשבון אינפיניטסימלי 2 )52( מועד ב׳ ר יוסי שמאי. משך הבחינה: 3 שעות.\"מרצה: ד הוראות: לבחינה חמש שאלות. עליכן לענות בדיוק על ארבע מתוכן. משקל כל שאלה הוא 25 נקודות. אין בחירה בין סעיפים של אותה תשובות לא מנומקות לא יקבלו ניקוד. עליכן לצטט את כל התנאים לכל משפט או טענה. חל איסור מוחלט להסתמך על חומר שאלה. שלא נלמד בקורס.אין לרשום פתרונות במקומות שאינם מיועדים לכך! אין לרשום פתרונות מאחורי הדף!!! בהצלחה! שאלה 1 ) 25 נקודות ( שתי סדרות של מספרים חיוביים. (an)∞ n=k , (bn)∞ n=k ותהיינה 0 ≤ k ∈ N 1.1. )17 נקודות( יהי 1.1.1 )8 נקודות( נניח כי ∃N ∈ N : ∀n ≥ N, an+1 an ≤ bn+1 bn . ∑∞ n=N bn < ∞ ⇒ ∑∞ n=N an < ∞ הוכיחו כי פתרון: וכך ש־ 0 ≤ L < 1 כך ש־ L ∈ R 1.1.2 )9 נקודות( נניח שקיים L = lim n→∞ an+1 an .∑∞ n=k an < ∞ הוכיחו כי פתרון: 1",
+          "startOffset": 0,
+          "endOffset": 775
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-calculus2-2025-heb-question-2",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2025-heb",
+        "questionNumber": "1.1",
+        "content": ")עמוד זה נותר ריק לצורך המשך הפתרון של שאלה 1.1( 2",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-calculus2-2025-heb",
+          "filename": "MoedB_calculus2_2025_heb.pdf",
+          "text": ")עמוד זה נותר ריק לצורך המשך הפתרון של שאלה 1.1( 2",
+          "startOffset": 792,
+          "endOffset": 842
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-calculus2-2025-heb-question-3",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2025-heb",
+        "questionNumber": "1.2",
+        "content": "1.2. )8 נקודות( הוכיחו או הפריכו את הטענה הבאה: הטור הבא מתכנס: ∞ ∑ n=1 (−1)n+1 ( 1 √n + (−1)n n ) פתרון: 3",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-calculus2-2025-heb",
+          "filename": "MoedB_calculus2_2025_heb.pdf",
+          "text": "1.2. )8 נקודות( הוכיחו או הפריכו את הטענה הבאה: הטור הבא מתכנס: ∞ ∑ n=1 (−1)n+1 ( 1 √n + (−1)n n ) פתרון: 3",
+          "startOffset": 859,
+          "endOffset": 966
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-calculus2-2025-heb-question-4",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2025-heb",
+        "questionNumber": "2",
+        "content": "שאלה 2 ) 25 נקודות ( . נניח כי|x2 − x0| < |x1 − x0|כך ש־ x1, x2 ∈ R סדרה של מספרים ממשיים. יהיו (an)∞ n=0 ותהי x0 ∈ R 2.1. )15 נקודות( תהי .x = x2מתכנס בהחלט ב־ ∑∞ n=0 an(x − x0)n . הוכיחו כי טור החזקותx = x1מתכנס ב־ ∑∞ n=0 an(x − x0)n טור החזקות פתרון: 4",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-calculus2-2025-heb",
+          "filename": "MoedB_calculus2_2025_heb.pdf",
+          "text": "שאלה 2 ) 25 נקודות ( . נניח כי|x2 − x0| < |x1 − x0|כך ש־ x1, x2 ∈ R סדרה של מספרים ממשיים. יהיו (an)∞ n=0 ותהי x0 ∈ R 2.1. )15 נקודות( תהי .x = x2מתכנס בהחלט ב־ ∑∞ n=0 an(x − x0)n . הוכיחו כי טור החזקותx = x1מתכנס ב־ ∑∞ n=0 an(x − x0)n טור החזקות פתרון: 4"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-calculus2-2025-heb-question-5",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2025-heb",
+        "questionNumber": "2.2",
+        "content": "2.2. )10 נקודות( מצאו את תחום ההתכנסות של טור החזקות הבא: ∞ ∑ n=1 x2n = x2 + x4 + x8 + x16 + x32 + . . . פתרון: 5",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-calculus2-2025-heb",
+          "filename": "MoedB_calculus2_2025_heb.pdf",
+          "text": "2.2. )10 נקודות( מצאו את תחום ההתכנסות של טור החזקות הבא: ∞ ∑ n=1 x2n = x2 + x4 + x8 + x16 + x32 + . . . פתרון: 5",
+          "startOffset": 1255,
+          "endOffset": 1368
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-calculus2-2025-heb-question-6",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2025-heb",
+        "questionNumber": "0",
+        "content": "שעבורם הטור הבא מתכנס: a ≥ 0 3.2. )12 נקודות( מצאו את כל הערכים של ∞ ∑ n=2 n √n2 · an n1.5 פתרון: 7",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-calculus2-2025-heb",
+          "filename": "MoedB_calculus2_2025_heb.pdf",
+          "text": "שעבורם הטור הבא מתכנס: a ≥ 0 3.2. )12 נקודות( מצאו את כל הערכים של ∞ ∑ n=2 n √n2 · an n1.5 פתרון: 7",
+          "startOffset": 1602,
+          "endOffset": 1701
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-calculus2-2025-heb-question-7",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2025-heb",
+        "questionNumber": "4",
+        "content": "שאלה 4 ) 25 נקודות ( 4.1. )13 נקודות( . רמז: הסבירו מדוע האינטגרל מוגדר היטב. ´ π 4 0 tan(x) dx 4.1.1 )5 נקודות( חשבו את האינטגרל המסוים 4.1.2 )8 נקודות( הסיקו כי ln(2) 2e ≤ ˆ π 4 0 e−x tan(x) dx ≤ ln(2) 2 .π < 4 רמז: הסבירו מדוע האינטגרל מוגדר היטב. הערה: תוכלו להניח כי פתרון: 8",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-calculus2-2025-heb",
+          "filename": "MoedB_calculus2_2025_heb.pdf",
+          "text": "שאלה 4 ) 25 נקודות ( 4.1. )13 נקודות( . רמז: הסבירו מדוע האינטגרל מוגדר היטב. ´ π 4 0 tan(x) dx 4.1.1 )5 נקודות( חשבו את האינטגרל המסוים 4.1.2 )8 נקודות( הסיקו כי ln(2) 2e ≤ ˆ π 4 0 e−x tan(x) dx ≤ ln(2) 2 .π < 4 רמז: הסבירו מדוע האינטגרל מוגדר היטב. הערה: תוכלו להניח כי פתרון: 8"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-calculus2-2025-heb-question-8",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2025-heb",
+        "questionNumber": "4.1",
+        "content": ")עמוד זה נשאר ריק על מנת לאפשר עוד מקום לפתרון שאלה 4.1( 9",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-calculus2-2025-heb",
+          "filename": "MoedB_calculus2_2025_heb.pdf",
+          "text": ")עמוד זה נשאר ריק על מנת לאפשר עוד מקום לפתרון שאלה 4.1( 9",
+          "startOffset": 2015,
+          "endOffset": 2073
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-calculus2-2025-heb-question-9",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2025-heb",
+        "questionNumber": "4.2",
+        "content": "4.2. )12 נקודות( קבעו האם הטור הבא מתכנס או מתבדר: ∞ ∑ n=2 [ sin(n) ln(n) · 1 · 4 · 7 · · · (3n − 2) 5n · n! ] פתרון: 10",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-calculus2-2025-heb",
+          "filename": "MoedB_calculus2_2025_heb.pdf",
+          "text": "4.2. )12 נקודות( קבעו האם הטור הבא מתכנס או מתבדר: ∞ ∑ n=2 [ sin(n) ln(n) · 1 · 4 · 7 · · · (3n − 2) 5n · n! ] פתרון: 10",
+          "startOffset": 2090,
+          "endOffset": 2210
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-calculus2-2025-heb-question-10",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2025-heb",
+        "questionNumber": "5",
+        "content": "שאלה 5 ) 25 נקודות ( . חשבו את הערך של האינטגרל´ 1 0 f (x) dx = 1 וכי f (1) = 2 . נניח כי[0, 1] פונקציה הגזירה ברציפות בקטע f 5.1. )7 נקודות( תהי . רמז: הסבירו למה האינטגרל מוגדר היטב.´ 1 0 [x · f ′(x)] dx המסויים פתרון: 11",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-calculus2-2025-heb",
+          "filename": "MoedB_calculus2_2025_heb.pdf",
+          "text": "שאלה 5 ) 25 נקודות ( . חשבו את הערך של האינטגרל´ 1 0 f (x) dx = 1 וכי f (1) = 2 . נניח כי[0, 1] פונקציה הגזירה ברציפות בקטע f 5.1. )7 נקודות( תהי . רמז: הסבירו למה האינטגרל מוגדר היטב.´ 1 0 [x · f ′(x)] dx המסויים פתרון: 11"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-calculus2-2025-heb-question-11",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2025-heb",
+        "questionNumber": "1",
+        "content": "סדרה עולה ממש של מספרים טבעיים. (an)∞ n=1 )18 נקודות( תהי .5.2 .0 < p ≤ 1 מתכנס בתנאי. הוכיחו כי ∑∞ n=1 (−1)n+1 ap n . נניח כי הטורp ∈ R 5.2.1 )10 נקודות( יהי פתרון: 12",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-calculus2-2025-heb",
+          "filename": "MoedB_calculus2_2025_heb.pdf",
+          "text": "סדרה עולה ממש של מספרים טבעיים. (an)∞ n=1 )18 נקודות( תהי .5.2 .0 < p ≤ 1 מתכנס בתנאי. הוכיחו כי ∑∞ n=1 (−1)n+1 ap n . נניח כי הטורp ∈ R 5.2.1 )10 נקודות( יהי פתרון: 12",
+          "startOffset": 2469,
+          "endOffset": 2637
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-moedb-calculus2-2025-heb-question-12",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2025-heb",
+        "questionNumber": "1",
+        "content": "לא מתכנס בתנאי ∑∞ n=1 (−1)n+1 ap n שעבורה הטור (an)∞ n=1 5.2.2 )8 נקודות( תנו דוגמה לסדרה עולה ממש של מספרים טבעיים .p ∈ R לכל פתרון: 13",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-moedb-calculus2-2025-heb",
+          "filename": "MoedB_calculus2_2025_heb.pdf",
+          "text": "לא מתכנס בתנאי ∑∞ n=1 (−1)n+1 ap n שעבורה הטור (an)∞ n=1 5.2.2 )8 נקודות( תנו דוגמה לסדרה עולה ממש של מספרים טבעיים .p ∈ R לכל פתרון: 13"
+        },
+        "confidence": 0.56
+      }
+    ],
+    "detectedTopics": [
+      "גבולות",
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "repeatedPatterns": [
+      "גבול",
+      "התכנסות בהחלט"
+    ],
+    "requiredTheorems": [
+      "החוג למדעי המחשב אוניברסיטת רייכמן מבחן בחשבון אינפיניטסימלי 2 )52( מועד ב׳ ר יוסי שמאי",
+      "1",
+      "שאלה 5 ) 25 נקודות ("
+    ],
+    "requiredFormulas": [
+      "שתי סדרות של מספרים חיוביים. (an)∞",
+      "n=k , (bn)∞",
+      "n=k ותהיינה 0 ≤ k ∈ N 1.1. )17 נקודות( יהי",
+      "∃N ∈ N : ∀n ≥ N, an+1",
+      "n=N bn < ∞ ⇒ ∑∞",
+      "n=N an < ∞ הוכיחו כי",
+      "וכך ש־ 0 ≤ L < 1 כך ש־ L ∈ R 1.1.2 )9 נקודות( נניח שקיים",
+      "n=k an < ∞ הוכיחו כי",
+      "√n + (−1)n",
+      ". נניח כי|x2 − x0| < |x1 − x0|כך ש־ x1, x2 ∈ R סדרה של מספרים ממשיים. יהיו (an)∞",
+      "n=0 ותהי x0 ∈ R 2.1. )15 נקודות( תהי",
+      ".x = x2מתכנס בהחלט ב־ ∑∞",
+      "n=0 an(x − x0)n . הוכיחו כי טור החזקותx = x1מתכנס ב־ ∑∞",
+      "n=0 an(x − x0)n טור החזקות",
+      "= x2 + x4 + x8 + x16 + x32 + . . ."
+    ],
+    "proofPatterns": [],
+    "difficultyEstimate": "medium",
+    "sourceSnippets": [
+      {
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2025-heb",
+        "filename": "MoedB_calculus2_2025_heb.pdf",
+        "text": "החוג למדעי המחשב אוניברסיטת רייכמן מבחן בחשבון אינפיניטסימלי 2 )52( מועד ב׳ ר יוסי שמאי. משך הבחינה: 3 שעות.\"מרצה: ד הוראות: לבחינה חמש שאלות. עליכן לענות בדיוק על ארבע מתוכן. משקל כל שאלה הוא 25 נקודות. אין בחירה בין סעיפים של אותה תשובות לא מנומקות לא יקבלו ניקוד. עליכן לצטט את כל התנאים לכל משפט או טענה. חל איסור מוחלט להסתמך על חומר שאלה. שלא נלמד בקורס.אין לרשום פתרונות במקומות שאינם מיועדים לכך! אין לרשום פתרונות מאחורי הדף!!! בהצלחה! שאלה 1 ) 25 נקודות ( שתי סדרות של מספרים חיוביים. (an)∞ n=k , (bn)∞ n=k ותהיינה 0 ≤ k ∈ N 1.1. )17 נקודות( יהי 1.1.1 )8 נקודות( נניח כי ∃N ∈ N : ∀n ≥ N, an+1 an ≤ bn+1 bn . ∑∞ n=N bn < ∞ ⇒ ∑∞ n=N an < ∞ הוכיחו כי פתרון: וכך ש־ 0 ≤ L < 1 כך ש־ L ∈ R 1.1.2 )9 נקודות( נניח שקיים L = lim n→∞ an+1 an .∑∞ n=k an < ∞ הוכיחו כי פתרון: 1",
+        "startOffset": 0,
+        "endOffset": 775
+      },
+      {
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2025-heb",
+        "filename": "MoedB_calculus2_2025_heb.pdf",
+        "text": ")עמוד זה נותר ריק לצורך המשך הפתרון של שאלה 1.1( 2",
+        "startOffset": 792,
+        "endOffset": 842
+      },
+      {
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2025-heb",
+        "filename": "MoedB_calculus2_2025_heb.pdf",
+        "text": "1.2. )8 נקודות( הוכיחו או הפריכו את הטענה הבאה: הטור הבא מתכנס: ∞ ∑ n=1 (−1)n+1 ( 1 √n + (−1)n n ) פתרון: 3",
+        "startOffset": 859,
+        "endOffset": 966
+      },
+      {
+        "sourceFileId": "past-exams-hebrew-moedb-calculus2-2025-heb",
+        "filename": "MoedB_calculus2_2025_heb.pdf",
+        "text": "שאלה 2 ) 25 נקודות ( . נניח כי|x2 − x0| < |x1 − x0|כך ש־ x1, x2 ∈ R סדרה של מספרים ממשיים. יהיו (an)∞ n=0 ותהי x0 ∈ R 2.1. )15 נקודות( תהי .x = x2מתכנס בהחלט ב־ ∑∞ n=0 an(x − x0)n . הוכיחו כי טור החזקותx = x1מתכנס ב־ ∑∞ n=0 an(x − x0)n טור החזקות פתרון: 4"
+      }
+    ],
+    "confidence": 0.7962499999999999
+  },
+  {
+    "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+    "filename": "Simulation_calculus2_2025_heb.pdf",
+    "examYear": 2025,
+    "moed": "unknown",
+    "questions": [
+      {
+        "id": "past-exams-hebrew-simulation-calculus2-2025-heb-question-1",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+        "questionNumber": "2",
+        "content": "החוג למדעי המחשב אוניברסיטת רייכמן מבחן בחשבון אינפיניטסימלי 2 )52( סימולציה ר יוסי שמאי. משך הבחינה: 3 שעות.\"מרצה: ד הוראות: לבחינה חמש שאלות. עליכן לענות בדיוק על ארבע מתוכן. משקל כל שאלה הוא 25 נקודות. אין בחירה בין סעיפים של אותה תשובות לא מנומקות לא יקבלו ניקוד. עליכן לצטט את כל התנאים לכל משפט או טענה. חל איסור מוחלט להסתמך על חומר שאלה. שלא נלמד בקורס.אין לרשום פתרונות במקומות שאינם מיועדים לכך! אין לרשום פתרונות מאחורי הדף!!! בהצלחה! שאלה 1 ) 25 נקודות ( סדרה של מספרים ממשיים. (an)∞ n=1 1.1. )17 נקודות( תהי הוא טור לייבניץ. ∑∞ n=1(−1)n+1an 1.1.1 )2 נקודות( הגדירו את המושג הבא: הטור פתרון: .a1 − a2 ≤ s ≤ a1 וכי s ∈ R הוא טור לייבניץ. הוכיחו שהטור מתכנס לערך ∑∞ n=1(−1)n+1an 1.1.2 )15 נקודות( נניח כי הטור פתרון: 1",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+          "filename": "Simulation_calculus2_2025_heb.pdf",
+          "text": "החוג למדעי המחשב אוניברסיטת רייכמן מבחן בחשבון אינפיניטסימלי 2 )52( סימולציה ר יוסי שמאי. משך הבחינה: 3 שעות.\"מרצה: ד הוראות: לבחינה חמש שאלות. עליכן לענות בדיוק על ארבע מתוכן. משקל כל שאלה הוא 25 נקודות. אין בחירה בין סעיפים של אותה תשובות לא מנומקות לא יקבלו ניקוד. עליכן לצטט את כל התנאים לכל משפט או טענה. חל איסור מוחלט להסתמך על חומר שאלה. שלא נלמד בקורס.אין לרשום פתרונות במקומות שאינם מיועדים לכך! אין לרשום פתרונות מאחורי הדף!!! בהצלחה! שאלה 1 ) 25 נקודות ( סדרה של מספרים ממשיים. (an)∞ n=1 1.1. )17 נקודות( תהי הוא טור לייבניץ. ∑∞ n=1(−1)n+1an 1.1.1 )2 נקודות( הגדירו את המושג הבא: הטור פתרון: .a1 − a2 ≤ s ≤ a1 וכי s ∈ R הוא טור לייבניץ. הוכיחו שהטור מתכנס לערך ∑∞ n=1(−1)n+1an 1.1.2 )15 נקודות( נניח כי הטור פתרון: 1",
+          "startOffset": 0,
+          "endOffset": 728
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-simulation-calculus2-2025-heb-question-2",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+        "questionNumber": "1.1",
+        "content": ")עמוד זה נשאר ריק על מנת לאפשר עוד מקום לפתרון שאלה 1.1.2( 2",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+          "filename": "Simulation_calculus2_2025_heb.pdf",
+          "text": ")עמוד זה נשאר ריק על מנת לאפשר עוד מקום לפתרון שאלה 1.1.2( 2",
+          "startOffset": 745,
+          "endOffset": 805
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-simulation-calculus2-2025-heb-question-3",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+        "questionNumber": "1.2",
+        "content": "1.2. )8 נקודות( חשבו את ערך הטור הבא, או הוכיחו שהוא לא מתכנס במובן הרחב: ∞ ∑ n=1 ( 1 2n − 1 + 1 2n − 1 n ) פתרון: 3",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+          "filename": "Simulation_calculus2_2025_heb.pdf",
+          "text": "1.2. )8 נקודות( חשבו את ערך הטור הבא, או הוכיחו שהוא לא מתכנס במובן הרחב: ∞ ∑ n=1 ( 1 2n − 1 + 1 2n − 1 n ) פתרון: 3",
+          "startOffset": 822,
+          "endOffset": 938
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-simulation-calculus2-2025-heb-question-4",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+        "questionNumber": "2",
+        "content": "שאלה 2 ) 25 נקודות ( 2.1. )18 נקודות( מתקיים −1 ≤ x ≤ 1 2.1. )15 נקודות( הוכיחו כי לכל arctan(x) = ∞ ∑ n=0 (−1)nx2n+1 2n + 1 פתרון: 4",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+          "filename": "Simulation_calculus2_2025_heb.pdf",
+          "text": "שאלה 2 ) 25 נקודות ( 2.1. )18 נקודות( מתקיים −1 ≤ x ≤ 1 2.1. )15 נקודות( הוכיחו כי לכל arctan(x) = ∞ ∑ n=0 (−1)nx2n+1 2n + 1 פתרון: 4"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-simulation-calculus2-2025-heb-question-5",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+        "questionNumber": "2.1",
+        "content": ")עמוד זה נשאר ריק על מנת לאפשר עוד מקום לפתרון שאלה 2.1( 5",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+          "filename": "Simulation_calculus2_2025_heb.pdf",
+          "text": ")עמוד זה נשאר ריק על מנת לאפשר עוד מקום לפתרון שאלה 2.1( 5",
+          "startOffset": 745,
+          "endOffset": 803
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-simulation-calculus2-2025-heb-question-6",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+        "questionNumber": "2.2",
+        "content": "2.2. )10 נקודות( חשבו את הגבול הבא, או הוכיחו שהוא לא קיים במובן הרחב: lim n→∞ [ n0.6 (n2 + 1)0.7 − n2] .x > 0 לכל f (x) = x0.7 י”רמז: הביטו בפונקציה המוגדרת ע פתרון: 6",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+          "filename": "Simulation_calculus2_2025_heb.pdf",
+          "text": "2.2. )10 נקודות( חשבו את הגבול הבא, או הוכיחו שהוא לא קיים במובן הרחב: lim n→∞ [ n0.6 (n2 + 1)0.7 − n2] .x > 0 לכל f (x) = x0.7 י”רמז: הביטו בפונקציה המוגדרת ע פתרון: 6",
+          "startOffset": 1180,
+          "endOffset": 1348
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-simulation-calculus2-2025-heb-question-7",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+        "questionNumber": "3",
+        "content": "שאלה 3 ) 25 נקודות ( י הנוסחה הרקורסיבית”המוגדרת ע (an)∞ n=1 3.1. )13 נקודות( נביט בסדרה    an+1 = an + 1 an ∀n ∈ N a1 = 1 .limn→∞ an = ∞ הוכיחו כי 7",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+          "filename": "Simulation_calculus2_2025_heb.pdf",
+          "text": "שאלה 3 ) 25 נקודות ( י הנוסחה הרקורסיבית”המוגדרת ע (an)∞ n=1 3.1. )13 נקודות( נביט בסדרה    an+1 = an + 1 an ∀n ∈ N a1 = 1 .limn→∞ an = ∞ הוכיחו כי 7"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-simulation-calculus2-2025-heb-question-8",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+        "questionNumber": "0",
+        "content": "c ∈ (0, 2) לא קיים במובן הרחב. הוכיחו שקיימת limx→2− f (x) פונקציה גזירה. נניח שהגבול f : (0, 2) → R 3.2. )12 נקודות( תהי .f ′(c) = 0 שעבורה פתרון: 8",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+          "filename": "Simulation_calculus2_2025_heb.pdf",
+          "text": "c ∈ (0, 2) לא קיים במובן הרחב. הוכיחו שקיימת limx→2− f (x) פונקציה גזירה. נניח שהגבול f : (0, 2) → R 3.2. )12 נקודות( תהי .f ′(c) = 0 שעבורה פתרון: 8",
+          "startOffset": 1534,
+          "endOffset": 1683
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-simulation-calculus2-2025-heb-question-9",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+        "questionNumber": "1",
+        "content": ".f ′ ( 1 3 ) . חשבו אתx > 0 לכל f (x) = ∫ 0 3x arctan(t) 2+t4 dt י”4.2. )9 נקודות( נביט בפונקציה המוגדרת ע פתרון: 10",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+          "filename": "Simulation_calculus2_2025_heb.pdf",
+          "text": ".f ′ ( 1 3 ) . חשבו אתx > 0 לכל f (x) = ∫ 0 3x arctan(t) 2+t4 dt י”4.2. )9 נקודות( נביט בפונקציה המוגדרת ע פתרון: 10"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-simulation-calculus2-2025-heb-question-10",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+        "questionNumber": "4.3",
+        "content": "4.3. )7 נקודות( הוכיחו או הפריכו את הטענה הבאה: מתקיים 1 − π2 3! + π4 5! − π6 7! + · · · = 0 פתרון: 11",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+          "filename": "Simulation_calculus2_2025_heb.pdf",
+          "text": "4.3. )7 נקודות( הוכיחו או הפריכו את הטענה הבאה: מתקיים 1 − π2 3! + π4 5! − π6 7! + · · · = 0 פתרון: 11",
+          "startOffset": 2073,
+          "endOffset": 2175
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-simulation-calculus2-2025-heb-question-11",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+        "questionNumber": "5",
+        "content": "שאלה 5 ) 25 נקודות ( י”. נביט בסדרה המוגדרת עp ∈ R סדרה של מספרים חיוביים ויהי (an)∞ n=1 5.1. )13 נקודות( תהי bn = ln ( 1 an ) ln(n) ∀n ∈ N .p > 1 מתכנס אם ורק אם ∑∞ n=1 an . הוכיחו כי הטורlimn→∞ np−bn = 1 נניח כי פתרון: 12",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+          "filename": "Simulation_calculus2_2025_heb.pdf",
+          "text": "שאלה 5 ) 25 נקודות ( י”. נביט בסדרה המוגדרת עp ∈ R סדרה של מספרים חיוביים ויהי (an)∞ n=1 5.1. )13 נקודות( תהי bn = ln ( 1 an ) ln(n) ∀n ∈ N .p > 1 מתכנס אם ורק אם ∑∞ n=1 an . הוכיחו כי הטורlimn→∞ np−bn = 1 נניח כי פתרון: 12"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-simulation-calculus2-2025-heb-question-12",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+        "questionNumber": "5.1",
+        "content": ")עמוד זה נשאר ריק על מנת לאפשר עוד מקום לפתרון שאלה 5.1( 14",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+          "filename": "Simulation_calculus2_2025_heb.pdf",
+          "text": ")עמוד זה נשאר ריק על מנת לאפשר עוד מקום לפתרון שאלה 5.1( 14",
+          "startOffset": 745,
+          "endOffset": 804
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "past-exams-hebrew-simulation-calculus2-2025-heb-question-13",
+        "sourceType": "past_exam",
+        "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+        "questionNumber": "12",
+        "content": ")12 נקודות( חשבו את הגבול הבא, או הוכיחו שהוא לא קיים במובן הרחב: .5.2 lim x→∞ x2 [2 ln(x) − ln (x2 + 1)] פתרון: 15",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+          "filename": "Simulation_calculus2_2025_heb.pdf",
+          "text": ")12 נקודות( חשבו את הגבול הבא, או הוכיחו שהוא לא קיים במובן הרחב: .5.2 lim x→∞ x2 [2 ln(x) − ln (x2 + 1)] פתרון: 15",
+          "startOffset": 2531,
+          "endOffset": 2646
+        },
+        "confidence": 0.56
+      }
+    ],
+    "detectedTopics": [
+      "גבולות",
+      "טורים",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "repeatedPatterns": [
+      "גבול"
+    ],
+    "requiredTheorems": [
+      "החוג למדעי המחשב אוניברסיטת רייכמן מבחן בחשבון אינפיניטסימלי 2 )52( סימולציה ר יוסי שמאי",
+      "4"
+    ],
+    "requiredFormulas": [
+      "סדרה של מספרים ממשיים. (an)∞",
+      "n=1 1.1. )17 נקודות( תהי",
+      "הוא טור לייבניץ. ∑∞",
+      "n=1(−1)n+1an 1.1.1 )2 נקודות( הגדירו את המושג הבא: הטור",
+      ".a1 − a2 ≤ s ≤ a1 וכי s ∈ R הוא טור לייבניץ. הוכיחו שהטור מתכנס לערך ∑∞",
+      "n=1(−1)n+1an 1.1.2 )15 נקודות( נניח כי הטור",
+      "מתקיים −1 ≤ x ≤ 1 2.1. )15 נקודות( הוכיחו כי לכל",
+      "arctan(x) =",
+      ".x > 0 לכל f (x) = x0.7 י”רמז: הביטו בפונקציה המוגדרת ע",
+      "י הנוסחה הרקורסיבית”המוגדרת ע (an)∞",
+      "n=1 3.1. )13 נקודות( נביט בסדרה",
+      "an+1 = an + 1",
+      ".limn→∞ an = ∞ הוכיחו כי",
+      "c ∈ (0, 2) לא קיים במובן הרחב. הוכיחו שקיימת limx→2− f (x) פונקציה גזירה. נניח שהגבול f : (0, 2) → R 3.2. )12 נקודות( תהי",
+      ".f ′(c) = 0 שעבורה"
+    ],
+    "proofPatterns": [],
+    "difficultyEstimate": "medium",
+    "sourceSnippets": [
+      {
+        "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+        "filename": "Simulation_calculus2_2025_heb.pdf",
+        "text": "החוג למדעי המחשב אוניברסיטת רייכמן מבחן בחשבון אינפיניטסימלי 2 )52( סימולציה ר יוסי שמאי. משך הבחינה: 3 שעות.\"מרצה: ד הוראות: לבחינה חמש שאלות. עליכן לענות בדיוק על ארבע מתוכן. משקל כל שאלה הוא 25 נקודות. אין בחירה בין סעיפים של אותה תשובות לא מנומקות לא יקבלו ניקוד. עליכן לצטט את כל התנאים לכל משפט או טענה. חל איסור מוחלט להסתמך על חומר שאלה. שלא נלמד בקורס.אין לרשום פתרונות במקומות שאינם מיועדים לכך! אין לרשום פתרונות מאחורי הדף!!! בהצלחה! שאלה 1 ) 25 נקודות ( סדרה של מספרים ממשיים. (an)∞ n=1 1.1. )17 נקודות( תהי הוא טור לייבניץ. ∑∞ n=1(−1)n+1an 1.1.1 )2 נקודות( הגדירו את המושג הבא: הטור פתרון: .a1 − a2 ≤ s ≤ a1 וכי s ∈ R הוא טור לייבניץ. הוכיחו שהטור מתכנס לערך ∑∞ n=1(−1)n+1an 1.1.2 )15 נקודות( נניח כי הטור פתרון: 1",
+        "startOffset": 0,
+        "endOffset": 728
+      },
+      {
+        "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+        "filename": "Simulation_calculus2_2025_heb.pdf",
+        "text": ")עמוד זה נשאר ריק על מנת לאפשר עוד מקום לפתרון שאלה 1.1.2( 2",
+        "startOffset": 745,
+        "endOffset": 805
+      },
+      {
+        "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+        "filename": "Simulation_calculus2_2025_heb.pdf",
+        "text": "1.2. )8 נקודות( חשבו את ערך הטור הבא, או הוכיחו שהוא לא מתכנס במובן הרחב: ∞ ∑ n=1 ( 1 2n − 1 + 1 2n − 1 n ) פתרון: 3",
+        "startOffset": 822,
+        "endOffset": 938
+      },
+      {
+        "sourceFileId": "past-exams-hebrew-simulation-calculus2-2025-heb",
+        "filename": "Simulation_calculus2_2025_heb.pdf",
+        "text": "שאלה 2 ) 25 נקודות ( 2.1. )18 נקודות( מתקיים −1 ≤ x ≤ 1 2.1. )15 נקודות( הוכיחו כי לכל arctan(x) = ∞ ∑ n=0 (−1)nx2n+1 2n + 1 פתרון: 4"
+      }
+    ],
+    "confidence": 0.782
+  },
+  {
     "sourceFileId": "past-exams-exam-questions-that-are-not-in-the-marerial-for-our-exam",
     "filename": "Exam questions that are not in the marerial for our exam.pdf",
     "moed": "unknown",
@@ -39,226 +2176,6 @@
       }
     ],
     "confidence": 0.40683333333333327
-  },
-  {
-    "sourceFileId": "past-exams-formula-sheets-2025",
-    "filename": "formula_sheets_2025.pdf",
-    "moed": "unknown",
-    "questions": [
-      {
-        "id": "past-exams-formula-sheets-2025-question-1",
-        "sourceType": "past_exam",
-        "sourceFileId": "past-exams-formula-sheets-2025",
-        "questionNumber": "2",
-        "content": "2 Integration and differentiation R xα dx = xα+1 α+1 + C , (α , −1) (xα)′ = αxα−1 R 1 x dx = ln |x| + C (ln x)′ = 1 x R cos x dx = sin x + C (sin x)′ = cos x R sin x dx = − cos x + C (cos x)′ = − sin x R 1 cos2 x dx = tan x + C (tan x)′ = 1 cos2 x R ax dx = ax ln a + C (ax)′ = ln a · ax R ex dx = ex + C (ex)′ = ex R 1 1+x2 dx = arctan x + C (arctan x)′ = 1 1+x2 R 1 √1−x2 dx = arcsin x + C (arcsin x)′ = 1 √1−x2 R 1 − √1−x2 dx = arccos x + C (arccos x)′ = − 1 √1−x2 R 1 a2+x2 dx = 1 a arctan x a + C loga x ′ = 1 ln(a)·x R 1 √a2−x2 dx = arcsin x a + C R α · f (x) dx = α · R f (x) dx  α · f (x) ′ = α · f ′(x) R f (x) ± g(x) dx = R f (x) dx ± R g(x) dx   f (x) ± g(x) ′ = f ′(x) ± g′(x) R u′(x)v(x) dx = u(x)v(x) − R u(x)v′(x) dx [u(x) · v(x)]′ = u′(x)v(x) + u(x)v′(x) R g( f (x)) f ′(x) dx = R g(t) dt  g ( f (x)) ′ = g′ ( f (x)) · f ′(x) R ∞ 1 dx xp =    1 p−1 p > 1 ∞ p ≤ 1 h f (x) g(x) i′ = f ′(x)g(x)−g′(x) f (x) g2(x) R 1 0 dx xp =    1 1−p p < 1 ∞ p ≥ 1 h f −1(y)i′ = 1 f ′( f −1(y)) Power series T f (x) = P∞ n=0 f (n)(x0) n! (x − x0)n RN (x) = f (x) − TN (x) = f (N+1)(c) (N+1)! (x − x0)N+1 R = 1 limn→∞ n√|an| = limn→∞ an an+1 R = 1 limn→∞ |an+1| |an| = limn→∞ |an| |an+1| 1 1−x = P∞ n=0 xn, |x| < 1 ln(1 + x) = P∞ n=1 (−1)n+1 xn n , −1 < x ≤ 1 ex = P∞ n=0 xn n! , x ∈ R sin x = P∞ n=0 (−1)n x2n+1 (2n+1)! , x ∈ R cos x = P∞ n=0 (−1)n x2n (2n)! , x ∈ R arctan x = P∞ n=0 (−1)n x2n+1 2n+1 , −1 ≤ x ≤ 1",
-        "topicIds": [
-          "גבולות",
-          "טורי-חזקות",
-          "טורים",
-          "נגזרות",
-          "סדרות"
-        ],
-        "difficulty": "unknown",
-        "examRelevance": "high",
-        "sourceSnippet": {
-          "sourceFileId": "past-exams-formula-sheets-2025",
-          "filename": "formula_sheets_2025.pdf",
-          "text": "2 Integration and differentiation R xα dx = xα+1 α+1 + C , (α , −1) (xα)′ = αxα−1 R 1 x dx = ln |x| + C (ln x)′ = 1 x R cos x dx = sin x + C (sin x)′ = cos x R sin x dx = − cos x + C (cos x)′ = − sin x R 1 cos2 x dx = tan x + C (tan x)′ = 1 cos2 x R ax dx = ax ln a + C (ax)′ = ln a · ax R ex dx = ex + C (ex)′ = ex R 1 1+x2 dx = arctan x + C (arctan x)′ = 1 1+x2 R 1 √1−x2 dx = arcsin x + C (arcsin x)′ = 1 √1−x2 R 1 − √1−x2 dx = arccos x + C (arccos x)′ = − 1 √1−x2 R 1 a2+x2 dx = 1 a arctan x a + C loga x ′ = 1 ln(a)·x R 1 √a2−x2 dx = arcsin x a + C R α · f (x) dx = α · R f (x) dx  α · f (x) ′ = α · f ′(x) R f (x) ± g(x) dx = R f (x) dx ± R g(x) dx   f (x) ± g(x) ′ = f ′(x) ± g′(x) R u′(x)v(x) dx = u(x)v(x) − R u(x)v′(x) dx [u(x) · v(x)]′ = u′(x)v(x) + u(x)v′(x) R g( f (x)) f ′(x) dx = R g(t) dt  g ( f (x)) ′ = g′ ( f (x)) · f ′(x) R ∞ 1 dx xp =    1 p−1 p > 1 ∞ p ≤ 1 h f (x) "
-        },
-        "confidence": 0.56
-      }
-    ],
-    "detectedTopics": [
-      "גבולות",
-      "טורי חזקות",
-      "טורים",
-      "נגזרות",
-      "סדרות"
-    ],
-    "repeatedPatterns": [
-      "גבול"
-    ],
-    "requiredTheorems": [],
-    "requiredFormulas": [
-      "(a ± b)2 = a2 ± 2ab + b2 (a + b)(a − b) = a2 − b2",
-      "(a ± b)3 = a3 ± 3a2b + 3ab2 ± b3 a3 − b3 = (a − b)(a2 + ab + b2)",
-      "ax2 + bx + c = a(x − x1)(x − x2) x1,2 = −b± √b2−4ac",
-      "ax · bx = (a · b)x ax",
-      "bx =   a",
-      "ax · ay = ax+y loga (x · y) = loga(x) + loga(y)",
-      "ay = ax−y loga",
-      "= loga(x) − loga(y)",
-      "(ax)y = a(x·y) loga (xy) = y · loga(x)",
-      "aloga(y) = y loga (ax) = x",
-      "cos(−x) = cos(x) sin(−x) = − sin(x) cos2(x) + sin2(x) = 1",
-      "2 + x  = cos(x) 1 + tan2(x) = 1",
-      "cos2(x) sin(2x) = 2 sin(x) cos(x)",
-      "sin(x ± y) = sin(x) cos(y) ± sin(y) cos(x) cos(x ± y) = cos(x) cos(y) ∓ sin(x) sin(y) cos(2x) = cos2(x) − sin2(x)",
-      "sin(x ± 2πk) = sin(x) cos(x ± 2πk) = cos(x) tan(x ± πk) = tan(x)"
-    ],
-    "proofPatterns": [],
-    "difficultyEstimate": "medium",
-    "sourceSnippets": [
-      {
-        "sourceFileId": "past-exams-formula-sheets-2025",
-        "filename": "formula_sheets_2025.pdf",
-        "text": "1 Algebra (a ± b)2 = a2 ± 2ab + b2 (a + b)(a − b) = a2 − b2 (a ± b)3 = a3 ± 3a2b + 3ab2 ± b3 a3 − b3 = (a − b)(a2 + ab + b2) ax2 + bx + c = a(x − x1)(x − x2) x1,2 = −b± √b2−4ac 2a ax · bx = (a · b)x ax bx =   a b  x ax · ay = ax+y loga (x · y) = loga(x) + loga(y) ax ay = ax−y loga   x y   = loga(x) − loga(y) (ax)y = a(x·y) loga (xy) = y · loga(x) aloga(y) = y loga (ax) = x Trigonometry cos(−x) = cos(x) sin(−x) = − sin(x) cos2(x) + sin2(x) = 1 sin   π 2 + x  = cos(x) 1 + tan2(x) = 1 cos2(x) sin(2x) = 2 sin(x) cos(x) sin(x ± y) = sin(x) cos(y) ± sin(y) cos(x) cos(x ± y) = cos(x) cos(y) ∓ sin(x) sin(y) cos(2x) = cos2(x) − sin2(x) sin(x ± 2πk) = sin(x) cos(x ± 2πk) = cos(x) tan(x ± πk) = tan(x) cos(x) + cos(y) = 2 cos   x+y 2   cos   x−y 2   sin(x) + sin(y) = 2 sin   x+y 2   cos   x−y 2   sin   π 3   = cos   π 6   = √3 2 sin   π 6   = cos   π 3   = 1 2 sin   π 4   = cos   π 4   = √2 2 sin   "
-      },
-      {
-        "sourceFileId": "past-exams-formula-sheets-2025",
-        "filename": "formula_sheets_2025.pdf",
-        "text": "2 Integration and differentiation R xα dx = xα+1 α+1 + C , (α , −1) (xα)′ = αxα−1 R 1 x dx = ln |x| + C (ln x)′ = 1 x R cos x dx = sin x + C (sin x)′ = cos x R sin x dx = − cos x + C (cos x)′ = − sin x R 1 cos2 x dx = tan x + C (tan x)′ = 1 cos2 x R ax dx = ax ln a + C (ax)′ = ln a · ax R ex dx = ex + C (ex)′ = ex R 1 1+x2 dx = arctan x + C (arctan x)′ = 1 1+x2 R 1 √1−x2 dx = arcsin x + C (arcsin x)′ = 1 √1−x2 R 1 − √1−x2 dx = arccos x + C (arccos x)′ = − 1 √1−x2 R 1 a2+x2 dx = 1 a arctan x a + C loga x ′ = 1 ln(a)·x R 1 √a2−x2 dx = arcsin x a + C R α · f (x) dx = α · R f (x) dx  α · f (x) ′ = α · f ′(x) R f (x) ± g(x) dx = R f (x) dx ± R g(x) dx   f (x) ± g(x) ′ = f ′(x) ± g′(x) R u′(x)v(x) dx = u(x)v(x) − R u(x)v′(x) dx [u(x) · v(x)]′ = u′(x)v(x) + u(x)v′(x) R g( f (x)) f ′(x) dx = R g(t) dt  g ( f (x)) ′ = g′ ( f (x)) · f ′(x) R ∞ 1 dx xp =    1 p−1 p > 1 ∞ p ≤ 1 h f (x) "
-      }
-    ],
-    "confidence": 0.6206666666666667
-  },
-  {
-    "sourceFileId": "past-exams-list-of-theorems-quiz-2-2026",
-    "filename": "list of theorems quiz 2 2026.pdf",
-    "moed": "unknown",
-    "questions": [
-      {
-        "id": "past-exams-list-of-theorems-quiz-2-2026-question-1",
-        "sourceType": "past_exam",
-        "sourceFileId": "past-exams-list-of-theorems-quiz-2-2026",
-        "questionNumber": "2",
-        "content": "Infinitesimal Calculus 2, list of theorem for Quiz 2 1. Prove that the Dirichlet function is not integrable on any closed interval [𝑎, 𝑏] ⊆ R. 2. Let 𝑎, 𝑏 ∈ R such that 𝑎 < 𝑏 and let 𝑓 be a function that is bounded on [𝑎, 𝑏]. Suppose 𝑓 is integrable on [𝑎, 𝑏] Prove ∫ 𝑏 𝑎 𝑓 (𝑥) 𝑑𝑥 Δ ≤ ∫ 𝑏 𝑎 | 𝑓 (𝑥)| 𝑑𝑥. 3. Let 𝑎, 𝑏 ∈ R such that 𝑎 < 𝑏 and let 𝑓 be a function that is continuous on [𝑎, 𝑏]. Prove ∃𝑐 ∈ [𝑎, 𝑏] such that 𝑓 (𝑐) = 1 𝑏 − 𝑎 ∫ 𝑏 𝑎 𝑓 (𝑥) 𝑑𝑥. 4. Let 𝑎, 𝑏 ∈ R such that 𝑎 < 𝑏 and let 𝑓 be a function that is bounded on [𝑎, 𝑏]. Suppose 𝑓 is integrable on [𝑎, 𝑏] and consider the function defined by 𝐹 (𝑥) = ∫ 𝑥 𝑎 𝑓 (𝑡) 𝑑𝑡, ∀𝑥 ∈ [𝑎, 𝑏]. Prove that 𝐹 is continuous. 5. Let 𝑎, 𝑏 ∈ R such that 𝑎 < 𝑏 and let 𝑓 be a function that is bounded on [𝑎, 𝑏]. Suppose 𝑓 is integrable on [𝑎, 𝑏] and consider the function defined by 𝐹 (𝑥) = ∫ 𝑥 𝑎 𝑓 (𝑡) 𝑑𝑡, ∀𝑥 ∈ [𝑎, 𝑏]. Let 𝑥0 ∈ [𝑎, 𝑏]. Suppose 𝑓 is continuous at 𝑥0. Prove 𝐹 is differentiable at 𝑥0, and 𝐹′ (𝑥0) = 𝑓 (𝑥0). 6. Let 𝑎, 𝑏 ∈ R such that 𝑎 < 𝑏 and let 𝑓 , 𝐺 be two functions defined on [𝑎, 𝑏]. Suppose 𝑓 is continuous on [𝑎, 𝑏], and that 𝐺 is an anti-derivative of 𝑓 on [𝑎, 𝑏]. Prove that ∫ 𝑏 𝑎 𝑓 (𝑥) 𝑑𝑥 = 𝐺 (𝑏) − 𝐺 (𝑎). 7. Let 𝑎 ∈ R and let 𝑓 , 𝑔 be two functions defined on [𝑎, ∞). Suppose that (i) 0 ≤ 𝑓 (𝑥) ≤ 𝑔(𝑥), ∀𝑥 ≥ 𝑎. (ii) 𝑓 , 𝑔 are integrable on [𝑎, 𝑏] for every 𝑏 > 𝑎. (iii) The improper integral ∫ ∞ 𝑎 𝑔(𝑥) 𝑑𝑥 is convergent. Prove that the improper integral ∫ ∞ 𝑎 𝑓 (𝑥) 𝑑𝑥 is convergent and ∫ ∞ 𝑎 𝑓 (𝑥) 𝑑𝑥 ≤ ∫ ∞ 𝑎 𝑔(𝑥) 𝑑𝑥. 1",
-        "topicIds": [
-          "אינטגרלים-לא-אמיתיים",
-          "נגזרות",
-          "סדרות",
-          "פונקציות",
-          "רציפות"
-        ],
-        "difficulty": "hard",
-        "examRelevance": "high",
-        "sourceSnippet": {
-          "sourceFileId": "past-exams-list-of-theorems-quiz-2-2026",
-          "filename": "list of theorems quiz 2 2026.pdf",
-          "text": "Infinitesimal Calculus 2, list of theorem for Quiz 2 1. Prove that the Dirichlet function is not integrable on any closed interval [𝑎, 𝑏] ⊆ R. 2. Let 𝑎, 𝑏 ∈ R such that 𝑎 < 𝑏 and let 𝑓 be a function that is bounded on [𝑎, 𝑏]. Suppose 𝑓 is integrable on [𝑎, 𝑏] Prove ∫ 𝑏 𝑎 𝑓 (𝑥) 𝑑𝑥 Δ ≤ ∫ 𝑏 𝑎 | 𝑓 (𝑥)| 𝑑𝑥. 3. Let 𝑎, 𝑏 ∈ R such that 𝑎 < 𝑏 and let 𝑓 be a function that is continuous on [𝑎, 𝑏]. Prove ∃𝑐 ∈ [𝑎, 𝑏] such that 𝑓 (𝑐) = 1 𝑏 − 𝑎 ∫ 𝑏 𝑎 𝑓 (𝑥) 𝑑𝑥. 4. Let 𝑎, 𝑏 ∈ R such that 𝑎 < 𝑏 and let 𝑓 be a function that is bounded on [𝑎, 𝑏]. Suppose 𝑓 is integrable on [𝑎, 𝑏] and consider the function defined by 𝐹 (𝑥) = ∫ 𝑥 𝑎 𝑓 (𝑡) 𝑑𝑡, ∀𝑥 ∈ [𝑎, 𝑏]. Prove that 𝐹 is continuous. 5. Let 𝑎, 𝑏 ∈ R such that 𝑎 < 𝑏 and let 𝑓 be a function that is bounded on [𝑎, 𝑏]. Suppose 𝑓 is integrable on [𝑎, 𝑏] and consider the function defined by \ud835",
-          "startOffset": 0,
-          "endOffset": 1646
-        },
-        "confidence": 0.56
-      }
-    ],
-    "detectedTopics": [
-      "אינטגרלים לא אמיתיים",
-      "נגזרות",
-      "סדרות",
-      "פונקציות",
-      "רציפות"
-    ],
-    "repeatedPatterns": [
-      "אינטגרל לא אמיתי"
-    ],
-    "requiredTheorems": [
-      "Infinitesimal Calculus 2, list of theorem for Quiz 2 1"
-    ],
-    "requiredFormulas": [
-      "1. Prove that the Dirichlet function is not integrable on any closed interval [𝑎, 𝑏] ⊆ R.",
-      "2. Let 𝑎, 𝑏 ∈ R such that 𝑎 < 𝑏 and let 𝑓 be a function that is bounded on [𝑎, 𝑏]. Suppose 𝑓 is integrable on [𝑎, 𝑏] Prove",
-      "𝑓 (𝑥) 𝑑𝑥 Δ",
-      "| 𝑓 (𝑥)| 𝑑𝑥.",
-      "3. Let 𝑎, 𝑏 ∈ R such that 𝑎 < 𝑏 and let 𝑓 be a function that is continuous on [𝑎, 𝑏]. Prove ∃𝑐 ∈ [𝑎, 𝑏] such that",
-      "𝑓 (𝑐) = 1",
-      "𝑓 (𝑥) 𝑑𝑥.",
-      "4. Let 𝑎, 𝑏 ∈ R such that 𝑎 < 𝑏 and let 𝑓 be a function that is bounded on [𝑎, 𝑏]. Suppose 𝑓 is integrable on [𝑎, 𝑏] and",
-      "𝐹 (𝑥) =",
-      "𝑓 (𝑡) 𝑑𝑡, ∀𝑥 ∈ [𝑎, 𝑏].",
-      "5. Let 𝑎, 𝑏 ∈ R such that 𝑎 < 𝑏 and let 𝑓 be a function that is bounded on [𝑎, 𝑏]. Suppose 𝑓 is integrable on [𝑎, 𝑏] and",
-      "𝐹 (𝑥) =",
-      "𝑓 (𝑡) 𝑑𝑡, ∀𝑥 ∈ [𝑎, 𝑏].",
-      "Let 𝑥0 ∈ [𝑎, 𝑏]. Suppose 𝑓 is continuous at 𝑥0. Prove 𝐹 is differentiable at 𝑥0, and 𝐹′ (𝑥0) = 𝑓 (𝑥0).",
-      "6. Let 𝑎, 𝑏 ∈ R such that 𝑎 < 𝑏 and let 𝑓 , 𝐺 be two functions defined on [𝑎, 𝑏]. Suppose 𝑓 is continuous on [𝑎, 𝑏], and that"
-    ],
-    "proofPatterns": [
-      "proof-from-markers"
-    ],
-    "difficultyEstimate": "mixed",
-    "sourceSnippets": [
-      {
-        "sourceFileId": "past-exams-list-of-theorems-quiz-2-2026",
-        "filename": "list of theorems quiz 2 2026.pdf",
-        "text": "Infinitesimal Calculus 2, list of theorem for Quiz 2 1. Prove that the Dirichlet function is not integrable on any closed interval [𝑎, 𝑏] ⊆ R. 2. Let 𝑎, 𝑏 ∈ R such that 𝑎 < 𝑏 and let 𝑓 be a function that is bounded on [𝑎, 𝑏]. Suppose 𝑓 is integrable on [𝑎, 𝑏] Prove ∫ 𝑏 𝑎 𝑓 (𝑥) 𝑑𝑥 Δ ≤ ∫ 𝑏 𝑎 | 𝑓 (𝑥)| 𝑑𝑥. 3. Let 𝑎, 𝑏 ∈ R such that 𝑎 < 𝑏 and let 𝑓 be a function that is continuous on [𝑎, 𝑏]. Prove ∃𝑐 ∈ [𝑎, 𝑏] such that 𝑓 (𝑐) = 1 𝑏 − 𝑎 ∫ 𝑏 𝑎 𝑓 (𝑥) 𝑑𝑥. 4. Let 𝑎, 𝑏 ∈ R such that 𝑎 < 𝑏 and let 𝑓 be a function that is bounded on [𝑎, 𝑏]. Suppose 𝑓 is integrable on [𝑎, 𝑏] and consider the function defined by 𝐹 (𝑥) = ∫ 𝑥 𝑎 𝑓 (𝑡) 𝑑𝑡, ∀𝑥 ∈ [𝑎, 𝑏]. Prove that 𝐹 is continuous. 5. Let 𝑎, 𝑏 ∈ R such that 𝑎 < 𝑏 and let 𝑓 be a function that is bounded on [𝑎, 𝑏]. Suppose 𝑓 is integrable on [𝑎, 𝑏] and consider the function defined by \ud835",
-        "startOffset": 0,
-        "endOffset": 1646
-      }
-    ],
-    "confidence": 0.5283333333333333
-  },
-  {
-    "sourceFileId": "past-exams-list-of-theorems-quiz1",
-    "filename": "list_of_theorems_quiz1.pdf",
-    "moed": "unknown",
-    "questions": [
-      {
-        "id": "past-exams-list-of-theorems-quiz1-question-1",
-        "sourceType": "past_exam",
-        "sourceFileId": "past-exams-list-of-theorems-quiz1",
-        "questionNumber": "2",
-        "content": "Infinitesimal Calculus 2, list of theorem for Quiz 1 1. Let (𝑎𝑛)∞ 𝑛=1 be a sequence of real numbers. Let (𝑛𝑘 )∞ 𝑘=1 be a strictly increasing sequence of natural numbers. Suppose that the sequence (𝑎𝑛)∞ 𝑛=1 converges in the extended sense. Prove that the sequence (𝑎𝑛𝑘 )∞ 𝑘=1 converges in the exended sense and lim 𝑘→∞ 𝑎𝑛𝑘 = lim 𝑛→∞ 𝑎𝑛 2. Let (𝑎𝑛)∞ 𝑛=1 be a sequence of real numbers. Suppose (𝑎2𝑘 )∞ 𝑘=1 and (𝑎2𝑘−1)∞ 𝑘=1 both converge in the extended sense, and lim 𝑘→∞ 𝑎2𝑘 = lim 𝑘→∞ 𝑎2𝑘−1. Prove that the sequence (𝑎𝑛)∞ 𝑛=1 converges in the extended sense, and lim 𝑛→∞ 𝑎𝑛 = lim 𝑘→∞ 𝑎2𝑘 = lim 𝑘→∞ 𝑎2𝑘−1. 3. Let 𝑓 , 𝐹, 𝐺 be three functions defined on an interval 𝐼. Suppose that 𝐹, 𝐺 are anti-derivatives of 𝑓 . Prove ∃𝐶 ∈ R such that 𝐹 (𝑥) = 𝐺 (𝑥) + 𝐶, ∀𝑥 ∈ 𝐼. 4. Let 𝑎, 𝑏 ∈ R such that 𝑎 < 𝑏 and let 𝐶 ∈ R. Prove that the function 𝑓 (𝑥) = 𝐶 for every 𝑥 ∈ [𝑎, 𝑏] is integrable on [𝑎, 𝑏], and ∫ 𝑏 𝑎 𝐶 𝑑𝑥 = 𝐶 · (𝑏 − 𝑎). 5. Prove that the Dirichlet function is not integrable on any closed interval [𝑎, 𝑏] ⊆ R. 1",
-        "topicIds": [
-          "גבולות",
-          "נגזרות",
-          "סדרות",
-          "פונקציות"
-        ],
-        "difficulty": "hard",
-        "examRelevance": "high",
-        "sourceSnippet": {
-          "sourceFileId": "past-exams-list-of-theorems-quiz1",
-          "filename": "list_of_theorems_quiz1.pdf",
-          "text": "Infinitesimal Calculus 2, list of theorem for Quiz 1 1. Let (𝑎𝑛)∞ 𝑛=1 be a sequence of real numbers. Let (𝑛𝑘 )∞ 𝑘=1 be a strictly increasing sequence of natural numbers. Suppose that the sequence (𝑎𝑛)∞ 𝑛=1 converges in the extended sense. Prove that the sequence (𝑎𝑛𝑘 )∞ 𝑘=1 converges in the exended sense and lim 𝑘→∞ 𝑎𝑛𝑘 = lim 𝑛→∞ 𝑎𝑛 2. Let (𝑎𝑛)∞ 𝑛=1 be a sequence of real numbers. Suppose (𝑎2𝑘 )∞ 𝑘=1 and (𝑎2𝑘−1)∞ 𝑘=1 both converge in the extended sense, and lim 𝑘→∞ 𝑎2𝑘 = lim 𝑘→∞ 𝑎2𝑘−1. Prove that the sequence (𝑎𝑛)∞ 𝑛=1 converges in the extended sense, and lim 𝑛→∞ 𝑎𝑛 = lim 𝑘→∞ 𝑎2𝑘 = lim 𝑘→∞ 𝑎2𝑘−1. 3. Let 𝑓 , 𝐹, 𝐺 be three functions defined on an interval 𝐼. Suppose that 𝐹, 𝐺 are anti-derivatives of 𝑓 . Prove ∃𝐶 ∈ R such that 𝐹 (𝑥) = 𝐺 (𝑥) + 𝐶, ∀𝑥 ∈ 𝐼. 4. Let 𝑎, 𝑏 ∈ R such that 𝑎 < 𝑏 and let 𝐶 ∈ R. Prove that the function 𝑓",
-          "startOffset": 0,
-          "endOffset": 1093
-        },
-        "confidence": 0.56
-      }
-    ],
-    "detectedTopics": [
-      "גבולות",
-      "נגזרות",
-      "סדרות",
-      "פונקציות"
-    ],
-    "repeatedPatterns": [
-      "גבול"
-    ],
-    "requiredTheorems": [
-      "Infinitesimal Calculus 2, list of theorem for Quiz 1 1"
-    ],
-    "requiredFormulas": [
-      "1. Let (𝑎𝑛)∞",
-      "𝑛=1 be a sequence of real numbers. Let (𝑛𝑘 )∞",
-      "𝑘=1 be a strictly increasing sequence of natural numbers. Suppose that",
-      "the sequence (𝑎𝑛)∞",
-      "𝑛=1 converges in the extended sense. Prove that the sequence (𝑎𝑛𝑘",
-      "𝑘=1 converges in the exended sense",
-      "𝑘→∞ 𝑎𝑛𝑘 = lim",
-      "𝑛→∞ 𝑎𝑛",
-      "2. Let (𝑎𝑛)∞",
-      "𝑛=1 be a sequence of real numbers. Suppose (𝑎2𝑘 )∞",
-      "𝑘=1 and (𝑎2𝑘−1)∞",
-      "𝑘=1 both converge in the extended sense, and",
-      "𝑘→∞ 𝑎2𝑘 = lim",
-      "𝑘→∞ 𝑎2𝑘−1. Prove that the sequence (𝑎𝑛)∞",
-      "𝑛=1 converges in the extended sense, and"
-    ],
-    "proofPatterns": [
-      "proof-from-markers"
-    ],
-    "difficultyEstimate": "mixed",
-    "sourceSnippets": [
-      {
-        "sourceFileId": "past-exams-list-of-theorems-quiz1",
-        "filename": "list_of_theorems_quiz1.pdf",
-        "text": "Infinitesimal Calculus 2, list of theorem for Quiz 1 1. Let (𝑎𝑛)∞ 𝑛=1 be a sequence of real numbers. Let (𝑛𝑘 )∞ 𝑘=1 be a strictly increasing sequence of natural numbers. Suppose that the sequence (𝑎𝑛)∞ 𝑛=1 converges in the extended sense. Prove that the sequence (𝑎𝑛𝑘 )∞ 𝑘=1 converges in the exended sense and lim 𝑘→∞ 𝑎𝑛𝑘 = lim 𝑛→∞ 𝑎𝑛 2. Let (𝑎𝑛)∞ 𝑛=1 be a sequence of real numbers. Suppose (𝑎2𝑘 )∞ 𝑘=1 and (𝑎2𝑘−1)∞ 𝑘=1 both converge in the extended sense, and lim 𝑘→∞ 𝑎2𝑘 = lim 𝑘→∞ 𝑎2𝑘−1. Prove that the sequence (𝑎𝑛)∞ 𝑛=1 converges in the extended sense, and lim 𝑛→∞ 𝑎𝑛 = lim 𝑘→∞ 𝑎2𝑘 = lim 𝑘→∞ 𝑎2𝑘−1. 3. Let 𝑓 , 𝐹, 𝐺 be three functions defined on an interval 𝐼. Suppose that 𝐹, 𝐺 are anti-derivatives of 𝑓 . Prove ∃𝐶 ∈ R such that 𝐹 (𝑥) = 𝐺 (𝑥) + 𝐶, ∀𝑥 ∈ 𝐼. 4. Let 𝑎, 𝑏 ∈ R such that 𝑎 < 𝑏 and let 𝐶 ∈ R. Prove that the function 𝑓",
-        "startOffset": 0,
-        "endOffset": 1093
-      }
-    ],
-    "confidence": 0.48224999999999996
   },
   {
     "sourceFileId": "past-exams-moeda-2022-eng-solution",
@@ -2177,6 +4094,709 @@
         "text": "Note that for every x ∈ R we have f (x) = Z 0 3x arctan(t) 2 + t4 dt = − Z 3x 0 arctan(t) 2 + t4 dt As the function arctan(t) 2+t4 is continuous in R then we know that for every x ∈ R we have f ′(x) = −3 · arctan(3x) 2 + (3x)4 Plugging x = 1 3 into the above equation gives f ′   1 3   = −3 arctan(1) 3 = − π 4 . 4.3. (7 points) Prove or disprove the following statement: We have 1 − π2 3! + π4 5! − π6 7! + · · · = 0. Solution: We have for every x ∈ R, sin(x) = x − x3 3! + x5 5! − . . . . Thus 0 = sin (π) = π − π3 3! + π5 5! − · · · = π \" 1 − π2 3! + π4 5! − π6 7! + . . . # Dividing both sides by π gives the result. 5. (25 points) 5.1. (13 points) Let (an)∞ n=1 be a sequence of positive numbers and let p ∈ R. Consider the sequence defined by bn = ln   1 an   ln(n) , ∀n ∈ N Suppose that limn→∞ np−bn = 1. Prove that the series P∞ n=1 an is convergent if and only if p > 1. Solution: Note that ",
         "startOffset": 4931,
         "endOffset": 6318
+      }
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
+    "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+    "filename": "סיכום הרצאות הגדרות משפטים בלי הוכחות.pdf",
+    "moed": "unknown",
+    "questions": [
+      {
+        "id": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות-question-1",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+        "questionNumber": "11",
+        "content": "(o'dogn +11t324) d11s3tn pis'o &T &LyN , (on)rek-o San , Bignon do cl40 . dekel'dinlaat (1 ,N - λ 沉 ka on inak,a : { nGzinak } 7 Ra · NeLYod'n-1 Lat De 1451 , On = (h) +18 . tbntncka 'lCan)nak ,I 1JEK . KaEI I · ok (an)n=k , = (bn)neka /osi g11e sirzono uiNca 。 he = Ka (' ) · an = In open nake d sin . L ε R ⼑ . ③ @ ⑤ ⑦ ⽻ 《 aan》 m ∞ & 刃 11③ K εƩ 4 四 77 % CL - δ ル )Can' mak し s 7 ·lan-l e e\"pen nan doda po nelt o'y eso bd ok liman = L Hosli #- timo · SILyod3% 10 sil dis Gian Subti 18064 1 : 05s6 Hada · GXIT &1711' (i) . 0 . iky . s ,i : , . . t \" ie ciis · diaze Misidisin (iii) . 86410 (IvI .NX1 JV , - >NISJ . Le It' : B\"DNN'on de 4240 (on)rek'ddi dekel in itLaun · anem option nak Gode po Mel 04 pi God Nor (an)nek (i) . jetzon de docn e0r 1ys M) . anam o\"tom nak dode po melr 0'p ei add eNor (an) nek (ii) · lezon de and oor 14 mi",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+          "filename": "סיכום הרצאות הגדרות משפטים בלי הוכחות.pdf",
+          "text": "(o'dogn +11t324) d11s3tn pis'o &T &LyN , (on)rek-o San , Bignon do cl40 . dekel'dinlaat (1 ,N - λ 沉 ka on inak,a : { nGzinak } 7 Ra · NeLYod'n-1 Lat De 1451 , On = (h) +18 . tbntncka 'lCan)nak ,I 1JEK . KaEI I · ok (an)n=k , = (bn)neka /osi g11e sirzono uiNca 。 he = Ka (' ) · an = In open nake d sin . L ε R ⼑ . ③ @ ⑤ ⑦ ⽻ 《 aan》 m ∞ & 刃 11③ K εƩ 4 四 77 % CL - δ ル )Can' mak し s 7 ·lan-l e e\"pen nan doda po nelt o'y eso bd ok liman = L Hosli #- timo · SILyod3% 10 sil dis Gian Subti 18064 1 : 05s6 Hada · GXIT &1711' (i) . 0 . iky . s ,i : , . . t \" ie ciis · diaze Misidisin (iii) . 86410 (IvI .NX1 JV , - >NISJ . Le It' : B\"DNN'on de 4240 (on)rek'ddi dekel in itLaun · anem option nak Gode po Mel 04 pi God Nor (an)nek (i) . jetzon de docn e0r 1ys M) . anam o\"tom nak dode po melr 0'p ei add eNor (an) nek (ii) · lezon de and oor 14 mi"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות-question-2",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+        "questionNumber": "30",
+        "content": "· an eM o\"pom nak dode po M30 0'4 ek eor (an) nek (iii) % - >NIsJ . D\"&NN'on doto (an)nek'n& I DeKelin' in an · an > M 9\"pet , nam8 yo NeL a \"4 Mso book # . ancM 9\"pst , naN G8 yo NeLt a \"4 McO bogl # n >a · sojogh ko ol slugsil limn , aan = L- P PLER Be lan'e · Stan dilat sillookt sei ok von pla Jose (an)nen livi -osae (an)= 11 = limaun = Oz n >a - >NIsJ . D\"&NN'on doto (an)nek'n& I DeKelin' in an · an+ 17 An , neht dod pis nic (an) nek (1) · ant1An , neht dod Dis mal (an) nek (ii) · an+ 17 an , neht dod pis em ndt (an) nek (iii) · An+ 1 An , neht dod Dis en al (an)nek (IV) 。 ) KCi) i λCanInak v ) . IWI IK i)id(an 'iak ( vis :sele pina dicazo dlas gidis 110511 odanti do3 mon . {wa .∞ . ∞ ,∞ t ∞ 1 ( i) # · dele pina sosonu s'sididit tl40 liiii · 31 . na (an)rek 10J . D&Nor deno (antrek 'Te : 1 dond Animat anin#",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+          "filename": "סיכום הרצאות הגדרות משפטים בלי הוכחות.pdf",
+          "text": "· an eM o\"pom nak dode po M30 0'4 ek eor (an) nek (iii) % - >NIsJ . D\"&NN'on doto (an)nek'n& I DeKelin' in an · an > M 9\"pet , nam8 yo NeL a \"4 Mso book # . ancM 9\"pst , naN G8 yo NeLt a \"4 McO bogl # n >a · sojogh ko ol slugsil limn , aan = L- P PLER Be lan'e · Stan dilat sillookt sei ok von pla Jose (an)nen livi -osae (an)= 11 = limaun = Oz n >a - >NIsJ . D\"&NN'on doto (an)nek'n& I DeKelin' in an · an+ 17 An , neht dod pis nic (an) nek (1) · ant1An , neht dod Dis mal (an) nek (ii) · an+ 17 an , neht dod pis em ndt (an) nek (iii) · An+ 1 An , neht dod Dis en al (an)nek (IV) 。 ) KCi) i λCanInak v ) . IWI IK i)id(an 'iak ( vis :sele pina dicazo dlas gidis 110511 odanti do3 mon . {wa .∞ . ∞ ,∞ t ∞ 1 ( i) # · dele pina sosonu s'sididit tl40 liiii · 31 . na (an)rek 10J . D&Nor deno (antrek 'Te : 1 dond Animat anin#"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות-question-3",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+        "questionNumber": "0",
+        "content": ". I do sizaaima'pria se fiF usinel odp IEIR in incuat ca I -0 f∞ 破 辺 F ∞ I- s F is · F'(x) = f(x) 0\"Pen Xe] dow (ii) · s I do f de (indefinite) plon kon Gedia sk cises , is myby · Sfixidx = F(x) + 0 213, 43 /40s1 Sf(x)dx = [F(x) + c : ccIR} poe F , G o ess . IeR adpo enazim pro ado fi F , G esta : 1 Good 。FCX 1= GLXI + C XEI PCER .I f∞ ⾶ Sf( xid ×= {F ( X ' + C :CGB } = { IDf∞ ∞ } 9 λ · I-y - > de siNiape'prion do 93104 kin Sfixidx : 1 mOn ~ klezit'pso Jack Fig i F , G Tand : /dlon kon Gedaka Sie) :a doen · Sk . I adpy figpaion do simppo p F , G 10 os · FEIR adpy [α F(x7 + Bg(x7 ] d×=α SF(x) d×+ BSgixid× 4\"4&4 2 , BeIR dod : niLksd (i) SF'(xG(x)dx = F(x)G(x) - SF(xG'ixdx : 9. 48a +312dsi (ii) SgiF(X) · fixidx Sgitidt : (essen sadeel vaben ede ciiil t = Fix7 SeYdx = ex + c · x 2 +1 Sx*dx = 2 + 1 + c 2 + - 1 dd . 2 ax Sardx = Ina + C ocate δ . 3 dx (1 + x2 = crc+gx + c 4",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+          "filename": "סיכום הרצאות הגדרות משפטים בלי הוכחות.pdf",
+          "text": ". I do sizaaima'pria se fiF usinel odp IEIR in incuat ca I -0 f∞ 破 辺 F ∞ I- s F is · F'(x) = f(x) 0\"Pen Xe] dow (ii) · s I do f de (indefinite) plon kon Gedia sk cises , is myby · Sfixidx = F(x) + 0 213, 43 /40s1 Sf(x)dx = [F(x) + c : ccIR} poe F , G o ess . IeR adpo enazim pro ado fi F , G esta : 1 Good 。FCX 1= GLXI + C XEI PCER .I f∞ ⾶ Sf( xid ×= {F ( X ' + C :CGB } = { IDf∞ ∞ } 9 λ · I-y - > de siNiape'prion do 93104 kin Sfixidx : 1 mOn ~ klezit'pso Jack Fig i F , G Tand : /dlon kon Gedaka Sie) :a doen · Sk . I adpy figpaion do simppo p F , G 10 os · FEIR adpy [α F(x7 + Bg(x7 ] d×=α SF(x) d×+ BSgixid× 4\"4&4 2 , BeIR dod : niLksd (i) SF'(xG(x)dx = F(x)G(x) - SF(xG'ixdx : 9. 48a +312dsi (ii) SgiF(X) · fixidx Sgitidt : (essen sadeel vaben ede ciiil t = Fix7 SeYdx = ex + c · x 2 +1 Sx*dx = 2 + 1 + c 2 + - 1 dd . 2 ax Sardx = Ina + C ocate δ . 3 dx (1 + x2 = crc+gx + c 4"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות-question-4",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+        "questionNumber": "101011",
+        "content": "para ne fig esnel alb-e pe aibet in101011 Gedaiat dise) 1 doed 13 . [a, b]-a sino, ↓f+ Bg , a , Be GodSi . [a, b]-a vidadak fige jas : gvist'd is baf(x + Bg(x] dx =fixdx +gxdx Ba lab)-adese · [a, b]-a vidadak fig figk . [a, b]-a vidadak fige jus :stacks (ii) no31 9 ok.[a, bl-a s'docadai yesia , [aib]-a moel eurrin f Poisa ok · [a, b]-a e'dazadse get desir , i'dazads f . [a ,b]-a e'dacadai fsic , [a, b]-a meisi f ois liii) . [a ,b]-a e'diacadjia fsic , [aib]-a e'sidisin f ois livi f(x = g(x) basa ess . [a, b]-a vidacadaik fig o jas : plome diedgia sisidisin iVI . oSfixidxSgixidx sk . xelab] o e -'Gazda f ja [a, b]-a sidadak fij . aldin'itpartt Neivi offIXidX = SSIXidx BEST . es epnal , [G , b]-a g2l [a, C] - a sn \"4 s Pasa ess . [a, b]-a s'daizdak f o jss : 1421a mipso 410. 27- Ivii) [a, b]-a -'Gold 9 Sk . X * X - 1 p)x[a, b) Gd g(x) = f(x- 1p6X -[a, b) · - FCX 120i,La, bJ - astXECa , b}F ( x 120 ? 9 pd . s'Galzdak-fy2 xe[a, b] doo fixidx= - ( - f ( xr] dx=- (- f - δ 「 ) = ー ( f 辺 > S3 ·SIXIdX = Se- Sat So · isa i · [a, b]-a muzin'pofinel alb-e po aibelt in :1 - dis an doe b fixidxb f(xdXSK . Lab)adause",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+          "filename": "סיכום הרצאות הגדרות משפטים בלי הוכחות.pdf",
+          "text": "para ne fig esnel alb-e pe aibet in101011 Gedaiat dise) 1 doed 13 . [a, b]-a sino, ↓f+ Bg , a , Be GodSi . [a, b]-a vidadak fige jas : gvist'd is baf(x + Bg(x] dx =fixdx +gxdx Ba lab)-adese · [a, b]-a vidadak fig figk . [a, b]-a vidadak fige jus :stacks (ii) no31 9 ok.[a, bl-a s'docadai yesia , [aib]-a moel eurrin f Poisa ok · [a, b]-a e'dazadse get desir , i'dazads f . [a ,b]-a e'dacadai fsic , [a, b]-a meisi f ois liii) . [a ,b]-a e'diacadjia fsic , [aib]-a e'sidisin f ois livi f(x = g(x) basa ess . [a, b]-a vidacadaik fig o jas : plome diedgia sisidisin iVI . oSfixidxSgixidx sk . xelab] o e -'Gazda f ja [a, b]-a sidadak fij . aldin'itpartt Neivi offIXidX = SSIXidx BEST . es epnal , [G , b]-a g2l [a, C] - a sn \"4 s Pasa ess . [a, b]-a s'daizdak f o jss : 1421a mipso 410. 27- Ivii) [a, b]-a -'Gold 9 Sk . X * X - 1 p)x[a, b) Gd g(x) = f(x- 1p6X -[a, b) · - FCX 120i,La, bJ - astXECa , b}F"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות-question-5",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+        "questionNumber": "4",
+        "content": "∞ n = α nin- t) = 4 at s 9 s ·\"MNN'on doto (an)nek'n& I DeKelin' in an , ISulik vyou sind (an)nek muor de p'poet pinbor sczo dia ci22s N · N = K S1 = Onstat ∅ open d penimani 1747 : 1 170M =- and=R . 7309 +23... n ·\"MNN'on doto (an)nek'n& I DeKelin' in an ∞ ∞ an wide site221 an vide de k- dist “ n = K n = 0 ~diSi . BNN 'on deno (an)rek'te1 DeKelin :diasst 3 Goed ∞ ∞ k - 1 ∞ ∞ On = On + aun Goldal OJog aun cidi dö otadt On n = 0 n = K n =∞ n = K n =∞ &10 en (bn)n= -1 (n)rek Snel DeKelin : ) sinkad deid 4 doed ② ∞ . naubn- t nak an video jas . a , BER In . O'ON 'ON de ∞ ∞ ∞ · In+ Bbnl = an + Bbn Boloab dsie n = K n = K · o'N'on de eno ea (bnlnek-1 (an)rek use de Kelin : 1 espon ∞ ∞ ∞ GoldaJan n = K (anEbn) nida isis . g'ososd bntan oidness sen ∞ n = v((n = bn) = # bn · offer in . &N'on de tuo (antrektel deKel inaspo ∞ ∞ ∞ ∞ n = K ((n) = adun Boial Oonaede K caauns cidi däs otadu nadun cidesi",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+          "filename": "סיכום הרצאות הגדרות משפטים בלי הוכחות.pdf",
+          "text": "∞ n = α nin- t) = 4 at s 9 s ·\"MNN'on doto (an)nek'n& I DeKelin' in an , ISulik vyou sind (an)nek muor de p'poet pinbor sczo dia ci22s N · N = K S1 = Onstat ∅ open d penimani 1747 : 1 170M =- and=R . 7309 +23... n ·\"MNN'on doto (an)nek'n& I DeKelin' in an ∞ ∞ an wide site221 an vide de k- dist “ n = K n = 0 ~diSi . BNN 'on deno (an)rek'te1 DeKelin :diasst 3 Goed ∞ ∞ k - 1 ∞ ∞ On = On + aun Goldal OJog aun cidi dö otadt On n = 0 n = K n =∞ n = K n =∞ &10 en (bn)n= -1 (n)rek Snel DeKelin : ) sinkad deid 4 doed ② ∞ . naubn- t nak an video jas . a , BER In . O'ON 'ON de ∞ ∞ ∞ · In+ Bbnl = an + Bbn Boloab dsie n = K n = K · o'N'on de eno ea (bnlnek-1 (an)rek use de Kelin : 1 espon ∞ ∞ ∞ GoldaJan n = K (anEbn) nida isis . g'ososd bntan oidness sen ∞ n = v((n = bn) = # bn · offer in . &N'on de tuo (antrektel deKel inaspo ∞ ∞ ∞ ∞ n = K ((n) = adun Boial Oonaede K caauns cidi däs otadu nadun cide"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות-question-6",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+        "questionNumber": "1",
+        "content": "∞ (an)m= k uSe1 D = KeI'n : / p\"diee o'ciddidiaet viciame pani a doel 16 # # # # # # . bn > o + an = o , nzk dos sil an L = lim br- 0 ③ L , O - ∞ BLER Bi, n 3 ⑦ ∞ ∞ < · o' &N1'on de einno ene (bnlnek-1 (an)nek usinei deKel in : 1 espod . br > o + an = 0 ,nzk dod sis is o'se an lim bn = 0 iii) n s ⑦ ∞ ∞ □ On ICs bn ca pkC 'Sk n = K K · &Non de eto ea (bulnek-1 (an)rek estei dekel inaspor · buso + anso , nek doo is is is an lim# ∞ ∞ b a ∞ IC ☆ On < o 0lC 'SK … n = K n = K ' > eJs . D\"&NN'on de 4uo (an)nek'te1 deKelin' : lac1en pan) 1 donl · nzk God Anzo (i) . 01 Bossal L =im an DLER ∞ =",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+          "filename": "סיכום הרצאות הגדרות משפטים בלי הוכחות.pdf",
+          "text": "∞ (an)m= k uSe1 D = KeI'n : / p\"diee o'ciddidiaet viciame pani a doel 16 # # # # # # . bn > o + an = o , nzk dos sil an L = lim br- 0 ③ L , O - ∞ BLER Bi, n 3 ⑦ ∞ ∞ < · o' &N1'on de einno ene (bnlnek-1 (an)nek usinei deKel in : 1 espod . br > o + an = 0 ,nzk dod sis is o'se an lim bn = 0 iii) n s ⑦ ∞ ∞ □ On ICs bn ca pkC 'Sk n = K K · &Non de eto ea (bulnek-1 (an)rek estei dekel inaspor · buso + anso , nek doo is is is an lim# ∞ ∞ b a ∞ IC ☆ On < o 0lC 'SK … n = K n = K ' > eJs . D\"&NN'on de 4uo (an)nek'te1 deKelin' : lac1en pan) 1 donl · nzk God Anzo (i) . 01 Bossal L =im an DLER ∞ ="
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות-question-7",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+        "questionNumber": "01941",
+        "content": "dus . 01941 In . BONN'on deno (on)rek'Te1 DE KEIin in 130 sood · nzk God Anzo (i) · \"An 90\"4e n = 880 yo NeL 0 4 (ii) ∞ · ' dJJ . D\"NNN'on de 4uo (an)nek 'T& 1 O = KEIin' : lashe panl a doad .n = k dod anto iil an+ 1 fi An LER\" ) ∞ = ·\"DNN'o de eleou (bnlnek-1 (antrek snel DeKelin 130 sod · buso + anso , nek doo is is is ≤ □ h 21 ℃ B 北 ⼭ がア \" M, ∞ ∞ · On IC ☆ bn ca pkC 'Sk n = N n = N - dus . D\"NNN'on de euo (andrek 'Te1 DE KEIin : 3 doed · nzk God Anzo (i) · 1 Gossal L =im\"An 100 Le\"p (iis . na0e1 vida'non vsen pais liman to isi - dus . D\"NNN'on de euo (andrek 'ne1 DE KEIin : 4 Goed .n = k dod anto iil an+ 1 timeter· DLGR \") ·",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+          "filename": "סיכום הרצאות הגדרות משפטים בלי הוכחות.pdf",
+          "text": "dus . 01941 In . BONN'on deno (on)rek'Te1 DE KEIin in 130 sood · nzk God Anzo (i) · \"An 90\"4e n = 880 yo NeL 0 4 (ii) ∞ · ' dJJ . D\"NNN'on de 4uo (an)nek 'T& 1 O = KEIin' : lashe panl a doad .n = k dod anto iil an+ 1 fi An LER\" ) ∞ = ·\"DNN'o de eleou (bnlnek-1 (antrek snel DeKelin 130 sod · buso + anso , nek doo is is is ≤ □ h 21 ℃ B 北 ⼭ がア \" M, ∞ ∞ · On IC ☆ bn ca pkC 'Sk n = N n = N - dus . D\"NNN'on de euo (andrek 'Te1 DE KEIin : 3 doed · nzk God Anzo (i) · 1 Gossal L =im\"An 100 Le\"p (iis . na0e1 vida'non vsen pais liman to isi - dus . D\"NNN'on de euo (andrek 'ne1 DE KEIin : 4 Goed .n = k dod anto iil an+ 1 timeter· DLGR \") ·"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות-question-8",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+        "questionNumber": "8",
+        "content": "' > ess.[K , 8) - a styrih'psio fingI dEKel in in 130 good 57 f i ) · limfix = o (ii f(n+ 1)1 S fixidx - fons 3\"p&N n = k @o8 . si ·\"MNN'on doto (an)nek'n& I DeKelin' in an ∞ ∞ aun a pic dGeny osoa On Lidi's L ' m = に n = · B\"NNN 'on de elno (an)nek 'te1 d = KEIid isddna siososee pan e donl ∞ · oso en videsic . dea ooed naun vide es ·\"MNN'on doto (an)nek'n& I DeKelin' in an ∞ ∞ ∞ On = @ Jolc 0J0 e On PICSJeU 0J0 e On Lidi's L n= k n = K n = K · ·\"MNN'on doto (an)nek'n& I DeKelin' in an ∞ ·- ann 1-1)\"*On Lidi's S Sel ger osad kınSi . Guadeld **An in :Bia\" pan a dol · a, -Oa = S = O,Goisol 853&4 ∞ 853&4 OdeDd 11)\"* 1On = O, -Oua + Cu3-Oy +... : 1 4OM ∞ L- lyn+ y n & eilno eu (bulve1(an)re use inran ∞ (- 9 ) n + ∞ ∞ n = ena n = an vidtn sopse s = bn7 . n . ,\" ginto ' ge ango to &4 zi pillo san \" m = 1 (i) - 9 po (nuiv219: 00d bu = Ank + Ankt1 + Ankta + ... + Ank+ 1-1 , K21 d8 sii)",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+          "filename": "סיכום הרצאות הגדרות משפטים בלי הוכחות.pdf",
+          "text": "' > ess.[K , 8) - a styrih'psio fingI dEKel in in 130 good 57 f i ) · limfix = o (ii f(n+ 1)1 S fixidx - fons 3\"p&N n = k @o8 . si ·\"MNN'on doto (an)nek'n& I DeKelin' in an ∞ ∞ aun a pic dGeny osoa On Lidi's L ' m = に n = · B\"NNN 'on de elno (an)nek 'te1 d = KEIid isddna siososee pan e donl ∞ · oso en videsic . dea ooed naun vide es ·\"MNN'on doto (an)nek'n& I DeKelin' in an ∞ ∞ ∞ On = @ Jolc 0J0 e On PICSJeU 0J0 e On Lidi's L n= k n = K n = K · ·\"MNN'on doto (an)nek'n& I DeKelin' in an ∞ ·- ann 1-1)\"*On Lidi's S Sel ger osad kınSi . Guadeld **An in :Bia\" pan a dol · a, -Oa = S = O,Goisol 853&4 ∞ 853&4 OdeDd 11)\"* 1On = O, -Oua + Cu3-Oy +... : 1 4OM ∞ L- lyn+ y n & eilno eu (bulve1(an)re use inran ∞ (- 9 ) n + ∞ ∞ n = ena n = an vidtn sopse s = bn7 . n . ,\" ginto ' ge ango to &4 zi pillo san \" m = 1 (i) - 9 po (nuiv219: 00d bu = Ank + Ankt1 + Ankta + ... + Ank+ 1-1 , K21 d8 sii)"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות-question-9",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+        "questionNumber": "3",
+        "content": "· ocu'on de ento ee (bulve (anten este : loaion poni 3 dond ∞ ∞ ~ i die Gola ess . Picalo san ii n = an vidtn sopse bucidnoeua ∞ ∞ Bolsa , act pina oo bu cidioa'sk . bet pina osoe On i= と ∞ ∞ M = ☆ =Bran ∞ % Ka C ( ∞ On π < P A √ ⼑ ワ 1110 ① 170 # rn clc 11 O 7 P / P ! P . P √ √ Giedu' % IJN\"8 An > 0 16N\"O P P √ √ 1☆ ①〜 BN 」 IJN\"8 389 D 3 つ ( P √ ⼑ C アつつ IJN\"8 ¤ &194. 31 2.sTLl' tL4O 1gk pic .eol'd neo , 4ão 1 pigny i1 · 160N agen feel =0 elista cisad , 'ysio cisanó la . Ont1 * On O'lON a8oN Gol TLrEt 13 . n . 3p1a5k (4",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+          "filename": "סיכום הרצאות הגדרות משפטים בלי הוכחות.pdf",
+          "text": "· ocu'on de ento ee (bulve (anten este : loaion poni 3 dond ∞ ∞ ~ i die Gola ess . Picalo san ii n = an vidtn sopse bucidnoeua ∞ ∞ Bolsa , act pina oo bu cidioa'sk . bet pina osoe On i= と ∞ ∞ M = ☆ =Bran ∞ % Ka C ( ∞ On π < P A √ ⼑ ワ 1110 ① 170 # rn clc 11 O 7 P / P ! P . P √ √ Giedu' % IJN\"8 An > 0 16N\"O P P √ √ 1☆ ①〜 BN 」 IJN\"8 389 D 3 つ ( P √ ⼑ C アつつ IJN\"8 ¤ &194. 31 2.sTLl' tL4O 1gk pic .eol'd neo , 4ão 1 pigny i1 · 160N agen feel =0 elista cisad , 'ysio cisanó la . Ont1 * On O'lON a8oN Gol TLrEt 13 . n . 3p1a5k (4"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות-question-10",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+        "questionNumber": "2",
+        "content": "· TLiBiN 2id isin to 6 . 00 gipSe LId . XoER 'ts itLlat 18 ∞ On(X - Xol\" = No + (e(X - Xo) + (a(X - Xo(2 + ... 0 · Xel-1 &Non de mao (an) ne Leis 8 siostett 9101 . 0\"&N1'on de tilzo (on)n= '491 XEIR i4S : TLRE4 ∞ E 13104 siTd 12214 On(X - Xol\" = No + (e(X - Xo) + (a(X - Xo(2 + ... sipsen nid n = 0 · ojou vida 01100 X-1 08 ∞ 19. p1a8 Xo 'poo OSOIN a49 Cn(X-XoI\"Sipber vide ad gies : 1 mOn ∞ plc . MiLa 131044 1J'k glosastn plos pd ∞ n = @ n ( X - X 01 \" = A0 tar ( X -× 0 ) +ax メ -×+ … 今 a 0+ 0 + O + … = Go x = X0 」 3 ⽇ · een on de +zo (Cine491 XE49 : Labels on Goed ∞ 0J0&4 Cn(X-Xol\" Sipban cide ess · Xa-Xo < Xe-Xo-& p) Xe , XwER iS\"I ∞ · X = Xa 1100 Jane osona videsis . X = Xe '4sa □ O 那 ③ X 。 ⽂ , ? ? O □ 1 Xo - R ⽂ 。 Xo + R ⑦ vide de eiosaree diul dia visas . Sipbo vid An(X-Xol\" 1M' : TL424 ∞ R = SUPEr = o : XE [ Xo -r , Xotr}☆ B} , Xe[Xo-0 , Xoto] d8 OJoe iimisis , (1 tLbti) Xo-e osoen cida dimn : a tilot pat, tpil nsk 131044 pC 0eEr20 : Xe[Xo-r, Xo + r] Gbosaga cide] unido - ( R =∞D. R",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+          "filename": "סיכום הרצאות הגדרות משפטים בלי הוכחות.pdf",
+          "text": "· TLiBiN 2id isin to 6 . 00 gipSe LId . XoER 'ts itLlat 18 ∞ On(X - Xol\" = No + (e(X - Xo) + (a(X - Xo(2 + ... 0 · Xel-1 &Non de mao (an) ne Leis 8 siostett 9101 . 0\"&N1'on de tilzo (on)n= '491 XEIR i4S : TLRE4 ∞ E 13104 siTd 12214 On(X - Xol\" = No + (e(X - Xo) + (a(X - Xo(2 + ... sipsen nid n = 0 · ojou vida 01100 X-1 08 ∞ 19. p1a8 Xo 'poo OSOIN a49 Cn(X-XoI\"Sipber vide ad gies : 1 mOn ∞ plc . MiLa 131044 1J'k glosastn plos pd ∞ n = @ n ( X - X 01 \" = A0 tar ( X -× 0 ) +ax メ -×+ … 今 a 0+ 0 + O + … = Go x = X0 」 3 ⽇ · een on de +zo (Cine491 XE49 : Labels on Goed ∞ 0J0&4 Cn(X-Xol\" Sipban cide ess · Xa-Xo < Xe-Xo-& p) Xe , XwER iS\"I ∞ · X = Xa 1100 Jane osona videsis . X = Xe '4sa □ O 那 ③ X 。 ⽂ , ? ? O □ 1 Xo - R ⽂ 。 Xo + R ⑦ vide de eiosaree diul dia visas . Sipbo vid An(X-Xol\" 1M' : TL424 ∞ R = SUPEr = o : XE [ Xo -r , Xotr}☆ B} , Xe[Xo-0 , Xoto] d8 OJoe iimisis , (1 tLbti) Xo-e osoen ci"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות-question-11",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+        "questionNumber": "0",
+        "content": "&losaset Diet Rit . 0\"&/on de vro (n)n=491 VER49 : 3 Goed ∞ 13k . Cn(X-X. I\"Slpsoe uid do n =∞ · xelR God doeno ose Lida , R = 0 gls (i) 。 ( X = - * 。 λ ) ×≠ Xo TB ,R = 0 \" \" · IX-XlOR d 1409/ IX-X. KR dad deco obse cida, o <Ro eliii) · limCn(X-X.\"* o uNdo , 'aat \"g Laae Lidn IX-XloR Gd , p den . 0'8311 k8 (X-Xol = R L100 ( *) ∞ . XoIR 'pJo pL \"3096 asastd dis Cn(X-X. \" Gipson vid : 1 espo ∞ 17 コつ ISD アつ ? déeto obon ?ea Loge O □ } Xo - R ⽂ 。 Xo + R Rit ./on de +zo (on)n481 Xens4-914) 4 Goed ∞ ·de paio diazn pape jus . An(X-X.\"Mipsar vid de siososer dia n = 0 R =∞ BE , L= 0 is · L =im\" an 。 R = 0 B ℃ , L =∞ \" い . R = 2 1 316 , 0 >8 6k Ilii) · · o'eNn'on de tzo (on)n= '491 XER itelovadamt deasl 5 doad ∞ や ③ 辺辺 .On(X-X. \"Sipso vid do siososet Die R in n =∞ An+ 1 · R = 0 131 , L = 0 6 IllSic . L =iman ∞ ⑦ 。 B = 0 B ℃ ,L =∞ \" \" . R = 2 1316 , 0 >8 6k Ilii)",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+          "filename": "סיכום הרצאות הגדרות משפטים בלי הוכחות.pdf",
+          "text": "&losaset Diet Rit . 0\"&/on de vro (n)n=491 VER49 : 3 Goed ∞ 13k . Cn(X-X. I\"Slpsoe uid do n =∞ · xelR God doeno ose Lida , R = 0 gls (i) 。 ( X = - * 。 λ ) ×≠ Xo TB ,R = 0 \" \" · IX-XlOR d 1409/ IX-X. KR dad deco obse cida, o <Ro eliii) · limCn(X-X.\"* o uNdo , 'aat \"g Laae Lidn IX-XloR Gd , p den . 0'8311 k8 (X-Xol = R L100 ( *) ∞ . XoIR 'pJo pL \"3096 asastd dis Cn(X-X. \" Gipson vid : 1 espo ∞ 17 コつ ISD アつ ? déeto obon ?ea Loge O □ } Xo - R ⽂ 。 Xo + R Rit ./on de +zo (on)n481 Xens4-914) 4 Goed ∞ ·de paio diazn pape jus . An(X-X.\"Mipsar vid de siososer dia n = 0 R =∞ BE , L= 0 is · L =im\" an 。 R = 0 B ℃ , L =∞ \" い . R = 2 1 316 , 0 >8 6k Ilii) · · o'eNn'on de tzo (on)n= '491 XER itelovadamt deasl 5 doad ∞ や ③ 辺辺 .On(X-X. \"Sipso vid do siososet Die R in n =∞ An+ 1 · R = 0 131 , L = 0 6 IllSic . L =iman ∞ ⑦ 。 B = 0 B ℃ ,L =∞ \" \" . R = 2 1316 , 0 >8 6k Ilii)"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות-question-12",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+        "questionNumber": "0",
+        "content": "· X0-0 0480 Sen 'Yso fe . OFNET ·il XER'ninkat Ho &it8 13214 X. 000 f de i cuol vidida pisicio nf(n)(Xo) f\" (X. 3 f\" \"X0 ) TH ( X) = n = 0 n ! \"X - Xo ) \" = f(×0 ) + f'(Xo ( X -× 0 ) + 2 - ( X -X 0 + 。 … ±① X - Xo) ' 。 Ra (X ) = FEX3 -THSX ) ITX . ③ f ℃ λ To (x) = fS× 0 ) 10 = n@XN/ 915'Gu) \" λ辺 ↑ n (x) = f(Xx) + f'(Xx)(X - Xo) (12 4GONN diJica) p'ONt 2O'4 f\"(Xo) Ta(x) = f(x) + f'(X)(X- Xo) + 2(X- X0)2 (2 = X@XNN 515'Gu) · NETGONN Disco Kn Th(X) -0 &G 0' 95 , yolkt Idlka 2 . λ O 7 λ sii\" nf(n)(Xo) f\" (X0 ) f\" tXo) TH ( X) = n = 0 n ! .( X -× o ) \" =f(x 0 ) + f'(× 0 '( X- X 0 ) + ∞ ( X -× o ) + 。 … +① ( X - ×o ) ' · Ty(xol = f(Xo) pC f\" (X0 ) f( \"Xo) Ti ( x) = f'(X 03 t∞ ( メ - Xo3 + 。 +① b ( X - × o) ー ^ \" い f\" lX. ) = f'(X 01 tf\"(× 0 ) ( メ -× o ) t 。 tい ! ( X - × o) * -^ . Tiix. } = f( X ) f\" ' (X03 f\" \"Xo) Ta\" ( X ) = f \"(× 0 ) + 00∞ ( メ - × o ) t 。 + ”い ! IX - ×0 ) -2 Int Λ . Ta\" sxo} = f iX ) P Tn(X) f · Th(Xol = fikyo) , Ok I GG , polt 19 livi To (X) *Ta(X) (N = N8XN/ p15G6) 1(4+ 1 (x) = 0 IV)",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+          "filename": "סיכום הרצאות הגדרות משפטים בלי הוכחות.pdf",
+          "text": "· X0-0 0480 Sen 'Yso fe . OFNET ·il XER'ninkat Ho &it8 13214 X. 000 f de i cuol vidida pisicio nf(n)(Xo) f\" (X. 3 f\" \"X0 ) TH ( X) = n = 0 n ! \"X - Xo ) \" = f(×0 ) + f'(Xo ( X -× 0 ) + 2 - ( X -X 0 + 。 … ±① X - Xo) ' 。 Ra (X ) = FEX3 -THSX ) ITX . ③ f ℃ λ To (x) = fS× 0 ) 10 = n@XN/ 915'Gu) \" λ辺 ↑ n (x) = f(Xx) + f'(Xx)(X - Xo) (12 4GONN diJica) p'ONt 2O'4 f\"(Xo) Ta(x) = f(x) + f'(X)(X- Xo) + 2(X- X0)2 (2 = X@XNN 515'Gu) · NETGONN Disco Kn Th(X) -0 &G 0' 95 , yolkt Idlka 2 . λ O 7 λ sii\" nf(n)(Xo) f\" (X0 ) f\" tXo) TH ( X) = n = 0 n ! .( X -× o ) \" =f(x 0 ) + f'(× 0 '( X- X 0 ) + ∞ ( X -× o ) + 。 … +① ( X - ×o ) ' · Ty(xol = f(Xo) pC f\" (X0 ) f( \"Xo) Ti ( x) = f'(X 03 t∞ ( メ - Xo3 + 。 +① b ( X - × o) ー ^ \" い f\" lX. ) = f'(X 01 tf\"(× 0 ) ( メ -× o ) t 。 tい ! ( X - × o) * -^ . Tiix. } = f( X ) f\" ' (X03 f\" \"Xo) Ta\" ( X ) = f \"(× 0 ) + 00∞ ( メ - × o ) t 。 + ”い ! IX - ×0 ) -2 Int Λ . Ta\" sxo} "
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות-question-13",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+        "questionNumber": "9",
+        "content": "。 O ≤ NEE XSXo - PB X . XGB & f∞ ) 9 10 oss . [Xo , X]-0 9 . 400 Nn vhisen 'psio f its · [Xo, X] - 0 720 . 3) f'* (i) · (Xo , X) - 0 Tise fll sii) fdta ( C ) Ra ( x ) = い !{ X -×0 ) + ” 471660 Xo > JX 9N\"Y'SKC f' (cs F(Xx 1-f( x ,=f( x )- To( x )= Ro( x ) = い ! ^ ( X - * o ) :③ ↓= 0 成 3 ⑦辺 f(X1 - f(x ) , · DLSIn'pso -S . OrNet in X > Xo- 0 p6 X , XER Using in 130 good 13 055 · [X, X] - 0 9 . 400 & · [Xo, X] - 0 720 . 3) f'* (i) · (Xo , X) - 0 Tise fll sii) . f(X) = O 11 d · fIkXl = 0 O\"4IN OckIN G5 (iv) 。 f((6 ) = 0 ,XSGGSxi · RLisI fo jss . Xo de 40D0d SLYzINT 'Tpro finsI XoER iTS : T L424 * 0'x0 f d Lidida vid . 10IneI Go8 f'r'(Xe) UNIdb) Xo- 0 0. N80 a 8 f(r'(Xo) . Tf ( X) = n = 0 n ! (X - ×o ) \" Sind3214 psho Met Xo 600do olyt Ga &1pse vid a\"4 Ola Kic in 4St · sileak a 0 po . X-Xo < R God f(x) = Tf(x) 151 X-Xo < R E · Lidi ciososn oitL R3O 19166 X-Xo < R @0 f(x) = Tf (X) (i) · Xo 6'60 elpso vida einc f- d 0\"4 18 (ii)",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+          "filename": "סיכום הרצאות הגדרות משפטים בלי הוכחות.pdf",
+          "text": "。 O ≤ NEE XSXo - PB X . XGB & f∞ ) 9 10 oss . [Xo , X]-0 9 . 400 Nn vhisen 'psio f its · [Xo, X] - 0 720 . 3) f'* (i) · (Xo , X) - 0 Tise fll sii) fdta ( C ) Ra ( x ) = い !{ X -×0 ) + ” 471660 Xo > JX 9N\"Y'SKC f' (cs F(Xx 1-f( x ,=f( x )- To( x )= Ro( x ) = い ! ^ ( X - * o ) :③ ↓= 0 成 3 ⑦辺 f(X1 - f(x ) , · DLSIn'pso -S . OrNet in X > Xo- 0 p6 X , XER Using in 130 good 13 055 · [X, X] - 0 9 . 400 & · [Xo, X] - 0 720 . 3) f'* (i) · (Xo , X) - 0 Tise fll sii) . f(X) = O 11 d · fIkXl = 0 O\"4IN OckIN G5 (iv) 。 f((6 ) = 0 ,XSGGSxi · RLisI fo jss . Xo de 40D0d SLYzINT 'Tpro finsI XoER iTS : T L424 * 0'x0 f d Lidida vid . 10IneI Go8 f'r'(Xe) UNIdb) Xo- 0 0. N80 a 8 f(r'(Xo) . Tf ( X) = n = 0 n ! (X - ×o ) \" Sind3214 psho Met Xo 600do olyt Ga &1pse vid a\"4 Ola Kic in 4St · sileak a 0 po . X-Xo < R God f(x) = Tf(x) 151 X-Xo < R E · Lidi ciososn oitL R3O 19166 X-Xo < R @0 f(x) = Tf (X) (i) · Xo 6'6"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות-question-14",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+        "questionNumber": "8",
+        "content": "λ ∞ \" 8 f(r'(Xo) f\" (X0 ) Ta ( X) = n = 0 n ! (X - Xo 1 \" = f(x0 ) tf'(×o ) ( × -× o ) + 2 1 X - ×o ) ~ t … #รี IC . XER D DaT λ 8 f(r'(Xo) Ts ( X) = n = 0 n ! ( X -× o )\" =β 留 T」(x) · limTs(x) = f(x) Boual limTs(x) dxzn o\"y pok Tf(x = f(x paa · β 皆 Ra (x) = (f( x>Tfsx) 》 = f (×) !習T」 ( x) = 0 X 6Xo . 4S 1L410 . XXo 1e1so oe 1las Lels vIdid JagN : 3 tLOn · UIS 7916 LIsOn 86 . (Xo< G < X 614N6) =- อ 8(- 1)4y2n+ 1 Sinx = n = . lan + 1) ? , XeR G8 : a dond a (- 1)\"yon C3SX = < an) . , XeR 88 : 3 dond n ∞ · XoeR insi 0. N0o o viset 'psio f: R < R ins : 1 45poN . TSSXI = fIx) .f' ' ( x) EK XER nEBk ' 0",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+          "filename": "סיכום הרצאות הגדרות משפטים בלי הוכחות.pdf",
+          "text": "λ ∞ \" 8 f(r'(Xo) f\" (X0 ) Ta ( X) = n = 0 n ! (X - Xo 1 \" = f(x0 ) tf'(×o ) ( × -× o ) + 2 1 X - ×o ) ~ t … #รี IC . XER D DaT λ 8 f(r'(Xo) Ts ( X) = n = 0 n ! ( X -× o )\" =β 留 T」(x) · limTs(x) = f(x) Boual limTs(x) dxzn o\"y pok Tf(x = f(x paa · β 皆 Ra (x) = (f( x>Tfsx) 》 = f (×) !習T」 ( x) = 0 X 6Xo . 4S 1L410 . XXo 1e1so oe 1las Lels vIdid JagN : 3 tLOn · UIS 7916 LIsOn 86 . (Xo< G < X 614N6) =- อ 8(- 1)4y2n+ 1 Sinx = n = . lan + 1) ? , XeR G8 : a dond a (- 1)\"yon C3SX = < an) . , XeR 88 : 3 dond n ∞ · XoeR insi 0. N0o o viset 'psio f: R < R ins : 1 45poN . TSSXI = fIx) .f' ' ( x) EK XER nEBk ' 0"
+        },
+        "confidence": 0.56
+      }
+    ],
+    "detectedTopics": [
+      "גבולות",
+      "סדרות"
+    ],
+    "repeatedPatterns": [
+      "גבול"
+    ],
+    "requiredTheorems": [],
+    "requiredFormulas": [
+      "1451 , On = (h) +18",
+      "· ok (an)n=k ,",
+      "In open nake d sin",
+      "·lan-l e e\"pen nan doda po nelt o'y eso bd ok liman = L Hosli",
+      "· diaze Misidisin (iii)",
+      "· sojogh ko ol slugsil limn , aan = L-",
+      "-osae (an)= 11",
+      "limaun = Oz",
+      ". {wa .∞ . ∞ ,∞ t ∞ 1 ( i)",
+      "him an =",
+      "(an)n= 1 '3K . D\"DNN'on de uuo (antne1'Te1 OcKeI in : 3 dodd",
+      "limauntk =iman Bokal sosaen (ntk)n ggk sosdnne",
+      "limaunt delt",
+      "lim OraK = chilimo Y ∞",
+      "46600 Suba'profite . LER in XE ins :sin do Nadel dood"
+    ],
+    "proofPatterns": [],
+    "difficultyEstimate": "medium",
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+        "filename": "סיכום הרצאות הגדרות משפטים בלי הוכחות.pdf",
+        "text": "(o'dogn +11t324) d11s3tn pis'o &T &LyN , (on)rek-o San , Bignon do cl40 . dekel'dinlaat (1 ,N - λ 沉 ka on inak,a : { nGzinak } 7 Ra · NeLYod'n-1 Lat De 1451 , On = (h) +18 . tbntncka 'lCan)nak ,I 1JEK . KaEI I · ok (an)n=k , = (bn)neka /osi g11e sirzono uiNca 。 he = Ka (' ) · an = In open nake d sin . L ε R ⼑ . ③ @ ⑤ ⑦ ⽻ 《 aan》 m ∞ & 刃 11③ K εƩ 4 四 77 % CL - δ ル )Can' mak し s 7 ·lan-l e e\"pen nan doda po nelt o'y eso bd ok liman = L Hosli #- timo · SILyod3% 10 sil dis Gian Subti 18064 1 : 05s6 Hada · GXIT &1711' (i) . 0 . iky . s ,i : , . . t \" ie ciis · diaze Misidisin (iii) . 86410 (IvI .NX1 JV , - >NISJ . Le It' : B\"DNN'on de 4240 (on)rek'ddi dekel in itLaun · anem option nak Gode po Mel 04 pi God Nor (an)nek (i) . jetzon de docn e0r 1ys M) . anam o\"tom nak dode po melr 0'p ei add eNor (an) nek (ii) · lezon de and oor 14 mi"
+      },
+      {
+        "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+        "filename": "סיכום הרצאות הגדרות משפטים בלי הוכחות.pdf",
+        "text": "· an eM o\"pom nak dode po M30 0'4 ek eor (an) nek (iii) % - >NIsJ . D\"&NN'on doto (an)nek'n& I DeKelin' in an · an > M 9\"pet , nam8 yo NeL a \"4 Mso book # . ancM 9\"pst , naN G8 yo NeLt a \"4 McO bogl # n >a · sojogh ko ol slugsil limn , aan = L- P PLER Be lan'e · Stan dilat sillookt sei ok von pla Jose (an)nen livi -osae (an)= 11 = limaun = Oz n >a - >NIsJ . D\"&NN'on doto (an)nek'n& I DeKelin' in an · an+ 17 An , neht dod pis nic (an) nek (1) · ant1An , neht dod Dis mal (an) nek (ii) · an+ 17 an , neht dod pis em ndt (an) nek (iii) · An+ 1 An , neht dod Dis en al (an)nek (IV) 。 ) KCi) i λCanInak v ) . IWI IK i)id(an 'iak ( vis :sele pina dicazo dlas gidis 110511 odanti do3 mon . {wa .∞ . ∞ ,∞ t ∞ 1 ( i) # · dele pina sosonu s'sididit tl40 liiii · 31 . na (an)rek 10J . D&Nor deno (antrek 'Te : 1 dond Animat anin#"
+      },
+      {
+        "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+        "filename": "סיכום הרצאות הגדרות משפטים בלי הוכחות.pdf",
+        "text": "31 . 14211(an)rek 10 15J . D&Nor de no (antrek 'Te : a dond · him an = infean : nak3-1 sele pina sotoeu (an) nek (an)n= 1 '3K . D\"DNN'on de uuo (antne1'Te1 OcKeI in : 3 dodd · limauntk =iman Bokal sosaen (ntk)n ggk sosdnne ( bu } ℃ .s. す ( ba ) e -tCan ) ys Ese po inalve1 ocad de en co uno eny es (andre de uzo se ist · bk = Ann y\"4&N Ke · o'Ladien (on)re1-nedopstoelto ise uno een adoes in that ( n .) $ ( an)n S ? )e '3k . Del4 pina sotoeut (an)nén 'o jJJ . g\"Gad de ann eco u 3o lim · k , a Ana = Miman Bosai dele pina sosona camlier eeonee Kel God Sk . \"Ond de en não ao inve14e : 1730 sod rhuzkg (an)nEn 's e0s . D\"NNN'on de uuo (an)ne1'te1 OcKel in : 1 espon lim n auntk = limaunt delt pina sotae (antkine ik . dele pina sosoee > ⑦ - & . LEIR It' BidM'on de 420 (on)rente :S doed lim OraK = chilimo Y ∞ 46600 Suba'profite . LER in XE ins :sin do Nadel dood &1311 a\"ONN'on Ge (Xn)nE1 wuno dodsi"
+      },
+      {
+        "sourceFileId": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+        "filename": "סיכום הרצאות הגדרות משפטים בלי הוכחות.pdf",
+        "text": ". I do sizaaima'pria se fiF usinel odp IEIR in incuat ca I -0 f∞ 破 辺 F ∞ I- s F is · F'(x) = f(x) 0\"Pen Xe] dow (ii) · s I do f de (indefinite) plon kon Gedia sk cises , is myby · Sfixidx = F(x) + 0 213, 43 /40s1 Sf(x)dx = [F(x) + c : ccIR} poe F , G o ess . IeR adpo enazim pro ado fi F , G esta : 1 Good 。FCX 1= GLXI + C XEI PCER .I f∞ ⾶ Sf( xid ×= {F ( X ' + C :CGB } = { IDf∞ ∞ } 9 λ · I-y - > de siNiape'prion do 93104 kin Sfixidx : 1 mOn ~ klezit'pso Jack Fig i F , G Tand : /dlon kon Gedaka Sie) :a doen · Sk . I adpy figpaion do simppo p F , G 10 os · FEIR adpy [α F(x7 + Bg(x7 ] d×=α SF(x) d×+ BSgixid× 4\"4&4 2 , BeIR dod : niLksd (i) SF'(xG(x)dx = F(x)G(x) - SF(xG'ixdx : 9. 48a +312dsi (ii) SgiF(X) · fixidx Sgitidt : (essen sadeel vaben ede ciiil t = Fix7 SeYdx = ex + c · x 2 +1 Sx*dx = 2 + 1 + c 2 + - 1 dd . 2 ax Sardx = Ina + C ocate δ . 3 dx (1 + x2 = crc+gx + c 4"
+      }
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
+    "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+    "filename": "רשימת משפטים אינפי 2.pdf",
+    "moed": "unknown",
+    "questions": [
+      {
+        "id": "summerize-רשימת-משפטים-אינפי-2-question-1",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+        "questionNumber": "3",
+        "content": "medind pidae enval 3 73 IC · (t) . 1 d001 · · t ⼭ 。 - 乃 1 \" 楽 .‰ · I .Gedjk o\"on pl · (t) . 3 do0 · . 1 158 15d . (t) . 4 d001 · (t) . 4 d001 · (t) . nIL'n do0N . (t) · Kalive de 1410in doe . idiee) tJ\"t . . 1 Mp01 · It . Osa'didis Look · (t) . 5 d00N . 5 n103L4 7316 . 'alpoddn cide . · son chedrid . Opdea Badj · . 'Jiin cidi . · ·SIDJSM . (t) . DIRTM /O · · 1, 2 dispon sicksiddek · · O sina ka picedriad deto ciossem por (t) .LDMCJ& ·dikcan cidi · It .\"didi oulda nam par . 'Sikn p-e cide . 7 7310 6 77310 · 1156 God · Itdid< ouldadoct namn pay it) . Gedjkn por · . 1,2 1401 · it) idoeno ciossem poy · (t) . 1268 1666 . ⼗) ( ·ขอ 100N . (t) . e112n/00/ · (t) . 2 (681666 . (t) . m)/4/004 · (t) . 3 do0 ·",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+          "filename": "רשימת משפטים אינפי 2.pdf",
+          "text": "medind pidae enval 3 73 IC · (t) . 1 d001 · · t ⼭ 。 - 乃 1 \" 楽 .‰ · I .Gedjk o\"on pl · (t) . 3 do0 · . 1 158 15d . (t) . 4 d001 · (t) . 4 d001 · (t) . nIL'n do0N . (t) · Kalive de 1410in doe . idiee) tJ\"t . . 1 Mp01 · It . Osa'didis Look · (t) . 5 d00N . 5 n103L4 7316 . 'alpoddn cide . · son chedrid . Opdea Badj · . 'Jiin cidi . · ·SIDJSM . (t) . DIRTM /O · · 1, 2 dispon sicksiddek · · O sina ka picedriad deto ciossem por (t) .LDMCJ& ·dikcan cidi · It .\"didi oulda nam par . 'Sikn p-e cide . 7 7310 6 77310 · 1156 God · Itdid< ouldadoct namn pay it) . Gedjkn por · . 1,2 1401 · it) idoeno ciossem poy · (t) . 1268 1666 . ⼗) ( ·ขอ 100N . (t) . e112n/00/ · (t) . 2 (681666 . (t) . m)/4/004 · (t) . 3 do0 ·"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "summerize-רשימת-משפטים-אינפי-2-question-2",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+        "questionNumber": "3",
+        "content": "NaGin + 3. d004 ¢10'0 '31 . n@D (an)nEk 1s 15J . B\"QNN'or de uuo (antnek 'te : 1 dond i1 ·liman = supan : n2k3 De pin soto (an = λ 1 P 7, · God Mon (Onin= 1 o jos sinc & sette 0: 4 , pie port dont sic , imp Kall Godoronlin a v . 30'n' . 5 = sUpECnIneL53-@ · 5-5n.5-a po 1. 216\"4 , 5 80 2-tesla >Un - 1 +80 (ain= 1 SIX . = in . (15004 sinNoisi Nine-a yo NeL was 5 - EcnkAnd5 + 2 p0 , CunE5i5 + 5 . 0a80. 46 . 5-ELorn.An 0\"pS ·liman = 5-1 Josh can wo . lan- pd · . an > k-y yo me = 1 0\"p , 8o8 moe ke (oninen sixd . Kso in , n > Un-1 4G0 (onin= 1 SIX . U = N in' . Laso p\"4 siudacisu) Nane-a yo NeLt wodd ‰ ·liman = supeaIne3 = pd , anzank p\" s",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+          "filename": "רשימת משפטים אינפי 2.pdf",
+          "text": "NaGin + 3. d004 ¢10'0 '31 . n@D (an)nEk 1s 15J . B\"QNN'or de uuo (antnek 'te : 1 dond i1 ·liman = supan : n2k3 De pin soto (an = λ 1 P 7, · God Mon (Onin= 1 o jos sinc & sette 0: 4 , pie port dont sic , imp Kall Godoronlin a v . 30'n' . 5 = sUpECnIneL53-@ · 5-5n.5-a po 1. 216\"4 , 5 80 2-tesla >Un - 1 +80 (ain= 1 SIX . = in . (15004 sinNoisi Nine-a yo NeL was 5 - EcnkAnd5 + 2 p0 , CunE5i5 + 5 . 0a80. 46 . 5-ELorn.An 0\"pS ·liman = 5-1 Josh can wo . lan- pd · . an > k-y yo me = 1 0\"p , 8o8 moe ke (oninen sixd . Kso in , n > Un-1 4G0 (onin= 1 SIX . U = N in' . Laso p\"4 siudacisu) Nane-a yo NeLt wodd ‰ ·liman = supeaIne3 = pd , anzank p\" s"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "summerize-רשימת-משפטים-אינפי-2-question-3",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+        "questionNumber": "(n)",
+        "content": "(n)ens ess . DNNN'on de euo (andren tei Ockel in : 1 espod limcuntk =limaunt dex pina sota (antknk . xx piy sosde □ M 1 ① 1 - MIP 7, ‰ ·limuntliman pa (an de os (ank - & . LEIR It' BidM'on de 420 (on)rente :S doed line &ak = line Ga (t) : MDIn hako PKiE, liak ak=L 。 EO * * ) Crark- L E B Kzha℃ B に B ,liakak - =L **) [ &ak-1 - LE . n=v .= maxicky , aka-13 Los * t* Hake ak = n : 1: 2 keBn = aK - 4 P に 的 」 とふ n 1 Pδ K $ o · 16N \"Ol con - L =Oak - L ( **) pat ark-1 = nt1a Grka-1 po . n = ak-1-1 po ke15 0\"4 pa , 2isisn , suck Pδ K $ o ‰ con - L =Oak - e - L E",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+          "filename": "רשימת משפטים אינפי 2.pdf",
+          "text": "(n)ens ess . DNNN'on de euo (andren tei Ockel in : 1 espod limcuntk =limaunt dex pina sota (antknk . xx piy sosde □ M 1 ① 1 - MIP 7, ‰ ·limuntliman pa (an de os (ank - & . LEIR It' BidM'on de 420 (on)rente :S doed line &ak = line Ga (t) : MDIn hako PKiE, liak ak=L 。 EO * * ) Crark- L E B Kzha℃ B に B ,liakak - =L **) [ &ak-1 - LE . n=v .= maxicky , aka-13 Los * t* Hake ak = n : 1: 2 keBn = aK - 4 P に 的 」 とふ n 1 Pδ K $ o · 16N \"Ol con - L =Oak - L ( **) pat ark-1 = nt1a Grka-1 po . n = ak-1-1 po ke15 0\"4 pa , 2isisn , suck Pδ K $ o ‰ con - L =Oak - e - L E"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "summerize-רשימת-משפטים-אינפי-2-question-4",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+        "questionNumber": "4",
+        "content": "~ klezit'pso Jack Fig i F , G Tand : /dlon kon Gedaka Sie) :a doen · Sk . I adpy fig 'poion do giM4 'pao pe F , G 1o 0sJ . FEIR odpo S∝F(x7 + Bg(x7 ] d×=α SFix) d×+ BSgixid× 4\"4&4 2 , BeIR dod : niLksd (i) SF'(x)G(x)dx = F(x)G(x) - SF(x)G'(x)dx : e'poa n . Brzdoik (ii) SgiF(X) · fixidx Sgitidt : (essen sadeel vaben ede ciiil t = Fix = , 1 O 0 λ , Xe] doo,siecon Gdonn ad p'as s'ea : (iii) sic Gond dsi (G ( F(x))]' = G' (F(x)) . F'(x) = g(F(xx) . f(X) 4N134 ny27 :60 po I odpo giFiX1) · fIx GO uNzy GiFixi) por ‰ (g(F(x) - f(x)dx = G(F(xi) + c = Gst) + c = Sgitid+ ^ t = Fix3",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+          "filename": "רשימת משפטים אינפי 2.pdf",
+          "text": "~ klezit'pso Jack Fig i F , G Tand : /dlon kon Gedaka Sie) :a doen · Sk . I adpy fig 'poion do giM4 'pao pe F , G 1o 0sJ . FEIR odpo S∝F(x7 + Bg(x7 ] d×=α SFix) d×+ BSgixid× 4\"4&4 2 , BeIR dod : niLksd (i) SF'(x)G(x)dx = F(x)G(x) - SF(x)G'(x)dx : e'poa n . Brzdoik (ii) SgiF(X) · fixidx Sgitidt : (essen sadeel vaben ede ciiil t = Fix = , 1 O 0 λ , Xe] doo,siecon Gdonn ad p'as s'ea : (iii) sic Gond dsi (G ( F(x))]' = G' (F(x)) . F'(x) = g(F(xx) . f(X) 4N134 ny27 :60 po I odpo giFiX1) · fIx GO uNzy GiFixi) por ‰ (g(F(x) - f(x)dx = G(F(xi) + c = Gst) + c = Sgitid+ ^ t = Fix3"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "summerize-רשימת-משפטים-אינפי-2-question-5",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+        "questionNumber": "4",
+        "content": "· La, blo eidaladj idedicapa sic . asb-e pe a bette in :4 down It) : MDIn anes . [a, b] de upide p = (Xo , ..., Xn) itS n S ( f. p) = .Mulxu -X に ' ii = nt( Xu- Xr に = n 「 Xa -XK - e = X -Xo +な × っ + … + * n -Xn = Xn - Xo = b - a Q 110.03 M . = SUP {D (X ) :X - EX 上 X = · IIF3 = inf { S ( fip) : La,b ] 楽 p } = infib- a} = b - a plIst IdIIGa scfip- multu - turel- n ^ K=μ ( Xn - XK - e ] = 0 IRIQ 110. 03 M . =inf {B (X 7 :XK - ÷×≤ × } = · IIF> = SUP { S ( f. p) : [aiby ∞ p } = sup { ③= 0 ‰ [a, b) - y ddatadjik ind Dix pd , I = b- a + 0 = I po",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+          "filename": "רשימת משפטים אינפי 2.pdf",
+          "text": "· La, blo eidaladj idedicapa sic . asb-e pe a bette in :4 down It) : MDIn anes . [a, b] de upide p = (Xo , ..., Xn) itS n S ( f. p) = .Mulxu -X に ' ii = nt( Xu- Xr に = n 「 Xa -XK - e = X -Xo +な × っ + … + * n -Xn = Xn - Xo = b - a Q 110.03 M . = SUP {D (X ) :X - EX 上 X = · IIF3 = inf { S ( fip) : La,b ] 楽 p } = infib- a} = b - a plIst IdIIGa scfip- multu - turel- n ^ K=μ ( Xn - XK - e ] = 0 IRIQ 110. 03 M . =inf {B (X 7 :XK - ÷×≤ × } = · IIF> = SUP { S ( f. p) : [aiby ∞ p } = sup { ③= 0 ‰ [a, b) - y ddatadjik ind Dix pd , I = b- a + 0 = I po"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "summerize-רשימת-משפטים-אינפי-2-question-6",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+        "questionNumber": "5",
+        "content": "5. = [ ! 55 猪 = { 楽 paePt · Si . per in : 3 doe . MIOP λ dx = ( *** - ·http-- See Pre ⼀ { ·In x = And - Anti SX α 1 Chipp+ 1 days : 000ii 0 = - 'dx =( * ' \"e . ] 0 .=u - p--p !结 :? x = ·An It 101 ‰",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+          "filename": "רשימת משפטים אינפי 2.pdf",
+          "text": "5. = [ ! 55 猪 = { 楽 paePt · Si . per in : 3 doe . MIOP λ dx = ( *** - ·http-- See Pre ⼀ { ·In x = And - Anti SX α 1 Chipp+ 1 days : 000ii 0 = - 'dx =( * ' \"e . ] 0 .=u - p--p !结 :? x = ·An It 101 ‰"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "summerize-רשימת-משפטים-אינפי-2-question-7",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+        "questionNumber": "7309",
+        "content": ". 7309 ㎡ 。 吉 + 時考 っ 辺 ! 別 辺辺 12 ℃ - 1 OP λ . s-e ya se op po . osmee cide eddeussn · NEL bad Sais seit I de a ero de line Sun Se1 = 3. =- · : , NeLT dod dolc l 5a- 5 s=n 告結 なな例 に ⼩ = 2 5. 2616 4 5. 2616 4 ·SunSet in",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+          "filename": "רשימת משפטים אינפי 2.pdf",
+          "text": ". 7309 ㎡ 。 吉 + 時考 っ 辺 ! 別 辺辺 12 ℃ - 1 OP λ . s-e ya se op po . osmee cide eddeussn · NEL bad Sais seit I de a ero de line Sun Se1 = 3. =- · : , NeLT dod dolc l 5a- 5 s=n 告結 なな例 に ⼩ = 2 5. 2616 4 5. 2616 4 ·SunSet in"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "summerize-רשימת-משפטים-אינפי-2-question-8",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+        "questionNumber": "10",
+        "content": "&10 en (bn)n= -1 (n)rek Snel DeKelin : ) sinkad deid 4 doed ∞ ∞ . na . boy nakan video jas . a , BER In . O'ON 'ON de ∞ ∞ .d Cn + Bbn =n + Bbn Boual oo wantßbnl cilse K = 1 OP λ ∞ Se =n-e p Siste D , globninis ∞ # λ ∅ KOn RAM ) =liment KOn RAM ) = line S OnerOn BEARThe N ⼑ C アつ ⼑ yay also + maddin + &16.disindoin \" 1 cOE ‰ = α 5i + BSz =∞ n =an + Bnbn",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+          "filename": "רשימת משפטים אינפי 2.pdf",
+          "text": "&10 en (bn)n= -1 (n)rek Snel DeKelin : ) sinkad deid 4 doed ∞ ∞ . na . boy nakan video jas . a , BER In . O'ON 'ON de ∞ ∞ .d Cn + Bbn =n + Bbn Boual oo wantßbnl cilse K = 1 OP λ ∞ Se =n-e p Siste D , globninis ∞ # λ ∅ KOn RAM ) =liment KOn RAM ) = line S OnerOn BEARThe N ⼑ C アつ ⼑ yay also + maddin + &16.disindoin \" 1 cOE ‰ = α 5i + BSz =∞ n =an + Bnbn"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "summerize-רשימת-משפטים-אינפי-2-question-9",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+        "questionNumber": "01941",
+        "content": "dus . 01941 In . BONN'on deno (on)rek'Te1 DE KEIin in 130 sood · nzk God Anzo (i) · \"An 90\"4e n = 880 yo NeL 0 4 (ii) ∞ · It) : MG In · n G Ozant qu doptin spbea piena dis Los , = B \"An'q sit ∞ ∞ ∞ ‰ % osaencdmike de 455 , 0 = 941",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+          "filename": "רשימת משפטים אינפי 2.pdf",
+          "text": "dus . 01941 In . BONN'on deno (on)rek'Te1 DE KEIin in 130 sood · nzk God Anzo (i) · \"An 90\"4e n = 880 yo NeL 0 4 (ii) ∞ · It) : MG In · n G Ozant qu doptin spbea piena dis Los , = B \"An'q sit ∞ ∞ ∞ ‰ % osaencdmike de 455 , 0 = 941"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "summerize-רשימת-משפטים-אינפי-2-question-10",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+        "questionNumber": "4",
+        "content": "' > eJs . D\"&NN'on de 4uo (an)nek'te1 deKelin' : lac1en pan) 1 donl · nzk God Anzo (i) . 01 Bossal L =im an ① LER ∞ = It) : MDIn · 0911Sis , 071 sin . q = P 1-L . \"An- a inad P Hie , L = Li \" an ∞ ∞ ‰ it K",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+          "filename": "רשימת משפטים אינפי 2.pdf",
+          "text": "' > eJs . D\"&NN'on de 4uo (an)nek'te1 deKelin' : lac1en pan) 1 donl · nzk God Anzo (i) . 01 Bossal L =im an ① LER ∞ = It) : MDIn · 0911Sis , 071 sin . q = P 1-L . \"An- a inad P Hie , L = Li \" an ∞ ∞ ‰ it K"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "summerize-רשימת-משפטים-אינפי-2-question-11",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+        "questionNumber": "1",
+        "content": "- dus . D\"NNN'on de euo (andrek 'Te1 DE KEIin : 3 doed · nzk God Anzo (i) · 1 Gossal L =im\"An 100 Le\"p (iis . na0e1 vida'non vsen pais liman to isi It) : MDIn しては 乃 ⼭ . \" an - L a L - y inad .PHieiL = fin\" an · n =1 68 an = 1 por \"an-L-1 = 1 po ·. . tim",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+          "filename": "רשימת משפטים אינפי 2.pdf",
+          "text": "- dus . D\"NNN'on de euo (andrek 'Te1 DE KEIin : 3 doed · nzk God Anzo (i) · 1 Gossal L =im\"An 100 Le\"p (iis . na0e1 vida'non vsen pais liman to isi It) : MDIn しては 乃 ⼭ . \" an - L a L - y inad .PHieiL = fin\" an · n =1 68 an = 1 por \"an-L-1 = 1 po ·. . tim"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "summerize-רשימת-משפטים-אינפי-2-question-12",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+        "questionNumber": "(t)",
+        "content": "Sel gedG osadN kın Skc . Gusaideld * in* an in' : lBisa\"dpan an doel ·a, -Oa = S = On ,Goisol (t) : MDIn 9 ·121 Goo S = -1 An abon vide , wide de isgin ope oon anoa das · ZN S = { - ug \" t^ An =We An IOz COnt rot Aad- e Wad # = B ? lans Sain+ 11 - Sax = Santa-Say Wan+ 1 Wan + a ≥ % = aN + Sag =(-1** An = a aa ds Aut .. Wan Wax = a la2 as)- . -(ana Waane * R ) ≤ ω n Ay≤ ω =in ) { Ani 88N 300 inf &On: NE % line = sup : - v √ # # · 13 a pay 42 - r *X* 3 ( limlineSan1 = <- neat = lim can -= limisat all = 5 = λ 3 ∞ n = 1 lim = N @ Ise pat , S-G Mose pise ISat-l ISaali PS.Wa # = ∞ ^ · C1-OaES = O6 IJL/ n = (-1** On = S uN8 , S -G nosoe",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+          "filename": "רשימת משפטים אינפי 2.pdf",
+          "text": "Sel gedG osadN kın Skc . Gusaideld * in* an in' : lBisa\"dpan an doel ·a, -Oa = S = On ,Goisol (t) : MDIn 9 ·121 Goo S = -1 An abon vide , wide de isgin ope oon anoa das · ZN S = { - ug \" t^ An =We An IOz COnt rot Aad- e Wad # = B ? lans Sain+ 11 - Sax = Santa-Say Wan+ 1 Wan + a ≥ % = aN + Sag =(-1** An = a aa ds Aut .. Wan Wax = a la2 as)- . -(ana Waane * R ) ≤ ω n Ay≤ ω =in ) { Ani 88N 300 inf &On: NE % line = sup : - v √ # # · 13 a pay 42 - r *X* 3 ( limlineSan1 = <- neat = lim can -= limisat all = 5 = λ 3 ∞ n = 1 lim = N @ Ise pat , S-G Mose pise ISat-l ISaali PS.Wa # = ∞ ^ · C1-OaES = O6 IJL/ n = (-1** On = S uN8 , S -G nosoe"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "summerize-רשימת-משפטים-אינפי-2-question-13",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+        "questionNumber": "0",
+        "content": "Rit :0\"Non de +zo (on)n&1 Xens/24-914) 4 Goed ∞ ·de paio diazn pape jus . An(X-X.\"Mipsar vid de siososer dia n =∞ . B =∞ Ba ,L = 0 \" · L =im\" an 。 B = 0 B , L =∞ \" \" . R = 2 1 316 , 0 >8 6k Ilii) = , 1 OP λ · Xelk dod dogo osaem tidda egitd tibls . L = 0 is ess gieia iil : eliet ,0Nd NNees lim\" an(x-X =im\" anx-X\"im \"anx-X = Lx-X · eien para doena oJona cida po ↑D . XXo in . XEXo G 2014 Tide edito tibis . L = 0 is das und lii n lim On 1x- 101\" = lim An · X- Xo n =lim\" On · X - X = 20x - X = 12. We Good yo MEL 04 po n .n = M God Cn(X-Xol\" 1 # Qn(X - Xo)\" - 1 lim On 1x- X01\" = >จ · x - , gazn misidisina por lim OnIX- =1 ·de1 vidaconsen por limanix-X.\"Fo por inciso deeto osoem cidie jois . Re = y pos . R = G is jol och so is jos uad siiil · 0051 R = Re pos poN X-Xo -Re Go 201 X-X.Re Ga O 1 Xo - R1 。 Xo + Ry N B = Re",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+          "filename": "רשימת משפטים אינפי 2.pdf",
+          "text": "Rit :0\"Non de +zo (on)n&1 Xens/24-914) 4 Goed ∞ ·de paio diazn pape jus . An(X-X.\"Mipsar vid de siososer dia n =∞ . B =∞ Ba ,L = 0 \" · L =im\" an 。 B = 0 B , L =∞ \" \" . R = 2 1 316 , 0 >8 6k Ilii) = , 1 OP λ · Xelk dod dogo osaem tidda egitd tibls . L = 0 is ess gieia iil : eliet ,0Nd NNees lim\" an(x-X =im\" anx-X\"im \"anx-X = Lx-X · eien para doena oJona cida po ↑D . XXo in . XEXo G 2014 Tide edito tibis . L = 0 is das und lii n lim On 1x- 101\" = lim An · X- Xo n =lim\" On · X - X = 20x - X = 12. We Good yo MEL 04 po n .n = M God Cn(X-Xol\" 1 # Qn(X - Xo)\" - 1 lim On 1x- X01\" = >จ · x - , gazn misidisina por lim OnIX- =1 ·de1 vidaconsen por limanix-X.\"Fo por inciso deeto osoem cidie jois . Re = y pos . R = G is jol och so is jos uad siiil · 0051 R = Re pos poN X-Xo -Re Go 201 X-X.Re Ga O 1 Xo - R1 。 Xo + Ry N B = Re"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "summerize-רשימת-משפטים-אינפי-2-question-14",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+        "questionNumber": "37",
+        "content": ". ...37 i isin e : 5 doe . λ 1 OP λ A . C = b - P Baibe .eGo . b > 1 pd b = 1 -9Ln asel3-e las g'ob1' Hesico sit b 9 . OL α Lt ), α G 4 li) . a = bile- n = on !) 辺辺 ③ 1) o8 0'd) (l) b 1 ab 1 ∞= bi ( e - n = 0 m ! ) = b ! ( b - n = on ! ) I d17'20 b b ! b = acb -! - n = on != @ (b - e ? ! - n = 0 ? +> ( nt ∞ … …b.E ℃ を EI EI . 250 is n'dl 1'9167 (ii) 2 コアカ be ⑧ 1 bt ∞ 1 α= bile - n = 0 n ! ) と b ! ! n = 。 の ! n = 0 n ! ) = b ! n = btr ! b ! = b ! [ 1b+ tn ! + 1bt② ! t 。 } : (btt? ! = btl ≥ 0 91. ∞ ct s 2 00 ア」 ア be ∞ 1 bt ∞ 1 a = b ! le - n = 0 n ! ) b !\\ n = 0 n !- n = 0 n ! ) = bin= b ++ 9 b ! b ! b ! b ! = b ! ( (b+ t ) ! + 1b+② ! 。。 } = [btt > ! + (b +② ! t 。 = [b + い ! + 1b + t (b +③ t” 9 ≤ bel t (btysa t (b+ 9 ) 3 t . o 。 = btl ( ltbt (t( b + t *. 。 ) =^ ^ Ie= 吉 ∠ 9 ^ ^ 9 = btt bay ‰",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+          "filename": "רשימת משפטים אינפי 2.pdf",
+          "text": ". ...37 i isin e : 5 doe . λ 1 OP λ A . C = b - P Baibe .eGo . b > 1 pd b = 1 -9Ln asel3-e las g'ob1' Hesico sit b 9 . OL α Lt ), α G 4 li) . a = bile- n = on !) 辺辺 ③ 1) o8 0'd) (l) b 1 ab 1 ∞= bi ( e - n = 0 m ! ) = b ! ( b - n = on ! ) I d17'20 b b ! b = acb -! - n = on != @ (b - e ? ! - n = 0 ? +> ( nt ∞ … …b.E ℃ を EI EI . 250 is n'dl 1'9167 (ii) 2 コアカ be ⑧ 1 bt ∞ 1 α= bile - n = 0 n ! ) と b ! ! n = 。 の ! n = 0 n ! ) = b ! n = btr ! b ! = b ! [ 1b+ tn ! + 1bt② ! t 。 } : (btt? ! = btl ≥ 0 91. ∞ ct s 2 00 ア」 ア be ∞ 1 bt ∞ 1 a = b ! le - n = 0 n ! ) b !\\ n = 0 n !- n = 0 n ! ) = bin= b ++ 9 b ! b ! b ! b ! = b ! ( (b+ t ) ! + 1b+② ! 。。 } = [btt > ! + (b +② ! t 。 = [b + い ! + 1b + t (b +③ t” 9 ≤ bel t (btysa t (b+ 9 ) 3 t . o 。 = btl ( ltbt (t( b + t *. 。 ) =^ ^ Ie= 吉 ∠ 9 ^ ^ 9 = btt bay ‰"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "summerize-רשימת-משפטים-אינפי-2-question-15",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+        "questionNumber": "491",
+        "content": "· \"Non de +zo (Cine491 XE49 : /sizen doon) 7 Goed ∞ polos dasi Rao s jus . Cn(X-X. l\" Sipsoe vid do siososet diet R in n = β ∞ *N00 n ms2 f , Ocne[ @Bsk . IX-XokR dod fIx) = Cn(X-Xo1\" i' eL421N4 n = 0 fan' sxol . Con = M ! · て 1081 = IDP λ fl' (Xo) √ 。 ao = f(X0 ) = 01 7 = 3 IX-XoKR doo SIT ∞ fIx' = n =@ n ( X -× o ) ^=aotar( X -X 0 ) +aa ( X -X 0 ) + … IX -X 1 aR ,Iicic f ' X1 = aeta X- X 01 t a 3 ( X -× .jt . f' * ) , . a1 = 1 ! = Gas n - 1 1836.picen do cises f(m)(X) = AnH! + An+ 1(n + 1)..... w(X - Xo) + ... fan'(xo ‰ · [tn = 1416 . f'(X) = AnH! Gops X = Xo 2 . 3",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+          "filename": "רשימת משפטים אינפי 2.pdf",
+          "text": "· \"Non de +zo (Cine491 XE49 : /sizen doon) 7 Goed ∞ polos dasi Rao s jus . Cn(X-X. l\" Sipsoe vid do siososet diet R in n = β ∞ *N00 n ms2 f , Ocne[ @Bsk . IX-XokR dod fIx) = Cn(X-Xo1\" i' eL421N4 n = 0 fan' sxol . Con = M ! · て 1081 = IDP λ fl' (Xo) √ 。 ao = f(X0 ) = 01 7 = 3 IX-XoKR doo SIT ∞ fIx' = n =@ n ( X -× o ) ^=aotar( X -X 0 ) +aa ( X -X 0 ) + … IX -X 1 aR ,Iicic f ' X1 = aeta X- X 01 t a 3 ( X -× .jt . f' * ) , . a1 = 1 ! = Gas n - 1 1836.picen do cises f(m)(X) = AnH! + An+ 1(n + 1)..... w(X - Xo) + ... fan'(xo ‰ · [tn = 1416 . f'(X) = AnH! Gops X = Xo 2 . 3"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "summerize-רשימת-משפטים-אינפי-2-question-16",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+        "questionNumber": "0",
+        "content": "iLSen'psio fixs . OrNeT in' X > Xo- 0 p6 X , XOER uing in 130 soodho 13 055 · [X, X] - 0 9 . 400 & · [Xo, X] - 0 720 . 3) f'* (i) · (Xo , X) - 0 Tise fll sii) . f(X; = O 11) ( · fIkXl = 0 O\"4IN OckIN G5 (iv) 。 fC(6 ) = 0 DXOSCaxi = PIOP λ · [xo . X] - 0 2013 - 02 , [MiX]-0 +ist -sind . [i] odpo das 。 X ,XJ - 0 t , X .x 1- a f\" , f L FX1= 0 . ir Fx.1 = 0 · f'(G) = 0 T1d00 Xo < Ge < Y &\"4 · [xo . X] - 0 2013 -'02 , [MiX]-0 wise f' sind . [id] odpo das . X ,X 3 - λ f , X . ×1 - 0f if f ' C)=0t , iv f ( X 01= 3 ' d · f\"(O2) = 0 T1d00 Yo < dadde &N\"4 · Exo . d] Odpo dias , sinse nok . Yose do cises f( &Ind , [Xo . X]-0 Mais f' SIM F' (x} =∂ I, X, × 1 - 3 · fl+ (C) = 0 x21600 YoLIG SN14 , f'SL100 O CONSI , f* (d) = 0 - 1 ‰",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+          "filename": "רשימת משפטים אינפי 2.pdf",
+          "text": "iLSen'psio fixs . OrNeT in' X > Xo- 0 p6 X , XOER uing in 130 soodho 13 055 · [X, X] - 0 9 . 400 & · [Xo, X] - 0 720 . 3) f'* (i) · (Xo , X) - 0 Tise fll sii) . f(X; = O 11) ( · fIkXl = 0 O\"4IN OckIN G5 (iv) 。 fC(6 ) = 0 DXOSCaxi = PIOP λ · [xo . X] - 0 2013 - 02 , [MiX]-0 +ist -sind . [i] odpo das 。 X ,XJ - 0 t , X .x 1- a f\" , f L FX1= 0 . ir Fx.1 = 0 · f'(G) = 0 T1d00 Xo < Ge < Y &\"4 · [xo . X] - 0 2013 -'02 , [MiX]-0 wise f' sind . [id] odpo das . X ,X 3 - λ f , X . ×1 - 0f if f ' C)=0t , iv f ( X 01= 3 ' d · f\"(O2) = 0 T1d00 Yo < dadde &N\"4 · Exo . d] Odpo dias , sinse nok . Yose do cises f( &Ind , [Xo . X]-0 Mais f' SIM F' (x} =∂ I, X, × 1 - 3 · fl+ (C) = 0 x21600 YoLIG SN14 , f'SL100 O CONSI , f* (d) = 0 - 1 ‰"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "summerize-רשימת-משפטים-אינפי-2-question-17",
+        "sourceType": "past_exam",
+        "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+        "questionNumber": "8",
+        "content": "。 O ≤ NE π X 'Xo - 8 P XIXAGB' ? I ∞) 9 % 10 oss . [Xo , X]-0 9 . 400 Nn vhisen 'psio f its · [Xo, X] - 0 720 . 3) f'* (i) · (Xo , X) - 0 Tise fll sii) fCdt\" ( C ) R , ( X ) = い !( X - × 0) \" + \" 471660 Xo > JX 9N\"Y'SKC = 1 P λ f(X7 - Tα (X) gat, = fct3 -Ta(t ) - ∞ (t -× 0 + ” · Saindprod das . S = (X-Xol** Nos RL'SI fx) Sépien [Xo . X]-a p . Nso N misE gs ad 0ias . te[XoiN] doo Gora as des . 19 . 100 a visa Ta 0.00 · ([x0 . X]-a n2013n f'*,0) cbie [XiX]-a noiBL g (⼩ K · 10N80 a 152 P/idl (40 . X) - 0 TLb2 f'*)) SÉdIsN (x0 . X) - a iis2 9 (⼩ ⼑ fEx3 - T<×> g( x) = F(X) - TH ( - * -X .PtT. X -×. tt^ = 0 ε · sich Das . DKE'n3 gia't ) = fct ) \" -T ,'h '(t ) - ∞ 1N + t ) …11+ t - ( h - 9 )) (t- ×0 ) + -K fsk' [ x 0 } = T0 'k' sx 0 ) Gapsi + = Xo a. 3) gi'( xo ) = flt'( xo ) - T ,( \"' ( × o ) - 0 ㎡ 0 · g107 = 0 41608 XX &4 , 1 de por , XotX God s'ecian ones gist\" (t) = fidt' (t3 - O - ∞ ( 4 t 1 ) ! Gops1 + = c a. 3) 0 = gt\" ( o )= f (dt'( C )- ∞ ( It 93 ! fldte' [07 f(x) - Tsix) f(dte' (0] ∞ 。 fEX ) -THEx ) =B ,(X ) = (Ntt 3 ! ?* -× o *^③ .* -× 0 ] t =∞= 14 tt3 ! P",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "high",
+        "sourceSnippet": {
+          "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+          "filename": "רשימת משפטים אינפי 2.pdf",
+          "text": "。 O ≤ NE π X 'Xo - 8 P XIXAGB' ? I ∞) 9 % 10 oss . [Xo , X]-0 9 . 400 Nn vhisen 'psio f its · [Xo, X] - 0 720 . 3) f'* (i) · (Xo , X) - 0 Tise fll sii) fCdt\" ( C ) R , ( X ) = い !( X - × 0) \" + \" 471660 Xo > JX 9N\"Y'SKC = 1 P λ f(X7 - Tα (X) gat, = fct3 -Ta(t ) - ∞ (t -× 0 + ” · Saindprod das . S = (X-Xol** Nos RL'SI fx) Sépien [Xo . X]-a p . Nso N misE gs ad 0ias . te[XoiN] doo Gora as des . 19 . 100 a visa Ta 0.00 · ([x0 . X]-a n2013n f'*,0) cbie [XiX]-a noiBL g (⼩ K · 10N80 a 152 P/idl (40 . X) - 0 TLb2 f'*)) SÉdIsN (x0 . X) - a iis2 9 (⼩ ⼑ fEx3 - T<×> g( x) = F(X) - TH ( - * -X .PtT. X -×. tt^ = 0 ε · sich Das . DKE'n3 gia't ) = fct ) \" -T ,'h '(t ) - ∞ 1N + t ) …11+ t - ( h - 9 )) (t- ×0 ) + -K fsk' [ x 0 } = T0 'k' sx 0 ) Gapsi + = Xo a. 3) gi'( xo ) = flt'( xo ) - T ,( \"' ( × o ) - 0 ㎡ 0 · g107 = 0 41608 XX &4 , 1 de por , XotX God s'ecian ones gist\" (t) = fidt' (t3 - O - ∞ ( 4 t "
+        },
+        "confidence": 0.56
+      }
+    ],
+    "detectedTopics": [
+      "גבולות",
+      "סדרות"
+    ],
+    "repeatedPatterns": [
+      "גבול"
+    ],
+    "requiredTheorems": [],
+    "requiredFormulas": [
+      "· 1, 2 dispon sicksiddek · · O sina ka picedriad deto ciossem por",
+      "c n103l4 ∞ 773 K",
+      "1× 7310 1∞ 7310 ?",
+      "sinx cosx cId .",
+      "·liman =",
+      "= λ 1 P 7,",
+      "· God Mon (Onin= 1 o jos sinc",
+      ". 30'n' . 5 =",
+      "1 +80 (ain= 1",
+      "SIX . = in .",
+      "(15004 sinNoisi Nine-a yo NeL was",
+      "·liman = 5-1 Josh can wo . lan- pd",
+      ". an > k-y yo me = 1",
+      ", n > Un-1 4G0 (onin= 1",
+      "SIX . U = N in' . Laso"
+    ],
+    "proofPatterns": [],
+    "difficultyEstimate": "medium",
+    "sourceSnippets": [
+      {
+        "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+        "filename": "רשימת משפטים אינפי 2.pdf",
+        "text": "medind pidae enval 3 73 IC · (t) . 1 d001 · · t ⼭ 。 - 乃 1 \" 楽 .‰ · I .Gedjk o\"on pl · (t) . 3 do0 · . 1 158 15d . (t) . 4 d001 · (t) . 4 d001 · (t) . nIL'n do0N . (t) · Kalive de 1410in doe . idiee) tJ\"t . . 1 Mp01 · It . Osa'didis Look · (t) . 5 d00N . 5 n103L4 7316 . 'alpoddn cide . · son chedrid . Opdea Badj · . 'Jiin cidi . · ·SIDJSM . (t) . DIRTM /O · · 1, 2 dispon sicksiddek · · O sina ka picedriad deto ciossem por (t) .LDMCJ& ·dikcan cidi · It .\"didi oulda nam par . 'Sikn p-e cide . 7 7310 6 77310 · 1156 God · Itdid< ouldadoct namn pay it) . Gedjkn por · . 1,2 1401 · it) idoeno ciossem poy · (t) . 1268 1666 . ⼗) ( ·ขอ 100N . (t) . e112n/00/ · (t) . 2 (681666 . (t) . m)/4/004 · (t) . 3 do0 ·"
+      },
+      {
+        "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+        "filename": "רשימת משפטים אינפי 2.pdf",
+        "text": "c n103l4 ∞ 773 K . 1n(1 + X) cId . . p\"laion joN · .e* cId . . Abel . . 'GJl13L \"C e . .1341814 · . arctanx cId . · eigen doe. 1× 7310 1∞ 7310 ? · . 1 158 15d . sinx cosx cId . · Lidid de nicken doe ·"
+      },
+      {
+        "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+        "filename": "רשימת משפטים אינפי 2.pdf",
+        "text": "NaGin + 3. d004 ¢10'0 '31 . n@D (an)nEk 1s 15J . B\"QNN'or de uuo (antnek 'te : 1 dond i1 ·liman = supan : n2k3 De pin soto (an = λ 1 P 7, · God Mon (Onin= 1 o jos sinc & sette 0: 4 , pie port dont sic , imp Kall Godoronlin a v . 30'n' . 5 = sUpECnIneL53-@ · 5-5n.5-a po 1. 216\"4 , 5 80 2-tesla >Un - 1 +80 (ain= 1 SIX . = in . (15004 sinNoisi Nine-a yo NeL was 5 - EcnkAnd5 + 2 p0 , CunE5i5 + 5 . 0a80. 46 . 5-ELorn.An 0\"pS ·liman = 5-1 Josh can wo . lan- pd · . an > k-y yo me = 1 0\"p , 8o8 moe ke (oninen sixd . Kso in , n > Un-1 4G0 (onin= 1 SIX . U = N in' . Laso p\"4 siudacisu) Nane-a yo NeLt wodd ‰ ·liman = supeaIne3 = pd , anzank p\" s"
+      },
+      {
+        "sourceFileId": "summerize-רשימת-משפטים-אינפי-2",
+        "filename": "רשימת משפטים אינפי 2.pdf",
+        "text": "(an)n= 1 '3K . D\"DNN'on de uuo (antne1'Te1 OcKeI in : 3 dodd timan Bokal Jojoe (antk)ne1 ogi Jojoen - λ IO & T 。 [ b1u= { antk) =u .KE 。 limn → . an = L - D BLER lanes Pnad Pde ,limnaan= L$ . E 70 .λ \" *) lan - LIK E intkhtkad. -nad .dadena 1 bn - L に 1 an+ K - LIKE ·than . limn → abu = L- 8 P LGRB1bes Dnad BIt ,limnabu = L $. E > 0 '\" * X* い 1 b - L K E in - k * *, n- kadd inad ⼩ , . dFNeth7 lan - L に 1 bn- k - LIKE ‰ ·tan>- Online ="
       }
     ],
     "confidence": 0.8999999999999999

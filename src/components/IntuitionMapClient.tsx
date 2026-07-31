@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import { BookMarked, ChevronDown, Filter, Lightbulb, Search, Sigma, X } from "lucide-react";
 import type { CourseWeek } from "@/lib/calculus2/types";
 import type { WeekIntuition } from "@/lib/calculus2/intuition-map";
-import { GLOBAL_TOOLBOX_ROWS, KNOWN_SERIES } from "@/lib/calculus2/intuition-map";
+import { GLOBAL_TOOLBOX_ROWS, GROWTH_ORDER, KNOWN_SERIES } from "@/lib/calculus2/intuition-map";
 import { DisplayMath, MathContent } from "@/components/study/MathContent";
 
 interface EnrichedWeek {
@@ -120,6 +120,7 @@ export function IntuitionMapClient({ weeks }: { weeks: EnrichedWeek[] }) {
 
         <main className="min-w-0 space-y-6">
           <ToolboxTable />
+          <GrowthOrder />
           <DifferentiateIntegrate />
           <KnownSeriesBank />
 
@@ -136,6 +137,33 @@ export function IntuitionMapClient({ weeks }: { weeks: EnrichedWeek[] }) {
         </main>
       </div>
     </div>
+  );
+}
+
+function GrowthOrder() {
+  return (
+    <section className="rounded-xl border bg-white p-4 shadow-sm" style={{ borderColor: "var(--border)" }}>
+      <div className="mb-2 flex items-center gap-2">
+        <Sigma className="h-5 w-5" style={{ color: "var(--teal)" }} />
+        <h2 className="text-xl font-extrabold">סולם סדרי גודל</h2>
+      </div>
+      <p className="mb-4 text-sm leading-7" style={{ color: "var(--text-secondary)" }}>
+        כש־n שואף לאינסוף, כל שלב בסולם מנצח את כל השלבים שמשמאלו. הסולם עוזר לבחור טור ייחוס לפני שמתחילים לחשב.
+      </p>
+      <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-5">
+        {GROWTH_ORDER.map((item, index) => (
+          <article key={item.label} className="relative rounded-lg border p-3 text-center" style={{ borderColor: "var(--border)", background: "var(--bg-subtle)" }}>
+            {index > 0 && <span className="absolute -right-3 top-1/2 z-10 hidden -translate-y-1/2 text-lg font-black lg:block">≪</span>}
+            <p className="text-xs font-bold" style={{ color: "var(--teal)" }}>{item.label}</p>
+            <DisplayMath latex={item.latex} />
+            <p className="text-xs leading-5" style={{ color: "var(--text-muted)" }}>{item.note}</p>
+          </article>
+        ))}
+      </div>
+      <div className="mt-3 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-sm leading-7 text-amber-950">
+        כלל שימוש: מכנה מסדר גבוה יותר הוא רמז להתכנסות, אבל את המסקנה כותבים רק באמצעות מבחן תקף.
+      </div>
+    </section>
   );
 }
 

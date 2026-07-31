@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-05T11:18:05.446Z",
+  "generatedAt": "2026-07-28T14:35:49.719Z",
   "topics": [
     {
       "topicId": "גבולות",
@@ -7,15 +7,15 @@
       "priorityScore": 100,
       "priorityLevel": "critical",
       "reasons": [
-        "הופיע בקבצי מבחן 11 פעמים",
-        "מופיע במטלות 7 פעמים",
-        "מודגש בתרגולים 9 פעמים",
-        "נלמד בהרצאות 7 פעמים"
+        "הופיע בקבצי מבחן 18 פעמים",
+        "מופיע במטלות 12 פעמים",
+        "מודגש בתרגולים 12 פעמים",
+        "נלמד בהרצאות 9 פעמים"
       ],
-      "appearedInPastExams": 11,
-      "appearedInHomework": 7,
-      "appearedInRecitations": 9,
-      "appearedInLectures": 7,
+      "appearedInPastExams": 18,
+      "appearedInHomework": 12,
+      "appearedInRecitations": 12,
+      "appearedInLectures": 9,
       "recommendedAction": "לפתור שאלות מבחן ומטלות בנושא לפני כל נושא אחר."
     },
     {
@@ -24,11 +24,12 @@
       "priorityScore": 100,
       "priorityLevel": "critical",
       "reasons": [
-        "הופיע בקבצי מבחן 9 פעמים",
+        "הופיע בקבצי מבחן 8 פעמים",
+        "מופיע במטלות 3 פעמים",
         "מודגש בתרגולים 2 פעמים"
       ],
-      "appearedInPastExams": 9,
-      "appearedInHomework": 0,
+      "appearedInPastExams": 8,
+      "appearedInHomework": 3,
       "appearedInRecitations": 2,
       "appearedInLectures": 0,
       "recommendedAction": "לפתור שאלות מבחן ומטלות בנושא לפני כל נושא אחר."
@@ -39,15 +40,15 @@
       "priorityScore": 100,
       "priorityLevel": "critical",
       "reasons": [
-        "הופיע בקבצי מבחן 10 פעמים",
-        "מופיע במטלות 7 פעמים",
-        "מודגש בתרגולים 6 פעמים",
-        "נלמד בהרצאות 6 פעמים"
+        "הופיע בקבצי מבחן 17 פעמים",
+        "מופיע במטלות 12 פעמים",
+        "מודגש בתרגולים 8 פעמים",
+        "נלמד בהרצאות 7 פעמים"
       ],
-      "appearedInPastExams": 10,
-      "appearedInHomework": 7,
-      "appearedInRecitations": 6,
-      "appearedInLectures": 6,
+      "appearedInPastExams": 17,
+      "appearedInHomework": 12,
+      "appearedInRecitations": 8,
+      "appearedInLectures": 7,
       "recommendedAction": "לפתור שאלות מבחן ומטלות בנושא לפני כל נושא אחר."
     },
     {
@@ -57,12 +58,12 @@
       "priorityLevel": "critical",
       "reasons": [
         "הופיע בקבצי מבחן 5 פעמים",
-        "מופיע במטלות 2 פעמים",
-        "מודגש בתרגולים 5 פעמים"
+        "מופיע במטלות 4 פעמים",
+        "מודגש בתרגולים 6 פעמים"
       ],
       "appearedInPastExams": 5,
-      "appearedInHomework": 2,
-      "appearedInRecitations": 5,
+      "appearedInHomework": 4,
+      "appearedInRecitations": 6,
       "appearedInLectures": 0,
       "recommendedAction": "לפתור שאלות מבחן ומטלות בנושא לפני כל נושא אחר."
     },
@@ -72,13 +73,13 @@
       "priorityScore": 100,
       "priorityLevel": "critical",
       "reasons": [
-        "הופיע בקבצי מבחן 12 פעמים",
-        "מופיע במטלות 4 פעמים",
-        "מודגש בתרגולים 4 פעמים"
+        "הופיע בקבצי מבחן 11 פעמים",
+        "מופיע במטלות 7 פעמים",
+        "מודגש בתרגולים 6 פעמים"
       ],
-      "appearedInPastExams": 12,
-      "appearedInHomework": 4,
-      "appearedInRecitations": 4,
+      "appearedInPastExams": 11,
+      "appearedInHomework": 7,
+      "appearedInRecitations": 6,
       "appearedInLectures": 0,
       "recommendedAction": "לפתור שאלות מבחן ומטלות בנושא לפני כל נושא אחר."
     },
@@ -88,15 +89,15 @@
       "priorityScore": 100,
       "priorityLevel": "critical",
       "reasons": [
-        "הופיע בקבצי מבחן 12 פעמים",
-        "מופיע במטלות 7 פעמים",
-        "מודגש בתרגולים 10 פעמים",
-        "נלמד בהרצאות 10 פעמים"
+        "הופיע בקבצי מבחן 19 פעמים",
+        "מופיע במטלות 12 פעמים",
+        "מודגש בתרגולים 12 פעמים",
+        "נלמד בהרצאות 13 פעמים"
       ],
-      "appearedInPastExams": 12,
-      "appearedInHomework": 7,
-      "appearedInRecitations": 10,
-      "appearedInLectures": 10,
+      "appearedInPastExams": 19,
+      "appearedInHomework": 12,
+      "appearedInRecitations": 12,
+      "appearedInLectures": 13,
       "recommendedAction": "לפתור שאלות מבחן ומטלות בנושא לפני כל נושא אחר."
     },
     {
@@ -105,13 +106,13 @@
       "priorityScore": 100,
       "priorityLevel": "critical",
       "reasons": [
-        "הופיע בקבצי מבחן 11 פעמים",
-        "מופיע במטלות 7 פעמים",
-        "מודגש בתרגולים 7 פעמים"
+        "הופיע בקבצי מבחן 16 פעמים",
+        "מופיע במטלות 11 פעמים",
+        "מודגש בתרגולים 10 פעמים"
       ],
-      "appearedInPastExams": 11,
-      "appearedInHomework": 7,
-      "appearedInRecitations": 7,
+      "appearedInPastExams": 16,
+      "appearedInHomework": 11,
+      "appearedInRecitations": 10,
       "appearedInLectures": 0,
       "recommendedAction": "לפתור שאלות מבחן ומטלות בנושא לפני כל נושא אחר."
     },
@@ -121,27 +122,27 @@
       "priorityScore": 100,
       "priorityLevel": "critical",
       "reasons": [
-        "הופיע בקבצי מבחן 10 פעמים",
-        "מופיע במטלות 4 פעמים",
-        "מודגש בתרגולים 3 פעמים"
+        "הופיע בקבצי מבחן 16 פעמים",
+        "מופיע במטלות 6 פעמים",
+        "מודגש בתרגולים 6 פעמים"
       ],
-      "appearedInPastExams": 10,
-      "appearedInHomework": 4,
-      "appearedInRecitations": 3,
+      "appearedInPastExams": 16,
+      "appearedInHomework": 6,
+      "appearedInRecitations": 6,
       "appearedInLectures": 0,
       "recommendedAction": "לפתור שאלות מבחן ומטלות בנושא לפני כל נושא אחר."
     },
     {
-      "topicId": "אינטגרלים-לא-אמיתיים",
-      "title": "אינטגרלים לא אמיתיים",
-      "priorityScore": 81,
+      "topicId": "טור-טיילור",
+      "title": "טור טיילור",
+      "priorityScore": 93,
       "priorityLevel": "critical",
       "reasons": [
-        "הופיע בקבצי מבחן 4 פעמים",
+        "הופיע בקבצי מבחן 5 פעמים",
         "מופיע במטלות 2 פעמים",
         "מודגש בתרגולים 1 פעמים"
       ],
-      "appearedInPastExams": 4,
+      "appearedInPastExams": 5,
       "appearedInHomework": 2,
       "appearedInRecitations": 1,
       "appearedInLectures": 0,
@@ -150,60 +151,63 @@
     {
       "topicId": "רדיוס-התכנסות",
       "title": "רדיוס התכנסות",
-      "priorityScore": 79,
+      "priorityScore": 86,
       "priorityLevel": "critical",
       "reasons": [
         "הופיע בקבצי מבחן 5 פעמים",
+        "מופיע במטלות 1 פעמים",
         "מודגש בתרגולים 1 פעמים"
       ],
       "appearedInPastExams": 5,
-      "appearedInHomework": 0,
+      "appearedInHomework": 1,
       "appearedInRecitations": 1,
       "appearedInLectures": 0,
       "recommendedAction": "לפתור שאלות מבחן ומטלות בנושא לפני כל נושא אחר."
     },
     {
-      "topicId": "טור-טיילור",
-      "title": "טור טיילור",
-      "priorityScore": 74,
+      "topicId": "מבחן-השורש",
+      "title": "מבחן השורש",
+      "priorityScore": 72,
       "priorityLevel": "high",
       "reasons": [
-        "הופיע בקבצי מבחן 5 פעמים"
+        "הופיע בקבצי מבחן 2 פעמים",
+        "מופיע במטלות 2 פעמים",
+        "מודגש בתרגולים 4 פעמים"
       ],
-      "appearedInPastExams": 5,
-      "appearedInHomework": 0,
-      "appearedInRecitations": 0,
+      "appearedInPastExams": 2,
+      "appearedInHomework": 2,
+      "appearedInRecitations": 4,
+      "appearedInLectures": 0,
+      "recommendedAction": "לחזור על משפטים ונוסחאות ואז לתרגל."
+    },
+    {
+      "topicId": "אינטגרלים-לא-אמיתיים",
+      "title": "אינטגרלים לא אמיתיים",
+      "priorityScore": 69,
+      "priorityLevel": "high",
+      "reasons": [
+        "הופיע בקבצי מבחן 3 פעמים",
+        "מופיע במטלות 2 פעמים",
+        "מודגש בתרגולים 1 פעמים"
+      ],
+      "appearedInPastExams": 3,
+      "appearedInHomework": 2,
+      "appearedInRecitations": 1,
       "appearedInLectures": 0,
       "recommendedAction": "לחזור על משפטים ונוסחאות ואז לתרגל."
     },
     {
       "topicId": "מבחן-המנה",
       "title": "מבחן המנה",
-      "priorityScore": 60,
+      "priorityScore": 67,
       "priorityLevel": "high",
       "reasons": [
         "הופיע בקבצי מבחן 2 פעמים",
-        "מופיע במטלות 1 פעמים",
+        "מופיע במטלות 2 פעמים",
         "מודגש בתרגולים 3 פעמים"
       ],
       "appearedInPastExams": 2,
-      "appearedInHomework": 1,
-      "appearedInRecitations": 3,
-      "appearedInLectures": 0,
-      "recommendedAction": "לחזור על משפטים ונוסחאות ואז לתרגל."
-    },
-    {
-      "topicId": "מבחן-השורש",
-      "title": "מבחן השורש",
-      "priorityScore": 60,
-      "priorityLevel": "high",
-      "reasons": [
-        "הופיע בקבצי מבחן 2 פעמים",
-        "מופיע במטלות 1 פעמים",
-        "מודגש בתרגולים 3 פעמים"
-      ],
-      "appearedInPastExams": 2,
-      "appearedInHomework": 1,
+      "appearedInHomework": 2,
       "appearedInRecitations": 3,
       "appearedInLectures": 0,
       "recommendedAction": "לחזור על משפטים ונוסחאות ואז לתרגל."
@@ -211,44 +215,47 @@
     {
       "topicId": "פולינום-טיילור",
       "title": "פולינום טיילור",
-      "priorityScore": 46,
-      "priorityLevel": "medium",
+      "priorityScore": 62,
+      "priorityLevel": "high",
       "reasons": [
-        "הופיע בקבצי מבחן 3 פעמים"
+        "הופיע בקבצי מבחן 3 פעמים",
+        "מופיע במטלות 1 פעמים",
+        "מודגש בתרגולים 1 פעמים"
       ],
       "appearedInPastExams": 3,
-      "appearedInHomework": 0,
-      "appearedInRecitations": 0,
+      "appearedInHomework": 1,
+      "appearedInRecitations": 1,
+      "appearedInLectures": 0,
+      "recommendedAction": "לחזור על משפטים ונוסחאות ואז לתרגל."
+    },
+    {
+      "topicId": "התכנסות-בתנאי",
+      "title": "התכנסות בתנאי",
+      "priorityScore": 43,
+      "priorityLevel": "medium",
+      "reasons": [
+        "הופיע בקבצי מבחן 1 פעמים",
+        "מופיע במטלות 1 פעמים",
+        "מודגש בתרגולים 2 פעמים"
+      ],
+      "appearedInPastExams": 1,
+      "appearedInHomework": 1,
+      "appearedInRecitations": 2,
       "appearedInLectures": 0,
       "recommendedAction": "להשאיר לחזרה מסודרת אחרי הנושאים הקריטיים."
     },
     {
       "topicId": "התכנסות-בהחלט",
       "title": "התכנסות בהחלט",
-      "priorityScore": 36,
+      "priorityScore": 41,
       "priorityLevel": "medium",
       "reasons": [
         "הופיע בקבצי מבחן 1 פעמים",
-        "מודגש בתרגולים 2 פעמים"
+        "מודגש בתרגולים 3 פעמים"
       ],
       "appearedInPastExams": 1,
       "appearedInHomework": 0,
-      "appearedInRecitations": 2,
-      "appearedInLectures": 0,
-      "recommendedAction": "להשאיר לחזרה מסודרת אחרי הנושאים הקריטיים."
-    },
-    {
-      "topicId": "התכנסות-בתנאי",
-      "title": "התכנסות בתנאי",
-      "priorityScore": 36,
-      "priorityLevel": "medium",
-      "reasons": [
-        "הופיע בקבצי מבחן 1 פעמים",
-        "מודגש בתרגולים 2 פעמים"
-      ],
-      "appearedInPastExams": 1,
-      "appearedInHomework": 0,
-      "appearedInRecitations": 2,
+      "appearedInRecitations": 3,
       "appearedInLectures": 0,
       "recommendedAction": "להשאיר לחזרה מסודרת אחרי הנושאים הקריטיים."
     }

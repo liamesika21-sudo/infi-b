@@ -26,7 +26,45 @@ export interface WeekIntuition {
   toolboxRows: ToolboxRow[];
 }
 
+export interface GrowthOrderItem {
+  label: string;
+  latex: string;
+  note: string;
+}
+
+export const GROWTH_ORDER: GrowthOrderItem[] = [
+  { label: "לוגריתמי", latex: "\\ln n", note: "איטי מכל חזקה חיובית של n" },
+  { label: "פולינומי", latex: "n^p\\ (p>0)", note: "מנצח לוגריתם ומפסיד למעריכי" },
+  { label: "מעריכי", latex: "a^n\\ (a>1)", note: "מנצח כל פולינום ומפסיד לעצרת" },
+  { label: "עצרת", latex: "n!", note: "מנצחת כל מעריכי עם בסיס קבוע" },
+  { label: "חזקת n", latex: "n^n", note: "חזקה יותר גם מעצרת" },
+];
+
 export const GLOBAL_TOOLBOX_ROWS: ToolboxRow[] = [
+  {
+    wording: "יש עצרת או מכפלה",
+    means: "המעבר מ-n ל-(n+1) משאיר בדרך כלל רק גורם חדש אחד.",
+    toolbox: "מבחן המנה",
+    conditions: "מצמצמים עצרות לפני חישוב הגבול; L=1 אינו מכריע.",
+  },
+  {
+    wording: "כל האיבר בחזקת n",
+    means: "השורש ה-n-י מסיר את המבנה המעריכי.",
+    toolbox: "מבחן השורש",
+    conditions: "עובדים עם ערך מוחלט; L=1 אינו מכריע.",
+  },
+  {
+    wording: "פונקציה והנגזרת שלה",
+    means: "הטור נראה כמו אינטגרל שקל לחשב לאחר הצבה.",
+    toolbox: "מבחן האינטגרל",
+    conditions: "הפונקציה הממשיכה חייבת להיות חיובית, רציפה ויורדת.",
+  },
+  {
+    wording: "פונקציה קטנה של 1/n",
+    means: "מזהים שקילות ליד 0 כדי לגלות את סדר הגודל.",
+    toolbox: "גבולות מפורסמים + השוואה גבולית",
+    conditions: "שקילות אינה שוויון; צריך להציג גבול מנה חיובי וסופי.",
+  },
   {
     wording: "מצא תחום התכנסות",
     means: "לא מחפשים סכום. מחפשים עבור אילו ערכי x הטור מייצר מספר סופי.",

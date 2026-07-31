@@ -221,6 +221,594 @@
     "confidence": 0.8999999999999999
   },
   {
+    "homeworkNumber": 10,
+    "weekNumber": 10,
+    "sourceFileId": "hw-exercise-10-solution",
+    "filename": "Exercise 10 solution.pdf",
+    "topics": [
+      "גבולות",
+      "טור טיילור",
+      "טורי חזקות",
+      "טורים",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "questions": [
+      {
+        "id": "hw-exercise-10-solution-question-1",
+        "sourceType": "homework",
+        "sourceFileId": "hw-exercise-10-solution",
+        "questionNumber": "2025",
+        "content": "Calculus II – Spring 2025-26 Homework 10 Solution 1. Let f be the function defined by f (x) = ∑∞ n=1 (−1)n+1x2n+1 2n(2n+1) for every −1 ≤ x ≤ 1. (a) Prove that f is well-defined. Solution: We show that the series f (x) = ∑∞ n=1 (−1)n+1x2n+1 2n(2n+1) convergence for every −1 ≤ x ≤ 1. We note that ∞ ∑ n=1 (−1)n+1x2n+1 2n(2n + 1) = x ∞ ∑ n=1 (−1)n+1x2n 2n(2n + 1) We have ∞ ∑ n=1 (−1)n+1x2n 2n(2n + 1) = t=x2 ∞ ∑ n=1 (−1)n+1tn 2n(2n + 1) We compute R = 1 lim n→∞ n √∣ ∣ ∣ (−1)n+1 2n(2n+1) ∣ ∣ ∣ = 1 Thus the series converges for every ∣ ∣x2∣ ∣ < 1 ⇒ −1 < x < 1. We note that for x = 1, −1 we get a Leibniz series (or minus of a Leibniz series), thus the series ∑∞ n=1 (−1)n+1·x2n+1 2n·(2n+1) converges for every −1 ≤ x ≤ 1. Thus, f is well-defined. (b) Find an explicit expression for f for every −1 ≤ x ≤ 1. Solution: We know that for every −1 < x ≤ 1 we have ln(1 + x) = ∞ ∑ n=1 (−1)n+1 xn n We substitute x = t2 and divide both sides by 2, yielding ln (1 + t2) 2 = ∞ ∑ n=1 (−1)n+1 t2n 2n 1",
+        "topicIds": [
+          "גבולות",
+          "טור-טיילור",
+          "טורי-חזקות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "hw-exercise-10-solution",
+          "filename": "Exercise 10 solution.pdf",
+          "text": "Calculus II – Spring 2025-26 Homework 10 Solution 1. Let f be the function defined by f (x) = ∑∞ n=1 (−1)n+1x2n+1 2n(2n+1) for every −1 ≤ x ≤ 1. (a) Prove that f is well-defined. Solution: We show that the series f (x) = ∑∞ n=1 (−1)n+1x2n+1 2n(2n+1) convergence for every −1 ≤ x ≤ 1. We note that ∞ ∑ n=1 (−1)n+1x2n+1 2n(2n + 1) = x ∞ ∑ n=1 (−1)n+1x2n 2n(2n + 1) We have ∞ ∑ n=1 (−1)n+1x2n 2n(2n + 1) = t=x2 ∞ ∑ n=1 (−1)n+1tn 2n(2n + 1) We compute R = 1 lim n→∞ n √∣ ∣ ∣ (−1)n+1 2n(2n+1) ∣ ∣ ∣ = 1 Thus the series converges for every ∣ ∣x2∣ ∣ < 1 ⇒ −1 < x < 1. We note that for x = 1, −1 we get a Leibniz series (or minus of a Leibniz series), thus the series ∑∞ n=1 (−1)n+1·x2n+1 2n·(2n+1) converges for every −1 ≤ x ≤ 1. Thus, f is well-defined. (b) Find an explicit expression for f for every −1 ≤ x ≤ 1. Solution: We know that for every −1 < x ≤ 1 we have ln(1 + x) = ∞ ∑ n=1 (−1)n+1 xn n We subs"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "hw-exercise-10-solution-question-2",
+        "sourceType": "homework",
+        "sourceFileId": "hw-exercise-10-solution",
+        "questionNumber": "2",
+        "content": "2. Consider the series ∑∞ n=0 n+1 2n·(x−1)2n+1 , where x̸ = 1. (a) Find the domain of convergence of the series. Solution: We note that ∞ ∑ n=0 n + 1 2n · (x − 1)2n+1 = 1 x − 1 ∞ ∑ n=0 n + 1 2n · (x − 1)2n We consider ∞ ∑ n=0 n + 1 2n · (x − 1)2n = t= 1 (x−1)2 ∞ ∑ n=0 n + 1 2n tn We compute R = 1 lim n→∞ n √ n+1 2n = (⋆) 2 (⋆) We note that for every n ∈ N we have 1 ≤ n √n + 1 ≤ n √n + n = 2 1 n n 1 n As lim n→∞2 1 n = 1 and lim n→∞n 1 n = 1, then by squeeze rule we get that lim n→∞ n √n + 1 = 1. Thus, the series converges for every ∣ ∣ ∣ ∣ ∣ 1 (x − 1)2 ∣ ∣ ∣ ∣ ∣ < 2 ⇔ x > 1 + 1 √2 or x < 1 − 1 √2 We note that for x = 1 + 1 √2 , 1 − 1 √2 the series diverges, since we get the series ∞ ∑ n=0 n + 1 2n · ( 1 ± 1 √2 − 1 )2n = ∞ ∑ n=0 (n + 1) and the necessary criterion does not hold. Thus the domain of convergence is x > 1 + 1 √2 or x < 1 − 1 √2 . 4",
+        "topicIds": [
+          "גבולות",
+          "טור-טיילור",
+          "טורי-חזקות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "hw-exercise-10-solution",
+          "filename": "Exercise 10 solution.pdf",
+          "text": "2. Consider the series ∑∞ n=0 n+1 2n·(x−1)2n+1 , where x̸ = 1. (a) Find the domain of convergence of the series. Solution: We note that ∞ ∑ n=0 n + 1 2n · (x − 1)2n+1 = 1 x − 1 ∞ ∑ n=0 n + 1 2n · (x − 1)2n We consider ∞ ∑ n=0 n + 1 2n · (x − 1)2n = t= 1 (x−1)2 ∞ ∑ n=0 n + 1 2n tn We compute R = 1 lim n→∞ n √ n+1 2n = (⋆) 2 (⋆) We note that for every n ∈ N we have 1 ≤ n √n + 1 ≤ n √n + n = 2 1 n n 1 n As lim n→∞2 1 n = 1 and lim n→∞n 1 n = 1, then by squeeze rule we get that lim n→∞ n √n + 1 = 1. Thus, the series converges for every ∣ ∣ ∣ ∣ ∣ 1 (x − 1)2 ∣ ∣ ∣ ∣ ∣ < 2 ⇔ x > 1 + 1 √2 or x < 1 − 1 √2 We note that for x = 1 + 1 √2 , 1 − 1 √2 the series diverges, since we get the series ∞ ∑ n=0 n + 1 2n · ( 1 ± 1 √2 − 1 )2n = ∞ ∑ n=0 (n + 1) and the necessary criterion does not hold. Thus the domain of convergence is x > 1 + 1 √2 or x < 1 − 1 √2 . 4"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "hw-exercise-10-solution-question-3",
+        "sourceType": "homework",
+        "sourceFileId": "hw-exercise-10-solution",
+        "questionNumber": "3",
+        "content": "3. For items (a) and (b) develop each of the following functions into a power series around x0 = 0, and find its domain of convergence. (a) Si(x) = ∫ x 0 sin t t dt, ∀x ∈ R. Solution: First, we write the power series of sin t, for every t ∈ R we have sin t = ∞ ∑ n=0 (−1)n (2n + 1)! · t2n+1 Thus      sin(t) t t̸ = 0 1 t = 0 = ∞ ∑ n=0 (−1)n (2n + 1)! · t2n, ∀t ∈ R Integrating term by term, we get Si(x) = ∫ x 0 sin t t dt = ∞ ∑ n=0 (−1)n (2n + 1)! · ∫ x 0 t2ndt = ∞ ∑ n=0 (−1)n (2n + 1) · (2n + 1)! · x2n+1 ∀x ∈ R Consequently, the domain of convergence is R. (b) f (x) = sinh x, ∀x ∈ R, where the hyperbolic sine function is defined by sinh x = ex−e−x 2 . Solution: We know that ex = ∑∞ n=0 xn n! , ∀x ∈ R, thus e−x = ∞ ∑ n=0 (−x)n n! = ∞ ∑ n=0 (−1)n xn n! , ∀x ∈ R Subtracting the two series together, then for every x ∈ R we have sinh x = ex − e−x 2 = ∑∞ n=0 xn n! − ∑∞ n=0 (−1)nxn n! 2 = ∞ ∑ n=0 (1 − (−1)n) 2 · n! · xn = ∞ ∑ n=0 1 (2n + 1)! · x2n+1 Consequently, the domain of convergence is R. 6",
+        "topicIds": [
+          "גבולות",
+          "טור-טיילור",
+          "טורי-חזקות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "hw-exercise-10-solution",
+          "filename": "Exercise 10 solution.pdf",
+          "text": "3. For items (a) and (b) develop each of the following functions into a power series around x0 = 0, and find its domain of convergence. (a) Si(x) = ∫ x 0 sin t t dt, ∀x ∈ R. Solution: First, we write the power series of sin t, for every t ∈ R we have sin t = ∞ ∑ n=0 (−1)n (2n + 1)! · t2n+1 Thus      sin(t) t t̸ = 0 1 t = 0 = ∞ ∑ n=0 (−1)n (2n + 1)! · t2n, ∀t ∈ R Integrating term by term, we get Si(x) = ∫ x 0 sin t t dt = ∞ ∑ n=0 (−1)n (2n + 1)! · ∫ x 0 t2ndt = ∞ ∑ n=0 (−1)n (2n + 1) · (2n + 1)! · x2n+1 ∀x ∈ R Consequently, the domain of convergence is R. (b) f (x) = sinh x, ∀x ∈ R, where the hyperbolic sine function is defined by sinh x = ex−e−x 2 . Solution: We know that ex = ∑∞ n=0 xn n! , ∀x ∈ R, thus e−x = ∞ ∑ n=0 (−x)n n! = ∞ ∑ n=0 (−1)n xn n! , ∀x ∈ R Subtracting the two series together, then for every x ∈ R we have sinh x = ex − e−x 2 = ∑∞ n=0 xn n! − ∑∞ n=0 (−1)nxn n! 2 = ∞ ",
+          "startOffset": 4156,
+          "endOffset": 5163
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "hw-exercise-10-solution-question-4",
+        "sourceType": "homework",
+        "sourceFileId": "hw-exercise-10-solution",
+        "questionNumber": "4",
+        "content": "4. (a) Find the Taylor series about x0 = 0 for the function defined by f (x) =      arctan(x) x x̸ = 0 1 x = 0 for every x ∈ R, and find it’s domain of convergence. Solution: We know that the power series ∑∞ n=0 (−1)n 2n+1 x2n+1 converges if and only if −1 ≤ x ≤ 1, and that for every −1 ≤ x ≤ 1 we have arctan(x) = ∞ ∑ n=0 (−1)n 2n + 1 x2n+1 It follows that for every −1 ≤ x ≤ 1 such that x̸ = 0 we have f (x) = arctan(x) x = 1 x ∞ ∑ n=0 (−1)n 2n + 1 x2n+1 = ∞ ∑ n=0 (−1)n 2n + 1 x2n = 1 − x2 3 + x4 5 − ... Note that for x = 0 it holds that f (0) = 1 = 1 − 0 + 0 − 0 + . . . and therefore f (x) = ∑∞ n=0 (−1)n 2n+1 x2n = 1 − x2 3 + x4 5 − ... if and only if −1 ≤ x ≤ 1. By the theorem of uniqueness of power series, we conclude that the Taylor series of f is Tf (x) = 1 − x2 3 + x4 5 − ... and the domain of convergence is [−1, 1]. (b) Find f (n) (0) for every 0 ≤ n ∈ Z. Solution: As f (x) = 1 − x2 3 + x4 5 − ... = ∞ ∑ k=0 (−1)k 2k + 1 x2k then an =      0 n = 2k − 1 (−1)k 2k+1 n = 2k thus by the theorem of uniqueness of power series, for every 0 ≤ n ∈ Z we have f (n) (0) = an · n! =      0 n = 2k − 1 (2k)!(−1)k 2k+1 n = 2k 8",
+        "topicIds": [
+          "גבולות",
+          "טור-טיילור",
+          "טורי-חזקות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "hw-exercise-10-solution",
+          "filename": "Exercise 10 solution.pdf",
+          "text": "4. (a) Find the Taylor series about x0 = 0 for the function defined by f (x) =      arctan(x) x x̸ = 0 1 x = 0 for every x ∈ R, and find it’s domain of convergence. Solution: We know that the power series ∑∞ n=0 (−1)n 2n+1 x2n+1 converges if and only if −1 ≤ x ≤ 1, and that for every −1 ≤ x ≤ 1 we have arctan(x) = ∞ ∑ n=0 (−1)n 2n + 1 x2n+1 It follows that for every −1 ≤ x ≤ 1 such that x̸ = 0 we have f (x) = arctan(x) x = 1 x ∞ ∑ n=0 (−1)n 2n + 1 x2n+1 = ∞ ∑ n=0 (−1)n 2n + 1 x2n = 1 − x2 3 + x4 5 − ... Note that for x = 0 it holds that f (0) = 1 = 1 − 0 + 0 − 0 + . . . and therefore f (x) = ∑∞ n=0 (−1)n 2n+1 x2n = 1 − x2 3 + x4 5 − ... if and only if −1 ≤ x ≤ 1. By the theorem of uniqueness of power series, we conclude that the Taylor series of f is Tf (x) = 1 − x2 3 + x4 5 − ... and the domain of convergence is [−1, 1]. (b) Find f (n) (0) for every 0 ≤ n ∈ Z. Solution: As f (x) = ",
+          "startOffset": 6180,
+          "endOffset": 7328
+        },
+        "confidence": 0.56
+      }
+    ],
+    "requiredTheorems": [
+      "4"
+    ],
+    "requiredFormulas": [
+      "1. Let f be the function defined by f (x) = ∑∞",
+      "2n(2n+1) for every −1 ≤ x ≤ 1.",
+      "We show that the series f (x) = ∑∞",
+      "2n(2n+1) convergence for every −1 ≤ x ≤ 1.",
+      "2n(2n + 1) = x",
+      "We have ∞ ∑",
+      "2n(2n + 1) =",
+      "We note that for x = 1, −1 we get a Leibniz series (or minus of a Leibniz series), thus the series",
+      "2n·(2n+1) converges for every −1 ≤ x ≤ 1.",
+      "(b) Find an explicit expression for f for every −1 ≤ x ≤ 1.",
+      "We know that for every −1 < x ≤ 1 we have",
+      "ln(1 + x) ="
+    ],
+    "requiredTechniques": [
+      "טיילור",
+      "גבול"
+    ],
+    "examSimilarityHints": [],
+    "mustReviewBeforeExam": true,
+    "difficultyEstimate": "mixed",
+    "sourceSnippets": [
+      {
+        "sourceFileId": "hw-exercise-10-solution",
+        "filename": "Exercise 10 solution.pdf",
+        "text": "Calculus II – Spring 2025-26 Homework 10 Solution 1. Let f be the function defined by f (x) = ∑∞ n=1 (−1)n+1x2n+1 2n(2n+1) for every −1 ≤ x ≤ 1. (a) Prove that f is well-defined. Solution: We show that the series f (x) = ∑∞ n=1 (−1)n+1x2n+1 2n(2n+1) convergence for every −1 ≤ x ≤ 1. We note that ∞ ∑ n=1 (−1)n+1x2n+1 2n(2n + 1) = x ∞ ∑ n=1 (−1)n+1x2n 2n(2n + 1) We have ∞ ∑ n=1 (−1)n+1x2n 2n(2n + 1) = t=x2 ∞ ∑ n=1 (−1)n+1tn 2n(2n + 1) We compute R = 1 lim n→∞ n √∣ ∣ ∣ (−1)n+1 2n(2n+1) ∣ ∣ ∣ = 1 Thus the series converges for every ∣ ∣x2∣ ∣ < 1 ⇒ −1 < x < 1. We note that for x = 1, −1 we get a Leibniz series (or minus of a Leibniz series), thus the series ∑∞ n=1 (−1)n+1·x2n+1 2n·(2n+1) converges for every −1 ≤ x ≤ 1. Thus, f is well-defined. (b) Find an explicit expression for f for every −1 ≤ x ≤ 1. Solution: We know that for every −1 < x ≤ 1 we have ln(1 + x) = ∞ ∑ n=1 (−1)n+1 xn n We subs"
+      },
+      {
+        "sourceFileId": "hw-exercise-10-solution",
+        "filename": "Exercise 10 solution.pdf",
+        "text": "Thus for every −1 < x < 1 we have ln (1 + x2) 2 = ∞ ∑ n=1 (−1)n+1 x2n 2n Thus by term by term derivative for every −1 < x < 1 we have f ′ (x) = ∞ ∑ n=1 (−1)n+1 x2n 2n = ln (1 + x2) 2 thus there exists an C ∈ R such that f (x) + C = ∫ ln (1 + x2) 2 dx = x ln (1 + x2) 2 − x + arctan x We note that f (0) = ∞ ∑ n=1 (−1)n+1 · 02n+1 2n · (2n + 1) = 0 We substitute x = 0 and we get that f (0) + C = 0 · ln (1 + 02) 2 − 0 + arctan 0 ⇒ C = 0 Thus for every −1 < x < 1 we have f (x) = x ln (1 + x2) 2 − x + arctan x For x = 1 we get that f (1) = ∞ ∑ n=1 (−1)n+112n+1 2n(2n + 1) = lim x→1−f (x) = continuous f (1) = 1 · ln (1 + 12) 2 − 1 + arctan(1) = ln 2 2 − 1 + π 4 For x = −1 we get that f (1) = ∞ ∑ n=1 (−1)n+1(−1)2n+1 2n(2n + 1) = lim x→−1+f (x) = continuous f (−1) = (−1) · ln (1 + (−1)2) 2 −(−1)+arctan(−1) = − ln 2 2 + 1 − π 4 Thus for every −1 ≤ x ≤ 1 we have f (x) = x ln (1 + x2) 2 − x + arctan x",
+        "startOffset": 1007,
+        "endOffset": 1909
+      },
+      {
+        "sourceFileId": "hw-exercise-10-solution",
+        "filename": "Exercise 10 solution.pdf",
+        "text": "(c) Conclude the value of the alternating series ∞ ∑ n=1 (−1)n+1 2n · (2n + 1) = 1 2 · 3 − 1 4 · 5 + 1 6 · 7 − ... Solution: On the one hand, we substitute x = 1 and we get f (1) = ∞ ∑ n=1 (−1)n+1 · 12n+1 2n · (2n + 1) = ∞ ∑ n=1 (−1)n+1 2n · (2n + 1) = 1 2 · 3 − 1 4 · 5 + 1 6 · 7 − ... On the other hand f (1) = 1 · ln (1 + 12) 2 − 1 + arctan 1 = ln 2 2 − 1 + π 4 thus 1 2 · 3 − 1 4 · 5 + 1 6 · 7 − ... = ln 2 2 − 1 + π 4 3",
+        "startOffset": 1925,
+        "endOffset": 2349
+      },
+      {
+        "sourceFileId": "hw-exercise-10-solution",
+        "filename": "Exercise 10 solution.pdf",
+        "text": "2. Consider the series ∑∞ n=0 n+1 2n·(x−1)2n+1 , where x̸ = 1. (a) Find the domain of convergence of the series. Solution: We note that ∞ ∑ n=0 n + 1 2n · (x − 1)2n+1 = 1 x − 1 ∞ ∑ n=0 n + 1 2n · (x − 1)2n We consider ∞ ∑ n=0 n + 1 2n · (x − 1)2n = t= 1 (x−1)2 ∞ ∑ n=0 n + 1 2n tn We compute R = 1 lim n→∞ n √ n+1 2n = (⋆) 2 (⋆) We note that for every n ∈ N we have 1 ≤ n √n + 1 ≤ n √n + n = 2 1 n n 1 n As lim n→∞2 1 n = 1 and lim n→∞n 1 n = 1, then by squeeze rule we get that lim n→∞ n √n + 1 = 1. Thus, the series converges for every ∣ ∣ ∣ ∣ ∣ 1 (x − 1)2 ∣ ∣ ∣ ∣ ∣ < 2 ⇔ x > 1 + 1 √2 or x < 1 − 1 √2 We note that for x = 1 + 1 √2 , 1 − 1 √2 the series diverges, since we get the series ∞ ∑ n=0 n + 1 2n · ( 1 ± 1 √2 − 1 )2n = ∞ ∑ n=0 (n + 1) and the necessary criterion does not hold. Thus the domain of convergence is x > 1 + 1 √2 or x < 1 − 1 √2 . 4"
+      }
+    ],
+    "confidence": 0.86
+  },
+  {
+    "homeworkNumber": 11,
+    "weekNumber": 11,
+    "sourceFileId": "hw-exercise-11-solution",
+    "filename": "Exercise 11 solution.pdf",
+    "topics": [
+      "גבולות",
+      "טור טיילור",
+      "טורי חזקות",
+      "טורים",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "פולינום טיילור"
+    ],
+    "questions": [
+      {
+        "id": "hw-exercise-11-solution-question-1",
+        "sourceType": "homework",
+        "sourceFileId": "hw-exercise-11-solution",
+        "questionNumber": "2025",
+        "content": "Calculus II – Spring 2025-26 Homework 11 Solution 1. Let f (x) = esin x for every x ∈ R. Compute the first three Taylor polynomials of f about x0 = 0, that is, T0(x), T1(x) and T2(x). Solution: We note that for every x ∈ R we have f (0) (x) = esin x f (1) (x) = esin x · cos x f (2) (x) = esin x cos x · cos x + esin x · (− sin x) = esin x (cos2 x − sin x) Thus for every x ∈ R we have T2 (x) = 2 ∑ n=0 f (n) (0) n! xn = esin 0 0! x0 + esin 0 cos (0) 1! x1 + esin 0 (cos2 0 − sin 0) 2! x2 = 1 + x + x2 2 and therefore T1 (x) = 1 + x, T0(x) = 1 1",
+        "topicIds": [
+          "גבולות",
+          "טור-טיילור",
+          "טורי-חזקות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "פולינום-טיילור"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "hw-exercise-11-solution",
+          "filename": "Exercise 11 solution.pdf",
+          "text": "Calculus II – Spring 2025-26 Homework 11 Solution 1. Let f (x) = esin x for every x ∈ R. Compute the first three Taylor polynomials of f about x0 = 0, that is, T0(x), T1(x) and T2(x). Solution: We note that for every x ∈ R we have f (0) (x) = esin x f (1) (x) = esin x · cos x f (2) (x) = esin x cos x · cos x + esin x · (− sin x) = esin x (cos2 x − sin x) Thus for every x ∈ R we have T2 (x) = 2 ∑ n=0 f (n) (0) n! xn = esin 0 0! x0 + esin 0 cos (0) 1! x1 + esin 0 (cos2 0 − sin 0) 2! x2 = 1 + x + x2 2 and therefore T1 (x) = 1 + x, T0(x) = 1 1"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "hw-exercise-11-solution-question-2",
+        "sourceType": "homework",
+        "sourceFileId": "hw-exercise-11-solution",
+        "questionNumber": "2",
+        "content": "2. (a) Consider q = 1 − 1 2! + 1 4! − 1 6! = 389 720 . Prove that |cos (1) − q| ≤ 1 8! Solution: We know that given a Leibniz series, it holds that ∣ ∣ ∣ ∣ ∣ ∞ ∑ n=k (−1)n+1an ∣ ∣ ∣ ∣ ∣ ≤ ak We know that cos x = ∞ ∑ n=0 (−1)n x2n (2n)! , ∀x ∈ R thus cos 1 = ∞ ∑ n=0 (−1)n (2n)! = 1 − 1 2! + 1 4! − 1 6! + 1 8! − 1 10! + . . . This is clearly a Leibniz series, thus |cos(1) − q| = ∣ ∣ ∣ ∣ 1 8! − 1 10! + ... ∣ ∣ ∣ ∣ ≤ 1 8! 2",
+        "topicIds": [
+          "גבולות",
+          "טור-טיילור",
+          "טורי-חזקות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "פולינום-טיילור"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "hw-exercise-11-solution",
+          "filename": "Exercise 11 solution.pdf",
+          "text": "2. (a) Consider q = 1 − 1 2! + 1 4! − 1 6! = 389 720 . Prove that |cos (1) − q| ≤ 1 8! Solution: We know that given a Leibniz series, it holds that ∣ ∣ ∣ ∣ ∣ ∞ ∑ n=k (−1)n+1an ∣ ∣ ∣ ∣ ∣ ≤ ak We know that cos x = ∞ ∑ n=0 (−1)n x2n (2n)! , ∀x ∈ R thus cos 1 = ∞ ∑ n=0 (−1)n (2n)! = 1 − 1 2! + 1 4! − 1 6! + 1 8! − 1 10! + . . . This is clearly a Leibniz series, thus |cos(1) − q| = ∣ ∣ ∣ ∣ 1 8! − 1 10! + ... ∣ ∣ ∣ ∣ ≤ 1 8! 2"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "hw-exercise-11-solution-question-3",
+        "sourceType": "homework",
+        "sourceFileId": "hw-exercise-11-solution",
+        "questionNumber": "3",
+        "content": "3. In this question, we will prove the formula for the variance of the Geometric random variable that will be revisited in the course of Introduction to Probability. Let 0 < p < 1. (a) Prove that ∑∞ n=1 [ n (1 − p)n−1 · p ] = 1 p . Solution: We know that the series ∑∞ n=1 (1 − p)n is a tail of a geometric series, and as 0 < p < 1, then 0 < 1−p < 1 which implies that the series is convergent, and ∞ ∑ n=1 (1 − p)n = ∞ ∑ n=0 (1 − p)n − 1 = 1 1 − (1 − p) − 1 = 1 p − 1 Thus, we can use term-by-term differentiation: − 1 p2 = [ 1 p − 1 ]′ = [ ∞ ∑ n=1 (1 − p)n ]′ T.B.T.D = ∞ ∑ n=1 [(1 − p)n]′ = ∞ ∑ n=1 −n (1 − p)n−1 = − ∞ ∑ n=1 n (1 − p)n−1 Thus ∞ ∑ n=1 [ n (1 − p)n−1 · p ] = p ∞ ∑ n=1 n (1 − p)n−1 = p · 1 p2 = 1 p (b) Prove that ∑∞ n=1 [ n2 (1 − p)n−1 · p ] = 2−p p2 . Solution: By item (a), we have ∑∞ n=1 [ n (1 − p)n−1 · p ] = 1 p and therefore ∑∞ n=1 n (1 − p)n−1 = 1 p2 . Differentiating this series again by using term-by-term differentiation, we get − 2 p3 = [ ∞ ∑ n=1 n (1 − p)n−1 ]′ = ∞ ∑ n=1 [ n (1 − p)n−1]′ = ∞ ∑ n=1 [−n(n − 1)(1 − p)n−2] = − ∞ ∑ n=1 n(n − 1)(1 − p)n−2 = − ∞ ∑ n=2 n(n − 1)(1 − p)n−2 = − ∞ ∑ n=1 n(n + 1)(1 − p)n−1 = − ∞ ∑ n=1 n2(1 − p)n−1 − ∞ ∑ n=1 n(1 − p)n−1 = − ∞ ∑ n=1 n2(1 − p)n−1 − 1 p2 Thus ∞ ∑ n=1 [n2(1 − p)n−1p] = p ∞ ∑ n=1 n2(1 − p)n−1 = p · [ 2 p3 − 1 p2 ] = 2 p2 − 1 p = 2 − p p2 5",
+        "topicIds": [
+          "גבולות",
+          "טור-טיילור",
+          "טורי-חזקות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "פולינום-טיילור"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "hw-exercise-11-solution",
+          "filename": "Exercise 11 solution.pdf",
+          "text": "3. In this question, we will prove the formula for the variance of the Geometric random variable that will be revisited in the course of Introduction to Probability. Let 0 < p < 1. (a) Prove that ∑∞ n=1 [ n (1 − p)n−1 · p ] = 1 p . Solution: We know that the series ∑∞ n=1 (1 − p)n is a tail of a geometric series, and as 0 < p < 1, then 0 < 1−p < 1 which implies that the series is convergent, and ∞ ∑ n=1 (1 − p)n = ∞ ∑ n=0 (1 − p)n − 1 = 1 1 − (1 − p) − 1 = 1 p − 1 Thus, we can use term-by-term differentiation: − 1 p2 = [ 1 p − 1 ]′ = [ ∞ ∑ n=1 (1 − p)n ]′ T.B.T.D = ∞ ∑ n=1 [(1 − p)n]′ = ∞ ∑ n=1 −n (1 − p)n−1 = − ∞ ∑ n=1 n (1 − p)n−1 Thus ∞ ∑ n=1 [ n (1 − p)n−1 · p ] = p ∞ ∑ n=1 n (1 − p)n−1 = p · 1 p2 = 1 p (b) Prove that ∑∞ n=1 [ n2 (1 − p)n−1 · p ] = 2−p p2 . Solution: By item (a), we have ∑∞ n=1 [ n (1 − p)n−1 · p ] = 1 p and therefore ∑∞ n=1 n (1 − p)n−1 = 1 p2 . Differentiating this",
+          "startOffset": 2366,
+          "endOffset": 3693
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "hw-exercise-11-solution-question-4",
+        "sourceType": "homework",
+        "sourceFileId": "hw-exercise-11-solution",
+        "questionNumber": "4",
+        "content": "4. Consider the series ∑∞ n=0 (−1)n (2n+1)2 . (a) Prove that there exists a K ∈ R for which K = ∞ ∑ n=0 (−1)n (2n + 1)2 and that 8 9 ≤ K ≤ 1. Solution: We note that the sequence ( 1 (2n+1)2 )∞ n=0 is decreasing (1 over increasing and positive) and lim n→∞ 1 (2n+1)2 = 0, thus the series ∑∞ n=0 (−1)n (2n+1)2 is a Leibniz series, which implies that it converges. Thus, there exists a K ∈ R such that K = ∑∞ n=0 (−1)n (2n+1)2 , and we have 8 9 = 1 − 1 9 ≤ K ≤ 1. (b) Compute the limit lim x→0+ [arctan(x) · ln(x)]. Solution: lim x→0+ [arctan(x) · ln(x)] = lim x→0+ [ arctan(x) x · x ln(x) ] AOL = 1 · 0 = 0 Where lim x→0+ arctan(x) x 0 0 = L lim x→0+ ( 1 1+x2 ) 1 AOL = 1 and lim x→0+ [x · ln(x)] = lim x→0+ ln(x) ( 1 x ) ? ∞ = L lim x→0+ ( 1 x ) (− 1 x2 ) = lim x→0+ (−x) = 0 (c) Prove that K = − ∫ 1 0 ln x 1+x2 dx. Hint. Use HW10Q4a. Solution: By integration by parts where u′ = 1 1+x2 and v = ln x, and since lim x→0+ [arctan(x) · ln(x)] = 0, then − ∫ 1 0 ln x 1 + x2 dx = − [arctan(x) · ln(x)]1 0+ + ∫ 1 0 arctan x x dx = ∫ 1 0 arctan x x dx HW10Q4a = ∫ 1 0 ( ∞ ∑ n=0 (−1)n x2n 2n + 1 ) dx Using term-by-term integration, we get ∫ 1 0 ( ∞ ∑ n=0 (−1)n x2n 2n + 1 ) dx = ∞ ∑ n=0 (−1)n 2n + 1 ∫ 1 0 x2ndx = ∞ ∑ n=0 (−1)n 2n + 1 [ x2n+1 2n + 1 ]1 0 = ∞ ∑ n=0 (−1)n (2n + 1)2 = K Thus K = − ∫ 1 0 ln x 1+x2 dx. 7",
+        "topicIds": [
+          "גבולות",
+          "טור-טיילור",
+          "טורי-חזקות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "פולינום-טיילור"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "hw-exercise-11-solution",
+          "filename": "Exercise 11 solution.pdf",
+          "text": "4. Consider the series ∑∞ n=0 (−1)n (2n+1)2 . (a) Prove that there exists a K ∈ R for which K = ∞ ∑ n=0 (−1)n (2n + 1)2 and that 8 9 ≤ K ≤ 1. Solution: We note that the sequence ( 1 (2n+1)2 )∞ n=0 is decreasing (1 over increasing and positive) and lim n→∞ 1 (2n+1)2 = 0, thus the series ∑∞ n=0 (−1)n (2n+1)2 is a Leibniz series, which implies that it converges. Thus, there exists a K ∈ R such that K = ∑∞ n=0 (−1)n (2n+1)2 , and we have 8 9 = 1 − 1 9 ≤ K ≤ 1. (b) Compute the limit lim x→0+ [arctan(x) · ln(x)]. Solution: lim x→0+ [arctan(x) · ln(x)] = lim x→0+ [ arctan(x) x · x ln(x) ] AOL = 1 · 0 = 0 Where lim x→0+ arctan(x) x 0 0 = L lim x→0+ ( 1 1+x2 ) 1 AOL = 1 and lim x→0+ [x · ln(x)] = lim x→0+ ln(x) ( 1 x ) ? ∞ = L lim x→0+ ( 1 x ) (− 1 x2 ) = lim x→0+ (−x) = 0 (c) Prove that K = − ∫ 1 0 ln x 1+x2 dx. Hint. Use HW10Q4a. Solution: By integration by parts where u′ = 1 1+x2 and v = ln x,"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "hw-exercise-11-solution-question-5",
+        "sourceType": "homework",
+        "sourceFileId": "hw-exercise-11-solution",
+        "questionNumber": "5",
+        "content": "5. Consider the function defined by f (x) = √1 + x for every x > −1. (a) Compute the Taylor polynomial of f of order 2 about x0 = 0. Solution: We have f (x) = √1 + x ⇒ f (0) = 1; f ′(x) = 1 2√1+x = 1 2 (1 + x)− 1 2 ⇒ f ′(0) = 1 2 ; f ′′(x) = − 1 4 (1 + x)− 3 2 ⇒ f ′′(0) = − 1 4 . It follows that T2(x) = f (0) + f ′(0)x + f ′′(0) 2 x2 = 1 + x 2 − x2 8 (b) Prove that for every x ∈ R we have 1 + 1 2 x4 − 1 8 x8 ≤ √1 + x4 ≤ 1 + 1 2 x4 − 1 8 x8 + 1 16 x12 Solution: We show that for every x ≥ 0 we have 1 + 1 2 x − 1 8 x2 ≤ √1 + x ≤ 1 + 1 2 x − 1 8 x2 + 1 16 x3 and then, substituting x4 into the above inequality yields the required result. First, if x = 0 then we clearly have an equality. Else, x > 0 and by Taylor’s remainder theorem, there exists a point 0 < c < x for which R2(x) = f ′′′ (c) 3! x3. Note that f ′′′(x) = 3 8 (1 + x)− 5 2 , and as 0 < c < x we have R2(x) ≥ 0 and 0 ≤ √1 + x − T2(x) = R2(x) = 3 8 · 6(1 + c) 5 2 x3 ≤ 3 48 x3 = x3 16 Adding T2(x) to both sides yields the result. 8",
+        "topicIds": [
+          "גבולות",
+          "טור-טיילור",
+          "טורי-חזקות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "פולינום-טיילור"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "hw-exercise-11-solution",
+          "filename": "Exercise 11 solution.pdf",
+          "text": "5. Consider the function defined by f (x) = √1 + x for every x > −1. (a) Compute the Taylor polynomial of f of order 2 about x0 = 0. Solution: We have f (x) = √1 + x ⇒ f (0) = 1; f ′(x) = 1 2√1+x = 1 2 (1 + x)− 1 2 ⇒ f ′(0) = 1 2 ; f ′′(x) = − 1 4 (1 + x)− 3 2 ⇒ f ′′(0) = − 1 4 . It follows that T2(x) = f (0) + f ′(0)x + f ′′(0) 2 x2 = 1 + x 2 − x2 8 (b) Prove that for every x ∈ R we have 1 + 1 2 x4 − 1 8 x8 ≤ √1 + x4 ≤ 1 + 1 2 x4 − 1 8 x8 + 1 16 x12 Solution: We show that for every x ≥ 0 we have 1 + 1 2 x − 1 8 x2 ≤ √1 + x ≤ 1 + 1 2 x − 1 8 x2 + 1 16 x3 and then, substituting x4 into the above inequality yields the required result. First, if x = 0 then we clearly have an equality. Else, x > 0 and by Taylor’s remainder theorem, there exists a point 0 < c < x for which R2(x) = f ′′′ (c) 3! x3. Note that f ′′′(x) = 3 8 (1 + x)− 5 2 , and as 0 < c < x we have R2(x) ≥ 0 and 0 ≤ √1 + x − T2(x",
+          "startOffset": 5319,
+          "endOffset": 6318
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "hw-exercise-11-solution-question-6",
+        "sourceType": "homework",
+        "sourceFileId": "hw-exercise-11-solution",
+        "questionNumber": "6",
+        "content": "6. Prove or disprove each of the following statements: (a) We have 4 1 · 5 + 42 2 · 52 + 43 3 · 53 + 44 4 · 54 + · · · = ln(5) Solution: True. We know that ∑∞ n=1 (−1)n+1xn n = ln(1 + x) for every −1 < x ≤ 1. Using this formula for x = − 4 5 we obtain 4 1 · 5 + 42 2 · 52 + 43 3 · 53 + 44 4 · 54 +· · · = ∞ ∑ n=1 4n n · 5n = − ∞ ∑ n=1 (−1)n+1 (− 4 5 )n n = − ln ( 1 − 4 5 ) = − ln ( 1 5 ) = ln(5) (b) Consider the function defined by f (x) = x 1+x4 for every x ∈ R. Then f is 13-times differentiable at zero, and f (13)(0) = −13!. Solution: True. We note that for every |x| < 1 we have f (x) = x · 1 1 + x4 = x · 1 1 − (−x4) |x|<1 = x ∞ ∑ n=0 (−x4)n = x ∞ ∑ n=0 (−1)n x4n = ∞ ∑ n=0 (−1)n x4n+1 It follows f is infinitely differentiable at zero, and by uniqueness of power series, f (13) (0) = a13 · 13! = −13! (c) Consider the function defined by f (x) = ln (1 − x) for every x < 1, and let RN be the Taylor remainder about x0 = 0. Then there exists an N ∈ N for which ∣ ∣RN (− 1 2 )∣ ∣ < 10−7. Solution: True. We know that ln (1 + x) = ∑∞ n=1 (−1)n+1xn n for every −1 < x ≤ 1. Thus f (x) = ln(1 − x) = ∞ ∑ n=1 (−1)n+1 (−x)n n = − ∞ ∑ n=1 xn n ∀ − 1 ≤ x < 1 By the uniqueness theorem f (x) = Tf (x) for every −1 ≤ x < 1, thus lim N →∞RN (− 1 2 ) = 0, and therefore there exists an N ∈ N for which ∣ ∣RN (− 1 2 )∣ ∣ < 10−7. 9",
+        "topicIds": [
+          "גבולות",
+          "טור-טיילור",
+          "טורי-חזקות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "פולינום-טיילור"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "hw-exercise-11-solution",
+          "filename": "Exercise 11 solution.pdf",
+          "text": "6. Prove or disprove each of the following statements: (a) We have 4 1 · 5 + 42 2 · 52 + 43 3 · 53 + 44 4 · 54 + · · · = ln(5) Solution: True. We know that ∑∞ n=1 (−1)n+1xn n = ln(1 + x) for every −1 < x ≤ 1. Using this formula for x = − 4 5 we obtain 4 1 · 5 + 42 2 · 52 + 43 3 · 53 + 44 4 · 54 +· · · = ∞ ∑ n=1 4n n · 5n = − ∞ ∑ n=1 (−1)n+1 (− 4 5 )n n = − ln ( 1 − 4 5 ) = − ln ( 1 5 ) = ln(5) (b) Consider the function defined by f (x) = x 1+x4 for every x ∈ R. Then f is 13-times differentiable at zero, and f (13)(0) = −13!. Solution: True. We note that for every |x| < 1 we have f (x) = x · 1 1 + x4 = x · 1 1 − (−x4) |x|<1 = x ∞ ∑ n=0 (−x4)n = x ∞ ∑ n=0 (−1)n x4n = ∞ ∑ n=0 (−1)n x4n+1 It follows f is infinitely differentiable at zero, and by uniqueness of power series, f (13) (0) = a13 · 13! = −13! (c) Consider the function defined by f (x) = ln (1 − x) for every x < 1, and let RN be the",
+          "startOffset": 6335,
+          "endOffset": 7659
+        },
+        "confidence": 0.56
+      }
+    ],
+    "requiredTheorems": [
+      "(b) Compute the value of 5 √33 by using Taylor approximation to an error smaller than 3...",
+      "5",
+      "6",
+      "(g) Let f : [−1, 1] → R be a twice differentiable function"
+    ],
+    "requiredFormulas": [
+      "1. Let f (x) = esin x for every x ∈ R.",
+      "Compute the first three Taylor polynomials of f about x0 = 0, that is, T0(x), T1(x) and T2(x).",
+      "f (0) (x) = esin x",
+      "f (1) (x) = esin x · cos x",
+      "f (2) (x) = esin x cos x · cos x + esin x · (− sin x) = esin x (cos2 x − sin x)",
+      "T2 (x) =",
+      "n! xn = esin 0",
+      "0! x0 + esin 0 cos (0)",
+      "1! x1 + esin 0 (cos2 0 − sin 0)",
+      "2! x2 = 1 + x + x2",
+      "T1 (x) = 1 + x, T0(x) = 1",
+      "2. (a) Consider q = 1 − 1"
+    ],
+    "requiredTechniques": [
+      "טיילור",
+      "גבול"
+    ],
+    "examSimilarityHints": [],
+    "mustReviewBeforeExam": true,
+    "difficultyEstimate": "mixed",
+    "sourceSnippets": [
+      {
+        "sourceFileId": "hw-exercise-11-solution",
+        "filename": "Exercise 11 solution.pdf",
+        "text": "Calculus II – Spring 2025-26 Homework 11 Solution 1. Let f (x) = esin x for every x ∈ R. Compute the first three Taylor polynomials of f about x0 = 0, that is, T0(x), T1(x) and T2(x). Solution: We note that for every x ∈ R we have f (0) (x) = esin x f (1) (x) = esin x · cos x f (2) (x) = esin x cos x · cos x + esin x · (− sin x) = esin x (cos2 x − sin x) Thus for every x ∈ R we have T2 (x) = 2 ∑ n=0 f (n) (0) n! xn = esin 0 0! x0 + esin 0 cos (0) 1! x1 + esin 0 (cos2 0 − sin 0) 2! x2 = 1 + x + x2 2 and therefore T1 (x) = 1 + x, T0(x) = 1 1"
+      },
+      {
+        "sourceFileId": "hw-exercise-11-solution",
+        "filename": "Exercise 11 solution.pdf",
+        "text": "2. (a) Consider q = 1 − 1 2! + 1 4! − 1 6! = 389 720 . Prove that |cos (1) − q| ≤ 1 8! Solution: We know that given a Leibniz series, it holds that ∣ ∣ ∣ ∣ ∣ ∞ ∑ n=k (−1)n+1an ∣ ∣ ∣ ∣ ∣ ≤ ak We know that cos x = ∞ ∑ n=0 (−1)n x2n (2n)! , ∀x ∈ R thus cos 1 = ∞ ∑ n=0 (−1)n (2n)! = 1 − 1 2! + 1 4! − 1 6! + 1 8! − 1 10! + . . . This is clearly a Leibniz series, thus |cos(1) − q| = ∣ ∣ ∣ ∣ 1 8! − 1 10! + ... ∣ ∣ ∣ ∣ ≤ 1 8! 2"
+      },
+      {
+        "sourceFileId": "hw-exercise-11-solution",
+        "filename": "Exercise 11 solution.pdf",
+        "text": "(b) Compute the value of 5 √33 by using Taylor approximation to an error smaller than 3 1024000 . Solution: Consider the function defined by f (x) = x 1 5 for every x > 0 and choose x0 = 32. We now compute: f ′(x) = 1 5 x− 4 5 ⇒ f ′(32) = 1 80 f ′′(x) = − 4 25 · x− 9 5 ⇒ f ′′(32) = − 1 3200 f ′′′(x) = 36 125 x− 14 5 By the Taylor Remainder theorem, there exists a point 32 < c < 33 for which |R2(33)| = |f ′′′(c)| 3! · (33 − 32)3 = 36 125 · 6 c− 14 5 = 36 125 · 6 · c 14 5 c>32 < 36 125 · 6 · 16384 = 3 1024000 We note that T2(x) = f (32) + f ′(32)(x − 32) + f ′′(32) 2 (x − 32)2 Plugging the values of the derivatives into the formula, we get T2(33) = 2 + 1 80 − 1 2 · 3200 We conclude that ∣ ∣ ∣ ∣ 5 √33 − ( 2 + 1 80 − 1 2 · 3200 )∣ ∣ ∣ ∣ < 3 1024000 3"
+      },
+      {
+        "sourceFileId": "hw-exercise-11-solution",
+        "filename": "Exercise 11 solution.pdf",
+        "text": "(c) Let I = ∫ 1 0 e−x2 dx. Find a rational number q ∈ Q for which |I − q| ≤ 1 9 · 4! Solution: First we represent I as a series using the Taylor expansion of ex I = 1 ∫ 0 e−x2 dx = 1 ∫ 0 ( ∞ ∑ n=0 (−x2)n n! ) dx = ∞ ∑ n=0 1 ∫ 0 (−1)n · x2n n! dx = ∞ ∑ n=0 (−1)n n! · [ x2n+1 2n + 1 ]1 0 = ∞ ∑ n=0 (−1)n (2n + 1) n! Thus I = 1 − 1 3 · 1! + 1 5 · 2! − 1 7 · 3! + 1 9 · 4! − . . . This is clearly a Leibniz series, thus ∣ ∣ ∣ ∣ 1 9 · 4! − . . . ∣ ∣ ∣ ∣ ≤ 1 9 · 4! We write q = 1 − 1 3 · 1! + 1 5 · 2! − 1 7 · 3! we note that q ∈ Q by the closure of Q. Thus |I − q| ≤ 1 9 · 4! 4"
+      }
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
+    "homeworkNumber": 12,
+    "weekNumber": 12,
+    "sourceFileId": "hw-exercise-12-solution",
+    "filename": "Exercise 12 solution.pdf",
+    "topics": [
+      "גבולות",
+      "טורים",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "questions": [
+      {
+        "id": "hw-exercise-12-solution-question-1",
+        "sourceType": "homework",
+        "sourceFileId": "hw-exercise-12-solution",
+        "questionNumber": "2025",
+        "content": "Calculus II – Spring 2025-26 Homework 12 Solution 1. Consider the function f : R2 → R defined by f (x, y) =      |x|y |x|+y2 (x, y)̸ = (0, 0) 0 (x, y) = (0, 0) (a) Determine whether f is continuous at (0, 0). Solution: Note that for every (x, y)̸ = (0, 0) we have 0 ≤ |f (x, y)| = |x| |x| + y2 · |y| ≤ |y| and thus, by the squeeze rule, we have lim(x,y)→(0,0) |f (x, y)| = 0, implying that lim(x,y)→(0,0) f (x, y) = 0 = f (0, 0). (b) Compute fx(0, 0) and fy (0, 0) or prove that they don’t exist. Solution: Note that fx(0, 0) = lim x→0 f (x, 0) − f (0, 0) x − 0 = lim x→0 0 − 0 x − 0 = 0 and similarly fy (0, 0) = lim y→0 f (0, y) − f (0, 0) y − 0 = lim y→0 0 − 0 y − 0 = 0 (c) Compute D⃗u (f )(0, 0) for the direction vector⃗u = (1, 1). Solution: We note that ∥⃗u ∥ = √2. Define⃗v = ⃗ u ∥⃗u ∥ . Then D⃗u (f )(0, 0) = D⃗v (f )(0, 0) = lim h→0 f ( h √2 , h √2 ) − f (0, 0) h = lim h→0 h·|h| 2 h ( |h| √2 + h2 2 ) = lim h→0 1 2 1 √2 + |h| 2 = 1 √2 1",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "hw-exercise-12-solution",
+          "filename": "Exercise 12 solution.pdf",
+          "text": "Calculus II – Spring 2025-26 Homework 12 Solution 1. Consider the function f : R2 → R defined by f (x, y) =      |x|y |x|+y2 (x, y)̸ = (0, 0) 0 (x, y) = (0, 0) (a) Determine whether f is continuous at (0, 0). Solution: Note that for every (x, y)̸ = (0, 0) we have 0 ≤ |f (x, y)| = |x| |x| + y2 · |y| ≤ |y| and thus, by the squeeze rule, we have lim(x,y)→(0,0) |f (x, y)| = 0, implying that lim(x,y)→(0,0) f (x, y) = 0 = f (0, 0). (b) Compute fx(0, 0) and fy (0, 0) or prove that they don’t exist. Solution: Note that fx(0, 0) = lim x→0 f (x, 0) − f (0, 0) x − 0 = lim x→0 0 − 0 x − 0 = 0 and similarly fy (0, 0) = lim y→0 f (0, y) − f (0, 0) y − 0 = lim y→0 0 − 0 y − 0 = 0 (c) Compute D⃗u (f )(0, 0) for the direction vector⃗u = (1, 1). Solution: We note that ∥⃗u ∥ = √2. Define⃗v = ⃗ u ∥⃗u ∥ . Then D⃗u (f )(0, 0) = D⃗v (f )(0, 0) = lim h→0 f ( h √2 , h √2 ) − f (0, 0) h = lim h→0 h·|h| 2 h ("
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "hw-exercise-12-solution-question-2",
+        "sourceType": "homework",
+        "sourceFileId": "hw-exercise-12-solution",
+        "questionNumber": "2",
+        "content": "2. Let f : R2 → R be the function defined by f (x, y) =      xy(x2−y2) x2+y2 (x, y)̸ = (0, 0) 0 (x, y) = (0, 0) (a) Determine whether f is continuous. Solution: We compute lim (x,y)→(0,0) f (x, y) = lim (x,y)→(0,0) xy (x2 − y2) x2 + y2 = lim r→0+ r cos θr sin θ (r2 cos2 θ − r2 sin2 θ) r2 = lim r→0+ r2 cos θ sin θ (cos2 θ − sin2 θ) B×V = 0 = f (0, 0) where we have used the fact that cos θ sin θ (cos2 θ − sin2 θ) is bounded, since for every θ, ∣ ∣cos θ sin θ (cos2 θ − sin2 θ)∣ ∣ ≤ ∣ ∣cos2 θ − sin2 θ∣ ∣ ≤ ∣ ∣cos2 θ∣ ∣ + ∣ ∣sin2 θ∣ ∣ ≤ 2 Thus f is continuous at (0, 0). For every (x, y)̸ = (0, 0), f is continuous by AOC. Thus, f is a continuous function. (b) Compute fx and fy for every (x, y) ∈ R2. Solution: We first use the definition to compute fx(0, 0), fx(0, 0) = lim h→0 f (h, 0) − f (0, 0) h = lim h→0 0 − 0 h = 0 For every (x, y)̸ = (0, 0), we can use AOD: fx(x, y) = (3x2y − y3) (x2 + y2) − xy (x2 − y2) · 2x (x2 + y2)2 We now compute fy . fy (0, 0) = lim h→0 f (0, h) − f (0, 0) h = lim h→0 0 − 0 h = 0 For every (x, y)̸ = (0, 0), we can use AOD: fy (x, y) = (x3 − 3xy2) (x2 + y2) − xy (x2 − y2) · 2y (x2 + y2)2 2",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "hw-exercise-12-solution",
+          "filename": "Exercise 12 solution.pdf",
+          "text": "2. Let f : R2 → R be the function defined by f (x, y) =      xy(x2−y2) x2+y2 (x, y)̸ = (0, 0) 0 (x, y) = (0, 0) (a) Determine whether f is continuous. Solution: We compute lim (x,y)→(0,0) f (x, y) = lim (x,y)→(0,0) xy (x2 − y2) x2 + y2 = lim r→0+ r cos θr sin θ (r2 cos2 θ − r2 sin2 θ) r2 = lim r→0+ r2 cos θ sin θ (cos2 θ − sin2 θ) B×V = 0 = f (0, 0) where we have used the fact that cos θ sin θ (cos2 θ − sin2 θ) is bounded, since for every θ, ∣ ∣cos θ sin θ (cos2 θ − sin2 θ)∣ ∣ ≤ ∣ ∣cos2 θ − sin2 θ∣ ∣ ≤ ∣ ∣cos2 θ∣ ∣ + ∣ ∣sin2 θ∣ ∣ ≤ 2 Thus f is continuous at (0, 0). For every (x, y)̸ = (0, 0), f is continuous by AOC. Thus, f is a continuous function. (b) Compute fx and fy for every (x, y) ∈ R2. Solution: We first use the definition to compute fx(0, 0), fx(0, 0) = lim h→0 f (h, 0) − f (0, 0) h = lim h→0 0 − 0 h = 0 For every (x, y)̸ = (0, 0), we can use AOD: fx(x, y) = (3x2y − y3) (x2",
+          "startOffset": 970,
+          "endOffset": 2102
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "hw-exercise-12-solution-question-3",
+        "sourceType": "homework",
+        "sourceFileId": "hw-exercise-12-solution",
+        "questionNumber": "3",
+        "content": "3. Compute the following limit, or prove that it doesn’t exist in the extended sense: lim (x,y)→(0,0) x3y x6 + y2 Solution: The limit does not exist. Indeed, along the path y = 0 we get lim x→0 x3 · 0 x6 + 02 = lim x→0 0 x6 = lim x→00 = 0 On the other hand, along the path y = x3 we get lim x→0 x3 · x3 x6 + x6 = lim x→0 1 2 = 1 2 Since the two paths give different limits, the limit does not exist. 4",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "hw-exercise-12-solution",
+          "filename": "Exercise 12 solution.pdf",
+          "text": "3. Compute the following limit, or prove that it doesn’t exist in the extended sense: lim (x,y)→(0,0) x3y x6 + y2 Solution: The limit does not exist. Indeed, along the path y = 0 we get lim x→0 x3 · 0 x6 + 02 = lim x→0 0 x6 = lim x→00 = 0 On the other hand, along the path y = x3 we get lim x→0 x3 · x3 x6 + x6 = lim x→0 1 2 = 1 2 Since the two paths give different limits, the limit does not exist. 4",
+          "startOffset": 2704,
+          "endOffset": 3105
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "hw-exercise-12-solution-question-4",
+        "sourceType": "homework",
+        "sourceFileId": "hw-exercise-12-solution",
+        "questionNumber": "4",
+        "content": "4. Let f : R2 → R be the function given by f (x, y) =      xy x2+xy+y2 (x, y)̸ = (0, 0) 0 (x, y) = (0, 0) (a) Determine whether f is continuous at (0, 0). Solution: Note that lim (x,y)→(0,0), x=y f (x, y) = lim x→0 f (x, x) = lim x→0 x2 3x2 = 1 3̸ = f (0, 0) and therefore f is not continuous at (0, 0). (b) Compute the value of fx(0, 0) or prove that it doesn’t exist. Solution: We have fx(0, 0) = lim x→0 f (x, 0) − f (0, 0) x − 0 = lim x→0 0 − 0 x = 0 (c) Let a, b ∈ R such that a2 + b2 = 1 and let⃗u = (a, b). Suppose that D⃗u (f ) (0, 0) exists. Prove that a = 0 or b = 0. Solution: Assume towards a contradiction that a̸ = 0 and b̸ = 0. Set r = ab a2 + ab + b2 . Since a2 + ab + b2 = (a + b 2 )2 + 3b2 4 > 0 and ab̸ = 0, then r is well-defined and r̸ = 0. Hence D⃗u (f ) (0, 0) = lim h→0 f (ah, bh) − f (0, 0) h = lim h→0 1 h · ab a2 + ab + b2 = lim h→0 r h , which does not exist. This contradicts the assumption that D⃗u (f ) (0, 0) exists. 5",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "hw-exercise-12-solution",
+          "filename": "Exercise 12 solution.pdf",
+          "text": "4. Let f : R2 → R be the function given by f (x, y) =      xy x2+xy+y2 (x, y)̸ = (0, 0) 0 (x, y) = (0, 0) (a) Determine whether f is continuous at (0, 0). Solution: Note that lim (x,y)→(0,0), x=y f (x, y) = lim x→0 f (x, x) = lim x→0 x2 3x2 = 1 3̸ = f (0, 0) and therefore f is not continuous at (0, 0). (b) Compute the value of fx(0, 0) or prove that it doesn’t exist. Solution: We have fx(0, 0) = lim x→0 f (x, 0) − f (0, 0) x − 0 = lim x→0 0 − 0 x = 0 (c) Let a, b ∈ R such that a2 + b2 = 1 and let⃗u = (a, b). Suppose that D⃗u (f ) (0, 0) exists. Prove that a = 0 or b = 0. Solution: Assume towards a contradiction that a̸ = 0 and b̸ = 0. Set r = ab a2 + ab + b2 . Since a2 + ab + b2 = (a + b 2 )2 + 3b2 4 > 0 and ab̸ = 0, then r is well-defined and r̸ = 0. Hence D⃗u (f ) (0, 0) = lim h→0 f (ah, bh) − f (0, 0) h = lim h→0 1 h · ab a2 + ab + b2 = lim h→0 r h , which does not exist. This co",
+          "startOffset": 3121,
+          "endOffset": 4076
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "hw-exercise-12-solution-question-5",
+        "sourceType": "homework",
+        "sourceFileId": "hw-exercise-12-solution",
+        "questionNumber": "5",
+        "content": "5. Prove or disprove each of the following statements: (a) There exists a function f : R2 → R such that D(f )(x, y) = ( x2y + exy , x3 3 + xexy ) for every (x, y) ∈ R2. Solution: False. Assume towards a contradiction that such a function f exists. Then for every x, y ∈ R we have fx(x, y) = x2y + exy and fy (x, y) = x3 3 + xexy . We note that for every x, y ∈ R we have fxy (x, y) = ∂ ∂y (x2y + exy ) = x2 + xexy , fyx(x, y) = ∂ ∂x ( x3 3 + xexy ) = x2 + exy + xyexy . We note that fxy and fyx are continuous by AOC and therefore fxy (x, y) = fyx (x, y) for every x, y ∈ R. However fxy (0, 0) = 0, fyx(0, 0) = 1. Contradiction. 6",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "hw-exercise-12-solution",
+          "filename": "Exercise 12 solution.pdf",
+          "text": "5. Prove or disprove each of the following statements: (a) There exists a function f : R2 → R such that D(f )(x, y) = ( x2y + exy , x3 3 + xexy ) for every (x, y) ∈ R2. Solution: False. Assume towards a contradiction that such a function f exists. Then for every x, y ∈ R we have fx(x, y) = x2y + exy and fy (x, y) = x3 3 + xexy . We note that for every x, y ∈ R we have fxy (x, y) = ∂ ∂y (x2y + exy ) = x2 + xexy , fyx(x, y) = ∂ ∂x ( x3 3 + xexy ) = x2 + exy + xyexy . We note that fxy and fyx are continuous by AOC and therefore fxy (x, y) = fyx (x, y) for every x, y ∈ R. However fxy (0, 0) = 0, fyx(0, 0) = 1. Contradiction. 6",
+          "startOffset": 4092,
+          "endOffset": 4722
+        },
+        "confidence": 0.56
+      }
+    ],
+    "requiredTheorems": [
+      "(c) Compute fxy (0, 0) and fyx(0, 0)"
+    ],
+    "requiredFormulas": [
+      "f (x, y) =",
+      "|x|+y2 (x, y)̸ = (0, 0)",
+      "0 (x, y) = (0, 0)",
+      "Note that for every (x, y)̸ = (0, 0) we have",
+      "0 ≤ |f (x, y)| = |x|",
+      "|x| + y2 · |y| ≤ |y|",
+      "and thus, by the squeeze rule, we have lim(x,y)→(0,0) |f (x, y)| = 0, implying that lim(x,y)→(0,0) f (x, y) = 0 = f (0, 0).",
+      "fx(0, 0) = lim",
+      "x − 0 = lim",
+      "x − 0 = 0",
+      "fy (0, 0) = lim",
+      "y − 0 = lim"
+    ],
+    "requiredTechniques": [
+      "גבול"
+    ],
+    "examSimilarityHints": [],
+    "mustReviewBeforeExam": true,
+    "difficultyEstimate": "mixed",
+    "sourceSnippets": [
+      {
+        "sourceFileId": "hw-exercise-12-solution",
+        "filename": "Exercise 12 solution.pdf",
+        "text": "Calculus II – Spring 2025-26 Homework 12 Solution 1. Consider the function f : R2 → R defined by f (x, y) =      |x|y |x|+y2 (x, y)̸ = (0, 0) 0 (x, y) = (0, 0) (a) Determine whether f is continuous at (0, 0). Solution: Note that for every (x, y)̸ = (0, 0) we have 0 ≤ |f (x, y)| = |x| |x| + y2 · |y| ≤ |y| and thus, by the squeeze rule, we have lim(x,y)→(0,0) |f (x, y)| = 0, implying that lim(x,y)→(0,0) f (x, y) = 0 = f (0, 0). (b) Compute fx(0, 0) and fy (0, 0) or prove that they don’t exist. Solution: Note that fx(0, 0) = lim x→0 f (x, 0) − f (0, 0) x − 0 = lim x→0 0 − 0 x − 0 = 0 and similarly fy (0, 0) = lim y→0 f (0, y) − f (0, 0) y − 0 = lim y→0 0 − 0 y − 0 = 0 (c) Compute D⃗u (f )(0, 0) for the direction vector⃗u = (1, 1). Solution: We note that ∥⃗u ∥ = √2. Define⃗v = ⃗ u ∥⃗u ∥ . Then D⃗u (f )(0, 0) = D⃗v (f )(0, 0) = lim h→0 f ( h √2 , h √2 ) − f (0, 0) h = lim h→0 h·|h| 2 h ("
+      },
+      {
+        "sourceFileId": "hw-exercise-12-solution",
+        "filename": "Exercise 12 solution.pdf",
+        "text": "2. Let f : R2 → R be the function defined by f (x, y) =      xy(x2−y2) x2+y2 (x, y)̸ = (0, 0) 0 (x, y) = (0, 0) (a) Determine whether f is continuous. Solution: We compute lim (x,y)→(0,0) f (x, y) = lim (x,y)→(0,0) xy (x2 − y2) x2 + y2 = lim r→0+ r cos θr sin θ (r2 cos2 θ − r2 sin2 θ) r2 = lim r→0+ r2 cos θ sin θ (cos2 θ − sin2 θ) B×V = 0 = f (0, 0) where we have used the fact that cos θ sin θ (cos2 θ − sin2 θ) is bounded, since for every θ, ∣ ∣cos θ sin θ (cos2 θ − sin2 θ)∣ ∣ ≤ ∣ ∣cos2 θ − sin2 θ∣ ∣ ≤ ∣ ∣cos2 θ∣ ∣ + ∣ ∣sin2 θ∣ ∣ ≤ 2 Thus f is continuous at (0, 0). For every (x, y)̸ = (0, 0), f is continuous by AOC. Thus, f is a continuous function. (b) Compute fx and fy for every (x, y) ∈ R2. Solution: We first use the definition to compute fx(0, 0), fx(0, 0) = lim h→0 f (h, 0) − f (0, 0) h = lim h→0 0 − 0 h = 0 For every (x, y)̸ = (0, 0), we can use AOD: fx(x, y) = (3x2y − y3) (x2",
+        "startOffset": 970,
+        "endOffset": 2102
+      },
+      {
+        "sourceFileId": "hw-exercise-12-solution",
+        "filename": "Exercise 12 solution.pdf",
+        "text": "(c) Compute fxy (0, 0) and fyx(0, 0). Solution: We use the definition at the origin: fxy (0, 0) = lim h→0 fx(0, h) − fx(0, 0) h = lim h→0 − h5 h4 − 0 h = lim h→0 −h5 h5 = −1 and fyx(0, 0) = lim h→0 fy (h, 0) − fy (0, 0) h = lim h→0 h5 h4 − 0 h = lim h→0 h5 h5 = 1 (d) Prove or disprove the following statement: Both mixed derivatives fxy and fyx are continuous at (0, 0). Solution: False. Assume towards a contradiction that both mixed derivatives fxy and fyx are continuous at (0, 0). Then by a theorem learned in class, −1 = fxy (0, 0) = fyx(0, 0) = 1 Contradiction. 3",
+        "startOffset": 2118,
+        "endOffset": 2688
+      },
+      {
+        "sourceFileId": "hw-exercise-12-solution",
+        "filename": "Exercise 12 solution.pdf",
+        "text": "3. Compute the following limit, or prove that it doesn’t exist in the extended sense: lim (x,y)→(0,0) x3y x6 + y2 Solution: The limit does not exist. Indeed, along the path y = 0 we get lim x→0 x3 · 0 x6 + 02 = lim x→0 0 x6 = lim x→00 = 0 On the other hand, along the path y = x3 we get lim x→0 x3 · x3 x6 + x6 = lim x→0 1 2 = 1 2 Since the two paths give different limits, the limit does not exist. 4",
+        "startOffset": 2704,
+        "endOffset": 3105
+      }
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
     "homeworkNumber": 2,
     "weekNumber": 2,
     "sourceFileId": "hw-exercise-2-solution",
@@ -1321,5 +1909,441 @@
       }
     ],
     "confidence": 0.82
+  },
+  {
+    "homeworkNumber": 8,
+    "weekNumber": 8,
+    "sourceFileId": "hw-exercise-8-solution",
+    "filename": "Exercise 8 solution.pdf",
+    "topics": [
+      "גבולות",
+      "טורים",
+      "מבחן ההשוואה",
+      "מבחן השורש",
+      "סדרות"
+    ],
+    "questions": [
+      {
+        "id": "hw-exercise-8-solution-question-1",
+        "sourceType": "homework",
+        "sourceFileId": "hw-exercise-8-solution",
+        "questionNumber": "2025",
+        "content": "Calculus II – Spring 2025-26 Homework 8 Solution 1. Determine whether each of the following series converges absolutely, converges conditionally or diverges: (a) ∞ ’ 𝑛=1 𝑛 · sin (𝑛2) 2𝑛 + 𝑛 Solution: It holds that ∞ ’ 𝑛=1 |𝑎𝑛 | = ∞ ’ 𝑛=1 𝑛 · sin (𝑛2) 2𝑛 + 𝑛 ≤ ∞ ’ 𝑛=1 𝑛 2𝑛 + 𝑛 ≤ ∞ ’ 𝑛=1 𝑛 2𝑛 Applying the root test, we get 𝐿 = lim 𝑛→∞ 𝑛 √ 𝑛 2𝑛 = lim 𝑛→∞ 𝑛 √𝑛 2 = 1 2 < 1 We conclude that Õ∞ 𝑛=1 𝑛 2𝑛 < ∞ by the root test, and therefore Õ∞ 𝑛=1 |𝑎𝑛 | < ∞ by the comparison test. Thus, the series Õ∞ 𝑛=1 𝑎𝑛 converges absolutely. converges absolutely converges conditionally diverges yes no no 1",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "hw-exercise-8-solution",
+          "filename": "Exercise 8 solution.pdf",
+          "text": "Calculus II – Spring 2025-26 Homework 8 Solution 1. Determine whether each of the following series converges absolutely, converges conditionally or diverges: (a) ∞ ’ 𝑛=1 𝑛 · sin (𝑛2) 2𝑛 + 𝑛 Solution: It holds that ∞ ’ 𝑛=1 |𝑎𝑛 | = ∞ ’ 𝑛=1 𝑛 · sin (𝑛2) 2𝑛 + 𝑛 ≤ ∞ ’ 𝑛=1 𝑛 2𝑛 + 𝑛 ≤ ∞ ’ 𝑛=1 𝑛 2𝑛 Applying the root test, we get 𝐿 = lim 𝑛→∞ 𝑛 √ 𝑛 2𝑛 = lim 𝑛→∞ 𝑛 √𝑛 2 = 1 2 < 1 We conclude that Õ∞ 𝑛=1 𝑛 2𝑛 < ∞ by the root test, and therefore Õ∞ 𝑛=1 |𝑎𝑛 | < ∞ by the comparison test. Thus, the series Õ∞ 𝑛=1 𝑎𝑛 converges absolutely. converges absolutely converges conditionally diverges yes no no 1"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "hw-exercise-8-solution-question-2",
+        "sourceType": "homework",
+        "sourceFileId": "hw-exercise-8-solution",
+        "questionNumber": "2",
+        "content": "2. Let (𝑎𝑛)∞ 𝑛=1 , (𝑏𝑛)∞ 𝑛=1 be two sequences of real numbers. (a) Prove that if the series Õ∞ 𝑛=1 𝑎𝑛 and Õ∞ 𝑛=1 𝑏𝑛 converge absolutely, then the series Õ∞ 𝑛=1 (𝑎𝑛 − 𝑏𝑛) converges absolutely. Solution: It holds that ∞ ’ 𝑛=1 |𝑎𝑛 − 𝑏𝑛 | Δ ≤ ∞ ’ 𝑛=1 (|𝑎𝑛 | + |−𝑏𝑛 |) AOS = ∞ ’ 𝑛=1 |𝑎𝑛 | + ∞ ’ 𝑛=1 |𝑏𝑛 | < ∞ Thus, by the comparison test, Õ∞ 𝑛=1 |𝑎𝑛 − 𝑏𝑛 | < ∞ and therefore the series Õ∞ 𝑛=1 (𝑎𝑛 − 𝑏𝑛) converges absolutely. (b) Give an example where the series Õ∞ 𝑛=1 𝑎𝑛 and Õ∞ 𝑛=1 𝑏𝑛 converge conditionally, and the series Õ∞ 𝑛=1 (𝑎𝑛 − 𝑏𝑛) converges conditionally. Solution: We choose 𝑎𝑛 = (−1)𝑛+1 𝑛 and 𝑏𝑛 = (−1)𝑛 𝑛 for every 𝑛 ∈ N. We saw that the series Õ∞ 𝑛=1 𝑎𝑛 and Õ∞ 𝑛=1 𝑏𝑛 converge conditionally. Note that ∞ ’ 𝑛=1 (𝑎𝑛 − 𝑏𝑛) = ∞ ’ 𝑛=1 (−1)𝑛+1 − (−1)𝑛 𝑛 = ∞ ’ 𝑛=1 (−1)𝑛+1 + (−1)𝑛+1 𝑛 = 2 ∞ ’ 𝑛=1 (−1)𝑛+1 𝑛 thus the series Õ∞ 𝑛=1 (𝑎𝑛 − 𝑏𝑛) converges conditionally. (c) Prove that if the series Õ∞ 𝑛=1 𝑎𝑛 converges conditionally and the series Õ∞ 𝑛=1 𝑏𝑛 converges absolutely, then the series Õ∞ 𝑛=1 (𝑎𝑛 + 𝑏𝑛) converges conditionally. Solution: ATC that the series Õ∞ 𝑛=1 (𝑎𝑛 + 𝑏𝑛) does not converge conditionally. First, as it is a sum of convergent series, then it converges by AOS. As it doesn’t converge conditionally, it must therefore converge absolutely. By item (a), the series Õ∞ 𝑛=1 𝑎𝑛 = Õ∞ 𝑛=1 (𝑎𝑛 + 𝑏𝑛 − 𝑏𝑛) converges absolutely. Contradiction. 3",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "hw-exercise-8-solution",
+          "filename": "Exercise 8 solution.pdf",
+          "text": "2. Let (𝑎𝑛)∞ 𝑛=1 , (𝑏𝑛)∞ 𝑛=1 be two sequences of real numbers. (a) Prove that if the series Õ∞ 𝑛=1 𝑎𝑛 and Õ∞ 𝑛=1 𝑏𝑛 converge absolutely, then the series Õ∞ 𝑛=1 (𝑎𝑛 − 𝑏𝑛) converges absolutely. Solution: It holds that ∞ ’ 𝑛=1 |𝑎𝑛 − 𝑏𝑛 | Δ ≤ ∞ ’ 𝑛=1 (|𝑎𝑛 | + |−𝑏𝑛 |) AOS = ∞ ’ 𝑛=1 |𝑎𝑛 | + ∞ ’ 𝑛=1 |𝑏𝑛 | < ∞ Thus, by the comparison test, Õ∞ 𝑛=1 |𝑎𝑛 − 𝑏𝑛 | < ∞ and therefore the series Õ∞ 𝑛=1 (𝑎𝑛 − 𝑏𝑛) converges absolutely. (b) Give an example where the series Õ∞ 𝑛=1 𝑎𝑛 and Õ∞ 𝑛=1 𝑏𝑛 converge conditionally, and the series Õ∞ 𝑛=1 (𝑎𝑛 − 𝑏𝑛) converges conditionally. Solution: We choose 𝑎𝑛 = (−1)𝑛+1 𝑛 and 𝑏𝑛 = (−1)𝑛 𝑛 for every 𝑛 ∈ N. We saw that the series Õ∞ 𝑛=1 𝑎𝑛 and Õ∞ 𝑛=1 𝑏𝑛 converge conditionally. Note that ∞ ’ 𝑛=1 (𝑎𝑛 − 𝑏𝑛) = ∞ ’ 𝑛=1 (−1)𝑛+1 − (−1)𝑛 𝑛 = ∞ ’ 𝑛=1 (−1)𝑛+1 + (−1)𝑛+1 𝑛 = 2 ∞ ’ 𝑛=1 (−1)𝑛+1 𝑛 thus "
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "hw-exercise-8-solution-question-3",
+        "sourceType": "homework",
+        "sourceFileId": "hw-exercise-8-solution",
+        "questionNumber": "3",
+        "content": "3. (a) Student A proved that the alternating Harmonic series is convergent in the following way: ∞ ’ 𝑛=1 (−1)𝑛+1 𝑛 = ∞ ’ 𝑛=1 ( 1 2𝑛 − 1 − 1 2𝑛 ) = ∞ ’ 𝑛=1 1 2𝑛(2𝑛 − 1) ≤ ∞ ’ 𝑛=1 1 𝑛2 < ∞ Explain student A’s mistake. Solution: The equality ∞ ’ 𝑛=1 (−1)𝑛+1 𝑛 = ∞ ’ 𝑛=1 ( 1 2𝑛 − 1 − 1 2𝑛 ) already assumes that the alternating Harmonic series is convergent, as is required by the parentheses test. It follows that his proof is circular. (b) Student A proved that the alternating Harmonic series converges to zero in the following way: As the series is a Leibniz series, it is convergent. Thus, there exists an 𝑠 ∈ R such that 𝑠 = 1 − 1 2 + 1 3 − 1 4 + 1 5 − 1 6 + . . . Thus, 𝑠 = 1 − 1 2 + 1 3 − 1 4 + 1 5 − 1 6 + · · · = 1 − 1 2 − 1 4 + 1 3 − 1 6 − 1 8 + 1 5 − 1 10 − 1 12 + . . . = ( 1 − 1 2 ) − 1 4 + ( 1 3 − 1 6 ) − 1 8 + ( 1 5 − 1 10 ) − 1 12 + . . . = 1 2 − 1 4 + 1 6 − 1 8 + 1 10 − 1 12 + 1 14 − 1 16 + . . . = 1 2 ( 1 − 1 2 + 1 3 − 1 4 + 1 5 − 1 6 + 1 7 − 1 8 + . . . ) = 1 2 𝑠 Thus, 𝑠 = 1 2 𝑠 and therefore 𝑠 = 0. Explain student A’s mistake. Solution: Student A make a mistake when changing the order of the summation of the series. 5",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "hw-exercise-8-solution",
+          "filename": "Exercise 8 solution.pdf",
+          "text": "3. (a) Student A proved that the alternating Harmonic series is convergent in the following way: ∞ ’ 𝑛=1 (−1)𝑛+1 𝑛 = ∞ ’ 𝑛=1 ( 1 2𝑛 − 1 − 1 2𝑛 ) = ∞ ’ 𝑛=1 1 2𝑛(2𝑛 − 1) ≤ ∞ ’ 𝑛=1 1 𝑛2 < ∞ Explain student A’s mistake. Solution: The equality ∞ ’ 𝑛=1 (−1)𝑛+1 𝑛 = ∞ ’ 𝑛=1 ( 1 2𝑛 − 1 − 1 2𝑛 ) already assumes that the alternating Harmonic series is convergent, as is required by the parentheses test. It follows that his proof is circular. (b) Student A proved that the alternating Harmonic series converges to zero in the following way: As the series is a Leibniz series, it is convergent. Thus, there exists an 𝑠 ∈ R such that 𝑠 = 1 − 1 2 + 1 3 − 1 4 + 1 5 − 1 6 + . . . Thus, 𝑠 = 1 − 1 2 + 1 3 − 1 4 + 1 5 − 1 6 + · · · = 1 − 1 2 − 1 4 + 1 3 − 1 6 − 1 8 + 1 5 − 1 10 − 1 12 + . . . = ( 1 − 1 2 ) − 1 4 + ( 1 3 − 1 6 ) − 1 8 + ( 1 5 − 1 10 ) − 1 12 + . . . = 1 2 − 1 4 + 1 6 − 1 8 + 1",
+          "startOffset": 4618,
+          "endOffset": 5783
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "hw-exercise-8-solution-question-4",
+        "sourceType": "homework",
+        "sourceFileId": "hw-exercise-8-solution",
+        "questionNumber": "4",
+        "content": "4. Prove or disprove each of the following statements: (a) The series Õ∞ 𝑛=1 (−1)𝑛+1 ln 𝑛 √𝑛+1 converges absolutely. Solution: False. Note that ∞ ’ 𝑛=1 (−1)𝑛+1 ln 𝑛 √𝑛 + 1 = ∞ ’ 𝑛=1 ln 𝑛 √𝑛 + 1 ≥ ∞ ’ 𝑛=3 ln 𝑛 √𝑛 + 1 ≥ ∞ ’ 𝑛=3 1 √𝑛 + 1 ≥ ∞ ’ 𝑛=3 1 2√𝑛 = 1 2 ∞ ’ 𝑛=3 1 √𝑛 tail of 1 2 -harmonic = ∞ Thus the series Õ∞ 𝑛=1 (−1)𝑛+1 ln 𝑛 √𝑛+1 does not converge absolutely. (b) The series 1 − 1 2 + 2 3 − 1 3 + 2 4 − 1 4 + 2 5 − 1 5 + . . . is divergent. Solution: True. ATC that the series is convergent. Then there exists an 𝑠 ∈ R such that 𝑠 = 1 − 1 2 + 2 3 − 1 3 + 2 4 − 1 4 + 2 5 − 1 5 + . . . and thus, by the parentheses test, 𝑠 = ( 1 − 1 2 ) + ( 2 3 − 1 3 ) + ( 2 4 − 1 4 ) + ( 2 5 − 1 5 ) + · · · = 1 2 + 1 3 + 1 4 + 1 5 + · · · = ∞ ’ 𝑛=2 1 𝑛 tail of Harmonic = ∞ Contradiction. (c) Let (𝑎𝑛)∞ 𝑛=1 , (𝑏𝑛)∞ 𝑛=1 be two sequences of real numbers. Suppose that 0 ≤ 𝑎𝑛 ≤ 𝑏𝑛 for every 𝑛 ∈ N, lim 𝑛→∞𝑏𝑛 = 0 and (𝑏𝑛)∞ 𝑛=1 is decreasing. Then the series Õ∞ 𝑛=1 (−1)𝑛+1𝑎𝑛 is convergent. Solution: False. We choose 𝑏𝑛 = 1 𝑛 and 𝑎𝑛 =    0 𝑛 = 2𝑘 1 𝑛 𝑛 = 2𝑘 − 1 for every 𝑛 ∈ N. Clearly 0 ≤ 𝑎𝑛 ≤ 𝑏𝑛 for every 𝑛 ∈ N, lim 𝑛→∞𝑏𝑛 = 0 and (𝑏𝑛)∞ 𝑛=1 is decreasing. But ∞ ’ 𝑛=1 (−1)𝑛+1𝑎𝑛 = ∞ ’ 𝑘=1 (−1)2𝑘 2𝑘 − 1 = ∞ ’ 𝑘=1 1 2𝑘 − 1 ≥ ∞ ’ 𝑘=1 1 2𝑘 = 1 2 ∞ ’ 𝑘=1 1 𝑘 = ∞ and therefore Õ∞ 𝑘=1 1 2𝑘−1 = ∞ and therefore Õ∞ 𝑛=1 (−1)𝑛+1𝑎𝑛 is divergent. 6",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "hw-exercise-8-solution",
+          "filename": "Exercise 8 solution.pdf",
+          "text": "4. Prove or disprove each of the following statements: (a) The series Õ∞ 𝑛=1 (−1)𝑛+1 ln 𝑛 √𝑛+1 converges absolutely. Solution: False. Note that ∞ ’ 𝑛=1 (−1)𝑛+1 ln 𝑛 √𝑛 + 1 = ∞ ’ 𝑛=1 ln 𝑛 √𝑛 + 1 ≥ ∞ ’ 𝑛=3 ln 𝑛 √𝑛 + 1 ≥ ∞ ’ 𝑛=3 1 √𝑛 + 1 ≥ ∞ ’ 𝑛=3 1 2√𝑛 = 1 2 ∞ ’ 𝑛=3 1 √𝑛 tail of 1 2 -harmonic = ∞ Thus the series Õ∞ 𝑛=1 (−1)𝑛+1 ln 𝑛 √𝑛+1 does not converge absolutely. (b) The series 1 − 1 2 + 2 3 − 1 3 + 2 4 − 1 4 + 2 5 − 1 5 + . . . is divergent. Solution: True. ATC that the series is convergent. Then there exists an 𝑠 ∈ R such that 𝑠 = 1 − 1 2 + 2 3 − 1 3 + 2 4 − 1 4 + 2 5 − 1 5 + . . . and thus, by the parentheses test, 𝑠 = ( 1 − 1 2 ) + ( 2 3 − 1 3 ) + ( 2 4 − 1 4 ) + ( 2 5 − 1 5 ) + · · · = 1 2 + 1 3 + 1 4 + 1 5 + · · · = ∞ ’ 𝑛=2 1 𝑛 tail of Harmonic = ∞ Contradiction. (c) Let (𝑎𝑛)∞ 𝑛=1 , (𝑏𝑛)∞ 𝑛=1 be two sequences of real numbers. Suppose that 0 ≤ 𝑎\ud835",
+          "startOffset": 5799,
+          "endOffset": 7226
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "hw-exercise-8-solution-question-5",
+        "sourceType": "homework",
+        "sourceFileId": "hw-exercise-8-solution",
+        "questionNumber": "5",
+        "content": "5. Find all values of 𝛼 ∈ R for which the series Õ∞ 𝑛=1 (𝑛3 sin ( 1 𝑛 ) − 𝑛2 + 𝛼) is convergent. Solution: On the one hand, if the series converges, then by the necessary criterion we have lim 𝑛→∞ ( 𝑛3 sin ( 1 𝑛 ) − 𝑛2 + 𝛼 ) = 0. On the other hand lim 𝑛→∞ ( 𝑛3 sin ( 1 𝑛 ) − 𝑛2 + 𝛼 ) Heine’s lemma = lim 𝑥→∞ ( 𝑥3 sin ( 1 𝑥 ) − 𝑥2 + 𝛼 ) 𝑡= 1 𝑥 = lim 𝑡→0+ ( sin 𝑡 𝑡3 − 1 𝑡2 + 𝛼 ) = lim 𝑡→0+ sin 𝑡 − 𝑡 + 𝛼𝑡3 𝑡3 0 0 = 𝐿 lim 𝑡→0+ cos 𝑡 − 1 + 3𝛼𝑡2 3𝑡2 0 0 = 𝐿 lim 𝑡→0+ − sin 𝑡 + 6𝛼𝑡 6𝑡 0 0 = 𝐿 lim 𝑡→0+ − cos 𝑡 + 6𝛼 6 = −1 + 6𝛼 6 = 𝛼 − 1 6 Thus 𝛼 − 1 6 = 0 ⇒ 𝛼 = 1 6 Thus if the series Õ∞ 𝑛=1 (𝑛3 sin ( 1 𝑛 ) − 𝑛2 + 𝛼) converges, then 𝛼 = 1 6 . Now we prove that if 𝛼 = 1 6 , then the series Õ∞ 𝑛=1 (𝑛3 sin ( 1 𝑛 ) − 𝑛2 + 1 6 ) converges. We prove that the series Õ∞ 𝑛=1 (𝑛3 sin ( 1 𝑛 ) − 𝑛2 + 1 6 ) converges absolutely. We compute lim 𝑛→∞ 𝑛3 sin ( 1 𝑛 ) − 𝑛2 + 1 6 ( 1 𝑛2 ) = lim 𝑛→∞ 𝑛5 sin ( 1 𝑛 ) − 𝑛4 + 𝑛2 6 Heine’s lemma = lim 𝑥→∞ 𝑥5 sin ( 1 𝑥 ) − 𝑥4 + 𝑥2 6 𝑡= 1 𝑥 = lim 𝑡→0+ sin 𝑡 𝑡5 − 1 𝑡4 + 1 6𝑡2 We compute the limit without the absolute value lim 𝑡→0+ ( sin 𝑡 𝑡5 − 1 𝑡4 + 1 6𝑡2 ) = lim 𝑡→0+ sin 𝑡 − 𝑡 + 1 6 𝑡3 𝑡5 0 0 = 𝐿 lim 𝑡→0+ cos 𝑡 − 1 + 1 2 𝑡2 5𝑡4 0 0 = 𝐿 lim 𝑡→0+ − sin 𝑡 + 𝑡 20𝑡3 0 0 = 𝐿 lim 𝑡→0+ − cos 𝑡 + 1 60𝑡2 0 0 = 𝐿 lim 𝑡→0+ sin 𝑡 120𝑡 = 1 120 > 0 Thus lim 𝑡→0+ sin 𝑡 𝑡5 − 1 𝑡4 + 1 6𝑡2 = 1 120 = 1 120 > 0. and therefore the series Õ∞ 𝑛=1 (𝑛3 sin ( 1 𝑛 ) − 𝑛2 + 1 6 ) converges absolutely together with the 2-Harmonic series and therefore converges. We conclude that the series Õ∞ 𝑛=1 (𝑛3 sin ( 1 𝑛 ) − 𝑛2 + 𝛼) converges if and only if 𝛼 = 1 6 . 8",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "hw-exercise-8-solution",
+          "filename": "Exercise 8 solution.pdf",
+          "text": "5. Find all values of 𝛼 ∈ R for which the series Õ∞ 𝑛=1 (𝑛3 sin ( 1 𝑛 ) − 𝑛2 + 𝛼) is convergent. Solution: On the one hand, if the series converges, then by the necessary criterion we have lim 𝑛→∞ ( 𝑛3 sin ( 1 𝑛 ) − 𝑛2 + 𝛼 ) = 0. On the other hand lim 𝑛→∞ ( 𝑛3 sin ( 1 𝑛 ) − 𝑛2 + 𝛼 ) Heine’s lemma = lim 𝑥→∞ ( 𝑥3 sin ( 1 𝑥 ) − 𝑥2 + 𝛼 ) 𝑡= 1 𝑥 = lim 𝑡→0+ ( sin 𝑡 𝑡3 − 1 𝑡2 + 𝛼 ) = lim 𝑡→0+ sin 𝑡 − 𝑡 + 𝛼𝑡3 𝑡3 0 0 = 𝐿 lim 𝑡→0+ cos 𝑡 − 1 + 3𝛼𝑡2 3𝑡2 0 0 = 𝐿 lim 𝑡→0+ − sin 𝑡 + 6𝛼𝑡 6𝑡 0 0 = 𝐿 lim 𝑡→0+ − cos 𝑡 + 6𝛼 6 = −1 + 6𝛼 6 = 𝛼 − 1 6 Thus 𝛼 − 1 6 = 0 ⇒ 𝛼 = 1 6 Thus if the series Õ∞ 𝑛=1 (𝑛3 sin ( 1 𝑛 ) − 𝑛2 + 𝛼) converges, then 𝛼 = 1 6 . Now we prove that if 𝛼 = 1 6 , then the series Õ∞ 𝑛=1 (𝑛3 sin ( 1 𝑛 ) − 𝑛2 + 1 6 ) converges. We prove that the series Õ∞ 𝑛=1 (𝑛3 sin ( 1 𝑛 ) − 𝑛2 + 1 6 ) converges absolutely. We compute lim ",
+          "startOffset": 8561,
+          "endOffset": 10260
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "hw-exercise-8-solution-question-6",
+        "sourceType": "homework",
+        "sourceFileId": "hw-exercise-8-solution",
+        "questionNumber": "6",
+        "content": "6. Let (𝑎𝑛)∞ 𝑛=1 a sequence of real numbers. Suppose that there exists an 𝐿 ∈ R such that lim 𝑛→∞ 𝑎𝑛 = 𝐿. Consider the sequence (𝑏𝑛)∞ 𝑛=1 that is defined by 𝑏𝑛 = (−1)𝑛𝑎𝑛 for every 𝑛 ∈ N. (a) Prove that there exists an 𝑁1 ∈ N such that ∀𝑛 ≥ 𝑁1 we have 𝑏𝑛 ≤ 1 + |𝐿|. Solution: As lim 𝑛→∞ 𝑎𝑛 = 𝐿, then there exists an 𝑁1 ∈ N such that for every 𝑛 ≥ 𝑁1 we have |𝑎𝑛 − 𝐿| < 1 (*) Choose 𝑁 = 𝑁1 and let 𝑛 ≥ 𝑁. Then (∗) hold for that 𝑛 and therefore 𝑏𝑛 ≤ |𝑏𝑛 | = |(−1)𝑛𝑎𝑛 | = |𝑎𝑛 | Δ ≤ |𝑎𝑛 − 𝐿| + |𝐿| < 1 + |𝐿| (b) Prove that if (𝑏𝑛)∞ 𝑛=1 is convergent, then lim 𝑛→∞ 𝑏𝑛 = 0. Solution: As (𝑏𝑛)∞ 𝑛=1 is convergent, then there exists an 𝐿1 ∈ R such that lim 𝑛→∞ 𝑏𝑛 = 𝐿1. We need to show 𝐿1 = 0. As lim 𝑛→∞ 𝑏𝑛 = 𝐿1, then by the inheritence theorem we also have lim 𝑛→∞ 𝑏2𝑛 = 𝐿1 and = lim 𝑛→∞ 𝑏2𝑛−1 = 𝐿1. Similarly, as lim 𝑛→∞ 𝑎𝑛 = 𝐿, then lim 𝑛→∞ 𝑎2𝑛 = 𝐿 and = lim 𝑛→∞ 𝑎2𝑛−1 = 𝐿. It follows that 𝐿1 = lim 𝑛→∞ 𝑏2𝑛 = lim 𝑛→∞ 𝑎2𝑛 = 𝐿 = lim 𝑛→∞ 𝑎2𝑛−1 = lim 𝑛→∞ (−𝑏2𝑛−1) = −𝐿1 and therefore 𝐿1 = 0. (c) Suppose that (𝑏𝑛)∞ 𝑛=1 is increasing. Prove that the series Õ∞ 𝑛=1 𝑎𝑛 is convergent. Solution: Consider the sequence (−𝑏𝑛)∞ 𝑛=1. We prove that it is decreasing and converges to zero. (i) Let 𝑛 ∈ N. As (𝑏𝑛)∞ 𝑛=1 is increasing then 𝑏𝑛 ≤ 𝑏𝑛+1. Thus −𝑏𝑛 ≥ −𝑏𝑛+1. (ii) First, by item (𝑎), the sequence (𝑏𝑛)∞ 𝑛=𝑁1 is bounded from above by 1 + |𝐿|. Since (𝑏𝑛)∞ 𝑛=𝑁1 is also increasing, then (𝑏𝑛)∞ 𝑛=𝑁1 is convergent, and therefore (𝑏𝑛)∞ 𝑛=1 is also convergent. By item (b), lim 𝑛→∞ (−𝑏𝑛) = − lim 𝑛→∞ 𝑏𝑛 = 0 It follows that ∞ ’ 𝑛=1 𝑎𝑛 = ∞ ’ 𝑛=1 (−1)𝑛 𝑏𝑛 = ∞ ’ 𝑛=1 (−1)𝑛+1 (−𝑏𝑛) = Leibniz and therefore the series converges by the Leibniz test. 9",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "hw-exercise-8-solution",
+          "filename": "Exercise 8 solution.pdf",
+          "text": "6. Let (𝑎𝑛)∞ 𝑛=1 a sequence of real numbers. Suppose that there exists an 𝐿 ∈ R such that lim 𝑛→∞ 𝑎𝑛 = 𝐿. Consider the sequence (𝑏𝑛)∞ 𝑛=1 that is defined by 𝑏𝑛 = (−1)𝑛𝑎𝑛 for every 𝑛 ∈ N. (a) Prove that there exists an 𝑁1 ∈ N such that ∀𝑛 ≥ 𝑁1 we have 𝑏𝑛 ≤ 1 + |𝐿|. Solution: As lim 𝑛→∞ 𝑎𝑛 = 𝐿, then there exists an 𝑁1 ∈ N such that for every 𝑛 ≥ 𝑁1 we have |𝑎𝑛 − 𝐿| < 1 (*) Choose 𝑁 = 𝑁1 and let 𝑛 ≥ 𝑁. Then (∗) hold for that 𝑛 and therefore 𝑏𝑛 ≤ |𝑏𝑛 | = |(−1)𝑛𝑎𝑛 | = |𝑎𝑛 | Δ ≤ |𝑎𝑛 − 𝐿| + |𝐿| < 1 + |𝐿| (b) Prove that if (𝑏𝑛)∞ 𝑛=1 is convergent, then lim 𝑛→∞ 𝑏𝑛 = 0. Solution: As (𝑏𝑛)∞ 𝑛=1 is convergent, then there exists an 𝐿1 ∈ R such that lim 𝑛→∞ 𝑏𝑛 = 𝐿1. We need to show 𝐿1 = 0. As lim 𝑛→∞ 𝑏𝑛 = 𝐿1, then by the inheritence theorem we also have lim 𝑛→∞ 𝑏2𝑛 = 𝐿1 and = lim 𝑛→∞ 𝑏2𝑛−1 = 𝐿1. Similarly, as lim 𝑛→∞ 𝑎𝑛 ="
+        },
+        "confidence": 0.56
+      }
+    ],
+    "requiredTheorems": [
+      "(d) Conclude that the series Õ∞ 𝑛=1 cos(𝑛)+(−1)𝑛+1 · (𝑛+1) (𝑛+1) ln2 (𝑛+1) conver...",
+      "5",
+      "6"
+    ],
+    "requiredFormulas": [
+      "𝑛 · sin (𝑛2)",
+      "2𝑛 + 𝑛",
+      "It holds that ∞ ’",
+      "|𝑎𝑛 | =",
+      "𝑛 · sin (𝑛2)",
+      "2𝑛 + 𝑛 ≤",
+      "2𝑛 + 𝑛 ≤",
+      "𝐿 = lim",
+      "2𝑛 = lim",
+      "We conclude that Õ∞",
+      "2𝑛 < ∞ by the root test, and therefore Õ∞",
+      "𝑛=1 |𝑎𝑛 | < ∞ by the comparison test."
+    ],
+    "requiredTechniques": [
+      "מבחן השורש",
+      "מבחן ההשוואה",
+      "גבול"
+    ],
+    "examSimilarityHints": [
+      "2. Let (𝑎𝑛)∞ 𝑛=1 , (𝑏𝑛)∞ 𝑛=1 be two sequences of real numbers. (a) Prove that if the series Õ∞ 𝑛=1 𝑎𝑛 and Õ∞ 𝑛=1 𝑏𝑛 converge absolutely, then the series Õ∞ 𝑛=1 (𝑎𝑛 − 𝑏𝑛) converges absolutely. Solution: It holds that ∞ ’ 𝑛=1 |𝑎𝑛 − 𝑏𝑛 | Δ ≤ ∞ ’ 𝑛=1 (|𝑎𝑛 | + |−𝑏𝑛 |) AOS = ∞ ’ 𝑛=1 |𝑎𝑛 | + ∞ ’ 𝑛=1 |𝑏𝑛 | < ∞ Thus, by the comparison test, Õ∞ 𝑛=1 |𝑎𝑛 − 𝑏𝑛 | < ∞ and therefore the series Õ∞ 𝑛=1 (𝑎𝑛 − 𝑏𝑛) converges absolutely. (b) Give an example where the series Õ∞ 𝑛=1 𝑎𝑛 and Õ∞ 𝑛=1 𝑏𝑛 converge conditionally, and the series Õ∞ 𝑛=1 (𝑎𝑛 − 𝑏𝑛) converges conditionally. Solution: We choose 𝑎𝑛 = (−1)𝑛+1 𝑛 and 𝑏𝑛 = (−1)𝑛 𝑛 for every 𝑛 ∈ N. We saw that the series Õ∞ 𝑛=1 𝑎𝑛 and Õ∞ 𝑛=1 𝑏𝑛 converge conditionally. Note that ∞ ’ 𝑛=1 (𝑎𝑛 − 𝑏𝑛) = ∞ ’ 𝑛=1 (−1)𝑛+1 − (−1)𝑛 𝑛 = ∞ ’ 𝑛=1 (−1)𝑛+1 + (−1)𝑛+1 𝑛 = 2 ∞ ’ 𝑛=1 (−1)𝑛+1 𝑛 thus the series Õ∞ 𝑛=1 (𝑎𝑛 − 𝑏𝑛) converges conditionally. (c) Prove that if the series Õ∞ 𝑛=1 𝑎𝑛 converges conditionally and the series Õ∞ 𝑛=1 𝑏𝑛 converges absolutely, then the series Õ∞ 𝑛=1 (𝑎𝑛 + 𝑏𝑛) converges conditionally. Solution: ATC that the series Õ∞ 𝑛=1 (𝑎𝑛 + 𝑏𝑛) does not converge conditionally. First, as it is a sum of convergent series, then it converges by AOS. As it doesn’t converge conditionally, it must therefore converge absolutely. By item (a), the series Õ∞ 𝑛=1 𝑎𝑛 = Õ∞ 𝑛=1 (𝑎𝑛 + 𝑏𝑛 − 𝑏𝑛) converges absolutely. Contradiction. 3"
+    ],
+    "mustReviewBeforeExam": true,
+    "difficultyEstimate": "mixed",
+    "sourceSnippets": [
+      {
+        "sourceFileId": "hw-exercise-8-solution",
+        "filename": "Exercise 8 solution.pdf",
+        "text": "Calculus II – Spring 2025-26 Homework 8 Solution 1. Determine whether each of the following series converges absolutely, converges conditionally or diverges: (a) ∞ ’ 𝑛=1 𝑛 · sin (𝑛2) 2𝑛 + 𝑛 Solution: It holds that ∞ ’ 𝑛=1 |𝑎𝑛 | = ∞ ’ 𝑛=1 𝑛 · sin (𝑛2) 2𝑛 + 𝑛 ≤ ∞ ’ 𝑛=1 𝑛 2𝑛 + 𝑛 ≤ ∞ ’ 𝑛=1 𝑛 2𝑛 Applying the root test, we get 𝐿 = lim 𝑛→∞ 𝑛 √ 𝑛 2𝑛 = lim 𝑛→∞ 𝑛 √𝑛 2 = 1 2 < 1 We conclude that Õ∞ 𝑛=1 𝑛 2𝑛 < ∞ by the root test, and therefore Õ∞ 𝑛=1 |𝑎𝑛 | < ∞ by the comparison test. Thus, the series Õ∞ 𝑛=1 𝑎𝑛 converges absolutely. converges absolutely converges conditionally diverges yes no no 1"
+      },
+      {
+        "sourceFileId": "hw-exercise-8-solution",
+        "filename": "Exercise 8 solution.pdf",
+        "text": "(b) ∞ ’ 𝑛=1 (−1)𝑛+1 √ √𝑛 + 1 − √𝑛 𝑛 + 1 Solution: First we check if the series converges absolutely ∞ ’ 𝑛=1 |𝑎𝑛 | = ∞ ’ 𝑛=1 √ √𝑛 + 1 − √𝑛 𝑛 + 1 = ∞ ’ 𝑛=1 √ √ √ 1 (𝑛 + 1) (√𝑛 + 1 + √𝑛 ) We choose 𝑏𝑛 = 1 𝑛 3 4 . We use the limit comparison test 𝐿 = lim 𝑛→∞ 𝑎𝑛 𝑏𝑛 = lim 𝑛→∞ √ 1 (𝑛+1) (√𝑛+1+√𝑛) [ 1 𝑛 3 4 ] = lim 𝑛→∞ √ √ √ √ 𝑛 3 2 (𝑛 + 1) (√𝑛 + 1 + √𝑛 ) = lim 𝑛→∞ √ √ √ √ √ 1 (1 + 1 𝑛 ) (√ 1 + 1 𝑛 + 1 ) = 1 √2 We conclude that the series Õ∞ 𝑛=1 |𝑎𝑛 | diverges together with the 3 4 -Harmonic series, so the series Õ∞ 𝑛=1 𝑎𝑛 does not converge absolutely. We now check if the series Õ∞ 𝑛=1 𝑎𝑛 is a Leibniz series. Consider the sequence (𝑏𝑛)∞ 𝑛=1 defined by 𝑏𝑛 = √ √𝑛+1−√𝑛 𝑛+1 for every 𝑛 ∈ N. Note that Õ∞ 𝑛=1 𝑎𝑛 = Õ∞ 𝑛=1 (−1)𝑛+1𝑏𝑛. We note that lim 𝑛→∞ 𝑏𝑛 = lim 𝑛→∞ √ √𝑛 + 1 − √𝑛 𝑛 + 1 = lim 𝑛→∞ 1 𝑛 3 4 √ (1 + 1 𝑛 ) (√ 1 + 1 𝑛 + "
+      },
+      {
+        "sourceFileId": "hw-exercise-8-solution",
+        "filename": "Exercise 8 solution.pdf",
+        "text": "2. Let (𝑎𝑛)∞ 𝑛=1 , (𝑏𝑛)∞ 𝑛=1 be two sequences of real numbers. (a) Prove that if the series Õ∞ 𝑛=1 𝑎𝑛 and Õ∞ 𝑛=1 𝑏𝑛 converge absolutely, then the series Õ∞ 𝑛=1 (𝑎𝑛 − 𝑏𝑛) converges absolutely. Solution: It holds that ∞ ’ 𝑛=1 |𝑎𝑛 − 𝑏𝑛 | Δ ≤ ∞ ’ 𝑛=1 (|𝑎𝑛 | + |−𝑏𝑛 |) AOS = ∞ ’ 𝑛=1 |𝑎𝑛 | + ∞ ’ 𝑛=1 |𝑏𝑛 | < ∞ Thus, by the comparison test, Õ∞ 𝑛=1 |𝑎𝑛 − 𝑏𝑛 | < ∞ and therefore the series Õ∞ 𝑛=1 (𝑎𝑛 − 𝑏𝑛) converges absolutely. (b) Give an example where the series Õ∞ 𝑛=1 𝑎𝑛 and Õ∞ 𝑛=1 𝑏𝑛 converge conditionally, and the series Õ∞ 𝑛=1 (𝑎𝑛 − 𝑏𝑛) converges conditionally. Solution: We choose 𝑎𝑛 = (−1)𝑛+1 𝑛 and 𝑏𝑛 = (−1)𝑛 𝑛 for every 𝑛 ∈ N. We saw that the series Õ∞ 𝑛=1 𝑎𝑛 and Õ∞ 𝑛=1 𝑏𝑛 converge conditionally. Note that ∞ ’ 𝑛=1 (𝑎𝑛 − 𝑏𝑛) = ∞ ’ 𝑛=1 (−1)𝑛+1 − (−1)𝑛 𝑛 = ∞ ’ 𝑛=1 (−1)𝑛+1 + (−1)𝑛+1 𝑛 = 2 ∞ ’ 𝑛=1 (−1)𝑛+1 𝑛 thus "
+      },
+      {
+        "sourceFileId": "hw-exercise-8-solution",
+        "filename": "Exercise 8 solution.pdf",
+        "text": "(d) Conclude that the series Õ∞ 𝑛=1 cos(𝑛)+(−1)𝑛+1 · (𝑛+1) (𝑛+1) ln2 (𝑛+1) converges conditionally. Solution: Consider the sequences (𝑎𝑛)∞ 𝑛=1 and (𝑏𝑛)∞ 𝑛=1 defined by 𝑎𝑛 = (−1)𝑛+1 ln2 (𝑛+1) and 𝑏𝑛 = cos(𝑛) (𝑛+1) ln2 (𝑛+1) for every 𝑛 ∈ N. We note that lim 𝑛→∞ ln2 (𝑛 + 1) 𝑛 = Heine’s lemma lim 𝑥→∞ ln2 (𝑥 + 1) 𝑥 = 𝐿 lim 𝑥→∞ 2 ln (𝑥 + 1) · 1 𝑥+1 1 = lim 𝑥→∞ 2 ln (𝑥 + 1) 𝑥 + 1 = 𝐿 lim 𝑥→∞ 2 · 1 𝑥+1 1 = 0 Thus there exists a 𝑘 ∈ N such that for every 𝑛 ≥ 𝑘 we have ln2 (𝑛 + 1) ≤ 𝑛. Thus ∞ ’ 𝑛=𝑘 1 ln2 (𝑛 + 1) ≥ ∞ ’ 𝑛=𝑘 1 𝑛 = ∞ Therefore the series Õ∞ 𝑛=𝑘 1 ln2 (𝑛+1) diverges and therefore the series Õ∞ 𝑛=1 1 ln2 (𝑛+1) diverges (has a divergent tail). Therefore the series Õ∞ 𝑛=1 (−1)𝑛+1 ln2 (𝑛+1) does not converge absolutely. Clearly, the series Õ∞ 𝑛=1 (−1)𝑛+1 ln2 (𝑛+1) is a Leibniz series, thus the series Õ∞ 𝑛=1 (−1)𝑛+1 ln2 (𝑛+1) c",
+        "startOffset": 3278,
+        "endOffset": 4602
+      }
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
+    "homeworkNumber": 9,
+    "weekNumber": 9,
+    "sourceFileId": "hw-exercise-9-solution",
+    "filename": "Exercise 9 solution.pdf",
+    "topics": [
+      "גבולות",
+      "התכנסות בתנאי",
+      "טורי חזקות",
+      "טורים",
+      "מבחן ההשוואה",
+      "מבחן המנה",
+      "סדרות",
+      "פונקציות",
+      "רדיוס התכנסות"
+    ],
+    "questions": [
+      {
+        "id": "hw-exercise-9-solution-question-1",
+        "sourceType": "homework",
+        "sourceFileId": "hw-exercise-9-solution",
+        "questionNumber": "2025",
+        "content": "Calculus II – Spring 2025-26 Homework 9 Solution 1. For each of the following series, find the domain of convergence and compute its value (as a function of x). (a) ∞ ∑ n=0 (−2)n 2n · 2 · (−2x + 2)2n+2 Solution: We write ∞ ∑ n=0 (−2)n 2n · 2 · (−2x + 2)2n+2 t=(−2x+2)2 = ∞ ∑ n=0 (−2)n 2n · 2 · tn+1 = ∞ ∑ n=0 (−1)n · 2n 2n · 2 · tn+1 = − 1 2 ∞ ∑ n=0 (−1)n+1tn+1 = − 1 2 ∞ ∑ n=0 (−t)n+1 u=−t = − u 2 ∞ ∑ n=0 un Thus, the series converges if and only if |u| < 1 ⇔ ∣ ∣(−2x + 2)2∣ ∣ < 1 ⇔ 1 2 < x < 3 2 and for every 1 2 < x < 3 2 we have ∞ ∑ n=0 (−2)n 2n · 2 · (−2x + 2)2n+2 = − u 2 ∞ ∑ n=0 un = − u 2 · 1 1 − u = t 2 · 1 1 + t = (2 − 2x)2 2 · 1 1 + (2 − 2x)2 1",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "hw-exercise-9-solution",
+          "filename": "Exercise 9 solution.pdf",
+          "text": "Calculus II – Spring 2025-26 Homework 9 Solution 1. For each of the following series, find the domain of convergence and compute its value (as a function of x). (a) ∞ ∑ n=0 (−2)n 2n · 2 · (−2x + 2)2n+2 Solution: We write ∞ ∑ n=0 (−2)n 2n · 2 · (−2x + 2)2n+2 t=(−2x+2)2 = ∞ ∑ n=0 (−2)n 2n · 2 · tn+1 = ∞ ∑ n=0 (−1)n · 2n 2n · 2 · tn+1 = − 1 2 ∞ ∑ n=0 (−1)n+1tn+1 = − 1 2 ∞ ∑ n=0 (−t)n+1 u=−t = − u 2 ∞ ∑ n=0 un Thus, the series converges if and only if |u| < 1 ⇔ ∣ ∣(−2x + 2)2∣ ∣ < 1 ⇔ 1 2 < x < 3 2 and for every 1 2 < x < 3 2 we have ∞ ∑ n=0 (−2)n 2n · 2 · (−2x + 2)2n+2 = − u 2 ∞ ∑ n=0 un = − u 2 · 1 1 − u = t 2 · 1 1 + t = (2 − 2x)2 2 · 1 1 + (2 − 2x)2 1"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "hw-exercise-9-solution-question-2",
+        "sourceType": "homework",
+        "sourceFileId": "hw-exercise-9-solution",
+        "questionNumber": "2",
+        "content": "2. Find the domain of convergence for each of the following power series: (a) ∞ ∑ n=1 n 5n · xn Solution: First we find the radius of convergence R = 1 lim n→∞ n √ n 5n = 5 Thus the series converges for every −5 < x < 5. Now we need to check if the series converges for x = 5, −5. For x = 5: We get the series ∞ ∑ n=1 n 5n · 5n = ∞ ∑ n=1 n As lim n→∞n = ∞̸ = 0, then the series diverges since the necessary criterion does not hold. For x = −5: We get the series ∞ ∑ n=1 n 5n · (−5)n = ∞ ∑ n=1 (−1)nn As lim n→∞ [ (−1)2n 2n ] = lim n→∞(2n) = ∞̸ = 0, then lim n→∞ [(−1)nn]̸ = 0, and therefore the series diverges since the necessary criterion does not hold. Thus, the domain of convergence is −5 < x < 5. (b) ∞ ∑ n=0 3n (2n + 1)! · (x − 1)2n Solution: First, we find the radius of convergence ∞ ∑ n=0 3n (2n + 1)! (x − 1)2n = t=(x−1)2 ∞ ∑ n=0 3n (2n + 1)! tn We note that lim n→∞ ( 3n+1 (2n+3)! ) ( 3n (2n+1)! ) = lim n→∞ 3 (2n + 2) (2n + 3) = 0 Thus R = ∞. Thus, the series converges for every t ∈ R, and therefore the series converges for every x ∈ R. 3",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "hw-exercise-9-solution",
+          "filename": "Exercise 9 solution.pdf",
+          "text": "2. Find the domain of convergence for each of the following power series: (a) ∞ ∑ n=1 n 5n · xn Solution: First we find the radius of convergence R = 1 lim n→∞ n √ n 5n = 5 Thus the series converges for every −5 < x < 5. Now we need to check if the series converges for x = 5, −5. For x = 5: We get the series ∞ ∑ n=1 n 5n · 5n = ∞ ∑ n=1 n As lim n→∞n = ∞̸ = 0, then the series diverges since the necessary criterion does not hold. For x = −5: We get the series ∞ ∑ n=1 n 5n · (−5)n = ∞ ∑ n=1 (−1)nn As lim n→∞ [ (−1)2n 2n ] = lim n→∞(2n) = ∞̸ = 0, then lim n→∞ [(−1)nn]̸ = 0, and therefore the series diverges since the necessary criterion does not hold. Thus, the domain of convergence is −5 < x < 5. (b) ∞ ∑ n=0 3n (2n + 1)! · (x − 1)2n Solution: First, we find the radius of convergence ∞ ∑ n=0 3n (2n + 1)! (x − 1)2n = t=(x−1)2 ∞ ∑ n=0 3n (2n + 1)! tn We note that lim n→∞ ( 3n+1 (2n+3)! ) ( 3n ",
+          "startOffset": 1131,
+          "endOffset": 2184
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "hw-exercise-9-solution-question-3",
+        "sourceType": "homework",
+        "sourceFileId": "hw-exercise-9-solution",
+        "questionNumber": "3",
+        "content": "3. Find the domain of convergence of the power series: ∞ ∑ n=1 x2n n2 = x2 + x4 4 + x8 9 + x16 16 + . . . Solution: We first note that the series is convergent for x = 0. We now need to check convergence for every x̸ = 0. Let 0̸ = x ∈ R. Note that the series is positive, and we can use the ratio test. We compute: L = lim n→∞ an+1 an = lim n→∞ [ x2n+1 (n+1)2 ] [ x2n n2 ] = lim n→∞ (x2n )2 · n2 x2n (n + 1)2 = lim n→∞ x2n · n2 (n + 1)2 = lim n→∞ x2n (1 + 1 n )2 =      0 |x| < 1 ∞ |x| > 1 It follows that the series is convergent for |x| < 1 by the ratio test. For |x| > 1, we obtain lim n→∞ an+1 an = ∞. We show that in this case the series is divergent: As lim n→∞ an+1 an = ∞, there exists an N1 ∈ N such that for every n ≥ N1 we have an+1 an > 1 ⇒ an+1 ≥ an It follows that the sequence (an)∞ n=N1 is increasing, and therefore an ≥ aN1 for every n ≥ N1. We now prove that this implies lim n→∞ an̸ = 0: Assume towards a contradiction that lim n→∞ an = 0. By monotonicity of limits, 0 = lim n→∞ an ≥ lim n→∞ aN1 = aN1 > 0 Contradiction. We have proved that for |x| > 1 it holds that lim n→∞ an̸ = 0, so the series is divergent by the necessary criterion. We now need to check convergence for the case |x| = 1, i.e., for x = ±1. Note that in this case ∞ ∑ n=1 x2n n2 = ∞ ∑ n=1 1 n2 2−Harmonic < ∞ We conclude that the domain of convergence of the series is [−1, 1]. 5",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "hw-exercise-9-solution",
+          "filename": "Exercise 9 solution.pdf",
+          "text": "3. Find the domain of convergence of the power series: ∞ ∑ n=1 x2n n2 = x2 + x4 4 + x8 9 + x16 16 + . . . Solution: We first note that the series is convergent for x = 0. We now need to check convergence for every x̸ = 0. Let 0̸ = x ∈ R. Note that the series is positive, and we can use the ratio test. We compute: L = lim n→∞ an+1 an = lim n→∞ [ x2n+1 (n+1)2 ] [ x2n n2 ] = lim n→∞ (x2n )2 · n2 x2n (n + 1)2 = lim n→∞ x2n · n2 (n + 1)2 = lim n→∞ x2n (1 + 1 n )2 =      0 |x| < 1 ∞ |x| > 1 It follows that the series is convergent for |x| < 1 by the ratio test. For |x| > 1, we obtain lim n→∞ an+1 an = ∞. We show that in this case the series is divergent: As lim n→∞ an+1 an = ∞, there exists an N1 ∈ N such that for every n ≥ N1 we have an+1 an > 1 ⇒ an+1 ≥ an It follows that the sequence (an)∞ n=N1 is increasing, and therefore an ≥ aN1 for every n ≥ N1. We now prove that this implies lim n",
+          "startOffset": 3088,
+          "endOffset": 4462
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "hw-exercise-9-solution-question-4",
+        "sourceType": "homework",
+        "sourceFileId": "hw-exercise-9-solution",
+        "questionNumber": "4",
+        "content": "4. Let (an)∞ n=0 be a sequence of real numbers and let 0 ≤ R ≤ ∞ be the convergence radius of the power series ∑∞ n=0 anxn. Prove or disprove each of the following statements: (a) If ∑∞ n=0 an(1.1)n is convergent, then ∑∞ n=0(−1)n+1an converges absolutely. Solution: True. As ∑∞ n=0 an(1.1)n is convergent, then R ≥ 1.1 and therefore the series ∑∞ n=0 anxn converges absolutely for every |x| < 1.1. Thus, in particular, the series converges absolutely for x = −1. Thus ∞ ∑ n=0 ∣ ∣(−1)n+1an ∣ ∣ = ∞ ∑ n=0 |an(−1)n| < ∞ (b) If R < 1, then lim n→∞an̸ = 0. Solution: True. ATC that lim n→∞an = 0. Thus there exists an N ∈ N such that for every n ≥ N we have |an − 0| < 1 ⇒ |an| < 1 We know that ∑∞ n=N xn converges absolutely iff −1 < x < 1. Let −1 < x1 < 1. We note that ∞ ∑ n=N |anxn 1 | ≤ ∞ ∑ n=N |xn 1 | Thus the series ∑∞ n=N anxn converges absolutely at x1. Thus the series ∑∞ n=N anxn converges absolutely for every −1 < x < 1 and therefore the series ∑∞ n=0 anxn converges absolutely for every −1 < x < 1, and therefore R ≥ 1. Contradiction! 6",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "hw-exercise-9-solution",
+          "filename": "Exercise 9 solution.pdf",
+          "text": "4. Let (an)∞ n=0 be a sequence of real numbers and let 0 ≤ R ≤ ∞ be the convergence radius of the power series ∑∞ n=0 anxn. Prove or disprove each of the following statements: (a) If ∑∞ n=0 an(1.1)n is convergent, then ∑∞ n=0(−1)n+1an converges absolutely. Solution: True. As ∑∞ n=0 an(1.1)n is convergent, then R ≥ 1.1 and therefore the series ∑∞ n=0 anxn converges absolutely for every |x| < 1.1. Thus, in particular, the series converges absolutely for x = −1. Thus ∞ ∑ n=0 ∣ ∣(−1)n+1an ∣ ∣ = ∞ ∑ n=0 |an(−1)n| < ∞ (b) If R < 1, then lim n→∞an̸ = 0. Solution: True. ATC that lim n→∞an = 0. Thus there exists an N ∈ N such that for every n ≥ N we have |an − 0| < 1 ⇒ |an| < 1 We know that ∑∞ n=N xn converges absolutely iff −1 < x < 1. Let −1 < x1 < 1. We note that ∞ ∑ n=N |anxn 1 | ≤ ∞ ∑ n=N |xn 1 | Thus the series ∑∞ n=N anxn converges absolutely at x1. Thus the series ∑∞ n=N anxn converges ab"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "hw-exercise-9-solution-question-5",
+        "sourceType": "homework",
+        "sourceFileId": "hw-exercise-9-solution",
+        "questionNumber": "5",
+        "content": "5. (a) Let (ak)∞ k=1 be a non-negative bounded sequence such that ∑∞ k=1 ak diverges. Let (Sn)∞ n=1 be the sequence of partial sums of (ak)∞ k=1, namely, Sn = n ∑ k=1 ak, ∀n ∈ N. Find the domain of convergence of the power series ∑∞ n=1 Snxn. Solution: First, as the series ∑∞ k=1 ak is a divergent nonnegative series, then lim n→∞Sn = lim n→∞ n ∑ k=1 ak = ∞ ∑ k=1 ak = ∞ We now show that the power series ∑∞ n=1 Snxn diverges for x = ±1: Note that for such x, lim n→∞ |Sn · xn| = lim n→∞ |Sn| = ∞ ⇒ lim n→∞ [Sn · xn]̸ = 0 Thus the power series ∑∞ n=1 Snxn diverges by the necessary criterion. It follows that the power series ∑∞ n=1 Snxn diverges also diverges for every |x| ≥ 1. We now prove that the power series converges absolutely for every |x| < 1: Let |x| < 1. As (ak)∞ k=1 is bounded and non-negative, there exists an M ≥ 0 such that 0 ≤ ak ≤ M, ∀k ∈ N It follows that Sn = n ∑ k=1 ak ≤ n ∑ k=1 M = M · n, ∀n ∈ N Consequently, ∞ ∑ n=1 Sn |x|n ≤ ∞ ∑ n=1 M · n · |x|n = M ∞ ∑ n=1 n · |x|n Consider the power series ∑∞ n=1 n · xn. Note that its convergence radius is R = 1 lim n→∞ n √n = 1 Thus ∑∞ n=1 n · |x|n |x|<1 < ∞ and therefore ∑∞ n=1 Sn |x|n < ∞. We conclude that the domain of convergence of the power series ∑∞ n=1 Snxn is (−1, 1). 9",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "hw-exercise-9-solution",
+          "filename": "Exercise 9 solution.pdf",
+          "text": "5. (a) Let (ak)∞ k=1 be a non-negative bounded sequence such that ∑∞ k=1 ak diverges. Let (Sn)∞ n=1 be the sequence of partial sums of (ak)∞ k=1, namely, Sn = n ∑ k=1 ak, ∀n ∈ N. Find the domain of convergence of the power series ∑∞ n=1 Snxn. Solution: First, as the series ∑∞ k=1 ak is a divergent nonnegative series, then lim n→∞Sn = lim n→∞ n ∑ k=1 ak = ∞ ∑ k=1 ak = ∞ We now show that the power series ∑∞ n=1 Snxn diverges for x = ±1: Note that for such x, lim n→∞ |Sn · xn| = lim n→∞ |Sn| = ∞ ⇒ lim n→∞ [Sn · xn]̸ = 0 Thus the power series ∑∞ n=1 Snxn diverges by the necessary criterion. It follows that the power series ∑∞ n=1 Snxn diverges also diverges for every |x| ≥ 1. We now prove that the power series converges absolutely for every |x| < 1: Let |x| < 1. As (ak)∞ k=1 is bounded and non-negative, there exists an M ≥ 0 such that 0 ≤ ak ≤ M, ∀k ∈ N It follows that Sn = n ∑ k=1 ak ≤ n ∑ "
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "hw-exercise-9-solution-question-6",
+        "sourceType": "homework",
+        "sourceFileId": "hw-exercise-9-solution",
+        "questionNumber": "6",
+        "content": "6. Let x0 ∈ R and let (an)∞ n=0 be a sequence of real numbers. Let 0 < R < ∞ be the convergence radius of the power series ∑∞ n=0 an (x − x0)n and let x1 ∈ R such that |x1 − x0| > R. Prove that lim n→∞an (x1 − x0)n̸ = 0. Solution: Assume towards a contradiction that lim n→∞ an (x1 − x0)n = 0, then there exists an N ∈ N such that for every n ≥ N we have |an(x1 − x0)n| < 1 (∗) Let x2 ∈ R such that R < |x2 − x0| < |x1 − x0|. Thus ∞ ∑ n=N |an (x2 − x0)n| = ∞ ∑ n=N |an (x2 − x0)n|· |x1 − x0|n |x1 − x0|n = ∞ ∑ n=N |an (x1 − x0)n|· |x2 − x0|n |x1 − x0|n = ≤ ∞ ∑ n=N 1· ( |x2 − x0| |x1 − x0| )n Set q = |x2−x0| |x1−x0| . As |x2 − x0| < |x1 − x0|, then 0 < q < 1. Thus ∑∞ n=N qn is the tail of a convergent geometric series, and therefore ∞ ∑ n=N |an (x2 − x0)n| ≤ ∞ ∑ n=N ( |x2 − x0| |x1 − x0| )n = ∞ ∑ n=N qn < ∞ It follows that ∑∞ n=0 an (x2 − x0)n converges absolutely, contradicting the fact that |x2 − x0| > R. 11",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "hw-exercise-9-solution",
+          "filename": "Exercise 9 solution.pdf",
+          "text": "6. Let x0 ∈ R and let (an)∞ n=0 be a sequence of real numbers. Let 0 < R < ∞ be the convergence radius of the power series ∑∞ n=0 an (x − x0)n and let x1 ∈ R such that |x1 − x0| > R. Prove that lim n→∞an (x1 − x0)n̸ = 0. Solution: Assume towards a contradiction that lim n→∞ an (x1 − x0)n = 0, then there exists an N ∈ N such that for every n ≥ N we have |an(x1 − x0)n| < 1 (∗) Let x2 ∈ R such that R < |x2 − x0| < |x1 − x0|. Thus ∞ ∑ n=N |an (x2 − x0)n| = ∞ ∑ n=N |an (x2 − x0)n|· |x1 − x0|n |x1 − x0|n = ∞ ∑ n=N |an (x1 − x0)n|· |x2 − x0|n |x1 − x0|n = ≤ ∞ ∑ n=N 1· ( |x2 − x0| |x1 − x0| )n Set q = |x2−x0| |x1−x0| . As |x2 − x0| < |x1 − x0|, then 0 < q < 1. Thus ∑∞ n=N qn is the tail of a convergent geometric series, and therefore ∞ ∑ n=N |an (x2 − x0)n| ≤ ∞ ∑ n=N ( |x2 − x0| |x1 − x0| )n = ∞ ∑ n=N qn < ∞ It follows that ∑∞ n=0 an (x2 − x0)n converges absolutely, contradicting the fact that |"
+        },
+        "confidence": 0.56
+      }
+    ],
+    "requiredTheorems": [],
+    "requiredFormulas": [
+      "2n · 2 · (−2x + 2)2n+2 t=(−2x+2)2",
+      "2n · 2 · tn+1 =",
+      "(−1)n+1tn+1 = − 1",
+      "(−t)n+1 u=−t",
+      "2n · 2 · (−2x + 2)2n+2 = − u",
+      "un = − u",
+      "1 + t = (2 − 2x)2",
+      "(−2x + 2)2n+2 =",
+      ")n t=− 4",
+      "(−2x + 2)2n+2 = − t",
+      "tn = − t",
+      "1 − t = 2"
+    ],
+    "requiredTechniques": [
+      "מבחן המנה",
+      "מבחן ההשוואה",
+      "גבול"
+    ],
+    "examSimilarityHints": [
+      "(c) If R < 1, then lim n→∞ |an| = ∞. Solution: False. Counter-example: we define for every 0 ≤ n ∈ Z an =      2k n = 2k 0 n = 2k − 1 =      2 n 2 n is even 0 n is odd Thus ∞ ∑ n=0 anxn = ∞ ∑ k=0 2kx2k t=x2 = ∞ ∑ k=0 2ktk We compute the radius of the power series ∑∞ k=0 2ktk, R1 = 1 lim n→∞ n √2n = 1 2 Thus the series converges for every |t| < 1 2 ⇔ ∣ ∣x2∣ ∣ < 1 2 ⇔ − 1 √2 < x < 1 √2 Thus the radius of the series with x is R = 1 √2 < 1. But lim n→∞ |an|̸ = ∞, since lim k→∞ |a2k−1| = lim k→∞0 = 0 7"
+    ],
+    "mustReviewBeforeExam": true,
+    "difficultyEstimate": "mixed",
+    "sourceSnippets": [
+      {
+        "sourceFileId": "hw-exercise-9-solution",
+        "filename": "Exercise 9 solution.pdf",
+        "text": "Calculus II – Spring 2025-26 Homework 9 Solution 1. For each of the following series, find the domain of convergence and compute its value (as a function of x). (a) ∞ ∑ n=0 (−2)n 2n · 2 · (−2x + 2)2n+2 Solution: We write ∞ ∑ n=0 (−2)n 2n · 2 · (−2x + 2)2n+2 t=(−2x+2)2 = ∞ ∑ n=0 (−2)n 2n · 2 · tn+1 = ∞ ∑ n=0 (−1)n · 2n 2n · 2 · tn+1 = − 1 2 ∞ ∑ n=0 (−1)n+1tn+1 = − 1 2 ∞ ∑ n=0 (−t)n+1 u=−t = − u 2 ∞ ∑ n=0 un Thus, the series converges if and only if |u| < 1 ⇔ ∣ ∣(−2x + 2)2∣ ∣ < 1 ⇔ 1 2 < x < 3 2 and for every 1 2 < x < 3 2 we have ∞ ∑ n=0 (−2)n 2n · 2 · (−2x + 2)2n+2 = − u 2 ∞ ∑ n=0 un = − u 2 · 1 1 − u = t 2 · 1 1 + t = (2 − 2x)2 2 · 1 1 + (2 − 2x)2 1"
+      },
+      {
+        "sourceFileId": "hw-exercise-9-solution",
+        "filename": "Exercise 9 solution.pdf",
+        "text": "(b) ∞ ∑ n=0 (−2)n 2n · 2 (−2x + 2)2n+2 Solution: We have ∞ ∑ n=0 (−2)n 2n · 2 (−2x + 2)2n+2 = ∞ ∑ n=0 (−2)n 2n · 2 ( (−2x + 2)2)n · (−2x + 2)2 = 2 (−2x + 2)2 ∞ ∑ n=0 ( − 4 (−2x + 2)2 )n t=− 4 (−2x+2)2 = − t 2 ∞ ∑ n=0 tn Thus the series converges iff |t| < 1 ⇔ 4 (−2x + 2)2 < 1 ⇔ x < 0 or x > 2 Thus for every x < 0 or x > 2 we have ∞ ∑ n=0 (−2)n 2n · 2 (−2x + 2)2n+2 = − t 2 ∞ ∑ n=0 tn = − t 2 · 1 1 − t = 2 (−2x + 2)2 · 1 1 + 4 (−2x+2)2 2"
+      },
+      {
+        "sourceFileId": "hw-exercise-9-solution",
+        "filename": "Exercise 9 solution.pdf",
+        "text": "2. Find the domain of convergence for each of the following power series: (a) ∞ ∑ n=1 n 5n · xn Solution: First we find the radius of convergence R = 1 lim n→∞ n √ n 5n = 5 Thus the series converges for every −5 < x < 5. Now we need to check if the series converges for x = 5, −5. For x = 5: We get the series ∞ ∑ n=1 n 5n · 5n = ∞ ∑ n=1 n As lim n→∞n = ∞̸ = 0, then the series diverges since the necessary criterion does not hold. For x = −5: We get the series ∞ ∑ n=1 n 5n · (−5)n = ∞ ∑ n=1 (−1)nn As lim n→∞ [ (−1)2n 2n ] = lim n→∞(2n) = ∞̸ = 0, then lim n→∞ [(−1)nn]̸ = 0, and therefore the series diverges since the necessary criterion does not hold. Thus, the domain of convergence is −5 < x < 5. (b) ∞ ∑ n=0 3n (2n + 1)! · (x − 1)2n Solution: First, we find the radius of convergence ∞ ∑ n=0 3n (2n + 1)! (x − 1)2n = t=(x−1)2 ∞ ∑ n=0 3n (2n + 1)! tn We note that lim n→∞ ( 3n+1 (2n+3)! ) ( 3n ",
+        "startOffset": 1131,
+        "endOffset": 2184
+      },
+      {
+        "sourceFileId": "hw-exercise-9-solution",
+        "filename": "Exercise 9 solution.pdf",
+        "text": "(c) ∞ ∑ n=1 3n + 5n n · xn Solution: First, we find the radius of convergence R = 1 lim n→∞ n √ 3n+5n n = lim n→∞ n √n n √ 5n (1 + ( 3 5 )n) = 1 5 Thus the series converges for every − 1 5 < x < 1 5 . Now we need to check if the series converges for x = 1 5 , − 1 5 . For x = 1 5 : We have ∞ ∑ n=1 3n + 5n n · ( 1 5 )n = ∞ ∑ n=1 ( 3 5 )n + 1 n ≥ ∞ ∑ n=1 1 n Harmonic = ∞ Thus the series ∑∞ n=1 ( 3 5 )n+1 n is divergent by the comparison test. For x = − 1 5 : We get the series ∞ ∑ n=1 3n + 5n n · ( − 1 5 )n = ∞ ∑ n=1 (−1)n · ( 3 5 )n + 1 n = − ∞ ∑ n=1 (−1)n+1 · [ 1 n · ( 3 5 )n + 1 n ] Note that the series ∑∞ n=1(−1)n+1 · 1 n · ( 3 5 )n converges absolutely as ∞ ∑ n=1 1 n · ( 3 5 )n ≤ ∞ ∑ n=1 ( 3 5 )n tail of geometric < ∞ Thus, − ∞ ∑ n=1 (−1)n+1 · [ 1 n · ( 3 5 )n + 1 n ] = convergent + Leibniz = convergent Thus, the domain of convergence is − 1 5 ≤ x < 1 5 . 4"
+      }
+    ],
+    "confidence": 0.8999999999999999
   }
 ]

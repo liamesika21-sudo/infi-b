@@ -45,6 +45,30 @@
     "confidence": 0.52
   },
   {
+    "id": "recitation-recitation-12-hebrew-proof-pattern-1",
+    "title": "4",
+    "patternType": "limit",
+    "steps": [
+      "Identify the relevant assumptions from the source statement.",
+      "Reduce the claim to a limit statement.",
+      "Construct or justify the required existence statement.",
+      "Close the argument using the cited theorem or criterion."
+    ],
+    "topicIds": [
+      "גבולות",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "sourceFileIds": [
+      "recitation-recitation-12-hebrew"
+    ],
+    "relatedQuestionIds": [],
+    "commonMistakes": [],
+    "examImportance": "medium",
+    "confidence": 0.52
+  },
+  {
     "id": "recitation-recitation-2-hebrew-proof-pattern-1",
     "title": "תרגול 2 היום: סדרות",
     "patternType": "limit",

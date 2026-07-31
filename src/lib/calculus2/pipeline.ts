@@ -18,6 +18,7 @@ import type {
 
 const DOCS_ROOT = path.join(process.cwd(), "docs");
 const SUPPORTED_TEXT_EXTENSIONS = new Set([".md", ".txt"]);
+const SUPPORTED_SUMMARY_EXTENSIONS = new Set([".html", ".htm"]);
 
 async function walkFiles(root: string): Promise<string[]> {
   const entries = await fs.readdir(root, { withFileTypes: true });
@@ -35,6 +36,12 @@ async function walkFiles(root: string): Promise<string[]> {
 function isSupportedSourcePath(relativePath: string): boolean {
   const extension = path.extname(relativePath).toLowerCase();
   if (extension === ".pdf") return true;
+  if (
+    SUPPORTED_SUMMARY_EXTENSIONS.has(extension) &&
+    relativePath.toLowerCase().includes("docs/summerizer/")
+  ) {
+    return true;
+  }
   if (!SUPPORTED_TEXT_EXTENSIONS.has(extension)) return false;
 
   const normalized = relativePath.toLowerCase();
@@ -42,6 +49,14 @@ function isSupportedSourcePath(relativePath: string): boolean {
 
   // Keep the high-quality updated transcripts without importing every old script duplicate.
   return /(?:recitation|תרגול)[_\s-]*(?:9|10)/i.test(relativePath);
+}
+
+function isVersionedHtmlDuplicate(absolutePath: string, allPaths: Set<string>): boolean {
+  const extension = path.extname(absolutePath).toLowerCase();
+  if (!SUPPORTED_SUMMARY_EXTENSIONS.has(extension)) return false;
+
+  const canonicalPath = absolutePath.replace(/_\d+(?=\.(?:html|htm)$)/i, "");
+  return canonicalPath !== absolutePath && allPaths.has(canonicalPath);
 }
 
 function isCleanRecitationTranscript(file: SourceFile): boolean {
@@ -55,8 +70,10 @@ function isCleanRecitationTranscript(file: SourceFile): boolean {
 export async function scanDocsFolder(rootDir = DOCS_ROOT): Promise<MaterialInventory> {
   const absoluteRoot = path.resolve(rootDir);
   const discovered = await walkFiles(absoluteRoot);
+  const discoveredPaths = new Set(discovered);
   const classifiedSourceFiles = discovered
     .filter((file) => !path.basename(file).startsWith("."))
+    .filter((file) => !isVersionedHtmlDuplicate(file, discoveredPaths))
     .filter((file) => isSupportedSourcePath(path.relative(process.cwd(), file)))
     .map((absolutePath) => {
       const relativePath = path.relative(process.cwd(), absolutePath);

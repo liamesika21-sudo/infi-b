@@ -34,6 +34,32 @@ export async function extractTextFromFile(file: SourceFile): Promise<ExtractedTe
     }
   }
 
+  if (file.extension === ".html" || file.extension === ".htm") {
+    try {
+      const html = await fs.readFile(file.absolutePath, "utf8");
+      const extractedText = normalizeExtractedText(extractTextFromHtml(html));
+      const status = extractedText.trim().length < 80 ? "needs_ocr" : "success";
+
+      return {
+        sourceFileId: file.id,
+        filename: file.filename,
+        filePath: file.relativePath,
+        extractedText,
+        status,
+        error: status === "needs_ocr" ? "HTML file is empty or contains too little readable text." : undefined,
+      };
+    } catch (error) {
+      return {
+        sourceFileId: file.id,
+        filename: file.filename,
+        filePath: file.relativePath,
+        extractedText: "",
+        status: "failed",
+        error: error instanceof Error ? error.message : String(error),
+      };
+    }
+  }
+
   if (file.extension !== ".pdf") {
     return {
       sourceFileId: file.id,
@@ -74,6 +100,35 @@ export async function extractTextFromFile(file: SourceFile): Promise<ExtractedTe
       error: error instanceof Error ? error.message : String(error),
     };
   }
+}
+
+function extractTextFromHtml(html: string): string {
+  return html
+    .replace(/<(script|style|template)\b[^>]*>[\s\S]*?<\/\1>/gi, "")
+    .replace(/<br\s*\/?>/gi, "\n")
+    .replace(/<\/(?:p|div|section|article|header|footer|aside|h[1-6]|li|tr|table|ul|ol)>/gi, "\n")
+    .replace(/<li\b[^>]*>/gi, "• ")
+    .replace(/<[^>]+>/g, "")
+    .replace(/&#(\d+);/g, (_, code: string) => String.fromCodePoint(Number(code)))
+    .replace(/&#x([\da-f]+);/gi, (_, code: string) => String.fromCodePoint(Number.parseInt(code, 16)))
+    .replace(
+      /&(nbsp|amp|lt|gt|quot|apos|rarr|larr|le|ge|infin|middot);/g,
+      (entity) =>
+        ({
+          "&nbsp;": " ",
+          "&amp;": "&",
+          "&lt;": "<",
+          "&gt;": ">",
+          "&quot;": '"',
+          "&apos;": "'",
+          "&rarr;": "→",
+          "&larr;": "←",
+          "&le;": "≤",
+          "&ge;": "≥",
+          "&infin;": "∞",
+          "&middot;": "·",
+        })[entity] ?? entity,
+    );
 }
 
 function normalizeExtractedText(text: string): string {

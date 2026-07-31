@@ -28,7 +28,7 @@ function sourceTypeFromPath(relativePath: string, filename: string): SourceType 
   const normalized = `${relativePath} ${filename}`.toLowerCase();
   if (/formula|נוסח/.test(normalized)) return "formula_sheet";
   if (/theorem|משפט/.test(normalized)) return "theorem_list";
-  if (/summary|summar|summerize|סיכום/.test(normalized)) return "summary";
+  if (/summary|summar|summerize|summerizer|סיכום/.test(normalized)) return "summary";
   if (/not in|excluded|not.*material|לא.*חומר|marerial/.test(normalized)) return "excluded_exam_material";
   if (/past-exams|moed|מועד|exam|בחינה|simulation|סימולציה/.test(normalized)) return "past_exam";
   if (/lecture|הרצאה/.test(normalized)) return "lecture";

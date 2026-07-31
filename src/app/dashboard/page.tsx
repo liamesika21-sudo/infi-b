@@ -1,11 +1,10 @@
 import { Dashboard } from "@/components/Dashboard";
 import { readAnalysisData } from "@/lib/calculus2/analysis-reader";
 import { readGeneratedData } from "@/lib/calculus2/generated-data";
-import { scanDocsFolder } from "@/lib/calculus2/pipeline";
 
 export const dynamic = "force-dynamic";
 
 export default async function DashboardPage() {
-  const [generatedData, inventory, analysisData] = await Promise.all([readGeneratedData(), scanDocsFolder(), readAnalysisData()]);
-  return <Dashboard inventory={inventory} generatedData={generatedData} analysisData={analysisData} />;
+  const [generatedData, analysisData] = await Promise.all([readGeneratedData(), readAnalysisData()]);
+  return <Dashboard generatedData={generatedData} analysisData={analysisData} />;
 }

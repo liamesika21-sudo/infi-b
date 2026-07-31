@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<script type="application/json" id="cowork-artifact-meta">
+{
+  "name": "Infi2 — Summary Weeks 1-5",
+  "schemaVersion": 1,
+  "description": "דף סיכום זהב לחדו״א 2 (אינפי 2), שבועות 1–5: סדרות, גבולות, לופיטל, דרבו, טכניקות אינטגרציה, המשפט היסודי, תורת האינטגרציה, אינטגרלים לא אמיתיים ומבחני p. כולל טבלת אינטגרלים, חתימות משיעורי הבית, בנק דוגמאות נגדיות ומלכודות מהתרגולים. ד״ר שמאי, רייכמן.",
+  "mcpTools": [],
+  "mcpServerNames": []
+}
+</script>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>סיכום זהב · שבועות 1–5 · אינפי 2</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<style>
+:root{
+  --bg:#f5f7fc; --card:#ffffff; --card2:#eef2fb; --ink:#1b2138; --muted:#5a6288;
+  --line:#dbe1f0; --red:#d61f45; --orange:#c2620a; --yellow:#9a6a00; --green:#0a8f52;
+  --blue:#2456d6; --purple:#7c3aed; --accent:#6a45e6;
+}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(170deg,#eef2fb,#f7f9fd 55%,#eef2fb);color:var(--ink);
+  font-family:"Segoe UI","Assistant",system-ui,Arial,sans-serif;line-height:1.7;padding:0 0 60px;font-size:15px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+header.hero{padding:30px 16px 16px;text-align:center;background:radial-gradient(700px 260px at 50% -10%,rgba(106,69,230,.14),transparent)}
+h1{font-size:1.7rem;margin:.1em 0;background:linear-gradient(90deg,#6a45e6,#0a8f52);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--muted);font-size:.95rem}
+h2{font-size:1.15rem;margin:22px 0 4px;padding:6px 12px;border-radius:10px;color:#fff;background:linear-gradient(90deg,var(--accent),#8a6cf0)}
+h2.g{background:linear-gradient(90deg,var(--green),#37b57e)}
+h2.o{background:linear-gradient(90deg,var(--orange),#e0913b)}
+h2.b{background:linear-gradient(90deg,var(--blue),#5b87ea)}
+h2.r{background:linear-gradient(90deg,var(--red),#e8557a)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0}
+@media(max-width:720px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:0 3px 12px rgba(30,45,90,.05)}
+.card h3{margin:0 0 10px;font-size:1rem;color:#2b3255;border-bottom:1px solid var(--line);padding-bottom:6px}
+.card ul{margin:8px 0;padding-inline-start:18px}
+.card li{margin:9px 0;line-height:1.65}
+.card p{margin:8px 0}
+table{width:100%;border-collapse:collapse;margin:8px 0;font-size:.9rem}
+th,td{border:1px solid var(--line);padding:9px 10px;text-align:right;vertical-align:top;line-height:1.6}
+table.ltr{direction:ltr}
+table.ltr th,table.ltr td{text-align:center}
+th{background:var(--card2);color:#2b3255}
+tr:nth-child(even) td{background:rgba(36,86,214,.03)}
+.tag{display:inline-block;font-size:.72rem;font-weight:700;padding:1px 7px;border-radius:5px;border:1px solid;white-space:nowrap}
+.t-sig{background:rgba(124,58,237,.08);color:var(--purple);border-color:var(--purple)}
+.t-2026{background:rgba(214,31,69,.08);color:var(--red);border-color:var(--red)}
+.warn{border:1px solid var(--red);background:rgba(214,31,69,.05);border-radius:10px;padding:8px 12px;margin:8px 0;font-size:.9rem}
+.warn b{color:var(--red)}
+.good{border:1px solid var(--green);background:rgba(10,143,82,.05);border-radius:10px;padding:8px 12px;margin:8px 0;font-size:.9rem}
+.hl{color:var(--red);font-weight:700}
+code{background:#eef2fb;padding:0 5px;border-radius:4px;color:#0a7d47;border:1px solid var(--line);font-size:.88em}
+.note{font-size:.82rem;color:var(--muted)}
+.footer{text-align:center;color:var(--muted);font-size:.8rem;margin-top:30px}
+.k{color:var(--blue);font-weight:700}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="sub">📘 חדו״א 2 (אינפי 2) · ד״ר שמאי · רייכמן</div>
+  <h1>סיכום זהב — שבועות 1–5</h1>
+  <div class="sub">סדרות · גבולות · לופיטל · דרבו · אינטגרלים · המשפט היסודי · תורת האינטגרציה · אינטגרלים לא אמיתיים</div>
+</header>
+
+<div class="wrap">
+
+<!-- ============ WEEK 1-2 SEQUENCES ============ -->
+<h2 class="b">① סדרות, גבולות, לופיטל, דרבו (שבועות 1–2)</h2>
+<div class="grid">
+  <div class="card">
+    <h3>סדרות — הכלים</h3>
+    <ul>
+      <li><b>הגדרת גבול:</b> $a_n\to L$ אם $\forall\varepsilon>0\ \exists N\ \forall n>N:\ |a_n-L|<\varepsilon$.</li>
+      <li><b>סדרה מונוטונית וחסומה $\Rightarrow$ מתכנסת</b> (המשפט המרכזי לסדרות).</li>
+      <li><b>סדרה רקורסיבית:</b> מוכיחים מונוטוניות+חסימות (אינדוקציה) $\Rightarrow$ מתכנסת, ואז פותרים $L=g(L)$ ל<b>נקודת שבת</b>.</li>
+      <li><b>היינה:</b> $\lim_{x\to a}f=L \iff$ לכל סדרה $x_n\to a$ מתקיים $f(x_n)\to L$.</li>
+      <li><b>תת־סדרה:</b> $a_n\to L\Rightarrow$ כל תת־סדרה $\to L$. שתי תת־סדרות לגבולות שונים $\Rightarrow$ <b>מתבדרת</b>.</li>
+    </ul>
+    <div class="note">חתימה: <span class="tag t-sig">ש״ב 2 ש׳5א׳</span> $a_{n+1}=a_n+\frac1{a_n}\to\infty$ — חזר בסימולציה 2025.</div>
+  </div>
+  <div class="card">
+    <h3>לופיטל ודרבו</h3>
+    <p><b>כלל לופיטל — 4 התנאים (חובה לציין!):</b></p>
+    <ul>
+      <li>הצורה $\frac00$ או $\frac{\infty}{\infty}$;</li>
+      <li>$f,g$ גזירות בסביבה, $g'\neq0$;</li>
+      <li>הגבול $\lim\frac{f'}{g'}$ קיים — ואז $\lim\frac fg=\lim\frac{f'}{g'}$.</li>
+    </ul>
+    <p><b>משפט דרבו:</b> נגזרת $f'$ מקבלת כל ערך ביניים על הקטע — <b>גם אם $f'$ אינה רציפה</b>. משמש להוכיח קיום אפס לנגזרת.</p>
+    <div class="note">גבולות זהב: $x^n e^{-x}\to0$, $\left(1+\tfrac1n\right)^n\to e$, $\sqrt[n]{n}\to1$, $\frac{\ln n}{n}\to0$.</div>
+  </div>
+</div>
+
+<!-- ============ WEEK 2-3 INTEGRATION ============ -->
+<h2 class="g">② אינטגרל — טכניקות + המשפט היסודי (שבועות 2–3)</h2>
+<div class="grid">
+  <div class="card">
+    <h3>טכניקות</h3>
+    <ul>
+      <li><b>הצבה:</b> $u=g(x),\ du=g'(x)dx$.</li>
+      <li><b>אינטגרציה בחלקים (IBP):</b> $\displaystyle\int u\,dv=uv-\int v\,du$. (LIATE לבחירת $u$.)</li>
+      <li><b>שברים חלקיים</b> / הצבת ויירשטרס $t=\tan\frac x2$ (ל־$\int\frac{dx}{\cos x}$).</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>המשפט היסודי (FTC)</h3>
+    <ul>
+      <li><b>חלק 1:</b> $f$ רציפה, $F(x)=\int_a^x f\Rightarrow F'(x)=f(x)$.</li>
+      <li><b>חלק 2 (ניוטון־לייבניץ):</b> $\int_a^b f=G(b)-G(a)$.</li>
+      <li><b class="k">FTC + כלל שרשרת:</b> $\dfrac{d}{dx}\displaystyle\int_a^{g(x)}\!f(t)dt=f(g(x))\,g'(x)$.</li>
+    </ul>
+    <div class="note">חתימה: <span class="tag t-sig">ש״ב 4 ש׳3</span> $\lim_{x\to0}\frac{1}{x^3}\int_0^{x^2}\!\cdots=\frac23$ · <span class="tag t-2026">מועד א׳ 2026 ש׳5.1</span></div>
+  </div>
+</div>
+
+<!-- ============ INTEGRAL TABLE ============ -->
+<h2 class="o">③ טבלת האינטגרלים — לדעת בעל־פה 💰</h2>
+<div class="card">
+<table class="ltr">
+  <tr><th>אינטגרל</th><th>תוצאה</th><th>אינטגרל</th><th>תוצאה</th></tr>
+  <tr><td>$\int \ln x\,dx$</td><td>$x\ln x-x+C$</td><td>$\int \frac{1}{1+x^2}dx$</td><td>$\arctan x+C$</td></tr>
+  <tr><td>$\int \tan x\,dx$</td><td>$-\ln|\cos x|+C$</td><td>$\int \frac{1}{\sqrt{1-x^2}}dx$</td><td>$\arcsin x+C$</td></tr>
+  <tr><td>$\int \cot x\,dx$</td><td>$\ln|\sin x|+C$</td><td>$\int e^{ax}dx$</td><td>$\frac{1}{a}e^{ax}+C$</td></tr>
+  <tr><td>$\int \frac{f'(x)}{f(x)}dx$</td><td>$\ln|f(x)|+C$</td><td>$\int \frac{1}{x}dx$</td><td>$\ln|x|+C$</td></tr>
+</table>
+<div class="note">$\int\frac{f'}{f}=\ln|f|$ הוא ה״כוכב״: למשל $\int\frac{2x}{x^2+1}dx=\ln(x^2+1)+C$. משמש בכל שאלה עם מנה שהמונה הוא נגזרת המכנה.</div>
+</div>
+
+<!-- ============ INTEGRATION THEORY ============ -->
+<h2 class="b">④ תורת האינטגרציה (שבוע 3)</h2>
+<div class="grid">
+  <div class="card">
+    <h3>דארבו / רימן</h3>
+    <ul>
+      <li>סכומי דארבו <b>עליון</b> $\overline S(f,P)$ ו<b>תחתון</b> $\underline S(f,P)$.</li>
+      <li><b>קריטריון אינטגרביליות:</b> $f$ חסומה אינטגרבילית $\iff \forall\varepsilon>0\ \exists P:\ \overline S-\underline S<\varepsilon$.</li>
+      <li>רציפה על $[a,b]$ $\Rightarrow$ אינטגרבילית. ליפשיץ/מונוטונית $\Rightarrow$ אינטגרבילית.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>אי־שוויונים על האינטגרל</h3>
+    <ul>
+      <li><b>מונוטוניות:</b> $f\le g\Rightarrow \int_a^b f\le\int_a^b g$.</li>
+      <li><b>ערך מוחלט:</b> $\left|\int_a^b f\right|\le\int_a^b|f|$. <span class="tag t-2026">מ״א 2026 ש׳2.1</span></li>
+      <li><b>מ.ע.ה המשוקלל:</b> $w\ge0\Rightarrow \int_a^b f\,w=f(c)\int_a^b w$. <span class="tag t-sig">ש״ב 5 ש׳3</span> ($\int_0^2 x^2f=\frac83 f(c)$).</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============ IMPROPER INTEGRALS ============ -->
+<h2 class="r">⑤ אינטגרלים לא אמיתיים (שבועות 4–5)</h2>
+<div class="grid">
+  <div class="card">
+    <h3>שני הסוגים — תמיד לגבול</h3>
+    <ul>
+      <li><b>סוג 1 (קטע אינסופי):</b> $\int_a^\infty f=\lim_{b\to\infty}\int_a^b f$.</li>
+      <li><b>סוג 2 (התפוצצות בנקודה $c$):</b> חותכים לפני $c$: $\int_a^c f=\lim_{t\to c^-}\int_a^t f$.</li>
+      <li>גבול <b>סופי</b> $\Rightarrow$ מתכנס; $\pm\infty$ / לא קיים $\Rightarrow$ מתבדר.</li>
+      <li>ל־$\int_{-\infty}^\infty$: <b>שני החצאים</b> חייבים להתכנס בנפרד.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>מבחני ה־$p$ (לזכור את שניהם!)</h3>
+    <table>
+      <tr><th>אינטגרל</th><th>מתכנס $\iff$</th></tr>
+      <tr><td>$\int_1^\infty \frac{dx}{x^p}$ (אינסוף)</td><td class="hl">$p>1$</td></tr>
+      <tr><td>$\int_0^1 \frac{dx}{x^p}$ (נקודה 0)</td><td class="hl">$p<1$</td></tr>
+      <tr><td>$\int_a^b \frac{dx}{(x-a)^p}$ (נקודה $a$)</td><td class="hl">$p<1$</td></tr>
+    </table>
+    <div class="note">באינסוף — $p>1$; ליד נקודה — $p<1$. הפוך! זו הטעות הכי נפוצה.</div>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="card">
+    <h3>כלי ההשוואה</h3>
+    <ul>
+      <li><b>מבחן השוואה:</b> $0\le f\le g$; $\int g$ מתכנס $\Rightarrow\int f$ מתכנס. $\int f$ מתבדר $\Rightarrow\int g$ מתבדר.</li>
+      <li><b>השוואה גבולית:</b> $\frac{f}{g}\to L\in(0,\infty)\Rightarrow$ שניהם יחד. <span class="tag t-2026">מ״א 2026 ש׳1.1.2</span></li>
+      <li>🔑 <b>ההשוואה חייבת ״להרגיש״ את הנקודה הבעייתית</b> — ליד סינגולריות ב־1 השווי ל־$\frac1{x-1}$, לא ל־$\frac1x$.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>אי־שוויון עזר מרכזי</h3>
+    <ul>
+      <li>$\ln x\le x-1$ לכל $x>0$.</li>
+      <li>מכאן (לכל $x>1$, שני הצדדים חיוביים): $\frac{x}{\ln x}\ge\frac{x}{x-1}\ge\frac1{x-1}$.</li>
+      <li><b>הופכי הופך כיוון רק אם שני הצדדים באותו סימן!</b></li>
+    </ul>
+    <div class="note">$e^{(\cdot)},\ln,\arctan$ רציפות $\Rightarrow$ אפשר להכניס גבול פנימה: $\lim e^{g}=e^{\lim g}$.</div>
+  </div>
+</div>
+
+<!-- ============ HW SIGNATURES ============ -->
+<h2 class="o">⑥ חתימות משיעורי הבית — מסקנות שחוזרות</h2>
+<div class="card">
+<table>
+  <tr><th>מקור</th><th>המסקנה / התבנית</th><th>קשר</th></tr>
+  <tr><td>ש״ב 2 ש׳5א׳</td><td>סדרה רקורסיבית $a_{n+1}=a_n+\frac1{a_n}$ מונוטונית עולה ולא חסומה $\Rightarrow\to\infty$</td><td><span class="tag t-sig">סימולציה 2025</span></td></tr>
+  <tr><td>ש״ב 4 ש׳3</td><td>גזירת $\int_0^{g(x)}f$ (FTC+שרשרת) + לופיטל $\to\frac23$</td><td><span class="tag t-2026">מ״א 2026 ש׳5.1</span></td></tr>
+  <tr><td>ש״ב 5 ש׳3</td><td>מ.ע.ה משוקלל: $\int_0^2 x^2f=\frac83 f(c)$ — תוחמים $f$, מכפילים ב־$x^2\ge0$, אינטגרלים, IVT</td><td>מ.ע.ה לאינטגרלים</td></tr>
+  <tr><td>ש״ב 5 ש׳4</td><td>$\int_1^\infty\frac{f'}{f}$ מתכנס $\Rightarrow \lim f$ קיים. (קדומה $\ln|f|$, ואז $f=e^{\ln f}$, רציפות $\exp$)</td><td><span class="tag t-2026">מ״א 2026 ש׳1.2</span></td></tr>
+  <tr><td>ש״ב 5 ש׳1ב׳</td><td>$\int_{-\infty}^\infty\frac{x}{\pi(1+x^2)}$ <b>מתבדר</b> — כל חצי $\to\pm\infty$ (לא ליפול ל״אי־זוגי $\Rightarrow0$״)</td><td>מלכודת</td></tr>
+</table>
+</div>
+
+<!-- ============ COUNTEREXAMPLE BANK ============ -->
+<h2 class="r">⑦ בנק דוגמאות נגדיות + מלכודות</h2>
+<div class="grid">
+  <div class="card good" style="margin:0">
+    <h3 style="color:var(--green)">מתכנס אבל $f/x$ מתבדר (ב־0)</h3>
+    <p>הטענה ״$\int_0^\infty f$ מתכנס $\Rightarrow\int_0^\infty\frac fx$ מתכנס״ <b>שקרית</b>. דוגמאות נגדיות ($f(0)\neq0$ יוצר $\frac1x$ מתבדר ב־0):</p>
+    <ul>
+      <li>$f=\frac{1}{1+x^2}$ · $f=e^{-x}$ · $f=\frac{1}{(x+1)^2}$ · $f=\cos(x)e^{-x}$</li>
+    </ul>
+  </div>
+  <div class="card warn" style="margin:0">
+    <h3 style="color:var(--red)">אינטגרלים לא אמיתיים שמתבדרים</h3>
+    <ul>
+      <li>$\int_1^\infty\frac1x=\infty$ (הרמוני, $p=1$).</li>
+      <li>$\int_0^\infty\arctan x=\infty$ (שואף ל־$\frac\pi2\neq0$).</li>
+      <li>$\int_0^\infty\sin x,\ \int_0^\infty\cos x$ (מתנדנד, גבול לא קיים).</li>
+      <li>$\int_0^1\frac{1}{x^2}=\infty$ (אסימפטוטה ב־0, $p=2>1$).</li>
+    </ul>
+  </div>
+</div>
+<div class="warn">
+  <b>מלכודת ה־״אי־זוגי ⇒ 0״:</b> אסור להשתמש בסימטריה כדי לומר ש־$\int_{-\infty}^\infty$ של פונקציה אי־זוגית שווה 0, אם כל חצי מתבדר. $\infty-\infty$ לא מוגדר. תמיד לפצל ולבדוק כל חצי בנפרד.
+</div>
+
+<!-- ============ RECITATION NOTES ============ -->
+<h2 class="b">⑧ הערות מהתרגולים</h2>
+<div class="card">
+  <ul>
+    <li><b>מעריכי מנצח פולינום:</b> $x^n e^{-\lambda x}\to0$ ($\lambda>0$) — דרך לופיטל $n$ פעמים. משמש בהתכנסות אינטגרלים.</li>
+    <li><b>עם מי משווים?</b> בוחרים את ה<b>חזקה הדומיננטית</b> (המנה שקובעת את ההתנהגות באינסוף / ליד הנקודה).</li>
+    <li>אינטגרל לא אמיתי שהוא <b>גם</b> אינסופי וגם עם התפוצצות — מפצלים לשני אינטגרלים ובודקים כל אחד.</li>
+    <li>המרה לגבול ($\lim_{b\to\infty}\int_a^b$) והצבת קדומה עם $\infty$ בקצה ($[F]_a^\infty$) — <b>אותו דבר בדיוק</b>, רק סימון.</li>
+    <li><span class="tag t-sig">רשות</span> אינטגרלי Wallis (ש״ב 5 ש׳6) — showpiece, כמעט לא במבחן. די בסעיפי ה־IBP.</li>
+  </ul>
+</div>
+
+</div>
+
+<div class="footer wrap">
+  <p>סיכום שבועות 1–5 · מבוסס על שיעורי בית 1–5, תרגולים 1–5, וניתוח מבחני העבר. בהצלחה, ליה! 📘</p>
+</div>
+
+<script>
+let mathDone=false;
+function tryRenderMath(){
+  if(mathDone) return true;
+  try{
+    if(typeof renderMathInElement==='function'){
+      renderMathInElement(document.body,{delimiters:[
+        {left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}
+      ],throwOnError:false,ignoredTags:["script","noscript","style","textarea","pre"]});
+      mathDone=true;return true;
+    }
+  }catch(e){}
+  return false;
+}
+function bootMath(){ if(tryRenderMath())return; let t=0;const iv=setInterval(()=>{if(tryRenderMath()||++t>100)clearInterval(iv);},150); }
+window.addEventListener('DOMContentLoaded',bootMath);
+window.addEventListener('load',tryRenderMath);
+</script>
+</body>
+</html>

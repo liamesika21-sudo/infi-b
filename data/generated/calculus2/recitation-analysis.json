@@ -212,6 +212,596 @@
     "confidence": 0.8999999999999999
   },
   {
+    "recitationNumber": 11,
+    "weekNumber": 11,
+    "practicedLectureNumber": 10,
+    "sourceFileId": "recitation-recitation-11-hebrew",
+    "filename": "Recitation 11-Hebrew.pdf",
+    "practicedTopics": [
+      "גבולות",
+      "טור טיילור",
+      "טורים",
+      "נגזרות",
+      "סדרות",
+      "פונקציות",
+      "רציפות",
+      "פולינום טיילור"
+    ],
+    "questions": [
+      {
+        "id": "recitation-recitation-11-hebrew-question-1",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-11-hebrew",
+        "questionNumber": "11",
+        "content": "תרגול 11 היום: פולינום טיילור. • טור טיילור. • שארית של טיילור. • תזכורת: יחידות טור החזקות: סדרה של מספרים ממשיים. (an)∞ n=0 ותהי x0 ∈ R יהי .R > 0 ונניח כי ∞ ∑ n=0 an (x − x0)n רדיוס ההתכנסות של טור החזקות R יהי .| x − x0 |< R לכל f (x) = ∞ ∑ n=0 an (x − x0)n נביט בפונקציה המוגדרת על ידי .an = f (n)(x0) n! ובנוסף, x0 פעמים ב n גזירה f ,0 ≤ n ∈ Z אזי לכל טור טיילור: .x0 פונקציה המוגדרת בסביבה של f ותהי x0 ∈ R תהי .(0 ≤ n ∈ Z קיימת לכל f (n) (x0) )כלומר x0 פעמים ב ∞ גזירה f נניח ש מוגדר להיות x0 סביב f טור הטיילור של Tf (x) = ∞ ∑ n=0 f (n) (x0) n! (x − x0)n פולינום הטיילור: .x0 פעמים ב N פונקציה הגזירה f . תהי0 ≤ N ∈ Z ויהי x0 ∈ R תהי מוגדר להיות x0 סביב f של N פולינום הטיילור מסדר TN (x) = N ∑ n=0 f (n) (x0) n! · (x − x0)n מוגדרת להיות N מסדר x0 סביב f שארית הטיילור של RN (x) = f (x) − TN (x) 1",
+        "topicIds": [
+          "גבולות",
+          "טור-טיילור",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות",
+          "פולינום-טיילור"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-11-hebrew",
+          "filename": "Recitation 11-Hebrew.pdf",
+          "text": "תרגול 11 היום: פולינום טיילור. • טור טיילור. • שארית של טיילור. • תזכורת: יחידות טור החזקות: סדרה של מספרים ממשיים. (an)∞ n=0 ותהי x0 ∈ R יהי .R > 0 ונניח כי ∞ ∑ n=0 an (x − x0)n רדיוס ההתכנסות של טור החזקות R יהי .| x − x0 |< R לכל f (x) = ∞ ∑ n=0 an (x − x0)n נביט בפונקציה המוגדרת על ידי .an = f (n)(x0) n! ובנוסף, x0 פעמים ב n גזירה f ,0 ≤ n ∈ Z אזי לכל טור טיילור: .x0 פונקציה המוגדרת בסביבה של f ותהי x0 ∈ R תהי .(0 ≤ n ∈ Z קיימת לכל f (n) (x0) )כלומר x0 פעמים ב ∞ גזירה f נניח ש מוגדר להיות x0 סביב f טור הטיילור של Tf (x) = ∞ ∑ n=0 f (n) (x0) n! (x − x0)n פולינום הטיילור: .x0 פעמים ב N פונקציה הגזירה f . תהי0 ≤ N ∈ Z ויהי x0 ∈ R תהי מוגדר להיות x0 סביב f של N פולינום הטיילור מסדר TN (x) = N ∑ n=0 f (n) (x0) n! · (x − x0)n מוגדרת להיות N מסדר x0 סביב f שארית הטיילור של RN (x) = f (x) − TN (x) 1"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-11-hebrew-question-2",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-11-hebrew",
+        "questionNumber": "3",
+        "content": "הערה 3: . אזיx ∈ R תהי Tf (x) = lim N →∞ N ∑ n=0 f (n) (x0) n! (x − x0)n = lim N →∞TN (x) lim N →∞TN (x) אם ורק אם קיים הגבול f (x) = Tf (x) ולכן .f (x) = lim N →∞TN (x) ובנוסף אם ורק אם f (x) = lim N →∞TN (x) נשים לב כי lim N →∞RN (x) = lim N →∞ (f (x) − TN (x)) = f (x) − lim N →∞TN (x) = 0 משפט השארית של טיילור: .0 ≤ N ∈ Z ויהי x0 < x כך ש x, x0 ∈ R תהיינה .[x0, x] פעמים ב N פונקציה הגזירה f תהי נניח כי .[x0, x] רציפה ב f (N ) .1 .(x0, x) גזירה ב f (N ) .2 שעבורה x0 < c < x אזי קיימת RN (x) = f (N +1) (c) (N + 1)! · (x − x0)N +1 הערה: .x0 > x המשפט נכון גם אם משפט: סדרה של מספרים ממשיים. (an)∞ n=0 ותהי x0 ∈ R תהי נביט בטור החזקות ∞ ∑ n=0 an (x − x0)n = a0 + a1 (x − x0) + a2 (x − x0)2 + ... , אזי טור החזקות שמתקבלx מתכנס ב ∞ ∑ n=0 an (x − x0)n . אם טור החזקותx ∈ R יהי .x מתכנס גם ב ∞ ∑ n=0 an·(x−x0)n+1 n+1 על ידי אינטגרציה איבר איבר, כלומר הטור 2",
+        "topicIds": [
+          "גבולות",
+          "טור-טיילור",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות",
+          "פולינום-טיילור"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-11-hebrew",
+          "filename": "Recitation 11-Hebrew.pdf",
+          "text": "הערה 3: . אזיx ∈ R תהי Tf (x) = lim N →∞ N ∑ n=0 f (n) (x0) n! (x − x0)n = lim N →∞TN (x) lim N →∞TN (x) אם ורק אם קיים הגבול f (x) = Tf (x) ולכן .f (x) = lim N →∞TN (x) ובנוסף אם ורק אם f (x) = lim N →∞TN (x) נשים לב כי lim N →∞RN (x) = lim N →∞ (f (x) − TN (x)) = f (x) − lim N →∞TN (x) = 0 משפט השארית של טיילור: .0 ≤ N ∈ Z ויהי x0 < x כך ש x, x0 ∈ R תהיינה .[x0, x] פעמים ב N פונקציה הגזירה f תהי נניח כי .[x0, x] רציפה ב f (N ) .1 .(x0, x) גזירה ב f (N ) .2 שעבורה x0 < c < x אזי קיימת RN (x) = f (N +1) (c) (N + 1)! · (x − x0)N +1 הערה: .x0 > x המשפט נכון גם אם משפט: סדרה של מספרים ממשיים. (an)∞ n=0 ותהי x0 ∈ R תהי נביט בטור החזקות ∞ ∑ n=0 an (x − x0)n = a0 + a1 (x − x0) + a2 (x − x0)2 + ... , אזי טור החזקות שמתקבלx מתכנס ב ∞ ∑ n=0 an (x − x0)n . אם טור החזקותx ∈ R יהי .x מתכנס גם ב ∞ ∑ n=0 an·(x−x0)n+1 n+1 על ידי אינטגרציה איבר איבר, כלומר הטור 2"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-11-hebrew-question-3",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-11-hebrew",
+        "questionNumber": "0",
+        "content": "דוגמאות: וחשבו x0 = 1 סביב x 6 = −2 המוגדרת לכל f (x) = x 2+x 1. מצאו את טור טיילור של את תחום ההתכנסות של הטור. פתרון: או להיעזר בטור 0 ≤ n ∈ Z לכל f (n) (1) יש לנו שתי אפשרויות: למצוא נוסחה ל גיאומטרי. נפתור תחילה בעזרת טור גיאומטרי f (x) = x 2 + x = x − 1 + 1 3 + x − 1 = (x − 1) · 1 3 · 1 1 + x−1 3 + 1 3 · 1 1 + x−1 3 = = 1 3 (x − 1) · ∞ ∑ n=0 ( − x − 1 3 )n + 1 3 ∞ ∑ n=0 ( − x − 1 3 )n = = ∞ ∑ n=0 (−1)n ( x − 1 3 )n+1 + 1 3 ∞ ∑ n=0 (−1)n ( x − 1 3 )n = k = n + 1 נבצע החלפת שמות אינדקסים רק עבור הטור הראשון בעזרת ∞ ∑ k=1 (−1)k−1 ( x − 1 3 )k + 1 3 ∞ ∑ n=0 (−1)n ( x − 1 3 )n = ∞ ∑ k=1 (−1) · (−1)k 3k (x − 1)k + ∞ ∑ n=0 (−1)n 3n+1 (x − 1)n בתחום ההתכנסות כאשר f (x) = ∞ ∑ n=0 an (x − 1)n אזי an = { (−1)·(−1)n 3n + (−1)n 3n+1 ∀n ∈ N 1 3 n = 0 נעשה מכנה משותף לחלק העליון ונקבל an = { −2·(−1)n 3n+1 ∀n ∈ N 1 3 n = 0 כאשר תחום ההתכנסות הוא ∣ ∣ ∣ ∣− x − 1 3 ∣ ∣ ∣ ∣ < 1 ⇒ −2 < x < 4 3",
+        "topicIds": [
+          "גבולות",
+          "טור-טיילור",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות",
+          "פולינום-טיילור"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-11-hebrew",
+          "filename": "Recitation 11-Hebrew.pdf",
+          "text": "דוגמאות: וחשבו x0 = 1 סביב x 6 = −2 המוגדרת לכל f (x) = x 2+x 1. מצאו את טור טיילור של את תחום ההתכנסות של הטור. פתרון: או להיעזר בטור 0 ≤ n ∈ Z לכל f (n) (1) יש לנו שתי אפשרויות: למצוא נוסחה ל גיאומטרי. נפתור תחילה בעזרת טור גיאומטרי f (x) = x 2 + x = x − 1 + 1 3 + x − 1 = (x − 1) · 1 3 · 1 1 + x−1 3 + 1 3 · 1 1 + x−1 3 = = 1 3 (x − 1) · ∞ ∑ n=0 ( − x − 1 3 )n + 1 3 ∞ ∑ n=0 ( − x − 1 3 )n = = ∞ ∑ n=0 (−1)n ( x − 1 3 )n+1 + 1 3 ∞ ∑ n=0 (−1)n ( x − 1 3 )n = k = n + 1 נבצע החלפת שמות אינדקסים רק עבור הטור הראשון בעזרת ∞ ∑ k=1 (−1)k−1 ( x − 1 3 )k + 1 3 ∞ ∑ n=0 (−1)n ( x − 1 3 )n = ∞ ∑ k=1 (−1) · (−1)k 3k (x − 1)k + ∞ ∑ n=0 (−1)n 3n+1 (x − 1)n בתחום ההתכנסות כאשר f (x) = ∞ ∑ n=0 an (x − 1)n אזי an = { (−1)·(−1)n 3n + (−1)n 3n+1 ∀n ∈ N 1 3 n = 0 נעשה מכנה משותף לחלק העליון ונקבל an = { −2·(−1)n 3n+1 ∀n ∈ N 1 3 n = 0 כאשר תחום ההתכנסות הוא ∣ ∣ ∣ ∣− x − 1 3 ∣ ∣ ∣ ∣ < 1 ⇒ −2 < x < 4 3"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-11-hebrew-question-4",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-11-hebrew",
+        "questionNumber": "0",
+        "content": ".f ממשפט היחידות נוכל לומר שזהו טור הטיילור של היות שעבדנו עם טור גיאומטרי, נוכל לומר שגם הטור שווה לפונקציה. ( שלכל0 ≤ n ∈ Z לכל an = f (n)(x0) n! ו x0 = 1 בעזרת גזירה נקבל )נזכור כי :x 6 = −2 f (x) = x 2 + x ⇒ f (1) = 1 2 + 1 = 1 3 ⇒ a0 = 1 3 0! = 1 3 f ′ (x) = 2 (2 + x)2 ⇒ f ′ (1) = 2 (2 + 1)2 = 2 32 ⇒ a1 = 2 32 1! = 2 32 f ′′ (x) = −2 · 2 (2 + x)3 ⇒ f ′′ (1) = −2 · 2 (2 + 1)3 = −2 · 2 33 ⇒ a2 = − 2·2 33 2! = − 2 33 f ′′′ (x) = 2 · 2 · 3 (2 + x)4 ⇒ f ′′′ (1) = 2 · 2 · 3 (2 + 1)4 = 2 · 2 · 3 34 ⇒ a3 = 2·2·3 34 3! = 2 34 בכל פעם שנגזור החזקה של המכנה תגדל ב 1, הסימן יתחלף, והמונה יוכפל בחזקה ואחרי צמצום ישאר במונה רק 2 עם n! של המכנה לפני הגזירה. לאחר מכן נחלק ב סימן מתחלף. ניתן להראות באינדוקציה שהנוסחה היא בדיוק כמו שראינו בטור הגיאומטרי, כלומר an = { −2·(−1)n 3n+1 ∀n ∈ N 1 3 n = 0 )ניתן למצוא את תחום ההתכנסות −2 < x < 4 לכל Tf (x) = ∞ ∑ n=0 an (x − 1) n אזי על ידי נוסחת המנה(. הפעם לא נוכל לומר שהטור שווה לפונקציה, כי לא הוכחנו שהשארית שואפת לאפס. 4",
+        "topicIds": [
+          "גבולות",
+          "טור-טיילור",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות",
+          "פולינום-טיילור"
+        ],
+        "difficulty": "hard",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-11-hebrew",
+          "filename": "Recitation 11-Hebrew.pdf",
+          "text": ".f ממשפט היחידות נוכל לומר שזהו טור הטיילור של היות שעבדנו עם טור גיאומטרי, נוכל לומר שגם הטור שווה לפונקציה. ( שלכל0 ≤ n ∈ Z לכל an = f (n)(x0) n! ו x0 = 1 בעזרת גזירה נקבל )נזכור כי :x 6 = −2 f (x) = x 2 + x ⇒ f (1) = 1 2 + 1 = 1 3 ⇒ a0 = 1 3 0! = 1 3 f ′ (x) = 2 (2 + x)2 ⇒ f ′ (1) = 2 (2 + 1)2 = 2 32 ⇒ a1 = 2 32 1! = 2 32 f ′′ (x) = −2 · 2 (2 + x)3 ⇒ f ′′ (1) = −2 · 2 (2 + 1)3 = −2 · 2 33 ⇒ a2 = − 2·2 33 2! = − 2 33 f ′′′ (x) = 2 · 2 · 3 (2 + x)4 ⇒ f ′′′ (1) = 2 · 2 · 3 (2 + 1)4 = 2 · 2 · 3 34 ⇒ a3 = 2·2·3 34 3! = 2 34 בכל פעם שנגזור החזקה של המכנה תגדל ב 1, הסימן יתחלף, והמונה יוכפל בחזקה ואחרי צמצום ישאר במונה רק 2 עם n! של המכנה לפני הגזירה. לאחר מכן נחלק ב סימן מתחלף. ניתן להראות באינדוקציה שהנוסחה היא בדיוק כמו שראינו בטור הגיאומטרי, כלומר an = { −2·(−1)n 3n+1 ∀n ∈ N 1 3 n = 0 )ניתן למצוא את תחום ההתכנסות −2 < x < 4 לכל Tf (x) = ∞ ∑ n=0 an (x − 1) n אזי על ידי נוסחת המנה(. הפעם ל",
+          "startOffset": 2603,
+          "endOffset": 3570
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-11-hebrew-question-5",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-11-hebrew",
+        "questionNumber": "0",
+        "content": "סביב x ≥ 0 המוגדרת לכל f (x) = √x של 4 2. מצאו את פולינום טיילור מסדר .x0 = 1 .∣ ∣R4 ( 1 2 )∣ ∣ < 7 256 ו R4 (2) < 7 256 הוכיחו ש פתרון: מתקיים x > 0 תחילה נמצא את הנגזרות של הפונקציה עד סדר חמישי. לכל f (0) (x) = x 1 2 ⇒ f (0) (1) = 1 f (1) (x) = 1 2 · x− 1 2 ⇒ f (1) (1) = 1 2 f (2) (x) = − 1 4 x− 3 2 ⇒ f (2) (1) = − 1 4 f (3) (x) = 3 8 x− 5 2 ⇒ f (3) (1) = 3 8 f (4) (x) = − 15 16 · x− 7 2 ⇒ f (4) (1) = − 15 16 f (5) (x) = 105 32 · x− 9 2 הוא x0 = 1 סביב √x של 4 לכן פולינום טיילור מסדר T4 (x) = 4 ∑ n=0 f (n) (1) n! · (x − 1)n = 1 + x − 1 2 · 1! − (x − 1)2 4 · 2! + 3 8 · (x − 1)3 3! − 15 16 · (x − 1)4 4! = 1 + x − 1 2 − (x − 1)2 8 + (x − 1)3 16 − 5 · (x − 1)4 128 כעת נעריך את השארית של הפולינום מסדר רביעי. :x = 2 עבור כך ש 1 < c < 2 ממשפט השארית של טיילור קיים R4 (2) = f (5) (c) 5! · (2 − 1)5 = 105 32 · c− 9 2 5! · (2 − 1)5 = 7 256c 9 2 < c>1 7 256 . 7 256 לכן נוכל לומר כי השגיאה קטנה מ 5",
+        "topicIds": [
+          "גבולות",
+          "טור-טיילור",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות",
+          "פולינום-טיילור"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-11-hebrew",
+          "filename": "Recitation 11-Hebrew.pdf",
+          "text": "סביב x ≥ 0 המוגדרת לכל f (x) = √x של 4 2. מצאו את פולינום טיילור מסדר .x0 = 1 .∣ ∣R4 ( 1 2 )∣ ∣ < 7 256 ו R4 (2) < 7 256 הוכיחו ש פתרון: מתקיים x > 0 תחילה נמצא את הנגזרות של הפונקציה עד סדר חמישי. לכל f (0) (x) = x 1 2 ⇒ f (0) (1) = 1 f (1) (x) = 1 2 · x− 1 2 ⇒ f (1) (1) = 1 2 f (2) (x) = − 1 4 x− 3 2 ⇒ f (2) (1) = − 1 4 f (3) (x) = 3 8 x− 5 2 ⇒ f (3) (1) = 3 8 f (4) (x) = − 15 16 · x− 7 2 ⇒ f (4) (1) = − 15 16 f (5) (x) = 105 32 · x− 9 2 הוא x0 = 1 סביב √x של 4 לכן פולינום טיילור מסדר T4 (x) = 4 ∑ n=0 f (n) (1) n! · (x − 1)n = 1 + x − 1 2 · 1! − (x − 1)2 4 · 2! + 3 8 · (x − 1)3 3! − 15 16 · (x − 1)4 4! = 1 + x − 1 2 − (x − 1)2 8 + (x − 1)3 16 − 5 · (x − 1)4 128 כעת נעריך את השארית של הפולינום מסדר רביעי. :x = 2 עבור כך ש 1 < c < 2 ממשפט השארית של טיילור קיים R4 (2) = f (5) (c) 5! · (2 − 1)5 = 105 32 · c− 9 2 5! · (2 − 1)5 = 7 256c 9 2 < c>1 7 256 . 7 256 לכן נוכל לומר כי השגיאה קטנה מ ",
+          "startOffset": 3586,
+          "endOffset": 4487
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-11-hebrew-question-6",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-11-hebrew",
+        "questionNumber": "2",
+        "content": "כלומר | √2 − T4 (2) |< 7 256 כאשר T4 (2) = 1 + 2 − 1 2 − (2 − 1)2 8 + (2 − 1)3 16 − 5 · (2 − 1)4 128 :x = 1 2 עבור כך ש 1 2 < c < 1 ממשפט השארית של טיילור קיים ∣ ∣R4 ( 1 2 )∣ ∣ = ∣ ∣ ∣ f (5)(c) 5! · ( 1 2 − 1)5∣ ∣ ∣ = ∣ ∣ ∣ 15·7 32 ·c− 9 2 5! · ( 1 2 − 1)5 ∣ ∣ ∣ = 7 256c 9 2 · ( 1 2 )5 < c> 1 2 7 256 · ( 1 2 ) 9 2 · ( 1 2 )5 = 7 256 · √ 1 2 < √ 1 2 <1 7 256 . 7 256 לכן נוכל לומר כי השגיאה קטנה מ כלומר | √ 1 2 − T4 ( 1 2 ) |< 7 256 כאשר T4 ( 1 2 ) = 1 + 1 2 − 1 2 − ( 1 2 − 1)2 8 + ( 1 2 − 1)3 16 − 5 · ( 1 2 − 1)4 128 6",
+        "topicIds": [
+          "גבולות",
+          "טור-טיילור",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות",
+          "פולינום-טיילור"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-11-hebrew",
+          "filename": "Recitation 11-Hebrew.pdf",
+          "text": "כלומר | √2 − T4 (2) |< 7 256 כאשר T4 (2) = 1 + 2 − 1 2 − (2 − 1)2 8 + (2 − 1)3 16 − 5 · (2 − 1)4 128 :x = 1 2 עבור כך ש 1 2 < c < 1 ממשפט השארית של טיילור קיים ∣ ∣R4 ( 1 2 )∣ ∣ = ∣ ∣ ∣ f (5)(c) 5! · ( 1 2 − 1)5∣ ∣ ∣ = ∣ ∣ ∣ 15·7 32 ·c− 9 2 5! · ( 1 2 − 1)5 ∣ ∣ ∣ = 7 256c 9 2 · ( 1 2 )5 < c> 1 2 7 256 · ( 1 2 ) 9 2 · ( 1 2 )5 = 7 256 · √ 1 2 < √ 1 2 <1 7 256 . 7 256 לכן נוכל לומר כי השגיאה קטנה מ כלומר | √ 1 2 − T4 ( 1 2 ) |< 7 256 כאשר T4 ( 1 2 ) = 1 + 1 2 − 1 2 − ( 1 2 − 1)2 8 + ( 1 2 − 1)3 16 − 5 · ( 1 2 − 1)4 128 6"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-11-hebrew-question-7",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-11-hebrew",
+        "questionNumber": "1",
+        "content": ", 1 9!·9 עם שגיאה שלא עולה על ∫ 1 0 sin x x dx 3. חשבו את .| ∫ 1 0 sin x x dx − α |≤ 1 9·9! כך ש α ∈ Q כלומר מצאו פתרון: נשתמש בטור טיילור ונקבל ∫ 1 0 sin x x dx = ∫ 1 0     ∞ ∑ n=0 (−1)n (2n+1)! · x2n+1dx x dx     = ∫ 1 0 ( ∞ ∑ n=0 (−1)n (2n + 1)! · x2ndx ) = נבצע אינטגרציה איבר איבר ונקבל ∞ ∑ n=0 ∫ 1 0 (−1)n (2n + 1)! · x2ndx = ∞ ∑ n=0 (−1)n (2n + 1)! ∫ 1 0 x2ndx = ∞ ∑ n=0 (−1)n (2n + 1)! [ x2n+1 2n + 1 ]1 0 = ∞ ∑ n=0 (−1)n (2n + 1) · (2n + 1)! . 1 9!·9 כעת נרצה למצוא כמה איברים עלינו לסכום על מנת שהשגיאה לא תעלה על נשים לב שהטור שקיבלנו הוא טור מהצורה של לייבניץ! s ∈ R זנב של טור לייבניץ, אז הטור מתכנס לערך ∞ ∑ n=k (−1)n+1 · an תזכורת: יהי ומתקיים ak − ak+1 ≤| s |≤ ak ננסה להציב מספר איברים לסכום על מנת להבין את החוקיות ∞ ∑ n=0 (−1)n (2n + 1) · (2n + 1)! = 1− 1 3 · 3! + 1 5 · 5! − 1 7 · 7! + 1 9 · 9! − 1 11 · 11! + 1 13 · 13! +... אז ∣ ∣ 1 9·9! − 1 11·11! + 1 13·13! + ...∣ ∣ ≤ 1 9 · 9! לכן קיבלנו ∫ 1 0 sin x x dx = 1 − 1 3 · 3! + 1 5 · 5! − 1 7 · 7! + error , כלומר 1 9!·9 כאשר השגיאה חסומה על ידי α = 1 − 1 3 · 3! + 1 5 · 5! − 1 7 · 7! מסגירות הרציונליים. α ∈ Q ו 7",
+        "topicIds": [
+          "גבולות",
+          "טור-טיילור",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות",
+          "פולינום-טיילור"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-11-hebrew",
+          "filename": "Recitation 11-Hebrew.pdf",
+          "text": ", 1 9!·9 עם שגיאה שלא עולה על ∫ 1 0 sin x x dx 3. חשבו את .| ∫ 1 0 sin x x dx − α |≤ 1 9·9! כך ש α ∈ Q כלומר מצאו פתרון: נשתמש בטור טיילור ונקבל ∫ 1 0 sin x x dx = ∫ 1 0     ∞ ∑ n=0 (−1)n (2n+1)! · x2n+1dx x dx     = ∫ 1 0 ( ∞ ∑ n=0 (−1)n (2n + 1)! · x2ndx ) = נבצע אינטגרציה איבר איבר ונקבל ∞ ∑ n=0 ∫ 1 0 (−1)n (2n + 1)! · x2ndx = ∞ ∑ n=0 (−1)n (2n + 1)! ∫ 1 0 x2ndx = ∞ ∑ n=0 (−1)n (2n + 1)! [ x2n+1 2n + 1 ]1 0 = ∞ ∑ n=0 (−1)n (2n + 1) · (2n + 1)! . 1 9!·9 כעת נרצה למצוא כמה איברים עלינו לסכום על מנת שהשגיאה לא תעלה על נשים לב שהטור שקיבלנו הוא טור מהצורה של לייבניץ! s ∈ R זנב של טור לייבניץ, אז הטור מתכנס לערך ∞ ∑ n=k (−1)n+1 · an תזכורת: יהי ומתקיים ak − ak+1 ≤| s |≤ ak ננסה להציב מספר איברים לסכום על מנת להבין את החוקיות ∞ ∑ n=0 (−1)n (2n + 1) · (2n + 1)! = 1− 1 3 · 3! + 1 5 · 5! − 1 7 · 7! + 1 9 · 9! − 1 11 · 11! + 1 13 · 13! +... אז ∣ ∣ 1 9·9! − 1 11·11! + 1 13·13! + ...∣ ∣ ≤"
+        },
+        "confidence": 0.56
+      }
+    ],
+    "solutionPatterns": [],
+    "techniques": [
+      "טיילור",
+      "גבול"
+    ],
+    "commonMistakes": [],
+    "linkedLectureNumber": 10,
+    "topicOverlapWithLinkedLecture": [
+      "טורים",
+      "סדרות"
+    ],
+    "mappingNeedsReview": false,
+    "examRelevanceNotes": [],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "recitation-recitation-11-hebrew",
+        "filename": "Recitation 11-Hebrew.pdf",
+        "text": "תרגול 11 היום: פולינום טיילור. • טור טיילור. • שארית של טיילור. • תזכורת: יחידות טור החזקות: סדרה של מספרים ממשיים. (an)∞ n=0 ותהי x0 ∈ R יהי .R > 0 ונניח כי ∞ ∑ n=0 an (x − x0)n רדיוס ההתכנסות של טור החזקות R יהי .| x − x0 |< R לכל f (x) = ∞ ∑ n=0 an (x − x0)n נביט בפונקציה המוגדרת על ידי .an = f (n)(x0) n! ובנוסף, x0 פעמים ב n גזירה f ,0 ≤ n ∈ Z אזי לכל טור טיילור: .x0 פונקציה המוגדרת בסביבה של f ותהי x0 ∈ R תהי .(0 ≤ n ∈ Z קיימת לכל f (n) (x0) )כלומר x0 פעמים ב ∞ גזירה f נניח ש מוגדר להיות x0 סביב f טור הטיילור של Tf (x) = ∞ ∑ n=0 f (n) (x0) n! (x − x0)n פולינום הטיילור: .x0 פעמים ב N פונקציה הגזירה f . תהי0 ≤ N ∈ Z ויהי x0 ∈ R תהי מוגדר להיות x0 סביב f של N פולינום הטיילור מסדר TN (x) = N ∑ n=0 f (n) (x0) n! · (x − x0)n מוגדרת להיות N מסדר x0 סביב f שארית הטיילור של RN (x) = f (x) − TN (x) 1"
+      },
+      {
+        "sourceFileId": "recitation-recitation-11-hebrew",
+        "filename": "Recitation 11-Hebrew.pdf",
+        "text": "הערה 3: . אזיx ∈ R תהי Tf (x) = lim N →∞ N ∑ n=0 f (n) (x0) n! (x − x0)n = lim N →∞TN (x) lim N →∞TN (x) אם ורק אם קיים הגבול f (x) = Tf (x) ולכן .f (x) = lim N →∞TN (x) ובנוסף אם ורק אם f (x) = lim N →∞TN (x) נשים לב כי lim N →∞RN (x) = lim N →∞ (f (x) − TN (x)) = f (x) − lim N →∞TN (x) = 0 משפט השארית של טיילור: .0 ≤ N ∈ Z ויהי x0 < x כך ש x, x0 ∈ R תהיינה .[x0, x] פעמים ב N פונקציה הגזירה f תהי נניח כי .[x0, x] רציפה ב f (N ) .1 .(x0, x) גזירה ב f (N ) .2 שעבורה x0 < c < x אזי קיימת RN (x) = f (N +1) (c) (N + 1)! · (x − x0)N +1 הערה: .x0 > x המשפט נכון גם אם משפט: סדרה של מספרים ממשיים. (an)∞ n=0 ותהי x0 ∈ R תהי נביט בטור החזקות ∞ ∑ n=0 an (x − x0)n = a0 + a1 (x − x0) + a2 (x − x0)2 + ... , אזי טור החזקות שמתקבלx מתכנס ב ∞ ∑ n=0 an (x − x0)n . אם טור החזקותx ∈ R יהי .x מתכנס גם ב ∞ ∑ n=0 an·(x−x0)n+1 n+1 על ידי אינטגרציה איבר איבר, כלומר הטור 2"
+      },
+      {
+        "sourceFileId": "recitation-recitation-11-hebrew",
+        "filename": "Recitation 11-Hebrew.pdf",
+        "text": "דוגמאות: וחשבו x0 = 1 סביב x 6 = −2 המוגדרת לכל f (x) = x 2+x 1. מצאו את טור טיילור של את תחום ההתכנסות של הטור. פתרון: או להיעזר בטור 0 ≤ n ∈ Z לכל f (n) (1) יש לנו שתי אפשרויות: למצוא נוסחה ל גיאומטרי. נפתור תחילה בעזרת טור גיאומטרי f (x) = x 2 + x = x − 1 + 1 3 + x − 1 = (x − 1) · 1 3 · 1 1 + x−1 3 + 1 3 · 1 1 + x−1 3 = = 1 3 (x − 1) · ∞ ∑ n=0 ( − x − 1 3 )n + 1 3 ∞ ∑ n=0 ( − x − 1 3 )n = = ∞ ∑ n=0 (−1)n ( x − 1 3 )n+1 + 1 3 ∞ ∑ n=0 (−1)n ( x − 1 3 )n = k = n + 1 נבצע החלפת שמות אינדקסים רק עבור הטור הראשון בעזרת ∞ ∑ k=1 (−1)k−1 ( x − 1 3 )k + 1 3 ∞ ∑ n=0 (−1)n ( x − 1 3 )n = ∞ ∑ k=1 (−1) · (−1)k 3k (x − 1)k + ∞ ∑ n=0 (−1)n 3n+1 (x − 1)n בתחום ההתכנסות כאשר f (x) = ∞ ∑ n=0 an (x − 1)n אזי an = { (−1)·(−1)n 3n + (−1)n 3n+1 ∀n ∈ N 1 3 n = 0 נעשה מכנה משותף לחלק העליון ונקבל an = { −2·(−1)n 3n+1 ∀n ∈ N 1 3 n = 0 כאשר תחום ההתכנסות הוא ∣ ∣ ∣ ∣− x − 1 3 ∣ ∣ ∣ ∣ < 1 ⇒ −2 < x < 4 3"
+      },
+      {
+        "sourceFileId": "recitation-recitation-11-hebrew",
+        "filename": "Recitation 11-Hebrew.pdf",
+        "text": ".f ממשפט היחידות נוכל לומר שזהו טור הטיילור של היות שעבדנו עם טור גיאומטרי, נוכל לומר שגם הטור שווה לפונקציה. ( שלכל0 ≤ n ∈ Z לכל an = f (n)(x0) n! ו x0 = 1 בעזרת גזירה נקבל )נזכור כי :x 6 = −2 f (x) = x 2 + x ⇒ f (1) = 1 2 + 1 = 1 3 ⇒ a0 = 1 3 0! = 1 3 f ′ (x) = 2 (2 + x)2 ⇒ f ′ (1) = 2 (2 + 1)2 = 2 32 ⇒ a1 = 2 32 1! = 2 32 f ′′ (x) = −2 · 2 (2 + x)3 ⇒ f ′′ (1) = −2 · 2 (2 + 1)3 = −2 · 2 33 ⇒ a2 = − 2·2 33 2! = − 2 33 f ′′′ (x) = 2 · 2 · 3 (2 + x)4 ⇒ f ′′′ (1) = 2 · 2 · 3 (2 + 1)4 = 2 · 2 · 3 34 ⇒ a3 = 2·2·3 34 3! = 2 34 בכל פעם שנגזור החזקה של המכנה תגדל ב 1, הסימן יתחלף, והמונה יוכפל בחזקה ואחרי צמצום ישאר במונה רק 2 עם n! של המכנה לפני הגזירה. לאחר מכן נחלק ב סימן מתחלף. ניתן להראות באינדוקציה שהנוסחה היא בדיוק כמו שראינו בטור הגיאומטרי, כלומר an = { −2·(−1)n 3n+1 ∀n ∈ N 1 3 n = 0 )ניתן למצוא את תחום ההתכנסות −2 < x < 4 לכל Tf (x) = ∞ ∑ n=0 an (x − 1) n אזי על ידי נוסחת המנה(. הפעם ל",
+        "startOffset": 2603,
+        "endOffset": 3570
+      }
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
+    "recitationNumber": 12,
+    "weekNumber": 12,
+    "practicedLectureNumber": 11,
+    "sourceFileId": "recitation-recitation-12-hebrew",
+    "filename": "Recitation 12-Hebrew.pdf",
+    "practicedTopics": [
+      "גבולות",
+      "נגזרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "questions": [
+      {
+        "id": "recitation-recitation-12-hebrew-question-1",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-12-hebrew",
+        "questionNumber": "12",
+        "content": "תרגול 12 היום: פונקציות עם שני משתנים. • תזכורת: .(x0, y0) פונקציה המוגדרת בסביבה של F : R2 → R ותהי (x0, y0) ∈ R2 תהי אם (x0, y0) תקרא רציפה ב F lim (x,y)→(x0,y0)F (x, y) = F (x0, y0) המוגדרת על ידי F : R2 → R . נביט בפונקציהa ∈ R 1. יהי F (x, y) = { x2−y2 x2+y2 (x, y) 6 = (0, 0) a (x, y) = (0, 0) .(0, 0) קבעו האם הפונקציה רציפה ב פתרון: במספר מסלולים. (0, 0) נבדוק את הגבול ב נקבל y = 0 עבור lim (x,y)→(0,0)F (x, y) = lim (x,y)→(0,0) x2 − y2 x2 + y2 = y=0 lim x→0 x2 x2 = lim x→01 = 1 נקבל x = 0 עבור lim (x,y)→(0,0)F (x, y) = lim (x,y)→(0,0) x2 − y2 x2 + y2 = x=0 lim y→0 −y2 y2 = lim y→0 − 1 = −1 לכן הגבול לא קיים והפונקציה לא רציפה. 1",
+        "topicIds": [
+          "גבולות",
+          "נגזרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-12-hebrew",
+          "filename": "Recitation 12-Hebrew.pdf",
+          "text": "תרגול 12 היום: פונקציות עם שני משתנים. • תזכורת: .(x0, y0) פונקציה המוגדרת בסביבה של F : R2 → R ותהי (x0, y0) ∈ R2 תהי אם (x0, y0) תקרא רציפה ב F lim (x,y)→(x0,y0)F (x, y) = F (x0, y0) המוגדרת על ידי F : R2 → R . נביט בפונקציהa ∈ R 1. יהי F (x, y) = { x2−y2 x2+y2 (x, y) 6 = (0, 0) a (x, y) = (0, 0) .(0, 0) קבעו האם הפונקציה רציפה ב פתרון: במספר מסלולים. (0, 0) נבדוק את הגבול ב נקבל y = 0 עבור lim (x,y)→(0,0)F (x, y) = lim (x,y)→(0,0) x2 − y2 x2 + y2 = y=0 lim x→0 x2 x2 = lim x→01 = 1 נקבל x = 0 עבור lim (x,y)→(0,0)F (x, y) = lim (x,y)→(0,0) x2 − y2 x2 + y2 = x=0 lim y→0 −y2 y2 = lim y→0 − 1 = −1 לכן הגבול לא קיים והפונקציה לא רציפה. 1"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-12-hebrew-question-2",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-12-hebrew",
+        "questionNumber": "0",
+        "content": "(0, 0) 2. הראו שלפונקציה יש אי רציפות סליקה ב F (x, y) = { e−x2−y2 −1 x2+y2 (x, y) 6 = (0, 0) 0 (x, y) = (0, 0) פתרון: נחשב את הגבול lim (x,y)→(0,0)F (x, y) = lim (x,y)→(0,0) e−x2−y2 − 1 x2 + y2 = t=x2+y2 lim t→0+ e−t − 1 t = L lim t→0+ −e−t 1 = −1 ולכן לפונקציה יש אי רציפות סליקה. F (0, 0) = 0 , אבל1 הגבול קיים ושווה ל 3. חשבו את הגבול הבא או הוכיחו שאינו קיים lim (x,y)→(0,0) x2y x4 + y2 פתרון: במספר מסלולים. (0, 0) נבדוק את הגבול ב ,y = ax נבדוק את המסלול a 6 = 0 ראשית עבור lim (x,y)→(0,0) x2y x4 + y2 = y=ax lim x→0 x2 · ax x4 + (ax)2 = lim x→0 ax3 x4 + a2x2 = lim x→0 ax x2 + a2 = 0 נקבל y = 0 עבור lim (x,y)→(0,0) x2y x4 + y2 = y=0 lim x→0 0 x4 = lim x→00 = 0 ונקבל y = x2 נסתכל כעת על המסלול lim (x,y)→(0,0) x2y x4 + y2 = y=x2 lim x→0 x2 · x2 x4 + (x2)2 = lim x→0 x4 2x4 = lim x→0 1 2 = 1 2 לכן הגבול לא קיים. 2",
+        "topicIds": [
+          "גבולות",
+          "נגזרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-12-hebrew",
+          "filename": "Recitation 12-Hebrew.pdf",
+          "text": "(0, 0) 2. הראו שלפונקציה יש אי רציפות סליקה ב F (x, y) = { e−x2−y2 −1 x2+y2 (x, y) 6 = (0, 0) 0 (x, y) = (0, 0) פתרון: נחשב את הגבול lim (x,y)→(0,0)F (x, y) = lim (x,y)→(0,0) e−x2−y2 − 1 x2 + y2 = t=x2+y2 lim t→0+ e−t − 1 t = L lim t→0+ −e−t 1 = −1 ולכן לפונקציה יש אי רציפות סליקה. F (0, 0) = 0 , אבל1 הגבול קיים ושווה ל 3. חשבו את הגבול הבא או הוכיחו שאינו קיים lim (x,y)→(0,0) x2y x4 + y2 פתרון: במספר מסלולים. (0, 0) נבדוק את הגבול ב ,y = ax נבדוק את המסלול a 6 = 0 ראשית עבור lim (x,y)→(0,0) x2y x4 + y2 = y=ax lim x→0 x2 · ax x4 + (ax)2 = lim x→0 ax3 x4 + a2x2 = lim x→0 ax x2 + a2 = 0 נקבל y = 0 עבור lim (x,y)→(0,0) x2y x4 + y2 = y=0 lim x→0 0 x4 = lim x→00 = 0 ונקבל y = x2 נסתכל כעת על המסלול lim (x,y)→(0,0) x2y x4 + y2 = y=x2 lim x→0 x2 · x2 x4 + (x2)2 = lim x→0 x4 2x4 = lim x→0 1 2 = 1 2 לכן הגבול לא קיים. 2",
+          "startOffset": 658,
+          "endOffset": 1480
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-12-hebrew-question-3",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-12-hebrew",
+        "questionNumber": "4",
+        "content": "4. חשבו את הגבול הבא או הוכיחו שאינו קיים lim (x,y)→(0,0) xy2 x4 + y2 פתרון: נוכיח שהגבול קיים בעזרת משפט הסנדוויץ'. מתקיים (x, y) 6 = (0, 0) נשים לב שלכל 0 ≤ ∣ ∣ ∣ xy2 x4+y2 ∣ ∣ ∣ =| x | ∣ ∣ ∣ y2 x4+y2 ∣ ∣ ∣ ≤| x | . lim (x,y)→(0,0) xy2 x4+y2 = 0 ולכן lim (x,y)→(0,0) ∣ ∣ ∣ xy2 x4+y2 ∣ ∣ ∣ = 0 ולכן ממשפט הסנדוויץ' 5. חשבו את הגבול הבא או הוכיחו שאינו קיים lim (x,y)→(0,0) x2y3 x4 + 2y6 במספר מסלולים. (0, 0) נבדוק את הגבול ב y = ax נבדוק את המסלול a 6 = 0 ראשית עבור lim (x,y)→(0,0) x2y3 x4 + 2y6 = y=ax lim x→0 x2 (ax)3 x4 + 2 (ax)6 = lim x→0 ax5 x4 + 2a6x6 = lim x→0 ax 1 + 2a6x2 = 0 נקבל y = 0 עבור lim (x,y)→(0,0) x2y3 x4 + 2y6 = y=0 lim x→0 0 x4 = lim x→00 = 0 ונקבל y = x 2 3 עבור lim (x,y)→(0,0) x2y3 x4 + 2y6 = y=x 2 3 lim x→0 x2 ( x 2 3 )3 x4 + 2 ( x 2 3 )6 = lim x→0 x4 x4 + 2x4 = lim x→0 1 3 = 1 3 3",
+        "topicIds": [
+          "גבולות",
+          "נגזרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-12-hebrew",
+          "filename": "Recitation 12-Hebrew.pdf",
+          "text": "4. חשבו את הגבול הבא או הוכיחו שאינו קיים lim (x,y)→(0,0) xy2 x4 + y2 פתרון: נוכיח שהגבול קיים בעזרת משפט הסנדוויץ'. מתקיים (x, y) 6 = (0, 0) נשים לב שלכל 0 ≤ ∣ ∣ ∣ xy2 x4+y2 ∣ ∣ ∣ =| x | ∣ ∣ ∣ y2 x4+y2 ∣ ∣ ∣ ≤| x | . lim (x,y)→(0,0) xy2 x4+y2 = 0 ולכן lim (x,y)→(0,0) ∣ ∣ ∣ xy2 x4+y2 ∣ ∣ ∣ = 0 ולכן ממשפט הסנדוויץ' 5. חשבו את הגבול הבא או הוכיחו שאינו קיים lim (x,y)→(0,0) x2y3 x4 + 2y6 במספר מסלולים. (0, 0) נבדוק את הגבול ב y = ax נבדוק את המסלול a 6 = 0 ראשית עבור lim (x,y)→(0,0) x2y3 x4 + 2y6 = y=ax lim x→0 x2 (ax)3 x4 + 2 (ax)6 = lim x→0 ax5 x4 + 2a6x6 = lim x→0 ax 1 + 2a6x2 = 0 נקבל y = 0 עבור lim (x,y)→(0,0) x2y3 x4 + 2y6 = y=0 lim x→0 0 x4 = lim x→00 = 0 ונקבל y = x 2 3 עבור lim (x,y)→(0,0) x2y3 x4 + 2y6 = y=x 2 3 lim x→0 x2 ( x 2 3 )3 x4 + 2 ( x 2 3 )6 = lim x→0 x4 x4 + 2x4 = lim x→0 1 3 = 1 3 3",
+          "startOffset": 1496,
+          "endOffset": 2308
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-12-hebrew-question-4",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-12-hebrew",
+        "questionNumber": "2",
+        "content": "F (x, y) = ex · sin y − x + 2y + 3 המוגדרת על ידי F : R2 → R 6. נביט בפונקציה .(x, y) ∈ R2 לכל לכל F ′′ yy (x, y) ,F ′′ yx (x, y) ,F ′′ xy (x, y) ,F ′′ xx (x, y) ,F ′ y (x, y) ,F ′ x (x, y) חשבו את .(x, y) ∈ R2 פתרון: מתקיים (x, y) ∈ R2 לכל F ′ x (x, y) = ex · sin y − 1, F ′ y (x, y) = ex · cos y + 2 F ′′ xx (x, y) = ex · sin y F ′′ xy (x, y) = ex · cos y F ′′ yx (x, y) = ex · cos y F ′′ yy (x, y) = −ex · sin y המוגדרת על ידי F : R2 → R 7. נביט בפונקציה F (x, y) = { sin(xy) x2+y2 (x, y) 6 = (0, 0) 0 (x, y) = (0, 0) .(x, y) ∈ R2 לכל F ′ y (x, y) ,F ′ x (x, y) חשבו את הנגזרות החלקיות פתרון: (x, y) 6 = (0, 0) לכל F ′ x (x, y) = cos (xy) · y · (x2 + y2) − sin (xy) · 2x (x2 + y2)2 F ′ y (x, y) = cos (xy) · x · (x2 + y2) − sin (xy) · 2y (x2 + y2)2 נחשב בעזרת ההגדרה (x, y) = (0, 0) עבור F ′ x (0, 0) = lim h→0 F (h, 0) − F (0, 0) h = lim h→0 0 h = lim h→00 = 0 F ′ y (0, 0) = lim h→0 F (0, h) − F (0, 0) h = lim h→0 0 h = lim h→00 = 0 4",
+        "topicIds": [
+          "גבולות",
+          "נגזרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-12-hebrew",
+          "filename": "Recitation 12-Hebrew.pdf",
+          "text": "F (x, y) = ex · sin y − x + 2y + 3 המוגדרת על ידי F : R2 → R 6. נביט בפונקציה .(x, y) ∈ R2 לכל לכל F ′′ yy (x, y) ,F ′′ yx (x, y) ,F ′′ xy (x, y) ,F ′′ xx (x, y) ,F ′ y (x, y) ,F ′ x (x, y) חשבו את .(x, y) ∈ R2 פתרון: מתקיים (x, y) ∈ R2 לכל F ′ x (x, y) = ex · sin y − 1, F ′ y (x, y) = ex · cos y + 2 F ′′ xx (x, y) = ex · sin y F ′′ xy (x, y) = ex · cos y F ′′ yx (x, y) = ex · cos y F ′′ yy (x, y) = −ex · sin y המוגדרת על ידי F : R2 → R 7. נביט בפונקציה F (x, y) = { sin(xy) x2+y2 (x, y) 6 = (0, 0) 0 (x, y) = (0, 0) .(x, y) ∈ R2 לכל F ′ y (x, y) ,F ′ x (x, y) חשבו את הנגזרות החלקיות פתרון: (x, y) 6 = (0, 0) לכל F ′ x (x, y) = cos (xy) · y · (x2 + y2) − sin (xy) · 2x (x2 + y2)2 F ′ y (x, y) = cos (xy) · x · (x2 + y2) − sin (xy) · 2y (x2 + y2)2 נחשב בעזרת ההגדרה (x, y) = (0, 0) עבור F ′ x (0, 0) = lim h→0 F (h, 0) − F (0, 0) h = lim h→0 0 h = lim h→00 = 0 F ′ y (0, 0) = lim h→0 F (0, h) − F",
+          "startOffset": 2324,
+          "endOffset": 3264
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-12-hebrew-question-5",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-12-hebrew",
+        "questionNumber": "2",
+        "content": "המוגדרת על ידי F : R2 → R 8. נביט בפונקציה F (x, y) =    x3+y2 √x2+y2 (x, y) 6 = (0, 0) 0 (x, y) = (0, 0) או הוכיחו שאינם (x, y) ∈ R2 לכל F ′ y (x, y) ,F ′ x (x, y) חשבו את הנגזרות החלקיות קיימים. פתרון: (x, y) 6 = (0, 0) לכל F ′ x (x, y) = 3x2 · (√ x2 + y2 ) − 2x 2√x2+y2 · (x3 + y2) x2 + y2 F ′ y (x, y) = 2y · (√ x2 + y2 ) − 2y 2√x2+y2 · (x3 + y2) x2 + y2 נחשב בעזרת ההגדרה (x, y) = (0, 0) עבור F ′ x (0, 0) = lim h→0 F (h, 0) − F (0, 0) h = lim h→0 h3 √h2 − 0 h = lim h→0 h2 | h | = lim h→0 | h |2 | h | = lim h→0 | h |= 0 F ′ y (0, 0) = lim h→0 F (0, h) − F (0, 0) h = 03+h2 √02+h2 − 0 h = lim h→0 h | h | נפריד לגבולות חד צדדיים ונקבל lim h→0+ h | h | = lim h→0+ h h = lim h→0+ 1 = 1 lim h→0− h | h | = lim h→0− h −h = lim h→0− − 1 = −1 לא קיים. F ′ y (0, 0) ולכן 5",
+        "topicIds": [
+          "גבולות",
+          "נגזרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-12-hebrew",
+          "filename": "Recitation 12-Hebrew.pdf",
+          "text": "המוגדרת על ידי F : R2 → R 8. נביט בפונקציה F (x, y) =    x3+y2 √x2+y2 (x, y) 6 = (0, 0) 0 (x, y) = (0, 0) או הוכיחו שאינם (x, y) ∈ R2 לכל F ′ y (x, y) ,F ′ x (x, y) חשבו את הנגזרות החלקיות קיימים. פתרון: (x, y) 6 = (0, 0) לכל F ′ x (x, y) = 3x2 · (√ x2 + y2 ) − 2x 2√x2+y2 · (x3 + y2) x2 + y2 F ′ y (x, y) = 2y · (√ x2 + y2 ) − 2y 2√x2+y2 · (x3 + y2) x2 + y2 נחשב בעזרת ההגדרה (x, y) = (0, 0) עבור F ′ x (0, 0) = lim h→0 F (h, 0) − F (0, 0) h = lim h→0 h3 √h2 − 0 h = lim h→0 h2 | h | = lim h→0 | h |2 | h | = lim h→0 | h |= 0 F ′ y (0, 0) = lim h→0 F (0, h) − F (0, 0) h = 03+h2 √02+h2 − 0 h = lim h→0 h | h | נפריד לגבולות חד צדדיים ונקבל lim h→0+ h | h | = lim h→0+ h h = lim h→0+ 1 = 1 lim h→0− h | h | = lim h→0− h −h = lim h→0− − 1 = −1 לא קיים. F ′ y (0, 0) ולכן 5",
+          "startOffset": 3280,
+          "endOffset": 4054
+        },
+        "confidence": 0.56
+      }
+    ],
+    "solutionPatterns": [
+      {
+        "id": "recitation-recitation-12-hebrew-proof-pattern-1",
+        "title": "4",
+        "patternType": "limit",
+        "steps": [
+          "Identify the relevant assumptions from the source statement.",
+          "Reduce the claim to a limit statement.",
+          "Construct or justify the required existence statement.",
+          "Close the argument using the cited theorem or criterion."
+        ],
+        "topicIds": [
+          "גבולות",
+          "נגזרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "sourceFileIds": [
+          "recitation-recitation-12-hebrew"
+        ],
+        "relatedQuestionIds": [],
+        "commonMistakes": [],
+        "examImportance": "medium",
+        "confidence": 0.52
+      }
+    ],
+    "techniques": [
+      "גבול"
+    ],
+    "commonMistakes": [],
+    "linkedLectureNumber": 11,
+    "topicOverlapWithLinkedLecture": [
+      "גבולות"
+    ],
+    "mappingNeedsReview": false,
+    "examRelevanceNotes": [],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "recitation-recitation-12-hebrew",
+        "filename": "Recitation 12-Hebrew.pdf",
+        "text": "תרגול 12 היום: פונקציות עם שני משתנים. • תזכורת: .(x0, y0) פונקציה המוגדרת בסביבה של F : R2 → R ותהי (x0, y0) ∈ R2 תהי אם (x0, y0) תקרא רציפה ב F lim (x,y)→(x0,y0)F (x, y) = F (x0, y0) המוגדרת על ידי F : R2 → R . נביט בפונקציהa ∈ R 1. יהי F (x, y) = { x2−y2 x2+y2 (x, y) 6 = (0, 0) a (x, y) = (0, 0) .(0, 0) קבעו האם הפונקציה רציפה ב פתרון: במספר מסלולים. (0, 0) נבדוק את הגבול ב נקבל y = 0 עבור lim (x,y)→(0,0)F (x, y) = lim (x,y)→(0,0) x2 − y2 x2 + y2 = y=0 lim x→0 x2 x2 = lim x→01 = 1 נקבל x = 0 עבור lim (x,y)→(0,0)F (x, y) = lim (x,y)→(0,0) x2 − y2 x2 + y2 = x=0 lim y→0 −y2 y2 = lim y→0 − 1 = −1 לכן הגבול לא קיים והפונקציה לא רציפה. 1"
+      },
+      {
+        "sourceFileId": "recitation-recitation-12-hebrew",
+        "filename": "Recitation 12-Hebrew.pdf",
+        "text": "(0, 0) 2. הראו שלפונקציה יש אי רציפות סליקה ב F (x, y) = { e−x2−y2 −1 x2+y2 (x, y) 6 = (0, 0) 0 (x, y) = (0, 0) פתרון: נחשב את הגבול lim (x,y)→(0,0)F (x, y) = lim (x,y)→(0,0) e−x2−y2 − 1 x2 + y2 = t=x2+y2 lim t→0+ e−t − 1 t = L lim t→0+ −e−t 1 = −1 ולכן לפונקציה יש אי רציפות סליקה. F (0, 0) = 0 , אבל1 הגבול קיים ושווה ל 3. חשבו את הגבול הבא או הוכיחו שאינו קיים lim (x,y)→(0,0) x2y x4 + y2 פתרון: במספר מסלולים. (0, 0) נבדוק את הגבול ב ,y = ax נבדוק את המסלול a 6 = 0 ראשית עבור lim (x,y)→(0,0) x2y x4 + y2 = y=ax lim x→0 x2 · ax x4 + (ax)2 = lim x→0 ax3 x4 + a2x2 = lim x→0 ax x2 + a2 = 0 נקבל y = 0 עבור lim (x,y)→(0,0) x2y x4 + y2 = y=0 lim x→0 0 x4 = lim x→00 = 0 ונקבל y = x2 נסתכל כעת על המסלול lim (x,y)→(0,0) x2y x4 + y2 = y=x2 lim x→0 x2 · x2 x4 + (x2)2 = lim x→0 x4 2x4 = lim x→0 1 2 = 1 2 לכן הגבול לא קיים. 2",
+        "startOffset": 658,
+        "endOffset": 1480
+      },
+      {
+        "sourceFileId": "recitation-recitation-12-hebrew",
+        "filename": "Recitation 12-Hebrew.pdf",
+        "text": "4. חשבו את הגבול הבא או הוכיחו שאינו קיים lim (x,y)→(0,0) xy2 x4 + y2 פתרון: נוכיח שהגבול קיים בעזרת משפט הסנדוויץ'. מתקיים (x, y) 6 = (0, 0) נשים לב שלכל 0 ≤ ∣ ∣ ∣ xy2 x4+y2 ∣ ∣ ∣ =| x | ∣ ∣ ∣ y2 x4+y2 ∣ ∣ ∣ ≤| x | . lim (x,y)→(0,0) xy2 x4+y2 = 0 ולכן lim (x,y)→(0,0) ∣ ∣ ∣ xy2 x4+y2 ∣ ∣ ∣ = 0 ולכן ממשפט הסנדוויץ' 5. חשבו את הגבול הבא או הוכיחו שאינו קיים lim (x,y)→(0,0) x2y3 x4 + 2y6 במספר מסלולים. (0, 0) נבדוק את הגבול ב y = ax נבדוק את המסלול a 6 = 0 ראשית עבור lim (x,y)→(0,0) x2y3 x4 + 2y6 = y=ax lim x→0 x2 (ax)3 x4 + 2 (ax)6 = lim x→0 ax5 x4 + 2a6x6 = lim x→0 ax 1 + 2a6x2 = 0 נקבל y = 0 עבור lim (x,y)→(0,0) x2y3 x4 + 2y6 = y=0 lim x→0 0 x4 = lim x→00 = 0 ונקבל y = x 2 3 עבור lim (x,y)→(0,0) x2y3 x4 + 2y6 = y=x 2 3 lim x→0 x2 ( x 2 3 )3 x4 + 2 ( x 2 3 )6 = lim x→0 x4 x4 + 2x4 = lim x→0 1 3 = 1 3 3",
+        "startOffset": 1496,
+        "endOffset": 2308
+      },
+      {
+        "sourceFileId": "recitation-recitation-12-hebrew",
+        "filename": "Recitation 12-Hebrew.pdf",
+        "text": "F (x, y) = ex · sin y − x + 2y + 3 המוגדרת על ידי F : R2 → R 6. נביט בפונקציה .(x, y) ∈ R2 לכל לכל F ′′ yy (x, y) ,F ′′ yx (x, y) ,F ′′ xy (x, y) ,F ′′ xx (x, y) ,F ′ y (x, y) ,F ′ x (x, y) חשבו את .(x, y) ∈ R2 פתרון: מתקיים (x, y) ∈ R2 לכל F ′ x (x, y) = ex · sin y − 1, F ′ y (x, y) = ex · cos y + 2 F ′′ xx (x, y) = ex · sin y F ′′ xy (x, y) = ex · cos y F ′′ yx (x, y) = ex · cos y F ′′ yy (x, y) = −ex · sin y המוגדרת על ידי F : R2 → R 7. נביט בפונקציה F (x, y) = { sin(xy) x2+y2 (x, y) 6 = (0, 0) 0 (x, y) = (0, 0) .(x, y) ∈ R2 לכל F ′ y (x, y) ,F ′ x (x, y) חשבו את הנגזרות החלקיות פתרון: (x, y) 6 = (0, 0) לכל F ′ x (x, y) = cos (xy) · y · (x2 + y2) − sin (xy) · 2x (x2 + y2)2 F ′ y (x, y) = cos (xy) · x · (x2 + y2) − sin (xy) · 2y (x2 + y2)2 נחשב בעזרת ההגדרה (x, y) = (0, 0) עבור F ′ x (0, 0) = lim h→0 F (h, 0) − F (0, 0) h = lim h→0 0 h = lim h→00 = 0 F ′ y (0, 0) = lim h→0 F (0, h) − F",
+        "startOffset": 2324,
+        "endOffset": 3264
+      }
+    ],
+    "confidence": 0.889
+  },
+  {
+    "recitationNumber": 13,
+    "weekNumber": 13,
+    "practicedLectureNumber": 12,
+    "sourceFileId": "recitation-recitation-13-hebrew",
+    "filename": "Recitation 13-Hebrew.pdf",
+    "practicedTopics": [
+      "גבולות",
+      "התכנסות בהחלט",
+      "טורים",
+      "מבחן ההשוואה",
+      "מבחן השורש",
+      "סדרות",
+      "פונקציות",
+      "רציפות"
+    ],
+    "questions": [
+      {
+        "id": "recitation-recitation-13-hebrew-question-1",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-13-hebrew",
+        "questionNumber": "13",
+        "content": "תרגול 13 היום: חזרה. • 1. חשבו את האינטגרל הלא מסוים הבא: ∫ ln x x3 dx פתרון: נחשב את האינטגרל הלא מסוים ∫ ln x x3 dx = ∫ 1 x3 ln x dx = u′= 1 x3 , v=ln x − 1 2x2 ln x − ∫ − 1 2x2 · 1 x dx = − 1 2x2 ln x + 1 2 ∫ 1 x3 dx = − 1 2x2 ln x − 1 2 · 1 2x2 + C = − 1 2x2 ln x − 1 4x2 + C 2. הוכיחו או הפריכו את הטענה הבאה: שתי סדרות של מספרים ממשיים. (bn)∞ n=1 ו (an)∞ n=1 יהיו מתכנס בתנאי. ∞ ∑ n=1 anbn וכי n ∈ N לכל bn ∈ {−1, 1} נניח כי מתבדר. ∞ ∑ n=1 an1.1n אזי הטור פתרון: הטענה נכונה. מתכנס בתנאי, אזי ∞ ∑ n=1 anbn ו n ∈ N לכל bn ∈ {−1, 1} היות ש ∞ ∑ n=1 | anbn |= ∞ ∑ n=1 | an |= ∞ . ∞ ∑ n=1 anxn נביט בטור החזקות .x0 = 0 נשים לב כי ∞ ∑ n=1 an · 1.1n ולכן הטור R ≤ 1 הטור לא מתכנס בהחלט, אזי x = 1 היות שעבור מתבדר. 1",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-13-hebrew",
+          "filename": "Recitation 13-Hebrew.pdf",
+          "text": "תרגול 13 היום: חזרה. • 1. חשבו את האינטגרל הלא מסוים הבא: ∫ ln x x3 dx פתרון: נחשב את האינטגרל הלא מסוים ∫ ln x x3 dx = ∫ 1 x3 ln x dx = u′= 1 x3 , v=ln x − 1 2x2 ln x − ∫ − 1 2x2 · 1 x dx = − 1 2x2 ln x + 1 2 ∫ 1 x3 dx = − 1 2x2 ln x − 1 2 · 1 2x2 + C = − 1 2x2 ln x − 1 4x2 + C 2. הוכיחו או הפריכו את הטענה הבאה: שתי סדרות של מספרים ממשיים. (bn)∞ n=1 ו (an)∞ n=1 יהיו מתכנס בתנאי. ∞ ∑ n=1 anbn וכי n ∈ N לכל bn ∈ {−1, 1} נניח כי מתבדר. ∞ ∑ n=1 an1.1n אזי הטור פתרון: הטענה נכונה. מתכנס בתנאי, אזי ∞ ∑ n=1 anbn ו n ∈ N לכל bn ∈ {−1, 1} היות ש ∞ ∑ n=1 | anbn |= ∞ ∑ n=1 | an |= ∞ . ∞ ∑ n=1 anxn נביט בטור החזקות .x0 = 0 נשים לב כי ∞ ∑ n=1 an · 1.1n ולכן הטור R ≤ 1 הטור לא מתכנס בהחלט, אזי x = 1 היות שעבור מתבדר. 1"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-13-hebrew-question-2",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-13-hebrew",
+        "questionNumber": "1",
+        "content": "מתכנס או מתבדר. ∞ ∑ n=1 (−1)n n+3 2n+ln n 3. קבעו האם הטור פתרון: נבדוק התכנסות בהחלט ∞ ∑ n=1 ∣ ∣(−1)n n+3 2n+ln n ∣ ∣ = ∞ ∑ n=1 n + 3 2n + ln n ≤ ∞ ∑ n=1 n + 3n 2n = 4 ∞ ∑ n=1 n 2n , נחשב את הגבול ∞ ∑ n=1 n 2n כעת נשתמש במבחן השורש עבור הטור L = lim n→∞ n √ n 2n = lim n→∞ n 1 n 2 = AOL 1 2 מתכנס. 4 ∞ ∑ n=1 n 2n מתכנס ולכן מלינאריות גם הטור ∞ ∑ n=1 n 2n , אזי הטורL < 1 היות ש מתכנס. ∞ ∑ n=1 n+3 2n+ln n לכן ממבחן ההשוואה גם הטור מתכנס בהחלט ולכן מתכנס. ∞ ∑ n=1 (−1)n n+3 2n+ln n ולכן הטור , או הוכיחו שהוא לא מתכנס במובן הרחב. ∞ ∑ n=0 (−1)n 2n 32n+1 4. חשבו את ערך הטור פתרון: ∞ ∑ n=0 (−1)n 2n 32n+1 = 1 3 ∞ ∑ n=0 (−1)n 2n 32n = 1 3 ∞ ∑ n=0 (−1)n ( 2 9 )n = 1 3 ∞ ∑ n=0 ( − 2 9 )n = 1 3 ∞ ∑ n=0 ( − 2 9 )n = 1 3 · 1 1 − (− 2 9 ) = 1 3 · 9 11 = 3 11 2",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-13-hebrew",
+          "filename": "Recitation 13-Hebrew.pdf",
+          "text": "מתכנס או מתבדר. ∞ ∑ n=1 (−1)n n+3 2n+ln n 3. קבעו האם הטור פתרון: נבדוק התכנסות בהחלט ∞ ∑ n=1 ∣ ∣(−1)n n+3 2n+ln n ∣ ∣ = ∞ ∑ n=1 n + 3 2n + ln n ≤ ∞ ∑ n=1 n + 3n 2n = 4 ∞ ∑ n=1 n 2n , נחשב את הגבול ∞ ∑ n=1 n 2n כעת נשתמש במבחן השורש עבור הטור L = lim n→∞ n √ n 2n = lim n→∞ n 1 n 2 = AOL 1 2 מתכנס. 4 ∞ ∑ n=1 n 2n מתכנס ולכן מלינאריות גם הטור ∞ ∑ n=1 n 2n , אזי הטורL < 1 היות ש מתכנס. ∞ ∑ n=1 n+3 2n+ln n לכן ממבחן ההשוואה גם הטור מתכנס בהחלט ולכן מתכנס. ∞ ∑ n=1 (−1)n n+3 2n+ln n ולכן הטור , או הוכיחו שהוא לא מתכנס במובן הרחב. ∞ ∑ n=0 (−1)n 2n 32n+1 4. חשבו את ערך הטור פתרון: ∞ ∑ n=0 (−1)n 2n 32n+1 = 1 3 ∞ ∑ n=0 (−1)n 2n 32n = 1 3 ∞ ∑ n=0 (−1)n ( 2 9 )n = 1 3 ∞ ∑ n=0 ( − 2 9 )n = 1 3 ∞ ∑ n=0 ( − 2 9 )n = 1 3 · 1 1 − (− 2 9 ) = 1 3 · 9 11 = 3 11 2"
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-13-hebrew-question-3",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-13-hebrew",
+        "questionNumber": "0",
+        "content": ".f (0) = 0 פונקציה עולה כך ש f : [0, ∞) → R 5. תהי מתכנס. ∞ ∑ n=1 (−1)n+1 f ( 1 n ) . הוכיחו כי הטור0 רציפה מימין ב f )א( נניח כי פתרון: .n ∈ N לכל an = f ( 1 n ) נגדיר עולה, אזי f . היות שn ∈ N יהי an = f ( 1 n ) ≥ f ( 1 n + 1 ) = an+1 יורדת. (an)∞ n=1 ולכן כעת נחשב את הגבול lim n→∞an = lim n→∞f ( 1 n ) = Heine's lemma lim x→0+ f (x) = continuous f (0) = 0 הוא טור לייבניץ ולכן הטור מתכנס. ∞ ∑ n=1 (−1)n+1 f ( 1 n ) ולכן הטור מתבדר. ∞ ∑ n=1 f ( 1 n ) . הוכיח כי הטורf ′ (0) > 0 וכי 0 גזירה ב f )ב( נניח בנוסף כי פתרון: הוא אי שלילי. ∞ ∑ n=1 f ( 1 n ) עולה, אזי הטור f ו f (0) = 0 היות ש כעת נשים לב כי lim n→∞ f ( 1 n ) ( 1 n ) = Heine's lemma lim x→0+ f (x) x = lim x→0+ f (x) − f (0) x = de nition f ′ (0) > 0 מתבדר ביחד עם הטור ההרמוני. ∞ ∑ n=1 f ( 1 n ) ולכן ממבחן ההשוואה הטור 3",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-13-hebrew",
+          "filename": "Recitation 13-Hebrew.pdf",
+          "text": ".f (0) = 0 פונקציה עולה כך ש f : [0, ∞) → R 5. תהי מתכנס. ∞ ∑ n=1 (−1)n+1 f ( 1 n ) . הוכיחו כי הטור0 רציפה מימין ב f )א( נניח כי פתרון: .n ∈ N לכל an = f ( 1 n ) נגדיר עולה, אזי f . היות שn ∈ N יהי an = f ( 1 n ) ≥ f ( 1 n + 1 ) = an+1 יורדת. (an)∞ n=1 ולכן כעת נחשב את הגבול lim n→∞an = lim n→∞f ( 1 n ) = Heine's lemma lim x→0+ f (x) = continuous f (0) = 0 הוא טור לייבניץ ולכן הטור מתכנס. ∞ ∑ n=1 (−1)n+1 f ( 1 n ) ולכן הטור מתבדר. ∞ ∑ n=1 f ( 1 n ) . הוכיח כי הטורf ′ (0) > 0 וכי 0 גזירה ב f )ב( נניח בנוסף כי פתרון: הוא אי שלילי. ∞ ∑ n=1 f ( 1 n ) עולה, אזי הטור f ו f (0) = 0 היות ש כעת נשים לב כי lim n→∞ f ( 1 n ) ( 1 n ) = Heine's lemma lim x→0+ f (x) x = lim x→0+ f (x) − f (0) x = de nition f ′ (0) > 0 מתבדר ביחד עם הטור ההרמוני. ∞ ∑ n=1 f ( 1 n ) ולכן ממבחן ההשוואה הטור 3",
+          "startOffset": 1500,
+          "endOffset": 2286
+        },
+        "confidence": 0.56
+      },
+      {
+        "id": "recitation-recitation-13-hebrew-question-4",
+        "sourceType": "recitation",
+        "sourceFileId": "recitation-recitation-13-hebrew",
+        "questionNumber": "0",
+        "content": ".x > 0 לכל f (x) = ∫ 0 3x arctan t 2+t4 dt 6. נביט בפונקציה .f ′ ( 1 3 ) = − π 4 הוכיחו כי פתרון: מתקיים x > 0 ראשית, לכל f (x) = ∫ 0 3x arctan t 2 + t4 dt = de nition − ∫ 3x 0 arctan t 2 + t4 dt רציפה מאש\"ר. g . נשים לב שt ≥ 0 לכל g (t) = arctan t 2+t4 כעת נגדיר .x > 0 לכל φ (x) = 3x נגדיר בנוסף .Im (φ) = {x : x > 0} גזירה מאשג\"ז ומתקיים φ נשים לב כי מתקיים x > 0 ולכן לכל f ′ (x) = − arctan (3x) 2 + (3x)4 · 3 נקבל x = 1 3 ובפרט עבור f ′ ( 1 3 ) = − arctan (3 · 1 3 ) 2 + (3 · 1 3 )4 · 3 = −3 arctan 1 3 = − π 4 4",
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בהחלט",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "unknown",
+        "examRelevance": "medium",
+        "sourceSnippet": {
+          "sourceFileId": "recitation-recitation-13-hebrew",
+          "filename": "Recitation 13-Hebrew.pdf",
+          "text": ".x > 0 לכל f (x) = ∫ 0 3x arctan t 2+t4 dt 6. נביט בפונקציה .f ′ ( 1 3 ) = − π 4 הוכיחו כי פתרון: מתקיים x > 0 ראשית, לכל f (x) = ∫ 0 3x arctan t 2 + t4 dt = de nition − ∫ 3x 0 arctan t 2 + t4 dt רציפה מאש\"ר. g . נשים לב שt ≥ 0 לכל g (t) = arctan t 2+t4 כעת נגדיר .x > 0 לכל φ (x) = 3x נגדיר בנוסף .Im (φ) = {x : x > 0} גזירה מאשג\"ז ומתקיים φ נשים לב כי מתקיים x > 0 ולכן לכל f ′ (x) = − arctan (3x) 2 + (3x)4 · 3 נקבל x = 1 3 ובפרט עבור f ′ ( 1 3 ) = − arctan (3 · 1 3 ) 2 + (3 · 1 3 )4 · 3 = −3 arctan 1 3 = − π 4 4"
+        },
+        "confidence": 0.56
+      }
+    ],
+    "solutionPatterns": [],
+    "techniques": [
+      "מבחן השורש",
+      "מבחן ההשוואה",
+      "גבול",
+      "התכנסות בהחלט"
+    ],
+    "commonMistakes": [],
+    "linkedLectureNumber": 12,
+    "topicOverlapWithLinkedLecture": [
+      "גבולות",
+      "סדרות"
+    ],
+    "mappingNeedsReview": false,
+    "examRelevanceNotes": [],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "recitation-recitation-13-hebrew",
+        "filename": "Recitation 13-Hebrew.pdf",
+        "text": "תרגול 13 היום: חזרה. • 1. חשבו את האינטגרל הלא מסוים הבא: ∫ ln x x3 dx פתרון: נחשב את האינטגרל הלא מסוים ∫ ln x x3 dx = ∫ 1 x3 ln x dx = u′= 1 x3 , v=ln x − 1 2x2 ln x − ∫ − 1 2x2 · 1 x dx = − 1 2x2 ln x + 1 2 ∫ 1 x3 dx = − 1 2x2 ln x − 1 2 · 1 2x2 + C = − 1 2x2 ln x − 1 4x2 + C 2. הוכיחו או הפריכו את הטענה הבאה: שתי סדרות של מספרים ממשיים. (bn)∞ n=1 ו (an)∞ n=1 יהיו מתכנס בתנאי. ∞ ∑ n=1 anbn וכי n ∈ N לכל bn ∈ {−1, 1} נניח כי מתבדר. ∞ ∑ n=1 an1.1n אזי הטור פתרון: הטענה נכונה. מתכנס בתנאי, אזי ∞ ∑ n=1 anbn ו n ∈ N לכל bn ∈ {−1, 1} היות ש ∞ ∑ n=1 | anbn |= ∞ ∑ n=1 | an |= ∞ . ∞ ∑ n=1 anxn נביט בטור החזקות .x0 = 0 נשים לב כי ∞ ∑ n=1 an · 1.1n ולכן הטור R ≤ 1 הטור לא מתכנס בהחלט, אזי x = 1 היות שעבור מתבדר. 1"
+      },
+      {
+        "sourceFileId": "recitation-recitation-13-hebrew",
+        "filename": "Recitation 13-Hebrew.pdf",
+        "text": "מתכנס או מתבדר. ∞ ∑ n=1 (−1)n n+3 2n+ln n 3. קבעו האם הטור פתרון: נבדוק התכנסות בהחלט ∞ ∑ n=1 ∣ ∣(−1)n n+3 2n+ln n ∣ ∣ = ∞ ∑ n=1 n + 3 2n + ln n ≤ ∞ ∑ n=1 n + 3n 2n = 4 ∞ ∑ n=1 n 2n , נחשב את הגבול ∞ ∑ n=1 n 2n כעת נשתמש במבחן השורש עבור הטור L = lim n→∞ n √ n 2n = lim n→∞ n 1 n 2 = AOL 1 2 מתכנס. 4 ∞ ∑ n=1 n 2n מתכנס ולכן מלינאריות גם הטור ∞ ∑ n=1 n 2n , אזי הטורL < 1 היות ש מתכנס. ∞ ∑ n=1 n+3 2n+ln n לכן ממבחן ההשוואה גם הטור מתכנס בהחלט ולכן מתכנס. ∞ ∑ n=1 (−1)n n+3 2n+ln n ולכן הטור , או הוכיחו שהוא לא מתכנס במובן הרחב. ∞ ∑ n=0 (−1)n 2n 32n+1 4. חשבו את ערך הטור פתרון: ∞ ∑ n=0 (−1)n 2n 32n+1 = 1 3 ∞ ∑ n=0 (−1)n 2n 32n = 1 3 ∞ ∑ n=0 (−1)n ( 2 9 )n = 1 3 ∞ ∑ n=0 ( − 2 9 )n = 1 3 ∞ ∑ n=0 ( − 2 9 )n = 1 3 · 1 1 − (− 2 9 ) = 1 3 · 9 11 = 3 11 2"
+      },
+      {
+        "sourceFileId": "recitation-recitation-13-hebrew",
+        "filename": "Recitation 13-Hebrew.pdf",
+        "text": ".f (0) = 0 פונקציה עולה כך ש f : [0, ∞) → R 5. תהי מתכנס. ∞ ∑ n=1 (−1)n+1 f ( 1 n ) . הוכיחו כי הטור0 רציפה מימין ב f )א( נניח כי פתרון: .n ∈ N לכל an = f ( 1 n ) נגדיר עולה, אזי f . היות שn ∈ N יהי an = f ( 1 n ) ≥ f ( 1 n + 1 ) = an+1 יורדת. (an)∞ n=1 ולכן כעת נחשב את הגבול lim n→∞an = lim n→∞f ( 1 n ) = Heine's lemma lim x→0+ f (x) = continuous f (0) = 0 הוא טור לייבניץ ולכן הטור מתכנס. ∞ ∑ n=1 (−1)n+1 f ( 1 n ) ולכן הטור מתבדר. ∞ ∑ n=1 f ( 1 n ) . הוכיח כי הטורf ′ (0) > 0 וכי 0 גזירה ב f )ב( נניח בנוסף כי פתרון: הוא אי שלילי. ∞ ∑ n=1 f ( 1 n ) עולה, אזי הטור f ו f (0) = 0 היות ש כעת נשים לב כי lim n→∞ f ( 1 n ) ( 1 n ) = Heine's lemma lim x→0+ f (x) x = lim x→0+ f (x) − f (0) x = de nition f ′ (0) > 0 מתבדר ביחד עם הטור ההרמוני. ∞ ∑ n=1 f ( 1 n ) ולכן ממבחן ההשוואה הטור 3",
+        "startOffset": 1500,
+        "endOffset": 2286
+      },
+      {
+        "sourceFileId": "recitation-recitation-13-hebrew",
+        "filename": "Recitation 13-Hebrew.pdf",
+        "text": ".x > 0 לכל f (x) = ∫ 0 3x arctan t 2+t4 dt 6. נביט בפונקציה .f ′ ( 1 3 ) = − π 4 הוכיחו כי פתרון: מתקיים x > 0 ראשית, לכל f (x) = ∫ 0 3x arctan t 2 + t4 dt = de nition − ∫ 3x 0 arctan t 2 + t4 dt רציפה מאש\"ר. g . נשים לב שt ≥ 0 לכל g (t) = arctan t 2+t4 כעת נגדיר .x > 0 לכל φ (x) = 3x נגדיר בנוסף .Im (φ) = {x : x > 0} גזירה מאשג\"ז ומתקיים φ נשים לב כי מתקיים x > 0 ולכן לכל f ′ (x) = − arctan (3x) 2 + (3x)4 · 3 נקבל x = 1 3 ובפרט עבור f ′ ( 1 3 ) = − arctan (3 · 1 3 ) 2 + (3 · 1 3 )4 · 3 = −3 arctan 1 3 = − π 4 4"
+      }
+    ],
+    "confidence": 0.7460833333333333
+  },
+  {
     "recitationNumber": 2,
     "weekNumber": 2,
     "practicedLectureNumber": 1,

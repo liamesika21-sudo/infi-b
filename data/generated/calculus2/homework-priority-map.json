@@ -186,6 +186,517 @@
     ]
   },
   {
+    "homeworkNumber": 10,
+    "weekNumber": 10,
+    "sourceFileId": "hw-exercise-10-solution",
+    "filename": "Exercise 10 solution.pdf",
+    "mustReviewBeforeExam": true,
+    "overallPriority": "critical",
+    "criticalQuestions": 3,
+    "highPriorityQuestions": 0,
+    "questions": [
+      {
+        "questionId": "hw-exercise-10-solution-question-1",
+        "questionNumber": 1,
+        "homeworkNumber": 10,
+        "weekNumber": 10,
+        "topicIds": [
+          "גבולות",
+          "טור-טיילור",
+          "טורי-חזקות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "hard",
+        "examSimilarity": "critical",
+        "importanceLevel": "critical",
+        "whyItMatters": "שאלה מורכבת עם הוכחה/טורים/חזקות — דפוס שחוזר במבחנים",
+        "requiredKnowledge": [
+          "גבולות",
+          "טור-טיילור",
+          "טורי-חזקות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "recommendedAction": "פתרי שוב לפני המבחן — חובה",
+        "contentPreview": "Calculus II – Spring 2025-26 Homework 10 Solution 1. Let f be the function defined by f (x) = ∑∞ n=1 (−1)n+1x2n+1 2n(2n+1) for every −1 ≤ x ≤ 1. (a) Prove that f is well-defined. Solution: We show tha",
+        "confidence": 0.56
+      },
+      {
+        "questionId": "hw-exercise-10-solution-question-2",
+        "questionNumber": 2,
+        "homeworkNumber": 10,
+        "weekNumber": 10,
+        "topicIds": [
+          "גבולות",
+          "טור-טיילור",
+          "טורי-חזקות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examSimilarity": "high",
+        "importanceLevel": "medium",
+        "whyItMatters": "שאלה טובה לתרגול שוטף",
+        "requiredKnowledge": [
+          "גבולות",
+          "טור-טיילור",
+          "טורי-חזקות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "recommendedAction": "ודאי שאת מבינה את הגישה",
+        "contentPreview": "2. Consider the series ∑∞ n=0 n+1 2n·(x−1)2n+1 , where x̸ = 1. (a) Find the domain of convergence of the series. Solution: We note that ∞ ∑ n=0 n + 1 2n · (x − 1)2n+1 = 1 x − 1 ∞ ∑ n=0 n + 1 2n · (x −",
+        "confidence": 0.56
+      },
+      {
+        "questionId": "hw-exercise-10-solution-question-3",
+        "questionNumber": 3,
+        "homeworkNumber": 10,
+        "weekNumber": 10,
+        "topicIds": [
+          "גבולות",
+          "טור-טיילור",
+          "טורי-חזקות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examSimilarity": "high",
+        "importanceLevel": "critical",
+        "whyItMatters": "שאלה מורכבת עם הוכחה/טורים/חזקות — דפוס שחוזר במבחנים",
+        "requiredKnowledge": [
+          "גבולות",
+          "טור-טיילור",
+          "טורי-חזקות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "recommendedAction": "פתרי שוב לפני המבחן — חובה",
+        "contentPreview": "3. For items (a) and (b) develop each of the following functions into a power series around x0 = 0, and find its domain of convergence. (a) Si(x) = ∫ x 0 sin t t dt, ∀x ∈ R. Solution: First, we write ",
+        "confidence": 0.56
+      },
+      {
+        "questionId": "hw-exercise-10-solution-question-4",
+        "questionNumber": 4,
+        "homeworkNumber": 10,
+        "weekNumber": 10,
+        "topicIds": [
+          "גבולות",
+          "טור-טיילור",
+          "טורי-חזקות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "hard",
+        "examSimilarity": "critical",
+        "importanceLevel": "critical",
+        "whyItMatters": "שאלה מורכבת עם הוכחה/טורים/חזקות — דפוס שחוזר במבחנים",
+        "requiredKnowledge": [
+          "גבולות",
+          "טור-טיילור",
+          "טורי-חזקות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "recommendedAction": "פתרי שוב לפני המבחן — חובה",
+        "contentPreview": "4. (a) Find the Taylor series about x0 = 0 for the function defined by f (x) =      arctan(x) x x̸ = 0 1 x = 0 for every x ∈ R, and find it’s domain of convergence. Solution: We know that the pow",
+        "confidence": 0.56
+      }
+    ]
+  },
+  {
+    "homeworkNumber": 11,
+    "weekNumber": 11,
+    "sourceFileId": "hw-exercise-11-solution",
+    "filename": "Exercise 11 solution.pdf",
+    "mustReviewBeforeExam": true,
+    "overallPriority": "critical",
+    "criticalQuestions": 4,
+    "highPriorityQuestions": 1,
+    "questions": [
+      {
+        "questionId": "hw-exercise-11-solution-question-1",
+        "questionNumber": 1,
+        "homeworkNumber": 11,
+        "weekNumber": 11,
+        "topicIds": [
+          "גבולות",
+          "טור-טיילור",
+          "טורי-חזקות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "פולינום-טיילור"
+        ],
+        "difficulty": "hard",
+        "examSimilarity": "medium",
+        "importanceLevel": "low",
+        "whyItMatters": "שאלה טובה לתרגול שוטף",
+        "requiredKnowledge": [
+          "גבולות",
+          "טור-טיילור",
+          "טורי-חזקות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "פולינום-טיילור"
+        ],
+        "recommendedAction": "ניתן לדלג",
+        "contentPreview": "Calculus II – Spring 2025-26 Homework 11 Solution 1. Let f (x) = esin x for every x ∈ R. Compute the first three Taylor polynomials of f about x0 = 0, that is, T0(x), T1(x) and T2(x). Solution: We not",
+        "confidence": 0.56
+      },
+      {
+        "questionId": "hw-exercise-11-solution-question-2",
+        "questionNumber": 2,
+        "homeworkNumber": 11,
+        "weekNumber": 11,
+        "topicIds": [
+          "גבולות",
+          "טור-טיילור",
+          "טורי-חזקות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "פולינום-טיילור"
+        ],
+        "difficulty": "hard",
+        "examSimilarity": "critical",
+        "importanceLevel": "critical",
+        "whyItMatters": "שאלה מורכבת עם הוכחה/טורים/חזקות — דפוס שחוזר במבחנים",
+        "requiredKnowledge": [
+          "גבולות",
+          "טור-טיילור",
+          "טורי-חזקות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "פולינום-טיילור"
+        ],
+        "recommendedAction": "פתרי שוב לפני המבחן — חובה",
+        "contentPreview": "2. (a) Consider q = 1 − 1 2! + 1 4! − 1 6! = 389 720 . Prove that |cos (1) − q| ≤ 1 8! Solution: We know that given a Leibniz series, it holds that ∣ ∣ ∣ ∣ ∣ ∞ ∑ n=k (−1)n+1an ∣ ∣ ∣ ∣ ∣ ≤ ak We know t",
+        "confidence": 0.56
+      },
+      {
+        "questionId": "hw-exercise-11-solution-question-3",
+        "questionNumber": 3,
+        "homeworkNumber": 11,
+        "weekNumber": 11,
+        "topicIds": [
+          "גבולות",
+          "טור-טיילור",
+          "טורי-חזקות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "פולינום-טיילור"
+        ],
+        "difficulty": "hard",
+        "examSimilarity": "critical",
+        "importanceLevel": "critical",
+        "whyItMatters": "שאלה מורכבת עם הוכחה/טורים/חזקות — דפוס שחוזר במבחנים",
+        "requiredKnowledge": [
+          "גבולות",
+          "טור-טיילור",
+          "טורי-חזקות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "פולינום-טיילור"
+        ],
+        "recommendedAction": "פתרי שוב לפני המבחן — חובה",
+        "contentPreview": "3. In this question, we will prove the formula for the variance of the Geometric random variable that will be revisited in the course of Introduction to Probability. Let 0 < p < 1. (a) Prove that ∑∞ n",
+        "confidence": 0.56
+      },
+      {
+        "questionId": "hw-exercise-11-solution-question-4",
+        "questionNumber": 4,
+        "homeworkNumber": 11,
+        "weekNumber": 11,
+        "topicIds": [
+          "גבולות",
+          "טור-טיילור",
+          "טורי-חזקות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "פולינום-טיילור"
+        ],
+        "difficulty": "hard",
+        "examSimilarity": "critical",
+        "importanceLevel": "critical",
+        "whyItMatters": "שאלה מורכבת עם הוכחה/טורים/חזקות — דפוס שחוזר במבחנים",
+        "requiredKnowledge": [
+          "גבולות",
+          "טור-טיילור",
+          "טורי-חזקות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "פולינום-טיילור"
+        ],
+        "recommendedAction": "פתרי שוב לפני המבחן — חובה",
+        "contentPreview": "4. Consider the series ∑∞ n=0 (−1)n (2n+1)2 . (a) Prove that there exists a K ∈ R for which K = ∞ ∑ n=0 (−1)n (2n + 1)2 and that 8 9 ≤ K ≤ 1. Solution: We note that the sequence ( 1 (2n+1)2 )∞ n=0 is ",
+        "confidence": 0.56
+      },
+      {
+        "questionId": "hw-exercise-11-solution-question-5",
+        "questionNumber": 5,
+        "homeworkNumber": 11,
+        "weekNumber": 11,
+        "topicIds": [
+          "גבולות",
+          "טור-טיילור",
+          "טורי-חזקות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "פולינום-טיילור"
+        ],
+        "difficulty": "hard",
+        "examSimilarity": "high",
+        "importanceLevel": "high",
+        "whyItMatters": "שאלה מייצגת — בנה/בני הבנה יציבה",
+        "requiredKnowledge": [
+          "גבולות",
+          "טור-טיילור",
+          "טורי-חזקות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "פולינום-טיילור"
+        ],
+        "recommendedAction": "חזרי על השאלה הזאת — קרוב למבחן",
+        "contentPreview": "5. Consider the function defined by f (x) = √1 + x for every x > −1. (a) Compute the Taylor polynomial of f of order 2 about x0 = 0. Solution: We have f (x) = √1 + x ⇒ f (0) = 1; f ′(x) = 1 2√1+x = 1 ",
+        "confidence": 0.56
+      },
+      {
+        "questionId": "hw-exercise-11-solution-question-6",
+        "questionNumber": 6,
+        "homeworkNumber": 11,
+        "weekNumber": 11,
+        "topicIds": [
+          "גבולות",
+          "טור-טיילור",
+          "טורי-חזקות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "פולינום-טיילור"
+        ],
+        "difficulty": "hard",
+        "examSimilarity": "critical",
+        "importanceLevel": "critical",
+        "whyItMatters": "שאלה מורכבת עם הוכחה/טורים/חזקות — דפוס שחוזר במבחנים",
+        "requiredKnowledge": [
+          "גבולות",
+          "טור-טיילור",
+          "טורי-חזקות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "פולינום-טיילור"
+        ],
+        "recommendedAction": "פתרי שוב לפני המבחן — חובה",
+        "contentPreview": "6. Prove or disprove each of the following statements: (a) We have 4 1 · 5 + 42 2 · 52 + 43 3 · 53 + 44 4 · 54 + · · · = ln(5) Solution: True. We know that ∑∞ n=1 (−1)n+1xn n = ln(1 + x) for every −1 ",
+        "confidence": 0.56
+      }
+    ]
+  },
+  {
+    "homeworkNumber": 12,
+    "weekNumber": 12,
+    "sourceFileId": "hw-exercise-12-solution",
+    "filename": "Exercise 12 solution.pdf",
+    "mustReviewBeforeExam": true,
+    "overallPriority": "high",
+    "criticalQuestions": 0,
+    "highPriorityQuestions": 4,
+    "questions": [
+      {
+        "questionId": "hw-exercise-12-solution-question-1",
+        "questionNumber": 1,
+        "homeworkNumber": 12,
+        "weekNumber": 12,
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "hard",
+        "examSimilarity": "high",
+        "importanceLevel": "high",
+        "whyItMatters": "שאלה מייצגת — בנה/בני הבנה יציבה",
+        "requiredKnowledge": [
+          "גבולות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "recommendedAction": "חזרי על השאלה הזאת — קרוב למבחן",
+        "contentPreview": "Calculus II – Spring 2025-26 Homework 12 Solution 1. Consider the function f : R2 → R defined by f (x, y) =      |x|y |x|+y2 (x, y)̸ = (0, 0) 0 (x, y) = (0, 0) (a) Determine whether f is continuo",
+        "confidence": 0.56
+      },
+      {
+        "questionId": "hw-exercise-12-solution-question-2",
+        "questionNumber": 2,
+        "homeworkNumber": 12,
+        "weekNumber": 12,
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "medium",
+        "examSimilarity": "medium",
+        "importanceLevel": "low",
+        "whyItMatters": "שאלה טובה לתרגול שוטף",
+        "requiredKnowledge": [
+          "גבולות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "recommendedAction": "ניתן לדלג",
+        "contentPreview": "2. Let f : R2 → R be the function defined by f (x, y) =      xy(x2−y2) x2+y2 (x, y)̸ = (0, 0) 0 (x, y) = (0, 0) (a) Determine whether f is continuous. Solution: We compute lim (x,y)→(0,0) f (x, y",
+        "confidence": 0.56
+      },
+      {
+        "questionId": "hw-exercise-12-solution-question-3",
+        "questionNumber": 3,
+        "homeworkNumber": 12,
+        "weekNumber": 12,
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "hard",
+        "examSimilarity": "high",
+        "importanceLevel": "high",
+        "whyItMatters": "שאלה מייצגת — בנה/בני הבנה יציבה",
+        "requiredKnowledge": [
+          "גבולות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "recommendedAction": "חזרי על השאלה הזאת — קרוב למבחן",
+        "contentPreview": "3. Compute the following limit, or prove that it doesn’t exist in the extended sense: lim (x,y)→(0,0) x3y x6 + y2 Solution: The limit does not exist. Indeed, along the path y = 0 we get lim x→0 x3 · 0",
+        "confidence": 0.56
+      },
+      {
+        "questionId": "hw-exercise-12-solution-question-4",
+        "questionNumber": 4,
+        "homeworkNumber": 12,
+        "weekNumber": 12,
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "hard",
+        "examSimilarity": "high",
+        "importanceLevel": "high",
+        "whyItMatters": "שאלה מייצגת — בנה/בני הבנה יציבה",
+        "requiredKnowledge": [
+          "גבולות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "recommendedAction": "חזרי על השאלה הזאת — קרוב למבחן",
+        "contentPreview": "4. Let f : R2 → R be the function given by f (x, y) =      xy x2+xy+y2 (x, y)̸ = (0, 0) 0 (x, y) = (0, 0) (a) Determine whether f is continuous at (0, 0). Solution: Note that lim (x,y)→(0,0), x=y",
+        "confidence": 0.56
+      },
+      {
+        "questionId": "hw-exercise-12-solution-question-5",
+        "questionNumber": 5,
+        "homeworkNumber": 12,
+        "weekNumber": 12,
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "difficulty": "hard",
+        "examSimilarity": "high",
+        "importanceLevel": "high",
+        "whyItMatters": "שאלה מייצגת — בנה/בני הבנה יציבה",
+        "requiredKnowledge": [
+          "גבולות",
+          "טורים",
+          "נגזרות",
+          "סדרות",
+          "פונקציות",
+          "רציפות"
+        ],
+        "recommendedAction": "חזרי על השאלה הזאת — קרוב למבחן",
+        "contentPreview": "5. Prove or disprove each of the following statements: (a) There exists a function f : R2 → R such that D(f )(x, y) = ( x2y + exy , x3 3 + xexy ) for every (x, y) ∈ R2. Solution: False. Assume towards",
+        "confidence": 0.56
+      }
+    ]
+  },
+  {
     "homeworkNumber": 2,
     "weekNumber": 2,
     "sourceFileId": "hw-exercise-2-solution",
@@ -1086,6 +1597,402 @@
         ],
         "recommendedAction": "פתרי שוב לפני המבחן — חובה",
         "contentPreview": "4. Prove or disprove each of the following statements: (a) Let (𝑎𝑛)∞ 𝑛=1 be a sequence of non-negative numbers. If lim 𝑛→∞ (𝑛 · 𝑎𝑛) = 0, then ∑∞ 𝑛=1 𝑎𝑛 < ∞. Solution: False. We choose 𝑎1 = ",
+        "confidence": 0.56
+      }
+    ]
+  },
+  {
+    "homeworkNumber": 8,
+    "weekNumber": 8,
+    "sourceFileId": "hw-exercise-8-solution",
+    "filename": "Exercise 8 solution.pdf",
+    "mustReviewBeforeExam": true,
+    "overallPriority": "critical",
+    "criticalQuestions": 5,
+    "highPriorityQuestions": 0,
+    "questions": [
+      {
+        "questionId": "hw-exercise-8-solution-question-1",
+        "questionNumber": 1,
+        "homeworkNumber": 8,
+        "weekNumber": 8,
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "difficulty": "hard",
+        "examSimilarity": "high",
+        "importanceLevel": "medium",
+        "whyItMatters": "שאלה טובה לתרגול שוטף",
+        "requiredKnowledge": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "recommendedAction": "ודאי שאת מבינה את הגישה",
+        "contentPreview": "Calculus II – Spring 2025-26 Homework 8 Solution 1. Determine whether each of the following series converges absolutely, converges conditionally or diverges: (a) ∞ ’ 𝑛=1 𝑛 · sin (𝑛2) 2𝑛 + 𝑛 Solut",
+        "confidence": 0.56
+      },
+      {
+        "questionId": "hw-exercise-8-solution-question-2",
+        "questionNumber": 2,
+        "homeworkNumber": 8,
+        "weekNumber": 8,
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "difficulty": "hard",
+        "examSimilarity": "critical",
+        "importanceLevel": "critical",
+        "whyItMatters": "שאלה מורכבת עם הוכחה/טורים/חזקות — דפוס שחוזר במבחנים",
+        "requiredKnowledge": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "recommendedAction": "פתרי שוב לפני המבחן — חובה",
+        "contentPreview": "2. Let (𝑎𝑛)∞ 𝑛=1 , (𝑏𝑛)∞ 𝑛=1 be two sequences of real numbers. (a) Prove that if the series Õ∞ 𝑛=1 𝑎𝑛 and Õ∞ 𝑛=1 𝑏𝑛 converge absolutely, then the series Õ∞ 𝑛=1 (𝑎𝑛 − 𝑏𝑛) converges abs",
+        "confidence": 0.56
+      },
+      {
+        "questionId": "hw-exercise-8-solution-question-3",
+        "questionNumber": 3,
+        "homeworkNumber": 8,
+        "weekNumber": 8,
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "difficulty": "hard",
+        "examSimilarity": "critical",
+        "importanceLevel": "critical",
+        "whyItMatters": "שאלה מורכבת עם הוכחה/טורים/חזקות — דפוס שחוזר במבחנים",
+        "requiredKnowledge": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "recommendedAction": "פתרי שוב לפני המבחן — חובה",
+        "contentPreview": "3. (a) Student A proved that the alternating Harmonic series is convergent in the following way: ∞ ’ 𝑛=1 (−1)𝑛+1 𝑛 = ∞ ’ 𝑛=1 ( 1 2𝑛 − 1 − 1 2𝑛 ) = ∞ ’ 𝑛=1 1 2𝑛(2𝑛 − 1) ≤ ∞ ’ 𝑛=1 1 𝑛2 < ∞ Ex",
+        "confidence": 0.56
+      },
+      {
+        "questionId": "hw-exercise-8-solution-question-4",
+        "questionNumber": 4,
+        "homeworkNumber": 8,
+        "weekNumber": 8,
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "difficulty": "hard",
+        "examSimilarity": "critical",
+        "importanceLevel": "critical",
+        "whyItMatters": "שאלה מורכבת עם הוכחה/טורים/חזקות — דפוס שחוזר במבחנים",
+        "requiredKnowledge": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "recommendedAction": "פתרי שוב לפני המבחן — חובה",
+        "contentPreview": "4. Prove or disprove each of the following statements: (a) The series Õ∞ 𝑛=1 (−1)𝑛+1 ln 𝑛 √𝑛+1 converges absolutely. Solution: False. Note that ∞ ’ 𝑛=1 (−1)𝑛+1 ln 𝑛 √𝑛 + 1 = ∞ ’ 𝑛=1 ln 𝑛 √𝑛",
+        "confidence": 0.56
+      },
+      {
+        "questionId": "hw-exercise-8-solution-question-5",
+        "questionNumber": 5,
+        "homeworkNumber": 8,
+        "weekNumber": 8,
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "difficulty": "hard",
+        "examSimilarity": "critical",
+        "importanceLevel": "critical",
+        "whyItMatters": "שאלה מורכבת עם הוכחה/טורים/חזקות — דפוס שחוזר במבחנים",
+        "requiredKnowledge": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "recommendedAction": "פתרי שוב לפני המבחן — חובה",
+        "contentPreview": "5. Find all values of 𝛼 ∈ R for which the series Õ∞ 𝑛=1 (𝑛3 sin ( 1 𝑛 ) − 𝑛2 + 𝛼) is convergent. Solution: On the one hand, if the series converges, then by the necessary criterion we have lim \ud835",
+        "confidence": 0.56
+      },
+      {
+        "questionId": "hw-exercise-8-solution-question-6",
+        "questionNumber": 6,
+        "homeworkNumber": 8,
+        "weekNumber": 8,
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "difficulty": "hard",
+        "examSimilarity": "critical",
+        "importanceLevel": "critical",
+        "whyItMatters": "שאלה מורכבת עם הוכחה/טורים/חזקות — דפוס שחוזר במבחנים",
+        "requiredKnowledge": [
+          "גבולות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-השורש",
+          "סדרות"
+        ],
+        "recommendedAction": "פתרי שוב לפני המבחן — חובה",
+        "contentPreview": "6. Let (𝑎𝑛)∞ 𝑛=1 a sequence of real numbers. Suppose that there exists an 𝐿 ∈ R such that lim 𝑛→∞ 𝑎𝑛 = 𝐿. Consider the sequence (𝑏𝑛)∞ 𝑛=1 that is defined by 𝑏𝑛 = (−1)𝑛𝑎𝑛 for every 𝑛 ∈",
+        "confidence": 0.56
+      }
+    ]
+  },
+  {
+    "homeworkNumber": 9,
+    "weekNumber": 9,
+    "sourceFileId": "hw-exercise-9-solution",
+    "filename": "Exercise 9 solution.pdf",
+    "mustReviewBeforeExam": true,
+    "overallPriority": "critical",
+    "criticalQuestions": 5,
+    "highPriorityQuestions": 0,
+    "questions": [
+      {
+        "questionId": "hw-exercise-9-solution-question-1",
+        "questionNumber": 1,
+        "homeworkNumber": 9,
+        "weekNumber": 9,
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "hard",
+        "examSimilarity": "high",
+        "importanceLevel": "medium",
+        "whyItMatters": "שאלה טובה לתרגול שוטף",
+        "requiredKnowledge": [
+          "גבולות",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "recommendedAction": "ודאי שאת מבינה את הגישה",
+        "contentPreview": "Calculus II – Spring 2025-26 Homework 9 Solution 1. For each of the following series, find the domain of convergence and compute its value (as a function of x). (a) ∞ ∑ n=0 (−2)n 2n · 2 · (−2x + 2)2n+",
+        "confidence": 0.56
+      },
+      {
+        "questionId": "hw-exercise-9-solution-question-2",
+        "questionNumber": 2,
+        "homeworkNumber": 9,
+        "weekNumber": 9,
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "medium",
+        "examSimilarity": "high",
+        "importanceLevel": "critical",
+        "whyItMatters": "שאלה מורכבת עם הוכחה/טורים/חזקות — דפוס שחוזר במבחנים",
+        "requiredKnowledge": [
+          "גבולות",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "recommendedAction": "פתרי שוב לפני המבחן — חובה",
+        "contentPreview": "2. Find the domain of convergence for each of the following power series: (a) ∞ ∑ n=1 n 5n · xn Solution: First we find the radius of convergence R = 1 lim n→∞ n √ n 5n = 5 Thus the series converges f",
+        "confidence": 0.56
+      },
+      {
+        "questionId": "hw-exercise-9-solution-question-3",
+        "questionNumber": 3,
+        "homeworkNumber": 9,
+        "weekNumber": 9,
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "hard",
+        "examSimilarity": "critical",
+        "importanceLevel": "critical",
+        "whyItMatters": "שאלה מורכבת עם הוכחה/טורים/חזקות — דפוס שחוזר במבחנים",
+        "requiredKnowledge": [
+          "גבולות",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "recommendedAction": "פתרי שוב לפני המבחן — חובה",
+        "contentPreview": "3. Find the domain of convergence of the power series: ∞ ∑ n=1 x2n n2 = x2 + x4 4 + x8 9 + x16 16 + . . . Solution: We first note that the series is convergent for x = 0. We now need to check converge",
+        "confidence": 0.56
+      },
+      {
+        "questionId": "hw-exercise-9-solution-question-4",
+        "questionNumber": 4,
+        "homeworkNumber": 9,
+        "weekNumber": 9,
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "hard",
+        "examSimilarity": "critical",
+        "importanceLevel": "critical",
+        "whyItMatters": "שאלה מורכבת עם הוכחה/טורים/חזקות — דפוס שחוזר במבחנים",
+        "requiredKnowledge": [
+          "גבולות",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "recommendedAction": "פתרי שוב לפני המבחן — חובה",
+        "contentPreview": "4. Let (an)∞ n=0 be a sequence of real numbers and let 0 ≤ R ≤ ∞ be the convergence radius of the power series ∑∞ n=0 anxn. Prove or disprove each of the following statements: (a) If ∑∞ n=0 an(1.1)n i",
+        "confidence": 0.56
+      },
+      {
+        "questionId": "hw-exercise-9-solution-question-5",
+        "questionNumber": 5,
+        "homeworkNumber": 9,
+        "weekNumber": 9,
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "hard",
+        "examSimilarity": "critical",
+        "importanceLevel": "critical",
+        "whyItMatters": "שאלה מורכבת עם הוכחה/טורים/חזקות — דפוס שחוזר במבחנים",
+        "requiredKnowledge": [
+          "גבולות",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "recommendedAction": "פתרי שוב לפני המבחן — חובה",
+        "contentPreview": "5. (a) Let (ak)∞ k=1 be a non-negative bounded sequence such that ∑∞ k=1 ak diverges. Let (Sn)∞ n=1 be the sequence of partial sums of (ak)∞ k=1, namely, Sn = n ∑ k=1 ak, ∀n ∈ N. Find the domain of co",
+        "confidence": 0.56
+      },
+      {
+        "questionId": "hw-exercise-9-solution-question-6",
+        "questionNumber": 6,
+        "homeworkNumber": 9,
+        "weekNumber": 9,
+        "topicIds": [
+          "גבולות",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "difficulty": "hard",
+        "examSimilarity": "critical",
+        "importanceLevel": "critical",
+        "whyItMatters": "שאלה מורכבת עם הוכחה/טורים/חזקות — דפוס שחוזר במבחנים",
+        "requiredKnowledge": [
+          "גבולות",
+          "התכנסות-בתנאי",
+          "טורי-חזקות",
+          "טורים",
+          "מבחן-ההשוואה",
+          "מבחן-המנה",
+          "סדרות",
+          "פונקציות",
+          "רדיוס-התכנסות"
+        ],
+        "recommendedAction": "פתרי שוב לפני המבחן — חובה",
+        "contentPreview": "6. Let x0 ∈ R and let (an)∞ n=0 be a sequence of real numbers. Let 0 < R < ∞ be the convergence radius of the power series ∑∞ n=0 an (x − x0)n and let x1 ∈ R such that |x1 − x0| > R. Prove that lim n→",
         "confidence": 0.56
       }
     ]

@@ -1,5 +1,21 @@
 [
   {
+    "id": "guide-מדריך-שימוש-קצר-mentora-infi",
+    "filename": "מדריך שימוש קצר | Mentora Infi.pdf",
+    "relativePath": "docs/guide/מדריך שימוש קצר | Mentora Infi.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/guide/מדריך שימוש קצר | Mentora Infi.pdf",
+    "extension": ".pdf",
+    "sourceType": "unknown",
+    "status": "classified",
+    "detectedLabels": [
+      "unknown"
+    ],
+    "classificationConfidence": 0.2,
+    "warnings": [
+      "Filename heuristics could not classify this file."
+    ]
+  },
+  {
     "id": "hw-exercise-1-solution",
     "filename": "Exercise 1 solution.pdf",
     "relativePath": "docs/hw/Exercise 1 solution.pdf",
@@ -15,6 +31,57 @@
     "warnings": [],
     "homeworkNumber": 1,
     "weekNumber": 1
+  },
+  {
+    "id": "hw-exercise-10-solution",
+    "filename": "Exercise 10 solution.pdf",
+    "relativePath": "docs/hw/Exercise 10 solution.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/hw/Exercise 10 solution.pdf",
+    "extension": ".pdf",
+    "sourceType": "homework",
+    "status": "classified",
+    "detectedLabels": [
+      "homework",
+      "week-aligned"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "homeworkNumber": 10,
+    "weekNumber": 10
+  },
+  {
+    "id": "hw-exercise-11-solution",
+    "filename": "Exercise 11 solution.pdf",
+    "relativePath": "docs/hw/Exercise 11 solution.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/hw/Exercise 11 solution.pdf",
+    "extension": ".pdf",
+    "sourceType": "homework",
+    "status": "classified",
+    "detectedLabels": [
+      "homework",
+      "week-aligned"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "homeworkNumber": 11,
+    "weekNumber": 11
+  },
+  {
+    "id": "hw-exercise-12-solution",
+    "filename": "Exercise 12 solution.pdf",
+    "relativePath": "docs/hw/Exercise 12 solution.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/hw/Exercise 12 solution.pdf",
+    "extension": ".pdf",
+    "sourceType": "homework",
+    "status": "classified",
+    "detectedLabels": [
+      "homework",
+      "week-aligned"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "homeworkNumber": 12,
+    "weekNumber": 12
   },
   {
     "id": "hw-exercise-2-solution",
@@ -119,6 +186,40 @@
     "weekNumber": 7
   },
   {
+    "id": "hw-exercise-8-solution",
+    "filename": "Exercise 8 solution.pdf",
+    "relativePath": "docs/hw/Exercise 8 solution.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/hw/Exercise 8 solution.pdf",
+    "extension": ".pdf",
+    "sourceType": "homework",
+    "status": "classified",
+    "detectedLabels": [
+      "homework",
+      "week-aligned"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "homeworkNumber": 8,
+    "weekNumber": 8
+  },
+  {
+    "id": "hw-exercise-9-solution",
+    "filename": "Exercise 9 solution.pdf",
+    "relativePath": "docs/hw/Exercise 9 solution.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/hw/Exercise 9 solution.pdf",
+    "extension": ".pdf",
+    "sourceType": "homework",
+    "status": "classified",
+    "detectedLabels": [
+      "homework",
+      "week-aligned"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "homeworkNumber": 9,
+    "weekNumber": 9
+  },
+  {
     "id": "lecture-lecture-1-group-1-calculus-2-2026",
     "filename": "Lecture 1 group 1 calculus 2 2026.pdf",
     "relativePath": "docs/lecture/Lecture 1 group 1 calculus 2 2026.pdf",
@@ -151,6 +252,57 @@
     "warnings": [],
     "lectureNumber": 10,
     "weekNumber": 10
+  },
+  {
+    "id": "lecture-lecture-11-group-1-calculus-2-2026",
+    "filename": "Lecture 11 group 1 calculus 2 2026.pdf",
+    "relativePath": "docs/lecture/Lecture 11 group 1 calculus 2 2026.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/lecture/Lecture 11 group 1 calculus 2 2026.pdf",
+    "extension": ".pdf",
+    "sourceType": "lecture",
+    "status": "classified",
+    "detectedLabels": [
+      "lecture",
+      "week-aligned"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "lectureNumber": 11,
+    "weekNumber": 11
+  },
+  {
+    "id": "lecture-lecture-12-group-1-calculus-2-2026",
+    "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+    "relativePath": "docs/lecture/Lecture 12 group 1 calculus 2 2026.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/lecture/Lecture 12 group 1 calculus 2 2026.pdf",
+    "extension": ".pdf",
+    "sourceType": "lecture",
+    "status": "classified",
+    "detectedLabels": [
+      "lecture",
+      "week-aligned"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "lectureNumber": 12,
+    "weekNumber": 12
+  },
+  {
+    "id": "lecture-lecture-13-group-1-calculus-2-2026",
+    "filename": "Lecture 13 group 1 calculus 2 2026.pdf",
+    "relativePath": "docs/lecture/Lecture 13 group 1 calculus 2 2026.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/lecture/Lecture 13 group 1 calculus 2 2026.pdf",
+    "extension": ".pdf",
+    "sourceType": "lecture",
+    "status": "classified",
+    "detectedLabels": [
+      "lecture",
+      "week-aligned"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "lectureNumber": 13,
+    "weekNumber": 13
   },
   {
     "id": "lecture-lecture-2-group-1-calculus-2-2026",
@@ -289,6 +441,142 @@
     "weekNumber": 9
   },
   {
+    "id": "past-exams-hebrew-moeda-2022-heb",
+    "filename": "MoedA_2022_heb.pdf",
+    "relativePath": "docs/past-exams-hebrew/MoedA_2022_heb.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/past-exams-hebrew/MoedA_2022_heb.pdf",
+    "extension": ".pdf",
+    "sourceType": "past_exam",
+    "status": "classified",
+    "detectedLabels": [
+      "past-exam",
+      "exam-strategy"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "examYear": 2022,
+    "moed": "a"
+  },
+  {
+    "id": "past-exams-hebrew-moeda-2023-heb",
+    "filename": "MoedA_2023_heb.pdf",
+    "relativePath": "docs/past-exams-hebrew/MoedA_2023_heb.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/past-exams-hebrew/MoedA_2023_heb.pdf",
+    "extension": ".pdf",
+    "sourceType": "past_exam",
+    "status": "classified",
+    "detectedLabels": [
+      "past-exam",
+      "exam-strategy"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "examYear": 2023,
+    "moed": "a"
+  },
+  {
+    "id": "past-exams-hebrew-moeda-calculus2-2024-heb",
+    "filename": "MoedA_calculus2_2024_heb.pdf",
+    "relativePath": "docs/past-exams-hebrew/MoedA_calculus2_2024_heb.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/past-exams-hebrew/MoedA_calculus2_2024_heb.pdf",
+    "extension": ".pdf",
+    "sourceType": "past_exam",
+    "status": "classified",
+    "detectedLabels": [
+      "past-exam",
+      "exam-strategy"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "examYear": 2024,
+    "moed": "a"
+  },
+  {
+    "id": "past-exams-hebrew-moedb-2022-heb",
+    "filename": "MoedB_2022_heb.pdf",
+    "relativePath": "docs/past-exams-hebrew/MoedB_2022_heb.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/past-exams-hebrew/MoedB_2022_heb.pdf",
+    "extension": ".pdf",
+    "sourceType": "past_exam",
+    "status": "classified",
+    "detectedLabels": [
+      "past-exam",
+      "exam-strategy"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "examYear": 2022,
+    "moed": "b"
+  },
+  {
+    "id": "past-exams-hebrew-moedb-2023-heb",
+    "filename": "MoedB_2023_heb.pdf",
+    "relativePath": "docs/past-exams-hebrew/MoedB_2023_heb.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/past-exams-hebrew/MoedB_2023_heb.pdf",
+    "extension": ".pdf",
+    "sourceType": "past_exam",
+    "status": "classified",
+    "detectedLabels": [
+      "past-exam",
+      "exam-strategy"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "examYear": 2023,
+    "moed": "b"
+  },
+  {
+    "id": "past-exams-hebrew-moedb-calculus2-2024-heb",
+    "filename": "MoedB_calculus2_2024_heb.pdf",
+    "relativePath": "docs/past-exams-hebrew/MoedB_calculus2_2024_heb.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/past-exams-hebrew/MoedB_calculus2_2024_heb.pdf",
+    "extension": ".pdf",
+    "sourceType": "past_exam",
+    "status": "classified",
+    "detectedLabels": [
+      "past-exam",
+      "exam-strategy"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "examYear": 2024,
+    "moed": "b"
+  },
+  {
+    "id": "past-exams-hebrew-moedb-calculus2-2025-heb",
+    "filename": "MoedB_calculus2_2025_heb.pdf",
+    "relativePath": "docs/past-exams-hebrew/MoedB_calculus2_2025_heb.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/past-exams-hebrew/MoedB_calculus2_2025_heb.pdf",
+    "extension": ".pdf",
+    "sourceType": "past_exam",
+    "status": "classified",
+    "detectedLabels": [
+      "past-exam",
+      "exam-strategy"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "examYear": 2025,
+    "moed": "b"
+  },
+  {
+    "id": "past-exams-hebrew-simulation-calculus2-2025-heb",
+    "filename": "Simulation_calculus2_2025_heb.pdf",
+    "relativePath": "docs/past-exams-hebrew/Simulation_calculus2_2025_heb.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/past-exams-hebrew/Simulation_calculus2_2025_heb.pdf",
+    "extension": ".pdf",
+    "sourceType": "past_exam",
+    "status": "classified",
+    "detectedLabels": [
+      "past-exam",
+      "exam-strategy"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "examYear": 2025,
+    "moed": "simulation"
+  },
+  {
     "id": "past-exams-exam-questions-that-are-not-in-the-marerial-for-our-exam",
     "filename": "Exam questions that are not in the marerial for our exam.pdf",
     "relativePath": "docs/past-exams/Exam questions that are not in the marerial for our exam.pdf",
@@ -299,51 +587,6 @@
     "detectedLabels": [
       "excluded-material",
       "scope-warning"
-    ],
-    "classificationConfidence": 0.85,
-    "warnings": []
-  },
-  {
-    "id": "past-exams-formula-sheets-2025",
-    "filename": "formula_sheets_2025.pdf",
-    "relativePath": "docs/past-exams/formula_sheets_2025.pdf",
-    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/past-exams/formula_sheets_2025.pdf",
-    "extension": ".pdf",
-    "sourceType": "formula_sheet",
-    "status": "classified",
-    "detectedLabels": [
-      "formula-sheet",
-      "exam-reference"
-    ],
-    "classificationConfidence": 0.85,
-    "warnings": []
-  },
-  {
-    "id": "past-exams-list-of-theorems-quiz-2-2026",
-    "filename": "list of theorems quiz 2 2026.pdf",
-    "relativePath": "docs/past-exams/list of theorems quiz 2 2026.pdf",
-    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/past-exams/list of theorems quiz 2 2026.pdf",
-    "extension": ".pdf",
-    "sourceType": "theorem_list",
-    "status": "classified",
-    "detectedLabels": [
-      "theorem-list",
-      "memorization"
-    ],
-    "classificationConfidence": 0.85,
-    "warnings": []
-  },
-  {
-    "id": "past-exams-list-of-theorems-quiz1",
-    "filename": "list_of_theorems_quiz1.pdf",
-    "relativePath": "docs/past-exams/list_of_theorems_quiz1.pdf",
-    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/past-exams/list_of_theorems_quiz1.pdf",
-    "extension": ".pdf",
-    "sourceType": "theorem_list",
-    "status": "classified",
-    "detectedLabels": [
-      "theorem-list",
-      "memorization"
     ],
     "classificationConfidence": 0.85,
     "warnings": []
@@ -520,6 +763,60 @@
     "recitationNumber": 1,
     "weekNumber": 1,
     "practicedLectureNumber": null
+  },
+  {
+    "id": "recitation-recitation-11-hebrew",
+    "filename": "Recitation 11-Hebrew.pdf",
+    "relativePath": "docs/recitation/Recitation 11-Hebrew.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/recitation/Recitation 11-Hebrew.pdf",
+    "extension": ".pdf",
+    "sourceType": "recitation",
+    "status": "classified",
+    "detectedLabels": [
+      "recitation",
+      "offset-practice"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "recitationNumber": 11,
+    "weekNumber": 11,
+    "practicedLectureNumber": 10
+  },
+  {
+    "id": "recitation-recitation-12-hebrew",
+    "filename": "Recitation 12-Hebrew.pdf",
+    "relativePath": "docs/recitation/Recitation 12-Hebrew.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/recitation/Recitation 12-Hebrew.pdf",
+    "extension": ".pdf",
+    "sourceType": "recitation",
+    "status": "classified",
+    "detectedLabels": [
+      "recitation",
+      "offset-practice"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "recitationNumber": 12,
+    "weekNumber": 12,
+    "practicedLectureNumber": 11
+  },
+  {
+    "id": "recitation-recitation-13-hebrew",
+    "filename": "Recitation 13-Hebrew.pdf",
+    "relativePath": "docs/recitation/Recitation 13-Hebrew.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/recitation/Recitation 13-Hebrew.pdf",
+    "extension": ".pdf",
+    "sourceType": "recitation",
+    "status": "classified",
+    "detectedLabels": [
+      "recitation",
+      "offset-practice"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "recitationNumber": 13,
+    "weekNumber": 13,
+    "practicedLectureNumber": 12
   },
   {
     "id": "recitation-recitation-2-hebrew",
@@ -860,6 +1157,21 @@
     "weekNumber": 1
   },
   {
+    "id": "summerize-סיכום-הרצאות-הגדרות-משפטים-בלי-הוכחות",
+    "filename": "סיכום הרצאות הגדרות משפטים בלי הוכחות.pdf",
+    "relativePath": "docs/summerize/סיכום הרצאות הגדרות משפטים בלי הוכחות.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/summerize/סיכום הרצאות הגדרות משפטים בלי הוכחות.pdf",
+    "extension": ".pdf",
+    "sourceType": "theorem_list",
+    "status": "classified",
+    "detectedLabels": [
+      "theorem-list",
+      "memorization"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": []
+  },
+  {
     "id": "summerize-סיכום-מאגד-הרצאות-4-5-חדו״א-2",
     "filename": "סיכום מאגד — הרצאות 4–5 חדו״א 2.pdf",
     "relativePath": "docs/summerize/סיכום מאגד — הרצאות 4–5 חדו״א 2.pdf",
@@ -874,6 +1186,21 @@
     "classificationConfidence": 0.85,
     "warnings": [],
     "weekNumber": 4
+  },
+  {
+    "id": "summerize-רשימת-משפטים-אינפי-2",
+    "filename": "רשימת משפטים אינפי 2.pdf",
+    "relativePath": "docs/summerize/רשימת משפטים אינפי 2.pdf",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/summerize/רשימת משפטים אינפי 2.pdf",
+    "extension": ".pdf",
+    "sourceType": "theorem_list",
+    "status": "classified",
+    "detectedLabels": [
+      "theorem-list",
+      "memorization"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": []
   },
   {
     "id": "summerize-שבוע-2-אינפי-2",
@@ -954,5 +1281,97 @@
     "classificationConfidence": 0.85,
     "warnings": [],
     "weekNumber": 7
+  },
+  {
+    "id": "summerizer-chukei-algebra",
+    "filename": "chukei_algebra.html",
+    "relativePath": "docs/summerizer/chukei_algebra.html",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/summerizer/chukei_algebra.html",
+    "extension": ".html",
+    "sourceType": "summary",
+    "status": "classified",
+    "detectedLabels": [
+      "summary",
+      "study-material"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": []
+  },
+  {
+    "id": "summerizer-marathon-1",
+    "filename": "marathon_1.html",
+    "relativePath": "docs/summerizer/marathon_1.html",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/summerizer/marathon_1.html",
+    "extension": ".html",
+    "sourceType": "summary",
+    "status": "classified",
+    "detectedLabels": [
+      "summary",
+      "study-material"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "weekNumber": 1
+  },
+  {
+    "id": "summerizer-sidrei-godel",
+    "filename": "sidrei_godel.html",
+    "relativePath": "docs/summerizer/sidrei_godel.html",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/summerizer/sidrei_godel.html",
+    "extension": ".html",
+    "sourceType": "summary",
+    "status": "classified",
+    "detectedLabels": [
+      "summary",
+      "study-material"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": []
+  },
+  {
+    "id": "summerizer-sikum-1-5-1",
+    "filename": "sikum_1_5_1.html",
+    "relativePath": "docs/summerizer/sikum_1_5_1.html",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/summerizer/sikum_1_5_1.html",
+    "extension": ".html",
+    "sourceType": "summary",
+    "status": "classified",
+    "detectedLabels": [
+      "summary",
+      "study-material"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": [],
+    "weekNumber": 1
+  },
+  {
+    "id": "summerizer-sikum-turim",
+    "filename": "sikum_turim.html",
+    "relativePath": "docs/summerizer/sikum_turim.html",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/summerizer/sikum_turim.html",
+    "extension": ".html",
+    "sourceType": "summary",
+    "status": "classified",
+    "detectedLabels": [
+      "summary",
+      "study-material"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": []
+  },
+  {
+    "id": "summerizer-tavlat-funkciot",
+    "filename": "tavlat_funkciot.html",
+    "relativePath": "docs/summerizer/tavlat_funkciot.html",
+    "absolutePath": "/Users/liamesika/Desktop/infi-test-b/docs/summerizer/tavlat_funkciot.html",
+    "extension": ".html",
+    "sourceType": "summary",
+    "status": "classified",
+    "detectedLabels": [
+      "summary",
+      "study-material"
+    ],
+    "classificationConfidence": 0.85,
+    "warnings": []
   }
 ]

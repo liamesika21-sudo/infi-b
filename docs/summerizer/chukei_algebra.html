@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>חוקי אלגברה לטורים</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<style>
+  :root{--bg:#f5f0e8;--card:#fff;--primary:#1a3a5c;--accent:#c0392b;--green:#2e7d32;--amber:#b8860b;--blue:#1565c0;--purple:#6a1b9a;--text:#2c2c2c;--muted:#5a5a5a;--border:#e2d8c8;--radius:14px;--shadow:0 2px 14px rgba(0,0,0,.08)}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Segoe UI','Noto Sans Hebrew',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.8;padding:24px}
+  .wrap{max-width:880px;margin:0 auto}
+  /* ===== critical bidi fix: force every formula LTR ===== */
+  .katex{direction:ltr;unicode-bidi:isolate}
+  .mi{direction:ltr;unicode-bidi:isolate;display:inline-block}
+  .mrow{direction:ltr;text-align:center;margin:8px 0;font-size:1.08em}
+  header.top{background:linear-gradient(135deg,var(--primary),#2c5f8a);color:#fff;padding:24px 30px;border-radius:var(--radius);box-shadow:var(--shadow);text-align:center;margin-bottom:18px}
+  header.top h1{font-size:1.6em;font-weight:800;margin-bottom:4px}
+  header.top p{opacity:.9;font-weight:300;font-size:.95em}
+  h2.sec{font-size:1.2em;color:var(--primary);border-right:5px solid var(--accent);padding-right:12px;margin:24px 0 10px}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px 20px;box-shadow:var(--shadow);margin-bottom:14px}
+  .rule{background:#f6f1fb;border:1px solid #d9c4ec;border-right:5px solid var(--purple);border-radius:11px;padding:12px 16px;margin:6px 0 12px}
+  .rule .rt{font-weight:800;color:var(--purple);display:block;margin-bottom:2px}
+  ul{padding-inline-start:20px;margin:6px 0} li{margin:8px 0}
+  .ex{background:#eef4fb;border:1px solid #cfe0f2;border-radius:9px;padding:8px 13px;margin:8px 0;font-size:.94em}
+  .ex .et{font-weight:700;color:var(--blue)}
+  table{width:100%;border-collapse:collapse;font-size:.95em;margin-top:6px}
+  th,td{padding:8px 10px;border-bottom:1px solid var(--border);text-align:center;vertical-align:middle}
+  th{background:var(--primary);color:#fff}
+  tr:nth-child(even) td{background:#faf7f1}
+  .when{background:#eaf4ea;border:1px solid #bcd9bc;border-radius:8px;padding:6px 12px;margin-top:8px;font-size:.9em;color:var(--green);font-weight:700}
+  .footer{text-align:center;color:var(--muted);font-size:.85em;margin:20px 0 6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>חוקי אלגברה לטורים 🧮</h1>
+  <p>עצרת · חזקות · גורם מוביל · הגבול המפורסם — החוקים שחוזרים בכל מבחן מנה/שורש</p>
+</header>
+
+<!-- ① FACTORIAL -->
+<h2 class="sec">① עצרת</h2>
+<div class="card">
+  <div class="rule">
+    <span class="rt">החוק המרכזי</span>
+    <div class="mrow">$(n+1)! = (n+1)\cdot n!$</div>
+    ״עצרת = המספר, כפול העצרת שלפניו.״ לכן ביחס — העצרת מצטמצמת ונשאר גורם פשוט.
+  </div>
+  <table>
+    <tr><th>הביטוי</th><th>מצטמצם ל־</th></tr>
+    <tr><td>$\dfrac{(n+1)!}{n!}$</td><td>$n+1$</td></tr>
+    <tr><td>$\dfrac{(n+2)!}{n!}$</td><td>$(n+2)(n+1)$</td></tr>
+    <tr><td>$\dfrac{n!}{(n+1)!}$</td><td>$\dfrac{1}{n+1}$</td></tr>
+    <tr><td>$\dfrac{\big((n+1)!\big)^2}{(n!)^2}$</td><td>$(n+1)^2$</td></tr>
+    <tr><td>$\dfrac{(2n+2)!}{(2n)!}$</td><td>$(2n+2)(2n+1)$</td></tr>
+  </table>
+  <div class="ex"><span class="et">כלל אצבע:</span> סופרים כמה ״מדרגות״ יש בין העצרות, וכופלים את הגורמים ביניהן. מ־<span class="mi">$n!$</span> ל־<span class="mi">$(n+2)!$</span> = שתי מדרגות ⟸ <span class="mi">$(n+1)(n+2)$</span>.</div>
+  <div class="when">🎯 רואים ״!״ ⟸ מבחן המנה</div>
+</div>
+
+<!-- ② POWERS -->
+<h2 class="sec">② חוקי חזקות</h2>
+<div class="card">
+  <ul>
+    <li><b>אותו בסיס בחלוקה — מחסרים מעריכים:</b>
+      <div class="mrow">$\dfrac{a^{m+k}}{a^{m}} = a^{k}\qquad\big(\text{למשל }\tfrac{4^{3n+3}}{4^{3n}}=4^3=64\big)$</div>
+    </li>
+    <li><b>פיצול מעריך — מפרקים לחלקים:</b>
+      <div class="mrow">$x^{m+k}=x^{m}\cdot x^{k}\qquad\big(\text{למשל }(2n+3)^{2n+2}=(2n+3)^{2n}(2n+3)^2\big)$</div>
+    </li>
+    <li><b>מכפלה בחזקה:</b> <span class="mi">$(ab)^n=a^n b^n$</span></li>
+    <li><b>חזקה של חזקה:</b> <span class="mi">$a^{2n}=(a^2)^n=(a^n)^2$</span></li>
+  </ul>
+  <div class="when">🎯 רואים ״משהו בחזקת <span class="mi">$n$</span>״ ⟸ מבחן השורש (השורש <span class="mi">$\sqrt[n]{\ }$</span> מצמצם את החזקות)</div>
+</div>
+
+<!-- ③ LEADING TERM -->
+<h2 class="sec">③ גורם מוביל — חלוקה ב־<span class="mi">$n$</span></h2>
+<div class="card">
+  <div class="rule">
+    <span class="rt">החוק</span>
+    בביטוי רציונלי, מחלקים מונה ומכנה ב<b>חזקה הגבוהה של <span class="mi">$n$</span></b> — כל <span class="mi">$n$</span> הופך ל־״<span class="mi">$1+\frac{\cdot}{n}$</span>״ שקל לקחת לו גבול.
+  </div>
+  <div class="ex"><span class="et">דוגמה:</span>
+    <div class="mrow">$\dfrac{(n+1)^2}{(2n+3)^2}=\dfrac{(1+\frac1n)^2}{(2+\frac3n)^2}\ \xrightarrow[n\to\infty]{}\ \dfrac{1}{4}$</div>
+  </div>
+  <ul>
+    <li><b>פולינום/פולינום מאותה דרגה</b> ⟸ הגבול = יחס המקדמים המובילים.</li>
+    <li>דרגת המונה קטנה מהמכנה ⟸ <span class="mi">$0$</span> · גדולה ⟸ <span class="mi">$\infty$</span>.</li>
+  </ul>
+</div>
+
+<!-- ④ FAMOUS LIMIT -->
+<h2 class="sec">④ הגבול המפורסם <span class="mi">$e$</span></h2>
+<div class="card">
+  <div class="rule">
+    <span class="rt">החוק</span>
+    <div class="mrow">$\left(1+\dfrac{a}{n}\right)^{n}\ \xrightarrow[n\to\infty]{}\ e^{a}$</div>
+    כל ביטוי מהצורה ״<span class="mi">$(1+\text{קטן})^{\text{גדול}}$</span>״ — מסדרים אותו לצורה הזאת.
+  </div>
+  <table>
+    <tr><th>הביטוי</th><th>הגבול</th></tr>
+    <tr><td>$\left(1+\frac1n\right)^{n}$</td><td>$e$</td></tr>
+    <tr><td>$\left(1-\frac1n\right)^{n}$</td><td>$\dfrac1e$</td></tr>
+    <tr><td>$\left(1+\frac1n\right)^{-n}$</td><td>$\dfrac1e$</td></tr>
+    <tr><td>$\left(1+\frac{a}{kn}\right)^{kn}$</td><td>$e^{a}$</td></tr>
+  </table>
+  <div class="ex"><span class="et">דוגמה:</span>
+    <div class="mrow">$\left(\dfrac{2n+1}{2n+3}\right)^{2n}=\dfrac{\left(1+\frac{1}{2n}\right)^{2n}}{\left(1+\frac{3}{2n}\right)^{2n}}\ \xrightarrow[n\to\infty]{}\ \dfrac{e^{1}}{e^{3}}=\dfrac{1}{e^{2}}$</div>
+  </div>
+</div>
+
+<!-- ⑤ PRODUCTS -->
+<h2 class="sec">⑤ מכפלות (לא עצרת)</h2>
+<div class="card">
+  <div class="rule">
+    <span class="rt">החוק</span>
+    במכפלה כמו <span class="mi">$2\cdot4\cdot6\cdots 2n$</span> — כשעוברים ל־<span class="mi">$n+1$</span> פשוט <b>מוסיפים את הגורם הבא</b>. ביחס נשאר רק הגורם החדש.
+  </div>
+  <div class="ex"><span class="et">דוגמה:</span>
+    <div class="mrow">$\dfrac{2\cdot4\cdots 2n\cdot(2n+2)}{2\cdot4\cdots 2n}=2n+2$</div>
+  </div>
+  <div class="when">🎯 מכפלות (ועצרת = מכפלה) ⟸ מבחן המנה</div>
+</div>
+
+<!-- ⑥ AOL -->
+<h2 class="sec">⑥ אריתמטיקה של גבולות (AOL)</h2>
+<div class="card">
+  <div class="rule">
+    <span class="rt">החוק</span>
+    גבול של מכפלה/מנה = מכפלה/מנה של הגבולות — <b>כשכל גבול קיים וסופי</b> (ומכנה <span class="mi">$\ne0$</span>).
+    <div class="mrow">$\lim (f\cdot g)=\lim f\cdot\lim g,\qquad \lim\dfrac{f}{g}=\dfrac{\lim f}{\lim g}$</div>
+  </div>
+  <p>השימוש: מפרקים ביטוי מפחיד ל<b>מכפלה של חתיכות</b> שלכל אחת גבול ידוע, ואז מכפילים.</p>
+</div>
+
+<!-- FULL EXAMPLE -->
+<h2 class="sec">🧩 דוגמה — כל החוקים ביחד</h2>
+<div class="card">
+  <p>מבחן מנה על <span class="mi">$\sum\frac{4^{3n}(n!)^2}{(2n+1)^{2n}}$</span> (כל חץ = חוק מלמעלה):</p>
+  <div class="mrow">$\dfrac{a_{n+1}}{a_n}\overset{①②}{=}64(n+1)^2\cdot\dfrac{(2n+1)^{2n}}{(2n+3)^{2n+2}}$</div>
+  <div class="mrow">$\overset{②③}{=}\dfrac{64(1+\frac1n)^2}{(2+\frac3n)^2}\cdot\dfrac{(1+\frac{1}{2n})^{2n}}{(1+\frac{3}{2n})^{2n}}$</div>
+  <div class="mrow">$\overset{④⑥}{=}16\cdot\dfrac{e}{e^{3}}=\dfrac{16}{e^{2}}>1\ \Rightarrow\ \text{מתבדר}$</div>
+</div>
+
+<p class="footer">חוקים כלליים · טובים לכל טור · עצרת+מכפלה⟸מנה · חזקת <span class="mi">$n$</span>⟸שורש 🧮</p>
+
+</div>
+<script>
+let done=false;
+function render(){ if(done)return true; try{ if(typeof renderMathInElement==='function'){ renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"$",right:"$",display:false}],throwOnError:false,ignoredTags:["script","noscript","style","textarea","pre"]}); done=true; return true; } }catch(e){} return false; }
+function boot(){ if(render())return; let t=0;const iv=setInterval(()=>{if(render()||++t>100)clearInterval(iv);},150); }
+window.addEventListener('DOMContentLoaded',boot);
+window.addEventListener('load',render);
+</script>
+</body>
+</html>

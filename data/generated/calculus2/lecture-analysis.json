@@ -592,6 +592,1471 @@
     "confidence": 0.82
   },
   {
+    "lectureNumber": 11,
+    "weekNumber": 11,
+    "sourceFileId": "lecture-lecture-11-group-1-calculus-2-2026",
+    "filename": "Lecture 11 group 1 calculus 2 2026.pdf",
+    "extractionStatus": "success",
+    "title": "Lecture 11 group 1 calculus 2 2026",
+    "detectedTopics": [
+      "גבולות",
+      "טורים",
+      "סדרות"
+    ],
+    "definitions": [],
+    "theorems": [],
+    "formulas": [
+      {
+        "id": "lecture-lecture-11-group-1-calculus-2-2026-formula-1",
+        "title": "נוסחה/ביטוי 1",
+        "plainText": "T f left x right lim_ N rightarrow infty sum_ n 0 N frac f left n right left x 0 right n left x x 0 right n lim_ N rightarrow infty T N left x right",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-11-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-11-group-1-calculus-2-2026",
+            "filename": "Lecture 11 group 1 calculus 2 2026.pdf",
+            "text": "T f left x right lim_ N rightarrow infty sum_ n 0 N frac f left n right left x 0 right n left x x 0 right n lim_ N rightarrow infty T N left x right"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-11-group-1-calculus-2-2026-formula-2",
+        "title": "נוסחה/ביטוי 2",
+        "plainText": "f left x right lim_ N rightarrow infty T N left x right Polsal lim_ Nrightarrowinfty T N left X right",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-11-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-11-group-1-calculus-2-2026",
+            "filename": "Lecture 11 group 1 calculus 2 2026.pdf",
+            "text": "f left x right lim_ N rightarrow infty T N left x right Polsal lim_ Nrightarrowinfty T N left X right"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-11-group-1-calculus-2-2026-formula-3",
+        "title": "נוסחה/ביטוי 3",
+        "plainText": "plc f left x right lim_ N rightarrow infty T N left x right o a pie",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-11-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-11-group-1-calculus-2-2026",
+            "filename": "Lecture 11 group 1 calculus 2 2026.pdf",
+            "text": "plc f left x right lim_ N rightarrow infty T N left x right o a pie"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-11-group-1-calculus-2-2026-formula-4",
+        "title": "נוסחה/ביטוי 4",
+        "plainText": "lim_ N rightarrow infty R N left x right lim_ N rightarrow infty left f left x right T N left x right right f left x right lim_ N rightarrow infty T N left x right",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-11-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-11-group-1-calculus-2-2026",
+            "filename": "Lecture 11 group 1 calculus 2 2026.pdf",
+            "text": "lim_ N rightarrow infty R N left x right lim_ N rightarrow infty left f left x right T N left x right right f left x right lim_ N rightarrow infty T N left x right"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-11-group-1-calculus-2-2026-formula-5",
+        "title": "נוסחה/ביטוי 5",
+        "plainText": "lim_ nrightarrowinfty frac left x right n n 0",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-11-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-11-group-1-calculus-2-2026",
+            "filename": "Lecture 11 group 1 calculus 2 2026.pdf",
+            "text": "lim_ nrightarrowinfty frac left x right n n 0"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-11-group-1-calculus-2-2026-formula-6",
+        "title": "נוסחה/ביטוי 6",
+        "plainText": "lim_ nrightarrowinfty frac left x right n n 0",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-11-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-11-group-1-calculus-2-2026",
+            "filename": "Lecture 11 group 1 calculus 2 2026.pdf",
+            "text": "lim_ nrightarrowinfty frac left x right n n 0"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-11-group-1-calculus-2-2026-formula-7",
+        "title": "נוסחה/ביטוי 7",
+        "plainText": "sin x sum_ n 0 infty frac left 1 right n x 2 n 1 left 2 n 1 right",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-11-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-11-group-1-calculus-2-2026",
+            "filename": "Lecture 11 group 1 calculus 2 2026.pdf",
+            "text": "sin x sum_ n 0 infty frac left 1 right n x 2 n 1 left 2 n 1 right"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-11-group-1-calculus-2-2026-formula-8",
+        "title": "נוסחה/ביטוי 8",
+        "plainText": "f left x right sin x 71807 7168 720 ya",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-11-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-11-group-1-calculus-2-2026",
+            "filename": "Lecture 11 group 1 calculus 2 2026.pdf",
+            "text": "f left x right sin x 71807 7168 720 ya"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-11-group-1-calculus-2-2026-formula-9",
+        "title": "נוסחה/ביטוי 9",
+        "plainText": "1 7707N sk x 0 plc lim_ Nrightarrowinfty left R N left x right right 0also sinken Goend 1 neq 0 n no",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-11-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-11-group-1-calculus-2-2026",
+            "filename": "Lecture 11 group 1 calculus 2 2026.pdf",
+            "text": "1 7707N sk x 0 plc lim_ Nrightarrowinfty left R N left x right right 0also sinken Goend 1 neq 0 n no"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-11-group-1-calculus-2-2026-formula-10",
+        "title": "נוסחה/ביטוי 10",
+        "plainText": "cos x sum_ n 0 infty frac left 1 right n x 2 n left 2 n rightpolka wild",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-11-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-11-group-1-calculus-2-2026",
+            "filename": "Lecture 11 group 1 calculus 2 2026.pdf",
+            "text": "cos x sum_ n 0 infty frac left 1 right n x 2 n left 2 n rightpolka wild"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-11-group-1-calculus-2-2026-formula-11",
+        "title": "נוסחה/ביטוי 11",
+        "plainText": "x inmathbbR 8 f left x right sin x cos left 2 5 x right",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-11-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-11-group-1-calculus-2-2026",
+            "filename": "Lecture 11 group 1 calculus 2 2026.pdf",
+            "text": "x inmathbbR 8 f left x right sin x cos left 2 5 x right"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-11-group-1-calculus-2-2026-formula-12",
+        "title": "נוסחה/ביטוי 12",
+        "plainText": "lim_ Nrightarrowinfty left R N left x right right 0 s 751 X 1 Xo D",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-11-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-11-group-1-calculus-2-2026",
+            "filename": "Lecture 11 group 1 calculus 2 2026.pdf",
+            "text": "lim_ Nrightarrowinfty left R N left x right right 0 s 751 X 1 Xo D"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-11-group-1-calculus-2-2026-formula-13",
+        "title": "נוסחה/ביטוי 13",
+        "plainText": "to C unit 7180 sinken Cam",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-11-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-11-group-1-calculus-2-2026",
+            "filename": "Lecture 11 group 1 calculus 2 2026.pdf",
+            "text": "to C unit 7180 sinken Cam"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-11-group-1-calculus-2-2026-formula-14",
+        "title": "נוסחה/ביטוי 14",
+        "plainText": "P 8 cdot left left cos left alpha x right right left n right right leq alpha n",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-11-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-11-group-1-calculus-2-2026",
+            "filename": "Lecture 11 group 1 calculus 2 2026.pdf",
+            "text": "P 8 cdot left left cos left alpha x right right left n right right leq alpha n"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-11-group-1-calculus-2-2026-formula-15",
+        "title": "נוסחה/ביטוי 15",
+        "plainText": "left cos left alpha x right right leq 1 left sin left alpha x right right leq 1",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-11-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-11-group-1-calculus-2-2026",
+            "filename": "Lecture 11 group 1 calculus 2 2026.pdf",
+            "text": "left cos left alpha x right right leq 1 left sin left alpha x right right leq 1"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-11-group-1-calculus-2-2026-formula-16",
+        "title": "נוסחה/ביטוי 16",
+        "plainText": "lim_ Nrightarrowinfty left R N left x right right 0",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-11-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-11-group-1-calculus-2-2026",
+            "filename": "Lecture 11 group 1 calculus 2 2026.pdf",
+            "text": "lim_ Nrightarrowinfty left R N left x right right 0"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-11-group-1-calculus-2-2026-formula-17",
+        "title": "נוסחה/ביטוי 17",
+        "plainText": "L lim_overrightarrow",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-11-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-11-group-1-calculus-2-2026",
+            "filename": "Lecture 11 group 1 calculus 2 2026.pdf",
+            "text": "L lim_overrightarrow"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-11-group-1-calculus-2-2026-formula-18",
+        "title": "נוסחה/ביטוי 18",
+        "plainText": "lim_overrightarrowxrightarrowoverrightarrowx 0overrightarrowf leftoverrightarrowx rightoverrightarrowf leftoverrightarrowx 0 right",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-11-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-11-group-1-calculus-2-2026",
+            "filename": "Lecture 11 group 1 calculus 2 2026.pdf",
+            "text": "lim_overrightarrowxrightarrowoverrightarrowx 0overrightarrowf leftoverrightarrowx rightoverrightarrowf leftoverrightarrowx 0 right",
+            "startOffset": 5090,
+            "endOffset": 5220
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-11-group-1-calculus-2-2026-formula-19",
+        "title": "נוסחה/ביטוי 19",
+        "plainText": "lim_ left begin matrix x y end matrix rightrightarrowleft begin matrix 1 3 end matrix right F left begin matrix x y end matrix right 1 0 y",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-11-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-11-group-1-calculus-2-2026",
+            "filename": "Lecture 11 group 1 calculus 2 2026.pdf",
+            "text": "lim_ left begin matrix x y end matrix rightrightarrowleft begin matrix 1 3 end matrix right F left begin matrix x y end matrix right 1 0 y"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-11-group-1-calculus-2-2026-formula-20",
+        "title": "נוסחה/ביטוי 20",
+        "plainText": "lim_ left begin matrix xy end matrix right rightarrow left begin matrix 00 end matrix right f left begin matrix xy end matrix right lim_ x rightarrow 0 frac x22x2 frac 12xy",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-11-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-11-group-1-calculus-2-2026",
+            "filename": "Lecture 11 group 1 calculus 2 2026.pdf",
+            "text": "lim_ left begin matrix xy end matrix right rightarrow left begin matrix 00 end matrix right f left begin matrix xy end matrix right lim_ x rightarrow 0 frac x22x2 frac 12xy"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-11-group-1-calculus-2-2026-formula-21",
+        "title": "נוסחה/ביטוי 21",
+        "plainText": "lim_ left begin matrix xy end matrix right rightarrow left begin matrix 00 end matrix right f left begin matrix xy end matrix right lim_ x rightarrow 0 frac x22x2 frac 12yx",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-11-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-11-group-1-calculus-2-2026",
+            "filename": "Lecture 11 group 1 calculus 2 2026.pdf",
+            "text": "lim_ left begin matrix xy end matrix right rightarrow left begin matrix 00 end matrix right f left begin matrix xy end matrix right lim_ x rightarrow 0 frac x22x2 frac 12yx"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-11-group-1-calculus-2-2026-formula-22",
+        "title": "נוסחה/ביטוי 22",
+        "plainText": "lim_ leftbegin matrixx y endmatrixrightrightarrow",
+        "topicIds": [
+          "גבולות",
+          "טורים",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-11-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-11-group-1-calculus-2-2026",
+            "filename": "Lecture 11 group 1 calculus 2 2026.pdf",
+            "text": "lim_ leftbegin matrixx y endmatrixrightrightarrow"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      }
+    ],
+    "proofPatterns": [],
+    "examples": [],
+    "remarks": [],
+    "importantForExam": [],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "lecture-lecture-11-group-1-calculus-2-2026",
+        "filename": "Lecture 11 group 1 calculus 2 2026.pdf",
+        "text": "begin array r 1 1 6 2 6 hline end array111 7137177227 air 17727 Tf left x right sum_ n0 infty frac f left n right left x0 right n left xx0 right nf left x0 right f left x0 right left xx0 right frac f left x0 right 2 left xx0 right 2 ldots pd T f left x 0 right f left x 0 right 7134128 7 18 2h 71887 116 D8 1 o Ya k x in mathbb R Tx 2 7707 T f left x right lim_ N rightarrow infty sum_ n 0 N frac f left n right left x 0 right n left x x 0 right n lim_ N rightarrow infty T N left x right T N left X right dat p n p plc f left x right T f left x right p delta"
+      },
+      {
+        "sourceFileId": "lecture-lecture-11-group-1-calculus-2-2026",
+        "filename": "Lecture 11 group 1 calculus 2 2026.pdf",
+        "text": "f left x right lim_ N rightarrow infty T N left x right Polsal lim_ Nrightarrowinfty T N left X right plc f left x right lim_ N rightarrow infty T N left x right o a pie lim_ N rightarrow infty R N left x right lim_ N rightarrow infty left f left x right T N left x right right f left x right lim_ N rightarrow infty T N left x right 1101 as 1180 Good 3 7707 CCCX o ing 77ps X X 0 relapa as in's tea 8 cdot x 0 x P T.no I x inmathbbR 88 11 Can lim_ nrightarrowinfty frac left x right n n 0 68mn on sum_ n 0infty fracx n n sign s Isa immola non and 101 xCIR 88 lim_ nrightarrowinfty frac left x right n n 0"
+      },
+      {
+        "sourceFileId": "lecture-lecture-11-group-1-calculus-2-2026",
+        "filename": "Lecture 11 group 1 calculus 2 2026.pdf",
+        "text": "1 x inmathbbR 88 2 Can sin x sum_ n 0 infty frac left 1 right n x 2 n 1 left 2 n 1 right f left x right sin x 71807 7168 720 ya immola11x 0 0 2'00 T f left x right sum_ n 0 infty frac left 1 right n x 2 n 1 left 2 n 1 right 3 70178 7371 18 XER 88 o n'dad good 12 7787 08 1 7707N sk x 0 plc lim_ Nrightarrowinfty left R N left x right right 0also sinken Goend 1 neq 0 n no OCCX ing o s X is c on o p langle x ll 0 1kXER 88 f left x right T f left x right 0 leq left R N left x right right frac left f left N 1 right left c right right left N 1 right left x right N 1 leq frac left x right N 1 left N 1 right N rightarrow infty 0 0"
+      },
+      {
+        "sourceFileId": "lecture-lecture-11-group-1-calculus-2-2026",
+        "filename": "Lecture 11 group 1 calculus 2 2026.pdf",
+        "text": "x in mathbb R 88 3 Can cos x sum_ n 0 infty frac left 1 right n x 2 n left 2 n rightpolka wild 1717017para a 7.7527 7 b f mathbb Rrightarrow mathbb R i 1 HON 68 p k 0 p pe in's x 0 inmathbbR n Dinan x inmathbb R 881 n inmathbbN f left x right T f left x right Slc left f left n right left x right right leq k y japann 17100 as in Jan x inmathbbR 8 f left x right sin x cos left 2 5 x right 7 77 1007 Tlc 10707 n 017 7 0 T f left x right 7810 x inmathbb R 88 f left x right T f left x right x 0 frac pi 4 a 00 5 8 71807 cdot f left x 0 right T f left x 0 right 1 7172 2710 0 10 1772 P 011 lim_ Nrightarrowinfty left R N left x right right 0 s 751 X 1 Xo D"
+      }
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
+    "lectureNumber": 12,
+    "weekNumber": 12,
+    "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+    "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+    "extractionStatus": "success",
+    "title": "Lecture 12 group 1 calculus 2 2026",
+    "detectedTopics": [
+      "גבולות",
+      "סדרות"
+    ],
+    "definitions": [],
+    "theorems": [],
+    "formulas": [
+      {
+        "id": "lecture-lecture-12-group-1-calculus-2-2026-formula-1",
+        "title": "נוסחה/ביטוי 1",
+        "plainText": "x r cos theta",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-12-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+            "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+            "text": "x r cos theta"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-12-group-1-calculus-2-2026-formula-2",
+        "title": "נוסחה/ביטוי 2",
+        "plainText": "y r sin theta r sqrt x 2 y 2 is P'e fold",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-12-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+            "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+            "text": "y r sin theta r sqrt x 2 y 2 is P'e fold"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-12-group-1-calculus-2-2026-formula-3",
+        "title": "נוסחה/ביטוי 3",
+        "plainText": "lim_ left begin matrix x y end matrix right rightarrow left begin matrix 0 0 end matrix right y 0 p lim_ left begin matrix x y end matrix right rightarrow left begin matrix 0 0 end matrix right 0 lim r 0 leftbegin matrixx y endmatrixrightrightarrow",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-12-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+            "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+            "text": "lim_ left begin matrix x y end matrix right rightarrow left begin matrix 0 0 end matrix right y 0 p lim_ left begin matrix x y end matrix right rightarrow left begin matrix 0 0 end matrix right 0 lim r 0 leftbegin matrixx y endmatrixrightrightarrow"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-12-group-1-calculus-2-2026-formula-4",
+        "title": "נוסחה/ביטוי 4",
+        "plainText": "lim_ r rightarrow 0 r cos 2 theta sin theta n 0 F left begin matrix 0 0 end matrix right",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-12-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+            "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+            "text": "lim_ r rightarrow 0 r cos 2 theta sin theta n 0 F left begin matrix 0 0 end matrix right"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-12-group-1-calculus-2-2026-formula-5",
+        "title": "נוסחה/ביטוי 5",
+        "plainText": "lim_ left yx right rightarrow left begin matrix 00 end matrix right F left begin matrix xy end matrix right lim_ left yx right rightarrow left begin matrix 00 end matrix right frac xyx2y2 lim_ r rightarrow 0 frac r cos theta cdot r sin theta r2 theta frac pi4",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-12-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+            "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+            "text": "lim_ left yx right rightarrow left begin matrix 00 end matrix right F left begin matrix xy end matrix right lim_ left yx right rightarrow left begin matrix 00 end matrix right frac xyx2y2 lim_ r rightarrow 0 frac r cos theta cdot r sin theta r2 theta frac pi4"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-12-group-1-calculus-2-2026-formula-6",
+        "title": "נוסחה/ביטוי 6",
+        "plainText": "frac sqrt 2 2 left frac sqrt 2 2 right frac 1 2 x ylim_ r rightarrow 0 cos theta sin theta",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-12-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+            "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+            "text": "frac sqrt 2 2 left frac sqrt 2 2 right frac 1 2 x ylim_ r rightarrow 0 cos theta sin theta"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-12-group-1-calculus-2-2026-formula-7",
+        "title": "נוסחה/ביטוי 7",
+        "plainText": "4fracpi 4cos left frac pi n right lceil",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-12-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+            "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+            "text": "4fracpi 4cos left frac pi n right lceil"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-12-group-1-calculus-2-2026-formula-8",
+        "title": "נוסחה/ביטוי 8",
+        "plainText": "F x j left overrightarrow x 0 right F x j left overrightarrow x 0 right frac partial F partial x j left overrightarrow x 0 right lim_ h rightarrow 0 frac overrightarrow F left overrightarrow x 0 h overrightarrow e j right F left overrightarrow x 0 right h",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-12-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+            "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+            "text": "F x j left overrightarrow x 0 right F x j left overrightarrow x 0 right frac partial F partial x j left overrightarrow x 0 right lim_ h rightarrow 0 frac overrightarrow F left overrightarrow x 0 h overrightarrow e j right F left overrightarrow x 0 right h"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-12-group-1-calculus-2-2026-formula-9",
+        "title": "נוסחה/ביטוי 9",
+        "plainText": "lim F left begin matrix xy end matrix right lim_ y",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-12-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+            "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+            "text": "lim F left begin matrix xy end matrix right lim_ y"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-12-group-1-calculus-2-2026-formula-10",
+        "title": "נוסחה/ביטוי 10",
+        "plainText": "lim F left begin matrix xy end matrix right lim_ x rightarrow 0 frac x3x22x2 lim_ x rightarrow 0 frac x12 frac 12 left begin matrix xy end matrix right rightarrow left begin matrix 00 end matrix right yx",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-12-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+            "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+            "text": "lim F left begin matrix xy end matrix right lim_ x rightarrow 0 frac x3x22x2 lim_ x rightarrow 0 frac x12 frac 12 left begin matrix xy end matrix right rightarrow left begin matrix 00 end matrix right yx"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-12-group-1-calculus-2-2026-formula-11",
+        "title": "נוסחה/ביטוי 11",
+        "plainText": "frac partial F partial x left begin matrix 0 0 end matrix right lim_ h rightarrow 0 frac F left left begin matrix 0 0 end matrix right h left begin matrix 1 0 end matrix right right F left begin matrix 0 0 end matrix right h",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-12-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+            "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+            "text": "frac partial F partial x left begin matrix 0 0 end matrix right lim_ h rightarrow 0 frac F left left begin matrix 0 0 end matrix right h left begin matrix 1 0 end matrix right right F left begin matrix 0 0 end matrix right h"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-12-group-1-calculus-2-2026-formula-12",
+        "title": "נוסחה/ביטוי 12",
+        "plainText": "lim_ h rightarrow 0 frac F left begin matrix h 0 end matrix right F left begin matrix 0 0 end matrix right h lim_ h rightarrow 0 frac 0 a ha neq 0",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-12-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+            "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+            "text": "lim_ h rightarrow 0 frac F left begin matrix h 0 end matrix right F left begin matrix 0 0 end matrix right h lim_ h rightarrow 0 frac 0 a ha neq 0"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-12-group-1-calculus-2-2026-formula-13",
+        "title": "נוסחה/ביטוי 13",
+        "plainText": "hip open sinsala 9 0 7 28",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-12-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+            "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+            "text": "hip open sinsala 9 0 7 28"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-12-group-1-calculus-2-2026-formula-14",
+        "title": "נוסחה/ביטוי 14",
+        "plainText": "8 0 8 f left x y right sin x cdot cos y x y inmathbbR",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-12-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+            "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+            "text": "8 0 8 f left x y right sin x cdot cos y x y inmathbbR"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-12-group-1-calculus-2-2026-formula-15",
+        "title": "נוסחה/ביטוי 15",
+        "plainText": "f y left x y right sin x sin y f x left x y right cos x cos y",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-12-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+            "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+            "text": "f y left x y right sin x sin y f x left x y right cos x cos y"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-12-group-1-calculus-2-2026-formula-16",
+        "title": "נוסחה/ביטוי 16",
+        "plainText": "f left x y right x 2 y x y 2 frac 1 x ln left 1 x 2 y 2 right f 8",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-12-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+            "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+            "text": "f left x y right x 2 y x y 2 frac 1 x ln left 1 x 2 y 2 right f 8"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-12-group-1-calculus-2-2026-formula-17",
+        "title": "נוסחה/ביטוי 17",
+        "plainText": "f left t right left begin matrix cos t sin t end matrix right yea",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-12-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+            "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+            "text": "f left t right left begin matrix cos t sin t end matrix right yea"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-12-group-1-calculus-2-2026-formula-18",
+        "title": "נוסחה/ביטוי 18",
+        "plainText": "f left t right left begin matrix sin t cos t end matrix right",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-12-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+            "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+            "text": "f left t right left begin matrix sin t cos t end matrix right"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-12-group-1-calculus-2-2026-formula-19",
+        "title": "נוסחה/ביטוי 19",
+        "plainText": "F x left begin matrix 0 0 end matrix right lim_ h rightarrow 0 frac F left begin matrix h 0 end matrix right F left begin matrix 0 0 end matrix right h lim_ h rightarrow 0 frac frac h 3 sqrt h 2 0 h",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-12-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+            "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+            "text": "F x left begin matrix 0 0 end matrix right lim_ h rightarrow 0 frac F left begin matrix h 0 end matrix right F left begin matrix 0 0 end matrix right h lim_ h rightarrow 0 frac frac h 3 sqrt h 2 0 h"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-12-group-1-calculus-2-2026-formula-20",
+        "title": "נוסחה/ביטוי 20",
+        "plainText": "lim_ h rightarrow 0 frac h3h cdot left h right lim_ h rightarrow 0h cdot frac h left h right 0 left begin matrix xy end matrix right in mathbb R2",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-12-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+            "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+            "text": "lim_ h rightarrow 0 frac h3h cdot left h right lim_ h rightarrow 0h cdot frac h left h right 0 left begin matrix xy end matrix right in mathbb R2"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-12-group-1-calculus-2-2026-formula-21",
+        "title": "נוסחה/ביטוי 21",
+        "plainText": "F y 1 left begin matrix 0 0 end matrix right lim_ h rightarrow 0 frac F left begin matrix 0 h end matrix right F left begin matrix 0 0 end matrix right h lim_ h rightarrow 0 frac frac h 2 sqrt h 2 0 h",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-12-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+            "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+            "text": "F y 1 left begin matrix 0 0 end matrix right lim_ h rightarrow 0 frac F left begin matrix 0 h end matrix right F left begin matrix 0 0 end matrix right h lim_ h rightarrow 0 frac frac h 2 sqrt h 2 0 h"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-12-group-1-calculus-2-2026-formula-22",
+        "title": "נוסחה/ביטוי 22",
+        "plainText": "lim_ h rightarrow 0 frac h 2 h cdot left h right lim_ h rightarrow 0 frac h left h right P'T 18",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-12-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+            "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+            "text": "lim_ h rightarrow 0 frac h 2 h cdot left h right lim_ h rightarrow 0 frac h left h right P'T 18"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-12-group-1-calculus-2-2026-formula-23",
+        "title": "נוסחה/ביטוי 23",
+        "plainText": "f left t right left begin matrix cos t sin t end matrix right",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-12-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+            "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+            "text": "f left t right left begin matrix cos t sin t end matrix right"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-12-group-1-calculus-2-2026-formula-24",
+        "title": "נוסחה/ביטוי 24",
+        "plainText": "f left t right left begin matrix cos t sin t end matrix right 1 1 7 2",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-12-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+            "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+            "text": "f left t right left begin matrix cos t sin t end matrix right 1 1 7 2"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-12-group-1-calculus-2-2026-formula-25",
+        "title": "נוסחה/ביטוי 25",
+        "plainText": "f x left 0 0 right lim_ h rightarrow 0 frac f left h 0 right f left 0 0 right h lim_ h rightarrow 0 frac 0 0 h 0",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-12-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+            "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+            "text": "f x left 0 0 right lim_ h rightarrow 0 frac f left h 0 right f left 0 0 right h lim_ h rightarrow 0 frac 0 0 h 0"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-12-group-1-calculus-2-2026-formula-26",
+        "title": "נוסחה/ביטוי 26",
+        "plainText": "f y left 0 0 right lim_ h rightarrow 0 frac f left 0 h right f left 0 0 right h lim_ h rightarrow 0 frac 0 0 h 0 88left x y right neq left 0 0 right",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-12-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+            "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+            "text": "f y left 0 0 right lim_ h rightarrow 0 frac f left 0 h right f left 0 0 right h lim_ h rightarrow 0 frac 0 0 h 0 88left x y right neq left 0 0 right"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-12-group-1-calculus-2-2026-formula-27",
+        "title": "נוסחה/ביטוי 27",
+        "plainText": "Doverrightarrowomega leftoverrightarrowf right leftoverrightarrowx 0 right lim_ h rightarrow 0 fracoverrightarrowF leftoverrightarrowx 0 hoverrightarrowu rightoverrightarrowF leftoverrightarrowx 0 right h cdot leftoverrightarroww right",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-12-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+            "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+            "text": "Doverrightarrowomega leftoverrightarrowf right leftoverrightarrowx 0 right lim_ h rightarrow 0 fracoverrightarrowF leftoverrightarrowx 0 hoverrightarrowu rightoverrightarrowF leftoverrightarrowx 0 right h cdot leftoverrightarroww right"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-12-group-1-calculus-2-2026-formula-28",
+        "title": "נוסחה/ביטוי 28",
+        "plainText": "u right lim_ t rightarrow 0 frac",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-12-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+            "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+            "text": "u right lim_ t rightarrow 0 frac"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      },
+      {
+        "id": "lecture-lecture-12-group-1-calculus-2-2026-formula-29",
+        "title": "נוסחה/ביטוי 29",
+        "plainText": "begin casesinfty infty endcases",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-12-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+            "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+            "text": "begin casesinfty infty endcases"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-12-group-1-calculus-2-2026-formula-30",
+        "title": "נוסחה/ביטוי 30",
+        "plainText": "lim_ x rightarrow x 0 f left x right f left x 0 right a left x x 0 right 0",
+        "topicIds": [
+          "גבולות",
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-12-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+            "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+            "text": "lim_ x rightarrow x 0 f left x right f left x 0 right a left x x 0 right 0"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.58
+      }
+    ],
+    "proofPatterns": [],
+    "examples": [],
+    "remarks": [],
+    "importantForExam": [],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+        "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+        "text": "18.6.26 112 7 0377 Pwp left begin matrix x y end matrix right neq left begin matrix 0 0 end matrix right 68 11 7727 p 0 leq theta 2 pi 1 r 0 x r cos theta y r sin theta r sqrt x 2 y 2 is P'e fold y geq 0 1 x 0 9 18 8 t g theta frac y x pal'spa a pie lim_ left begin matrix x y end matrix right rightarrow left begin matrix 0 0 end matrix right y 0 p lim_ left begin matrix x y end matrix right rightarrow left begin matrix 0 0 end matrix right 0 lim r 0 leftbegin matrixx y endmatrixrightrightarrow leftbegin matrix0 0 endmatrixright PP leftbegin matrix x yendmatrix right yr left theta right x is Again 7371122 Gas in dam forall left begin matrixx y endmatrixright inmathbbR 2 f left begin matrix x y end matrix right begin matrix frac x2yx2y2 left begin matrix xy end matrix right neq left begin matrix 00 end matrix right left begin matrix xy end matrix right left begin matrix 00 end matrix right"
+      },
+      {
+        "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+        "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+        "text": "ly 178N 5183k 8 a 7237 F plan trap 5117812 1671178 Magin jlcj.sn ips 7120 lim_ left begin matrix xy end matrix right rightarrow left begin matrix 00 end matrix right F left begin matrix xy end matrix right lim_ left begin matrix xy end matrix right rightarrow left begin matrix 00 end matrix right frac x2yx2y2 lim_ r rightarrow 0 frac r2 cos 2 theta cdot r sin theta r2 lim_ r rightarrow 0 r cos 2 theta sin theta n 0 F left begin matrix 0 0 end matrix right if japan 7371122 Ex 2 Jan begin matrix 1 frac xyx2y2 left begin matrix xy end matrix right neq left begin matrix 00 end matrix right f left begin matrix xy end matrix right 0 end matrix forall left begin matrix x y end matrix right inmathbbR 2 left begin matrix x y end matrix right left begin matrix 0 0 end matrix right 178N 5183k 8 a 7237 F plan trap 5117812 1671178 17 2"
+      },
+      {
+        "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+        "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+        "text": "Magin jlcj.sn ips7 ar lim_ left yx right rightarrow left begin matrix 00 end matrix right F left begin matrix xy end matrix right lim_ left yx right rightarrow left begin matrix 00 end matrix right frac xyx2y2 lim_ r rightarrow 0 frac r cos theta cdot r sin theta r2 theta frac pi4 left frac sqrt 2 2 right 2 frac 1 2 theta frac pi 4 frac sqrt 2 2 left frac sqrt 2 2 right frac 1 2 x ylim_ r rightarrow 0 cos theta sin theta 4fracpi 4cos left frac pi n right lceil fracpi 4 an 77227 O neq D subseteq mathbb R n 78 7 overrightarrowF D rightarrow mathbb R m 72502 Japan overrightarrow F s a 11 overrightarrow x 0 in D overrightarrow X 0 7 overrightarrow F 8 spin jasan cdotoverrightarrow X 0 pk5178mad F x j left overrightarrow x 0 right F x j left overrightarrow x 0 right frac partial F partial x j left overrightarrow x 0 right lim_ h rightarrow 0 frac overrightarrow F left overrightarrow x 0 h ove"
+      },
+      {
+        "sourceFileId": "lecture-lecture-12-group-1-calculus-2-2026",
+        "filename": "Lecture 12 group 1 calculus 2 2026.pdf",
+        "text": "if unpan ya Gall AER 7 3 8am left begin matrixx y endmatrixright neq left begin matrix0 0 endmatrixright left begin matrix x y end matrix right left begin matrix 0 0 end matrix right forall left begin matrix x y end matrix right in mathbb R 2 frac x 2 y x y x 2 y 2F leftbegin matrixx y endmatrixright a i J 727 He 115017 8 72131 F more aer P'in s G D8 11750 lim F left begin matrix xy end matrix right lim_ y rightarrow 0 frac 00y20 left begin matrix xy end matrix right rightarrow left begin matrix 00 end matrix right x 0 lim F left begin matrix xy end matrix right lim_ x rightarrow 0 frac x3x22x2 lim_ x rightarrow 0 frac x12 frac 12 left begin matrix xy end matrix right rightarrow left begin matrix 00 end matrix right yx a inmathbbR Mr pin to 18 leftbegin matrix 0 0 endmatrix right D 7237 F 17 000"
+      }
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
+    "lectureNumber": 13,
+    "weekNumber": 13,
+    "sourceFileId": "lecture-lecture-13-group-1-calculus-2-2026",
+    "filename": "Lecture 13 group 1 calculus 2 2026.pdf",
+    "extractionStatus": "success",
+    "title": "Lecture 13 group 1 calculus 2 2026",
+    "detectedTopics": [
+      "סדרות"
+    ],
+    "definitions": [],
+    "theorems": [],
+    "formulas": [
+      {
+        "id": "lecture-lecture-13-group-1-calculus-2-2026-formula-1",
+        "title": "נוסחה/ביטוי 1",
+        "plainText": "ID on't sina.nl cln'ola 2 827f mathbb R 2 rightarrow mathbb R",
+        "topicIds": [
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-13-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-13-group-1-calculus-2-2026",
+            "filename": "Lecture 13 group 1 calculus 2 2026.pdf",
+            "text": "ID on't sina.nl cln'ola 2 827f mathbb R 2 rightarrow mathbb R"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-13-group-1-calculus-2-2026-formula-2",
+        "title": "נוסחה/ביטוי 2",
+        "plainText": "snip sina.nl clbla 4 day",
+        "topicIds": [
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-13-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-13-group-1-calculus-2-2026",
+            "filename": "Lecture 13 group 1 calculus 2 2026.pdf",
+            "text": "snip sina.nl clbla 4 day"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-13-group-1-calculus-2-2026-formula-3",
+        "title": "נוסחה/ביטוי 3",
+        "plainText": "left langle overrightarrow u overrightarrow v right rangle left overrightarrow u right cdot left overrightarrow v right cdot cos theta",
+        "topicIds": [
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-13-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-13-group-1-calculus-2-2026",
+            "filename": "Lecture 13 group 1 calculus 2 2026.pdf",
+            "text": "left langle overrightarrow u overrightarrow v right rangle left overrightarrow u right cdot left overrightarrow v right cdot cos theta"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-13-group-1-calculus-2-2026-formula-4",
+        "title": "נוסחה/ביטוי 4",
+        "plainText": "sinks do 770 aoverrightarrow",
+        "topicIds": [
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-13-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-13-group-1-calculus-2-2026",
+            "filename": "Lecture 13 group 1 calculus 2 2026.pdf",
+            "text": "sinks do 770 aoverrightarrow"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-13-group-1-calculus-2-2026-formula-5",
+        "title": "נוסחה/ביטוי 5",
+        "plainText": "left nabla f left overrightarrow x 0 right right cdot left overrightarrow w right cdot cos theta",
+        "topicIds": [
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-13-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-13-group-1-calculus-2-2026",
+            "filename": "Lecture 13 group 1 calculus 2 2026.pdf",
+            "text": "left nabla f left overrightarrow x 0 right right cdot left overrightarrow w right cdot cos theta"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-13-group-1-calculus-2-2026-formula-6",
+        "title": "נוסחה/ביטוי 6",
+        "plainText": "left nabla f left overrightarrow x 0 right right cdot cos theta",
+        "topicIds": [
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-13-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-13-group-1-calculus-2-2026",
+            "filename": "Lecture 13 group 1 calculus 2 2026.pdf",
+            "text": "left nabla f left overrightarrow x 0 right right cdot cos theta"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-13-group-1-calculus-2-2026-formula-7",
+        "title": "נוסחה/ביטוי 7",
+        "plainText": "y 0 88 f left x y right x ln y 73 122 Gal 5 8am",
+        "topicIds": [
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-13-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-13-group-1-calculus-2-2026",
+            "filename": "Lecture 13 group 1 calculus 2 2026.pdf",
+            "text": "y 0 88 f left x y right x ln y 73 122 Gal 5 8am"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-13-group-1-calculus-2-2026-formula-8",
+        "title": "נוסחה/ביטוי 8",
+        "plainText": "88 f x ln y 1 f y frac x y 3 G p l",
+        "topicIds": [
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-13-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-13-group-1-calculus-2-2026",
+            "filename": "Lecture 13 group 1 calculus 2 2026.pdf",
+            "text": "88 f x ln y 1 f y frac x y 3 G p l"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-13-group-1-calculus-2-2026-formula-9",
+        "title": "נוסחה/ביטוי 9",
+        "plainText": "881 yo 88 f left x y right x ln y 7137122 Gal 6 8am",
+        "topicIds": [
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-13-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-13-group-1-calculus-2-2026",
+            "filename": "Lecture 13 group 1 calculus 2 2026.pdf",
+            "text": "881 yo 88 f left x y right x ln y 7137122 Gal 6 8am"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-13-group-1-calculus-2-2026-formula-10",
+        "title": "נוסחה/ביטוי 10",
+        "plainText": "nabla f left x y right left begin matrix 2 x 2 y end matrix right left begin matrix 0 0 end matrix rightKil sink on'op is f s e 108",
+        "topicIds": [
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-13-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-13-group-1-calculus-2-2026",
+            "filename": "Lecture 13 group 1 calculus 2 2026.pdf",
+            "text": "nabla f left x y right left begin matrix 2 x 2 y end matrix right left begin matrix 0 0 end matrix rightKil sink on'op is f s e 108"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      },
+      {
+        "id": "lecture-lecture-13-group-1-calculus-2-2026-formula-11",
+        "title": "נוסחה/ביטוי 11",
+        "plainText": "nabla f left x y right left begin matrix 2 x 2 y end matrix right left begin matrix 0 0 end matrix rightKil sink on'op is f 8 e 108",
+        "topicIds": [
+          "סדרות"
+        ],
+        "sourceFileIds": [
+          "lecture-lecture-13-group-1-calculus-2-2026"
+        ],
+        "sourceSnippets": [
+          {
+            "sourceFileId": "lecture-lecture-13-group-1-calculus-2-2026",
+            "filename": "Lecture 13 group 1 calculus 2 2026.pdf",
+            "text": "nabla f left x y right left begin matrix 2 x 2 y end matrix right left begin matrix 0 0 end matrix rightKil sink on'op is f 8 e 108"
+          }
+        ],
+        "examImportance": "medium",
+        "confidence": 0.38
+      }
+    ],
+    "proofPatterns": [],
+    "examples": [],
+    "remarks": [],
+    "importantForExam": [],
+    "sourceSnippets": [
+      {
+        "sourceFileId": "lecture-lecture-13-group-1-calculus-2-2026",
+        "filename": "Lecture 13 group 1 calculus 2 2026.pdf",
+        "text": "21.6.26 13 7 0371 f D rightarrow mathbb R 17202 M3dlN F is 711 overrightarrow x 0 in mathbb R n if 7321 f 6102727 overrightarrow x 0 x1 Dsubseteq mathbbR n in 177287 xk nabla F leftoverrightarrowx 0 right left D F leftoverrightarrowx 0 right right t left begin matrix frac partial F partial x1 ldots frac partial F partial xn end matrix right t left begin matrix frac partial F partial x1 vdots frac partial F partial xn end matrix right x y z inmathbbR F left begin matrix x y z end matrix right x y z 2 x y cdot i Ic N d I p Slc nabla F left begin matrix xyz end matrix right left begin matrix yz2x12xz end matrix right"
+      },
+      {
+        "sourceFileId": "lecture-lecture-13-group-1-calculus-2-2026",
+        "filename": "Lecture 13 group 1 calculus 2 2026.pdf",
+        "text": "7 64 overrightarrow u in mathbb R 2 71 f mathbb R 2 rightarrow mathbb R Slc overrightarrow x 0 2512137 f x f y plc 737 D overrightarrow u left f right left overrightarrow x 0 right left langle nabla f left overrightarrow x 0 right overrightarrow u right rangle f x cdot a f y cdot b 7 x 1620N overrightarrow u left begin matrix a b end matrix right 7 n's s ks 77217now slid 810 Gann allan th mathbb R n f left x y right x cdot y 2 forall left x y right in mathbb R 2 7 n in SanJc penoverrightarrow omega left 2 3 right Doverrightarroww left f right left x y right e a pie we a 122 1 Go 510'31 f x y 2 1 f y 2 x y 7 6710 Gas ba left x y right cdotoverrightarrowv fracoverrightarrowu leftoverrightarroww right frac 1 sqrt 1 3 cdot left 2 3 right 1 8 D overrightarrow w left f right left x y right D overrightarrow v left f right left x y right frac 2 sqrt 1 3 cdot y 2 frac 3 sqrt 1 3 2 x y 16N"
+      },
+      {
+        "sourceFileId": "lecture-lecture-13-group-1-calculus-2-2026",
+        "filename": "Lecture 13 group 1 calculus 2 2026.pdf",
+        "text": "ID on't sina.nl cln'ola 2 827f mathbb R 2 rightarrow mathbb R 7 lore nabla f left x y right left begin matrix x 2 y y 2 x end matrix right forall x y in mathbb Rso Tine 788ha in's to to 172 Sk Nb f x left x y right x 2 y f y left x y right y 2 xx y inmathbb R 108 f x y left x y right x 2 f y x left x y right y 2 is a p I cdot x y inmathbbR 51037 Fyx 1 Exy 112 713772 1 Goens pdi aixYER so x 2 f x y left x y right f y x left x y right y 2 177 0"
+      },
+      {
+        "sourceFileId": "lecture-lecture-13-group-1-calculus-2-2026",
+        "filename": "Lecture 13 group 1 calculus 2 2026.pdf",
+        "text": "A snip 5727 1k 1171017 3 day 7 be nabla f left x y right left begin matrix e x y left x 1 right x e x y end matrix right 1 forall x y in mathbb R ploa Go 1101 ith'd f mathbb R 2 rightarrow mathbb R x y inmathbbR G f left x y right x e x y is pies f x e x y left x 1 right fyxexy nabla f left xy right left begin matrix exy left x1 right xexy end matrix right psupset f 1 intfy left xy right dy int xexydyf left xy right xexyC left x right xexyCexy left x1 right fxexyxexyc left x right Rightarrow c left x right 0 Rightarrow c left x right c"
+      }
+    ],
+    "confidence": 0.8999999999999999
+  },
+  {
     "lectureNumber": 2,
     "weekNumber": 2,
     "sourceFileId": "lecture-lecture-2-group-1-calculus-2-2026",

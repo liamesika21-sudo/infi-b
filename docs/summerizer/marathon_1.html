@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<script type="application/json" id="cowork-artifact-meta">
+{
+  "name": "Marathon Infi2 Moed B 2026",
+  "schemaVersion": 1,
+  "description": "תכנית מרתון 10 ימים × 10 שעות לחדו״א 2 (אינפי 2), מועד ב׳ 2026 — ד״ר שמאי, רייכמן. כוללת ניתוח מבנה מבחני העבר + מועד א׳ 2026, דירוג עדיפויות, לוח יומי שעה-אחר-שעה עם קישורים לכל קובץ בתיקייה, בנק 12 הוכחות מלאות, וניתוח מועד א׳ 2026 שאלה-שאלה. אינטראקטיבי עם צ'קליסטים ומחשבון תאריכים.",
+  "mcpTools": [],
+  "mcpServerNames": []
+}
+</script>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>מרתון אינפי 2 — תכנית 10 ימים למועד ב' 2026</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<style>
+:root{
+  --bg:#f5f7fc; --card:#ffffff; --card2:#eef2fb; --ink:#1b2138; --muted:#5a6288;
+  --line:#dbe1f0; --red:#d61f45; --orange:#c2620a; --yellow:#9a6a00; --green:#0a8f52;
+  --blue:#2456d6; --purple:#7c3aed; --accent:#6a45e6;
+}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(170deg,#eef2fb,#f7f9fd 55%,#eef2fb);color:var(--ink);
+  font-family:"Segoe UI","Assistant",system-ui,Arial,sans-serif;line-height:1.7;padding:0 0 80px}
+.wrap{max-width:1060px;margin:0 auto;padding:0 18px}
+header.hero{padding:44px 18px 30px;text-align:center;background:radial-gradient(700px 300px at 50% -10%,rgba(106,69,230,.14),transparent)}
+h1{font-size:2.05rem;margin:.1em 0;line-height:1.25;background:linear-gradient(90deg,#6a45e6,#0a8f52);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--muted);font-size:1.02rem}
+.meta{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:16px}
+.pill{background:var(--card2);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:.86rem;color:var(--ink)}
+.pill b{color:var(--green)}
+h2{font-size:1.5rem;margin:38px 0 6px;padding-bottom:8px;border-bottom:2px solid var(--line);color:#232a49}
+h3{font-size:1.16rem;margin:20px 0 6px;color:#39406a}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0;box-shadow:0 4px 18px rgba(30,45,90,.07)}
+.alert{border:1px solid var(--orange);background:linear-gradient(180deg,rgba(194,98,10,.10),rgba(194,98,10,.03));border-radius:14px;padding:16px 20px;margin:16px 0}
+.alert h3{color:var(--orange);margin-top:0}
+.good{border-color:var(--green);background:linear-gradient(180deg,rgba(10,143,82,.10),rgba(10,143,82,.03))}
+.good h3{color:var(--green)}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:right;vertical-align:top}
+th{background:var(--card2);color:#2b3255}
+tr:nth-child(even) td{background:rgba(36,86,214,.035)}
+.tag{display:inline-block;font-size:.74rem;font-weight:700;padding:2px 9px;border-radius:6px;margin-inline-start:4px;white-space:nowrap}
+.t-red{background:rgba(214,31,69,.10);color:var(--red);border:1px solid var(--red)}
+.t-org{background:rgba(194,98,10,.10);color:var(--orange);border:1px solid var(--orange)}
+.t-yel{background:rgba(154,106,0,.10);color:var(--yellow);border:1px solid var(--yellow)}
+.t-blk{background:rgba(90,98,136,.10);color:var(--muted);border:1px solid var(--muted)}
+.t-new{background:rgba(124,58,237,.10);color:var(--purple);border:1px solid var(--purple)}
+details.day{background:var(--card);border:1px solid var(--line);border-radius:16px;margin:14px 0;overflow:hidden;box-shadow:0 4px 18px rgba(30,45,90,.06)}
+details.day>summary{cursor:pointer;list-style:none;padding:16px 20px;display:flex;align-items:center;gap:12px;font-size:1.12rem;font-weight:700;background:linear-gradient(90deg,var(--card2),var(--card))}
+details.day>summary::-webkit-details-marker{display:none}
+.daynum{flex:none;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:1.25rem;background:linear-gradient(135deg,var(--accent),#0a8f52);color:#fff}
+.dtitle{flex:1}
+.dtitle small{display:block;color:var(--muted);font-weight:500;font-size:.82rem;margin-top:2px}
+.chev{color:var(--muted);font-size:.8rem}
+.daybody{padding:6px 20px 18px}
+.block{border-inline-start:3px solid var(--blue);padding:6px 14px;margin:12px 0;background:rgba(36,86,214,.05);border-radius:0 10px 10px 0}
+.block .time{font-weight:700;color:var(--blue);font-size:.9rem}
+.block.b2{border-color:var(--green);background:rgba(10,143,82,.05)}.block.b2 .time{color:var(--green)}
+.block.b3{border-color:var(--orange);background:rgba(194,98,10,.05)}.block.b3 .time{color:var(--orange)}
+.block.b4{border-color:var(--purple);background:rgba(124,58,237,.05)}.block.b4 .time{color:var(--purple)}
+.break{color:var(--muted);font-size:.82rem;text-align:center;margin:4px 0}
+.files{margin:10px 0}
+.files a{display:inline-flex;align-items:center;gap:5px;background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:4px 10px;margin:3px 4px 3px 0;font-size:.82rem;color:var(--blue);text-decoration:none}
+.files a:hover{border-color:var(--blue);background:#e3ebfc}
+.goal{background:rgba(10,143,82,.06);border:1px dashed var(--green);border-radius:10px;padding:8px 12px;margin:10px 0;font-size:.92rem}
+.hw{background:rgba(124,58,237,.06);border:1px solid var(--purple);border-inline-start:4px solid var(--purple);border-radius:10px;padding:10px 14px;margin:12px 0;font-size:.9rem}
+.hw h4{margin:0 0 6px;color:var(--purple);font-size:1rem}
+.hw ul{margin:6px 0 2px;padding-inline-start:20px}
+.hw li{margin:3px 0}
+.hw .opt{color:var(--muted);font-size:.85rem}
+.ex{display:inline-block;background:#fff;border:1px solid var(--purple);color:var(--purple);font-weight:700;border-radius:6px;padding:0 7px;font-size:.82rem;margin-inline-end:4px}
+ul.check{list-style:none;padding:0;margin:8px 0}
+ul.check li{padding:4px 0 4px 0;display:flex;gap:9px;align-items:flex-start}
+ul.check input{margin-top:6px;accent-color:var(--green);width:16px;height:16px;flex:none}
+details.proof{background:var(--card2);border:1px solid var(--line);border-radius:12px;margin:10px 0}
+details.proof>summary{cursor:pointer;padding:12px 16px;font-weight:700;color:#2b3255;list-style:none}
+details.proof>summary::-webkit-details-marker{display:none}
+details.proof>summary::before{content:"▸ ";color:var(--accent)}
+details.proof[open]>summary::before{content:"▾ "}
+.proof .body{padding:2px 16px 16px;border-top:1px solid var(--line)}
+.keirov{font-size:.82rem;color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.kv{background:var(--card2);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:.9rem}
+.date-set{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:center;margin-top:14px}
+.date-set input{background:#fff;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:6px 10px;font-family:inherit}
+.date-set button{background:var(--accent);color:#fff;border:0;border-radius:8px;padding:7px 14px;cursor:pointer;font-family:inherit;font-weight:700}
+.ddate{color:var(--orange);font-weight:700;font-size:.82rem;margin-inline-start:6px}
+.prog{position:sticky;top:0;z-index:9;background:rgba(247,249,253,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:8px 0}
+.bar{height:10px;background:var(--card2);border-radius:999px;overflow:hidden;border:1px solid var(--line)}
+.bar>span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),#0a8f52);transition:width .3s}
+.progtxt{font-size:.8rem;color:var(--muted);text-align:center;margin-top:4px}
+.toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin:14px 0}
+.toc a{background:var(--card2);border:1px solid var(--line);border-radius:10px;padding:10px;text-decoration:none;color:#39406a;font-size:.88rem;text-align:center}
+.toc a:hover{border-color:var(--accent);background:#e8e3fb}
+.note{font-size:.82rem;color:var(--muted)}
+code{background:#eef2fb;padding:1px 6px;border-radius:5px;color:#0a7d47;font-size:.9em;border:1px solid var(--line)}
+b.hl{color:var(--red)}
+.footer{text-align:center;color:var(--muted);font-size:.82rem;margin-top:40px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="sub">🎓 מרתון סיכום • חדו״א 2 (אינפי 2) • ד״ר יוסי שמאי • אוניברסיטת רייכמן</div>
+  <h1>תכנית 10 ימים למועד ב׳ 2026</h1>
+  <div class="sub">10 שעות ביום · מ־0 עד מוכנות מלאה · בנוי לפי כל מבחני העבר + מועד א׳ 2026</div>
+  <div class="meta">
+    <span class="pill">⏱️ <b>3 שעות</b> מבחן</span>
+    <span class="pill">📝 <b>5 שאלות</b>, עונים על <b>4</b></span>
+    <span class="pill">💯 <b>25 נק׳</b> לשאלה</span>
+    <span class="pill">🚫 חומר עזר: אין</span>
+    <span class="pill">🎯 יעד: <b>100 שעות</b> למידה</span>
+  </div>
+  <div class="date-set">
+    <label class="note">תאריך המבחן שלך:</label>
+    <input type="date" id="examDate">
+    <button onclick="setDates()">חשב תאריכים לכל יום</button>
+  </div>
+</header>
+
+<div class="prog">
+  <div class="wrap">
+    <div class="bar"><span id="progFill"></span></div>
+    <div class="progtxt" id="progTxt">0% הושלם — סמני ✔️ משימות תוך כדי</div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="toc">
+    <a href="#update">🚨 עדכוני 2026</a>
+    <a href="#dna">🧬 מבנה המבחן</a>
+    <a href="#freq">📊 תדירות נושאים</a>
+    <a href="#prio">⭐ דירוג עדיפויות</a>
+    <a href="#sig">🔁 חתימות חוזרות</a>
+    <a href="#plan">🗓️ תכנית 10 הימים</a>
+    <a href="#proofs">📚 בנק ההוכחות</a>
+    <a href="#moedA">🔬 ניתוח מועד א׳ 2026</a>
+    <a href="#strategy">🎯 אסטרטגיית יום המבחן</a>
+  </div>
+
+  <!-- ===================== UPDATE ALERT ===================== -->
+  <h2 id="update">🚨 שני עדכונים קריטיים ממועד א׳ 2026</h2>
+  <div class="alert">
+    <h3>⚠️ המבחן ששלחת שינה את התמונה — קראי את זה קודם</h3>
+    <p>הניתוח הישן שבתיקייה קבע ש״כל הרב־משתנה בחוץ״ ו״שארית טיילור בחוץ״. <b>מועד א׳ 2026 סותר את זה.</b> מכיוון שמועד ב׳ 2026 הוא <b>אותה שנה, אותו מרצה, אותו חומר</b> — מועד א׳ 2026 הוא כעת <b class="hl">המנבא החזק ביותר</b> שיש לך. שני נושאים חזרו פנימה:</p>
+    <table>
+      <tr><th>נושא</th><th>איפה הופיע במועד א׳ 2026</th><th>המשמעות למועד ב׳</th></tr>
+      <tr><td><b>רב־משתנה</b> — רציפות פונקציה דו־משתנית + נגזרות חלקיות</td><td>שאלה 2.2: <span class="keirov">$f(x,y)=\frac{x^2y-y^3}{x^4+y^2}$ — רציפות, $f_y(0,0)$, $f_x(1,2)$</span></td><td><b class="hl">חובה ללמוד</b> — רציפות דרך מסלולים + נגזרת חלקית מהגדרה וחישוב. יום 9 מוקדש לזה.</td></tr>
+      <tr><td><b>משפט השארית של טיילור</b> (צורת לגרנז׳)</td><td>שאלה 3.2: הוכחת קיום $c$ עם $6(1-f(1))=f'''(c)$ דרך שארית טיילור</td><td>ללמוד את משפט טיילור עם שארית לגרנז׳ כ<b>כלי הוכחה</b>. יום 8.</td></tr>
+    </table>
+    <p class="note">💡 מה שכן נשאר בחוץ בסבירות גבוהה: גרדיאנט, נגזרת כיוונית, לפלסיאן, ומשפט קושי לערך הממוצע. אבל מכיוון ש־2026 פתח מחדש את הרב־משתנה — נעבור על ההגדרות שלהם ל־10 דקות ביטחון, בלי להשקיע בהם.</p>
+  </div>
+
+  <!-- ===================== DNA ===================== -->
+  <h2 id="dna">🧬 איך שמאי בונה מבחן — ה־DNA</h2>
+  <div class="card">
+    <p>המבנה קבוע לאורך 4 שנים (וודאות ~100%): <b>5 שאלות, עונים על 4</b>, כל שאלה 25 נק׳, 3 שעות, ואין בחירה בתוך שאלה. הנחיה קבועה: <i>״יש לציין את כל תנאי המשפטים שבהם משתמשים״</i> — טענה לא מנומקת = 0 נקודות.</p>
+    <h3>כמעט כל שאלה בנויה מ־3 רכיבים:</h3>
+    <div class="legend">
+      <div class="kv">1️⃣ <b>הוכחת משפט מהקורס</b> (״ראו הרצאות״) — 15–17 נק׳. תיאוריה לשינון מדויק.</div>
+      <div class="kv">2️⃣ <b>סעיף הגדרה</b> — 2–4 נק׳. ״הגדר/י X עם $\epsilon$״.</div>
+      <div class="kv">3️⃣ <b>סעיף חישוב/הכרעה</b> — 8–15 נק׳. חשב טור/אינטגרל, הכרע התכנסות, הוכח/הפרך.</div>
+    </div>
+    <p><b class="hl">המסקנה:</b> בכל שאלה יש גם ״תיאוריה לשינון״ וגם ״טכניקת חישוב״. מי ששולט רק באחד מהם מאבד חצי שאלה. לכן התכנית משלבת <b>שינון הוכחות כל יום</b> יחד עם תרגול.</p>
+  </div>
+
+  <!-- ===================== FREQUENCY ===================== -->
+  <h2 id="freq">📊 תדירות נושאים — על מה שמאי שואל הכי הרבה</h2>
+  <p class="note">מתוך 10 מבחנים: 8 רשמיים (מועד א׳+ב׳, 2022–2025) + סימולציה 2025 + מועד א׳ 2026.</p>
+  <div class="card">
+  <table>
+    <tr><th>#</th><th>נושא</th><th>תדירות</th><th>עדיפות</th></tr>
+    <tr><td>1</td><td><b>התכנסות טורים</b> — יחס/שורש/השוואה/השוואה גבולית/טלסקופי/סוגריים/לייבניץ/תנאי הכרחי/p־טור</td><td>10/10</td><td><span class="tag t-red">ליבה מוחלטת</span></td></tr>
+    <tr><td>2</td><td><b>הוכחת משפט מהקורס</b> (״ראו הרצאות״)</td><td>10/10</td><td><span class="tag t-red">ליבה מוחלטת</span></td></tr>
+    <tr><td>3</td><td><b>טורי חזקות</b> — רדיוס + תחום התכנסות + בדיקת קצוות</td><td>~9/10</td><td><span class="tag t-red">קריטי</span></td></tr>
+    <tr><td>4</td><td><b>טורי טיילור</b> — מטור מוכר / חילוץ $f^{(n)}(0)$ / סכימה</td><td>~9/10</td><td><span class="tag t-red">קריטי</span></td></tr>
+    <tr><td>5</td><td><b>אינטגרל מסוים</b> — חישוב (הצבה + חלקים) ו־<b>FTC</b> עם גבול משתנה</td><td>~7/10</td><td><span class="tag t-org">חשוב מאוד</span></td></tr>
+    <tr><td>6</td><td><b>סדרות</b> — רקורסיביות, מונוטוני+חסום, נקודת שבת</td><td>5/10</td><td><span class="tag t-org">חשוב</span></td></tr>
+    <tr><td>7</td><td><b>תורת האינטגרציה</b> — רימן/דארבו, $|\int f|\le\int|f|$</td><td>3/10</td><td><span class="tag t-org">חשוב</span></td></tr>
+    <tr><td>8</td><td><b>התכנסות בהחלט מול בתנאי</b></td><td>4/10</td><td><span class="tag t-org">חשוב</span></td></tr>
+    <tr><td>9</td><td><b>אינטגרל לא אמיתי</b> (השוואה) + הערכה בין חסמים (סנדוויץ׳)</td><td>4/10</td><td><span class="tag t-yel">רצוי</span></td></tr>
+    <tr><td>10</td><td><b>רב־משתנה</b> — רציפות + נגזרות חלקיות</td><td>חזר ב־2026</td><td><span class="tag t-new">חדש/חזר</span></td></tr>
+    <tr><td>11</td><td><b>שארית טיילור</b> (לגרנז׳) ככלי הוכחה</td><td>חזר ב־2026</td><td><span class="tag t-new">חדש/חזר</span></td></tr>
+    <tr><td>12</td><td><b>גבולות / לופיטל / דרבו / MVT</b> (בד״כ סעיף־עזר)</td><td>4/10</td><td><span class="tag t-yel">רצוי</span></td></tr>
+  </table>
+  </div>
+
+  <!-- ===================== PRIORITIES ===================== -->
+  <h2 id="prio">⭐ דירוג עדיפויות — כמה זמן להשקיע בכל נושא</h2>
+  <div class="card">
+    <h3><span class="tag t-red">🔴 חובה מוחלטת — 55% מהזמן</span></h3>
+    <p>כל מבחני ההתכנסות לטורים · טורי חזקות (רדיוס + קצוות) · טורי טיילור מוכרים + חילוץ $f^{(n)}(0)$ · שינון 10 ההוכחות ״ראו הרצאות״. <b>אם נגמר לך הזמן — כאן משקיעים.</b></p>
+    <h3><span class="tag t-org">🟠 חשוב — 30% מהזמן</span></h3>
+    <p>אינטגרל מסוים (הצבה+חלקים) · FTC עם גבול משתנה+שרשרת · סדרות רקורסיביות · התכנסות בהחלט/בתנאי · תורת האינטגרציה ($|\int f|\le\int|f|$, קריטריון רימן) · סכימת טורי חזקות · אינטגרל לא אמיתי + סנדוויץ׳.</p>
+    <h3><span class="tag t-new">🟣 עלה לחשיבות ב־2026 — 15% מהזמן</span></h3>
+    <p><b>רב־משתנה</b> (רציפות דרך מסלולים + נגזרות חלקיות) · <b>שארית טיילור/לגרנז׳</b> · לופיטל · דרבו · MVT/Rolle.</p>
+    <h3><span class="tag t-blk">⚫ אל תשקיעי — סבירות נמוכה</span></h3>
+    <p>גרדיאנט · נגזרת כיוונית · לפלסיאן · משפט קושי לערך הממוצע. (רק מבט חטוף של דקות ספורות על ההגדרות.)</p>
+  </div>
+
+  <!-- ===================== SIGNATURES ===================== -->
+  <h2 id="sig">🔁 ״חתימות״ — שאלות שחוזרות כמעט מילה במילה</h2>
+  <p class="note">שמאי ממחזר תבניות. אלו הופיעו פעמיים ומעלה — <b>תרגלי אותן עד שהיד עושה אותן לבד:</b></p>
+  <div class="card">
+  <table>
+    <tr><th>חתימה</th><th>היכן הופיעה</th><th>מה לתרגל</th></tr>
+    <tr><td><b>משפט אבל</b>: התכנסות ב־$x_1$ ⇐ התכנסות בהחלט ב־$x_2$ קרוב יותר</td><td>2022א, 2023ב, 2025ב, (מועד א׳ 2026 ש׳4.1 ברוח)</td><td>שנני את ההוכחה</td></tr>
+    <tr><td><b>$\arctan(x)/x$ → טור + חילוץ $f^{(10)}(0)$</b></td><td>2023א, 2025א, סימולציה</td><td>שני הסעיפים ביחד</td></tr>
+    <tr><td><b>הוכחת FTC</b>: $\int_a^b f=G(b)-G(a)$</td><td>2022ב, 2023א, 2025א, מועד א׳ 2026 (ש׳5.1)</td><td>שנני מילה במילה</td></tr>
+    <tr><td><b>אי־רציונליות של $e$</b></td><td>2023א, 2025א</td><td>שנני את ההוכחה</td></tr>
+    <tr><td><b>מבחן סוגריים → קריסה לטור הרמוני מתבדר</b></td><td>2024א, 2024ב, 2025א, סימולציה, <b>מועד א׳ 2026 ש׳5.2</b></td><td>מבנה $\frac{b}{2n-1}-\frac{a}{2n}$ + השוואה גבולית</td></tr>
+    <tr><td><b>סכימת טור חזקות</b> ע״י גזירה איבר־איבר</td><td>2024, 2025, <b>מועד א׳ 2026 ש׳3.1</b> ($\sum n(n-1)x^n=\frac{2x^2}{(1-x)^3}$)</td><td>גזירה כפולה של $\frac{1}{1-x}$</td></tr>
+    <tr><td><b>טור פרמטרי ״מצא כל $a\ge0$״ עם מבחן שורש</b></td><td>2024א, 2025ב</td><td>סוג $\left(\frac{\alpha n+1}{n+1}\right)^n$</td></tr>
+    <tr><td><b>סדרה רקורסיבית מונוטונית→∞</b></td><td>סימולציה = תרגיל בית 2 ש׳5a מילה במילה</td><td>$a_{n+1}=a_n+\frac1{a_n}$</td></tr>
+    <tr><td><b>לייבניץ ״הפוך״</b>: בונים $b_n$ מ־$a_n$ ומוכיחים התכנסות</td><td><b>מועד א׳ 2026 ש׳4.2</b></td><td>$b_n=(-1)^{n+1}(a_n+(-1)^{n+1})$</td></tr>
+    <tr><td><b>FTC + גבול משתנה + לופיטל</b></td><td>2025, <b>מועד א׳ 2026 ש׳5.1</b> ($\lim_{x\to0^+}\frac{\int_0^{x^2}\ln(1+\sqrt t)dt}{x^3}$)</td><td>גזירת אינטגרל עם גבול $x^2$ + שרשרת</td></tr>
+  </table>
+  </div>
+
+</div><!-- /wrap for full-width plan header -->
+
+<div class="wrap">
+  <!-- ===================== 10-DAY PLAN ===================== -->
+  <h2 id="plan">🗓️ תכנית 10 הימים — שעה אחר שעה</h2>
+  <div class="card">
+    <p><b>מבנה יום קבוע (10 שעות):</b></p>
+    <div class="legend">
+      <div class="kv"><span style="color:var(--blue)">■</span> 09:00–12:00 · תיאוריה + הרצאה/תרגול</div>
+      <div class="kv"><span style="color:var(--green)">■</span> 12:45–15:15 · תרגול מודרך</div>
+      <div class="kv"><span style="color:var(--orange)">■</span> 16:00–18:30 · תרגול עצמאי / מבחני עבר</div>
+      <div class="kv"><span style="color:var(--purple)">■</span> 19:15–21:15 · שינון הוכחות + חזרה פעילה</div>
+    </div>
+    <p class="note">השעות הן שלד — הזיזי לפי מתי שנוח לך, רק שמרי על 4 הבלוקים וההפסקות ביניהם. כל קישור כחול פותח את הקובץ שלך במחשב.</p>
+  </div>
+</div>
+
+<div class="wrap" id="days"></div>
+
+<div class="wrap">
+  <!-- ===================== PROOF BANK ===================== -->
+  <h2 id="proofs">📚 בנק ההוכחות — 12 ה״ראו הרצאות״ לשינון</h2>
+  <div class="alert good">
+    <h3>💰 ״כסף קל״ — כל מבחן כולל לפחות הוכחה אחת מכאן</h3>
+    <p>שנני עד שאת כותבת אותן בעיניים עצומות. לכל הוכחה: (1) הנוסח המדויק של המשפט, (2) התנאים, (3) ההוכחה. <b>במבחן תמיד רשמי את התנאים לפני שאת מתחילה</b> — שמאי נותן ניקוד על ציון התנאים.</p>
+  </div>
+
+  <details class="proof"><summary>1. תנאי הכרחי להתכנסות · $\sum a_n$ מתכנס $\Rightarrow a_n\to0$</summary>
+  <div class="body">
+    <p><b>משפט:</b> אם $\sum_{n=k}^\infty a_n$ מתכנס אז $\lim_{n\to\infty}a_n=0$.</p>
+    <p><b>הוכחה:</b> נסמן ב־$s_N=\sum_{n=k}^N a_n$ את הסכום החלקי. הנחת ההתכנסות פירושה $s_N\to s$ עבור $s\in\mathbb{R}$. אזי גם $s_{N-1}\to s$. לכן:</p>
+    <p>$$a_N=s_N-s_{N-1}\ \xrightarrow[N\to\infty]{}\ s-s=0.\quad\blacksquare$$</p>
+    <p class="note">שימוש: להפריך התכנסות. אם $a_n\not\to0$ הטור <b>מתבדר</b> (למשל $\sum n(n-1)$ ו־$\sum n(n-1)(-1)^n$ במועד א׳ 2026 ש׳3.1).</p>
+  </div></details>
+
+  <details class="proof"><summary>2. מבחן ההשוואה (טורים אי־שליליים)</summary>
+  <div class="body">
+    <p><b>משפט:</b> יהיו $0\le a_n\le b_n$ לכל $n\ge k$. אם $\sum b_n$ מתכנס אז $\sum a_n$ מתכנס; אם $\sum a_n$ מתבדר אז $\sum b_n$ מתבדר.</p>
+    <p><b>הוכחה:</b> נסמן $A_N=\sum_{n=k}^N a_n$, $B_N=\sum_{n=k}^N b_n$. מכיוון ש־$a_n\ge0$, הסדרה $(A_N)$ <b>מונוטונית עולה</b>. מ־$a_n\le b_n$ נובע $A_N\le B_N\le \sum_{n=k}^\infty b_n=:B$ (כי $\sum b_n$ מתכנס). כלומר $(A_N)$ עולה וחסומה מלמעלה ע״י $B$, ולכן מתכנסת (משפט הסדרה המונוטונית). הכיוון השני הוא הקונטרה־פוזיטיב.$\quad\blacksquare$</p>
+  </div></details>
+
+  <details class="proof"><summary>3. מבחן ההשוואה הגבולי · (מועד א׳ 2026 ש׳1.1.2!)</summary>
+  <div class="body">
+    <p><b>משפט:</b> יהיו $a_n,b_n>0$ ונניח $\lim_{n\to\infty}\frac{a_n}{b_n}=L$ עם $0\lt L\lt \infty$. אז $\sum a_n$ מתכנס $\iff \sum b_n$ מתכנס.</p>
+    <p><b>הוכחה:</b> נבחר $\epsilon=\frac{L}{2}>0$. מהגדרת הגבול קיים $N$ כך שלכל $n\ge N$:</p>
+    <p>$$\left|\frac{a_n}{b_n}-L\right|\lt \frac{L}{2}\ \Longrightarrow\ \frac{L}{2}\lt \frac{a_n}{b_n}\lt \frac{3L}{2}\ \Longrightarrow\ \frac{L}{2}b_n\lt a_n\lt \frac{3L}{2}b_n.$$</p>
+    <p>אם $\sum b_n$ מתכנס: מ־$a_n\lt \frac{3L}{2}b_n$ ומבחן ההשוואה $\Rightarrow \sum a_n$ מתכנס. אם $\sum b_n$ מתבדר: מ־$a_n>\frac{L}{2}b_n$ ומבחן ההשוואה $\Rightarrow \sum a_n$ מתבדר. בשני הכיוונים קיבלנו שקילות.$\quad\blacksquare$</p>
+    <p class="note">⭐ זו בדיוק ההוכחה של מועד א׳ 2026 שאלה 1.1.2 (״ראו הרצאות״, 15 נק׳). שנני מילה במילה.</p>
+  </div></details>
+
+  <details class="proof"><summary>4. מבחן היחס (מבחן ד׳אלמבר)</summary>
+  <div class="body">
+    <p><b>משפט:</b> נניח $a_n\ne0$ ו־$\lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|=L$. אם $L\lt 1$ הטור $\sum a_n$ מתכנס בהחלט; אם $L>1$ הוא מתבדר.</p>
+    <p><b>הוכחה ($L\lt 1$):</b> נבחר $q$ עם $L\lt q\lt 1$. מהגדרת הגבול קיים $N$ כך שלכל $n\ge N$: $\left|\frac{a_{n+1}}{a_n}\right|\lt q$. באינדוקציה, לכל $k\ge0$:</p>
+    <p>$$|a_{N+k}|\lt q^k|a_N|.$$</p>
+    <p>לכן $\sum_{k\ge0}|a_{N+k}|\lt |a_N|\sum_{k\ge0}q^k=\frac{|a_N|}{1-q}\lt \infty$ (טור גיאומטרי, $q\lt 1$). הזנב מתכנס בהחלט, ומכאן כל הטור. עבור $L>1$: קיים $N$ שממנו $|a_{n+1}|>|a_n|$, כך ש־$a_n\not\to0$, ומהתנאי ההכרחי הטור מתבדר.$\quad\blacksquare$</p>
+  </div></details>
+
+  <details class="proof"><summary>5. מבחן השורש (קושי) + קושי–הדמר לרדיוס</summary>
+  <div class="body">
+    <p><b>משפט:</b> נניח $\lim_{n\to\infty}\sqrt[n]{|a_n|}=L$. אם $L\lt 1$ הטור מתכנס בהחלט; אם $L>1$ הוא מתבדר.</p>
+    <p><b>הוכחה ($L\lt 1$):</b> נבחר $q$ עם $L\lt q\lt 1$. קיים $N$ כך שלכל $n\ge N$: $\sqrt[n]{|a_n|}\lt q$, כלומר $|a_n|\lt q^n$. מבחן ההשוואה מול הטור הגיאומטרי $\sum q^n$ ($q\lt 1$) נותן התכנסות בהחלט. עבור $L>1$: $|a_n|>1$ אינסוף פעמים, אז $a_n\not\to0$ והטור מתבדר.$\quad\blacksquare$</p>
+    <p><b>קושי–הדמר:</b> לטור חזקות $\sum a_n(x-x_0)^n$ רדיוס ההתכנסות הוא $R=\dfrac{1}{L}$ כאשר $L=\lim\sqrt[n]{|a_n|}$ (או $L=\lim\left|\frac{a_{n+1}}{a_n}\right|$).</p>
+  </div></details>
+
+  <details class="proof"><summary>6. משפט לייבניץ (טור מתחלף) + חסם השגיאה</summary>
+  <div class="body">
+    <p><b>משפט:</b> תהי $(a_n)$ סדרה <b>מונוטונית יורדת</b> של אי־שליליים עם $a_n\to0$. אז $\sum_{n=1}^\infty(-1)^{n+1}a_n$ מתכנס, וסכומו $s$ מקיים $a_1-a_2\le s\le a_1$ ובכלל $|s-s_n|\le a_{n+1}$.</p>
+    <p><b>הוכחה:</b> נביט בסכומים החלקיים הזוגיים $s_{2n}$: </p>
+    <p>$$s_{2n+2}-s_{2n}=a_{2n+1}-a_{2n+2}\ge0\ \Rightarrow\ (s_{2n})\text{ עולה}.$$</p>
+    <p>והאי־זוגיים $s_{2n+1}$: $s_{2n+1}-s_{2n-1}=-a_{2n}+a_{2n+1}\le0 \Rightarrow (s_{2n+1})$ יורדת. בנוסף $s_{2n}=s_{2n-1}-a_{2n}\le s_{2n-1}$, כך ש־$(s_{2n})$ עולה וחסומה מלמעלה (ע״י $s_1$) ו־$(s_{2n+1})$ יורדת וחסומה מלמטה. שתיהן מתכנסות, וההפרש $s_{2n+1}-s_{2n}=a_{2n+1}\to0$ מראה שהן מתכנסות ל<b>אותו</b> גבול $s$. לכן כל הסדרה מתכנסת ל־$s$. חסם השגיאה נובע מכך ש־$s$ כלוא בין כל שני סכומים חלקיים עוקבים.$\quad\blacksquare$</p>
+  </div></details>
+
+  <details class="proof"><summary>7. משפט אבל (התכנסות בנקודה ⇒ התכנסות בהחלט פנימה)</summary>
+  <div class="body">
+    <p><b>משפט:</b> אם טור החזקות $\sum a_n(x-x_0)^n$ מתכנס בנקודה $x_1\ne x_0$, אז הוא מתכנס בהחלט לכל $x$ המקיים $|x-x_0|\lt |x_1-x_0|$.</p>
+    <p><b>הוכחה:</b> מכיוון ש־$\sum a_n(x_1-x_0)^n$ מתכנס, מהתנאי ההכרחי $a_n(x_1-x_0)^n\to0$, ובפרט הסדרה חסומה: קיים $M$ עם $|a_n(x_1-x_0)^n|\le M$ לכל $n$. נסמן $r=\dfrac{|x-x_0|}{|x_1-x_0|}\lt 1$. אז:</p>
+    <p>$$|a_n(x-x_0)^n|=|a_n(x_1-x_0)^n|\cdot\left|\frac{x-x_0}{x_1-x_0}\right|^n\le M\, r^n.$$</p>
+    <p>מבחן ההשוואה מול $\sum M r^n$ (גיאומטרי, $r\lt 1$) נותן התכנסות בהחלט.$\quad\blacksquare$</p>
+  </div></details>
+
+  <details class="proof"><summary>8. המשפט היסודי של החדו״א (FTC)</summary>
+  <div class="body">
+    <p><b>משפט (חלק 1):</b> תהי $f$ רציפה על $[a,b]$ ו־$F(x)=\int_a^x f(t)\,dt$. אז $F$ גזירה ו־$F'(x)=f(x)$.</p>
+    <p><b>הוכחה:</b> עבור $x_0\in(a,b)$ ו־$h\ne0$ קטן:</p>
+    <p>$$\frac{F(x_0+h)-F(x_0)}{h}=\frac1h\int_{x_0}^{x_0+h}f(t)\,dt.$$</p>
+    <p>$f$ רציפה, אז על הקטע בין $x_0$ ל־$x_0+h$ יש לה מינימום $m_h$ ומקסימום $M_h$, ו־$m_h\cdot h\le\int_{x_0}^{x_0+h}f\le M_h\cdot h$ (עבור $h>0$). חלוקה ב־$h$: $m_h\le\frac1h\int_{x_0}^{x_0+h}f\le M_h$. כאשר $h\to0$, מרציפות $f$ מתקיים $m_h,M_h\to f(x_0)$, וממשפט הסנדוויץ׳ הביטוי שואף ל־$f(x_0)$. לכן $F'(x_0)=f(x_0)$.$\quad\blacksquare$</p>
+    <p><b>חלק 2 (נוסחת ניוטון–לייבניץ):</b> אם $G$ קדומה של $f$ אז $\int_a^b f=G(b)-G(a)$. הוכחה: $F$ ו־$G$ שתיהן קדומות ל־$f$, לכן $F-G$ קבועה; מ־$F(a)=0$ נובע $F(x)=G(x)-G(a)$, ובפרט $\int_a^b f=F(b)=G(b)-G(a)$.$\quad\blacksquare$</p>
+  </div></details>
+
+  <details class="proof"><summary>9. אי־רציונליות של $e$</summary>
+  <div class="body">
+    <p><b>משפט:</b> $e=\sum_{n=0}^\infty\frac{1}{n!}$ אינו רציונלי.</p>
+    <p><b>הוכחה (בשלילה):</b> נניח $e=\frac{p}{q}$ עם $p,q\in\mathbb{N}$. נגדיר</p>
+    <p>$$x=q!\left(e-\sum_{n=0}^{q}\frac{1}{n!}\right)=\sum_{n=q+1}^\infty\frac{q!}{n!}.$$</p>
+    <p><b>$x$ שלם:</b> $q!\,e=q!\cdot\frac{p}{q}=(q-1)!\,p\in\mathbb{Z}$, וגם $q!\sum_{n=0}^q\frac1{n!}\in\mathbb{Z}$ (כל איבר שלם כי $n\le q$). לכן $x\in\mathbb{Z}$.</p>
+    <p><b>אבל $0\lt x\lt 1$:</b></p>
+    <p>$$x=\frac{1}{q+1}+\frac{1}{(q+1)(q+2)}+\cdots\lt \sum_{k=1}^\infty\frac{1}{(q+1)^k}=\frac{1/(q+1)}{1-1/(q+1)}=\frac{1}{q}\le1,$$</p>
+    <p>וברור $x>0$. מספר שלם בקטע $(0,1)$ — סתירה. לכן $e$ אינו רציונלי.$\quad\blacksquare$</p>
+  </div></details>
+
+  <details class="proof"><summary>10. משפט תת־הסדרה (גבול תת־סדרה = גבול הסדרה)</summary>
+  <div class="body">
+    <p><b>משפט:</b> אם $a_n\to L$ אז כל תת־סדרה $a_{n_k}\to L$.</p>
+    <p><b>הוכחה:</b> יהי $\epsilon>0$. קיים $N$ כך שלכל $n\ge N$: $|a_n-L|\lt \epsilon$. מכיוון ש־$(n_k)$ עולה ממש, $n_k\ge k$, ולכן לכל $k\ge N$ מתקיים $n_k\ge N$ ומכאן $|a_{n_k}-L|\lt \epsilon$. זה בדיוק $a_{n_k}\to L$.$\quad\blacksquare$</p>
+    <p class="note">שימושי להפרכת גבול: אם שתי תת־סדרות שואפות לגבולות שונים — הסדרה מתבדרת.</p>
+  </div></details>
+
+  <details class="proof"><summary>11. אי־שוויון האינטגרל · $\left|\int_a^b f\right|\le\int_a^b|f|$ · (מועד א׳ 2026 ש׳2.1!)</summary>
+  <div class="body">
+    <p><b>משפט:</b> תהי $f$ אינטגרבילית על $[a,b]$. אז $|f|$ אינטגרבילית ומתקיים $\left|\int_a^b f\right|\le\int_a^b|f|$.</p>
+    <p><b>הוכחה:</b> לכל $x$ מתקיים $-|f(x)|\le f(x)\le|f(x)|$. אינטגרל שומר על אי־שוויון (מונוטוניות האינטגרל), לכן:</p>
+    <p>$$-\int_a^b|f|\ \le\ \int_a^b f\ \le\ \int_a^b|f|.$$</p>
+    <p>אי־שוויון דו־צדדי $-c\le A\le c$ (עם $c=\int_a^b|f|\ge0$) שקול ל־$|A|\le c$, כלומר $\left|\int_a^b f\right|\le\int_a^b|f|$.$\quad\blacksquare$</p>
+    <p class="note">⭐ מועד א׳ 2026 שאלה 2.1 (12 נק׳, ״ראו הרצאות״).</p>
+  </div></details>
+
+  <details class="proof"><summary>12. קריטריון אינטגרביליות רימן/דארבו</summary>
+  <div class="body">
+    <p><b>משפט:</b> $f$ חסומה על $[a,b]$ אינטגרבילית $\iff$ לכל $\epsilon>0$ קיימת חלוקה $P$ עם $\overline{S}(f,P)-\underline{S}(f,P)\lt \epsilon$ (הפרש סכום דארבו עליון ותחתון).</p>
+    <p><b>הוכחה (רעיון):</b> מתמיד $\underline{S}(f,P)\le\underline{\int}f\le\overline{\int}f\le\overline{S}(f,P)$. אם לכל $\epsilon$ קיימת $P$ עם $\overline{S}-\underline{S}\lt \epsilon$, אז $0\le\overline{\int}f-\underline{\int}f\lt \epsilon$ לכל $\epsilon$, ולכן $\overline{\int}f=\underline{\int}f$ — כלומר $f$ אינטגרבילית. ולהפך: אם $f$ אינטגרבילית, האינטגרל העליון והתחתון שווים, ומהגדרת inf/sup קיימות חלוקות שמקרבות אותם עד כדי $\epsilon/2$; העידון המשותף נותן $\overline{S}-\underline{S}\lt \epsilon$.$\quad\blacksquare$</p>
+  </div></details>
+
+  <h3>➕ הגדרות רב־משתנה שכדאי לדעת בע״פ (בעקבות 2026)</h3>
+  <div class="card">
+    <p><b>רציפות ב־$(0,0)$:</b> $f$ רציפה ב־$(0,0)$ אם $\lim_{(x,y)\to(0,0)}f(x,y)=f(0,0)$. <b>להפרכה:</b> מוצאים <b>שני מסלולים</b> (למשל $y=0$ ו־$y=x^2$) שנותנים גבולות שונים ⇐ הגבול לא קיים ⇐ לא רציפה. (במועד א׳ 2026 המסלול $y=x^2$ נתן $\frac12\ne f(0,0)=0$.)</p>
+    <p><b>נגזרת חלקית מהגדרה:</b> $\displaystyle f_y(0,0)=\lim_{h\to0}\frac{f(0,h)-f(0,0)}{h}$, וכן $f_x$ בהתאמה. <b>בנקודה כללית</b> $(x,y)\ne(0,0)$ גוזרים לפי $x$ תוך התייחסות ל־$y$ כקבוע (כלל המנה/שרשרת).</p>
+  </div>
+
+</div>
+
+<div class="wrap">
+  <!-- ===================== MOED A 2026 ANALYSIS ===================== -->
+  <h2 id="moedA">🔬 ניתוח מלא — מועד א׳ 2026 (המבחן ששלחת)</h2>
+  <p class="note">זהו המבחן הכי קרוב למועד ב׳ שלך. פתרי אותו שוב ביום 10 בתנאי מבחן. פירוק שאלה־שאלה:</p>
+  <div class="card">
+  <table>
+    <tr><th>שאלה</th><th>נושא + מה בדיוק נשאל</th><th>הכלי לפתרון</th><th>קישור לתכנית</th></tr>
+    <tr><td><b>1</b></td><td>1.1.1 הגדרת התכנסות טור עם $\epsilon$ · 1.1.2 <b>הוכחה</b>: $\frac{a_n}{b_n}\to L>0 \Rightarrow \sum a_n$ מתכנס $\iff\sum b_n$ (15 נק׳) · 1.2 $\int_1^\infty\frac{f'}{f}$ מתכנס $\Rightarrow \lim f$ קיים</td><td>הגדרה + <b>השוואה גבולית</b> (הוכחה #3) + FTC/לוג</td><td>ימים 4, 8</td></tr>
+    <tr><td><b>2</b></td><td>2.1 <b>הוכחה</b>: $|\int f|\le\int|f|$ (12 נק׳) · 2.2 <b>רב־משתנה</b>: רציפות $\frac{x^2y-y^3}{x^4+y^2}$, $f_y(0,0)$, $f_x(1,2)$</td><td>מונוטוניות אינטגרל (הוכחה #11) + <b>רב־משתנה</b> (מסלולים + נגזרת מהגדרה)</td><td>ימים 3, <b>9</b></td></tr>
+    <tr><td><b>3</b></td><td>3.1 טור חזקות $\sum n(n-1)x^n$: תחום התכנסות + <b>צורה סגורה</b> $\frac{2x^2}{(1-x)^3}$ + סכום מספרי · 3.2 <b>שארית טיילור</b>: קיום $c$ עם $6(1-f(1))=f'''(c)$</td><td>קושי–הדמר + גזירה איבר־איבר + <b>משפט טיילור (לגרנז׳)</b></td><td>ימים 7, 8</td></tr>
+    <tr><td><b>4</b></td><td>4.1 $\left|\frac{a_{n+1}}{a_n}\right|\to2,\ \left|\frac{b_{n+1}}{b_n}\right|\to3$: התכנסות $\sum\frac{a_n5^n}{b_n3^n}$ · 4.2 <b>לייבניץ הפוך</b>: $b_n=(-1)^{n+1}(a_n+(-1)^{n+1})$ יורדת + $a_n\to0$ ⇒ $\sum a_n$ מתכנס</td><td>מבחן היחס (הוכחה #4) + לייבניץ (הוכחה #6)</td><td>ימים 5, 6</td></tr>
+    <tr><td><b>5</b></td><td>5.1 $\lim_{x\to0^+}\frac{\int_0^{x^2}\ln(1+\sqrt t)dt}{x^3}=\frac23$ · 5.2 $0\le a\le b$: $\frac{b}{1}-\frac{a}{2}+\frac{b}{3}-\cdots$ מתכנס $\iff a=b$</td><td>FTC+שרשרת+לופיטל (הוכחה #8) + סוגריים→הרמוני+השוואה גבולית</td><td>ימים 2, 6</td></tr>
+  </table>
+  </div>
+  <div class="alert">
+    <h3>💡 מה מועד א׳ 2026 מלמד על מועד ב׳ שלך</h3>
+    <p>שים לב: <b>7 מתוך ~11 הסעיפים הם ליבת טורים/טורי חזקות/אינטגרל</b> — בדיוק ה־🔴. מועד ב׳ יהיה מאותו זן. חדש: שאלה 2 ערבבה הוכחת אינטגרל <b>עם</b> רב־משתנה, ושאלה 3 ערבבה טור חזקות <b>עם</b> שארית טיילור. לכן אל תדלגי על 9+8. שתי ההוכחות ״ראו הרצאות״ שהופיעו (1.1.2 השוואה גבולית, 2.1 אי־שוויון אינטגרל) נמצאות בבנק ההוכחות — שנני אותן ראשונות.</p>
+  </div>
+
+  <!-- ===================== EXAM DAY STRATEGY ===================== -->
+  <h2 id="strategy">🎯 אסטרטגיית יום המבחן</h2>
+  <div class="card">
+    <ul class="check">
+      <li><input type="checkbox"><span><b>קראי את כל 5 השאלות קודם (5 דק׳).</b> סמני לעצמך בכל שאלה: איזו הוכחה ״ראו הרצאות״ מתחבאת בה ואיזו טכניקת חישוב.</span></li>
+      <li><input type="checkbox"><span><b>בחרי 4 שאלות חזקות.</b> דלגי על השאלה שנשענת על הנושא הכי חלש שלך או הכי נדיר (למשל אם יש שאלה שלמה על תורת רימן/MVT ויש לך 4 חזקות מהליבה).</span></li>
+      <li><input type="checkbox"><span><b>סדר פתרון:</b> התחילי מהשאלה שהכי בטוחה בה — צוברת נקודות וביטחון. השאירי את הקשה לסוף.</span></li>
+      <li><input type="checkbox"><span><b>בכל הוכחה — רשמי את התנאים במפורש</b> לפני השימוש במשפט. שמאי מוריד נקודות על ״טענה לא מנומקת״.</span></li>
+      <li><input type="checkbox"><span><b>ניהול זמן:</b> ~40 דק׳ לשאלה, השאירי 20 דק׳ לבדיקה. אל תיתקעי 30 דק׳ על סעיף אחד — עברי הלאה וחזרי.</span></li>
+      <li><input type="checkbox"><span><b>הגדרות = נקודות חינם.</b> סעיפי ״הגדר/י״ (2–4 נק׳) — כתבי אותם מדויק עם $\epsilon$. אל תוותרי עליהם.</span></li>
+      <li><input type="checkbox"><span><b>אל תבחרי בין סעיפים בתוך שאלה</b> — אם בחרת שאלה, פותרים את הכל.</span></li>
+    </ul>
+  </div>
+</div>
+
+<div class="footer wrap">
+  <p>נבנה מניתוח 10 מבחנים (2022–2026) + סימולציה + 8 תרגילי בית + 10 תרגולים + 10 הרצאות. כל הנוסחאות אומתו מול פתרונות המקור ומול מועד א׳ 2026.</p>
+  <p>בהצלחה, ליה! 💪 את מתחילה מאפס — אבל עם המפה הזו, 100 השעות האלו יביאו אותך רחוק.</p>
+</div>
+
+<script>
+/* ---------- DATA: 10 days ---------- */
+const F = "computer:///Users/liamesika/Desktop/infi-test-b/docs/";
+function enc(p){return F+encodeURI(p);}
+const days = [
+ {n:1,hw:"<b>שיעורי בית 1</b> (גבולות · לופיטל · דרבו):<ul><li><span class='ex'>שאלה 1</span> כל הסעיפים א׳–ה׳ — גבולות עם לופיטל (כולל $0\\cdot\\infty,\\ \\infty^0$).</li><li><span class='ex'>שאלה 4</span> טעויות סטודנט בלופיטל ובדרבו — בדיוק כמו סעיפי ״נכון/לא נכון״ במבחן.</li><li><span class='ex'>שאלה 5</span> דרבו: $f'(1)=0$, קיום אפס לנגזרת, חסם ל־$\\sin x$.</li><li><span class='ex'>שאלה 6</span> פונקציה אי־זוגית + נקודת קיצון $\\Rightarrow f'(c)=0$.</li><li class='opt'>רשות (אם יש זמן): שאלות 2–3 (נגזרת מהגדרה, גזירות רציפה).</li></ul><b>שיעורי בית 2</b> (סדרות):<ul><li><span class='ex'>שאלה 5א׳</span> ⭐ $a_{n+1}=a_n+\\frac1{a_n}\\to\\infty$ — <b class='hl'>חזרה מילה במילה בסימולציה 2025</b>. חובה.</li><li><span class='ex'>שאלה 1</span> הגדרות פורמליות (לא חסומה, $\\lim\\ne\\infty$, מונוטונית ממש).</li><li><span class='ex'>שאלה 2</span> הוכחות מהגדרה (הזזת אינדקס, עולה+חסום$\\to\\sup$).</li><li><span class='ex'>שאלה 3</span> היינה: מעבר סדרה$\\leftrightarrow$פונקציה.</li><li class='opt'>רשות: שאלה 4 (גבול תלוי $\\alpha$), שאלה 6 (ממוצע אריתמטי־הרמוני).</li></ul>תרגול 1+2: עברי על כל הדוגמאות הפתורות — הן השלד לשיעורי הבית.",title:"יסודות: סדרות, גבולות, לופיטל, דרבו",sub:"תשתית — בלי זה טורים לא יעבדו",
+  files:[["הרצאה 1","lecture/Lecture 1 group 1 calculus 2 2026.pdf"],["הרצאה 2","lecture/Lecture 2 group 1 calculus 2 2026.pdf"],["תרגול 1 (לופיטל+דרבו)","recitation/Recitation 1-Hebrew (1).pdf"],["תרגול 2 (סדרות)","recitation/Recitation 2-Hebrew.pdf"],["פתרון תרגיל 1","hw/Exercise 1 solution.pdf"],["פתרון תרגיל 2","hw/Exercise 2 solution.pdf"]],
+  goal:"לשלוט בהגדרת גבול סדרה (ε-N), במשפט הסדרה המונוטונית, בסדרות רקורסיביות (מונוטוני+חסום→נקודת שבת), ובלופיטל+דרבו כסעיפי־עזר.",
+  blocks:[
+   ["09:00–12:00","b1","הרצאות 1+2 + תרגול 1: הגדרת גבול סדרה, למת היינה, משפט לופיטל (4 התנאים!) ומשפט דרבו. כתבי לעצמך את התנאים של לופיטל בכרטיסייה."],
+   ["12:45–15:15","b2","תרגול 2 (סדרות) + פתרון תרגיל 2: סדרות מונוטוניות וחסומות, סדרות רקורסיביות. פתרי את שאלה 5a בתרגיל 2 — <b>היא חזרה מילה במילה בסימולציה 2025</b> ($a_{n+1}=a_n+\\frac1{a_n}$)."],
+   ["16:00–18:30","b3","פתרון תרגיל 1 (לופיטל/דרבו): פתרי 8–10 גבולות עם לופיטל. תרגלי זיהוי מתי לופיטל חוקי (בדיקת 0/0 או ∞/∞)."],
+   ["19:15–21:15","b4","<b>שינון הוכחה #10 (תת־סדרה)</b> + #1 (תנאי הכרחי). כתבי כל אחת פעמיים בעיניים עצומות. חזרה פעילה: מה 4 התנאים של לופיטל?"]
+  ]},
+ {n:2,hw:"<b>שיעורי בית 3</b> (אינטגרל לא מסוים):<ul><li><span class='ex'>שאלה 1</span> הצבה — כל הסעיפים א׳–ה׳ ($e^{\\sqrt x}$, $\\frac{\\sqrt x}{x+1}$, $\\frac1{\\sqrt x+\\sqrt[3]{x}}$).</li><li><span class='ex'>שאלה 2</span> אינטגרציה בחלקים: $\\sin(\\ln x)$, $\\arctan\\sqrt x$.</li><li><span class='ex'>שאלה 3</span> $\\int\\frac{dx}{\\cos x}$ בשתי דרכים (שברים חלקיים + $t=\\tan\\frac x2$).</li><li><span class='ex'>שאלה 4</span> הוכחה: $f(x)=\\alpha x$ מתנאי אינטגרלי (חוק לייבניץ).</li><li class='opt'>רשות: שאלה 5 (טעויות). שאלה 6 (דרבו) $\\to$ יום 3.</li></ul><b>שיעורי בית 4</b> (מסוים · FTC · רימן):<ul><li><span class='ex'>שאלה 1</span> אינטגרלים מסוימים א׳–ג׳ ($\\min\\{e^x,e^{-x}\\}$, $\\ln(1+x^2)$, $\\arccos x$).</li><li><span class='ex'>שאלה 2</span> $\\int\\tan=\\frac12\\ln2$ + חסימת $e^{-x}\\tan x$.</li><li><span class='ex'>שאלה 3</span> ⭐ FTC + כלל שרשרת $\\to\\frac23$ — <b class='hl'>בדיוק תבנית מועד א׳ 2026 ש׳5.1</b>.</li><li><span class='ex'>שאלה 4</span> גבול סכום רימן $\\to\\frac\\pi4$.</li></ul>",title:"אינטגרל: לא מסוים, מסוים, ו־FTC",sub:"טכניקות חישוב + המשפט היסודי",
+  files:[["הרצאה 3","lecture/Lecture 3 group 2 calculus 2 2026 .pdf"],["הרצאה 4","lecture/Lecture 4 group 1 calculus 2 2026.pdf"],["תרגול 3 (אינטגרל לא מסוים)","recitation/Recitation 3-Hebrew.pdf"],["תרגול 4 (מסוים+FTC)","recitation/Recitation 4-Hebrew.pdf"],["פתרון תרגיל 3","hw/Exercise 3 solution.pdf"],["פתרון תרגיל 4","hw/Exercise 4 solution.pdf"]],
+  goal:"שליטה בהצבה ובאינטגרציה בחלקים, בתכונות האינטגרל המסוים, וב־FTC עם גבול עליון משתנה + כלל השרשרת.",
+  blocks:[
+   ["09:00–12:00","b1","הרצאה 3 + תרגול 3: טבלת אינטגרלים, הצבה, אינטגרציה בחלקים (IBP). שנני את הטבלה הבסיסית."],
+   ["12:45–15:15","b2","הרצאה 4 + תרגול 4: האינטגרל המסוים, למת ההדבקה, ו־FTC. תרגלי גזירת $F(x)=\\int_a^{g(x)}f$ עם כלל שרשרת — זו בדיוק תבנית מועד א׳ 2026 ש׳5.1."],
+   ["16:00–18:30","b3","פתרונות תרגילים 3+4: 6–8 אינטגרלים מסוימים (הצבה+חלקים) + 3 תרגילי FTC עם גבול משתנה."],
+   ["19:15–21:15","b4","<b>שינון הוכחה #8 (FTC — שני החלקים)</b>. זו חתימה חוזרת! חזרה פעילה על #1, #10 מאתמול."]
+  ]},
+ {n:3,hw:"<b>שיעורי בית 5</b> (אינטגרלים לא אמיתיים):<ul><li><span class='ex'>שאלה 1</span> חישוב/התכנסות א׳–ג׳ ($e^{-|x|}$, $\\frac{x}{\\pi(1+x^2)}$, $x^2\\lambda e^{-\\lambda x}$).</li><li><span class='ex'>שאלה 2</span> מבחן השוואה א׳–ג׳ ($e^{-x}\\ln x$, רציונלי, $\\frac{x}{\\ln x}$).</li><li><span class='ex'>שאלה 4</span> ⭐ קיום $\\lim f$ מ־$\\int\\frac{f'}{f}$ מתכנס — <b class='hl'>מועד א׳ 2026 ש׳1.2</b>.</li><li><span class='ex'>שאלה 5</span> נכון/לא נכון על FTC (א׳–ד׳).</li><li class='opt'>רשות/מתקדם: שאלה 3 (מ.ע.ה לאינטגרלים), שאלה 6 (אינטגרלי Wallis $\\to\\pi$).</li></ul><b>שיעורי בית 3 — שאלה 6</b>: אינטגרביליות לפי דרבו (קריטריון החלוקות + ליפשיץ $\\Rightarrow$ אינטגרבילית) — סעיף תורת האינטגרציה.",title:"אינטגרל לא אמיתי + תורת האינטגרציה + טור גיאומטרי",sub:"הגשר מאינטגרלים לטורים",
+  files:[["הרצאה 5","lecture/Lecture 5 group 2 calculus 2 2026.pdf"],["תרגול 5 (לא אמיתי+גיאומטרי)","recitation/Recitation 5-Hebrew.pdf"],["פתרון תרגיל 5","hw/Exercise 5 solution.pdf"],["סיכום משפטים","summerize/רשימת משפטים אינפי 2.pdf"]],
+  goal:"התכנסות אינטגרל לא אמיתי (מבחן השוואה), הטור הגיאומטרי כשער לטורים, וקריטריון רימן/דארבו + $|\\int f|\\le\\int|f|$.",
+  blocks:[
+   ["09:00–12:00","b1","הרצאה 5 + תרגול 5: אינטגרל לא אמיתי, מבחן ההשוואה לאינטגרלים, והטור הגיאומטרי $\\sum x^n=\\frac1{1-x}$ ($|x|\\lt 1$)."],
+   ["12:45–15:15","b2","תורת האינטגרציה: סכומי דארבו עליון/תחתון, קריטריון האינטגרביליות, ואי־שוויון $|\\int f|\\le\\int|f|$ (מועד א׳ 2026 ש׳2.1). קראי בסיכום המשפטים."],
+   ["16:00–18:30","b3","פתרון תרגיל 5: 5–6 אינטגרלים לא אמיתיים — הכרעת התכנסות בהשוואה ל־$1/x^p$."],
+   ["19:15–21:15","b4","<b>שינון הוכחות #11 ($|\\int f|\\le\\int|f|$) ו־#12 (קריטריון רימן)</b>. חזרה פעילה על FTC."]
+  ]},
+ {n:4,hw:"<b>שיעורי בית 6</b> (טורים — יסודות + השוואה):<ul><li><span class='ex'>שאלה 1</span> א׳–ה׳: חישוב ערך/התבדרות — גיאומטרי, תנאי הכרחי ($\\cosh\\frac1n$), טלסקופיים.</li><li><span class='ex'>שאלה 2</span> א׳–ה׳: מבחן אינטגרל + השוואה ($\\frac1{\\ln n}$, $(\\sqrt{n+2}-\\sqrt n)^3$, ...).</li><li><span class='ex'>שאלה 4</span> הוכחה: התכנסות טור $\\iff\\lim b_n=0$ (סדרה מתחלפת מסודרת).</li><li><span class='ex'>שאלה 5</span> טור $a\\,a_n+b\\,a_{n+1}+c\\,a_{n+2}$ עם $a+b+c=0$ (טלסקופי).</li><li><span class='ex'>שאלה 6</span> נכון/לא נכון על טורים (א׳–ד׳).</li><li class='opt'>רשות: שאלה 3 (טעויות סטודנט).</li></ul>+ דף הלמידה האינטראקטיבי לתרגיל 6.",title:"טורים א׳: יסודות + מבחני השוואה",sub:"🔴 תחילת הליבה המוחלטת",
+  files:[["הרצאה 6","lecture/Lecture 6 group 2 calculus 2 2026.pdf"],["תרגול 6","recitation/Recitation 6-Hebrew.pdf"],["פתרון תרגיל 6","hw/Exercise 6 solution.pdf"],["דף למידה תרגיל 6","hw-infi/exercise6_calculus2_study.html"]],
+  goal:"הגדרת טור (סכומים חלקיים), תנאי הכרחי, טור טלסקופי, p־טור, מבחן השוואה + השוואה גבולית. זו הליבה — כאן משקיעים הכי הרבה.",
+  blocks:[
+   ["09:00–12:00","b1","הרצאה 6 + תרגול 6: הגדרת התכנסות טור, תנאי הכרחי, משפט הזנבות, טור טלסקופי, ו־p־טור ($\\sum\\frac1{n^p}$ מתכנס $\\iff p>1$)."],
+   ["12:45–15:15","b2","מבחן ההשוואה + ההשוואה הגבולית. תרגלי לזהות ״עם מי משווים״ (החזקה הדומיננטית). מועד א׳ 2026 ש׳1.1.2 = הוכחת השוואה גבולית."],
+   ["16:00–18:30","b3","פתרון תרגיל 6 + דף הלמידה: פתרי את כל שאלות ההשוואה. חזרי על טלסקופיים עד אוטומט."],
+   ["19:15–21:15","b4","<b>שינון הוכחות #2 (השוואה), #3 (השוואה גבולית — מועד א׳ 2026!), #1 (תנאי הכרחי)</b>."]
+  ]},
+ {n:5,hw:"<b>שיעורי בית 7</b> (מבחני יחס · שורש · אינטגרל):<ul><li><span class='ex'>שאלה 1</span> ⭐ כל הסעיפים א׳–ו׳ — מבחן יחס (א–ג), מבחן שורש עם $\\cos$ (ד), <b>מבחן שורש עם פרמטר $a$</b> (ה — חתימה חוזרת!), טעות סטודנט (ו).</li><li><span class='ex'>שאלה 2</span> אילו $p$ נותנים התכנסות לטור עם $\\ln\\ln\\ln$ (מבחן אינטגרל).</li><li><span class='ex'>שאלה 4</span> נכון/לא נכון (א׳–ג׳).</li><li class='opt'>רשות/מתקדם: שאלה 3 (קבוע אוילר $\\gamma$).</li></ul>+ דף הלמידה האינטראקטיבי לתרגיל 7.",title:"טורים ב׳: מבחני יחס, שורש, אינטגרל",sub:"🔴 ליבה — הכלים החזקים",
+  files:[["הרצאה 7","lecture/Lecture 7 group 2 calculus 2 2026.pdf"],["תרגול 7","recitation/Recitation 7-Hebrew.pdf"],["פתרון תרגיל 7","hw/Exercise 7 solution.pdf"],["דף למידה תרגיל 7","hw-infi/exercise7_calculus2_study.html"]],
+  goal:"שליטה במבחן היחס, מבחן השורש, ומבחן האינטגרל. זיהוי מהיר איזה מבחן מתאים (עצרת→יחס, חזקה n→שורש).",
+  blocks:[
+   ["09:00–12:00","b1","הרצאה 7 + תרגול 7: מבחן היחס (עצרות), מבחן השורש ($a_n^{1/n}$, ביטויים בחזקת $n$), מבחן האינטגרל. שנני מתי כל אחד עדיף."],
+   ["12:45–15:15","b2","<b>חתימה:</b> טור פרמטרי ״מצא כל $a\\ge0$״ עם מבחן שורש (2024א, 2025ב). תרגלי סוג $\\left(\\frac{\\alpha n+1}{n+1}\\right)^n$."],
+   ["16:00–18:30","b3","פתרון תרגיל 7 + דף הלמידה: פתרי את כל השאלות. ערבבי — קחי טור אקראי ותחליטי איזה מבחן."],
+   ["19:15–21:15","b4","<b>שינון הוכחות #4 (יחס) ו־#5 (שורש + קושי–הדמר)</b>. חזרה פעילה על #2, #3."]
+  ]},
+ {n:6,hw:"<b>שיעורי בית 8</b> (בהחלט/בתנאי · לייבניץ · סוגריים):<ul><li><span class='ex'>שאלה 1</span> א׳–ב׳: בהחלט/בתנאי/מתבדר (שורש+השוואה; לייבניץ+השוואה גבולית).</li><li><span class='ex'>שאלה 2</span> א׳–ד׳: פעולות על טורים מתכנסים (בהחלט±בהחלט, בתנאי+בהחלט...).</li><li><span class='ex'>שאלה 3</span> טעויות בטור הרמוני מתחלף (סוגריים + שינוי סדר $\\to s=0$) — חתימת ״סוגריים״.</li><li><span class='ex'>שאלה 4</span> נכון/לא נכון (א׳–ה׳).</li><li><span class='ex'>שאלה 6</span> ⭐ $b_n=(-1)^n a_n$: חסום, $\\lim b_n=0$, לייבניץ — <b class='hl'>מועד א׳ 2026 ש׳4.2</b>.</li><li class='opt'>רשות: שאלה 5 (אילו $\\alpha$ עבור $n^3\\sin\\frac1n$).</li></ul>+ דף הלמידה האינטראקטיבי לתרגיל 8.",title:"טורים ג׳: בהחלט/בתנאי, לייבניץ, סוגריים",sub:"🔴 ליבה — טורים מתחלפים",
+  files:[["הרצאה 8","lecture/Lecture 8 group 1 calculus 2 2026.pdf"],["תרגול 8","recitation/Recitation 8-Hebrew-2.pdf"],["פתרון תרגיל 8","hw/Exercise 8 solution.pdf"],["דף למידה תרגיל 8","hw-infi/exercise8_learning_page.html"]],
+  goal:"התכנסות בהחלט מול בתנאי, משפט לייבניץ + חסם שגיאה, ומבחן הסוגריים. חתימת ״סוגריים→הרמוני מתבדר״.",
+  blocks:[
+   ["09:00–12:00","b1","הרצאה 8 + תרגול 8: התכנסות בהחלט/בתנאי, משפט לייבניץ, השמת סוגריים. $\\sum\\frac{(-1)^{n+1}}{n}=\\ln2$ (בתנאי, לא בהחלט)."],
+   ["12:45–15:15","b2","<b>חתימות:</b> (1) לייבניץ הפוך — בונים $b_n$ מ־$a_n$ (מועד א׳ 2026 ש׳4.2). (2) סוגריים→קריסה לטור הרמוני מתבדר (מועד א׳ 2026 ש׳5.2). תרגלי את שתיהן."],
+   ["16:00–18:30","b3","פתרון תרגיל 8 + דף הלמידה: כל שאלות הבהחלט/בתנאי ולייבניץ. פתרי את מועד א׳ 2026 ש׳4.2 ו־5.2 מהניתוח למעלה."],
+   ["19:15–21:15","b4","<b>שינון הוכחה #6 (לייבניץ + חסם שגיאה)</b>. חזרה פעילה: כל 6 ההוכחות עד כה."]
+  ]},
+ {n:7,hw:"<b>תרגול 9</b> (טורי חזקות) — פתרי את כל השאלות:<ul><li>מציאת תחום התכנסות: הוצאת $x$, הצבת $t=x^2$ / $t=\\frac1{3x-1}$, ואז <b>בדיקת קצוות</b>.</li><li>⭐ שאלת ״רדיוס של טור מורכב״: נתונים $\\sum a_nx^n,\\ \\sum b_nx^n$ עם רדיוסים $R_1\\ne R_2$ — מצאי רדיוס של הצירוף (קושי–הדמר + אריתמטיקה).</li></ul><b>שיעורי בית 9</b> (אם הקובץ אצלך): שאלה 1 — שני סעיפי תחום התכנסות.<br><b>מבחני עבר</b>: פתרי את שאלת טורי החזקות ממועד א׳ 2025 וממועד ב׳ 2025 (יש פתרונות), והשווי — הקצוות הם מה שהכי מפילים.<div class='note'>הערה: פתרון שיעורי בית 9 לא נמצא בתיקייה, לכן ההתמקדות היום היא בתרגול 9 ובמבחני העבר.</div>",title:"טורי חזקות: רדיוס ותחום התכנסות",sub:"🔴 קריטי — כמעט בכל מבחן",
+  files:[["הרצאה 9","lecture/Lecture 9 group 2 calculus 2 2026.pdf"],["תרגול 9 (טורי חזקות)","recitation/Recitation_9-Hebrew.pdf"],["מועד א׳ 2025 (פתרון)","past-exams/MoedA_calculus2_2025 solution.pdf"],["מועד ב׳ 2025 (פתרון)","past-exams/MoedB_calculus2_2025_solutions.pdf"]],
+  goal:"מציאת רדיוס התכנסות (קושי–הדמר) + תחום מלא כולל <b>בדיקת קצוות</b> (לייבניץ/הרמוני/p). משפט אבל.",
+  blocks:[
+   ["09:00–12:00","b1","הרצאה 9 + תרגול 9: רדיוס התכנסות $R=1/L$, ואז <b>בדיקת שני הקצוות בנפרד</b> (החלק שהכי מפילים בו!). כל קצה = טור מספרי שמכריעים בלייבניץ/הרמוני/p."],
+   ["12:45–15:15","b2","משפט אבל (הוכחה #7) — התכנסות בנקודה גוררת התכנסות בהחלט פנימה. הבסיס לכל תורת טורי החזקות."],
+   ["16:00–18:30","b3","פתרי את <b>שאלה 2/3 (טורי חזקות)</b> ממועד א׳ ו־ב׳ 2025. השווי מול הפתרון, נתחי טעויות בקצוות."],
+   ["19:15–21:15","b4","<b>שינון הוכחה #7 (אבל)</b>. חזרה פעילה על כל 7 ההוכחות."]
+  ]},
+ {n:8,hw:"<b>תרגול 10</b> (טיילור + סכימת טורים) — 5 השאלות לפי הסדר:<ul><li><span class='ex'>1</span> $\\sum\\frac{x^{2n+1}}{n}\\to$ ערך $-x\\ln(1-x^2)$ (קוסמטיקה מטור $\\ln$).</li><li><span class='ex'>2</span> $\\sum\\frac{n}{(3x-1)^n}$ (לא טור חזקות!) $\\to\\frac{t}{(1-t)^2}$ בגזירה איבר־איבר.</li><li><span class='ex'>3</span> $F(x)=\\int_0^x e^{-t^2}dt\\to$ טור חזקות איבר־איבר.</li><li><span class='ex'>4</span> $\\frac{\\sin x}{x}\\to$ חילוץ $f^{(n)}(0)$ ממשפט היחידות.</li><li><span class='ex'>5</span> טור עם עצרת $\\to$ מתאים ל־$\\cos$, נגזרת של $x^3\\cos x$.</li></ul><b>מבחני עבר</b>: חילוץ $\\arctan(x)/x\\to f^{(10)}(0)$ (מועד א׳ 2023 + סימולציה 2025); סכימה $\\sum n(n-1)x^n=\\frac{2x^2}{(1-x)^3}$ (מועד א׳ 2026 ש׳3.1); שארית לגרנז׳ (מועד א׳ 2026 ש׳3.2).",title:"טיילור + סכימת טורי חזקות + שארית",sub:"🔴 קריטי + עדכון 2026 (שארית)",
+  files:[["תרגול 10 (טיילור/טורים מוכרים)","recitation/Recitation 10-Hebrew.pdf"],["הרצאה 10","lecture/Lecture 10 group 2 calculus 2 2026.pdf"],["סימולציה 2025 (פתרון)","past-exams/Simulation_calculus2_2025_solutions.pdf"],["מועד א׳ 2023 (פתרון)","past-exams/MoedA_2023_eng_sol.pdf"]],
+  goal:"טורי מקלורן מוכרים, חילוץ $f^{(n)}(0)$ מהמקדם, סכימה ע״י גזירה/אינטגרציה איבר־איבר, ומשפט טיילור עם שארית לגרנז׳ (חדש 2026).",
+  blocks:[
+   ["09:00–12:00","b1","תרגול 10 + הרצאה 10: הטורים המוכרים — $e^x,\\sin x,\\cos x,\\ln(1+x),\\arctan x,\\frac1{1-x}$. שנני אותם בעל־פה, זה הבסיס להכל."],
+   ["12:45–15:15","b2","(1) <b>חילוץ נגזרת:</b> $\\arctan(x)/x$ → טור → $f^{(10)}(0)$ (חתימה: 2023א, 2025א, סימולציה). (2) <b>סכימה:</b> $\\sum n(n-1)x^n=\\frac{2x^2}{(1-x)^3}$ ע״י גזירה כפולה (מועד א׳ 2026 ש׳3.1)."],
+   ["16:00–18:30","b3","<b>שארית טיילור/לגרנז׳ (חדש!):</b> $f(x)=T_n(x)+R_n(x)$, $R_n(x)=\\frac{f^{(n+1)}(c)}{(n+1)!}(x-x_0)^{n+1}$. פתרי מועד א׳ 2026 ש׳3.2 (קיום $c$). + סימולציה שאלת טיילור."],
+   ["19:15–21:15","b4","<b>שינון הוכחה #9 (אי־רציונליות של $e$)</b>. חזרה פעילה: 6 הטורים המוכרים בע״פ."]
+  ]},
+ {n:9,hw:"<b>מבחני עבר — סעיפי רב־משתנה</b> (יש פתרונות מלאים):<ul><li>מועד א׳ 2022, מועד ב׳ 2022, מועד א׳ 2023 — הסעיף הרב־משתני (רציפות + נגזרות חלקיות).</li><li>⭐ מועד א׳ 2026 ש׳2.2: רציפות $\\frac{x^2y-y^3}{x^4+y^2}$ דרך מסלולים, $f_y(0,0)$ מהגדרה, $f_x(1,2)$.</li></ul><b>מבחן מלא #1</b>: סימולציה 2025 — 3 שעות, 4 מתוך 5 שאלות, בתנאי אמת, בלי הצצה לפתרון.",title:"רב־משתנה (חדש 2026!) + מבחן מלא ראשון",sub:"🟣 הנושא שחזר + סימולציה בתנאי מבחן",
+  files:[["מועד א׳ 2022 (רב־משתנה, פתרון)","past-exams/MoedA_2022_eng_solution.pdf"],["מועד ב׳ 2022 (רב־משתנה, פתרון)","past-exams/MoedB_2022_solutions.pdf"],["מועד א׳ 2023 (רב־משתנה)","past-exams/MoedA_2023_eng_sol.pdf"],["סימולציה 2025 (פתרון)","past-exams/Simulation_calculus2_2025_solutions.pdf"]],
+  goal:"רציפות פונקציה דו־משתנית דרך מסלולים, נגזרת חלקית מהגדרה וחישוב. אז — מבחן מלא ראשון בתנאי אמת.",
+  blocks:[
+   ["09:00–11:30","b1","<b>רב־משתנה (מועד א׳ 2026 ש׳2.2):</b> רציפות ב־$(0,0)$ — הפרכה דרך שני מסלולים ($y=0$ מול $y=x^2$). נגזרת חלקית מהגדרה $f_y(0,0)=\\lim_{h\\to0}\\frac{f(0,h)-f(0,0)}{h}$. חישוב $f_x$ בנקודה כללית (כלל המנה)."],
+   ["11:30–13:00","b1","תרגלי את הסעיפים הרב־משתניים משאלה 5 במועדי 2022–2023 (יש פתרונות מלאים). זו בדיוק הרמה של 2026."],
+   ["13:45–16:45","b3","<b>🔴 מבחן מלא — סימולציה 2025.</b> 3 שעות, 4 מתוך 5 שאלות, טיימר, בלי הצצה לפתרון. תנאי אמת."],
+   ["17:30–21:00","b4","<b>בדיקה עצמית:</b> עברי על הסימולציה מול הפתרון. לכל טעות — רשמי ״למה טעיתי״ + חזרי על הנושא הרלוונטי. עדכני איזה נושא הכי חלש."]
+  ]},
+ {n:10,hw:"<b>שני מבחנים מלאים בתנאי אמת</b> (4 מתוך 5 שאלות, 3 שעות כל אחד):<ul><li><span class='ex'>מבחן #1</span> מועד א׳ 2025 — בדקי מיד מול הפתרון.</li><li><span class='ex'>מבחן #2</span> מועד ב׳ 2025 (או מועד א׳ 2026 ששלחת, כחזרה אחרונה).</li></ul><b>מרתון הוכחות</b>: כתבי את כל 12 ההוכחות מהזיכרון ברצף. כל אחת שנתקעת — פתחי את בנק ההוכחות ושנני שוב.",title:"חזרה כללית + 2 מבחנים מלאים + כל ההוכחות",sub:"🏁 חזרה גנרלית",
+  files:[["מועד א׳ 2025 (פתרון)","past-exams/MoedA_calculus2_2025 solution.pdf"],["מועד ב׳ 2025 (פתרון)","past-exams/MoedB_calculus2_2025_solutions.pdf"],["מועד ב׳ 2024 (פתרון)","past-exams/MoedB_calculus2_2024 solutions.pdf"],["סיכום משפטים","summerize/רשימת משפטים אינפי 2.pdf"]],
+  goal:"שני מבחנים מלאים בתנאי אמת + מעבר על כל 12 ההוכחות מהזיכרון + סתימת פערים אחרונה.",
+  blocks:[
+   ["09:00–12:00","b1","<b>🔴 מבחן מלא #1 — מועד א׳ 2025.</b> 3 שעות בתנאי אמת (עשי 4 מתוך 5). בדקי מיד מול הפתרון."],
+   ["12:45–15:15","b3","<b>🔴 מבחן מלא #2 — מועד ב׳ 2025</b> (או מועד א׳ 2026 ששלחת, כחזרה אחרונה). בתנאי אמת."],
+   ["16:00–18:30","b2","<b>מרתון הוכחות:</b> כתבי את כל 12 ההוכחות מהזיכרון, אחת אחרי השנייה, בלי הצצה. כל אחת שנתקעת — פתחי את הבנק ושנני שוב."],
+   ["19:15–21:15","b4","סתימת פערים: חזרי על הנושא הכי חלש שזיהית ביום 9. עברי על טבלת החתימות. לינה טובה — <b>אל תלמדי עד מאוחר לפני המבחן</b>."]
+  ]}
+];
+
+/* ---------- render days ---------- */
+const box=document.getElementById('days');
+days.forEach(d=>{
+  const det=document.createElement('details');det.className='day';if(d.n===1)det.open=true;
+  let fh=d.files.map(f=>`<a href="${enc(f[1])}">📄 ${f[0]}</a>`).join('');
+  let bh=d.blocks.map(b=>`<div class="block ${b[1]}"><span class="time">${b[0]}</span> ${b[2]}</div>`).join('');
+  det.innerHTML=`<summary><span class="daynum">${d.n}</span><span class="dtitle">יום ${d.n} — ${d.title}<small>${d.sub}<span class="ddate" data-day="${d.n}"></span></small></span><span class="chev">▾</span></summary>
+   <div class="daybody">
+     <div class="goal">🎯 <b>מטרת היום:</b> ${d.goal}</div>
+     <div class="files">${fh}</div>
+     ${d.hw?`<div class="hw"><h4>📌 התרגילים המדויקים להיום — בדיוק מה לפתור</h4>${d.hw}</div>`:''}
+     ${bh}
+     <ul class="check">
+       <li><input type="checkbox"><span>סיימתי את בלוק התיאוריה + התרגול המודרך</span></li>
+       <li><input type="checkbox"><span>סיימתי את התרגול העצמאי / מבחן העבר</span></li>
+       <li><input type="checkbox"><span>שיננתי את ההוכחות של היום וכתבתי אותן מהזיכרון</span></li>
+     </ul>
+   </div>`;
+  box.appendChild(det);
+});
+
+/* ---------- KaTeX render ---------- */
+let mathDone=false;
+function tryRenderMath(){
+  if(mathDone) return true;
+  try{
+    if(typeof renderMathInElement==='function'){
+      renderMathInElement(document.body,{delimiters:[
+        {left:"$$",right:"$$",display:true},
+        {left:"$",right:"$",display:false}
+      ],throwOnError:false,ignoredTags:["script","noscript","style","textarea","pre"]});
+      mathDone=true;            // render the WHOLE body once — every day card + exercise box included
+      return true;
+    }
+  }catch(e){}
+  return false;
+}
+function bootMath(){
+  if(tryRenderMath()) return;
+  let tries=0;                  // KaTeX loads via defer/CDN — retry for ~15s until it's ready
+  const iv=setInterval(()=>{if(tryRenderMath()||++tries>100)clearInterval(iv);},150);
+}
+window.addEventListener('DOMContentLoaded',()=>{ hookChecks(); bootMath(); });
+window.addEventListener('load', tryRenderMath);   // second chance once fonts/CSS finish loading
+
+/* ---------- progress ---------- */
+function hookChecks(){
+  const cbs=[...document.querySelectorAll('input[type=checkbox]')];
+  const upd=()=>{const done=cbs.filter(c=>c.checked).length;const pct=Math.round(done/cbs.length*100);
+    document.getElementById('progFill').style.width=pct+'%';
+    document.getElementById('progTxt').textContent=pct+'% הושלם — '+done+' מתוך '+cbs.length+' משימות';};
+  cbs.forEach(c=>c.addEventListener('change',upd));upd();
+}
+
+/* ---------- dates ---------- */
+function setDates(){
+  const v=document.getElementById('examDate').value;if(!v)return;
+  const exam=new Date(v+'T00:00:00');
+  document.querySelectorAll('.ddate').forEach(el=>{
+    const day=+el.getAttribute('data-day');
+    const dt=new Date(exam);dt.setDate(exam.getDate()-(11-day)); // day10 = יום לפני המבחן
+    const wd=['א׳','ב׳','ג׳','ד׳','ה׳','ו׳','ש׳'][dt.getDay()];
+    el.textContent=' · '+wd+' '+dt.getDate()+'/'+(dt.getMonth()+1);
+  });
+}
+</script>
+</body>
+</html>
